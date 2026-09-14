@@ -1,5 +1,7 @@
 # DFM-Project 인수인계
 
+최신 실행 수정: [중복 실행 시 포트 충돌 수정](STARTUP_FIX_2026-09-15.md). 같은 폴더의 정상 실행 앱은 재사용하고, 다른 프로그램이 점유한 포트는 구분한다.
+
 최신 후속 작업: [무작위 형상 전수 검토와 신뢰성 개선](RANDOM_CORPUS_REAUDIT_2026-09-14.md), [독립 CAD 감사](INDEPENDENT_CAD_AUDIT_2026-09-14.md), [공정별 문헌 재조사](../research/AM_DFM_EVIDENCE_REAUDIT.md). STEP·STL·3MF와 MEX/VPP/고분자 PBF/금속 PBF의 실제 형상 검토 및 변경 이후 재검증 기록은 이 문서들을 먼저 확인한다.
 
 최신 후속 변경: [26방향·직접 각도 입력과 좌표계 검증](ORIENTATION_EXTENSION_2026-09-14.md). 임의 방향을 독립 공식·층간 좌표·STL 내보내기에 대조하고 전체 283개 회귀검사를 통과했다. 곡면 근사와 물리 검증의 한계는 유지한다.

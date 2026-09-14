@@ -9,10 +9,12 @@
 현재 Windows 작업공간에는 `.venv`와 의존성이 설치되어 있다. `START_REVIEW.cmd`를 실행하거나 다음 명령을 사용한다.
 
 ```powershell
-.\.venv\Scripts\python.exe -X utf8 -m streamlit run app.py --server.port 8507
+.\.venv\Scripts\python.exe -X utf8 scripts\start_review.py
 ```
 
 [로컬 앱 열기](http://127.0.0.1:8507). 앱은 로컬 컴퓨터에서 동작한다. 파일은 외부 분석 서버로 전송하지 않는다.
+
+`START_REVIEW.cmd`를 다시 실행하면 같은 폴더에서 실행 중인 정상 앱을 확인해 브라우저로 연다. 다른 프로그램이 8507번 포트를 사용하는 경우 `START_REVIEW.cmd --port 8508`로 다른 포트를 지정할 수 있다. 포트 확인 과정에서 기존 프로그램을 자동 종료하지 않는다. 이전 시작 파일로 상대 경로 `app.py`를 실행한 서버는 실행 폴더를 확정할 수 없으므로, 기존 서버를 종료하고 새 시작 파일로 한 번 다시 실행한다.
 
 다른 환경에서는 ZIP 전체를 폴더에 압축 해제하고 `INSTALL.cmd`를 실행한다. 설치 파일은 기존 정상 `.venv`를 우선 재사용하며, 없으면 64-bit Python 3.12 또는 3.13을 탐색한다. Python이 없다면 [Python 공식 Windows 설치 파일](https://www.python.org/downloads/windows/)로 설치한 뒤 다시 실행한다. 직접 명령을 사용할 때는 설치된 버전 번호를 지정한다. 예:
 
