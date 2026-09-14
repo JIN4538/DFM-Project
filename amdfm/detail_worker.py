@@ -82,10 +82,19 @@ def run(base):
         elif request.get("ambiguous_stl_shells"):
             result={"status":"unknown","reason":"여러 STL 표면의 교차·공동 포함 관계가 미확정입니다. 단일 CAD 솔리드 또는 확인된 단일 성분으로 층간 검토를 실행하세요."}
         else:
-            result=inspect_layers(mesh,request["direction"],profile["layer_height_mm"],
+            # Use exactly the final quick-review/export placement, including XY
+            # yaw and the plate origin. A fresh mesh avoids apply_transform's
+            # near-identity shortcut and preserves the original face indices.
+            matrix = np.asarray(request["placement_transform"], dtype=float)
+            if matrix.shape != (4,4) or not np.isfinite(matrix).all():
+                raise ValueError("층간 검토 배치 행렬이 유효하지 않습니다.")
+            placed = trimesh.Trimesh(vertices=mesh.vertices@matrix[:3,:3].T+matrix[:3,3],
+                                     faces=mesh.faces.copy(), process=False)
+            result=inspect_layers(placed,(0,0,1),profile["layer_height_mm"],
                 profile["line_width_mm"],profile["overhang_angle_deg"],max_layers=1500,max_total_segments=1_500_000)
     result.update(mode=request["mode"],fingerprint=request["fingerprint"],profile=profile,
-                  direction=request["direction"],elapsed_seconds=time.perf_counter()-started)
+                  direction=request["direction"],placement_transform=request["placement_transform"],
+                  coordinate_frame=request["coordinate_frame"],elapsed_seconds=time.perf_counter()-started)
     return result
 
 
@@ -95,5 +104,6 @@ if __name__=="__main__":
         result=run(base)
     except Exception as exc:
         request=json.loads((base/"request.json").read_text(encoding="utf-8"))
-        result={"status":"unknown","reason":str(exc),"mode":request["mode"],"fingerprint":request["fingerprint"]}
+        result={"status":"unknown","reason":str(exc),**{key:request[key] for key in
+            ("mode","fingerprint","profile","direction","placement_transform","coordinate_frame")}}
     (base/"result.json").write_bytes(json_bytes(result))

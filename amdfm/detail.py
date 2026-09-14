@@ -10,29 +10,35 @@ import tempfile
 import numpy as np
 
 from .models import json_bytes
+from .orientation import measure_orientation, unit_direction
 
 
 def run_detail(model, profile, direction=(0,0,1), *, mode="wall", timeout_s=60):
     if mode not in ("wall", "layers"):
         raise ValueError("알 수 없는 상세 검토입니다.")
     profile.validate()
+    direction = unit_direction(direction).tolist()
+    orientation = measure_orientation(model.mesh, direction, profile)
+    context = dict(mode=mode, fingerprint=model.fingerprint, profile=profile.to_dict(),
+        direction=orientation["direction"], placement_transform=orientation["transform"],
+        coordinate_frame="build_mm" if mode == "layers" else "model_mm")
     if mode == "layers" and profile.process != "MEX":
-        return {"status":"not_applicable", "mode":mode,"fingerprint":model.fingerprint,
+        return {**context, "status":"not_applicable",
                 "reason":"MEX 층간 검토를 다른 공정에 적용하지 않습니다."}
     with tempfile.TemporaryDirectory(prefix="amdfm-detail-") as tmp:
         base = Path(tmp)
         np.savez_compressed(base/"mesh.npz", vertices=model.mesh.vertices, faces=model.mesh.faces)
-        (base/"request.json").write_bytes(json_bytes(dict(profile=profile.to_dict(), direction=direction,
-            mode=mode, fingerprint=model.fingerprint, assembly=(model.metadata.get("solid_count") or 1)>1,
+        (base/"request.json").write_bytes(json_bytes(dict(**context,
+            assembly=(model.metadata.get("solid_count") or 1)>1,
             ambiguous_stl_shells=model.metadata.get("source_format")=="stl" and model.metadata.get("surface_component_count",1)>1)))
         try:
             proc = subprocess.run([sys.executable, "-m", "amdfm.detail_worker", str(base)],
                 capture_output=True, cwd=Path(__file__).resolve().parents[1], timeout=timeout_s)
         except subprocess.TimeoutExpired:
-            return {"status":"unknown", "mode":mode, "fingerprint":model.fingerprint,
+            return {**context, "status":"unknown",
                     "reason":f"상세 계산이 {timeout_s:g}초 한도를 초과했습니다. 빠른 검토 결과는 유지됩니다."}
         if not (base/"result.json").exists() or proc.returncode:
-            return {"status":"unknown", "mode":mode, "fingerprint":model.fingerprint,
+            return {**context, "status":"unknown",
                     "reason":"상세 계산 프로세스가 완료되지 않았습니다. 단순화한 형상 또는 단일 솔리드로 재검토하세요."}
         return json.loads((base/"result.json").read_text(encoding="utf-8"))
 
@@ -43,8 +49,15 @@ def attach_detail(report, detail):
     # Protect against mixing a result after profile/orientation changes.
     if "profile" in detail and detail["profile"] != report["profile"]:
         raise ValueError("상세 검토 프로필이 현재 결과와 다릅니다.")
-    if "direction" in detail and not np.allclose(detail["direction"],report["current_orientation"]["direction"]):
+    if "direction" in detail and not np.allclose(unit_direction(detail["direction"]),
+            unit_direction(report["current_orientation"]["direction"]), rtol=0, atol=1e-12):
         raise ValueError("상세 검토 방향이 현재 결과와 다릅니다.")
+    if "placement_transform" in detail:
+        actual = np.asarray(detail["placement_transform"], dtype=float)
+        expected = np.asarray(report["current_orientation"]["transform"], dtype=float)
+        if actual.shape != (4,4) or not np.isfinite(actual).all() or not np.allclose(
+                actual, expected, rtol=1e-12, atol=1e-10):
+            raise ValueError("상세 검토 배치가 현재 결과와 다릅니다.")
     result = copy.deepcopy(report)
     mode = detail.get("mode")
     result.setdefault("details", {})[mode] = detail

@@ -4,6 +4,7 @@ import html
 import json
 import numpy as np
 import plotly.graph_objects as go
+import trimesh
 
 from .models import json_bytes
 
@@ -48,6 +49,8 @@ def model_figure(model, report=None, finding_id="overhang", *, transparent=False
 
 def orientation_table(report):
     return [{"방향":r["name"],"비지배 대안":r["pareto"],
+        "모델 적층축 (X, Y, Z)":", ".join(f"{v:.6g}" for v in r["direction"]),
+        "기울기 (°)":r.get("tilt_deg"),"방위각 (°)":r.get("azimuth_deg"),
         "투영면적 합 (mm²)":r["overhang_projected_area_sum_mm2"],"높이 (mm)":r["height_mm"],
         "바닥 면적 (mm²)":r["contact_triangle_area_mm2"],
         "공간":("미지정" if r["build_fit"] is None else "수용" if r["build_fit"] else "초과")}
@@ -96,7 +99,9 @@ def html_report(report):
 <p>{esc(report['summary']['decision'])}</p><p>단위 상태: {esc(report['model']['unit_status'])}. {esc(report['model']['unit_note'])}</p>
 <p>원본 SHA-256: {esc(report['model']['source_sha256'])}</p><p>모델·선택 솔리드 식별자: {esc(report['model_fingerprint'])}</p>
 <p>코드 SHA-256: {esc(report['provenance']['code_sha256'])} · {esc(report['timestamp_utc'])}</p>
-<h2>조건</h2><table>{rows}</table>{''.join(cards)}
+<h2>조건</h2><table>{rows}</table>
+<h2>현재 배치</h2><p>모델 좌표의 적층축: {value(report['current_orientation']['direction'])}. 이 방향이 프린터 +Z를 향합니다.</p>
+<p>배치 변환 행렬 (모델 mm → 빌드 mm): {value(report['current_orientation']['transform'])}</p>{''.join(cards)}
 <h2>방향별 손익</h2><p>명시된 유한 후보 집합의 비교입니다. 비지배 대안은 선택한 기하 지표 중 하나를 개선하면 다른 지표가 악화되는 후보이며 제조 성공을 뜻하지 않습니다. 투영면적 합은 서포트 부피가 아닙니다.</p>{orientation_html}{layer_html}
 <h2>별도 확인할 제조 조건</h2><p>{esc(' · '.join(report['unassessed']))}</p>
 <h2>근거</h2><ol>{''.join(sources)}</ol><h2>실행 환경</h2><pre>{esc(json.dumps(report['provenance'],ensure_ascii=False,indent=2))}</pre>
@@ -107,6 +112,8 @@ def html_report(report):
 def placed_stl(model,report):
     if model.fingerprint != report["model_fingerprint"]:
         raise ValueError("평가한 모델과 내보낼 모델이 다릅니다.")
-    mesh=model.mesh.copy()
-    mesh.apply_transform(np.asarray(report["current_orientation"]["transform"]))
+    matrix=np.asarray(report["current_orientation"]["transform"])
+    # Do not let apply_transform's near-identity shortcut drop a small real tilt.
+    mesh=trimesh.Trimesh(vertices=model.mesh.vertices@matrix[:3,:3].T+matrix[:3,3],
+        faces=model.mesh.faces.copy(),process=False)
     return mesh.export(file_type="stl")

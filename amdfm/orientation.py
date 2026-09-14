@@ -1,6 +1,8 @@
 """Geometric trade-offs for a finite, explicit candidate set. No success score."""
 from __future__ import annotations
 
+from itertools import product
+
 import numpy as np
 import trimesh
 
@@ -12,9 +14,32 @@ DIRECTIONS = {"+Z": (0, 0, 1), "-Z": (0, 0, -1), "+X": (1, 0, 0),
 
 def unit_direction(direction):
     d = np.asarray(direction, dtype=float)
-    if d.shape != (3,) or not np.isfinite(d).all() or np.linalg.norm(d) < 1e-12:
+    if d.shape != (3,) or not np.isfinite(d).all() or not np.any(d):
         raise ValueError("적층 방향은 0이 아닌 유한한 3차원 벡터여야 합니다.")
+    # Scale first: a finite vector can overflow/underflow a direct L2 norm.
+    d = d / np.max(np.abs(d))
     return d / np.linalg.norm(d)
+
+
+def direction_from_angles(tilt_deg, azimuth_deg):
+    """Model-space build axis: polar tilt from +Z, azimuth +X toward +Y."""
+    if not np.isfinite([tilt_deg, azimuth_deg]).all() or not 0 <= tilt_deg <= 180 or not 0 <= azimuth_deg <= 360:
+        raise ValueError("기울기는 0~180°, 방위각은 0~360°의 유한한 값이어야 합니다.")
+    if tilt_deg in (0, 180):
+        return np.array([0., 0., 1. if tilt_deg == 0 else -1.])
+    t, a = np.deg2rad([tilt_deg, azimuth_deg])
+    # Preserve exactly axial directions, without rounding away small real tilts.
+    st, ct = (1., 0.) if tilt_deg == 90 else (np.sin(t), np.cos(t))
+    ca, sa = {0: (1., 0.), 90: (0., 1.), 180: (-1., 0.), 270: (0., -1.)}.get(
+        azimuth_deg % 360, (np.cos(a), np.sin(a)))
+    return unit_direction([st*ca, st*sa, ct])
+
+
+def direction_angles(direction):
+    d = unit_direction(direction)
+    tilt = np.rad2deg(np.arctan2(np.hypot(d[0], d[1]), d[2]))
+    azimuth = np.rad2deg(np.arctan2(d[1], d[0])) % 360 if np.any(d[:2]) else 0.
+    return float(tilt), float(azimuth)
 
 
 def placement(mesh, direction):
@@ -42,7 +67,7 @@ def measure_orientation(mesh, direction, profile: Profile, *, reliable_normals=T
         angle_mask[:] = False
     use_overhang = reliable_normals and profile.process != "PBF_POLYMER"
     contact = float(mesh.area_faces[on_plate & (nz < -.999999)].sum()) if reliable_normals else None
-    # Axis-aligned placement, allowing only an extra 90 degree yaw.
+    # Fit the placed AABB, allowing only an extra 90 degree build-plane yaw.
     fit, utilization, yaw, required = None, None, 0, dims.copy()
     if profile.build_volume_mm:
         available = np.asarray(profile.build_volume_mm)-2*profile.clearance_mm
@@ -54,7 +79,8 @@ def measure_orientation(mesh, direction, profile: Profile, *, reliable_normals=T
     if yaw:
         rz = trimesh.transformations.rotation_matrix(np.pi/2, [0,0,1])
         matrix = rz @ matrix
-    return dict(direction=d.tolist(), height_mm=float(dims[2]),
+    tilt, azimuth = direction_angles(d)
+    return dict(direction=d.tolist(), tilt_deg=tilt, azimuth_deg=azimuth, height_mm=float(dims[2]),
         extents_mm=dims.tolist(), placed_extents_mm=required.tolist(), xy_yaw_deg=yaw,
         transform=matrix.tolist(), build_fit=fit, max_axis_utilization=utilization,
         contact_triangle_area_mm2=contact,
@@ -65,25 +91,38 @@ def measure_orientation(mesh, direction, profile: Profile, *, reliable_normals=T
         overhang_scope="down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation")
 
 
-def candidates(mesh, include_face_normals=False):
+def candidates(mesh, include_face_normals=False, *, dense=False):
     result = dict(DIRECTIONS)
+    if dense:
+        for d in product((-1, 0, 1), repeat=3):
+            if np.count_nonzero(d) < 2:
+                continue
+            name = "".join(("+" if v > 0 else "-")+axis for axis, v in zip("XYZ", d) if v)
+            result[name] = tuple(unit_direction(d))
     if include_face_normals:
         # Area-aggregate coarsely equivalent normals, then use an actual normal.
         keys, inverse = np.unique(np.round(mesh.face_normals, 3), axis=0, return_inverse=True)
         areas = np.bincount(inverse, weights=mesh.area_faces)
+        added = 0
         for k in np.argsort(-areas):
             d = -mesh.face_normals[np.flatnonzero(inverse == k)[0]]
             if np.linalg.norm(d) < .5 or any(np.dot(d, unit_direction(v)) > .9999 for v in result.values()):
                 continue
-            result[f"면 방향 {len(result)-5}"] = tuple(float(x) for x in d)
-            if len(result) >= 12:
+            added += 1
+            result[f"면 방향 {added}"] = tuple(float(x) for x in d)
+            if added >= 6:
                 break
     return result
 
 
-def compare_orientations(mesh, profile, *, reliable_normals=True, extended=False):
+def compare_orientations(mesh, profile, *, reliable_normals=True, extended=False, dense=False, current_direction=None):
     rows = []
-    for name, direction in candidates(mesh, extended).items():
+    options = candidates(mesh, extended, dense=dense)
+    if current_direction is not None:
+        d = unit_direction(current_direction)
+        if not any(np.array_equal(d, unit_direction(v)) for v in options.values()):
+            options["현재 지정 방향"] = d
+    for name, direction in options.items():
         row = measure_orientation(mesh, direction, profile, reliable_normals=reliable_normals)
         row.pop("overhang_face_indices")
         row["name"] = name
@@ -103,4 +142,3 @@ def compare_orientations(mesh, profile, *, reliable_normals=True, extended=False
             for j in eligible if j != i)
         row["objectives"] = keys
     return rows
-

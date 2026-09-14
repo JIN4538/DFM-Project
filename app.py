@@ -12,12 +12,13 @@ from amdfm.detail import run_detail, attach_detail
 from amdfm.io import load_model
 from amdfm.gcode import inspect_gcode
 from amdfm.models import json_bytes
-from amdfm.orientation import candidates
+from amdfm.orientation import candidates, direction_from_angles, direction_angles, unit_direction
 from amdfm.presentation import model_figure, orientation_table, html_report, placed_stl, STATUS
 from amdfm.profiles import Profile, PROCESS_LABELS
 
 ROOT=Path(__file__).resolve().parent
 ENGINE_REVISION=code_digest()
+CUSTOM_DIRECTION="직접 각도 입력"
 st.set_page_config(page_title="AM-DFM | 적층제조 설계 검토",page_icon=":material/precision_manufacturing:",layout="wide")
 st.title("적층제조 설계 검토")
 st.caption(f"AM-DFM {__version__} · 형상을 이해하고, 방향을 비교하고, 바꿀 곳을 결정합니다.")
@@ -30,8 +31,8 @@ def cached_load(data,name,unit,confirmed,target,deflection,code_revision):
 
 
 @st.cache_data(max_entries=4,show_spinner=False)
-def cached_review(fingerprint,profile_dict,direction,extended,code_revision,_model):
-    return review(_model,Profile(**profile_dict),direction,extended=extended)
+def cached_review(fingerprint,profile_dict,direction,extended,dense,code_revision,_model):
+    return review(_model,Profile(**profile_dict),direction,extended=extended,dense=dense)
 
 
 @st.cache_data(max_entries=2,show_spinner=False)
@@ -39,8 +40,14 @@ def cached_gcode(data,diameter,code_revision):
     return inspect_gcode(data,diameter)
 
 
-def apply_orientation(name):
-    st.session_state["build_direction"]=name
+def apply_orientation(vector,presets):
+    # Match vectors, since face-candidate names can differ between candidate sets.
+    name=next((k for k,v in presets.items() if np.array_equal(unit_direction(v),vector)),None)
+    st.session_state["build_direction"]=name or CUSTOM_DIRECTION
+    if name is None and st.session_state.get("custom_vector")!=list(vector):
+        tilt,azimuth=direction_angles(vector)
+        st.session_state["build_tilt"]=tilt
+        st.session_state["build_azimuth"]=azimuth
     st.session_state["auto_review"]=True
 
 
@@ -95,15 +102,26 @@ with st.sidebar:
         selected_body=st.selectbox("CAD 솔리드",[None]+[x["body_id"] for x in bodies],
             index=1,format_func=lambda x:"전체 조립체 (배치 미리보기)" if x is None else f"솔리드 {x}",key="body")
     model=full_model.select_body(selected_body)
-    directions=candidates(model.mesh,True)
-    if st.session_state.get("build_direction") not in directions:
+    directions=candidates(model.mesh,True,dense=True)
+    if st.session_state.get("build_direction") not in [*directions,CUSTOM_DIRECTION]:
         st.session_state["build_direction"]="+Z"
     st.divider()
     process=st.selectbox("적층제조 공정",list(PROCESS_LABELS),format_func=lambda p:PROCESS_LABELS[p],key="process")
+    orientation_name=st.selectbox("위로 향할 모델 방향",[*directions,CUSTOM_DIRECTION],key="build_direction",
+        help="축 6개, 두 축의 대각선 12개, 세 축의 대각선 8개와 주요 면 방향을 선택하거나 각도를 직접 입력합니다.")
+    if orientation_name==CUSTOM_DIRECTION:
+        tilt=st.number_input("기울기 · 모델 +Z에서 (°)",min_value=0.,max_value=180.,value=0.,step=5.,format="%.4f",key="build_tilt",persist_state="session")
+        azimuth=st.number_input("방위각 · 모델 +X → +Y (°)",min_value=0.,max_value=360.,value=0.,step=5.,format="%.4f",key="build_azimuth",persist_state="session")
+        direction=tuple(direction_from_angles(tilt,azimuth))
+        st.session_state["custom_vector"]=list(direction)
+        st.caption("기울기 0°는 +Z, 90°는 XY 평면, 180°는 −Z입니다. 이 모델 방향이 프린터의 위쪽(+Z)을 향합니다.")
+    else:
+        direction=tuple(unit_direction(directions[orientation_name]))
+    st.caption("적층축 (모델 좌표): "+", ".join(f"{v:.6g}" for v in direction))
     with st.form("review_settings"):
         submitted=st.form_submit_button("설계 검토",type="primary",icon=":material/play_arrow:",width="stretch")
-        orientation_name=st.selectbox("위로 향할 모델 축·면",list(directions),key="build_direction")
         angle=st.number_input("검토 각도 · 수평면 기준 (°)",min_value=1.,max_value=90.,value=45.,step=5.,key="angle")
+        dense=st.checkbox("대각선 포함 26방향 비교",value=True,key="compare_diagonals")
         extended=st.checkbox("주요 면 방향까지 비교",value=False,key="extended")
         with st.expander("장비·재료와 검토 기준"):
             machine=st.text_input("장비",value="미확정",key="machine")
@@ -125,14 +143,13 @@ with st.sidebar:
 profile=Profile(process=process,machine=machine,material=material,slicer=slicer,layer_height_mm=layer,
     line_width_mm=line,overhang_angle_deg=angle,minimum_wall_mm=wall_limit,minimum_hole_mm=hole_limit,
     build_volume_mm=dims if use_build else None,clearance_mm=clearance,threshold_basis=basis,process_notes=process_notes)
-direction=directions[orientation_name]
 fingerprint=model.fingerprint
-settings_key=json_bytes([fingerprint,profile.to_dict(),direction,extended,ENGINE_REVISION]).decode()
+settings_key=json_bytes([fingerprint,profile.to_dict(),direction,extended,dense,ENGINE_REVISION]).decode()
 should_review=submitted or st.session_state.pop("auto_review",False)
 if should_review:
     try:
         with st.spinner("문제 위치와 방향별 손익을 계산하는 중…"):
-            st.session_state["report"]=cached_review(fingerprint,profile.to_dict(),direction,extended,ENGINE_REVISION,model)
+            st.session_state["report"]=cached_review(fingerprint,profile.to_dict(),direction,extended,dense,ENGINE_REVISION,model)
             st.session_state["report_settings"]=settings_key
     except (ValueError,MemoryError) as exc:
         st.error(str(exc))
@@ -198,6 +215,7 @@ if tab=="설계 조치" or tab is None:
         st.dataframe(pd.DataFrame([{"항목":f["title"],"상태":STATUS[f["status"]],"이유":f["reason"],"설계 조치":f["action"]} for f in report["findings"]]),hide_index=True)
 elif tab=="방향 비교":
     st.subheader("어느 방향에서 무엇이 달라지는가")
+    st.caption(f"현재 {len(report['orientations'])}개 후보 비교 · 직접 지정한 방향도 함께 비교합니다. 전체 각도 공간의 최적해를 찾는 기능은 아닙니다.")
     st.caption("비지배 대안은 현재 후보들의 기하 지표 간 절충안입니다. 서포트 체적·인쇄 시간·강도의 최적해를 뜻하지 않습니다.")
     st.dataframe(pd.DataFrame(orientation_table(report)),hide_index=True)
     choices=[r["name"] for r in report["orientations"]]
@@ -206,7 +224,7 @@ elif tab=="방향 비교":
     current=report["current_orientation"]
     if choice["overhang_projected_area_sum_mm2"] is not None and current["overhang_projected_area_sum_mm2"] is not None:
         st.write(f"현재 대비 투영면적 합 {choice['overhang_projected_area_sum_mm2']-current['overhang_projected_area_sum_mm2']:+.2f} mm² · 높이 {choice['height_mm']-current['height_mm']:+.2f} mm")
-    st.button("이 방향으로 검토",on_click=apply_orientation,args=(chosen,),type="primary",key="apply_orientation")
+    st.button("이 방향으로 검토",on_click=apply_orientation,args=(choice["direction"],directions),type="primary",key="apply_orientation")
 elif tab=="정밀 검토":
     st.subheader("문제가 의심되는 부분을 더 자세히")
     st.write("벽은 법선 관통거리 표본으로, MEX 층은 선폭과 인접 층의 관계로 검토합니다.")

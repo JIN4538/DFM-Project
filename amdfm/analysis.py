@@ -30,7 +30,7 @@ def code_digest():
     return digest.hexdigest()
 
 
-def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, extended=False):
+def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, extended=False, dense=False):
     started = time.perf_counter()
     profile.validate()
     mesh = model.mesh
@@ -139,7 +139,8 @@ def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, e
         "벽 검토를 실행하고 실제 장비의 허용 두께를 입력하세요. MEX는 슬라이서의 가변 선폭 경로도 대조하세요.",
         "not run in quick review", ["ISO52910", "KUIPERS2020", "PRUSA_ARACHNE"],
         measurements={"minimum_wall_mm":profile.minimum_wall_mm, "nominal_line_width_mm":profile.line_width_mm}))
-    orientations = compare_orientations(mesh, profile, reliable_normals=reliable, extended=extended) if compare else []
+    orientations = compare_orientations(mesh, profile, reliable_normals=reliable, extended=extended,
+        dense=dense, current_direction=measured["direction"]) if compare else []
     attention = sum(f.status == "attention" for f in findings)
     return plain(dict(schema="amdfm-review/3.0", app_version=__version__,
         timestamp_utc=datetime.now(timezone.utc).isoformat(), model=model.metadata,
@@ -149,7 +150,11 @@ def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, e
         geometry={"extents_mm":mesh.extents.tolist(), "mesh_triangle_area_mm2":float(mesh.area),
             "mesh_signed_volume_mm3":float(mesh.volume) if reliable and not assembly and not ambiguous_shells else None,
             "exact_cad_volume_mm3":model.metadata.get("exact_volume_mm3"), "face_count":len(mesh.faces)},
-        current_orientation=measured, orientations=orientations, findings=[asdict(f) for f in findings],
+        current_orientation=measured, orientations=orientations,
+        orientation_search={"base_candidates":26 if dense else 6, "include_major_faces":extended,
+            "includes_current_direction":compare, "continuous_optimum":False,
+            "scope":"finite candidates; mesh geometry; build-plane yaw limited to 0/90 degrees"},
+        findings=[asdict(f) for f in findings],
         unassessed=UNASSESSED[profile.process], sources=used_sources(findings),
         provenance={"code_sha256":code_digest(), "python":platform.python_version(), "platform":platform.platform(),
             "dependencies":{n:importlib.metadata.version(n) for n in ("numpy","trimesh","shapely","streamlit","cadquery-ocp-novtk")}},
