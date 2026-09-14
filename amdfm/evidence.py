@@ -1,0 +1,47 @@
+"""Primary-source registry. Numeric screening settings are separate from sources."""
+SOURCES = {
+    "ISO52910": dict(title="ISO/ASTM 52910:2018 — Design requirements, guidelines and recommendations",
+        url="https://www.iso.org/standard/67289.html", kind="standard_scope", locator="Scope; local R11 §§6.6, 6.9, 7",
+        use="검토 항목과 설계 정보 전달의 근거. 공통 수치 임계값의 근거가 아님.", access="공식 범위·판 정보 및 저장소의 불완전 KS 캡처"),
+    "ISO52902": dict(title="ISO/ASTM 52902:2023 — Test artefacts; geometric capability assessment",
+        url="https://www.iso.org/standard/79683.html", kind="standard_scope", locator="Scope",
+        use="장비별 시험물과 측정에 의한 검증. 자체 CAD 예제는 표준 인증 시험물이 아님.", access="공식 범위·판 정보; 2023 전문 미확보"),
+    "ISO52911M": dict(title="ISO/ASTM 52911-1:2019 — Laser-based powder bed fusion of metals",
+        url="https://www.iso.org/standard/72951.html", kind="standard_scope", locator="Scope",
+        use="금속 PBF 공정 고유의 설계 검토 필요성.", access="공식 공개 범위; 전문 미확보"),
+    "ISO52911P": dict(title="ISO/ASTM 52911-2:2019 — Laser-based powder bed fusion of polymers",
+        url="https://www.iso.org/standard/72952.html", kind="standard_scope", locator="Scope",
+        use="고분자 PBF와 금속 PBF의 설계 조건 분리.", access="공식 공개 범위; 전문 미확보"),
+    "MOYLAN2014": dict(title="Moylan et al. (2014), An Additive Manufacturing Test Artifact",
+        url="https://nvlpubs.nist.gov/nistpubs/jres/119/jres.119.017.pdf", kind="original_research", locator="Test artifact design and measurement",
+        use="알려진 형상과 독립 측정을 이용해 장비의 능력을 확인.", access="공개 논문"),
+    "KUIPERS2020": dict(title="Kuipers et al. (2020), Adaptive width control of dense contour-parallel toolpaths",
+        url="https://arxiv.org/abs/2004.13497", kind="original_research", locator="Abstract; adaptive bead width framework",
+        use="고정 선폭 형태학 검토를 실제 슬라이서 출력 누락 판정과 구분.", access="공개 저자 원고"),
+    "PRUSA_ARACHNE": dict(title="PrusaSlicer — Arachne perimeter generator",
+        url="https://help.prusa3d.com/article/arachne-perimeter-generator_352769", kind="vendor_documentation", locator="Minimum feature size; minimum perimeter width",
+        use="얇은 특징의 생략·확대는 가변 선폭과 슬라이서 설정에 의존.", access="공식 문서"),
+    "JIANG2018": dict(title="Jiang, Xu & Stringer (2018), A new support strategy for reducing waste in AM",
+        url=None, kind="original_research", locator="저장소 PDF p.5; LITERATURE.md R06",
+        use="오버행/브리지 임계값은 장비·재료·냉각·처짐 허용 조건과 함께 정함. 2 mm를 기본 한계로 차용하지 않음.", access="저장소 원문"),
+    "STAV2022": dict(title="Stavropoulos et al. (2022), Knowledge-based manufacturability assessment for optimization of AM",
+        url="https://doi.org/10.1007/s00170-022-09948-w", kind="original_research", locator="저장소 R07; STEP B-rep method; Table 2",
+        use="CAD 특징·공정 지식 연결. 원통면 탐지가 관통홀/제조 성공 보증은 아님.", access="저장소 원문"),
+    "KIM2019": dict(title="Kim et al. (2019), A Design for Additive Manufacturing Ontology to Support Manufacturability Analysis",
+        url="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=925693", kind="original_research", locator="Design features and design/process/material parameters",
+        use="특징·재료·공정·설계 규칙의 근거를 구조화.", access="NIST 공개 저널 원고; 2018 학회판과 구분"),
+    "FORM4": dict(title="Formlabs — Design specifications for 3D models (Form 4 generation)",
+        url="https://formlabs.com/support/Design-specifications-for-3D-models-Form-4-generation/", kind="vendor_experiment", locator="Grey Resin V5, Form 4, 50 µm; drain holes",
+        use="장비·수지·층 높이별 가이드. 보편 VPP 임계값으로 쓰지 않음.", access="공개 제조사 문서"),
+    "ASTMF3530": dict(title="ASTM F3530-22 — Design; post-processing for metal PBF-LB",
+        url="https://store.astm.org/f3530-22.html", kind="standard_scope", locator="Scope §1.1.1",
+        use="분말 제거 등 후처리 검토의 필요성. 형상만으로 제거 성공을 판정하지 않음.", access="공개 범위; 전문 미확보"),
+    "OCCT": dict(title="Open CASCADE Technology — STEP translator",
+        url="https://dev.opencascade.org/doc/overview/html/occt_user_guides__step.html", kind="software_documentation", locator="STEP reader; units; shape transfer",
+        use="STEP 단위 변환·솔리드·곡면 입력 처리. CAD가 원래 설계 의도를 모두 복원하지는 않음.", access="공식 API 문서 및 설치된 7.9.3 API"),
+}
+
+
+def used_sources(findings):
+    return {k:SOURCES[k] for k in dict.fromkeys(key for f in findings for key in f.evidence)}
+

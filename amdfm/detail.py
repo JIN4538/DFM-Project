@@ -1,0 +1,69 @@
+from __future__ import annotations
+
+import copy
+import json
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+
+import numpy as np
+
+from .models import json_bytes
+
+
+def run_detail(model, profile, direction=(0,0,1), *, mode="wall", timeout_s=60):
+    if mode not in ("wall", "layers"):
+        raise ValueError("알 수 없는 상세 검토입니다.")
+    profile.validate()
+    if mode == "layers" and profile.process != "MEX":
+        return {"status":"not_applicable", "mode":mode,"fingerprint":model.fingerprint,
+                "reason":"MEX 층간 검토를 다른 공정에 적용하지 않습니다."}
+    with tempfile.TemporaryDirectory(prefix="amdfm-detail-") as tmp:
+        base = Path(tmp)
+        np.savez_compressed(base/"mesh.npz", vertices=model.mesh.vertices, faces=model.mesh.faces)
+        (base/"request.json").write_bytes(json_bytes(dict(profile=profile.to_dict(), direction=direction,
+            mode=mode, fingerprint=model.fingerprint, assembly=(model.metadata.get("solid_count") or 1)>1,
+            ambiguous_stl_shells=model.metadata.get("source_format")=="stl" and model.metadata.get("surface_component_count",1)>1)))
+        try:
+            proc = subprocess.run([sys.executable, "-m", "amdfm.detail_worker", str(base)],
+                capture_output=True, cwd=Path(__file__).resolve().parents[1], timeout=timeout_s)
+        except subprocess.TimeoutExpired:
+            return {"status":"unknown", "mode":mode, "fingerprint":model.fingerprint,
+                    "reason":f"상세 계산이 {timeout_s:g}초 한도를 초과했습니다. 빠른 검토 결과는 유지됩니다."}
+        if not (base/"result.json").exists() or proc.returncode:
+            return {"status":"unknown", "mode":mode, "fingerprint":model.fingerprint,
+                    "reason":"상세 계산 프로세스가 완료되지 않았습니다. 단순화한 형상 또는 단일 솔리드로 재검토하세요."}
+        return json.loads((base/"result.json").read_text(encoding="utf-8"))
+
+
+def attach_detail(report, detail):
+    if detail.get("fingerprint") != report["model_fingerprint"]:
+        raise ValueError("상세 결과의 입력 모델이 현재 결과와 다릅니다.")
+    # Protect against mixing a result after profile/orientation changes.
+    if "profile" in detail and detail["profile"] != report["profile"]:
+        raise ValueError("상세 검토 프로필이 현재 결과와 다릅니다.")
+    if "direction" in detail and not np.allclose(detail["direction"],report["current_orientation"]["direction"]):
+        raise ValueError("상세 검토 방향이 현재 결과와 다릅니다.")
+    result = copy.deepcopy(report)
+    mode = detail.get("mode")
+    result.setdefault("details", {})[mode] = detail
+    if mode == "wall":
+        wall = next(f for f in result["findings"] if f["id"] == "wall")
+        if detail["status"] in ("measured", "partial"):
+            m = detail["measurements"]
+            limit = result["profile"]["minimum_wall_mm"]
+            suspected = m["below_limit_face_indices"]
+            wall.update(status="attention" if suspected else "observed",
+                reason=f"법선 방향 거리 표본 {m['valid_samples']}개에서 최소 {m['minimum_mm']:.4g} mm를 관측했습니다.",
+                method="deterministic area/detection face samples; inward first-hit normal chords",
+                measurements=m, face_indices=suspected if suspected else m["thinnest_face_indices"],
+                action=(f"표시된 구간을 {limit:g} mm 검토 기준과 대조하고, 벽 보강·형상 수정·다른 공정 조건을 비교하세요." if limit else
+                        "표시된 얇은 구간을 확인하고 장비별 검토 기준을 입력하세요. MEX에서는 가변 선폭 경로와 비교하세요."),
+                limitations=["관측 최소는 모델 전체의 최소 두께가 아닙니다. 비평행면에서는 법선 관통거리입니다.",
+                    "면적 대표 백분위는 유효 표본에 한정됩니다. 작은 특징·자기교차·표본 밖 구간을 놓칠 수 있습니다."])
+        else:
+            wall.update(status="unknown", reason=detail.get("reason","두께를 측정하지 못했습니다."),
+                        measurements={}, face_indices=[], cad_face_ids=[])
+    result["summary"]["attention_items"] = sum(f["status"]=="attention" for f in result["findings"])
+    return result

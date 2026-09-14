@@ -1,0 +1,4028 @@
+{
+  "schema": "amdfm-gcode/1.0",
+  "status": "parsed",
+  "source_sha256": "2430b794c1a46e6b40e41b0c031d7584591f297bef6d63cf79b8f611f6b427c2",
+  "filament_diameter_mm": 1.75,
+  "issues": [],
+  "unsupported_commands": [],
+  "parsed_segments": 250,
+  "segments": [
+    {
+      "start": [
+        -9.4,
+        0.0,
+        0.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        0.2
+      ],
+      "filament_mm": 0.62529,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 28
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        0.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        0.2
+      ],
+      "filament_mm": 0.026610000000000023,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 32
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        0.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        0.2
+      ],
+      "filament_mm": 0.6519,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 33
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        0.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        0.2
+      ],
+      "filament_mm": 0.026610000000000023,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 34
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        0.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        0.2
+      ],
+      "filament_mm": 0.6518899999999999,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 35
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        0.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        0.4
+      ],
+      "filament_mm": 0.6252900000000001,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 46
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        0.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        0.4
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 50
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        0.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        0.4
+      ],
+      "filament_mm": 0.6518999999999999,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 51
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        0.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        0.4
+      ],
+      "filament_mm": 0.026610000000000245,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 52
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        0.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        0.4
+      ],
+      "filament_mm": 0.6518999999999999,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 53
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        0.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        0.6
+      ],
+      "filament_mm": 0.6252900000000001,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 64
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        0.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        0.6
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 67
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        0.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        0.6
+      ],
+      "filament_mm": 0.6519000000000004,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 68
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        0.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        0.6
+      ],
+      "filament_mm": 0.02660000000000018,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 69
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        0.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        0.6
+      ],
+      "filament_mm": 0.6518999999999995,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 70
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        0.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        0.8
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 81
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        0.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        0.8
+      ],
+      "filament_mm": 0.02661000000000069,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 84
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        0.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        0.8
+      ],
+      "filament_mm": 0.6518999999999995,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 85
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        0.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        0.8
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 86
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        0.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        0.8
+      ],
+      "filament_mm": 0.6519000000000004,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 87
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        1.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        1.0
+      ],
+      "filament_mm": 0.6252900000000006,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 98
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        1.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        1.0
+      ],
+      "filament_mm": 0.02660000000000018,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 101
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        1.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        1.0
+      ],
+      "filament_mm": 0.6518999999999995,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 102
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        1.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        1.0
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 103
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        1.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        1.0
+      ],
+      "filament_mm": 0.6518999999999995,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 104
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        1.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        1.2
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 115
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        1.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        1.2
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 118
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        1.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        1.2
+      ],
+      "filament_mm": 0.6518999999999995,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 119
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        1.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        1.2
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 120
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        1.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        1.2
+      ],
+      "filament_mm": 0.6518899999999999,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 121
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        1.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        1.4
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 132
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        1.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        1.4
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 135
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        1.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        1.4
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 136
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        1.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        1.4
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 137
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        1.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        1.4
+      ],
+      "filament_mm": 0.6518999999999995,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 138
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        1.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        1.6
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 149
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        1.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        1.6
+      ],
+      "filament_mm": 0.0266099999999998,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 152
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        1.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        1.6
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 153
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        1.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        1.6
+      ],
+      "filament_mm": 0.02660000000000018,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 154
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        1.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        1.6
+      ],
+      "filament_mm": 0.6518999999999995,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 155
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        1.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        1.8
+      ],
+      "filament_mm": 0.6252900000000015,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 166
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        1.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        1.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 169
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        1.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        1.8
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 170
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        1.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        1.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 171
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        1.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        1.8
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 172
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        2.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        2.0
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 183
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        2.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        2.0
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 186
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        2.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        2.0
+      ],
+      "filament_mm": 0.6518899999999981,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 187
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        2.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        2.0
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 188
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        2.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        2.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 189
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        2.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        2.2
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 200
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        2.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        2.2
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 203
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        2.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        2.2
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 204
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        2.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        2.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 205
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        2.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        2.2
+      ],
+      "filament_mm": 0.6518900000000016,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 206
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        2.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        2.4
+      ],
+      "filament_mm": 0.6252999999999993,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 217
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        2.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        2.4
+      ],
+      "filament_mm": 0.026599999999998403,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 220
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        2.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        2.4
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 221
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        2.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        2.4
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 222
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        2.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        2.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 223
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        2.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        2.6
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 234
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        2.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        2.6
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 237
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        2.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        2.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 238
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        2.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        2.6
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 239
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        2.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        2.6
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 240
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        2.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        2.8
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 251
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        2.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        2.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 254
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        2.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        2.8
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 255
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        2.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        2.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 256
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        2.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        2.8
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 257
+    },
+    {
+      "start": [
+        9.4,
+        0.0,
+        3.0
+      ],
+      "end": [
+        -9.4,
+        0.0,
+        3.0
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 268
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        3.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        3.0
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 272
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        3.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        3.0
+      ],
+      "filament_mm": 0.6518899999999981,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 273
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        3.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        3.0
+      ],
+      "filament_mm": 0.026610000000001577,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 274
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        3.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        3.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 275
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        3.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        3.2
+      ],
+      "filament_mm": 0.6252900000000032,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 287
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        3.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        3.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 290
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        3.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        3.2
+      ],
+      "filament_mm": 0.6519000000000013,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 291
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        3.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        3.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 292
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        3.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        3.2
+      ],
+      "filament_mm": 0.6518900000000016,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 293
+    },
+    {
+      "start": [
+        9.4,
+        0.0,
+        3.4
+      ],
+      "end": [
+        -9.4,
+        0.0,
+        3.4
+      ],
+      "filament_mm": 0.6252999999999993,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 304
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        3.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        3.4
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 308
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        3.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        3.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 309
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        3.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        3.4
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 310
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        3.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        3.4
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 311
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        3.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        3.6
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 323
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        3.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        3.6
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 326
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        3.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        3.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 327
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        3.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        3.6
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 328
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        3.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        3.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 329
+    },
+    {
+      "start": [
+        9.4,
+        0.0,
+        3.8
+      ],
+      "end": [
+        -9.4,
+        0.0,
+        3.8
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 340
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        3.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        3.8
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 344
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        3.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        3.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 345
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        3.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        3.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 346
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        3.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        3.8
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 347
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        4.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        4.0
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 359
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        4.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        4.0
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 362
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        4.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        4.0
+      ],
+      "filament_mm": 0.6518900000000016,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 363
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        4.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        4.0
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 364
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        4.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        4.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 365
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        4.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        4.2
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 376
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        4.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        4.2
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 379
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        4.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        4.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 380
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        4.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        4.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 381
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        4.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        4.2
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 382
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        4.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        4.4
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 393
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        4.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        4.4
+      ],
+      "filament_mm": 0.02659999999999485,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 396
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        4.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        4.4
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 397
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        4.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        4.4
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 398
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        4.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        4.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 399
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        4.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        4.6
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 410
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        4.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        4.6
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 413
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        4.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        4.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 414
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        4.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        4.6
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 415
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        4.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        4.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 416
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        4.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        4.8
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 427
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        4.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        4.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 430
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        4.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        4.8
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 431
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        4.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        4.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 432
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        4.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        4.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 433
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        5.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        5.0
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 444
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        5.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        5.0
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 447
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        5.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        5.0
+      ],
+      "filament_mm": 0.6518899999999945,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 448
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        5.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        5.0
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 449
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        5.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        5.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 450
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        5.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        5.2
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 461
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        5.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        5.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 464
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        5.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        5.2
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 465
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        5.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        5.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 466
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        5.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        5.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 467
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        5.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        5.4
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 478
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        5.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        5.4
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 481
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        5.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        5.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 482
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        5.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        5.4
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 483
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        5.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        5.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 484
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        5.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        5.6
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 495
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        5.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        5.6
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 498
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        5.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        5.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 499
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        5.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        5.6
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 500
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        5.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        5.6
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 501
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        5.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        5.8
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 512
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        5.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        5.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 515
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        5.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        5.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 516
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        5.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        5.8
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 517
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        5.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        5.8
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 518
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        6.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        6.0
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 529
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        6.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        6.0
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 532
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        6.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        6.0
+      ],
+      "filament_mm": 0.6518900000000016,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 533
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        6.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        6.0
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 534
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        6.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        6.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 535
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        6.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        6.2
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 546
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        6.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        6.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 549
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        6.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        6.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 550
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        6.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        6.2
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 551
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        6.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        6.2
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 552
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        6.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        6.4
+      ],
+      "filament_mm": 0.6252899999999997,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 563
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        6.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        6.4
+      ],
+      "filament_mm": 0.02659999999999485,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 566
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        6.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        6.4
+      ],
+      "filament_mm": 0.6519000000000048,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 567
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        6.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        6.4
+      ],
+      "filament_mm": 0.026609999999998024,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 568
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        6.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        6.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 569
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        6.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        6.6
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 580
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        6.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        6.6
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 583
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        6.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        6.6
+      ],
+      "filament_mm": 0.6519000000000119,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 584
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        6.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        6.6
+      ],
+      "filament_mm": 0.026599999999987745,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 585
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        6.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        6.6
+      ],
+      "filament_mm": 0.6519000000000119,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 586
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        6.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        6.8
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 597
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        6.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        6.8
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 600
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        6.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        6.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 601
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        6.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        6.8
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 602
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        6.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        6.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 603
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        7.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        7.0
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 614
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        7.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        7.0
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 617
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        7.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        7.0
+      ],
+      "filament_mm": 0.6518899999999945,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 618
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        7.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        7.0
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 619
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        7.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        7.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 620
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        7.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        7.2
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 631
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        7.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        7.2
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 634
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        7.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        7.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 635
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        7.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        7.2
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 636
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        7.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        7.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 637
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        7.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        7.4
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 648
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        7.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        7.4
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 651
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        7.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        7.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 652
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        7.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        7.4
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 653
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        7.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        7.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 654
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        7.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        7.6
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 665
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        7.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        7.6
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 668
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        7.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        7.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 669
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        7.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        7.6
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 670
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        7.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        7.6
+      ],
+      "filament_mm": 0.6518900000000087,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 671
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        7.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        7.8
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 682
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        7.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        7.8
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 685
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        7.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        7.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 686
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        7.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        7.8
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 687
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        7.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        7.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 688
+    },
+    {
+      "start": [
+        9.4,
+        0.0,
+        8.0
+      ],
+      "end": [
+        -9.4,
+        0.0,
+        8.0
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 699
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        8.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        8.0
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 703
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        8.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        8.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 704
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        8.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        8.0
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 705
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        8.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        8.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 706
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        8.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        8.2
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 718
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        8.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        8.2
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 721
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        8.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        8.2
+      ],
+      "filament_mm": 0.6519000000000119,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 722
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        8.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        8.2
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 723
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        8.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        8.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 724
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        8.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        8.4
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 735
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        8.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        8.4
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 738
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        8.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        8.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 739
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        8.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        8.4
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 740
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        8.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        8.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 741
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        8.6
+      ],
+      "end": [
+        9.4,
+        0.0,
+        8.6
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 752
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        8.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        8.6
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 755
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        8.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        8.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 756
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        8.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        8.6
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 757
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        8.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        8.6
+      ],
+      "filament_mm": 0.6518899999999945,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 758
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        8.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        8.8
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 769
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        8.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        8.8
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 772
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        8.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        8.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 773
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        8.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        8.8
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 774
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        8.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        8.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 775
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        9.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        9.0
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 786
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        9.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        9.0
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 789
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        9.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        9.0
+      ],
+      "filament_mm": 0.6519000000000119,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 790
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        9.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        9.0
+      ],
+      "filament_mm": 0.026599999999987745,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 791
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        9.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        9.0
+      ],
+      "filament_mm": 0.6519000000000119,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 792
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        9.2
+      ],
+      "end": [
+        9.4,
+        0.0,
+        9.2
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 803
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        9.2
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        9.2
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 806
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        9.2
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        9.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 807
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        9.2
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        9.2
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 808
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        9.2
+      ],
+      "end": [
+        9.8,
+        0.4,
+        9.2
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 809
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        9.4
+      ],
+      "end": [
+        9.4,
+        0.0,
+        9.4
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 820
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        9.4
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        9.4
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 823
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        9.4
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        9.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 824
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        9.4
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        9.4
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 825
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        9.4
+      ],
+      "end": [
+        9.8,
+        0.4,
+        9.4
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 826
+    },
+    {
+      "start": [
+        9.4,
+        0.0,
+        9.6
+      ],
+      "end": [
+        -9.4,
+        0.0,
+        9.6
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 837
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        9.6
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        9.6
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 841
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        9.6
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        9.6
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 842
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        9.6
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        9.6
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 843
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        9.6
+      ],
+      "end": [
+        9.8,
+        0.4,
+        9.6
+      ],
+      "filament_mm": 0.6518899999999945,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 844
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        9.8
+      ],
+      "end": [
+        9.4,
+        0.0,
+        9.8
+      ],
+      "filament_mm": 0.6252900000000068,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 856
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        9.8
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        9.8
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 859
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        9.8
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        9.8
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 860
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        9.8
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        9.8
+      ],
+      "filament_mm": 0.02660999999999092,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 861
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        9.8
+      ],
+      "end": [
+        9.8,
+        0.4,
+        9.8
+      ],
+      "filament_mm": 0.6519000000000119,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 862
+    },
+    {
+      "start": [
+        -9.4,
+        0.0,
+        10.0
+      ],
+      "end": [
+        9.4,
+        0.0,
+        10.0
+      ],
+      "filament_mm": 0.6252899999999926,
+      "length_mm": 18.8,
+      "type": "WALL-INNER",
+      "line": 873
+    },
+    {
+      "start": [
+        9.8,
+        0.4,
+        10.0
+      ],
+      "end": [
+        9.8,
+        -0.4,
+        10.0
+      ],
+      "filament_mm": 0.02661000000000513,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 876
+    },
+    {
+      "start": [
+        9.8,
+        -0.4,
+        10.0
+      ],
+      "end": [
+        -9.8,
+        -0.4,
+        10.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 877
+    },
+    {
+      "start": [
+        -9.8,
+        -0.4,
+        10.0
+      ],
+      "end": [
+        -9.8,
+        0.4,
+        10.0
+      ],
+      "filament_mm": 0.026600000000001955,
+      "length_mm": 0.8,
+      "type": "WALL-OUTER",
+      "line": 878
+    },
+    {
+      "start": [
+        -9.8,
+        0.4,
+        10.0
+      ],
+      "end": [
+        9.8,
+        0.4,
+        10.0
+      ],
+      "filament_mm": 0.6518999999999977,
+      "length_mm": 19.6,
+      "type": "WALL-OUTER",
+      "line": 879
+    }
+  ],
+  "by_type": {
+    "WALL-INNER": {
+      "filament_mm": 31.26452000000001,
+      "path_mm": 939.9999999999992,
+      "segments": 50,
+      "commanded_volume_mm3": 75.19998329922731
+    },
+    "WALL-OUTER": {
+      "filament_mm": 67.85068,
+      "path_mm": 2039.9999999999932,
+      "segments": 200,
+      "commanded_volume_mm3": 163.20001083788316
+    }
+  },
+  "total_commanded_volume_mm3": 238.39999413711047,
+  "slicer_declared_time_seconds": 6666.0,
+  "scope": "Single tool, explicit G0/G1 Cartesian moves, independent M82/M83 extrusion mode; subset amounts remain partial when unsupported. Geometry identity and placement are not inferred from G-code."
+}
