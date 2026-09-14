@@ -12,12 +12,14 @@
 
 [로컬 앱 열기](http://127.0.0.1:8507). 앱은 로컬 컴퓨터에서 동작한다. 파일은 외부 분석 서버로 전송하지 않는다.
 
-다른 환경에서는 Python 3.12를 설치하고 `INSTALL.cmd`를 실행한다. 또는:
+다른 환경에서는 ZIP 전체를 폴더에 압축 해제하고 `INSTALL.cmd`를 실행한다. 설치 파일은 기존 정상 `.venv`를 우선 재사용하며, 없으면 64-bit Python 3.12 또는 3.13을 탐색한다. Python이 없다면 [Python 공식 Windows 설치 파일](https://www.python.org/downloads/windows/)로 설치한 뒤 다시 실행한다. 직접 명령을 사용할 때는 설치된 버전 번호를 지정한다. 예:
 
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
+
+설치 중 오류가 발생해도 창이 유지되고, `logs/install-날짜-시간.log`에 전체 출력이 남는다. Python 탐색 오류는 `logs/install-bootstrap.log`에 남는다. 설치 파일을 따로 복사하지 말고 `scripts/install_environment.py`, `requirements.txt`, `app.py`를 포함한 전체 폴더를 사용한다. `INSTALL.cmd --diagnose --no-pause`는 패키지를 변경하지 않고 설치 경로와 Python을 확인한다. 등록되지 않은 Python은 `AM_DFM_PYTHON` 환경변수에 실행 파일의 전체 경로를 지정할 수 있다.
 
 ## 사용 순서
 
