@@ -1,0 +1,53 @@
+{
+  "source_summary": "study/random-shape-audit/refreshed-01/summary.json",
+  "source_summary_sha256": "eb589c0fb3c293e9050b69818b756ec5fea236adb3886407798386e656a01bd1",
+  "current_quick_code_sha256": "dfa1f3f44c96a19ee5ffd3dd11fc8b882034b5dfdf51783bf0bc29fc01ea45fa",
+  "cached_geometry_and_detail_source_code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+  "completed_files": 26,
+  "planned_files": 26,
+  "case_count": 744,
+  "case_statuses": {
+    "refreshed": 744
+  },
+  "max_float_absolute_difference": 0.0,
+  "geometry_and_direction_invariants_passed": true,
+  "finding_measurement_and_face_selections_exact": true,
+  "allowed_status_changes": [
+    {
+      "file_id": "file_002",
+      "case": "whole_PBF_POLYMER",
+      "finding": "overhang",
+      "before": "unknown",
+      "after": "not_applicable"
+    },
+    {
+      "file_id": "file_015",
+      "case": "whole_PBF_POLYMER",
+      "finding": "overhang",
+      "before": "unknown",
+      "after": "not_applicable"
+    }
+  ],
+  "reused_detail_mode_counts": {
+    "wall": 744,
+    "layers": 744,
+    "sections": 744
+  },
+  "detail_recomputed": false,
+  "scope": "Current quick review rerun on identical cached geometry; prior wall/layers/uniform sections reused with original code SHA and original result SHA. Event sections are separately computed and not part of this refresh.",
+  "full_report_supplement": {
+    "source": "study/random-shape-audit/refreshed-01/full-report-integrity-supplement-03.json",
+    "sha256": "083c64aa36190881b272298782c42e18b7774380419c46207a3fd9dc6440ee7e",
+    "full_reports_checked": 744,
+    "full_numeric_and_status_invariant_failures": [],
+    "checker": "scripts/refresh_corpus_reports.py:assert_refreshed_report_unchanged",
+    "checker_sha256": "152170db7e7f9acfa38309e4afa05ef9f795a2575d90233262ddf65c61d59d01",
+    "boolean_number_type_distinction_enforced": true,
+    "excluded_added_metadata_fields": [
+      "source_code_sha256",
+      "original_detail_sha256",
+      "recomputed_in_report_refresh"
+    ],
+    "scope": "Supplemental comparison of already-generated full reports; no quick or detail results are recalculated."
+  }
+}

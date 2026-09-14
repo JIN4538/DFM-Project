@@ -11,4 +11,4 @@
 - 코드 변경은 관련독립반례와 기존검사를 검증한다. 과거Linux전부통과 기록을 현재환경통과로 대신하지 않는다. 이번Windows 최초실패와재시험은 `docs/project-knowledge/baseline/`에 있다.
 - 변경 뒤 이유·문헌근거/쪽수·설정·전후결과·남은한계를 지식문서에 갱신한다. 새작업의 사용자 지시가 우선이며 이 파일을 불필요한 승인 요청의 근거로 사용하지 않는다.
 
-현재 기본 제품은 AM-DFM 3.0이다. `app.py`/`amdfm/`에서 STEP·STL 및 MEX/VPP/고분자 PBF/금속 PBF의 명시된 기하 검토를 제공한다. 사용자 후속 지시·교수님 피드백·검증 상태는 `docs/project-knowledge/RELEASE_V3_2026-09-14.md`, `docs/VALIDATION_V3.md`를 먼저 읽는다. 이전 FDM 우선 제안을 새 작업의 제한이나 승인 요건으로 오해하지 않는다. 실물 시편 검증과 공정 물리 해석은 미완료이며 기하 결과를 제조 성공 판정으로 확대하지 않는다.
+현재 기본 제품은 AM-DFM 3.0이다. `app.py`/`amdfm/`에서 STEP·STL·3MF 및 MEX/VPP/고분자 PBF/금속 PBF의 명시된 기하 검토를 제공한다. 최신 실제 형상·문헌 재감사는 `docs/project-knowledge/RANDOM_CORPUS_REAUDIT_2026-09-14.md`와 `INDEPENDENT_CAD_AUDIT_2026-09-14.md`에서 확인한다. 사용자 후속 지시·교수님 피드백·초기 검증 상태는 `docs/project-knowledge/RELEASE_V3_2026-09-14.md`, `docs/VALIDATION_V3.md`에 있다. 이전 FDM 우선 제안을 새 작업의 제한이나 승인 요건으로 오해하지 않는다. 실물 시편 검증과 공정 물리 해석은 미완료이며 기하 결과를 제조 성공 판정으로 확대하지 않는다.

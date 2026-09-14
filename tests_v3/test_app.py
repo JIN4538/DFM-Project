@@ -101,3 +101,39 @@ def test_custom_direction_comparison_application_and_stale_exports():
     app.button[0].click().run()
     assert not app.exception
     assert len(app.session_state["report"]["orientations"])==7
+
+
+@pytest.mark.parametrize("process",["VPP","PBF_POLYMER","PBF_METAL"])
+def test_non_fdm_sections_work_and_exports_preserve_measurements(process):
+    app=AppTest.from_file(str(APP),default_timeout=90).run()
+    app.selectbox(key="process").select(process).run()
+    app.button[0].click().run()
+    app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+    assert app.button(key="run_layers").disabled
+    assert all(n.key!="line_width" for n in app.number_input)
+    app.selectbox(key="section_method").select("균등 간격 · 높이별 비교").run()
+    app.number_input(key="section_samples").set_value(8).run()
+    app.button(key="run_sections").click().run()
+    assert not app.exception
+    report=app.session_state["report"]
+    assert report["profile"]["build_volume_mm"] is None
+    assert report["details"]["sections"]["complete_samples"]==8
+    assert next(f for f in report["findings"] if f["id"]=="sections")["status"]=="observed"
+    app.segmented_control(key="result_tab").set_value("근거·내보내기").run()
+    assert not app.exception and len(app.get("download_button"))==4
+
+
+def test_event_section_default_and_switch_keep_result_method_visible():
+    app=AppTest.from_file(str(APP),default_timeout=90).run()
+    app.selectbox(key="process").select("VPP").run()
+    app.button[0].click().run()
+    app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+    assert app.selectbox(key="section_method").value.startswith("형상 변화")
+    app.button(key="run_sections").click().run()
+    assert not app.exception
+    result=app.session_state["report"]["details"]["sections"]
+    assert result["sampling"]=="events"
+    assert result["status"] in ("complete","partial")
+    app.selectbox(key="section_method").select("균등 간격 · 높이별 비교").run()
+    assert app.session_state["report"]["details"]["sections"]["sampling"]=="events"
+    assert any("형상 변화 기준 결과" in element.value for element in app.markdown)

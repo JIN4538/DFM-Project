@@ -1,0 +1,390 @@
+{
+  "source_sha256": "a7e5a80f3be0af7faa60fc99f5ff5c9938582324c7a57be22a87af9aefdabe97",
+  "body": 2,
+  "model_fingerprint": "73105804e9017f967b6d0087e42f6b78c6b3cfa02b60deb4cfdd595806abe159",
+  "source_code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+  "independent_script_sha256": "0735307cb29ef86b976a7fb3d40ccaa07dcc7b6e458e4118e62727453e27c694",
+  "method": "Independent trimesh plane intersections, degree-two loops, shoelace area and segment perimeter; event-interval two-point Gauss volume integration.",
+  "height_event_rounding_mm": 1e-08,
+  "endpoint_join_policy": "Within max(1e-12mm, max_extent*machine_epsilon*256); observed adjustment reported. Source mesh unmodified.",
+  "coordinate_frame": "build_mm",
+  "knot_heights_mm": [
+    0.0,
+    1.2,
+    50.0,
+    295.0,
+    363.8,
+    365.0
+  ],
+  "intervals": [
+    {
+      "index": 0,
+      "low_z_mm": 0.0,
+      "high_z_mm": 1.2,
+      "thickness_mm": 1.2,
+      "independent_samples": [
+        {
+          "z_mm": 0.2535898384862245,
+          "area_mm2": 44850.00000000001,
+          "perimeter_mm": 1009.9999999999999,
+          "rings": 1,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 0.6,
+          "area_mm2": 44850.0,
+          "perimeter_mm": 1010.0,
+          "rings": 1,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 0.9464101615137754,
+          "area_mm2": 44850.0,
+          "perimeter_mm": 1010.0,
+          "rings": 1,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        }
+      ],
+      "constant_sampled_area": true,
+      "gauss_volume_mm3": 53820.0
+    },
+    {
+      "index": 1,
+      "low_z_mm": 1.2,
+      "high_z_mm": 50.0,
+      "thickness_mm": 48.8,
+      "independent_samples": [
+        {
+          "z_mm": 11.512653431773133,
+          "area_mm2": 1206.2399999999907,
+          "perimeter_mm": 2010.3999999999999,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 25.6,
+          "area_mm2": 1206.2399999999907,
+          "perimeter_mm": 2010.4,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 39.68734656822687,
+          "area_mm2": 1206.239999999998,
+          "perimeter_mm": 2010.4,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        }
+      ],
+      "constant_sampled_area": true,
+      "gauss_volume_mm3": 58864.51199999972
+    },
+    {
+      "index": 2,
+      "low_z_mm": 50.0,
+      "high_z_mm": 295.0,
+      "thickness_mm": 245.0,
+      "independent_samples": [
+        {
+          "z_mm": 101.77459202427085,
+          "area_mm2": 585.1199999999953,
+          "perimeter_mm": 977.5999999999999,
+          "rings": 1,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 172.5,
+          "area_mm2": 585.1199999999953,
+          "perimeter_mm": 977.6,
+          "rings": 1,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 1.4210854715202004e-14
+        },
+        {
+          "z_mm": 243.22540797572915,
+          "area_mm2": 585.1199999999953,
+          "perimeter_mm": 977.6,
+          "rings": 1,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 1.4210854715202004e-14
+        }
+      ],
+      "constant_sampled_area": true,
+      "gauss_volume_mm3": 143354.39999999886
+    },
+    {
+      "index": 3,
+      "low_z_mm": 295.0,
+      "high_z_mm": 363.8,
+      "thickness_mm": 68.80000000000001,
+      "independent_samples": [
+        {
+          "z_mm": 309.53915073987685,
+          "area_mm2": 1674.2400000000052,
+          "perimeter_mm": 2790.4000000000005,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 329.4,
+          "area_mm2": 1674.2399999999761,
+          "perimeter_mm": 2790.4,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 1.4210854715202004e-14
+        },
+        {
+          "z_mm": 349.2608492601231,
+          "area_mm2": 1674.2399999999907,
+          "perimeter_mm": 2790.3999999999996,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        }
+      ],
+      "constant_sampled_area": true,
+      "gauss_volume_mm3": 115187.71199999988
+    },
+    {
+      "index": 4,
+      "low_z_mm": 363.8,
+      "high_z_mm": 365.0,
+      "thickness_mm": 1.1999999999999886,
+      "independent_samples": [
+        {
+          "z_mm": 364.05358983848623,
+          "area_mm2": 105513.46925312615,
+          "perimeter_mm": 1839.7710141520392,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 364.4,
+          "area_mm2": 105513.46925312615,
+          "perimeter_mm": 1839.7710141520392,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        },
+        {
+          "z_mm": 364.7464101615137,
+          "area_mm2": 105513.46925312615,
+          "perimeter_mm": 1839.7710141520392,
+          "rings": 2,
+          "endpoint_join_tolerance_mm": 2.2168933355715126e-11,
+          "endpoint_join_max_adjustment_mm": 2.842170943040401e-14
+        }
+      ],
+      "constant_sampled_area": true,
+      "gauss_volume_mm3": 126616.16310375018
+    }
+  ],
+  "horizontal_cad_planes": [
+    {
+      "cad_face_id": 57,
+      "normal_build_z": 1.0,
+      "low_z_mm": 1.1999999999999886,
+      "high_z_mm": 1.1999999999999886,
+      "tessellated_plane_area_mm2": 43643.76000000001
+    },
+    {
+      "cad_face_id": 59,
+      "normal_build_z": -1.0,
+      "low_z_mm": 363.8,
+      "high_z_mm": 363.8,
+      "tessellated_plane_area_mm2": 103839.22925312619
+    },
+    {
+      "cad_face_id": 61,
+      "normal_build_z": -1.0,
+      "low_z_mm": 295.0,
+      "high_z_mm": 295.0,
+      "tessellated_plane_area_mm2": 1089.1199999999897
+    },
+    {
+      "cad_face_id": 65,
+      "normal_build_z": 1.0,
+      "low_z_mm": 50.0,
+      "high_z_mm": 50.0,
+      "tessellated_plane_area_mm2": 621.1199999999942
+    },
+    {
+      "cad_face_id": 67,
+      "normal_build_z": -1.0,
+      "low_z_mm": 0.0,
+      "high_z_mm": 0.0,
+      "tessellated_plane_area_mm2": 44850.0
+    },
+    {
+      "cad_face_id": 69,
+      "normal_build_z": 1.0,
+      "low_z_mm": 365.0,
+      "high_z_mm": 365.0,
+      "tessellated_plane_area_mm2": 105513.46925312615
+    }
+  ],
+  "independent_tetra_volume_mm3": 497842.7871037473,
+  "piecewise_gauss_volume_mm3": 497842.78710374865,
+  "gauss_vs_tetra_relative_difference": 2.6891545598123887e-15,
+  "scope": "Event knots and polygon areas belong to the stored tessellated closed mesh. No CAD Hausdorff bound, printing force, process success or guaranteed uniform-sample extrema are inferred.",
+  "section_checks": [
+    {
+      "source_json_sha256": "ff34993e4e23da2b7b8e21cd46d34b64398a3b067274da062314fb7569cebd08",
+      "requested_samples": 64,
+      "complete_samples": 64,
+      "grid_bound_scope": "Corresponding closed polygon vertices: |delta A| <= perimeter*d+N*d^2/2, d=grid/sqrt(2)+independent join tolerance; plus reported simplifier area change and1e-8 roundoff allowance. Not a general topological/CAD error certificate.",
+      "max_area_error_fraction_of_declared_grid_bound": 0.21580772479482957,
+      "max_area_absolute_difference_mm2": 1.6761769074946642e-06,
+      "max_perimeter_absolute_difference_mm": 5.200035957386717e-09,
+      "max_endpoint_join_adjustment_mm": 2.842170943040401e-14,
+      "interval_sampling": [
+        {
+          "interval_index": 0,
+          "samples": 0,
+          "represented_thickness_mm": 0.0,
+          "actual_interval_thickness_mm": 1.2
+        },
+        {
+          "interval_index": 1,
+          "samples": 9,
+          "represented_thickness_mm": 51.328125,
+          "actual_interval_thickness_mm": 48.8
+        },
+        {
+          "interval_index": 2,
+          "samples": 43,
+          "represented_thickness_mm": 245.234375,
+          "actual_interval_thickness_mm": 245.0
+        },
+        {
+          "interval_index": 3,
+          "samples": 12,
+          "represented_thickness_mm": 68.4375,
+          "actual_interval_thickness_mm": 68.80000000000001
+        },
+        {
+          "interval_index": 4,
+          "samples": 0,
+          "represented_thickness_mm": 0.0,
+          "actual_interval_thickness_mm": 1.1999999999999886
+        }
+      ],
+      "unsampled_intervals": [
+        0,
+        4
+      ],
+      "volume_midpoint_estimate_mm3": 319986.37532063015,
+      "source_result_filename": "body_002_MEX_sections.json",
+      "strict_relative_threshold_exceedance_count": 21,
+      "declared_grid_precision_exceedance_count": 0
+    },
+    {
+      "source_json_sha256": "97992ccb78fc0b7403eadde01a1ff7f58dd5f6e1b54b85e81de48b0299597f79",
+      "requested_samples": 256,
+      "complete_samples": 256,
+      "grid_bound_scope": "Corresponding closed polygon vertices: |delta A| <= perimeter*d+N*d^2/2, d=grid/sqrt(2)+independent join tolerance; plus reported simplifier area change and1e-8 roundoff allowance. Not a general topological/CAD error certificate.",
+      "max_area_error_fraction_of_declared_grid_bound": 0.4429085020867551,
+      "max_area_absolute_difference_mm2": 1.676206011325121e-06,
+      "max_perimeter_absolute_difference_mm": 6.399773155862931e-09,
+      "max_endpoint_join_adjustment_mm": 4.263256414560601e-14,
+      "interval_sampling": [
+        {
+          "interval_index": 0,
+          "samples": 1,
+          "represented_thickness_mm": 1.42578125,
+          "actual_interval_thickness_mm": 1.2
+        },
+        {
+          "interval_index": 1,
+          "samples": 34,
+          "represented_thickness_mm": 48.4765625,
+          "actual_interval_thickness_mm": 48.8
+        },
+        {
+          "interval_index": 2,
+          "samples": 172,
+          "represented_thickness_mm": 245.234375,
+          "actual_interval_thickness_mm": 245.0
+        },
+        {
+          "interval_index": 3,
+          "samples": 48,
+          "represented_thickness_mm": 68.4375,
+          "actual_interval_thickness_mm": 68.80000000000001
+        },
+        {
+          "interval_index": 4,
+          "samples": 1,
+          "represented_thickness_mm": 1.42578125,
+          "actual_interval_thickness_mm": 1.1999999999999886
+        }
+      ],
+      "unsampled_intervals": [],
+      "volume_midpoint_estimate_mm3": 530932.1217167821,
+      "source_result_filename": "sections_256.json",
+      "strict_relative_threshold_exceedance_count": 82,
+      "declared_grid_precision_exceedance_count": 0
+    },
+    {
+      "source_json_sha256": "23e61e9323ebda7f6c22388d4c55282bae74babf9727ba4f18063e0ce5d320fb",
+      "requested_samples": 1024,
+      "complete_samples": 1024,
+      "grid_bound_scope": "Corresponding closed polygon vertices: |delta A| <= perimeter*d+N*d^2/2, d=grid/sqrt(2)+independent join tolerance; plus reported simplifier area change and1e-8 roundoff allowance. Not a general topological/CAD error certificate.",
+      "max_area_error_fraction_of_declared_grid_bound": 0.4429096457860559,
+      "max_area_absolute_difference_mm2": 1.676206011325121e-06,
+      "max_perimeter_absolute_difference_mm": 6.399773155862931e-09,
+      "max_endpoint_join_adjustment_mm": 5.684341886080802e-14,
+      "interval_sampling": [
+        {
+          "interval_index": 0,
+          "samples": 3,
+          "represented_thickness_mm": 1.0693359375,
+          "actual_interval_thickness_mm": 1.2
+        },
+        {
+          "interval_index": 1,
+          "samples": 137,
+          "represented_thickness_mm": 48.8330078125,
+          "actual_interval_thickness_mm": 48.8
+        },
+        {
+          "interval_index": 2,
+          "samples": 688,
+          "represented_thickness_mm": 245.234375,
+          "actual_interval_thickness_mm": 245.0
+        },
+        {
+          "interval_index": 3,
+          "samples": 193,
+          "represented_thickness_mm": 68.7939453125,
+          "actual_interval_thickness_mm": 68.80000000000001
+        },
+        {
+          "interval_index": 4,
+          "samples": 3,
+          "represented_thickness_mm": 1.0693359375,
+          "actual_interval_thickness_mm": 1.1999999999999886
+        }
+      ],
+      "unsampled_intervals": [],
+      "volume_midpoint_estimate_mm3": 478362.50152416877,
+      "source_result_filename": "sections_1024.json",
+      "strict_relative_threshold_exceedance_count": 330,
+      "declared_grid_precision_exceedance_count": 0
+    }
+  ],
+  "uniform_vs_tetra_signed_relative_difference": {
+    "64": -0.3572541701725067,
+    "256": 0.06646542938893507,
+    "1024": -0.039129392017321685
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "source_relative_path": "191223310-19-900-602/900-602.stp",
+  "source_sha256": "a82f75d019b5e4b2f30a2f856413c10d4a0b260bae2329e43d56518c330e5797",
+  "baseline_code_sha256": "da5022ec34e2560243a3dcec65a56a1d74f8aa82056519dfdcdc7e105e1310d9",
+  "independent_script_sha256": "71488b9c2c2b914d0fc4138744836950b326fe83034534d971fbc05c4aa1e991",
+  "method": "Midpoint triangle-plane intersections; degree-two endpoint cycles; polygon containment parity; signed shoelace area/second moments.",
+  "plane_axis": 2,
+  "plane_coordinate_mm": 3000.0,
+  "section_axes": [
+    0,
+    1
+  ],
+  "endpoint_rounding_mm": 1e-07,
+  "ring_count": 6,
+  "section_area_mm2": 301.4598347053418,
+  "section_centroid_mm": [
+    -1.8856050563541546e-16,
+    7.5424202254166185e-16
+  ],
+  "section_centroidal_inertia_mm4": [
+    26654.525485083977,
+    26674.98298655419
+  ],
+  "extrusion_length_mm": 6000.0,
+  "mesh_volume_over_length_mm2": 301.45983483458735,
+  "mesh_extrusion_centroidal_inertia_mm4": [
+    26654.52548098564,
+    26674.982984304428
+  ],
+  "scope": "One midpoint section; extrusion volume/inertia conversion assumes a constant section. Catalog values and geometry are compared without changing or calibrating the input. No material density or printing outcome is inferred.",
+  "catalog_inertia_mm4": 28500.0,
+  "relative_difference_from_catalog": [
+    0.0647534917514394,
+    0.06403568468230911
+  ]
+}

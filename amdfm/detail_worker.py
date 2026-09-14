@@ -75,6 +75,23 @@ def run(base):
             result={"status":"unknown","reason":"입력 위상·면 방향 결함 때문에 안쪽 관통거리 측정을 보류했습니다."}
         else:
             result=normal_chords(mesh,profile["minimum_wall_mm"])
+    elif request["mode"]=="sections":
+        from .cross_sections import inspect_cross_sections
+        if request["assembly"] or request.get("ambiguous_stl_shells"):
+            result={"status":"unknown","reason":"재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요."}
+        else:
+            matrix=np.asarray(request["placement_transform"],dtype=float)
+            placed=trimesh.Trimesh(vertices=mesh.vertices@matrix[:3,:3].T+matrix[:3,3],
+                                   faces=mesh.faces.copy(),process=False)
+            if request.get("sampling")=="events":
+                from .event_sections import inspect_event_sections
+                result=inspect_event_sections(placed,max_samples=request["max_event_samples"])
+            else:
+                result=inspect_cross_sections(placed,request["sample_count"])
+        if request.get("sampling")=="events":
+            result.update(sampling="events",max_event_samples=request["max_event_samples"])
+        else:
+            result["sample_count"]=request["sample_count"]
     else:
         from src.core.layer_review import inspect_layers
         if request["assembly"]:
@@ -105,5 +122,6 @@ if __name__=="__main__":
     except Exception as exc:
         request=json.loads((base/"request.json").read_text(encoding="utf-8"))
         result={"status":"unknown","reason":str(exc),**{key:request[key] for key in
-            ("mode","fingerprint","profile","direction","placement_transform","coordinate_frame")}}
+            ("mode","fingerprint","profile","direction","placement_transform","coordinate_frame",
+             "sampling","max_event_samples","sample_count") if key in request}}
     (base/"result.json").write_bytes(json_bytes(result))

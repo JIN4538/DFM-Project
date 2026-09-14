@@ -13,6 +13,7 @@ import numpy as np
 import trimesh
 
 from .models import Model
+from .processes import run_bounded
 
 MAX_BYTES = 80 * 1024 * 1024
 MAX_FACES = 600_000
@@ -40,11 +41,13 @@ def load_model(data: bytes, filename: str, *, unit="mm", dimensions_confirmed=Fa
             source.write_bytes(data)
             dest = Path(tmp) / "result"
             try:
-                run = subprocess.run([sys.executable, "-m", "amdfm.cad_worker", str(source),
-                    str(dest), str(deflection_mm)], capture_output=True, timeout=timeout_s,
+                run = run_bounded([sys.executable, "-m", "amdfm.cad_worker", str(source),
+                    str(dest), str(deflection_mm)], timeout=timeout_s,
                     cwd=Path(__file__).resolve().parents[1])
             except subprocess.TimeoutExpired as exc:
                 raise ValueError(f"STEP 처리가 {timeout_s:g}초 한도를 초과했습니다. 단일 부품으로 분리하거나 모델을 단순화하세요.") from exc
+            except OSError as exc:
+                raise ValueError(f"STEP 계산 프로세스를 시작하거나 격리하지 못했습니다: {exc}") from exc
             info_path = dest.with_suffix(".json")
             if not info_path.exists():
                 raise ValueError("CAD 변환 프로세스가 완료되지 않았습니다. 설치 상태와 STEP 파일을 확인하세요.")
@@ -71,6 +74,13 @@ def load_model(data: bytes, filename: str, *, unit="mm", dimensions_confirmed=Fa
             meta.update(info, unit_status="declared_in_step", dimensions_confirmed=True,
                         unit_note="STEP 선언 단위를 OCCT가 mm로 변환. 설계 공차·PMI는 해석하지 않음.", scale_factor=1.)
             model = Model(mesh, meta, features, face_ids, body_ids)
+    elif suffix == ".3mf":
+        from .three_mf import read_3mf
+        raw,info=read_3mf(data,max_faces=MAX_FACES)
+        mesh=exact_weld(raw.vertices,raw.faces)
+        meta.update(info,surface_component_count=int(mesh.body_count),
+                    coordinate_welding="exact coordinate triples; no repair")
+        model=Model(mesh,meta)
     elif suffix == ".stl":
         if unit not in UNITS:
             raise ValueError("STL 단위를 mm, cm, m, inch 중에서 지정하세요.")
@@ -103,7 +113,7 @@ def load_model(data: bytes, filename: str, *, unit="mm", dimensions_confirmed=Fa
                     exact_volume_mm3=None, exact_area_mm2=None)
         model = Model(mesh, meta)
     else:
-        raise ValueError("STEP(.step/.stp) 또는 STL(.stl) 파일을 선택하세요.")
+        raise ValueError("STEP(.step/.stp), STL(.stl) 또는 3MF(.3mf) 파일을 선택하세요.")
     if len(model.mesh.faces) > MAX_FACES or not np.isfinite(model.mesh.vertices).all():
         raise ValueError("유효한 좌표 및 삼각형 수 한도를 만족하지 않습니다.")
     if max(model.mesh.extents) > 1e7 or max(model.mesh.extents) <= 0:

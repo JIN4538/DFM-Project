@@ -92,6 +92,22 @@ def html_report(report):
         layer_html=f"<h2>층간 상세 검토</h2><p>상태: {esc(layers['status'])}; 확정 층: {esc(layers.get('complete_layers'))}/{esc(layers.get('expected_layers'))}</p>"
         layer_html+="<p>"+esc(layers.get("reason",""))+"</p>"
         layer_html+="<pre>"+esc(json.dumps(layers.get("checks",[]),ensure_ascii=False,indent=2))+"</pre>"
+    sections=details.get("sections")
+    section_html=""
+    if sections:
+        section_html=f"<h2>높이별 단면 표본</h2><p>상태: {esc(sections['status'])}; 확정 표본: {esc(sections.get('complete_samples',0))}/{esc(sections.get('requested_samples',sections.get('sample_count')))}</p>"
+        event_mode=sections.get("sampling")=="events"
+        section_html+="<p>"+("형상 변화 구간별 2점 Gauss 단면의 기하 측정입니다." if event_mode else "균등 분할 중간 단면의 기하 측정입니다.")+" 표본 간 극값·박리력·흡착컵·열변형·출력 성공을 판정하지 않습니다. 형상 변화는 이전 확정 단면과의 대칭차 면적이며 높이 간격은 동일하지 않을 수 있습니다.</p>"
+        integral=sections.get("volume_quadrature_estimate_mm3") if event_mode else sections.get("volume_midpoint_estimate_mm3")
+        reference=report["geometry"].get("mesh_signed_volume_mm3")
+        if integral is not None and reference is not None and reference>0:
+            section_html+=f"<p>단면 적분 체적과 메시 체적의 상대차: {value(100*abs(integral-reference)/reference)}%. 표본 간 누락을 살펴보기 위한 검산이며 국소 형상 오차 상한은 아닙니다.</p>"
+        if sections.get("reason"):section_html+="<p>"+esc(sections["reason"])+"</p>"
+        keys={"z_mm":"높이 (mm)","complete":"윤곽 확정","area_mm2":"면적 (mm²)","perimeter_mm":"둘레 (mm)",
+            "area_per_perimeter_mm":"면적/둘레 (mm)","symmetric_change_from_previous_mm2":"형상 변화 (mm²)",
+            "material_regions":"영역 수","internal_loops":"내부 윤곽 수"}
+        section_html+="<table><tr>"+"".join(f"<th>{esc(v)}</th>" for v in keys.values())+"</tr>"
+        section_html+="".join("<tr>"+"".join(f"<td>{value(row[k])}</td>" for k in keys)+"</tr>" for row in sections.get("rows",[]))+"</table>"
     content=f"""<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AM-DFM 설계 검토 — {esc(report['model']['filename'])}</title>
 <style>body{{font-family:'Malgun Gothic',system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;color:#222;line-height:1.65}}h1{{font-size:28px}}h2{{font-size:20px;margin-top:34px}}small{{font-size:13px;color:#666}}table{{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}}td,th{{border:1px solid #ddd;padding:8px;text-align:left;overflow-wrap:anywhere}}th{{background:#f4f4f4}}pre{{white-space:pre-wrap;overflow-wrap:anywhere}}a{{color:#245d87}}section{{break-inside:avoid}}@media print{{body{{margin:0;max-width:none}}}}</style>
@@ -102,7 +118,7 @@ def html_report(report):
 <h2>조건</h2><table>{rows}</table>
 <h2>현재 배치</h2><p>모델 좌표의 적층축: {value(report['current_orientation']['direction'])}. 이 방향이 프린터 +Z를 향합니다.</p>
 <p>배치 변환 행렬 (모델 mm → 빌드 mm): {value(report['current_orientation']['transform'])}</p>{''.join(cards)}
-<h2>방향별 손익</h2><p>명시된 유한 후보 집합의 비교입니다. 비지배 대안은 선택한 기하 지표 중 하나를 개선하면 다른 지표가 악화되는 후보이며 제조 성공을 뜻하지 않습니다. 투영면적 합은 서포트 부피가 아닙니다.</p>{orientation_html}{layer_html}
+<h2>방향별 손익</h2><p>명시된 유한 후보 집합의 비교입니다. 비지배 대안은 선택한 기하 지표 중 하나를 개선하면 다른 지표가 악화되는 후보이며 제조 성공을 뜻하지 않습니다. 투영면적 합은 서포트 부피가 아닙니다.</p>{orientation_html}{section_html}{layer_html}
 <h2>별도 확인할 제조 조건</h2><p>{esc(' · '.join(report['unassessed']))}</p>
 <h2>근거</h2><ol>{''.join(sources)}</ol><h2>실행 환경</h2><pre>{esc(json.dumps(report['provenance'],ensure_ascii=False,indent=2))}</pre>
 </html>"""

@@ -1,0 +1,288 @@
+{
+  "source_summary": "study/random-shape-audit/refinement-01/summary.json",
+  "source_summary_sha256": "0faf16883c569cd65df4d5491516bfe33ad014b88f789f9f0e0100891b755777",
+  "source_code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+  "rank_scope": "Complete-section geometric targets deduplicated across four processes; highest max(tetra,CAD) relative volume difference. Unknown and partial targets are not ranked.",
+  "results": [
+    {
+      "target": {
+        "file_id": "file_006",
+        "source": "191222516-19-cooling_fan_uf21-h204-6_3/cooling_fan_uf21-h204-6_3.stp",
+        "body": 2,
+        "representative_process": "MEX",
+        "report_json": "body_002_MEX.json",
+        "baseline_comparison": {
+          "sample_count": 64,
+          "volume_midpoint_estimate_mm3": 319986.37532063015,
+          "independent_tetra_volume_mm3": 497842.78710374236,
+          "exact_cad_volume_mm3": 497834.0591968931,
+          "estimate_vs_tetra_relative_difference": 0.35725417017250033,
+          "estimate_vs_cad_relative_difference": 0.3572429017073826,
+          "scope": "Finite uniform midpoint quadrature; discrepancy is a resampling priority, not proof of a geometry-kernel error. Partial sections have no whole-volume estimate.",
+          "resampling_priority_relative_difference": 0.35725417017250033
+        },
+        "priority": 0.35725417017250033
+      },
+      "code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+      "model_fingerprint": "73105804e9017f967b6d0087e42f6b78c6b3cfa02b60deb4cfdd595806abe159",
+      "status": "completed",
+      "results": [
+        {
+          "requested_samples": 256,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 256,
+          "volume_midpoint_estimate_mm3": 530932.1217167821,
+          "sampled_max_area_mm2": 105513.46925435988,
+          "independent_tetra_volume_mm3": 497842.78710374236,
+          "exact_cad_volume_mm3": 497834.0591968931,
+          "estimate_vs_tetra_relative_difference": 0.06646542938894576,
+          "estimate_vs_cad_relative_difference": 0.06648412640405285,
+          "elapsed_seconds": 2.6301124999999956,
+          "detail_json": "sections_256.json"
+        },
+        {
+          "requested_samples": 1024,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 1024,
+          "volume_midpoint_estimate_mm3": 478362.50152416877,
+          "sampled_max_area_mm2": 105513.46925437578,
+          "independent_tetra_volume_mm3": 497842.78710374236,
+          "exact_cad_volume_mm3": 497834.0591968931,
+          "estimate_vs_tetra_relative_difference": 0.03912939201731212,
+          "estimate_vs_cad_relative_difference": 0.03911254626518707,
+          "elapsed_seconds": 5.21057380000002,
+          "detail_json": "sections_1024.json"
+        }
+      ],
+      "scope": "Process-neutral section geometry; representative process context preserved. Finite quadrature differences trigger refinement, not automatic printability judgments.",
+      "rank": 1,
+      "directory": "rank_01"
+    },
+    {
+      "target": {
+        "file_id": "file_026",
+        "source": "Raspberry Pi 4 Model B.step",
+        "body": 96,
+        "representative_process": "MEX",
+        "report_json": "body_096_MEX.json",
+        "baseline_comparison": {
+          "sample_count": 64,
+          "volume_midpoint_estimate_mm3": 18.917567276698698,
+          "independent_tetra_volume_mm3": 17.347675001205637,
+          "exact_cad_volume_mm3": 17.348343514498147,
+          "estimate_vs_tetra_relative_difference": 0.09049583159610469,
+          "estimate_vs_cad_relative_difference": 0.09045380966137419,
+          "scope": "Finite uniform midpoint quadrature; discrepancy is a resampling priority, not proof of a geometry-kernel error. Partial sections have no whole-volume estimate.",
+          "resampling_priority_relative_difference": 0.09049583159610469
+        },
+        "priority": 0.09049583159610469
+      },
+      "code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+      "model_fingerprint": "eaf1b37a8c35a275c29c667187c6a1155bb674750f4ebcd15e5fbb9075d0daf9",
+      "status": "completed",
+      "results": [
+        {
+          "requested_samples": 256,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 256,
+          "volume_midpoint_estimate_mm3": 17.804605459770237,
+          "sampled_max_area_mm2": 14.606886628965784,
+          "independent_tetra_volume_mm3": 17.347675001205637,
+          "exact_cad_volume_mm3": 17.348343514498147,
+          "estimate_vs_tetra_relative_difference": 0.026339579138578713,
+          "estimate_vs_cad_relative_difference": 0.026300029446084453,
+          "elapsed_seconds": 4.260026899999502,
+          "detail_json": "sections_256.json"
+        },
+        {
+          "requested_samples": 1024,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 1024,
+          "volume_midpoint_estimate_mm3": 17.275375179571938,
+          "sampled_max_area_mm2": 14.569016744323648,
+          "independent_tetra_volume_mm3": 17.347675001205637,
+          "exact_cad_volume_mm3": 17.348343514498147,
+          "estimate_vs_tetra_relative_difference": 0.004167695188471899,
+          "estimate_vs_cad_relative_difference": 0.004206069292162027,
+          "elapsed_seconds": 11.82054380000045,
+          "detail_json": "sections_1024.json"
+        }
+      ],
+      "scope": "Process-neutral section geometry; representative process context preserved. Finite quadrature differences trigger refinement, not automatic printability judgments.",
+      "rank": 2,
+      "directory": "rank_02"
+    },
+    {
+      "target": {
+        "file_id": "file_021",
+        "source": "8.1 Machine_Frame.stp",
+        "body": 3,
+        "representative_process": "MEX",
+        "report_json": "body_003_MEX.json",
+        "baseline_comparison": {
+          "sample_count": 64,
+          "volume_midpoint_estimate_mm3": 1048802.504601054,
+          "independent_tetra_volume_mm3": 1081222.6721387405,
+          "exact_cad_volume_mm3": 1081216.8146928207,
+          "estimate_vs_tetra_relative_difference": 0.029984727820733813,
+          "estimate_vs_cad_relative_difference": 0.029979472804421595,
+          "scope": "Finite uniform midpoint quadrature; discrepancy is a resampling priority, not proof of a geometry-kernel error. Partial sections have no whole-volume estimate.",
+          "resampling_priority_relative_difference": 0.029984727820733813
+        },
+        "priority": 0.029984727820733813
+      },
+      "code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+      "model_fingerprint": "8f7b4204f2cf3090f542c670810e174fd0f9a2f34cdebd8e9170c33874c69a46",
+      "status": "completed",
+      "results": [
+        {
+          "requested_samples": 256,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 256,
+          "volume_midpoint_estimate_mm3": 1079196.4111738605,
+          "sampled_max_area_mm2": 111244.53442745002,
+          "independent_tetra_volume_mm3": 1081222.6721387405,
+          "exact_cad_volume_mm3": 1081216.8146928207,
+          "estimate_vs_tetra_relative_difference": 0.0018740459454775406,
+          "estimate_vs_cad_relative_difference": 0.0018686386407467403,
+          "elapsed_seconds": 2.4407150999995793,
+          "detail_json": "sections_256.json"
+        },
+        {
+          "requested_samples": 1024,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 1024,
+          "volume_midpoint_estimate_mm3": 1079196.4111738533,
+          "sampled_max_area_mm2": 111244.53442745692,
+          "independent_tetra_volume_mm3": 1081222.6721387405,
+          "exact_cad_volume_mm3": 1081216.8146928207,
+          "estimate_vs_tetra_relative_difference": 0.0018740459454842163,
+          "estimate_vs_cad_relative_difference": 0.001868638640753416,
+          "elapsed_seconds": 6.305963000000702,
+          "detail_json": "sections_1024.json"
+        }
+      ],
+      "scope": "Process-neutral section geometry; representative process context preserved. Finite quadrature differences trigger refinement, not automatic printability judgments.",
+      "rank": 3,
+      "directory": "rank_03"
+    },
+    {
+      "target": {
+        "file_id": "file_021",
+        "source": "8.1 Machine_Frame.stp",
+        "body": 4,
+        "representative_process": "MEX",
+        "report_json": "body_004_MEX.json",
+        "baseline_comparison": {
+          "sample_count": 64,
+          "volume_midpoint_estimate_mm3": 1048802.5046010637,
+          "independent_tetra_volume_mm3": 1081222.6721387382,
+          "exact_cad_volume_mm3": 1081216.8146928186,
+          "estimate_vs_tetra_relative_difference": 0.02998472782072268,
+          "estimate_vs_cad_relative_difference": 0.029979472804410674,
+          "scope": "Finite uniform midpoint quadrature; discrepancy is a resampling priority, not proof of a geometry-kernel error. Partial sections have no whole-volume estimate.",
+          "resampling_priority_relative_difference": 0.02998472782072268
+        },
+        "priority": 0.02998472782072268
+      },
+      "code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+      "model_fingerprint": "67a80c6dfcbd5971204df40a264b379ec6f2d6ae98e52fef57d9ef79aca05fb5",
+      "status": "completed",
+      "results": [
+        {
+          "requested_samples": 256,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 256,
+          "volume_midpoint_estimate_mm3": 1079196.411173874,
+          "sampled_max_area_mm2": 111244.53442744724,
+          "independent_tetra_volume_mm3": 1081222.6721387382,
+          "exact_cad_volume_mm3": 1081216.8146928186,
+          "estimate_vs_tetra_relative_difference": 0.0018740459454629015,
+          "estimate_vs_cad_relative_difference": 0.001868638640732316,
+          "elapsed_seconds": 2.6700855999997657,
+          "detail_json": "sections_256.json"
+        },
+        {
+          "requested_samples": 1024,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 1024,
+          "volume_midpoint_estimate_mm3": 1079196.411173855,
+          "sampled_max_area_mm2": 111244.53442745964,
+          "independent_tetra_volume_mm3": 1081222.6721387382,
+          "exact_cad_volume_mm3": 1081216.8146928186,
+          "estimate_vs_tetra_relative_difference": 0.0018740459454805595,
+          "estimate_vs_cad_relative_difference": 0.001868638640749974,
+          "elapsed_seconds": 5.690900399999919,
+          "detail_json": "sections_1024.json"
+        }
+      ],
+      "scope": "Process-neutral section geometry; representative process context preserved. Finite quadrature differences trigger refinement, not automatic printability judgments.",
+      "rank": 4,
+      "directory": "rank_04"
+    },
+    {
+      "target": {
+        "file_id": "file_026",
+        "source": "Raspberry Pi 4 Model B.step",
+        "body": 71,
+        "representative_process": "MEX",
+        "report_json": "body_071_MEX.json",
+        "baseline_comparison": {
+          "sample_count": 64,
+          "volume_midpoint_estimate_mm3": 7.01516917889909,
+          "independent_tetra_volume_mm3": 7.184772284513451,
+          "exact_cad_volume_mm3": 7.185276286670448,
+          "estimate_vs_tetra_relative_difference": 0.023605912462936987,
+          "estimate_vs_cad_relative_difference": 0.023674400396673262,
+          "scope": "Finite uniform midpoint quadrature; discrepancy is a resampling priority, not proof of a geometry-kernel error. Partial sections have no whole-volume estimate.",
+          "resampling_priority_relative_difference": 0.023674400396673262
+        },
+        "priority": 0.023674400396673262
+      },
+      "code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+      "model_fingerprint": "e02953694128576cdb9a2f52fd0f8766ff8e939299e6941356464ce338b330f8",
+      "status": "completed",
+      "results": [
+        {
+          "requested_samples": 256,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 256,
+          "volume_midpoint_estimate_mm3": 7.183772450180678,
+          "sampled_max_area_mm2": 2.2416211628016858,
+          "independent_tetra_volume_mm3": 7.184772284513451,
+          "exact_cad_volume_mm3": 7.185276286670448,
+          "estimate_vs_tetra_relative_difference": 0.00013916019787126076,
+          "estimate_vs_cad_relative_difference": 0.0002092941773944266,
+          "elapsed_seconds": 2.0093955000002097,
+          "detail_json": "sections_256.json"
+        },
+        {
+          "requested_samples": 1024,
+          "status": "complete",
+          "reason": null,
+          "complete_samples": 1024,
+          "volume_midpoint_estimate_mm3": 7.183647328877068,
+          "sampled_max_area_mm2": 2.2448407959520806,
+          "independent_tetra_volume_mm3": 7.184772284513451,
+          "exact_cad_volume_mm3": 7.185276286670448,
+          "estimate_vs_tetra_relative_difference": 0.00015657498829951515,
+          "estimate_vs_cad_relative_difference": 0.00022670774628413614,
+          "elapsed_seconds": 4.563885199999277,
+          "detail_json": "sections_1024.json"
+        }
+      ],
+      "scope": "Process-neutral section geometry; representative process context preserved. Finite quadrature differences trigger refinement, not automatic printability judgments.",
+      "rank": 5,
+      "directory": "rank_05"
+    }
+  ]
+}

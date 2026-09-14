@@ -1,0 +1,134 @@
+{
+  "scope": "Synthetic CAD UI process switching only; no source geometry, coordinates, mesh arrays or private part names",
+  "runtime": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "before_fix": {
+    "app_sha256": "4417ab4072aa545cd930aa48af8c29b9696262a5de271d7aa3ae92a59942c1aa",
+    "mex_profile": {
+      "process": "MEX",
+      "name": "장비 미정 · 탐색용 조건",
+      "machine": "Prusa MK4",
+      "material": "PLA",
+      "slicer": "PrusaSlicer MEX test",
+      "layer_height_mm": 0.2,
+      "line_width_mm": 0.4,
+      "overhang_angle_deg": 45.0,
+      "minimum_wall_mm": 1.2,
+      "minimum_hole_mm": 2.0,
+      "build_volume_mm": null,
+      "clearance_mm": 0.0,
+      "threshold_basis": "MEX PLA coupon calibration only",
+      "process_notes": ""
+    },
+    "vpp_profile_after_switch_and_submit": {
+      "process": "VPP",
+      "name": "장비 미정 · 탐색용 조건",
+      "machine": "Prusa MK4",
+      "material": "PLA",
+      "slicer": "PrusaSlicer MEX test",
+      "layer_height_mm": 0.05,
+      "line_width_mm": 0.4,
+      "overhang_angle_deg": 45.0,
+      "minimum_wall_mm": 1.2,
+      "minimum_hole_mm": 2.0,
+      "build_volume_mm": null,
+      "clearance_mm": 0.0,
+      "threshold_basis": "MEX PLA coupon calibration only",
+      "process_notes": ""
+    },
+    "pbf_profiles_after_switch_and_submit": {
+      "PBF_POLYMER": {
+        "process": "PBF_POLYMER",
+        "name": "장비 미정 · 탐색용 조건",
+        "machine": "Prusa MK4",
+        "material": "PLA",
+        "slicer": "PrusaSlicer MEX test",
+        "layer_height_mm": 0.1,
+        "line_width_mm": 0.4,
+        "overhang_angle_deg": 45.0,
+        "minimum_wall_mm": 1.2,
+        "minimum_hole_mm": 2.0,
+        "build_volume_mm": null,
+        "clearance_mm": 0.0,
+        "threshold_basis": "MEX PLA coupon calibration only",
+        "process_notes": ""
+      },
+      "PBF_METAL": {
+        "process": "PBF_METAL",
+        "name": "장비 미정 · 탐색용 조건",
+        "machine": "Prusa MK4",
+        "material": "PLA",
+        "slicer": "PrusaSlicer MEX test",
+        "layer_height_mm": 0.03,
+        "line_width_mm": 0.4,
+        "overhang_angle_deg": 45.0,
+        "minimum_wall_mm": 1.2,
+        "minimum_hole_mm": 2.0,
+        "build_volume_mm": null,
+        "clearance_mm": 0.0,
+        "threshold_basis": "MEX PLA coupon calibration only",
+        "process_notes": ""
+      }
+    },
+    "vpp_wall_status_with_inherited_mex_threshold": "attention",
+    "vpp_wall_evidence": [
+      "ISO52910",
+      "FORM4"
+    ],
+    "vpp_mex_layers_disabled": true,
+    "vpp_gcode_controls_and_export_were_available": true,
+    "pbf_gcode_controls_were_available": {
+      "PBF_POLYMER": false,
+      "PBF_METAL": false
+    }
+  },
+  "fix": {
+    "process_state_keys": [
+      "machine_{process}",
+      "material_{process}",
+      "slicer_{process}",
+      "wall_limit_{process}",
+      "hole_limit_{process}",
+      "basis_{process}",
+      "notes_{process}",
+      "angle_{process}",
+      "layer_{process}",
+      "use_build_{process}",
+      "build_X_{process}",
+      "build_Y_{process}",
+      "build_Z_{process}",
+      "clearance_{process}"
+    ],
+    "persist_state": "session",
+    "gcode_process_allowlist": [
+      "MEX"
+    ],
+    "common_state": [
+      "source model",
+      "scale/unit",
+      "build direction"
+    ]
+  },
+  "after_fix_regression": {
+    "app_sha256_at_test": "b8947b6b5a6232178ebd5637aa1a9141695c1c195c3d30265a4a900087d4fb74",
+    "test_sha256": "407ed3ef0239262befba0f3a692654f773c825ac3fcca63b32e4c6da0316186d",
+    "test_file": "tests_v3/test_process_ui.py",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds_pytest_display": 10.21,
+    "seconds_junit_suite": 10.209,
+    "testcases": [
+      "test_process_calibrations_are_independent_and_survive_round_trips",
+      "test_non_mex_review_does_not_offer_filament_gcode_analysis[VPP]",
+      "test_non_mex_review_does_not_offer_filament_gcode_analysis[PBF_POLYMER]",
+      "test_non_mex_review_does_not_offer_filament_gcode_analysis[PBF_METAL]"
+    ],
+    "coverage": "Four distinct process profiles, initial isolation, reverse-order round-trip restoration; MEX G-code positive control and VPP/PBF negative controls"
+  },
+  "limitations": [
+    "No real process calibration or print success is validated.",
+    "Before-fix AppTest source snapshot is preserved locally; AM-DFM imports use the project environment.",
+    "This targeted regression is distinct from final corpus and full-suite execution."
+  ]
+}

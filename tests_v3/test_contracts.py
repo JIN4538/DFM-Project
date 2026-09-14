@@ -65,15 +65,22 @@ def test_detail_identity_profile_and_direction_guard():
     with pytest.raises(ValueError):attach_detail(report,detail)
 
 
-def test_timeout_is_unknown_and_preserves_quick_report():
+@pytest.mark.parametrize("failure",[subprocess.TimeoutExpired("worker",.01),OSError("worker isolation failed")])
+def test_worker_failure_is_unknown_and_preserves_quick_report(failure):
     model=box_model()
     report=review(model,Profile())
-    with patch("amdfm.detail.subprocess.run",side_effect=subprocess.TimeoutExpired("worker",.01)):
+    with patch("amdfm.detail.run_bounded",side_effect=failure):
         detail=run_detail(model,Profile(),timeout_s=.01)
     merged=attach_detail(report,detail)
     assert next(f for f in merged["findings"] if f["id"]=="wall")["status"]=="unknown"
     assert merged["geometry"]==report["geometry"]
     assert "details" not in report
+
+
+def test_cad_worker_launch_failure_is_an_explained_input_error():
+    with patch("amdfm.io.run_bounded",side_effect=OSError("worker isolation failed")):
+        with pytest.raises(ValueError,match="worker isolation failed"):
+            load_model(b"input reaches the isolated worker","part.step")
 
 
 def test_detail_worker_end_to_end_and_layer_volume():
