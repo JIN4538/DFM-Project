@@ -10,6 +10,7 @@ from amdfm.analysis import review, code_digest
 from amdfm.comparison import compare_designs
 from amdfm.detail import run_detail, attach_detail
 from amdfm.evidence import section_guidance
+from amdfm.section_view import render_section_result
 from amdfm.io import load_model
 from amdfm.gcode import inspect_gcode
 from amdfm.models import json_bytes
@@ -265,7 +266,7 @@ elif tab=="정밀 검토":
         samples=st.number_input("높이 방향 단면 표본 수",min_value=2,max_value=1024,value=64,step=16,key="section_samples")
         st.caption("현재 배치 높이를 균등 분할한 중간 단면입니다. 얇은 판을 표본 사이에서 놓칠 수 있습니다. 실제 출력 층 수와는 다릅니다.")
     else:
-        st.caption("메시 형상이 변하는 높이 사이마다 두 단면을 배치해 체적을 검산합니다. 최대 8,192개 단면·교차 선분 150만 개이며, 한도 초과 시 미확정으로 표시합니다. 표본 최대 면적은 전역 최대값이 아닙니다.")
+        st.caption("얇은 높이 구간도 포함하도록 검사할 높이를 자동으로 정합니다. 계산한 단면을 비교해 확인할 위치를 안내합니다.")
     if st.button("단면 검토 실행",key="run_sections",type="primary"):
         with st.spinner("단면 면적·둘레·변화를 계산하는 중 · 최대 90초…"):
             result=run_detail(model,profile,report["current_orientation"]["direction"],mode="sections",sample_count=samples,sampling=sampling,timeout_s=90)
@@ -273,31 +274,11 @@ elif tab=="정밀 검토":
         st.rerun()
     sections=report.get("details",{}).get("sections")
     if sections:
-        result_method="형상 변화 기준" if sections.get("sampling")=="events" else "균등 간격"
-        st.write(f"{result_method} 결과: {sections['status']} · 확정 {sections.get('complete_samples',0)} / 요청 {sections.get('requested_samples',sections.get('sample_count','—'))}")
-        if sections.get("reason"):st.info(sections["reason"])
-        integral=sections.get("volume_quadrature_estimate_mm3") if sections.get("sampling")=="events" else sections.get("volume_midpoint_estimate_mm3")
-        reference=report["geometry"].get("mesh_signed_volume_mm3")
-        if integral is not None and reference is not None and reference>0:
-            st.metric("단면 적분 체적과 메시 체적의 상대차",f"{100*abs(integral-reference)/reference:.4g}%")
-            st.caption("같은 메시를 서로 다른 방법으로 집계한 검산입니다. 작은 차이도 국소 형상의 정확성이나 출력 성공을 보증하지 않습니다.")
-        if sections.get("rows"):
-            section_rows=pd.DataFrame([{"높이 (mm)":r["z_mm"],"면적 (mm²)":r["area_mm2"],"둘레 (mm)":r["perimeter_mm"],
-                "면적/둘레 (mm)":r["area_per_perimeter_mm"],"형상 변화 면적 (mm²)":r["symmetric_change_from_previous_mm2"],
-                "영역 수":r["material_regions"],"내부 윤곽 수":r["internal_loops"],"확정":r["complete"]} for r in sections["rows"]])
-            st.line_chart(section_rows.set_index("높이 (mm)")[["면적 (mm²)","형상 변화 면적 (mm²)"]])
-            st.caption("선은 측정 표본을 연결합니다. 표본 사이의 면적이나 이전 단면과의 높이 간격이 같은 것을 뜻하지 않습니다.")
-            chosen_section=st.select_slider("확인할 단면 번호",options=list(range(len(sections["rows"]))),key="section_index")
-            sr=sections["rows"][chosen_section]
-            if sr["outlines"]:
-                fig=go.Figure()
-                for ring in sr["outlines"]:
-                    fig.add_trace(go.Scatter(x=[p[0] for p in ring],y=[p[1] for p in ring],mode="lines",showlegend=False))
-                fig.update_layout(height=330,xaxis_title="빌드 X (mm)",yaxis_title="빌드 Y (mm)",yaxis=dict(scaleanchor="x",scaleratio=1))
-                st.plotly_chart(fig,width="stretch")
-            elif sr["complete"] and not sr["outlines_complete"]:st.caption("이 단면은 표시 점 수 한도로 윤곽을 생략했습니다. 수치 집계는 전체 윤곽을 사용했습니다.")
-            st.dataframe(section_rows,hide_index=True)
-        for limitation in guidance["limitations"]:st.caption(limitation)
+        if sections.get("sampling","uniform")!=sampling or (sampling=="uniform" and sections.get("sample_count")!=samples):
+            st.info("아래는 이전 설정으로 계산한 결과입니다. 변경한 설정을 적용하려면 단면 검토 실행을 누르세요.")
+        render_section_result(sections,process,report['geometry'].get('mesh_signed_volume_mm3'))
+        with st.expander('이 공정에서 단면 결과를 사용하는 범위'):
+            for limitation in guidance['limitations']:st.write(limitation)
     st.divider()
     c1,c2=st.columns(2)
     with c1:

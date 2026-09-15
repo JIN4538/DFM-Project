@@ -1,5 +1,7 @@
 # DFM-Project 인수인계
 
+최신 화면 개선: [단면 결과의 의미와 다음 행동 안내](SECTION_UX_2026-09-15.md). 계산 상태·형상 변화·공정별 다음 행동을 먼저 보여주고, 비교할 두 단면을 자동 선택한다.
+
 최신 실행 수정: [중복 실행 시 포트 충돌 수정](STARTUP_FIX_2026-09-15.md). 같은 폴더의 정상 실행 앱은 재사용하고, 다른 프로그램이 점유한 포트는 구분한다.
 
 최신 후속 작업: [무작위 형상 전수 검토와 신뢰성 개선](RANDOM_CORPUS_REAUDIT_2026-09-14.md), [독립 CAD 감사](INDEPENDENT_CAD_AUDIT_2026-09-14.md), [공정별 문헌 재조사](../research/AM_DFM_EVIDENCE_REAUDIT.md). STEP·STL·3MF와 MEX/VPP/고분자 PBF/금속 PBF의 실제 형상 검토 및 변경 이후 재검증 기록은 이 문서들을 먼저 확인한다.

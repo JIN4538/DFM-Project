@@ -136,4 +136,5 @@ def test_event_section_default_and_switch_keep_result_method_visible():
     assert result["status"] in ("complete","partial")
     app.selectbox(key="section_method").select("균등 간격 · 높이별 비교").run()
     assert app.session_state["report"]["details"]["sections"]["sampling"]=="events"
-    assert any("형상 변화 기준 결과" in element.value for element in app.markdown)
+    assert any("형상 변화 기준 결과" in element.value for element in app.caption)
+    assert any("이전 설정으로 계산한 결과" in element.value for element in app.info)
