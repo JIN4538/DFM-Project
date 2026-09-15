@@ -1,0 +1,761 @@
+{
+  "schema": "amdfm-geometry-inventory/1",
+  "path_base": "repository root",
+  "geometry_file_count": 106,
+  "unique_sha256_count": 100,
+  "total_bytes": 57613674,
+  "groups": {
+    "examples/cad": 14,
+    "examples/corpus": 26,
+    "examples/external": 3,
+    "examples/historical": 22,
+    "examples/regressions": 3,
+    "existing/cura_run": 27,
+    "existing/validation": 11
+  },
+  "scope": "All standalone test geometry found in project, working study and deliverables, supplied Desktop corpus and deployed copy. Byte-identical repeated deployment/extraction copies are represented by existing paths. Archive inventory found no extra hashes. Unique bytes are not a count of physically distinct designs.",
+  "files": [
+    {
+      "path": "cura_run/NIST_Test_Artifact_online__negX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 369684,
+      "sha256": "e999a19b5e071ae5eed64ed6afe6d56f70b00d547aaffd31278417aac3eef8a1"
+    },
+    {
+      "path": "cura_run/NIST_Test_Artifact_online__negY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 369684,
+      "sha256": "308c4eb0d0fe3015fb9b4fb8feae19edb1191ec3a02afe4692da250b88117811"
+    },
+    {
+      "path": "cura_run/NIST_Test_Artifact_online__negZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 369684,
+      "sha256": "951c13d86f0d6ac45c557a8f6ba80ffbbde4a807251c78fa1530348baf372b9d"
+    },
+    {
+      "path": "cura_run/NIST_Test_Artifact_online__posX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 369684,
+      "sha256": "3f8975b15409c8ca871ca8f0d66453923fb6171738d3b17f6d43f4a5b1961360"
+    },
+    {
+      "path": "cura_run/NIST_Test_Artifact_online__posY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 369684,
+      "sha256": "761947cd0aec9a7487c6d2d9b75625b51d920bfb02a4d3ad8a05c59926a07bed"
+    },
+    {
+      "path": "cura_run/NIST_Test_Artifact_online__posZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 369684,
+      "sha256": "c57c9628ebb45946018d7c397cf51042d2e338a637d2f28b2ceb9ba45fe28465"
+    },
+    {
+      "path": "cura_run/_samples/sample_bad.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 12784,
+      "sha256": "e65bf30d28546df060beaaa00363ff601997f5de0721500161996372838bdf02"
+    },
+    {
+      "path": "cura_run/_samples/sample_good.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "86faa933b956bbcb40398cf9bdb69c3280f20cf99da76b152b545ede13d35828"
+    },
+    {
+      "path": "cura_run/_samples/sample_moderate.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 20784,
+      "sha256": "b2982676d635f8c002890b4d724c49b2984915ae41b0b5e1e4f72b500a9a6150"
+    },
+    {
+      "path": "cura_run/sample_bad__negX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 12784,
+      "sha256": "e5116a612a514e9b3da0032d895271d9cd3e0d25ab9be5498b28d42d4bc307a5"
+    },
+    {
+      "path": "cura_run/sample_bad__negY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 12784,
+      "sha256": "b11138ae4e5486430afa78c2123ab8866e6ed6df1609b467b38f95225a960559"
+    },
+    {
+      "path": "cura_run/sample_bad__negZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 12784,
+      "sha256": "fa33f04413366b5cd8bbb55b7d502f8ded7b5bc70ef027d866dd313941a77070"
+    },
+    {
+      "path": "cura_run/sample_bad__posX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 12784,
+      "sha256": "9ebed729925ee89fc41d5f48f41d2a192161275689f709e5f00d4ea04e4494d5"
+    },
+    {
+      "path": "cura_run/sample_bad__posY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 12784,
+      "sha256": "b4dc4ce953ca7acff84af3750c4d8fc463950102cc008bdb1b0edfa2c34863fa"
+    },
+    {
+      "path": "cura_run/sample_bad__posZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 12784,
+      "sha256": "c58611b2d3b50684fcb199d46eb41faa6ad34357ecf765447c318f5b217729f5"
+    },
+    {
+      "path": "cura_run/sample_good__negX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "dd06cd5e0e4b6cb6743f89e3fd74e942ad97f996a382cdb58d33a60e32736091"
+    },
+    {
+      "path": "cura_run/sample_good__negY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "121caaeb909743636ba5d182144057263a2483fa1d957ac5a23e062ee5096370"
+    },
+    {
+      "path": "cura_run/sample_good__negZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "e2dfaef40d6a8040a9b15464468a89e4f46bad819e30135387cd5e0f46a16e75"
+    },
+    {
+      "path": "cura_run/sample_good__posX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "7818991d2dba0c0a5e19afcc259163695a661fb9c75cfd18592042c30f40822a"
+    },
+    {
+      "path": "cura_run/sample_good__posY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "5057f39c57b8881cb8a73a24b4c4e36a506892cbe64cadfa278e6118adf65f11"
+    },
+    {
+      "path": "cura_run/sample_good__posZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "d251e390692c58da87e0fa306a00e2d5e4e2dc1b38991ec23810e5e3c95061d4"
+    },
+    {
+      "path": "cura_run/sample_moderate__negX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 20784,
+      "sha256": "e3ccf323b7b9df00cd63c00176bf32a58ebc1109f5b37347bd3f4df8a39a2a5a"
+    },
+    {
+      "path": "cura_run/sample_moderate__negY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 20784,
+      "sha256": "ae07e79a9666be729d5b999d4f021d7d8fef4496ae91e8368d79d4ddc9b1f7da"
+    },
+    {
+      "path": "cura_run/sample_moderate__negZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 20784,
+      "sha256": "a40eb30547a0363c410719d4f62148e3624d2b574ca44dcebee7c4283952a68f"
+    },
+    {
+      "path": "cura_run/sample_moderate__posX.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 20784,
+      "sha256": "bf5eea1b1c7c854bbbc0aa2cca54b0ef5bcc13fa53a30198c49bbfc0ff481c53"
+    },
+    {
+      "path": "cura_run/sample_moderate__posY.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 20784,
+      "sha256": "846af26c36b40321407b72ac09f16a7d3c7de4cd69fa29c2ce594fcca35c4b80"
+    },
+    {
+      "path": "cura_run/sample_moderate__posZ.stl",
+      "group": "existing/cura_run",
+      "format": "stl",
+      "bytes": 20784,
+      "sha256": "c3fb322c35fae9f4f65888ab79c52b845eac8e4af55ded76fa648a44474263e8"
+    },
+    {
+      "path": "examples/cad/01_box.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 15416,
+      "sha256": "6b4c919555a646f3b3711d5e8c9156164171772856f9f1d3299da912812bce53"
+    },
+    {
+      "path": "examples/cad/02_thin_plate.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 15416,
+      "sha256": "e401d096d93a59a8a0cec73c151046587aca50c57737c9fd3916102a1150d4b1"
+    },
+    {
+      "path": "examples/cad/03_vertical_hole.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 19030,
+      "sha256": "8926215700394ae70161fe84d66e30fdaef9bcd4f4878cd285906e336284b396"
+    },
+    {
+      "path": "examples/cad/04_horizontal_hole.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 19032,
+      "sha256": "284f9968ba0dc6aef93f0e5094de8ae3b7383328404bd97b6647578029cd70f6"
+    },
+    {
+      "path": "examples/cad/05_sealed_cavity.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 29344,
+      "sha256": "f6ed7931b6114f9357198e7b4b89d15d5f61df072ed65c42bbd2c9a3640f17de"
+    },
+    {
+      "path": "examples/cad/06_open_cup.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 29632,
+      "sha256": "d25ada36cf3a24d7f5b3fc9389167b80468b14dd3f289584168c5e10dc075cb0"
+    },
+    {
+      "path": "examples/cad/07_bracket.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 27861,
+      "sha256": "02c439606201b8ba98e9b0d8a71560c4b003d9594e723f8a145154fe8f84eab4"
+    },
+    {
+      "path": "examples/cad/08_bridge.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 40339,
+      "sha256": "ca9910d7b8827a296a9cccc5e35bc390977e7bdb58b1dda21398e149596a431d"
+    },
+    {
+      "path": "examples/cad/09_cantilever.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 27860,
+      "sha256": "e6344a51424219b073ab7d6b32a165d781aecdd4a429e573679aaecbf13c0f7f"
+    },
+    {
+      "path": "examples/cad/10_inch_box.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 15760,
+      "sha256": "089e834b788fa9c5f37b3183bf1c3c2fa102288e80d5e4617fff55d98920db01"
+    },
+    {
+      "path": "examples/cad/11_two_bodies.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 32578,
+      "sha256": "9ee64f34a6332674b326804b69e0eb7596fae2dd308b3a5fa51fcf9d0e6f0e15"
+    },
+    {
+      "path": "examples/cad/12_sphere.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 2125,
+      "sha256": "e1d68e4935d744238034c1f5a2491ddd8ba8d24ddc190ccf1fde27220be6e3ec"
+    },
+    {
+      "path": "examples/cad/13_fine_pin.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 19232,
+      "sha256": "50f22ec09438587c91875abafcdbf3427346e57dd2ce88f848581fe1d95ac8f0"
+    },
+    {
+      "path": "examples/cad/14_thin_plate_improved.step",
+      "group": "examples/cad",
+      "format": "step",
+      "bytes": 15418,
+      "sha256": "dd6d19c01200de1552da46d341da39f520942e73162a83491642f2b3bdd01222"
+    },
+    {
+      "path": "examples/corpus/11.1 Mesh_Arm_2.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 1949608,
+      "sha256": "0958a7ed349b7d757c3687b3d2d7c7c5f556a2f572dcd24535d8b56afa125665"
+    },
+    {
+      "path": "examples/corpus/12.1 Bracket.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 14412,
+      "sha256": "ee9ee6319d5c9153960a15fc2f719bb2567797e37f2bc0e0b656dbb94b783110"
+    },
+    {
+      "path": "examples/corpus/13.1 Submodelv150.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 99451,
+      "sha256": "98365b9ff66f6bac8ade7853981697bef6abac878d8d6631a136194d9a12da4f"
+    },
+    {
+      "path": "examples/corpus/191222362-19-flange_h204-6_3-uf31-225-ga65/flange_h204-6_3-uf31-225-ga65.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 258522,
+      "sha256": "1586d238b7ab3f5581d09d2275a67b1a9ed4b7d60cb5292bf718ca18a3cb0745"
+    },
+    {
+      "path": "examples/corpus/191222516-19-cooling_fan_uf21-h204-6_3/cooling_fan_uf21-h204-6_3.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 140491,
+      "sha256": "a7e5a80f3be0af7faa60fc99f5ff5c9938582324c7a57be22a87af9aefdabe97"
+    },
+    {
+      "path": "examples/corpus/191222528-19-gearbox_b204hs_a-6_3/gearbox_b204hs_a-6_3.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 2330756,
+      "sha256": "0b79c26cb290d35c84fba0d8e0a1a58973ce2adc552e4bcb2c61aa4d5ce06759"
+    },
+    {
+      "path": "examples/corpus/191223275-19-e_00300_010_a/E_00300_010_A.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 69978,
+      "sha256": "72e9d5de49d4a22cf09e98216dd3a5e7b2f54ee8c2dc570dad81658129fe2d99"
+    },
+    {
+      "path": "examples/corpus/191223310-19-900-602/900-602.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 219142,
+      "sha256": "a82f75d019b5e4b2f30a2f856413c10d4a0b260bae2329e43d56518c330e5797"
+    },
+    {
+      "path": "examples/corpus/2.1 Cap_fillets.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 444533,
+      "sha256": "4b98de09f4ff958974ebf92e298dde2210b6e2a5bbdddb82a22634ac1e8883c8"
+    },
+    {
+      "path": "examples/corpus/3.1 Gear_Set_2D.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 136320,
+      "sha256": "798e0310104322b54261ae3ffe028a24502f21e0a46a0bb65e161cbbd2283a0f"
+    },
+    {
+      "path": "examples/corpus/3.3 Bolt_Plates.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 73964,
+      "sha256": "28c5321582fb4441da4976d88d700b2bfb8d7aa2632ec6d97b163f0432b3b391"
+    },
+    {
+      "path": "examples/corpus/3.4 Valve_RM_20130113.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 4075190,
+      "sha256": "dff5b66f1ffd4dee39e9c3e1658763a0e4df2f14e105897d6e347fc2a6334a1d"
+    },
+    {
+      "path": "examples/corpus/4.2 assembly_solid.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 1306991,
+      "sha256": "5ce198fa86371feec5ecdfbfd860c94d58b788b19227d9795a6bc177e9379709"
+    },
+    {
+      "path": "examples/corpus/7.1 Pump_assy_3.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 1671036,
+      "sha256": "d073299876db256ed5db8a00904efa0184ed789007630157bebd3c5df5df755e"
+    },
+    {
+      "path": "examples/corpus/7.2 Flange Mount.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 60589,
+      "sha256": "89a01cd65d0dc6a1b2014ea1a03eed2297f588cdabe0a385249d3fd4ef663b52"
+    },
+    {
+      "path": "examples/corpus/8.1 Machine_Frame.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 144328,
+      "sha256": "b46ed073767f89fa261db11bb395e1a7abfeaf2c945664f0ddd896e5b124fdaf"
+    },
+    {
+      "path": "examples/corpus/9.1 Pump_housing.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 253885,
+      "sha256": "3f6c7c9714a7728ed67d4f76fe22d189b8a98fa281af22e767df0571a266d37c"
+    },
+    {
+      "path": "examples/corpus/Arduino-UNO.stl",
+      "group": "examples/corpus",
+      "format": "stl",
+      "bytes": 2655384,
+      "sha256": "cf329252fc31d3fdbf3bebd06323a950b652cb4c04b7fd4ab1dba83a0a2425cd"
+    },
+    {
+      "path": "examples/corpus/Arduino-UNO.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 1453285,
+      "sha256": "3d66712210e5119ab955b9018ce41b578ef4c0ccf8933ad84d5a8ac1a9f57a69"
+    },
+    {
+      "path": "examples/corpus/Raspberry Pi 4 Model B.step",
+      "group": "examples/corpus",
+      "format": "step",
+      "bytes": 18713866,
+      "sha256": "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2"
+    },
+    {
+      "path": "examples/corpus/Raspberry Pi 4 Model B.stl",
+      "group": "examples/corpus",
+      "format": "stl",
+      "bytes": 3103684,
+      "sha256": "892b290d90841e9c9c55eadddc7f7007d277f2fe16a0cff3a5d6194294a73dd7"
+    },
+    {
+      "path": "examples/corpus/SG90-Servo.stl",
+      "group": "examples/corpus",
+      "format": "stl",
+      "bytes": 232784,
+      "sha256": "0782db5ca9499c9cc7474d9c454199582ba2fbdbffe72fa2a8c95bb4564da59f"
+    },
+    {
+      "path": "examples/corpus/SG90-Servo.stp",
+      "group": "examples/corpus",
+      "format": "stp",
+      "bytes": 152077,
+      "sha256": "e2bb320f91ece91deaff236bc0b12565e93ab54a3e619d6c5f2fba884c62aeea"
+    },
+    {
+      "path": "examples/corpus/build_tray_v3.step",
+      "group": "examples/corpus",
+      "format": "step",
+      "bytes": 455439,
+      "sha256": "bb0656d93eb3edd4f188579a32f21f567689193d17f703482b2800b69fb5af12"
+    },
+    {
+      "path": "examples/corpus/the-over-engineered-backpack-wall-mount-v2.3mf",
+      "group": "examples/corpus",
+      "format": "3mf",
+      "bytes": 2031199,
+      "sha256": "c7a60163a61148adf32a55c49fec4b7d6909efc758f8843fad3241c754c5e44c"
+    },
+    {
+      "path": "examples/corpus/the-over-engineered-backpack-wall-mount-v2.stl",
+      "group": "examples/corpus",
+      "format": "stl",
+      "bytes": 795384,
+      "sha256": "390bc9ddefd6125998794924251e9895be8cff85a544ba34c1670f49c9388395"
+    },
+    {
+      "path": "examples/external/3DP_20546_S-0039.stl",
+      "group": "examples/external",
+      "format": "stl",
+      "bytes": 38284,
+      "sha256": "d7e305e49b611622b003bc7384d268894b580424d295a005c389d287fde45452"
+    },
+    {
+      "path": "examples/external/strong_corner_bracket_vcd.stl",
+      "group": "examples/external",
+      "format": "stl",
+      "bytes": 9205584,
+      "sha256": "6af1b761a6d5cc47e4c2ade4aeae7a4fae2590bdee999e9e98b275bc8ab82557"
+    },
+    {
+      "path": "examples/external/strong_garden_tool_hook_vcd.stl",
+      "group": "examples/external",
+      "format": "stl",
+      "bytes": 2636984,
+      "sha256": "b1d09b1eb2eac6164bd4567b7d330ca8a85df4d3bb0ab03f2c9d1e76f88c8d9b"
+    },
+    {
+      "path": "examples/historical/am-dfm-v1/sample_bad.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 7684,
+      "sha256": "004b163ef49a87efe6d35a4d736d99250853f2c53b1e3b517fb2384aa7f4cab4"
+    },
+    {
+      "path": "examples/historical/am-dfm-v1/sample_moderate.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1284,
+      "sha256": "6c1c7b55a3189344084f48d8eea5dc74f6c2301b2505f5abd02923df04582d6e"
+    },
+    {
+      "path": "examples/historical/demo-2026-09-12/AM_DFM_demo.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 32284,
+      "sha256": "8911536f8a75f37e4add67658a286ccbb7b2431ca6da3a39b488f3630c168873"
+    },
+    {
+      "path": "examples/historical/demo-2026-09-12/AM_DFM_demo_thin_0p3.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 32284,
+      "sha256": "3a84424210600fa672c51377e4e19aaf0fce65596cd6c2133c20db43d07b4c06"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/00_control.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "feedb2bdda7426941616597e07a1316aa8f28d8e637358bee21bcdf63129344c"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/01_wall_recommended.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "96fc36567fcac0312afa75e7d4b4caeb4a204fdecf283b281bb91a07f23d0a33"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/02_overhang.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1484,
+      "sha256": "f3af8b694a411198602f059605b44496e211c759cb4b2f1573a6ae78a235b6ad"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/03_support_volume.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1484,
+      "sha256": "0a2ae8b2a143efcfc82eb1ce6fcde5c86ce330a48e8ea49e6174e70fa2809937"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/04_aspect_ratio.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "2474c1d205f3977d8ddf99f9f5715dac8d1d14ba4eaaeb7473afa0eaafc7e98d"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/05_build_margin.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "3961d385fdab40859a0beff332906f9a04d7872698a3a6de72e06b55aeb43dc0"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/06_min_feature.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 5484,
+      "sha256": "49956dda230ab0fef415538bf74c509d8690bb3a73d741244950ff6cefecff38"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/07_staircase.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "84aad3f97a0154616da1a708107a1ed563843788eb32e69aee4c5882985568f7"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/08_thickness_gradient.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1584,
+      "sha256": "c7b8e7f651a5a5b34b9418bc34f3cd4443b61f14fd60a1e82605f7fe259733d7"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/09_feature_gap.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 2084,
+      "sha256": "07689440cdcfdb6fe69558d489de5f585a0d977f6a1216a095411a3443698875"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/10_horizontal_hole_NA.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 13684,
+      "sha256": "c07c19df7defa976480bfd243daba6f94cc1aff48d9b5cf2a338de4e70db457c"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/11_wall_hard_gate.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "937333ef5b1fb10e62804df188845f8ea104824ee227c84e0124f08b4772b1db"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/12_build_size_gate.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "d5b78fd154d377e11b3c0cb75bb405b981a64b14805fbcb16f3bb5f967d04d7d"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/13_trapped_cavity.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1284,
+      "sha256": "7fd95ae3f99ffdc675502914038dee29aee4ccc9d3da652f87ada479066968b9"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/14_mesh_integrity_FAIL.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 634,
+      "sha256": "998500ee46ced2443de5748b53fd9cc2b2dbc23088826a8aa43ccedf777bb5d4"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/15_layer_thin.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1484,
+      "sha256": "9be9e7a47d19b1cea160bbd1a1e0cf0bf92bea8d64cf915668821b3a61ca9bc4"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/16_layer_bridge.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1884,
+      "sha256": "5e55b59cb4be846957d268e7963bf1adc224ee8550d04f9a6e865d4cc6d9eb23"
+    },
+    {
+      "path": "examples/historical/rule-models-2026-09-12/17_single_layer.stl",
+      "group": "examples/historical",
+      "format": "stl",
+      "bytes": 1884,
+      "sha256": "f94592aa114c5972217281c70f72620e705bd8605e95a9779642d992621ee13b"
+    },
+    {
+      "path": "examples/regressions/final-code-review-01/nested_shear_inches.3mf",
+      "group": "examples/regressions",
+      "format": "3mf",
+      "bytes": 1597,
+      "sha256": "5bdd4e03aa5357aa1bc6e73f932b85415716cce63e5b544be8c6658ed81526a7"
+    },
+    {
+      "path": "examples/regressions/final-code-review-02/nested_shear_inches.3mf",
+      "group": "examples/regressions",
+      "format": "3mf",
+      "bytes": 1597,
+      "sha256": "caf7cf14a055ff0f45dae20baa26469d937fcdf3abd52024fbb0354b5c1d168d"
+    },
+    {
+      "path": "examples/regressions/final-code-review-03/nested_shear_inches.3mf",
+      "group": "examples/regressions",
+      "format": "3mf",
+      "bytes": 1597,
+      "sha256": "a542da0847744a95c3ec6ddd7047fcb34ffe966edab51ac9c4e1fddb6932df07"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.08/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "f87ccd5a2db5f12543bb33afb5f8cd4515ba5eb9b46f0638e28d12b02f0cce9f"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.15/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "7c51fd11859a5bc7e2206695e8bb57adddc71264366c96ba951243a0f97a5a4c"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.3/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.6/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "1c7f74f73fac69ba6fb1da63fe2dd949b50f48fb0d3e7da0edcc23fc148aba70"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_1.2/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "69d040bab59f6960746ae90823ef757de4f08105adf737fbd07da2bff3481b8b"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.08/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "f87ccd5a2db5f12543bb33afb5f8cd4515ba5eb9b46f0638e28d12b02f0cce9f"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.15/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "7c51fd11859a5bc7e2206695e8bb57adddc71264366c96ba951243a0f97a5a4c"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.3/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.6/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "1c7f74f73fac69ba6fb1da63fe2dd949b50f48fb0d3e7da0edcc23fc148aba70"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_1.2/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "69d040bab59f6960746ae90823ef757de4f08105adf737fbd07da2bff3481b8b"
+    },
+    {
+      "path": "validation/v3/cura-pilot/thin_rib.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
+    }
+  ]
+}
