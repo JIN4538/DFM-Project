@@ -1,0 +1,85 @@
+{
+  "created_utc": "2026-09-15T04:53:19.530291+00:00",
+  "base_commit": "ae2a86895b4a3885606e782aaf71741c82816efe",
+  "analysis_code_sha256": "8b62b17fbd666f57653941e8dcaa828bf4a7bf4b59618d089c74b9c1c1b6d942",
+  "platform": "Windows, local repository with two installed Python environments",
+  "checks": [
+    {
+      "python": "3.12.14",
+      "pytest": {
+        "passed": 658,
+        "skipped": 0,
+        "warnings": 1,
+        "seconds": 325.63
+      },
+      "legacy": {
+        "passed": 55,
+        "total": 55
+      },
+      "pip_check": "No broken requirements found."
+    },
+    {
+      "python": "3.13.15",
+      "pytest": {
+        "passed": 658,
+        "skipped": 0,
+        "warnings": 1,
+        "seconds": 343.51
+      },
+      "legacy": {
+        "passed": 55,
+        "total": 55
+      },
+      "pip_check": "No broken requirements found."
+    }
+  ],
+  "pytest_command": "python -m pytest tests_v3 tests -q",
+  "warning": "trimesh RuntimeWarning in the pre-existing AABB overlap counterexample (invalid value encountered in divide); test passed.",
+  "geometry_inventory": {
+    "paths": 106,
+    "unique_sha256": 100,
+    "verified": true
+  },
+  "original_collection": {
+    "files": 24,
+    "all_git_blobs_unchanged": true
+  },
+  "browser_qa": {
+    "url": "http://127.0.0.1:8508/",
+    "scope": "Real browser interactions with 07_bracket.step, MEX +Z: initial wall auto run measured 4 mm in 24 samples; missing criterion and next action visible; section auto default completed events with 4 samples and explicit production-decision limit; screenshot layout inspected. Partial and budget fallback paths covered by AppTest and corpus checks, not this browser smoke."
+  },
+  "corpus_audit": "event-corpus/summary.json",
+  "logs": [
+    {
+      "path": "checks/full-312.txt",
+      "sha256": "c0a6e5ff8e3b3b5f3ab9f844ffe9dec55bba4b51996300a3a1abcf88dc2c6174"
+    },
+    {
+      "path": "checks/legacy-312.txt",
+      "sha256": "5837452e7ff36d407a4b8d198a6481484e533f59904a12687afe2ddc2422a3fe"
+    },
+    {
+      "path": "checks/pip-312.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    {
+      "path": "checks/full-313.txt",
+      "sha256": "36624ea7b7a7a426575323e2877487791a271eb50aa186f55387929265e09d01"
+    },
+    {
+      "path": "checks/legacy-313.txt",
+      "sha256": "5837452e7ff36d407a4b8d198a6481484e533f59904a12687afe2ddc2422a3fe"
+    },
+    {
+      "path": "checks/pip-313.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    }
+  ],
+  "deployment": "Repository test result; subsequent Desktop packaging/deployment is recorded separately under study/claude-review-20260915.",
+  "limitations": [
+    "No physical print or machine/material calibration performed.",
+    "CAD corpus used prior source-hashed mesh caches, not a new STEP conversion pass.",
+    "A complete uniform sample result does not establish complete event integration.",
+    "Partial volume omitted-contribution envelopes exclude numerical errors in computed sections."
+  ]
+}
