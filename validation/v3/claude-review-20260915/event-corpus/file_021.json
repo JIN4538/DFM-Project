@@ -1,0 +1,116 @@
+{
+  "file_id": "file_021",
+  "filename": "8.1 Machine_Frame.stp",
+  "selected_body": 1,
+  "source_sha256": "b46ed073767f89fa261db11bb395e1a7abfeaf2c945664f0ddd896e5b124fdaf",
+  "selected_model_fingerprint": "4abc1aa9eb4bb660374159245cb1478616ab8e8fbe4b379ae85ac0abd15a9a4b",
+  "source_npz_sha256": "e096a166b22ae1a535428cf95151b035b7f7a1561fbab0fd16b1bcc7bc100a00",
+  "source_metadata_sha256": "09b5370d4d16cb26093070c8575e4f162d6761fd8ceffdddc3cd3fc4acb9d9c6",
+  "placed_mesh_sha256": "60aecd4ea19996b60e76a572496c439b86e28245b9854182f825d5676605cfdf",
+  "placement_transform": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      -37.5
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      -37.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      -0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "triangles": 20,
+  "elapsed_seconds": 0.01530670000011014,
+  "reference_tetra_mm3": 1449999.9999999998,
+  "cad_quadrature_mm3": 1450000.0000000005,
+  "known_relative_difference_from_tetra": 2.220446049250313e-16,
+  "result": {
+    "status": "complete",
+    "method": "vertex_event_intervals_gauss2/1",
+    "sampling_method": "vertex_events_gauss2",
+    "requested_samples": 2,
+    "examined_samples": 2,
+    "complete_samples": 2,
+    "sample_spacing_mm": null,
+    "sampled_max_area_mm2": 725.0,
+    "sampled_max_perimeter_mm": 300.0,
+    "sampled_max_area_per_perimeter_mm": 2.4166666666666665,
+    "sampled_max_symmetric_change_mm2": 0.0,
+    "volume_quadrature_estimate_mm3": 1450000.0,
+    "volume_midpoint_estimate_mm3": null,
+    "known_interval_volume_mm3": 1450000.0,
+    "unresolved_height_mm": 0.0,
+    "omitted_interval_volume_envelope_mm3": 0.0,
+    "total_segments": 24,
+    "known_plus_omitted_envelope_mm3": 1450000.0,
+    "omitted_interval_volume_envelope_relative_to_known": 0.0,
+    "representation_limit_only": false,
+    "complete_event_intervals": 1,
+    "unexamined_event_intervals": 0,
+    "unresolved_interval_counts": {
+      "representation_limit": 0,
+      "section_failure": 0,
+      "runtime_budget": 0
+    },
+    "budget_exceeded": false,
+    "budget_reasons": [],
+    "failure_code": null,
+    "max_samples": 8192,
+    "max_total_segments": 1500000,
+    "scope": "Two Gauss nodes per exact vertex-height interval of a placed mesh; sampled maxima are not global extrema. No manufacturing-layer, peel-force, thermal or self-intersection certification.",
+    "integration_assumption": "Piecewise quadratic section area for a valid oriented non-self-intersecting polyhedral material boundary; numerical section errors are not eliminated by quadrature.",
+    "envelope_scope": "AABB XY area times unresolved height bounds only the omitted-height contribution; it is not a bound on total error, section reconstruction error or manufacturing uncertainty. Envelope arithmetic is rounded upward from exact rational values of the input float coordinates. The known sum and known-plus-envelope are estimates, not certified total-volume lower and upper bounds.",
+    "input_diagnostics": {
+      "geometry_available": true,
+      "topology_ready": true,
+      "face_count": 20,
+      "vertex_count": 12,
+      "issues": [],
+      "problem_face_indices": [],
+      "highlight_truncated": false,
+      "self_intersections": "not_exhaustively_checked",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "duplicate_faces": 0,
+      "winding_consistent": true,
+      "raw_signed_volume_integral": 1450000.0000000007,
+      "triangle_area_sum": 601450.0,
+      "extents": [
+        75.0,
+        75.0,
+        2000.0
+      ],
+      "problem_face_count": 0
+    },
+    "event_count": 2,
+    "event_interval_count": 1,
+    "planned_triangle_intersections": 24,
+    "covered_height_mm": [
+      0.0,
+      2000.0
+    ],
+    "minimum_event_interval_mm": 2000.0,
+    "sample_policy": "Exact unique referenced vertex heights; no tolerance merging; two Gauss-Legendre interior nodes per interval, independent of physical layer height.",
+    "sampling": "events",
+    "max_event_samples": 8192,
+    "requested_sampling": "auto",
+    "fallback_performed": false,
+    "incomplete_intervals": [],
+    "recorded_interval_count": 1
+  }
+}

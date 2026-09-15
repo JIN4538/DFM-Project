@@ -1,0 +1,50 @@
+{
+  "schema": "amdfm-focused-test-record/1",
+  "execution_date": "2026-09-15",
+  "platform": "Windows",
+  "tests": [
+    "tests_v3/test_event_omission_contract.py",
+    "tests_v3/test_event_sections.py"
+  ],
+  "source_sha256": {
+    "amdfm/event_sections.py": "2659923cf94a271a63eb1bba06209c5d846f9bc15e1bc9fd046a103a74c50abc",
+    "tests_v3/test_event_omission_contract.py": "043c7025cff2213f03827e0af6f510db783993050176a3bca3a9f8d1bfb70287",
+    "tests_v3/test_event_sections.py": "6f3ac2135c7051eb74cde48b58b554d96650130b001df20b37fb5962fa19e534"
+  },
+  "runs": [
+    {
+      "python": "3.12.14",
+      "executable": "C:/Users/JIN/Documents/ChatGPT/DFM/DFM-Project/.venv/Scripts/python.exe",
+      "arguments": [
+        "-m",
+        "pytest",
+        "tests_v3/test_event_omission_contract.py",
+        "tests_v3/test_event_sections.py",
+        "-q"
+      ],
+      "passed": 36,
+      "failed": 0,
+      "exit_code": 0,
+      "pytest_reported_seconds": 2.49,
+      "observed_final_output": "36 passed in 2.49s"
+    },
+    {
+      "python": "3.13.15",
+      "executable": "C:/Users/JIN/Desktop/AM-DFM_v3_0/.venv/Scripts/python.exe",
+      "arguments": [
+        "-m",
+        "pytest",
+        "tests_v3/test_event_omission_contract.py",
+        "tests_v3/test_event_sections.py",
+        "-q"
+      ],
+      "passed": 36,
+      "failed": 0,
+      "exit_code": 0,
+      "pytest_reported_seconds": 9.29,
+      "observed_final_output": "36 passed in 9.29s"
+    }
+  ],
+  "record_basis": "Exit status and final pytest lines were observed in execution-tool output. Complete stdout log files were not saved for these two focused runs. Durations are pytest-reported, not total subprocess wall time.",
+  "scope": "24 existing event tests plus12 new omission-contract cases; this is not the full repository test suite and not physical-print validation."
+}

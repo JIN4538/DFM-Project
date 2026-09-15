@@ -1,0 +1,44 @@
+{
+  "reviewed_files_sha256": {
+    "three_mf.py": "23fb289383aafc326fa9d451a6d24d877fd8e3ba49e4c431e5713f569f1761f7",
+    "cross_sections.py": "94a67fd0aae1a11e0929ff6012ade20651cb6a54a980f839d1239724776c7640",
+    "processes.py": "a66672c2ff62806ae577aa50c631ee33d36849af6447e2834aa553187a87640f",
+    "detail.py": "85796a40e514a80ea9f7d3311a3ac5b8fd896adf3e583ba06ae3498f807f3d18"
+  },
+  "probes": [
+    {
+      "name": "nested_affine_and_inch_conversion",
+      "coordinate_error_mm": 0.0,
+      "actual_volume_mm3": 9438948.86399999,
+      "expected_volume_mm3": 9438948.864,
+      "passed": true
+    },
+    {
+      "name": "tapered_sections_and_partial_null",
+      "area_error_mm2": 0.0,
+      "perimeter_error_mm": 0.0,
+      "full_status": "complete",
+      "midpoint_error_mm3": 0.0,
+      "partial_status": "partial",
+      "complete_samples": 2,
+      "partial_volume": null,
+      "passed": true
+    },
+    {
+      "name": "section_timeout_clears_stale_measurement",
+      "initial_status": "complete",
+      "timeout_status": "unknown",
+      "finding_status": "unknown",
+      "old_maximum_present": false,
+      "passed": true
+    },
+    {
+      "name": "timeout_after_direct_parent_exits",
+      "requested_timeout_s": 0.75,
+      "elapsed_s": 4.2281740999997055,
+      "outcome": "TimeoutExpired",
+      "child_wrote_after_timeout": true,
+      "passed": false
+    }
+  ]
+}

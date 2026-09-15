@@ -1,0 +1,113 @@
+{
+  "file_id": "file_017",
+  "filename": "3.4 Valve_RM_20130113.stp",
+  "selected_body": 1,
+  "source_sha256": "dff5b66f1ffd4dee39e9c3e1658763a0e4df2f14e105897d6e347fc2a6334a1d",
+  "selected_model_fingerprint": "da075a8f15744097a89f9f260e38a1961051339fd28b40d9d9448dcd9fb71481",
+  "source_npz_sha256": "36d54f8c679f0bbf0a4b4298593db93d936a3e06efc6fc7170333ad26ef265af",
+  "source_metadata_sha256": "cffcd53c48c6ada303a7473eea0588596c723b9495bd8c719514d03389343271",
+  "placed_mesh_sha256": "24c6950a3403b2ffbcd83322017f9eec3646fb75f68f87ecacf62dd56796ccf4",
+  "placement_transform": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      -7.105427357601002e-15
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      60.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "triangles": 91558,
+  "elapsed_seconds": 0.1880766999993284,
+  "reference_tetra_mm3": 447646.2965953023,
+  "cad_quadrature_mm3": 447666.59982939035,
+  "known_relative_difference_from_tetra": null,
+  "result": {
+    "status": "unknown",
+    "method": "vertex_event_intervals_gauss2/1",
+    "sampling_method": "vertex_events_gauss2",
+    "requested_samples": null,
+    "examined_samples": 0,
+    "complete_samples": 0,
+    "sample_spacing_mm": null,
+    "sampled_max_area_mm2": null,
+    "sampled_max_perimeter_mm": null,
+    "sampled_max_area_per_perimeter_mm": null,
+    "sampled_max_symmetric_change_mm2": null,
+    "volume_quadrature_estimate_mm3": null,
+    "volume_midpoint_estimate_mm3": null,
+    "known_interval_volume_mm3": null,
+    "unresolved_height_mm": null,
+    "omitted_interval_volume_envelope_mm3": null,
+    "total_segments": 0,
+    "known_plus_omitted_envelope_mm3": null,
+    "omitted_interval_volume_envelope_relative_to_known": null,
+    "representation_limit_only": false,
+    "complete_event_intervals": 0,
+    "unexamined_event_intervals": null,
+    "unresolved_interval_counts": {},
+    "budget_exceeded": false,
+    "budget_reasons": [],
+    "failure_code": "input_topology",
+    "max_samples": 8192,
+    "max_total_segments": 1500000,
+    "scope": "Two Gauss nodes per exact vertex-height interval of a placed mesh; sampled maxima are not global extrema. No manufacturing-layer, peel-force, thermal or self-intersection certification.",
+    "integration_assumption": "Piecewise quadratic section area for a valid oriented non-self-intersecting polyhedral material boundary; numerical section errors are not eliminated by quadrature.",
+    "envelope_scope": "AABB XY area times unresolved height bounds only the omitted-height contribution; it is not a bound on total error, section reconstruction error or manufacturing uncertainty. Envelope arithmetic is rounded upward from exact rational values of the input float coordinates. The known sum and known-plus-envelope are estimates, not certified total-volume lower and upper bounds.",
+    "input_diagnostics": {
+      "geometry_available": true,
+      "topology_ready": false,
+      "face_count": 91558,
+      "vertex_count": 45723,
+      "issues": [
+        "열린 경계 모서리 6개"
+      ],
+      "problem_face_indices": [
+        23007,
+        23008,
+        23012,
+        75586,
+        75590,
+        75593
+      ],
+      "highlight_truncated": false,
+      "self_intersections": "not_exhaustively_checked",
+      "boundary_edges": 6,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "duplicate_faces": 0,
+      "winding_consistent": true,
+      "raw_signed_volume_integral": 447646.29915923765,
+      "triangle_area_sum": 164076.55099638202,
+      "extents": [
+        119.98753964279678,
+        220.0,
+        132.5000000000013
+      ],
+      "problem_face_count": 6
+    },
+    "reason": "입력 폐곡면·면 방향 조건이 충족되지 않아 높이 사건 단면 검산을 보류했습니다.",
+    "sampling": "events",
+    "max_event_samples": 8192,
+    "requested_sampling": "auto",
+    "fallback_performed": false,
+    "incomplete_intervals": [],
+    "recorded_interval_count": 0
+  }
+}

@@ -1,0 +1,14 @@
+# Preserve bytes used by model / engine / experiment SHA-256 records.
+*.py -text
+*.step -text
+*.stp -text
+*.stl -text
+*.3mf -text
+*.brep -text
+*.gcode -text
+*.json -text
+validation/** -text
+examples/corpus/** -text
+examples/historical/** -text
+examples/regressions/** -text
+docs/artifacts/** -text

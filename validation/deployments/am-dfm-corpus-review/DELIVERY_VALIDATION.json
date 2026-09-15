@@ -1,0 +1,49 @@
+{
+  "completed_utc": "2026-09-14T15:47:47.536600+00:00",
+  "git_commit": "b2c4bcd09c826798b4578d93fcc66d5da71d78d2",
+  "git_worktree_clean": true,
+  "engine_sha256": "dfa1f3f44c96a19ee5ffd3dd11fc8b882034b5dfdf51783bf0bc29fc01ea45fa",
+  "desktop_source": "C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0",
+  "verified_source_files": 299,
+  "mismatches": [],
+  "original_user_files_checked": 31,
+  "original_user_files_changed": [],
+  "desktop_backup": "C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0\\backups\\corpus-update-20260915-0042",
+  "archive": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\deliverables\\am-dfm-corpus-review\\AM-DFM_v3_0_source.zip",
+  "archive_sha256": "c39247c7c9dd4fb3dbb22cf1ae20063a1c4a3dd59d6b04958f2e25de96827366",
+  "report": "C:\\Users\\JIN\\Desktop\\AM-DFM_무작위형상_검토결과\\index.html",
+  "report_local_links_checked": 944,
+  "report_missing_links": 0,
+  "ci": {
+    "commit": "b2c4bcd09c826798b4578d93fcc66d5da71d78d2",
+    "run_id": 34863753747,
+    "url": "https://github.com/JIN4538/DFM-Project/actions/runs/34863753747",
+    "python312": {
+      "tests_passed": 462,
+      "known_warnings": 1,
+      "regression_seconds": 159.03,
+      "legacy_passed": 55,
+      "job_id": 104042276827
+    },
+    "python313": {
+      "tests_passed": 462,
+      "known_warnings": 1,
+      "regression_seconds": 92.04,
+      "legacy_passed": 55,
+      "job_id": 104042277177
+    }
+  },
+  "desktop_check": {
+    "python": "3.13.15",
+    "health": "ok",
+    "installer_diagnose": "passed; existing valid venv reused without changing packages",
+    "live_browser_model": "07_bracket.step",
+    "process": "PBF_METAL",
+    "event_sections_status": "complete",
+    "event_samples": 4,
+    "displayed_relative_volume_difference_percent": "3.989e-14%",
+    "source_digest_matches_validated_engine": true
+  },
+  "qa_scope": "Application UI tested through live browser and AppTest. Final static HTML local links and structure checked; browser policy blocked local-file rendering, so no browser screenshot of that HTML is claimed.",
+  "limitations": "Geometric review and numerical validation; machine/material/slicer and physical build qualification remain unconfirmed. Uniform detailed results retain their frozen-engine provenance; event sections were separately run."
+}

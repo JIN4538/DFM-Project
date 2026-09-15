@@ -1,0 +1,21 @@
+........................................................................ [ 64%]
+......................................F                                  [100%]
+================================== FAILURES ===================================
+______________ test_used_sources_remains_compatible_and_ordered _______________
+
+    def test_used_sources_remains_compatible_and_ordered():
+        findings = [SimpleNamespace(evidence=sources_for("sections", "VPP")),
+                    SimpleNamespace(evidence=["PAN2017", "FORM4"])]
+        selected = used_sources(findings)
+>       assert list(selected) == ["ISO52910", "MOYLAN2014", "PAN2017", "FORM_ORIENTATION", "FORM4"]
+E       AssertionError: assert ['ISO52910', ...ION', 'FORM4'] == ['ISO52910', ...ION', 'FORM4']
+E         
+E         At index 2 diff: 'NIST_GAUSS' != 'PAN2017'
+E         Left contains one more item: 'FORM4'
+E         Use -v to get more diff
+
+tests_v3\test_process_evidence.py:120: AssertionError
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\v3\random-corpus\checks-02\integration.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_process_evidence.py::test_used_sources_remains_compatible_and_ordered
+1 failed, 110 passed in 51.03s

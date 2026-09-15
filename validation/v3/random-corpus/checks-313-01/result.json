@@ -1,0 +1,27 @@
+{
+  "completed_record_utc": "2026-09-14T15:33:18.153919+00:00",
+  "python_version": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "engine_code_sha256_at_start": "dfa1f3f44c96a19ee5ffd3dd11fc8b882034b5dfdf51783bf0bc29fc01ea45fa",
+  "source_files_unchanged_at_end": true,
+  "changed_files": [],
+  "test_counts": {
+    "tests": 458,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit_elapsed_seconds": 203.832,
+  "console_result": "458 passed, 1 warning in 203.84s (0:03:23)",
+  "warnings_summary": "tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap\n  C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0\\.venv\\Lib\\site-packages\\trimesh\\triangles.py:302: RuntimeWarning: invalid value encountered in divide\n    center_mass = integrated[1:4] / volume",
+  "pip_check": "No broken requirements found.",
+  "artifacts_sha256": {
+    "environment.json": "51fbb5bb0de88ab7d586887b7b4f5485af989551371295545b0af0f18606b9cd",
+    "pytest.txt": "78809378d63a77fb79c693ec2ef940b1493b1d26ed367c44576546ec12364fc7",
+    "pytest.xml": "43606bc94cd3d5c79f68629707cef582ee335e49823fb4df06037f0330ff5e65",
+    "pip-check.txt": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+  },
+  "comparison": {
+    "reported_python312": "458 passed, 1 known warning in 210.33s",
+    "scope": "Current repository tests on existing Desktop Python 3.13 dependencies; actual Desktop application sources were not the test target."
+  }
+}

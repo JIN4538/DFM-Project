@@ -1,0 +1,197 @@
+{
+  "cases": [
+    {
+      "file": "4.2 assembly_solid.stp",
+      "source_sha256": "5ce198fa86371feec5ecdfbfd860c94d58b788b19227d9795a6bc177e9379709",
+      "body_attempts": [
+        {
+          "body_id": 1,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.01,
+          "original_topology": {
+            "ready": false,
+            "triangle_count": 35216,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 4,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": false
+          },
+          "retry": {
+            "requested_deflection_mm": 0.01,
+            "topology": {
+              "ready": true,
+              "triangle_count": 122604,
+              "zero_area_cells": 0,
+              "missing_nonzero_faces": 0,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "duplicate_triangles": 0,
+              "winding_consistent": true,
+              "watertight": true
+            }
+          },
+          "adopted_refinement": true
+        },
+        {
+          "body_id": 2,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 2632,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        },
+        {
+          "body_id": 3,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 9214,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        }
+      ],
+      "final_total_triangles": 134450,
+      "source_brep_modified": false,
+      "tolerance_welding": false,
+      "copy_geometry": true,
+      "copy_mesh": false
+    },
+    {
+      "file": "7.1 Pump_assy_3.stp",
+      "source_sha256": "d073299876db256ed5db8a00904efa0184ed789007630157bebd3c5df5df755e",
+      "body_attempts": [
+        {
+          "body_id": 1,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 46770,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        },
+        {
+          "body_id": 2,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": false,
+            "triangle_count": 70110,
+            "zero_area_cells": 16,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 8,
+            "duplicate_triangles": 8,
+            "winding_consistent": true,
+            "watertight": false
+          },
+          "retry": {
+            "requested_deflection_mm": 0.01,
+            "topology": {
+              "ready": false,
+              "triangle_count": 98212,
+              "zero_area_cells": 16,
+              "missing_nonzero_faces": 0,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 16,
+              "duplicate_triangles": 16,
+              "winding_consistent": true,
+              "watertight": false
+            },
+            "not_adopted_reason": "topology_not_recovered"
+          },
+          "adopted_refinement": false
+        },
+        {
+          "body_id": 3,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 17356,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        },
+        {
+          "body_id": 4,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 332,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        },
+        {
+          "body_id": 5,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 360,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        }
+      ],
+      "final_total_triangles": 134928,
+      "source_brep_modified": false,
+      "tolerance_welding": false,
+      "copy_geometry": true,
+      "copy_mesh": false
+    }
+  ]
+}

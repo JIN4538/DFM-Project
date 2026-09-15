@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-09-15T01:14:17.775658+00:00",
+  "base_commit": "398e6a2c305ea2ec32795b65768235f777874d1e",
+  "code_sha256": "5516ee78d4c71f482f7e775b99537de662cbb6f5f0ad5bee3521be557c1963e9",
+  "app_sha256": "4103320ed850e010f4d1a7a5ea9886dfe3d7a0318b0b469f8708f08c8261a6d4",
+  "python_versions": [
+    "3.12.14",
+    "3.13.15"
+  ],
+  "final_full_pytest": {
+    "312": {
+      "tests": "609",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "216.222"
+    },
+    "313": {
+      "tests": "609",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "226.126"
+    }
+  },
+  "legacy_harness_per_runtime": {
+    "passed": 55,
+    "total": 55
+  },
+  "pip_check_per_runtime": "No broken requirements found.",
+  "unchanged_numeric_modules_sha256": {
+    "amdfm/analysis.py": "8e52b0c4548b1e1a9f532af478a58778aeee1dd3ff15af904da8adf47e5ebda6",
+    "amdfm/detail.py": "03845d80028e8dd0244625ce2745ae746036501f4c32eaa18bd44a29e113e5fd",
+    "amdfm/detail_worker.py": "6b1ccf10bf850e5907bc6e0efc8dfd71abaf365abc15be27bc9ee37e98ff722f",
+    "amdfm/cross_sections.py": "94a67fd0aae1a11e0929ff6012ade20651cb6a54a980f839d1239724776c7640",
+    "amdfm/event_sections.py": "d5eb59c3fcbfbf191cb1328574bcc7646039a02fffea1d0b6f18ab8487d4c8e2",
+    "amdfm/orientation.py": "044cfa496b768515b440aded0b50964aa61b3e9a0c845ff7bcfaa4c8c14dccd3",
+    "src/core/cura_records.py": "9a07abd3a7ec42cad0655bca5a0fe73f7096ce84342efe1cf18bf33f0d77b2ac",
+    "src/core/geometry_analyzer.py": "f8ef08187670174376f123855129f05920ae349e4a6cf4de5ed8ba6451f98d3c",
+    "src/core/layer_regions.py": "45d2c37f46a0f1007d6690bfd710f260bb221d1be6b0e75774c8670af6a3975b",
+    "src/core/layer_review.py": "c0a5a9539c7433022730edcada62b00d589d223c032d7bfe65002bc96cf9def4",
+    "src/core/mesh_diagnostics.py": "33fe8c8537560c3171a990724d7a31a8edfca2f7bda73f8bfbb10bb49763d15a",
+    "src/core/model_loader.py": "4b5729367e180ba8b0fea18a777ed67c698e8bbc5cbf2d3e1a40f5510ba2ea6a",
+    "src/core/reproducibility.py": "f324eefa6d89e3838fe0d558cca27a59654e55bf6f888b65f64e89072ccd6e2a",
+    "src/core/scoring.py": "4fb1897de761c10675e8b58e84703df4f7bfb7f60aa03564625ccc15bed22ed1",
+    "src/core/sections.py": "127722271c308979cfa20734779941882749a58f7b0355a481c0df403bb96fc9",
+    "src/core/section_components.py": "63fede150f61ed47d3e66c31df30f6327715d80cfb64ea9897873d6d1ac7969c",
+    "src/core/section_index.py": "4a818a47cdca83db55754adc1399b2992eaec95cb5895f8b0e4d40c55ab8dbf7",
+    "src/core/validation_metrics.py": "7c829c266d1161312998563f1c9febcedb70a26164972d7eeadfb5374be1458f",
+    "src/core/weights.py": "c021dc02ede648150f49cb16799565cc37ac26b91a7eb9807b9c641d39ea29f3",
+    "src/core/__init__.py": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf"
+  },
+  "scope": "Presentation and workflow regression. No new physical printing validation.",
+  "known_warning": "Existing degenerate-mesh fixture in test_aabb_overlap_is_not_solid_overlap emits trimesh center_mass divide RuntimeWarning; test passes."
+}
