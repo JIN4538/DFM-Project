@@ -28,13 +28,15 @@ MEX 층 실행 한도 초과 8건은 0.2 mm 간격에서 1,693~30,000개 층이 
 
 표본 증가가 항상 단조 수렴하거나 연속 높이의 극값을 찾는다는 보장은 없다. 특히 냉각팬의 1.2 mm 끝판 누락은 [별도 독립 단면·이벤트 구간 분석](project-knowledge/CROSS_SECTION_ALIASING_2026-09-15.md)에서 확인했다. 이후 개발한 이벤트 단면 검증은 이 균등 단면의 전수 결과와 별도로 기록한다.
 
-공개 집계는 [전수 결과](../validation/v3/random-corpus/uniform-final-statistics.json), [상위 5개 정밀화](../validation/v3/random-corpus/section-refinement-statistics.json), [빠른 검토 갱신](../validation/v3/random-corpus/quick-refresh-statistics.json)에 있다. 원형상은 Git에 추가하지 않았다. 전체 JSON·HTML 및 코드 동결본은 저장소 옆 `study/random-shape-audit/final-01`, `refinement-01`, `refreshed-01`에 보존한다.
+공개 집계는 [전수 결과](../validation/v3/random-corpus/uniform-final-statistics.json), [상위 5개 정밀화](../validation/v3/random-corpus/section-refinement-statistics.json), [빠른 검토 갱신](../validation/v3/random-corpus/quick-refresh-statistics.json)에 있다. 2026-09-15 저장소 정리에서 원형상 26개와 동반 TXT 5개를 [examples/corpus](../examples/corpus/README.md)에 추가했다. 원감사의 입력 SHA와 일치하는 바이트 보존본이다. 전체 JSON·HTML 및 코드 동결본은 저장소 옆 `study/random-shape-audit/final-01`, `refinement-01`, `refreshed-01`에 보존한다. 약 4 GB의 반복 계산·캐시를 Git에 중복 수록하지 않으며, 집계·국소 진단 원본과 [최종 보고서 보관 안내](../validation/v3/random-corpus/reader-report-20260915/README.md)를 함께 제공한다.
 
 ## 전수 실행
 
 ```text
 python scripts/audit_random_models.py --input <형상폴더> --out <새감사폴더> --cad-timeout 180 --file-timeout 7200 --detail-timeout 90 --section-samples 64 --jobs 2
 ```
+
+저장소에 포함된 입력을 사용하려면 `<형상폴더>`를 `examples/corpus`로 지정한다. 실행 전 `python scripts/verify_geometry_inventory.py`로 형상 바이트를 확인할 수 있다. 전체 전수 계산은 오래 걸릴 수 있으며 위 표는 당시 실행 기록이다. 형상 파일을 추가한 것만으로 현재 코드에서 전수 계산을 다시 수행했다고 해석하지 않는다.
 
 - 입력은 재귀 조사하며 원본 SHA-256, 파일 크기, 형식, 동반 TXT를 보존한다. 출력 폴더가 이미 있거나 입력 폴더 내부라면 실행하지 않는다. 종료 시 모든 입력 파일의 SHA를 다시 확인한다.
 - 실행 시 엔진 `amdfm/`·`src/`와 배치 스크립트를 출력 폴더에 동결한다. 복사 전후 코드 SHA가 바뀌면 시작을 중단한다. 작업 중 편집된 엔진과 한 실행의 결과가 섞이지 않는다.

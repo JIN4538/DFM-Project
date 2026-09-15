@@ -8,7 +8,7 @@
 
 ## 실행
 
-현재 Windows 작업공간에는 `.venv`와 의존성이 설치되어 있다. `START_REVIEW.cmd`를 실행하거나 다음 명령을 사용한다.
+처음 내려받은 폴더에서는 `INSTALL.cmd`로 실행환경을 설치한다. 설치가 끝나면 `START_REVIEW.cmd`를 실행하거나 다음 명령을 사용한다.
 
 ```powershell
 .\.venv\Scripts\python.exe -X utf8 scripts\start_review.py
@@ -29,7 +29,7 @@ py -3.12 -m venv .venv
 
 ## 사용 순서
 
-1. **CAD 기준형상**, **내 파일**, **외부 STL 사례** 중에서 입력을 고른다. 바탕화면에 **무작위 형상 테스트** 폴더가 있으면 바로 선택할 수도 있다. STEP·3MF는 선언 단위를 mm로 변환하고 STL은 단위·배율을 선택한다. CAD 조립체는 체적순 목록에서 개별 솔리드를 고른다.
+1. **CAD 기준형상**, **내 파일**, **외부 STL 사례**, **무작위 형상 테스트** 중에서 입력을 고른다. 무작위 형상은 저장소에 포함된 26개를 사용하며, 같은 이름의 바탕화면 폴더가 있으면 그 폴더를 우선한다. STEP·3MF는 선언 단위를 mm로 변환하고 STL은 단위·배율을 선택한다. CAD 조립체는 체적순 목록에서 개별 솔리드를 고른다.
 2. 공정과 **위로 향할 모델 방향**을 고르고 **설계 검토**를 누른다. 축·대각선 26방향, 주요 면 방향 또는 **직접 각도 입력**을 사용할 수 있다.
 3. 결과 상단의 **먼저 할 일**을 확인한다. **방향 비교**에서는 개선 목적을 고르고 후보의 현재 대비 높이·하향면·바닥 면적 변화를 확인해 적용한다.
 4. **정밀 검토**에서 **벽·층간·단면** 중 확인하려는 질문을 고른다. 벽은 같은 화면에서 기준을 입력해 비교한다. MEX 층간은 후보가 있는 층과 위치를 먼저 보여준다. 단면의 **형상 변화 기준**은 메시 체적 검산, **균등 간격**은 지정 개수의 높이별 비교에 사용한다. G-code 경로와 대조할 수도 있다.
@@ -64,10 +64,13 @@ py -3.12 -m venv .venv
 - [실행한 검증 결과와 남은 한계](docs/VALIDATION_V3.md)
 - [기존 인수기록과 참고문헌](docs/project-knowledge/README.md)
 - [치수가 알려진 자체 CAD 14개](examples/cad/manifest.json)와 [생성 소스](scripts/generate_cad_examples.py)
+- [전체 테스트 형상 106개 파일과 사용법](examples/README.md), [경로·크기·SHA-256 색인](examples/geometry_manifest.json)
+- [작성 보고서·발표 자료](docs/artifacts/README.md), [저장소 정리와 검증 기록](docs/project-knowledge/REPOSITORY_PUBLICATION_2026-09-15.md)
 
 ```powershell
 .\.venv\Scripts\python.exe -X utf8 -m pytest tests_v3 tests -q
 .\.venv\Scripts\python.exe -X utf8 verify_legacy.py
+.\.venv\Scripts\python.exe scripts/verify_geometry_inventory.py
 ```
 
 새 예제 생성은 기존 기준형상을 덮어쓰지 않도록 새 폴더에 한다.
@@ -86,9 +89,9 @@ py -3.12 -m venv .venv
 
 루트 PDF·DOCX·ZIP은 기존 원자료이며 보존했다. 기존 실행 코드는 ZIP에서 `src/`로 복사했고 새 패키지는 `amdfm/`, 새 UI는 `app.py`다. `run_app.py`도 새 앱으로 연결된다. 과거 점수 UI를 재현하는 용도로만 `streamlit run run_legacy.py`를 사용한다. 새 앱은 과거 점수 엔진을 호출하지 않는다.
 
-`cura_run/`은 기존 실험의 보존본이고 `validation/v3/`는 이번 실행 기록이다. 새 분석을 과거 측정값 위에 쓰지 않는다. 외부 STL 사례는 로컬 `examples/external/`에 있으며 Git 추적에서는 제외했다.
+`cura_run/`은 기존 실험의 보존본이고 `validation/v3/`는 개선판의 실행 기록이다. 새 분석을 과거 측정값 위에 쓰지 않는다. 외부 STL 사례, 바탕화면 무작위 형상, 과거 시험 입력도 [테스트 형상 색인](examples/README.md)에 따라 Git에서 함께 관리한다. 작성 보고서·발표 자료와 배포 기록은 날짜별 보관본으로 구분했다.
 
-소스 배포 ZIP에는 앱·코드·테스트·자체 CAD·문헌 조사·검증 기록이 포함된다. 원래 보관한 PDF/DOCX/ZIP, 외부 STL 형상, Python 실행환경과 설치 의존성은 포함하지 않는다. 원자료 링크는 전체 GitHub 저장소를 기준으로 한다. 새 설치에서는 `INSTALL.cmd`부터 실행한다. GitHub Actions에는 Windows 회귀검사 절차를 추가했으며 실제 원격 실행 성공 여부는 해당 실행 기록으로 확인한다.
+소스 배포 ZIP에는 앱·코드·테스트·전체 추적 형상·문헌 조사·작성 자료·검증 기록이 포함된다. 최초 원자료 24개(PDF/DOCX/ZIP 등)는 전체 GitHub 저장소에서 보존하며 소스 배포 ZIP에는 중복 수록하지 않는다. Python 실행환경·설치 의존성·캐시·중복 배포 ZIP은 Git 추적에서 제외한다. 과거 최종 보고서의 개별 상세 링크는 원래 작업 폴더를 참조하므로 [보관본 안내](validation/v3/random-corpus/reader-report-20260915/README.md)를 따른다. 새 설치에서는 `INSTALL.cmd`부터 실행한다. GitHub Actions에는 Windows 회귀검사 절차를 추가했으며 실제 원격 실행 성공 여부는 해당 실행 기록으로 확인한다.
 
 ## 입력·계산 한도
 

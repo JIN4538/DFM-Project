@@ -1,0 +1,34 @@
+{
+  "scope": "Repository publication, byte integrity and portable fixture selection; not a new physical or 744-case corpus validation",
+  "checked_on": "2026-09-15",
+  "previous_published_commit": "af884dead46c61db78fdf276bd31bf928ec3fcd8",
+  "geometry": {
+    "paths": 106,
+    "unique_sha256": 100,
+    "total_bytes": 57613674,
+    "sha_and_size_mismatches": 0,
+    "unlisted_files_in_fixture_directories": 0,
+    "unique_workspace_and_zip_geometry_not_represented": 0,
+    "inventory": "examples/geometry_manifest.json"
+  },
+  "independent_archive_audit": {
+    "copied_originals_checked_against_sources": 145,
+    "sha_and_size_mismatches": 0,
+    "manifest_files_excluded_by_gitignore": 0,
+    "initial_reference_git_blobs_checked": 24,
+    "initial_reference_git_blob_changes": 0,
+    "note": "Three original Markdown files use checkout CRLF; comparison to the baseline uses Git blobs, not a claim of LF raw worktree bytes."
+  },
+  "focused_regression_command": "python -X utf8 -m pytest tests_v3/test_packaged_geometry.py tests_v3/test_app.py tests_v3/test_process_ui.py -q",
+  "focused_regressions": [
+    {"platform": "Windows", "python": "3.12.14", "passed": 17, "exit_code": 0, "seconds": 56.88},
+    {"platform": "Windows", "python": "3.13.15", "passed": 17, "exit_code": 0, "seconds": 61.63}
+  ],
+  "previous_full_regressions": "validation/v3/user-workflow-20260915/summary.json",
+  "limits": [
+    "Focused tests above are separate from the previous full test run.",
+    "Unique SHA count is not a count of physically independent designs.",
+    "Historical reports and calculations were copied, not rerun.",
+    "Runtime, caches, repeated release ZIPs and approximately 4 GB of repeated audit outputs remain outside Git."
+  ]
+}

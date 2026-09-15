@@ -77,6 +77,8 @@ with st.sidebar:
     st.subheader("검토할 형상")
     st.caption('1. 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토')
     local_test=Path.home()/"Desktop"/"무작위 형상 테스트"
+    if not local_test.is_dir():
+        local_test=ROOT/'examples/corpus'
     inputs=["CAD 기준형상","내 파일","외부 STL 사례"]
     if local_test.is_dir():inputs.append("무작위 형상 테스트")
     source=st.selectbox("입력",inputs,key="source")
@@ -98,7 +100,8 @@ with st.sidebar:
         if files:
             path=st.selectbox("형상 선택",files,format_func=lambda p:str(p.relative_to(local_test)),key="random_example")
             data,name=path.read_bytes(),path.name
-            st.caption(f"바탕화면의 {len(files)}개 형상 · 원본 파일을 변경하지 않습니다.")
+            corpus_location='저장소에 포함된' if local_test==ROOT/'examples/corpus' else '바탕화면의'
+            st.caption(f"{corpus_location} {len(files)}개 형상 · 원본 파일을 변경하지 않습니다.")
     else:
         files=sorted((ROOT/"examples/external").glob("*.stl"))
         if files:

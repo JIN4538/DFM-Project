@@ -21,7 +21,7 @@ def build(out):
     manifest={"version":"3.0.0","created_utc":datetime.now(timezone.utc).isoformat(),
         "git_commit":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT).decode().strip(),
         "analysis_code_sha256":code_digest(),
-        "scope":"Source distribution. Original PDF/DOCX/ZIP archives, external STL geometry, Python runtime and installed dependencies are not bundled.",
+        "scope":"Source distribution with all tracked test geometry, its provenance and dated project deliverables. Original reference archives from the initial 24-file collection, Python runtime and installed dependencies are not bundled.",
         "files":[{"path":p.relative_to(ROOT).as_posix(),"bytes":p.stat().st_size,
                   "sha256":hashlib.sha256(p.read_bytes()).hexdigest()} for p in files]}
     payload=json.dumps(manifest,ensure_ascii=False,indent=2).encode("utf-8")
