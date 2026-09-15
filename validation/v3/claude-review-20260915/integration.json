@@ -81,5 +81,17 @@
     "CAD corpus used prior source-hashed mesh caches, not a new STEP conversion pass.",
     "A complete uniform sample result does not establish complete event integration.",
     "Partial volume omitted-contribution envelopes exclude numerical errors in computed sections."
-  ]
+  ],
+  "display_followup": {
+    "reason": "Real sphere UI review found the existing generic MEX advice called any downward candidate a horizontal ceiling. Changed only the Korean action text to downward surface without asserting a ceiling. Geometric computations are unchanged.",
+    "analysis_code_sha256": "64192f61a4ed5ee7416a0c150acfa82812b4f82d7c32af0b28d27f145238b63e",
+    "python": "3.12.14",
+    "pytest": {
+      "passed": 38,
+      "seconds": 21.03,
+      "command": "python -m pytest tests_v3/test_workflow_ux.py tests_v3/test_orientation_metric_contract.py tests_v3/test_process_ui.py -q"
+    },
+    "log": "checks/display-followup-312.txt",
+    "log_sha256": "5d066a3aefa850794818c35174dc8eb6c6057ddef639f4ba0800406ac34fea98"
+  }
 }

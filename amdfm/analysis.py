@@ -102,7 +102,7 @@ def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, e
     else:
         status = "attention" if area > 1e-8 else "not_detected"
         reason = f"수평면 기준 {profile.overhang_angle_deg:g}° 미만 하향면을 찾았습니다." if area > 1e-8 else "설정 각도 미만의 하향면 후보가 검출되지 않았습니다."
-        action = "방향 변경을 비교하고, 표시된 수평 천장을 경사·아치·물방울 단면으로 바꾸거나 제거 가능한 지지를 설계하세요."
+        action = "방향 변경을 비교하고, 표시된 하향면의 경사나 형상을 수정하거나 제거 가능한 지지를 설계하세요."
         if profile.process == "PBF_METAL":
             action = "방향과 경사면을 비교한 뒤 열전달·고정용 서포트와 제거·후가공 접근성을 검토하세요."
         elif profile.process == "VPP":
