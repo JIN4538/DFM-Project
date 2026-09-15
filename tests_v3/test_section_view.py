@@ -48,9 +48,10 @@ def test_change_pair_selected_without_fake_slope_or_mutating_original_measuremen
     plot = json.loads(app.get("plotly_chart")[0].proto.spec)
     assert len(plot["data"]) == 2
     assert {trace["line"]["dash"] for trace in plot["data"]} == {"dash", "solid"}
-    charts = app.get("vega_lite_chart")
-    assert charts
-    assert json.loads(charts[0].proto.spec)["mark"]["type"] == "circle"
+    chart = json.loads(app.get('plotly_chart')[1].proto.spec)
+    assert all(trace['mode']=='markers' for trace in chart['data'])
+    selected=next(t for t in chart['data'] if t['name']=='현재 단면')
+    assert selected['marker']['symbol']=='diamond' and selected['x']==[detail['rows'][2]['z_mm']]
     app.selectbox(key="section_index").set_value(0).run()
     app.button(key="show_section_change").click().run()
     assert not app.exception and app.selectbox(key="section_index").value == 2

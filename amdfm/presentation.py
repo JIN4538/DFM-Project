@@ -7,12 +7,14 @@ import plotly.graph_objects as go
 import trimesh
 
 from .models import json_bytes
+from .visuals import wall_samples, add_wall_markers, section_svg, model_svg
 
 STATUS = {"attention":"검토 필요", "observed":"측정됨", "not_detected":"범위 내 미검출",
           "unknown":"추가 확인", "not_applicable":"해당 없음"}
 
 
-def model_figure(model, report=None, finding_id="overhang", *, transparent=False):
+def model_figure(model, report=None, finding_id="overhang", *, transparent=False,
+                 selected_sample=None, build_plate=False, height=460):
     mesh=model.mesh
     vertices=mesh.vertices.copy()
     if report:
@@ -22,15 +24,18 @@ def model_figure(model, report=None, finding_id="overhang", *, transparent=False
     max_display=250_000
     indices=np.arange(len(mesh.faces)) if len(mesh.faces)<=max_display else np.linspace(0,len(mesh.faces)-1,max_display,dtype=int)
     finding=next((f for f in report["findings"] if f["id"]==finding_id),None) if report else None
-    highlighted=np.asarray(finding["face_indices"][:max_display],dtype=int) if finding else np.array([],dtype=int)
+    is_wall = report is not None and finding_id == 'wall'
+    samples = wall_samples(report) if is_wall else []
+    # A ranked face list is not a thickness map. Walls use measured points.
+    highlighted=np.asarray(finding["face_indices"][:max_display],dtype=int) if finding and not is_wall else np.array([],dtype=int)
     indices=indices[~np.isin(indices,highlighted)]
     faces=mesh.faces[indices]
     fig=go.Figure(go.Mesh3d(x=vertices[:,0],y=vertices[:,1],z=vertices[:,2],
-        i=faces[:,0],j=faces[:,1],k=faces[:,2],color="#6b8ba4",opacity=.18 if transparent else 1,
+        i=faces[:,0],j=faces[:,1],k=faces[:,2],color="#91a4b2",opacity=.3 if transparent and (len(highlighted) or samples or finding_id=='layers') else 1,
         flatshading=False,lighting=dict(ambient=.5,diffuse=.8,specular=.2),
         name="입력 형상",hoverinfo="skip",showscale=False))
     if report:
-        if finding and finding["face_indices"]:
+        if len(highlighted):
             selected=mesh.faces[highlighted]
             fig.add_trace(go.Mesh3d(x=vertices[:,0],y=vertices[:,1],z=vertices[:,2],
                 i=selected[:,0],j=selected[:,1],k=selected[:,2],color="#e27735",opacity=1,
@@ -40,10 +45,25 @@ def model_figure(model, report=None, finding_id="overhang", *, transparent=False
     fig.add_trace(go.Scatter3d(x=[arrow[0]]*2,y=[arrow[1]]*2,z=[arrow[2],arrow[2]+extent*.6],mode="lines+text",
         text=["","적층 +Z"],textposition="top center",line=dict(color="#3d6e53",width=5),
         hoverinfo="skip",showlegend=False))
-    fig.update_layout(height=540,margin=dict(l=0,r=0,t=0,b=0),showlegend=False,
+    fig.add_trace(go.Cone(x=[arrow[0]], y=[arrow[1]], z=[arrow[2]+extent*.6], u=[0], v=[0], w=[1],
+        sizemode='absolute', sizeref=extent*.075, anchor='tip', showscale=False,
+        colorscale=[[0,'#275c41'],[1,'#275c41']], hoverinfo='skip', showlegend=False))
+    if build_plate:
+        low, high = vertices.min(axis=0), vertices.max(axis=0)
+        margin = extent*.1
+        x0,y0 = low[:2]-margin
+        x1,y1 = high[:2]+margin
+        fig.add_trace(go.Mesh3d(x=[x0,x1,x1,x0], y=[y0,y0,y1,y1], z=[0]*4,
+            i=[0,0], j=[1,2], k=[2,3], color='#c0c9d0', opacity=.45,
+            name='가상 바닥 · Z=0', hovertemplate='가상 바닥 · Z=0 mm<extra></extra>', showscale=False))
+        fig.add_trace(go.Scatter3d(x=[x0,x1,x1,x0,x0], y=[y0,y0,y1,y1,y0], z=[0]*5,
+            mode='lines', line=dict(color='#718596',width=3), name='가상 바닥', showlegend=False,hoverinfo='skip'))
+    fig.update_layout(height=height,margin=dict(l=0,r=0,t=15,b=15),showlegend=False,
         paper_bgcolor="rgba(0,0,0,0)",uirevision=(report or {}).get("model_fingerprint",model.fingerprint),
         scene=dict(aspectmode="data",xaxis_title="X (mm)",yaxis_title="Y (mm)",zaxis_title="Z (mm)",
                    camera=dict(eye=dict(x=1.6,y=1.6,z=1.15))))
+    if samples:
+        add_wall_markers(fig, report, selected_sample=selected_sample)
     return fig
 
 
@@ -57,8 +77,8 @@ def orientation_table(report):
         for r in report["orientations"]]
 
 
-def html_report(report):
-    """Portable user decisions first, with unchanged technical records on demand."""
+def html_report(report, model=None):
+    """Portable illustrated decisions; full unmodified data is exported as JSON."""
     from .detail_summary import summarize_wall, summarize_layers
     from .section_summary import summarize_sections
     from .workflow import summarize_review
@@ -121,6 +141,10 @@ def html_report(report):
             card+=f"<p>{esc(section['completion_text'])}</p><p>{esc(section['interpretation'])}</p>"
             if section['reason']:card+=f"<p>{esc(section['reason'])}</p>"
             if section['selection_note']:card+=f"<p><b>계산 방법 안내</b> · {esc(section['selection_note'])}</p>"
+            if sections.get('rows'):
+                index=section['default_row_index'] or 0
+                card+=section_svg(sections['rows'],index)
+                card+="<p class='scope'>기록된 단면 윤곽입니다. 비교 가능한 이전 단면이 있으면 파란 점선으로 함께 표시하고, 현재 단면은 주황 실선으로 표시합니다. 위험 등급이 아니며, 미확정 단면이나 표본 사이 형상을 추정해 채우지 않습니다.</p>"
             partial=section['partial_volume']
             if partial['available']:
                 card+=(f"<p><b>확인한 구간의 부피 합</b> {value(partial['known_mm3'])} mm³ · "
@@ -143,11 +167,9 @@ def html_report(report):
             refs=' · '.join(f"<a href='#source-{esc(k)}'>{esc(k)}</a>" for k in f['evidence'])
             card+=("<details><summary>측정값·방법·위치 번호와 적용 범위</summary>"
                    f"<p><b>원래 측정 설명</b> · {esc(f['reason'])}</p><p>방법: {esc(f['method'])}</p>"
-                   f"<p>CAD 면 번호: {value(f['cad_face_ids'])}</p>"
+                   f"<p>CAD 면 번호(최대 50개 표시): {value(f['cad_face_ids'][:50])}</p>"
                    f"<p>{' '.join(esc(x) for x in f['limitations'])}</p><p>근거: {refs}</p>"
-                   f"<pre>{esc(json.dumps(f['measurements'],ensure_ascii=False,indent=2))}</pre></details>")
-        if key in details:
-            card+=raw('상세 계산 원자료 · 미확정 값 포함',details[key])
+                   +table([{'측정 키':k,'값':v} for k,v in f['measurements'].items() if not isinstance(v,(dict,list))])+'</details>')
         cards.append(card+'</section>')
 
     sources=[]
@@ -172,10 +194,12 @@ def html_report(report):
                     placement_transform=report['current_orientation']['transform'],**report['provenance'])
     content=f"""<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AM-DFM 설계 검토 — {esc(report['model']['filename'])}</title>
-<style>body{{font-family:'Malgun Gothic',system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;color:#222;line-height:1.65}}h1{{font-size:28px}}h2{{font-size:21px;margin-top:34px}}h3{{font-size:17px;margin:0}}.scope,small{{font-size:13px;color:#555}}.decision{{padding:18px 20px;border-left:5px solid #315f78;background:#f3f7fa;border-radius:4px}}.decision.warning{{border-color:#a76818;background:#fff6e8}}.decision.success{{border-color:#39715a;background:#eff8f2}}table{{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}}td,th{{border:1px solid #ddd;padding:8px;text-align:left;overflow-wrap:anywhere}}th{{background:#f4f4f4}}.table-scroll{{overflow-x:auto}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}}a{{color:#245d87}}details{{margin:14px 0;padding:12px;border:1px solid #ddd;border-radius:5px}}summary{{cursor:pointer;font-weight:bold}}section{{break-inside:avoid}}@media print{{body{{margin:0;max-width:none}}.decision{{break-inside:avoid}}}}</style>
+<style>body{{font-family:'Malgun Gothic',system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;color:#222;line-height:1.65}}h1{{font-size:28px}}h2{{font-size:21px;margin-top:34px}}h3{{font-size:17px;margin:0}}.scope,small{{font-size:13px;color:#555}}.decision{{padding:18px 20px;border-left:5px solid #315f78;background:#f3f7fa;border-radius:4px}}.decision.warning{{border-color:#a76818;background:#fff6e8}}.decision.success{{border-color:#39715a;background:#eff8f2}}table{{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}}td,th{{border:1px solid #ddd;padding:8px;text-align:left;overflow-wrap:anywhere}}th{{background:#f4f4f4}}.table-scroll{{overflow-x:auto}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}}a{{color:#245d87}}details{{margin:14px 0;padding:12px;border:1px solid #ddd;border-radius:5px}}summary{{cursor:pointer;font-weight:bold}}svg{{display:block;width:100%;max-width:640px;height:auto;margin:16px auto}}section{{break-inside:avoid}}@media print{{body{{margin:0;max-width:none}}.decision{{break-inside:avoid}}}}</style>
 <h1>적층제조 설계 검토</h1><p>{esc(report['model']['filename'])} · {esc(report['process_label'])} · AM-DFM {esc(report['app_version'])}</p>
 {decision(overview['level'],overview['title'],overview['observation'],overview['next_action'])}
 <p class='scope'>형상과 입력 조건을 이용한 설계 검토입니다. 검사별 판단은 해당 범위에 한정되며 실제 출력 성공·강도·표준 적합을 보증하지 않습니다.</p>
+{model_svg(model, report) if model is not None else ''}
+<p>전체 표본·층별 원자료는 별도 <code>AM-DFM_review.json</code>에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.</p>
 <h2>항목별 판단과 다음 행동</h2><ul>{navigation}</ul>
 <details><summary>이번 검토의 형상·공정 조건</summary><p>{esc(report['model']['unit_note'])}</p>{conditions}
 <p>현재 높이: {value(report['current_orientation']['height_mm'])} mm · 모델 적층축: {value(report['current_orientation']['direction'])}. 이 방향이 프린터 +Z를 향합니다.</p></details>

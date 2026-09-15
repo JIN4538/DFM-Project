@@ -2,10 +2,10 @@
 from __future__ import annotations
 
 import pandas as pd
-import plotly.graph_objects as go
 import streamlit as st
 
 from .section_summary import summarize_sections
+from .visuals import section_outline_figure, section_area_figure
 
 
 def render_section_result(detail, process, mesh_volume_mm3):
@@ -66,39 +66,22 @@ def render_section_result(detail, process, mesh_volume_mm3):
                      f"재료 면적은 {previous['area_mm2']:,.4g} → {current['area_mm2']:,.4g} mm²입니다.")
             st.caption("단면 사이에서 정확히 어느 높이에 변화가 생겼는지는 이 두 표본만으로 확정하지 않습니다.")
 
-        if current.get("outlines") or (comparable and previous.get("outlines")):
-            figure = go.Figure()
-            outlines = [("현재 단면", current, "#c46b19", "solid")]
-            if comparable:
-                outlines.insert(0, ("이전 단면", previous, "#315f78", "dash"))
-            for title, row, color, dash in outlines:
-                for i, ring in enumerate(row.get("outlines", [])):
-                    figure.add_trace(go.Scatter(
-                        x=[p[0] for p in ring], y=[p[1] for p in ring], mode="lines",
-                        name=f"{title} · {row['z_mm']:.4g} mm", legendgroup=title,
-                        showlegend=i == 0, line=dict(color=color, dash=dash, width=2),
-                    ))
-            figure.update_layout(height=340, xaxis_title="빌드 X (mm)", yaxis_title="빌드 Y (mm)",
-                                 yaxis=dict(scaleanchor="x", scaleratio=1),
-                                 margin=dict(l=20, r=20, t=15, b=25),
-                                 legend=dict(orientation="h", y=-.22))
-            st.plotly_chart(figure, width="stretch")
-            st.caption("파란 점선: 이전 단면 · 주황 실선: 현재 단면. 색은 두 단면을 구분하며 위험 등급이 아닙니다.")
-        if not current.get("complete"):
-            st.warning("이 높이의 재료 단면은 확정되지 않았습니다. 아래 전체 측정값에서 누락 사유를 확인하세요.")
-        elif not current.get("outlines_complete"):
-            st.caption("이 단면의 윤곽은 표시 점 수 한도로 생략했습니다. 계산된 면적에는 전체 윤곽을 사용했습니다.")
-
-        st.markdown("**높이에 따른 재료 단면적**")
-        st.caption("점 하나가 실제 계산한 단면 하나입니다. 점 사이의 모양을 추정하는 연결선은 표시하지 않습니다.")
-        chart_rows = pd.DataFrame([
-            {"높이 (mm)": row["z_mm"], "재료 단면적 (mm²)": row.get("area_mm2"),
-             "단면": "선택한 단면" if i == chosen else "다른 단면"}
-            for i, row in enumerate(rows) if row.get("complete") and row.get("area_mm2") is not None
-        ])
-        if not chart_rows.empty:
-            st.scatter_chart(chart_rows, x="높이 (mm)", y="재료 단면적 (mm²)",
-                             color="단면", size=90, height=260)
+        outline_col, area_col = st.columns(2)
+        with outline_col:
+            st.markdown('**선택한 높이의 단면 모양**')
+            if current.get("outlines") or (comparable and previous.get("outlines")):
+                st.plotly_chart(section_outline_figure(rows, chosen), width="stretch")
+                st.caption("파란 점선: 이전 단면 · 주황 실선: 현재 단면. 같은 길이는 같은 배율로 표시합니다.")
+            if not current.get("complete"):
+                st.warning("이 높이의 재료 단면은 확정되지 않았습니다. 아래 전체 측정값에서 누락 사유를 확인하세요.")
+            elif not current.get("outlines_complete"):
+                st.caption("이 단면의 윤곽은 표시 점 수 한도로 생략했습니다. 계산된 면적에는 전체 윤곽을 사용했습니다.")
+        with area_col:
+            st.markdown("**높이에 따른 재료 단면적**")
+            area_figure = section_area_figure(rows, chosen)
+            if area_figure is not None:
+                st.plotly_chart(area_figure, width="stretch")
+            st.caption("◆ 현재 단면 · ■ 이전 단면 · ● 다른 단면. 점 하나가 실제 계산한 단면이며, 점 사이를 연결하거나 형상을 추정하지 않습니다.")
 
         with st.expander("전체 측정값 · 항목 뜻과 미확정 사유"):
             st.write("면적은 재료가 차지한 넓이입니다. 둘레에는 내부 구멍의 경계도 포함합니다. "
