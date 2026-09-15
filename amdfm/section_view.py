@@ -10,7 +10,8 @@ from .section_summary import summarize_sections
 
 def render_section_result(detail, process, mesh_volume_mm3):
     summary = summarize_sections(detail, process, mesh_volume_mm3)
-    method = "형상 변화 기준" if detail.get("sampling") == "events" else "균등 간격"
+    method = {'events':'형상 변화 기준','uniform':'균등 간격','auto':'자동 요청 · 계산 방법 미확정'}.get(
+        detail.get('sampling'),'계산 방법 미확정')
     with st.container(border=True):
         if summary["completion_level"] == "warning":
             st.warning(summary["completion_title"])
@@ -18,11 +19,20 @@ def render_section_result(detail, process, mesh_volume_mm3):
             st.info(summary["completion_title"])
         st.write(summary["completion_text"])
         st.caption(f"{method} 결과")
+        if summary['selection_note']:
+            st.info(summary['selection_note'])
         st.markdown(f"**형상에서 확인한 내용** · {summary['change_text']}")
         st.write(summary["interpretation"])
         st.markdown(f"**다음에 할 일** · {summary['next_step']}")
         if summary["reason"]:
             st.write(summary["reason"])
+        partial=summary['partial_volume']
+        if partial['available']:
+            cols=st.columns(2)
+            cols[0].metric('확인한 구간의 부피 합',f"{partial['known_mm3']:,.8g} mm³")
+            cols[1].metric('빠진 높이 구간의 부피 기여 상한',
+                           '미확정' if partial['omitted_envelope_mm3'] is None else f"{partial['omitted_envelope_mm3']:.6g} mm³")
+            st.caption(partial['explanation'])
 
     rows = detail.get("rows") or []
     if rows:

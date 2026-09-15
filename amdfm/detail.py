@@ -25,15 +25,16 @@ def run_detail(model, profile, direction=(0,0,1), *, mode="wall", timeout_s=60, 
         direction=orientation["direction"], placement_transform=orientation["transform"],
         coordinate_frame="model_mm" if mode == "wall" else "build_mm")
     if mode=="sections":
-        if sampling not in ("uniform", "events"):
-            raise ValueError("단면 배치 방법은 uniform 또는 events여야 합니다.")
+        if sampling not in ("uniform", "events", "auto"):
+            raise ValueError("단면 배치 방법은 uniform, events 또는 auto여야 합니다.")
+        context['requested_sampling']=sampling
         if isinstance(sample_count,bool) or not np.isfinite(sample_count) or int(sample_count)!=sample_count or not 2<=sample_count<=1024:
             raise ValueError("단면 표본 수는 2~1,024의 정수여야 합니다.")
-        if sampling=="events":
+        if sampling in ("events", "auto"):
             if isinstance(max_event_samples,bool) or not np.isfinite(max_event_samples) or int(max_event_samples)!=max_event_samples or not 2<=max_event_samples<=8192:
                 raise ValueError("형상 변화 단면 한도는 2~8,192의 정수여야 합니다.")
             context.update(sampling=sampling,max_event_samples=int(max_event_samples))
-        else:
+        if sampling in ("uniform", "auto"):
             context["sample_count"]=int(sample_count)
     if mode == "layers" and profile.process != "MEX":
         return {**context, "status":"not_applicable",
@@ -107,6 +108,6 @@ def attach_detail(report, detail):
                     +detail.get("reason", "표본 사이의 극값과 실제 공정의 힘·온도는 계산하지 않습니다.")),
             measurements={k:v for k,v in detail.items() if k not in (
                 "rows","profile","direction","placement_transform","fingerprint")},
-            method=detail.get("method","uniform_midpoint_sections/1"))
+            method=detail.get("method","calculation_not_completed"))
     result["summary"]["attention_items"] = sum(f["status"]=="attention" for f in result["findings"])
     return result

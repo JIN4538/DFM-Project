@@ -79,3 +79,24 @@ def test_unknown_empty_result_has_reason_and_no_misleading_plot():
     assert not app.exception and app.warning
     assert not app.selectbox and not app.get("plotly_chart")
     assert any("계산 한도 초과" in e.value for e in app.markdown)
+
+
+def test_auto_failure_does_not_claim_uniform_was_executed():
+    app=render(dict(status='unknown',sampling='auto',rows=[],reason='표면 입력으로 단면 보류'))
+    assert not app.exception
+    assert any('계산 방법 미확정' in e.value for e in app.caption)
+    assert not any('균등 간격 결과' in e.value for e in app.caption)
+
+
+def test_representation_limited_volume_is_visible_without_total_verdict():
+    from amdfm.event_sections import inspect_event_sections
+    import trimesh
+    detail=inspect_event_sections(trimesh.creation.icosphere(subdivisions=2,radius=10))
+    detail['sampling']='events'
+    app=render(detail)
+    assert not app.exception and app.warning
+    assert len(app.metric)==2
+    assert '확인한 구간' in app.metric[0].label
+    assert '기여 상한' in app.metric[1].label
+    assert not any('두 계산 방법의 부피 차이:' in e.value for e in app.markdown)
+    assert app.session_state['original_detail']['volume_quadrature_estimate_mm3'] is None

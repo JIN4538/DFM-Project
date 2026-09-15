@@ -17,7 +17,7 @@ from amdfm.io import load_model
 from amdfm.gcode import inspect_gcode
 from amdfm.models import json_bytes
 from amdfm.orientation import candidates, direction_from_angles, direction_angles, unit_direction
-from amdfm.presentation import model_figure, orientation_table, html_report, placed_stl, STATUS
+from amdfm.presentation import model_figure, orientation_table, html_report, placed_stl
 from amdfm.profiles import Profile, PROCESS_LABELS
 
 ROOT=Path(__file__).resolve().parent
@@ -42,6 +42,14 @@ def cached_review(fingerprint,profile_dict,direction,extended,dense,code_revisio
 @st.cache_data(max_entries=2,show_spinner=False)
 def cached_gcode(data,diameter,code_revision):
     return inspect_gcode(data,diameter)
+
+
+@st.cache_data(max_entries=4,show_spinner=False)
+def cached_initial_wall(fingerprint,profile_dict,direction,code_revision,_model):
+    result=run_detail(_model,Profile(**profile_dict),direction,mode='wall',timeout_s=5)
+    result['execution_trigger']='initial_review'
+    result['execution_budget_seconds']=5
+    return result
 
 
 def apply_orientation(vector,presets):
@@ -80,7 +88,8 @@ with st.sidebar:
     if not local_test.is_dir():
         local_test=ROOT/'examples/corpus'
     inputs=["CAD 기준형상","내 파일","외부 STL 사례"]
-    if local_test.is_dir():inputs.append("무작위 형상 테스트")
+    if local_test.is_dir():inputs.append("검증용 예제")
+    if st.session_state.get('source')=='무작위 형상 테스트':st.session_state['source']='검증용 예제'
     source=st.selectbox("입력",inputs,key="source")
     data=None
     if source=="CAD 기준형상":
@@ -95,7 +104,7 @@ with st.sidebar:
         upload=st.file_uploader("STEP · STL · 3MF",type=["step","stp","stl","3mf"],key="model_upload")
         if upload is not None:
             data,name=upload.getvalue(),upload.name
-    elif source=="무작위 형상 테스트":
+    elif source=="검증용 예제":
         files=sorted(p for p in local_test.rglob("*") if p.suffix.lower() in (".step",".stp",".stl",".3mf"))
         if files:
             path=st.selectbox("형상 선택",files,format_func=lambda p:str(p.relative_to(local_test)),key="random_example")
@@ -172,6 +181,8 @@ with st.sidebar:
             st.caption("각도는 사용자 탐색 조건이며 이 공정의 보편적 출력 한계가 아닙니다.")
         dense=st.checkbox("대각선 포함 26방향 비교",value=True,key="compare_diagonals")
         extended=st.checkbox("주요 면 방향까지 비교",value=False,key="extended")
+        initial_wall=st.checkbox('작은 형상은 벽도 함께 확인 · 계산 한도 5초',value=True,key='initial_wall')
+        st.caption('삼각형 10,000개 이하의 단일 형상에 적용합니다. 큰 형상은 정밀 검토에서 실행할 수 있습니다.')
         with st.expander("장비·재료와 검토 기준"):
             st.caption("장비·재료·수치 기준은 공정별로 따로 보관합니다.")
             st.caption('벽·홀의 적합 여부를 비교하려면 제조사 가이드나 시편에서 정한 기준을 입력하세요. 비워 두어도 형상 측정은 가능합니다.')
@@ -182,6 +193,9 @@ with st.sidebar:
             hole_limit=st.number_input("최소 홀 검토 기준 (mm, 선택)",min_value=.001,value=None,key=f"hole_limit_{process}",persist_state="session")
             basis=st.text_input("기준 출처·시편 기록",value="사용자 탐색 조건; 실물 시편으로 보정하지 않음",key=f"basis_{process}",persist_state="session")
             process_notes=st.text_area("공정 조건·설계 요구",placeholder="온도·속도·공차·하중·후처리 등",key=f"notes_{process}",persist_state="session")
+            st.markdown('**기준을 모를 때** · 제조사 가이드에서 같은 장비·재료·방향의 조건을 먼저 찾으세요. '
+                        '시편으로 정한다면 요구 치수·형상 유지·강도 중 무엇을 만족해야 하는지 정하고 반복 출력·측정 기록을 남기세요.')
+            st.caption('자체 CAD 예제는 계산 확인용이며 ISO/ASTM 52902 표준 시험물로 인증된 형상이 아닙니다. 한 번 출력된 최소 치수를 모든 부품의 기준으로 사용하지 마세요.')
         with st.expander("빌드 공간과 층 설정"):
             use_build=st.checkbox("장비 크기 제한 적용",value=False,key=f"use_build_{process}",persist_state="session")
             st.caption("선택하지 않으면 부품 크기에 제한을 두지 않고 필요한 배치 치수만 계산합니다.")
@@ -207,6 +221,12 @@ if should_review:
             if queued:
                 with st.spinner('입력한 기준으로 벽을 다시 확인하는 중…'):
                     result=run_detail(model,profile,direction,mode=queued)
+                st.session_state['report']=attach_detail(st.session_state['report'],result)
+            elif (initial_wall and len(model.mesh.faces)<=10_000
+                  and model.metadata.get('cad_geometry_kind')!='surface'
+                  and (model.metadata.get('solid_count') or 1)==1):
+                with st.spinner('벽의 짧은 거리도 함께 확인하는 중 · 최대 5초…'):
+                    result=cached_initial_wall(fingerprint,profile.to_dict(),direction,ENGINE_REVISION,model)
                 st.session_state['report']=attach_detail(st.session_state['report'],result)
     except (ValueError,MemoryError) as exc:
         st.error(str(exc))
@@ -296,7 +316,7 @@ if tab=="설계 조치" or tab is None:
                 for c in f["measurements"]["cylindrical_faces"]]),hide_index=True)
             st.caption("CAD 원통면의 해석 값입니다. 원통면 수는 구멍 수와 다르고, 설계 공차·관통 여부를 포함하지 않습니다.")
     with st.expander("전체 검토 항목"):
-        st.dataframe(pd.DataFrame([{"항목":f["title"],"상태":STATUS[f["status"]],"이유":f["reason"],"설계 조치":f["action"]} for f in report["findings"]]),hide_index=True)
+        st.dataframe(pd.DataFrame([{"항목":x['label'],"상태":x['state'],"이유":x['observation'],"설계 조치":x['next_action']} for x in overview['checklist']]),hide_index=True)
 elif tab=="방향 비교":
     st.subheader('방향을 바꾸면 무엇이 좋아지고 나빠지나요?')
     goals=['높이를 낮추기']
@@ -324,7 +344,7 @@ elif tab=="방향 비교":
     with st.container(horizontal=True):
         st.metric('선택 방향의 높이',f"{choice['height_mm']:.3g} mm",delta=f"{choice['height_mm']-current['height_mm']:+.3g} mm",delta_color='inverse')
         if choice['overhang_projected_area_sum_mm2'] is not None and current['overhang_projected_area_sum_mm2'] is not None:
-            st.metric('하향면 후보의 투영면적 합',f"{choice['overhang_projected_area_sum_mm2']:.3g} mm²",
+            st.metric('하향면 투영면적 합 · 중복 포함',f"{choice['overhang_projected_area_sum_mm2']:.3g} mm²",
                       delta=f"{choice['overhang_projected_area_sum_mm2']-current['overhang_projected_area_sum_mm2']:+.3g} mm²",delta_color='inverse')
         if process=='MEX' and choice['contact_triangle_area_mm2'] is not None and current['contact_triangle_area_mm2'] is not None:
             st.metric('평평한 바닥 면적',f"{choice['contact_triangle_area_mm2']:.3g} mm²",
@@ -361,6 +381,15 @@ elif tab=="정밀 검토":
             st.session_state['report']=attach_detail(report,result)
             st.rerun()
         render_wall_result(model,report)
+        with st.expander('실측으로 최소 벽·홀 기준을 정하는 방법'):
+            st.write('1. 같은 장비·재료·방향·슬라이서·층 조건의 제조사 가이드를 확인합니다.\n'
+                     '2. 사용할 형상과 치수 범위의 시편을 여러 번 출력하고, 측정 위치·도구·허용오차·실패를 함께 기록합니다.\n'
+                     '3. 출력 여부뿐 아니라 요구 치수·형상 유지·강도 등 필요한 조건을 만족한 범위를 정합니다.\n'
+                     '4. 적용 가능한 조건과 여유를 정해 왼쪽 최소 벽·홀 기준과 기준 출처에 기록합니다.')
+            st.caption('기준형상 14개는 수치 알고리즘 검증용입니다. 특정 프린터 능력이나 ISO/ASTM 52902 적합성을 검증한 시편 세트는 아닙니다.')
+            st.download_button('시편 측정 기록 양식 CSV',
+                (ROOT/'docs/templates/calibration_measurements.csv').read_bytes(),
+                file_name='AM-DFM_calibration_measurements.csv',mime='text/csv',key='calibration_template')
     elif focus=='층간':
         st.markdown('**프린팅 층마다 놓치거나 받쳐 줄 곳이 있나요?**')
         if process!='MEX':
@@ -381,12 +410,12 @@ elif tab=="정밀 검토":
         st.markdown(f"**{guidance['title']}**")
         st.write(guidance["reason"])
         st.caption(guidance["action"])
-        section_method=st.selectbox("단면 배치 방법",["형상 변화 기준 · 체적 정밀 검산","균등 간격 · 높이별 비교"],key="section_method")
-        sampling="events" if section_method.startswith("형상") else "uniform"
+        section_method=st.selectbox("단면 배치 방법",["자동 · 가능한 방법으로 단면 확인","형상 변화 기준 · 체적 정밀 검산","균등 간격 · 높이별 비교"],key="section_method")
+        sampling='auto' if section_method.startswith('자동') else "events" if section_method.startswith("형상") else "uniform"
         samples=64
-        if sampling=="uniform":
-            samples=st.number_input("높이 방향 단면 표본 수",min_value=2,max_value=1024,value=64,step=16,key="section_samples")
-            st.caption("현재 배치 높이를 균등 분할한 중간 단면입니다. 얇은 판을 표본 사이에서 놓칠 수 있습니다. 실제 출력 층 수와는 다릅니다.")
+        if sampling in ('uniform','auto'):
+            samples=st.number_input('균등 전환 시 사용할 단면 수' if sampling=='auto' else "높이 방향 단면 표본 수",min_value=2,max_value=1024,value=64,step=16,key="section_samples")
+            st.caption('자동은 형상 변화 기준을 먼저 시도하고 계산 예산을 넘을 때만 위 개수의 균등 단면으로 이어갑니다. 전환 사유와 원래 시도를 결과에 보존합니다.' if sampling=='auto' else "현재 배치 높이를 균등 분할한 중간 단면입니다. 얇은 판을 표본 사이에서 놓칠 수 있습니다. 실제 출력 층 수와는 다릅니다.")
         else:
             st.caption("얇은 높이 구간도 포함하도록 검사할 높이를 자동으로 정합니다. 계산한 단면을 비교해 확인할 위치를 안내합니다.")
         if st.button("단면 검토 실행",key="run_sections",type="primary"):
@@ -396,7 +425,7 @@ elif tab=="정밀 검토":
             st.rerun()
         sections=report.get("details",{}).get("sections")
         if sections:
-            if sections.get("sampling","uniform")!=sampling or (sampling=="uniform" and sections.get("sample_count")!=samples):
+            if sections.get('requested_sampling',sections.get("sampling","uniform"))!=sampling or (sampling in ('uniform','auto') and sections.get("sample_count",samples)!=samples):
                 st.info("아래는 이전 설정으로 계산한 결과입니다. 변경한 설정을 적용하려면 단면 검토 실행을 누르세요.")
             render_section_result(sections,process,report['geometry'].get('mesh_signed_volume_mm3'))
             with st.expander('이 공정에서 단면 결과를 사용하는 범위'):
@@ -406,16 +435,19 @@ elif tab=="정밀 검토":
             st.markdown('**실제 슬라이서에서도 이 부위가 남아 있나요?**')
             st.write("슬라이서가 실제로 생성한 경로를 읽어 얇은 특징의 누락·확대를 확인할 수 있습니다. 현재 형상과의 파일·배율·방향 일치는 자동 확정하지 않습니다.")
             st.write('현재 방향 STL을 내보내 슬라이싱한 뒤 G-code를 넣으세요. 확인할 높이를 선택하고 얇은 부위에 압출 경로가 남아 있는지 확인합니다.')
-            gcode_mode=st.selectbox("G-code 입력",["내 G-code","Cura 기준 실험"],key="gcode_source")
+            practice=st.checkbox('사용법 연습 · 현재 부품과 무관한 Cura 예제 보기',value=False,key='show_gcode_practice')
+            gcode_mode='Cura 기준 실험' if practice else '내 G-code'
             gd=None
+            gsource_name=None
             if gcode_mode=="내 G-code":
                 gfile=st.file_uploader("Marlin 계열 G0/G1 G-code",type=["gcode"],key="gcode_upload")
-                if gfile:gd=gfile.getvalue()
+                if gfile:gd,gsource_name=gfile.getvalue(),gfile.name
             else:
                 gfiles=sorted((ROOT/"validation/v3/cura-experiment-02").glob("rib_*/toolpaths.gcode"))
                 if gfiles:
                     gpath=st.selectbox("리브 폭 실험",gfiles,format_func=lambda p:p.parent.name,key="gcode_example")
                     gd=gpath.read_bytes()
+                    gsource_name=gpath.name
                     st.caption("노즐 0.4 · 층 0.2 · 최소 특징 0.1 · 최소 비드 0.34 mm의 합성 CLI 조건입니다. 현재 모델의 G-code가 아닙니다.")
             diameter=st.number_input("필라멘트 지름 (mm)",min_value=.1,max_value=5.,value=1.75,key="filament_diameter")
             if gd:
@@ -443,7 +475,10 @@ elif tab=="정밀 검토":
                         figure.update_layout(height=350,xaxis_title="X (mm)",yaxis_title="Y (mm)",yaxis=dict(scaleanchor="x",scaleratio=1))
                         st.plotly_chart(figure,width="stretch")
                     st.caption("선은 이동 중심선이며 비드 외곽이 아닙니다. 재료량은 지령값이고 제작 측정값이 아닙니다. 노즐 Z와 기하 단면의 높이는 층 기준을 맞춰 비교하세요.")
-                    st.download_button("G-code 검토 JSON",json_bytes(parsed),file_name="AM-DFM_gcode_review.json",mime="application/json")
+                    gcode_record={**parsed,'input_origin':'bundled_practice' if practice else 'user_upload',
+                                  'source_filename':gsource_name,
+                                  'current_model_relation':'not_current_model' if practice else 'unverified'}
+                    st.download_button("G-code 검토 JSON",json_bytes(gcode_record),file_name="AM-DFM_gcode_review.json",mime="application/json")
                 except (ValueError,MemoryError) as exc:st.error(str(exc))
 elif tab=="수정 전후":
     st.subheader("형상을 바꾼 이유를 수치로 확인")

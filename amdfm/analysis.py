@@ -107,20 +107,48 @@ def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, e
             action = "방향과 경사면을 비교한 뒤 열전달·고정용 서포트와 제거·후가공 접근성을 검토하세요."
         elif profile.process == "VPP":
             action = "기울기·서포트 접점·박리 방향을 비교하고 내부 세척·배출구를 확보하세요."
+        boundary_count = measured["overhang_threshold_equal_face_count"]
+        if boundary_count:
+            reason += (f" 기준 각도 부근(수치 허용차 내)의 면 {boundary_count:,}개는 미만 후보에서 제외했습니다."
+                       " 이 경계면의 출력 가능 여부는 판정하지 않습니다.")
+            action += " 기준 각도 부근의 면은 각도를 조금 높인 결과와 비교하고 실제 공정 기준을 확인하세요."
     faces = measured["overhang_face_indices"]
     cad_ids = sorted(set(model.face_ids[faces].tolist())) if faces and model.face_ids is not None else []
     findings.append(Finding("overhang", "하향면과 지지 검토", status, reason, action,
         measured["overhang_scope"], sources_for("overhang", profile.process),
         measurements={"projected_area_sum_mm2":area, "surface_area_mm2":measured["overhang_surface_area_mm2"],
-                      "angle_from_horizontal_deg":profile.overhang_angle_deg, "threshold_basis":profile.threshold_basis},
+                      "angle_from_horizontal_deg":profile.overhang_angle_deg, "threshold_basis":profile.threshold_basis,
+                      "threshold_equal_face_count":measured["overhang_threshold_equal_face_count"],
+                      "threshold_equal_surface_area_mm2":measured["overhang_threshold_equal_surface_area_mm2"],
+                      "threshold_equal_projected_area_sum_mm2":measured["overhang_threshold_equal_projected_area_sum_mm2"],
+                      "threshold_cosine_tolerance":measured["overhang_threshold_cosine_tolerance"],
+                      "threshold_equal_angle_range_deg":measured["overhang_threshold_equal_angle_range_deg"],
+                      "threshold_comparator":measured["overhang_threshold_comparator"]},
         face_indices=faces, cad_face_ids=cad_ids,
         limitations=["면 투영 합은 겹친 투영의 합집합 또는 실제 서포트량이 아닙니다.", "각도만으로 브리지 성공·열변형·서포트 제거성을 결정하지 않습니다."]))
     contact = measured["contact_triangle_area_mm2"]
     if profile.process == "MEX":
+        if contact is None:
+            contact_reason = "면 방향·폐곡면 조건이 부족해 바닥 접촉 면적은 미확정입니다."
+            contact_action = "입력 형상의 면 방향·경계를 수정한 뒤 다시 검토하세요."
+        elif contact <= 1e-8:
+            contact_reason = "지정 방향에서 면적으로 닿는 평평한 바닥이 검출되지 않았습니다."
+            if measured["contact_nonplanar_bottom_face_count"]:
+                tilt = measured["contact_nonplanar_bottom_min_tilt_deg"]
+                contact_reason += (f" 바닥에 꼭짓점·모서리로 닿는 기울어진 하향면이 있습니다(최소 기울기 {tilt:.6g}°)."
+                                   " 면적 0은 첫 층의 접착력 0이나 출력 불가를 뜻하지 않습니다.")
+            contact_action = "바닥으로 쓸 면을 빌드판과 나란하게 배치한 결과를 비교하고, 슬라이서 첫 층의 윤곽·브림·접착 설정을 확인하세요."
+        else:
+            contact_reason = "빌드판에 거의 평행하게 닿는 바닥 삼각형의 면적 합을 측정했습니다. 실제 첫 층의 압출 면적은 아닙니다."
+            contact_action = "슬라이서 첫 층의 윤곽·브림·접착 설정과 무게중심을 함께 확인하세요."
         findings.append(Finding("contact", "바닥 접촉", "unknown" if contact is None else ("attention" if contact <= 1e-8 else "observed"),
-            "바닥의 평평한 하향 삼각형 면적을 측정했습니다. 점·선 접촉은 접착 면적으로 세지 않습니다.",
-            "접촉이 작거나 없으면 평면을 아래로 놓고, 브림·접착 설정과 무게중심을 확인하세요.",
-            "coplanar bottom triangle area sum", ["ISO52910"], measurements={"area_mm2":contact},
+            contact_reason, contact_action,
+            measured["contact_scope"], ["ISO52910"], measurements={"area_mm2":contact,
+                "plate_tolerance_mm":measured["contact_plate_tolerance_mm"],
+                "normal_max_tilt_deg":measured["contact_normal_max_tilt_deg"],
+                "nonplanar_bottom_face_count":measured["contact_nonplanar_bottom_face_count"],
+                "nonplanar_bottom_min_tilt_deg":measured["contact_nonplanar_bottom_min_tilt_deg"],
+                "nonplanar_bottom_max_height_mm":measured["contact_nonplanar_bottom_max_height_mm"]},
             limitations=["첫 압출 경로의 면적·실제 접착력·전도 안정성 계산은 아닙니다."]))
     cylinders = [dict(f) for f in model.cad_features if cad_input and f["kind"]=="cylinder"]
     if not cad_material_defined:

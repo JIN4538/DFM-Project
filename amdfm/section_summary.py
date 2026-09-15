@@ -64,6 +64,28 @@ def _adjacent(before, after):
     return z_before is not None and z_after is not None and z_before < z_after
 
 
+def _partial_volume_summary(detail):
+    """Show measured contributions without relabelling a partial as complete."""
+    intervals=detail.get('intervals') or []
+    expected=_count(detail.get('event_interval_count'))
+    known=_finite(detail.get('known_interval_volume_mm3'))
+    envelope=_finite(detail.get('omitted_interval_volume_envelope_mm3'))
+    complete=[i for i in intervals if i.get('complete') is True]
+    unresolved=[i for i in intervals if i.get('complete') is not True]
+    coverage=(expected is not None and expected > 0 and len(intervals)==expected
+              and [_count(i.get('index')) for i in intervals]==list(range(expected)))
+    representation_only=(coverage and bool(complete) and bool(unresolved)
+        and detail.get('representation_limit_only') is True
+        and all(i.get('unresolved_cause')=='representation_limit' for i in unresolved))
+    available=(detail.get('status')=='partial' and bool(complete) and known is not None and known>=0)
+    return dict(available=available,known_mm3=known if available else None,
+        omitted_envelope_mm3=envelope if available and envelope is not None and envelope>=0 else None,
+        representation_only=representation_only,unresolved_intervals=len(unresolved),
+        explanation='확인한 높이 구간의 부피 합과 빠진 높이 구간에 들어갈 수 있는 부피의 기하 상한입니다. '
+            '부피 합 자체는 수치 추정이며, 둘을 더한 값을 전체 체적의 보증 상한으로 사용할 수 없습니다. '
+            '단면 재구성·반올림·CAD 메시 근사 오차는 이 상한에 포함되지 않습니다.')
+
+
 def _volume_summary(detail, status, mesh_volume_mm3):
     volume = dict(available=False, relative_difference_percent=None, display="확인 불가",
                   section_volume_mm3=None, mesh_volume_mm3=None, explanation="")
@@ -88,9 +110,15 @@ def _volume_summary(detail, status, mesh_volume_mm3):
         volume["explanation"] = "체적 상대차가 유한한 수로 계산되지 않았습니다."
         return volume
     display = "0%" if percent == 0 else "<0.0001%" if percent < 0.0001 else _number(percent, 4)+"%"
+    event=(detail.get('sampling_method')=='vertex_events_gauss2' or method.startswith('vertex_event'))
+    explanation='같은 메시의 체적을 두 방법으로 계산해 비교한 값입니다. 제조 적합성이나 실제 치수 정확도의 합격 기준은 아닙니다.'
+    explanation+= (' 차이가 있다면 단면 재구성·반올림 오차와 겹침·자기교차 등 재료 경계의 가정을 확인하세요. '
+                  '차이만으로 결함을 확정하거나 작은 차이로 자기교차가 없다고 판단할 수 없습니다.' if event else
+                  ' 균등 단면의 체적은 표본 추정입니다. 얇은 높이 구간 누락으로 차이가 커질 수 있으므로 '
+                  '차이를 곧바로 겹침·자기교차의 증거로 해석하지 마세요.')
     volume.update(available=True, relative_difference_percent=percent, display=display,
                   section_volume_mm3=section, mesh_volume_mm3=mesh,
-                  explanation="같은 메시의 체적을 두 방법으로 계산해 비교한 값입니다. 제조 적합성이나 실제 치수 정확도의 합격 기준은 아닙니다.")
+                  explanation=explanation)
     return volume
 
 
@@ -121,6 +149,14 @@ def summarize_sections(detail, process, mesh_volume_mm3=None):
                   else f"{completed:,}개 계산 완료 · 요청 수 미확정")
     completion_text = count_text+". 완료는 단면 계산 상태를 뜻합니다."
     reason = detail.get("reason") or ""
+    partial_volume=_partial_volume_summary(detail)
+    if status=='partial' and partial_volume['representation_only']:
+        title='미세한 높이 구간의 수치 표현 한계 · 계산한 부피와 누락 상한 제공'
+        completion_text+=' 계산한 구간은 보존했고, 나머지는 두 계산 높이를 구별해 표현할 수 없는 구간입니다.'
+    fallback=detail.get('fallback_performed') is True
+    selection_note=detail.get('selection_reason') or ''
+    if fallback and status=='complete':
+        title='균등 단면 계산 완료 · 전체 구간 체적 검산은 미완료'
     if declared_status == "complete" and status != "complete" and not reason:
         reason = "완료 표시와 단면 수 또는 구간 상태가 일치하지 않아 전체 완료로 표시하지 않았습니다."
 
@@ -158,9 +194,14 @@ def summarize_sections(detail, process, mesh_volume_mm3=None):
                      "입력 형상 또는 단면 배치 방법을 조정해 다시 검토하세요.")
     elif status != "complete":
         next_step = "미확정 이유와 빠진 검토 범위를 먼저 확인하세요. " + next_step
+    if partial_volume['representation_only']:
+        next_step='아래의 계산한 부피와 누락 구간 상한을 함께 확인하세요. CAD 체적·국소 형상 오차는 별도로 확인합니다. '+_NEXT_STEPS.get(process,'단면의 윤곽을 확인하세요.')
+    if fallback:
+        next_step='아래 단면으로 형상 변화를 먼저 확인하세요. 얇은 판의 높이는 CAD·슬라이서에서 추가 확인하고, 균등 체적을 정밀 검산으로 사용하지 마세요.'
     return dict(status=status, completion_title=title, completion_text=completion_text,
                 completion_level=level, reason=reason,
                 interpretation="제작해도 되는지: 이 단면 결과만으로 결정할 수 없습니다.",
                 next_step=next_step, default_row_index=default_row_index,
                 change=change, change_text=change_text,
+                partial_volume=partial_volume,selection_note=selection_note,
                 volume=_volume_summary(detail, status, mesh_volume_mm3))

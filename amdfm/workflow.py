@@ -29,7 +29,10 @@ def summarize_review(report):
         elif key == 'overhang':
             item['target']='방향 비교'
             if status == 'not_detected':
-                item.update(level='success', next_action='현재 각도 조건에서는 하향면 수정 후보가 없습니다. 벽·내부 형상 검토를 이어가세요.')
+                if f.get('measurements',{}).get('threshold_equal_face_count'):
+                    item.update(state='기준 각도 부근의 면을 추가 확인',level='info',needs_action=True)
+                else:
+                    item.update(level='success', next_action='현재 각도 조건에서는 하향면 수정 후보가 없습니다. 벽·내부 형상 검토를 이어가세요.')
         elif key == 'contact' and status == 'observed':
             area=f['measurements'].get('area_mm2')
             item.update(state='평평한 접촉면 있음', observation=f'바닥의 평평한 면을 {area:.4g} mm² 관측했습니다. 접착력은 별도로 확인합니다.')
@@ -54,7 +57,7 @@ def summarize_review(report):
                 item.update(state=s['completion_title'], observation=s['change_text'], next_action=s['next_step'],
                             level=s['completion_level'], needs_action=s['completion_level']=='warning')
             else:
-                item.update(state='필요할 때 실행', observation='높이에 따라 단면 모양과 넓이가 어떻게 변하는지 살펴보는 보조 검사입니다.')
+                item.update(state='아직 실행하지 않음 · 필요할 때 단면 확인', observation='높이에 따라 단면 모양과 넓이가 어떻게 변하는지 살펴보는 보조 검사입니다.')
         if status=='not_detected' and key not in ('overhang','cavities'):
             item['level']='success'
         items.append(item)

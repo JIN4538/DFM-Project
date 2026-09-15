@@ -94,6 +94,9 @@ def summarize_wall(detail, minimum_wall_mm=None):
         result.update(status="unknown", level="warning", title="벽을 측정하지 못했습니다",
                       observation=result["reason"] or "확인 가능한 거리 표본이 없습니다.",
                       next_action="입력 진단을 확인하고 단일 솔리드를 선택한 뒤 다시 실행하세요.")
+        if detail.get('execution_trigger')=='initial_review':
+            result.update(title='자동 벽 확인에서 측정을 완료하지 못했습니다',
+                next_action="사유를 확인하세요. 시간이 부족했다면 '벽 검토 실행'으로 최대 60초 동안 다시 측정할 수 있습니다.")
         return result
     observation = f"유효 표본 {valid:,}개에서 가장 짧은 거리는 {_display(minimum)} mm입니다."
     if not complete:

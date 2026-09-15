@@ -83,7 +83,7 @@ def test_non_mex_review_does_not_offer_filament_gcode_analysis(process):
     _submit(app)
     app.segmented_control(key="result_tab").set_value("정밀 검토").run()
     # Positive control: the existing MEX workflow remains available.
-    assert app.selectbox(key="gcode_source").value == "내 G-code"
+    assert app.checkbox(key='show_gcode_practice').value is False
     assert app.number_input(key="filament_diameter").value == 1.75
     app.selectbox(key="process").select(process).run()
     _submit(app)
@@ -92,6 +92,7 @@ def test_non_mex_review_does_not_offer_filament_gcode_analysis(process):
     app.segmented_control(key='detail_focus').set_value('층간').run()
     assert app.button(key="run_layers").disabled
     assert not any(item.key in ("gcode_source", "gcode_example") for item in app.selectbox)
+    assert not any(item.key=='show_gcode_practice' for item in app.checkbox)
     assert not any(item.key == "filament_diameter" for item in app.number_input)
     assert not any(item.key == "gcode_upload" for item in app.get("file_uploader"))
     assert not any("G-code" in item.label for item in app.expander)

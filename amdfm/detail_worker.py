@@ -60,6 +60,35 @@ def normal_chords(mesh, limit=None, n=800):
                    for p,t,s,target in zip(points,distance,source_faces,target_faces)]}}
 
 
+def inspect_section_strategy(mesh, sampling, sample_count=64, max_event_samples=8192):
+    """Fallback only after an explicit event preflight budget refusal.
+
+    The original attempt remains in the result. A uniform result is a separate
+    sample estimate, never a completed event integral. Both share the worker's
+    existing wall-clock timeout; topology failures and partials are not retried.
+    """
+    from .cross_sections import inspect_cross_sections
+    from .event_sections import inspect_event_sections
+    if sampling == 'uniform':
+        result=inspect_cross_sections(mesh,sample_count)
+        result.update(sampling='uniform',sample_count=sample_count)
+    else:
+        result=inspect_event_sections(mesh,max_samples=max_event_samples)
+        result.update(sampling='events',max_event_samples=max_event_samples)
+        if (sampling == 'auto' and result.get('failure_code') == 'event_budget_exceeded'
+                and result.get('status') == 'unknown' and not result.get('rows')):
+            event_attempt=result
+            result=inspect_cross_sections(mesh,sample_count)
+            result.update(sampling='uniform',sample_count=sample_count,
+                max_event_samples=max_event_samples,event_attempt=event_attempt,
+                fallback_performed=True,fallback_trigger='event_budget_exceeded',
+                selection_reason='형상 변화 단면의 계산 예산을 넘어 균등 단면으로 이어서 계산했습니다. '
+                    '얇은 높이 구간을 놓칠 수 있으며 전체 구간의 체적 정밀 검산은 완료되지 않았습니다.')
+    result['requested_sampling']=sampling
+    result.setdefault('fallback_performed',False)
+    return result
+
+
 def run(base):
     started=time.perf_counter()
     request=json.loads((base/"request.json").read_text(encoding="utf-8"))
@@ -76,22 +105,18 @@ def run(base):
         else:
             result=normal_chords(mesh,profile["minimum_wall_mm"])
     elif request["mode"]=="sections":
-        from .cross_sections import inspect_cross_sections
         if request["assembly"] or request.get("ambiguous_stl_shells"):
             result={"status":"unknown","reason":"재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요."}
         else:
             matrix=np.asarray(request["placement_transform"],dtype=float)
             placed=trimesh.Trimesh(vertices=mesh.vertices@matrix[:3,:3].T+matrix[:3,3],
                                    faces=mesh.faces.copy(),process=False)
-            if request.get("sampling")=="events":
-                from .event_sections import inspect_event_sections
-                result=inspect_event_sections(placed,max_samples=request["max_event_samples"])
-            else:
-                result=inspect_cross_sections(placed,request["sample_count"])
-        if request.get("sampling")=="events":
-            result.update(sampling="events",max_event_samples=request["max_event_samples"])
-        else:
-            result["sample_count"]=request["sample_count"]
+            result=inspect_section_strategy(placed,request.get('sampling','uniform'),
+                request.get('sample_count',64),request.get('max_event_samples',8192))
+        result.setdefault('requested_sampling',request.get('sampling','uniform'))
+        result.setdefault('sampling',request.get('sampling','uniform'))
+        if 'max_event_samples' in request:result.setdefault('max_event_samples',request['max_event_samples'])
+        if 'sample_count' in request:result.setdefault('sample_count',request['sample_count'])
     else:
         from src.core.layer_review import inspect_layers
         if request["assembly"]:
@@ -123,5 +148,5 @@ if __name__=="__main__":
         request=json.loads((base/"request.json").read_text(encoding="utf-8"))
         result={"status":"unknown","reason":str(exc),**{key:request[key] for key in
             ("mode","fingerprint","profile","direction","placement_transform","coordinate_frame",
-             "sampling","max_event_samples","sample_count") if key in request}}
+             "sampling","requested_sampling","max_event_samples","sample_count") if key in request}}
     (base/"result.json").write_bytes(json_bytes(result))

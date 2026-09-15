@@ -31,8 +31,8 @@ def test_corpus_including_supplier_metadata_matches_original_audit():
 def test_random_corpus_picker_works_without_a_desktop_folder(monkeypatch,tmp_path):
     monkeypatch.setattr(Path,'home',classmethod(lambda cls:tmp_path))
     app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=90).run()
-    assert '무작위 형상 테스트' in app.selectbox(key='source').options
-    app.selectbox(key='source').select('무작위 형상 테스트').run()
+    assert '검증용 예제' in app.selectbox(key='source').options
+    app.selectbox(key='source').select('검증용 예제').run()
     assert not app.exception
     assert len(app.selectbox(key='random_example').options)==26
     assert any('저장소에 포함된 26개 형상' in c.value for c in app.caption)

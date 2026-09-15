@@ -7,6 +7,29 @@ from streamlit.testing.v1 import AppTest
 APP=Path(__file__).resolve().parents[1]/"app.py"
 
 
+def test_initial_wall_is_bounded_and_manual_retry_gets_full_budget(monkeypatch):
+    import amdfm.detail as detail_module
+    calls=[]
+    def fake(model,profile,direction,*,mode='wall',timeout_s=60,**kwargs):
+        calls.append(timeout_s)
+        return dict(mode=mode,fingerprint=model.fingerprint,status='unknown',
+                    reason='계산 시간 한도 확인용',profile=profile.to_dict())
+    monkeypatch.setattr(detail_module,'run_detail',fake)
+    app=AppTest.from_file(str(APP),default_timeout=60).run()
+    app.text_input(key='machine_MEX').set_value('initial-wall-budget-test').run()
+    app.button[0].click().run()
+    assert calls==[5]
+    result=app.session_state['report']['details']['wall']
+    assert result['status']=='unknown' and result['execution_trigger']=='initial_review'
+    app.segmented_control(key='result_tab').set_value('정밀 검토').run()
+    assert any('자동 벽 확인' in w.value for w in app.warning)
+    app.button(key='run_wall').click().run()
+    assert calls==[5,60] and not app.exception
+    app.checkbox(key='initial_wall').uncheck().run()
+    next(button for button in app.button if button.label=='설계 검토').click().run()
+    assert calls==[5,60] and not app.session_state['report'].get('details')
+
+
 def test_complete_design_workflow_and_stale_results():
     app=AppTest.from_file(str(APP),default_timeout=45).run()
     assert not app.exception
@@ -55,12 +78,12 @@ def test_design_comparison_and_cura_example_workflow():
     table=app.dataframe[0].value
     assert table.loc[table["항목"]=="CAD 체적 (mm³)","차이"].iloc[0]==pytest.approx(540,abs=1e-8)
     app.segmented_control(key="result_tab").set_value("정밀 검토").run()
-    app.selectbox(key="gcode_source").select("Cura 기준 실험").run()
+    app.checkbox(key='show_gcode_practice').check().run()
     path=APP.parent/"validation/v3/cura-experiment-02/rib_0.3/toolpaths.gcode"
     app.selectbox(key="gcode_example").select(path).run()
     assert not app.exception and not app.error
     assert app.select_slider(key="gcode_z").value==.2
-    assert len(app.get("download_button"))==1
+    assert len(app.get("download_button"))==2  # G-code JSON and optional calibration record template
 
 
 def test_custom_direction_comparison_application_and_stale_exports():
@@ -131,11 +154,12 @@ def test_event_section_default_and_switch_keep_result_method_visible():
     app.button[0].click().run()
     app.segmented_control(key="result_tab").set_value("정밀 검토").run()
     app.segmented_control(key="detail_focus").set_value("단면").run()
-    assert app.selectbox(key="section_method").value.startswith("형상 변화")
+    assert app.selectbox(key="section_method").value.startswith("자동")
     app.button(key="run_sections").click().run()
     assert not app.exception
     result=app.session_state["report"]["details"]["sections"]
     assert result["sampling"]=="events"
+    assert result['requested_sampling']=='auto' and result['fallback_performed'] is False
     assert result["status"] in ("complete","partial")
     app.selectbox(key="section_method").select("균등 간격 · 높이별 비교").run()
     assert app.session_state["report"]["details"]["sections"]["sampling"]=="events"
@@ -166,7 +190,11 @@ def test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile():
     app.selectbox(key='process').select('VPP').run()
     app.button[0].click().run()
     assert app.session_state['report']['profile']['minimum_wall_mm'] is None
-    assert not app.session_state['report'].get('details')
+    fresh=app.session_state['report'].get('details',{})
+    assert not ({'sections','layers'} & set(fresh))
+    if 'wall' in fresh:
+        assert fresh['wall']['profile']==app.session_state['report']['profile']
+        assert fresh['wall']['profile']['minimum_wall_mm'] is None
 
 
 def test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart():

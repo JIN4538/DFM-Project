@@ -11,6 +11,10 @@ from .profiles import Profile
 DIRECTIONS = {"+Z": (0, 0, 1), "-Z": (0, 0, -1), "+X": (1, 0, 0),
               "-X": (-1, 0, 0), "+Y": (0, 1, 0), "-Y": (0, -1, 0)}
 
+# Numerical boundary policies, not manufacturing tolerances or printer limits.
+ANGLE_COSINE_TOLERANCE = 1e-12
+CONTACT_NORMAL_COSINE = .999999
+
 
 def unit_direction(direction):
     d = np.asarray(direction, dtype=float)
@@ -54,19 +58,44 @@ def placement(mesh, direction):
 
 
 def measure_orientation(mesh, direction, profile: Profile, *, reliable_normals=True):
+    """Measure triangle geometry; neither contact nor projection is a toolpath.
+
+    Contact sums nearly coplanar bottom facets within the reported numerical
+    tolerances. A genuinely tilted plane has only point/line contact with z=0.
+    The excluded bottom-touching facets and angle boundary band are reported
+    separately without enlarging contact or silently changing the strict rule.
+    """
     profile.validate()
     d = unit_direction(direction)
     xyz, matrix = placement(mesh, d)
     dims = np.ptp(xyz, axis=0)
-    zmax = xyz[:, 2][mesh.faces].max(axis=1)
+    face_heights = xyz[:, 2][mesh.faces]
+    zmax = face_heights.max(axis=1)
     tol = max(1e-9, np.max(dims)*1e-10)
     on_plate = zmax <= tol
     nz = mesh.face_normals @ d
-    angle_mask = (nz < -np.cos(np.deg2rad(profile.overhang_angle_deg))-1e-12) & ~on_plate
+    cosine_threshold = np.cos(np.deg2rad(profile.overhang_angle_deg))
+    angle_mask = (nz < -cosine_threshold-ANGLE_COSINE_TOLERANCE) & ~on_plate
+    threshold_equal = ((nz >= -cosine_threshold-ANGLE_COSINE_TOLERANCE)
+                       & (nz <= -cosine_threshold+ANGLE_COSINE_TOLERANCE)
+                       & (nz < 0) & ~on_plate)
     if not reliable_normals:
         angle_mask[:] = False
     use_overhang = reliable_normals and profile.process != "PBF_POLYMER"
-    contact = float(mesh.area_faces[on_plate & (nz < -.999999)].sum()) if reliable_normals else None
+    contact_mask = on_plate & (nz < -CONTACT_NORMAL_COSINE)
+    contact = float(mesh.area_faces[contact_mask].sum()) if reliable_normals else None
+    # A vertex on the plate does not establish a finite contact patch. This
+    # diagnostic explains zero contact for slightly tilted or noisy bottoms.
+    bottom_nonplanar = (face_heights.min(axis=1) <= tol) & (nz < 0) & ~contact_mask
+    bottom_min_tilt = None
+    bottom_max_height = None
+    if reliable_normals and np.any(bottom_nonplanar):
+        selected_normals = mesh.face_normals[bottom_nonplanar]
+        # atan2 preserves very small tilts that arccos(dot) can round to zero.
+        tilt_angles = np.rad2deg(np.arctan2(np.linalg.norm(np.cross(selected_normals, d), axis=1),
+                                         -nz[bottom_nonplanar]))
+        bottom_min_tilt = float(tilt_angles.min())
+        bottom_max_height = float(zmax[bottom_nonplanar].max())
     # Fit the placed AABB, allowing only an extra 90 degree build-plane yaw.
     fit, utilization, yaw, required = None, None, 0, dims.copy()
     if profile.build_volume_mm:
@@ -84,11 +113,24 @@ def measure_orientation(mesh, direction, profile: Profile, *, reliable_normals=T
         extents_mm=dims.tolist(), placed_extents_mm=required.tolist(), xy_yaw_deg=yaw,
         transform=matrix.tolist(), build_fit=fit, max_axis_utilization=utilization,
         contact_triangle_area_mm2=contact,
+        contact_plate_tolerance_mm=float(tol),
+        contact_normal_max_tilt_deg=float(np.rad2deg(np.arccos(CONTACT_NORMAL_COSINE))),
+        contact_nonplanar_bottom_face_count=int(bottom_nonplanar.sum()) if reliable_normals else None,
+        contact_nonplanar_bottom_min_tilt_deg=bottom_min_tilt,
+        contact_nonplanar_bottom_max_height_mm=bottom_max_height,
+        contact_scope="bottom triangle surface-area sum within numerical plane/normal tolerances; not first-layer area or adhesion; tilted point/line contact has zero area",
         overhang_surface_area_mm2=float(mesh.area_faces[angle_mask].sum()) if use_overhang else None,
         overhang_projected_area_sum_mm2=float((mesh.area_faces[angle_mask]*(-nz[angle_mask])).sum()) if use_overhang else None,
         overhang_face_indices=np.flatnonzero(angle_mask).tolist() if use_overhang else [],
         overhang_angle_deg=profile.overhang_angle_deg,
-        overhang_scope="down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation")
+        overhang_threshold_equal_face_count=int(threshold_equal.sum()) if use_overhang else None,
+        overhang_threshold_equal_surface_area_mm2=float(mesh.area_faces[threshold_equal].sum()) if use_overhang else None,
+        overhang_threshold_equal_projected_area_sum_mm2=float((mesh.area_faces[threshold_equal]*(-nz[threshold_equal])).sum()) if use_overhang else None,
+        overhang_threshold_cosine_tolerance=ANGLE_COSINE_TOLERANCE,
+        overhang_threshold_comparator="nz < -cos(angle_deg) - cosine_tolerance; equality band excluded",
+        overhang_threshold_equal_angle_range_deg=np.rad2deg(np.arccos(np.clip(
+            [cosine_threshold+ANGLE_COSINE_TOLERANCE, cosine_threshold-ANGLE_COSINE_TOLERANCE], -1, 1))).tolist(),
+        overhang_scope="down-facing facets strictly below horizontal angle outside numerical boundary band; plate excluded; projected area is a sum including overlaps, not a union; no bridge exemption or support generation")
 
 
 def candidates(mesh, include_face_normals=False, *, dense=False):

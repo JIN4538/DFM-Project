@@ -51,7 +51,7 @@ def orientation_table(report):
     return [{"방향":r["name"],"비지배 대안":r["pareto"],
         "모델 적층축 (X, Y, Z)":", ".join(f"{v:.6g}" for v in r["direction"]),
         "기울기 (°)":r.get("tilt_deg"),"방위각 (°)":r.get("azimuth_deg"),
-        "투영면적 합 (mm²)":r["overhang_projected_area_sum_mm2"],"높이 (mm)":r["height_mm"],
+        "투영면적 합 · 중복 포함 (mm²)":r["overhang_projected_area_sum_mm2"],"높이 (mm)":r["height_mm"],
         "바닥 면적 (mm²)":r["contact_triangle_area_mm2"],
         "공간":("미지정" if r["build_fit"] is None else "수용" if r["build_fit"] else "초과")}
         for r in report["orientations"]]
@@ -120,6 +120,12 @@ def html_report(report):
             section=summarize_sections(sections,profile['process'],report['geometry'].get('mesh_signed_volume_mm3'))
             card+=f"<p>{esc(section['completion_text'])}</p><p>{esc(section['interpretation'])}</p>"
             if section['reason']:card+=f"<p>{esc(section['reason'])}</p>"
+            if section['selection_note']:card+=f"<p><b>계산 방법 안내</b> · {esc(section['selection_note'])}</p>"
+            partial=section['partial_volume']
+            if partial['available']:
+                card+=(f"<p><b>확인한 구간의 부피 합</b> {value(partial['known_mm3'])} mm³ · "
+                       f"<b>빠진 높이 구간의 부피 기여 상한</b> {value(partial['omitted_envelope_mm3'])} mm³</p>"
+                       f"<p>{esc(partial['explanation'])}</p>")
             volume=section['volume']
             volume_html=f"<p>{esc(volume['explanation'])}</p>"
             if volume['available']:

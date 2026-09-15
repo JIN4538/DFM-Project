@@ -62,9 +62,20 @@ def test_non_mex_does_not_require_a_mex_layer_check(process):
 def test_completed_optional_sections_are_not_required_for_a_blanket_pass():
     result = summarize_review(cube_report())
     section = item(result, "sections")
-    assert section["state"] == "필요할 때 실행"
+    assert section["state"] == "아직 실행하지 않음 · 필요할 때 단면 확인"
     assert not section["needs_action"]
     assert "보조 검사" in section["observation"]
+
+
+def test_angle_boundary_does_not_lose_its_next_action_when_strict_candidates_are_empty():
+    report=cube_report()
+    finding=next(f for f in report['findings'] if f['id']=='overhang')
+    finding.update(status='not_detected',action='기준 각도 부근의 면을 다른 각도와 비교하세요.')
+    finding['measurements']['threshold_equal_face_count']=2
+    result=item(summarize_review(report),'overhang')
+    assert result['needs_action'] and result['level']=='info'
+    assert result['next_action']==finding['action']
+    assert '기준 각도' in result['state']
 
 
 def test_recorded_wall_measured_without_criterion_is_still_actionable():
