@@ -109,7 +109,9 @@ def test_non_fdm_sections_work_and_exports_preserve_measurements(process):
     app.selectbox(key="process").select(process).run()
     app.button[0].click().run()
     app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+    app.segmented_control(key="detail_focus").set_value("층간").run()
     assert app.button(key="run_layers").disabled
+    app.segmented_control(key="detail_focus").set_value("단면").run()
     assert all(n.key!="line_width" for n in app.number_input)
     app.selectbox(key="section_method").select("균등 간격 · 높이별 비교").run()
     app.number_input(key="section_samples").set_value(8).run()
@@ -128,6 +130,7 @@ def test_event_section_default_and_switch_keep_result_method_visible():
     app.selectbox(key="process").select("VPP").run()
     app.button[0].click().run()
     app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+    app.segmented_control(key="detail_focus").set_value("단면").run()
     assert app.selectbox(key="section_method").value.startswith("형상 변화")
     app.button(key="run_sections").click().run()
     assert not app.exception
@@ -138,3 +141,48 @@ def test_event_section_default_and_switch_keep_result_method_visible():
     assert app.session_state["report"]["details"]["sections"]["sampling"]=="events"
     assert any("형상 변화 기준 결과" in element.value for element in app.caption)
     assert any("이전 설정으로 계산한 결과" in element.value for element in app.info)
+
+
+def test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile():
+    app=AppTest.from_file(str(APP),default_timeout=90).run()
+    app.button(key='start_from_model').click().run()
+    app.segmented_control(key='result_tab').set_value('정밀 검토').run()
+    app.button(key='run_wall').click().run()
+    assert any('벽은 측정됐지만 비교 기준이 없습니다' in x.value for x in app.info)
+    app.number_input(key='quick_wall_limit_MEX').set_value(1.).run()
+    app.button(key='apply_wall_criterion').click().run()
+    assert not app.exception
+    report=app.session_state['report']
+    assert report['profile']['minimum_wall_mm']==1.
+    assert report['details']['wall']['profile']==report['profile']
+    assert any('입력한 벽 기준 미만이 없습니다' in x.value for x in app.success)
+    app.number_input(key='quick_wall_limit_MEX').set_value(5.).run()
+    app.button(key='apply_wall_criterion').click().run()
+    assert not app.exception
+    report=app.session_state['report']
+    assert report['profile']['minimum_wall_mm']==5.
+    assert report['details']['wall']['measurements']['below_limit_face_indices']
+    assert any('입력한 벽 기준보다 작은 구간' in x.value for x in app.warning)
+    app.selectbox(key='process').select('VPP').run()
+    app.button[0].click().run()
+    assert app.session_state['report']['profile']['minimum_wall_mm'] is None
+    assert not app.session_state['report'].get('details')
+
+
+def test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart():
+    app=AppTest.from_file(str(APP),default_timeout=90).run()
+    app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+    app.button[0].click().run()
+    app.button(key='next_review_action').click().run()
+    assert not app.exception
+    assert app.segmented_control(key='result_tab').value=='정밀 검토'
+    assert app.segmented_control(key='detail_focus').value=='벽'
+    app.segmented_control(key='detail_focus').set_value('층간').run()
+    app.button(key='run_layers').click().run()
+    assert not app.exception
+    assert any('150개 층' in x.value and '후보' in x.value for x in app.success)
+    assert len(app.get('arrow_vega_lite_chart'))==0
+    assert len(app.get('plotly_chart'))==0
+    assert app.dataframe[0].value['층'].iloc[0]==1
+    app.segmented_control(key='result_tab').set_value('근거·내보내기').run()
+    assert len(app.get('download_button'))==4

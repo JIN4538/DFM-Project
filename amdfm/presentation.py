@@ -58,69 +58,127 @@ def orientation_table(report):
 
 
 def html_report(report):
-    """Portable, script-free report. Every user-provided string is HTML escaped."""
+    """Portable user decisions first, with unchanged technical records on demand."""
+    from .detail_summary import summarize_wall, summarize_layers
+    from .section_summary import summarize_sections
+    from .workflow import summarize_review
+
     esc=lambda x: html.escape(str(x))
     def value(x):
         if x is None:return "미확정"
         if isinstance(x,float):return f"{x:.5g}"
         if isinstance(x,(dict,list)):return esc(json.dumps(x,ensure_ascii=False))
         return esc(x)
-    rows="".join(f"<tr><th>{esc(k)}</th><td>{value(v)}</td></tr>" for k,v in report["profile"].items())
+
+    def table(rows):
+        if not rows:return ""
+        keys=list(rows[0])
+        header="".join(f"<th scope='col'>{esc(k)}</th>" for k in keys)
+        body="".join("<tr>"+"".join(f"<td>{value(row.get(k))}</td>" for k in keys)+"</tr>" for row in rows)
+        return f"<div class='table-scroll'><table><thead><tr>{header}</tr></thead><tbody>{body}</tbody></table></div>"
+
+    def raw(label, data):
+        return f"<details><summary>{esc(label)}</summary><pre>{esc(json.dumps(data,ensure_ascii=False,indent=2))}</pre></details>"
+
+    def decision(level,title,observation,action):
+        level=level if level in ('success','warning','info') else 'info'
+        return (f"<div class='decision {level}'><h3>{esc(title)}</h3><p>{esc(observation)}</p>"
+                f"<p><b>다음에 할 일</b> · {esc(action)}</p></div>")
+
+    overview=summarize_review(report)
+    profile=report['profile']
+    details=report.get('details',{})
+    findings={f['id']:f for f in report['findings']}
     cards=[]
-    for f in report["findings"]:
-        visible={k:v for k,v in f["measurements"].items() if k not in ("samples","cylindrical_faces","problem_face_indices","below_limit_face_indices","thinnest_face_indices")}
-        metrics="".join(f"<tr><th>{esc(k)}</th><td>{value(v)}</td></tr>" for k,v in visible.items())
-        refs=" · ".join(f"<a href='#source-{esc(k)}'>{esc(k)}</a>" for k in f["evidence"])
-        cards.append(f"<section><h2>{esc(f['title'])} <small>{esc(STATUS[f['status']])}</small></h2>"
-            f"<p>{esc(f['reason'])}</p><p><b>설계 조치</b> {esc(f['action'])}</p><table>{metrics}</table>"
-            f"<p>방법: {esc(f['method'])}</p><p>CAD 면 번호: {esc(f['cad_face_ids'])}</p>"
-            f"<p>{' '.join(esc(x) for x in f['limitations'])}</p><p>근거: {refs}</p></section>")
+    for item in overview['checklist']:
+        key=item['id']
+        card=(f"<section id='check-{esc(key)}'><h2>{esc(item['label'])}</h2>"
+              +decision(item['level'],item['state'],item['observation'],item['next_action']))
+        if key=='wall':
+            wall=summarize_wall(details.get('wall'),profile.get('minimum_wall_mm'))
+            if wall['minimum_mm'] is not None:
+                criterion=value(wall['minimum_wall_mm'])+' mm' if wall['criterion_available'] else '미입력'
+                card+=(f"<p><b>가장 짧게 측정한 거리</b> {value(wall['minimum_mm'])} mm · "
+                       f"<b>입력한 최소 벽 기준</b> {criterion}</p>")
+                card+=f"<p><b>기준 근거</b> · {esc(profile.get('threshold_basis','미입력'))}</p>"
+            card+=f"<p class='scope'>{esc(wall['scope'])}</p>"
+        elif key=='layers':
+            layers=summarize_layers(details.get('layers'))
+            if details.get('layers'):
+                card+=table([{'검토 항목':c['label'],'후보가 관측된 층 수':c['candidate_layers'],
+                              '전체 비교 범위를 계산한 층 수':c['fully_measured_layers']}
+                             for c in layers['checks']])
+                if layers['affected_rows']:
+                    card+="<h3>먼저 확인할 층</h3>"+table([
+                        {'층':r['display_layer'],'높이 (mm)':r.get('z_mm'),
+                         '확인할 내용':' · '.join(r['types']),'다음 행동':r['action']}
+                        for r in layers['affected_rows']])
+                if layers['reason']:card+=f"<p>{esc(layers['reason'])}</p>"
+            card+=f"<p class='scope'>{esc(layers['scope'])}</p>"
+        elif key=='sections' and details.get('sections'):
+            sections=details['sections']
+            section=summarize_sections(sections,profile['process'],report['geometry'].get('mesh_signed_volume_mm3'))
+            card+=f"<p>{esc(section['completion_text'])}</p><p>{esc(section['interpretation'])}</p>"
+            if section['reason']:card+=f"<p>{esc(section['reason'])}</p>"
+            volume=section['volume']
+            volume_html=f"<p>{esc(volume['explanation'])}</p>"
+            if volume['available']:
+                display=volume['display']
+                if display.startswith('<'):display=display[1:]+' 미만'
+                volume_html=(f"<p>두 계산 방법의 부피 차이: <b>{esc(display)}</b></p>"
+                    f"<p>단면 체적 {value(volume['section_volume_mm3'])} mm³ · 메시 체적 {value(volume['mesh_volume_mm3'])} mm³</p>"
+                    f"<p>원본 상대차: {esc(format(volume['relative_difference_percent'],'.16g'))}%</p>"+volume_html)
+            card+=f"<details><summary>계산 확인 · 부피 검산</summary>{volume_html}</details>"
+        if key in findings:
+            f=findings[key]
+            if f['face_indices']:
+                card+=(f"<p><b>위치 확인</b> · 프로그램의 설계 조치에서 「{esc(f['title'])}」 항목을 선택하면 "
+                       "해당 표본 또는 검토 위치를 형상에서 확인할 수 있습니다.</p>")
+            refs=' · '.join(f"<a href='#source-{esc(k)}'>{esc(k)}</a>" for k in f['evidence'])
+            card+=("<details><summary>측정값·방법·위치 번호와 적용 범위</summary>"
+                   f"<p><b>원래 측정 설명</b> · {esc(f['reason'])}</p><p>방법: {esc(f['method'])}</p>"
+                   f"<p>CAD 면 번호: {value(f['cad_face_ids'])}</p>"
+                   f"<p>{' '.join(esc(x) for x in f['limitations'])}</p><p>근거: {refs}</p>"
+                   f"<pre>{esc(json.dumps(f['measurements'],ensure_ascii=False,indent=2))}</pre></details>")
+        if key in details:
+            card+=raw('상세 계산 원자료 · 미확정 값 포함',details[key])
+        cards.append(card+'</section>')
+
     sources=[]
     for key,s in report["sources"].items():
         title=f"<a href='{esc(s['url'])}'>{esc(s['title'])}</a>" if s["url"] else esc(s["title"])
         sources.append(f"<li id='source-{esc(key)}'><b>{esc(key)}</b> {title}. {esc(s['locator'])}. {esc(s['access'])}. {esc(s['use'])}</li>")
-    orientations=orientation_table(report)
-    orientation_html=""
-    if orientations:
-        keys=list(orientations[0])
-        orientation_html="<table><tr>"+"".join(f"<th>{esc(k)}</th>" for k in keys)+"</tr>"
-        orientation_html+="".join("<tr>"+"".join(f"<td>{value(row[k])}</td>" for k in keys)+"</tr>" for row in orientations)+"</table>"
-    details=report.get("details",{})
-    layers=details.get("layers")
-    layer_html=""
-    if layers:
-        layer_html=f"<h2>층간 상세 검토</h2><p>상태: {esc(layers['status'])}; 확정 층: {esc(layers.get('complete_layers'))}/{esc(layers.get('expected_layers'))}</p>"
-        layer_html+="<p>"+esc(layers.get("reason",""))+"</p>"
-        layer_html+="<pre>"+esc(json.dumps(layers.get("checks",[]),ensure_ascii=False,indent=2))+"</pre>"
-    sections=details.get("sections")
-    section_html=""
-    if sections:
-        section_html=f"<h2>높이별 단면 표본</h2><p>상태: {esc(sections['status'])}; 확정 표본: {esc(sections.get('complete_samples',0))}/{esc(sections.get('requested_samples',sections.get('sample_count')))}</p>"
-        event_mode=sections.get("sampling")=="events"
-        section_html+="<p>"+("형상 변화 구간별 2점 Gauss 단면의 기하 측정입니다." if event_mode else "균등 분할 중간 단면의 기하 측정입니다.")+" 표본 간 극값·박리력·흡착컵·열변형·출력 성공을 판정하지 않습니다. 형상 변화는 이전 확정 단면과의 대칭차 면적이며 높이 간격은 동일하지 않을 수 있습니다.</p>"
-        integral=sections.get("volume_quadrature_estimate_mm3") if event_mode else sections.get("volume_midpoint_estimate_mm3")
-        reference=report["geometry"].get("mesh_signed_volume_mm3")
-        if integral is not None and reference is not None and reference>0:
-            section_html+=f"<p>단면 적분 체적과 메시 체적의 상대차: {value(100*abs(integral-reference)/reference)}%. 표본 간 누락을 살펴보기 위한 검산이며 국소 형상 오차 상한은 아닙니다.</p>"
-        if sections.get("reason"):section_html+="<p>"+esc(sections["reason"])+"</p>"
-        keys={"z_mm":"높이 (mm)","complete":"윤곽 확정","area_mm2":"면적 (mm²)","perimeter_mm":"둘레 (mm)",
-            "area_per_perimeter_mm":"면적/둘레 (mm)","symmetric_change_from_previous_mm2":"형상 변화 (mm²)",
-            "material_regions":"영역 수","internal_loops":"내부 윤곽 수"}
-        section_html+="<table><tr>"+"".join(f"<th>{esc(v)}</th>" for v in keys.values())+"</tr>"
-        section_html+="".join("<tr>"+"".join(f"<td>{value(row[k])}</td>" for k in keys)+"</tr>" for row in sections.get("rows",[]))+"</table>"
+    navigation=''.join(f"<li><a href='#check-{esc(i['id'])}'>{esc(i['label'])}</a> · {esc(i['state'])}</li>"
+                       for i in overview['checklist'])
+    conditions=table([{'조건':'장비','설정':profile.get('machine')},
+                      {'조건':'재료','설정':profile.get('material')},
+                      {'조건':'슬라이서','설정':profile.get('slicer')},
+                      {'조건':'빌드 공간','설정':'크기 제한 미적용' if profile.get('build_volume_mm') is None else profile['build_volume_mm']},
+                      {'조건':'검토 기준의 근거','설정':profile.get('threshold_basis')}])
+    goals=['높이']
+    if report['current_orientation'].get('overhang_projected_area_sum_mm2') is not None:
+        goals.append('하향면 후보')
+    if profile['process']=='MEX' and report['current_orientation'].get('contact_triangle_area_mm2') is not None:
+        goals.append('바닥 접촉면')
+    goals_text='·'.join(goals)
+    provenance=dict(timestamp_utc=report['timestamp_utc'],source_sha256=report['model']['source_sha256'],
+                    model_fingerprint=report['model_fingerprint'],profile=profile,
+                    placement_transform=report['current_orientation']['transform'],**report['provenance'])
     content=f"""<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AM-DFM 설계 검토 — {esc(report['model']['filename'])}</title>
-<style>body{{font-family:'Malgun Gothic',system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;color:#222;line-height:1.65}}h1{{font-size:28px}}h2{{font-size:20px;margin-top:34px}}small{{font-size:13px;color:#666}}table{{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}}td,th{{border:1px solid #ddd;padding:8px;text-align:left;overflow-wrap:anywhere}}th{{background:#f4f4f4}}pre{{white-space:pre-wrap;overflow-wrap:anywhere}}a{{color:#245d87}}section{{break-inside:avoid}}@media print{{body{{margin:0;max-width:none}}}}</style>
+<style>body{{font-family:'Malgun Gothic',system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;color:#222;line-height:1.65}}h1{{font-size:28px}}h2{{font-size:21px;margin-top:34px}}h3{{font-size:17px;margin:0}}.scope,small{{font-size:13px;color:#555}}.decision{{padding:18px 20px;border-left:5px solid #315f78;background:#f3f7fa;border-radius:4px}}.decision.warning{{border-color:#a76818;background:#fff6e8}}.decision.success{{border-color:#39715a;background:#eff8f2}}table{{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}}td,th{{border:1px solid #ddd;padding:8px;text-align:left;overflow-wrap:anywhere}}th{{background:#f4f4f4}}.table-scroll{{overflow-x:auto}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}}a{{color:#245d87}}details{{margin:14px 0;padding:12px;border:1px solid #ddd;border-radius:5px}}summary{{cursor:pointer;font-weight:bold}}section{{break-inside:avoid}}@media print{{body{{margin:0;max-width:none}}.decision{{break-inside:avoid}}}}</style>
 <h1>적층제조 설계 검토</h1><p>{esc(report['model']['filename'])} · {esc(report['process_label'])} · AM-DFM {esc(report['app_version'])}</p>
-<p>{esc(report['summary']['decision'])}</p><p>단위 상태: {esc(report['model']['unit_status'])}. {esc(report['model']['unit_note'])}</p>
-<p>원본 SHA-256: {esc(report['model']['source_sha256'])}</p><p>모델·선택 솔리드 식별자: {esc(report['model_fingerprint'])}</p>
-<p>코드 SHA-256: {esc(report['provenance']['code_sha256'])} · {esc(report['timestamp_utc'])}</p>
-<h2>조건</h2><table>{rows}</table>
-<h2>현재 배치</h2><p>모델 좌표의 적층축: {value(report['current_orientation']['direction'])}. 이 방향이 프린터 +Z를 향합니다.</p>
-<p>배치 변환 행렬 (모델 mm → 빌드 mm): {value(report['current_orientation']['transform'])}</p>{''.join(cards)}
-<h2>방향별 손익</h2><p>명시된 유한 후보 집합의 비교입니다. 비지배 대안은 선택한 기하 지표 중 하나를 개선하면 다른 지표가 악화되는 후보이며 제조 성공을 뜻하지 않습니다. 투영면적 합은 서포트 부피가 아닙니다.</p>{orientation_html}{section_html}{layer_html}
-<h2>별도 확인할 제조 조건</h2><p>{esc(' · '.join(report['unassessed']))}</p>
-<h2>근거</h2><ol>{''.join(sources)}</ol><h2>실행 환경</h2><pre>{esc(json.dumps(report['provenance'],ensure_ascii=False,indent=2))}</pre>
+{decision(overview['level'],overview['title'],overview['observation'],overview['next_action'])}
+<p class='scope'>형상과 입력 조건을 이용한 설계 검토입니다. 검사별 판단은 해당 범위에 한정되며 실제 출력 성공·강도·표준 적합을 보증하지 않습니다.</p>
+<h2>항목별 판단과 다음 행동</h2><ul>{navigation}</ul>
+<details><summary>이번 검토의 형상·공정 조건</summary><p>{esc(report['model']['unit_note'])}</p>{conditions}
+<p>현재 높이: {value(report['current_orientation']['height_mm'])} mm · 모델 적층축: {value(report['current_orientation']['direction'])}. 이 방향이 프린터 +Z를 향합니다.</p></details>
+{''.join(cards)}
+<h2>방향을 바꿀 때</h2><p>프로그램의 방향 비교에서 {esc(goals_text)} 중 원하는 목적을 고르고 현재 방향과의 손익을 확인하세요. 적용 후에는 같은 방향으로 정밀 검토를 다시 실행하세요.</p>
+<details><summary>방향별 전체 측정값</summary><p>비교한 후보 안에서의 기하 지표입니다. 비지배 대안은 지표 간 절충안이며 전체 방향의 최적해가 아닙니다. 투영면적 합은 실제 서포트 부피가 아니며 높이는 인쇄 시간이 아닙니다.</p>{table(orientation_table(report))}</details>
+<h2>실제 제작 전에 확인할 내용</h2><p>{esc(' · '.join(report['unassessed']))}</p>
+<h2>검토 근거와 재현 기록</h2><details><summary>검토 규칙의 이유와 출처</summary><ol>{''.join(sources)}</ol></details>
+{raw('입력·설정·코드 식별자와 실행 환경',provenance)}
 </html>"""
     return content.encode("utf-8")
 

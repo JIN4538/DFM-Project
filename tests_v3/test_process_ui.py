@@ -89,6 +89,7 @@ def test_non_mex_review_does_not_offer_filament_gcode_analysis(process):
     _submit(app)
     app.segmented_control(key="result_tab").set_value("정밀 검토").run()
     assert not app.exception
+    app.segmented_control(key='detail_focus').set_value('층간').run()
     assert app.button(key="run_layers").disabled
     assert not any(item.key in ("gcode_source", "gcode_example") for item in app.selectbox)
     assert not any(item.key == "filament_diameter" for item in app.number_input)

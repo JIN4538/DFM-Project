@@ -11,6 +11,8 @@ from amdfm.comparison import compare_designs
 from amdfm.detail import run_detail, attach_detail
 from amdfm.evidence import section_guidance
 from amdfm.section_view import render_section_result
+from amdfm.detail_view import render_wall_result, render_layer_result, decision_card
+from amdfm.workflow import summarize_review, ranked_orientations
 from amdfm.io import load_model
 from amdfm.gcode import inspect_gcode
 from amdfm.models import json_bytes
@@ -53,8 +55,27 @@ def apply_orientation(vector,presets):
     st.session_state["auto_review"]=True
 
 
+def navigate_result(target, focus=None, finding=None):
+    st.session_state['result_tab']=target
+    if focus:
+        st.session_state['detail_focus']=focus
+    if finding:
+        st.session_state['pending_finding']=finding
+
+
+def apply_wall_criterion(process):
+    st.session_state[f'wall_limit_{process}']=st.session_state[f'quick_wall_limit_{process}']
+    st.session_state['auto_review']=True
+    st.session_state['queued_detail']='wall'
+
+
+def start_review():
+    st.session_state['auto_review']=True
+
+
 with st.sidebar:
     st.subheader("검토할 형상")
+    st.caption('1. 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토')
     local_test=Path.home()/"Desktop"/"무작위 형상 테스트"
     inputs=["CAD 기준형상","내 파일","외부 STL 사례"]
     if local_test.is_dir():inputs.append("무작위 형상 테스트")
@@ -150,6 +171,7 @@ with st.sidebar:
         extended=st.checkbox("주요 면 방향까지 비교",value=False,key="extended")
         with st.expander("장비·재료와 검토 기준"):
             st.caption("장비·재료·수치 기준은 공정별로 따로 보관합니다.")
+            st.caption('벽·홀의 적합 여부를 비교하려면 제조사 가이드나 시편에서 정한 기준을 입력하세요. 비워 두어도 형상 측정은 가능합니다.')
             machine=st.text_input("장비",value="미확정",key=f"machine_{process}",persist_state="session")
             material=st.text_input("재료",value="미확정",key=f"material_{process}",persist_state="session")
             slicer=st.text_input("슬라이서·버전",value="미확정",key=f"slicer_{process}",persist_state="session")
@@ -178,6 +200,11 @@ if should_review:
         with st.spinner("문제 위치와 방향별 손익을 계산하는 중…"):
             st.session_state["report"]=cached_review(fingerprint,profile.to_dict(),direction,extended,dense,ENGINE_REVISION,model)
             st.session_state["report_settings"]=settings_key
+            queued=st.session_state.pop('queued_detail',None)
+            if queued:
+                with st.spinner('입력한 기준으로 벽을 다시 확인하는 중…'):
+                    result=run_detail(model,profile,direction,mode=queued)
+                st.session_state['report']=attach_detail(st.session_state['report'],result)
     except (ValueError,MemoryError) as exc:
         st.error(str(exc))
         st.stop()
@@ -191,47 +218,74 @@ if report is None:
         st.subheader(name)
         st.write(" × ".join(f"{x:.3g}" for x in model.mesh.extents)+" mm")
         st.caption(model.metadata["unit_note"])
-        st.info("왼쪽의 **설계 검토**를 누르면 수정할 위치와 방향별 손익을 확인할 수 있습니다.")
+        st.info('먼저 아래 크기가 의도한 크기인지 확인하세요. 공정을 선택하고 설계 검토를 시작하면 확인할 부위와 다음 행동을 안내합니다.')
+        st.button('이 형상으로 설계 검토 시작',type='primary',on_click=start_review,key='start_from_model')
         st.write("**검토 순서**")
-        st.write("1. 크기와 공정을 정합니다.\n2. 표시된 부위와 방향 대안을 확인합니다.\n3. 필요한 경우 벽·층간 검토로 좁혀갑니다.")
+        st.write("1. **설계 조치**에서 먼저 볼 위치를 확인합니다.\n2. **방향 비교**에서 목적에 맞는 배치를 고릅니다.\n3. **정밀 검토**에서 벽 기준·층간 관계·단면을 확인합니다.\n4. 수정했다면 **수정 전후**를 비교하고 보고서를 저장합니다.")
+        st.caption('장비가 미확정이어도 시작할 수 있습니다. 기본값은 탐색 조건이며 공정의 보편적인 허용 한계가 아닙니다.')
     st.stop()
 
-with st.container(horizontal=True):
-    st.metric("우선 조치 후보",report["summary"]["attention_items"])
-    st.metric("현재 높이",f"{report['current_orientation']['height_mm']:.2f} mm")
-    vol=report["geometry"]["exact_cad_volume_mm3"]
-    st.metric("CAD 재료 체적" if vol is not None else "메시 체적", "미확정" if (vol if vol is not None else report["geometry"]["mesh_signed_volume_mm3"]) is None else
-        f"{(vol if vol is not None else report['geometry']['mesh_signed_volume_mm3'])/1000:.3g} cm³")
-    st.metric("빠른 검토",f"{report['elapsed_seconds']:.2f} s")
+overview=summarize_review(report)
+tab=st.segmented_control("결과 보기",["설계 조치","방향 비교","정밀 검토","수정 전후","근거·내보내기"],
+                         default=st.session_state.get('result_tab') or '설계 조치',required=True,
+                         persist_state='session',key="result_tab")
+summary_panel=st.container(border=True) if tab in ('설계 조치',None) else st.expander('전체 검토 판단 · '+overview['title'])
+with summary_panel:
+    getattr(st,overview['level'])(overview['title'])
+    st.write(overview['observation'])
+    next_item=overview['next_item']
+    if next_item:
+        st.markdown(f"**먼저 할 일 · {next_item['label']}** — {overview['next_action']}")
+        st.button(f"{next_item['label']} 확인하기",key='next_review_action',
+                  on_click=navigate_result,args=(next_item['target'],next_item['focus'],
+                                               next_item['id'] if next_item['target']=='설계 조치' else None))
+if tab in ('설계 조치',None):
+    with st.container(horizontal=True):
+        st.metric("현재 높이",f"{report['current_orientation']['height_mm']:.2f} mm")
+        st.metric('검토 공정',report['process_label'])
+        vol=report["geometry"]["exact_cad_volume_mm3"]
+        st.metric("CAD 재료 체적" if vol is not None else "메시 체적", "미확정" if (vol if vol is not None else report["geometry"]["mesh_signed_volume_mm3"]) is None else
+            f"{(vol if vol is not None else report['geometry']['mesh_signed_volume_mm3'])/1000:.3g} cm³")
+else:
+    st.caption(f"{report['model']['filename']} · {report['process_label']} · 현재 높이 {report['current_orientation']['height_mm']:.4g} mm")
 if model.metadata["unit_status"]=="assumed":
     st.warning("치수 미확정 STL입니다. 표시된 mm 값은 선택 단위·배율을 가정한 값입니다.")
 st.caption("기하 기반 설계 검토입니다. 출력 성공·강도·표준 적합 여부는 실제 공정 검증이 필요합니다.")
-tab=st.segmented_control("결과 보기",["설계 조치","방향 비교","정밀 검토","수정 전후","근거·내보내기"],default="설계 조치",key="result_tab")
 
 if tab=="설계 조치" or tab is None:
+    with st.expander('전체 검토 현황 · 끝난 확인과 남은 확인'):
+        st.dataframe(pd.DataFrame([{'항목':x['label'],'현재 판단':x['state'],'다음 행동':x['next_action']}
+                                  for x in overview['checklist']]),hide_index=True)
     left,right=st.columns([3,2])
     with right:
-        visible=[f for f in report["findings"] if f["status"]=="attention"]
-        if not visible:
-            st.info("빠른 검토에서 우선 조치할 후보가 검출되지 않았습니다. 벽 검토와 미평가 조건을 이어서 확인하세요.")
-        for f in visible[:4]:
-            with st.container(border=True):
-                st.markdown(f"**{f['title']}**")
-                st.write(f["reason"])
-                st.write(f["action"])
         findings={f["id"]:f for f in report["findings"]}
+        priority=next((x['id'] for x in overview['checklist'] if x['level']=='warning' and x['id'] in findings),'overhang')
+        identity=(report['model_fingerprint'],report['timestamp_utc'])
+        if st.session_state.get('finding_result')!=identity:
+            st.session_state['finding_result']=identity
+            st.session_state['highlight_finding']=priority
+        pending_finding=st.session_state.pop('pending_finding',None)
+        if pending_finding in findings:
+            st.session_state['highlight_finding']=pending_finding
         selected=st.selectbox("강조할 검토 항목",list(findings),format_func=lambda k:findings[k]["title"],
-            index=list(findings).index("overhang"),key="highlight_finding")
+            key="highlight_finding")
         f=findings[selected]
-        st.caption(f"상태: {STATUS[f['status']]} · CAD 면 번호: {', '.join(map(str,f['cad_face_ids'][:20])) or '—'}")
+        explanation=next(x for x in overview['checklist'] if x['id']==selected)
+        decision_card({**explanation,'title':explanation['state']})
+        if explanation['target']!='설계 조치':
+            st.button(f"{explanation['target']}에서 이어서 확인",key='finding_action',on_click=navigate_result,
+                      args=(explanation['target'],explanation['focus']))
         with st.expander("측정값과 한계"):
+            st.caption(f"CAD 면 번호: {', '.join(map(str,f['cad_face_ids'][:20])) or '위치 번호 없음'}")
             st.write(f["reason"])
             st.json({k:v for k,v in f["measurements"].items() if k not in ("samples","problem_face_indices","cylindrical_faces")},expanded=False)
             for text in f["limitations"]:st.caption(text)
     with left:
         transparent=st.toggle("내부 검토면 보기",value=True,key="transparent_model")
         st.plotly_chart(model_figure(model,report,selected,transparent=transparent),width="stretch")
-        st.caption("주황색: 선택 항목의 검토 위치 · 녹색: 실제 적층 +Z 방향 · 드래그로 회전")
+        st.caption('주황색: 선택 항목의 관측 위치 · 녹색: 실제 적층 +Z 방향 · 드래그로 회전. 주황색 자체가 제작 불가를 뜻하지 않습니다.')
+        if not f['face_indices']:
+            st.caption('이 항목에는 표시할 면 위치가 없습니다. 오른쪽의 판단과 다음 행동을 확인하세요.')
         if len(model.mesh.faces)>250_000:st.caption("화면은 삼각형 일부를 표시합니다. 분석과 내보내기는 전체 원본 형상을 사용합니다.")
         if selected=="cad_holes" and f["measurements"].get("cylindrical_faces"):
             st.dataframe(pd.DataFrame([{"CAD 면":c["face_id"],"역할":{"inner":"내측 원통","outer":"외측 원통"}.get(c["role"],"미확정"),
@@ -241,86 +295,114 @@ if tab=="설계 조치" or tab is None:
     with st.expander("전체 검토 항목"):
         st.dataframe(pd.DataFrame([{"항목":f["title"],"상태":STATUS[f["status"]],"이유":f["reason"],"설계 조치":f["action"]} for f in report["findings"]]),hide_index=True)
 elif tab=="방향 비교":
-    st.subheader("어느 방향에서 무엇이 달라지는가")
-    st.caption(f"현재 {len(report['orientations'])}개 후보 비교 · 직접 지정한 방향도 함께 비교합니다. 전체 각도 공간의 최적해를 찾는 기능은 아닙니다.")
-    st.caption("비지배 대안은 현재 후보들의 기하 지표 간 절충안입니다. 서포트 체적·인쇄 시간·강도의 최적해를 뜻하지 않습니다.")
-    st.dataframe(pd.DataFrame(orientation_table(report)),hide_index=True)
+    st.subheader('방향을 바꾸면 무엇이 좋아지고 나빠지나요?')
+    goals=['높이를 낮추기']
+    if report['current_orientation']['overhang_projected_area_sum_mm2'] is not None:
+        goals.append('하향면 후보 줄이기')
+    if process=='MEX' and report['current_orientation']['contact_triangle_area_mm2'] is not None:
+        goals.append('평평한 바닥 넓히기')
+    goal=st.selectbox('이번에 개선하고 싶은 항목',goals,key='orientation_goal')
+    ranked=ranked_orientations(report,goal)
+    if ranked:
+        best=ranked[0]
+        if all(r['build_fit'] is False for r in report['orientations']):
+            st.warning('비교한 방향 중 입력한 빌드 공간에 들어가는 후보가 없습니다. 장비 공간 또는 부품 분할을 검토하세요. 아래는 지표별 비교용 순서입니다.')
+        st.info(f"「{goal}」 기준으로 먼저 비교할 후보: **{best['name']}**")
+        st.caption('입력한 공간을 초과하는 후보는 뒤에 배치합니다. 같은 값의 후보는 이름순이며, 첫 후보가 모든 조건에서 더 좋은 방향이라는 뜻은 아닙니다.')
+        if st.button('이 후보를 아래 비교에 선택',key='select_ranked_direction'):
+            st.session_state['orientation_choice']=best['name']
     choices=[r["name"] for r in report["orientations"]]
+    if st.session_state.get('orientation_choice') not in choices:
+        st.session_state['orientation_choice']=next((r['name'] for r in report['orientations']
+            if np.allclose(r['direction'],report['current_orientation']['direction'],atol=1e-12,rtol=0)),choices[0])
     chosen=st.selectbox("적용할 방향",choices,key="orientation_choice")
     choice=next(r for r in report["orientations"] if r["name"]==chosen)
     current=report["current_orientation"]
-    if choice["overhang_projected_area_sum_mm2"] is not None and current["overhang_projected_area_sum_mm2"] is not None:
-        st.write(f"현재 대비 투영면적 합 {choice['overhang_projected_area_sum_mm2']-current['overhang_projected_area_sum_mm2']:+.2f} mm² · 높이 {choice['height_mm']-current['height_mm']:+.2f} mm")
+    with st.container(horizontal=True):
+        st.metric('선택 방향의 높이',f"{choice['height_mm']:.3g} mm",delta=f"{choice['height_mm']-current['height_mm']:+.3g} mm",delta_color='inverse')
+        if choice['overhang_projected_area_sum_mm2'] is not None and current['overhang_projected_area_sum_mm2'] is not None:
+            st.metric('하향면 후보의 투영면적 합',f"{choice['overhang_projected_area_sum_mm2']:.3g} mm²",
+                      delta=f"{choice['overhang_projected_area_sum_mm2']-current['overhang_projected_area_sum_mm2']:+.3g} mm²",delta_color='inverse')
+        if process=='MEX' and choice['contact_triangle_area_mm2'] is not None and current['contact_triangle_area_mm2'] is not None:
+            st.metric('평평한 바닥 면적',f"{choice['contact_triangle_area_mm2']:.3g} mm²",
+                      delta=f"{choice['contact_triangle_area_mm2']-current['contact_triangle_area_mm2']:+.3g} mm²",delta_color='normal')
+    if choice['build_fit'] is False:
+        st.warning('이 방향은 입력한 빌드 공간을 초과합니다. 다른 방향이나 장비 공간을 검토하세요.')
+    st.caption('증감은 현재 방향 대비입니다. 낮은 높이는 출력 시간, 작은 하향면 투영 합은 서포트량, 넓은 바닥은 접착력을 직접 예측하지 않습니다.')
+    preview={**report,'current_orientation':choice}
+    st.plotly_chart(model_figure(model,preview,'orientation_preview'),width='stretch')
     st.button("이 방향으로 검토",on_click=apply_orientation,args=(choice["direction"],directions),type="primary",key="apply_orientation")
+    with st.expander(f"전체 {len(report['orientations'])}개 방향의 수치 비교"):
+        st.dataframe(pd.DataFrame(orientation_table(report)).rename(columns={'비지배 대안':'다른 지표와 절충되는 후보'}),hide_index=True)
+        st.caption('절충되는 후보는 한 지표를 더 개선하면 다른 지표가 악화되는 후보입니다. 명시된 후보만 비교하며 연속 각도 전체의 최적 방향은 아닙니다.')
 elif tab=="정밀 검토":
-    st.subheader("문제가 의심되는 부분을 더 자세히")
-    st.write("공통 단면에서 면적·둘레와 높이별 변화를 확인하고, 의심되는 벽이나 MEX 층간 관계를 더 자세히 검토합니다.")
-    guidance=section_guidance(process)
-    st.markdown(f"**{guidance['title']}**")
-    st.write(guidance["reason"])
-    st.caption(guidance["action"])
-    section_method=st.selectbox("단면 배치 방법",["형상 변화 기준 · 체적 정밀 검산","균등 간격 · 높이별 비교"],key="section_method")
-    sampling="events" if section_method.startswith("형상") else "uniform"
-    samples=64
-    if sampling=="uniform":
-        samples=st.number_input("높이 방향 단면 표본 수",min_value=2,max_value=1024,value=64,step=16,key="section_samples")
-        st.caption("현재 배치 높이를 균등 분할한 중간 단면입니다. 얇은 판을 표본 사이에서 놓칠 수 있습니다. 실제 출력 층 수와는 다릅니다.")
+    st.subheader('확인하려는 질문을 선택하세요')
+    focus=st.segmented_control('자세히 확인할 질문',['벽','층간','단면'],
+                               default=st.session_state.get('detail_focus') or '벽',required=True,
+                               persist_state='session',key='detail_focus') or '벽'
+    if focus=='벽':
+        st.markdown('**벽이 입력한 최소 기준보다 얇은가요?**')
+        st.write('반대 면까지의 거리를 표본 위치에서 측정하고, 내가 입력한 벽 기준과 비교합니다.')
+        with st.expander('이 화면에서 벽 기준 입력·변경',expanded=profile.minimum_wall_mm is None):
+            st.write('사용할 장비·재료의 제조사 권장값이나 시편에서 정한 최소 벽 기준을 입력하세요. 기준을 모르면 비워 둔 채 측정 위치부터 볼 수 있습니다.')
+            criterion_key=f'quick_wall_limit_{process}'
+            if st.session_state.get('quick_wall_context')!=(process,profile.minimum_wall_mm):
+                st.session_state['quick_wall_context']=(process,profile.minimum_wall_mm)
+                st.session_state[criterion_key]=profile.minimum_wall_mm
+            quick_limit=st.number_input('비교할 최소 벽 기준 (mm)',min_value=.001,value=None,key=criterion_key)
+            st.caption(f'기준 출처: {profile.threshold_basis}. 출처는 왼쪽 「장비·재료와 검토 기준」에서 기록합니다.')
+            st.button('이 기준으로 벽 다시 검토',key='apply_wall_criterion',on_click=apply_wall_criterion,args=(process,),disabled=quick_limit is None)
+        if st.button('벽 검토 실행',key='run_wall',type='primary'):
+            with st.spinner('벽의 표본 거리를 측정하는 중 · 최대 60초…'):
+                result=run_detail(model,profile,report['current_orientation']['direction'],mode='wall')
+            st.session_state['report']=attach_detail(report,result)
+            st.rerun()
+        render_wall_result(model,report)
+    elif focus=='층간':
+        st.markdown('**프린팅 층마다 놓치거나 받쳐 줄 곳이 있나요?**')
+        if process!='MEX':
+            st.info('이 검사는 압출 선폭과 아래층 관계를 사용하는 MEX(FDM) 전용입니다. 현재 공정에서는 벽과 단면을 확인하세요.')
+        else:
+            st.write(f'층 높이 {profile.layer_height_mm:g} mm · 선폭 {profile.line_width_mm:g} mm · 수평 기준 탐색 각도 {profile.overhang_angle_deg:g}°로 후보를 찾습니다.')
+            st.caption('설정은 왼쪽 「빌드 공간과 층 설정」에서 바꿀 수 있습니다. 실제 슬라이서 경로와는 별도의 형상 검사입니다.')
+        if st.button('층간 검토 실행',disabled=process!='MEX',key='run_layers',type='primary'):
+            with st.spinner('각 층과 이웃한 층을 비교하는 중 · 최대 90초…'):
+                result=run_detail(model,profile,report['current_orientation']['direction'],mode='layers',timeout_s=90)
+            st.session_state['report']=attach_detail(report,result)
+            st.rerun()
+        if process=='MEX':
+            render_layer_result(model,report)
     else:
-        st.caption("얇은 높이 구간도 포함하도록 검사할 높이를 자동으로 정합니다. 계산한 단면을 비교해 확인할 위치를 안내합니다.")
-    if st.button("단면 검토 실행",key="run_sections",type="primary"):
-        with st.spinner("단면 면적·둘레·변화를 계산하는 중 · 최대 90초…"):
-            result=run_detail(model,profile,report["current_orientation"]["direction"],mode="sections",sample_count=samples,sampling=sampling,timeout_s=90)
-        st.session_state["report"]=attach_detail(report,result)
-        st.rerun()
-    sections=report.get("details",{}).get("sections")
-    if sections:
-        if sections.get("sampling","uniform")!=sampling or (sampling=="uniform" and sections.get("sample_count")!=samples):
-            st.info("아래는 이전 설정으로 계산한 결과입니다. 변경한 설정을 적용하려면 단면 검토 실행을 누르세요.")
-        render_section_result(sections,process,report['geometry'].get('mesh_signed_volume_mm3'))
-        with st.expander('이 공정에서 단면 결과를 사용하는 범위'):
-            for limitation in guidance['limitations']:st.write(limitation)
-    st.divider()
-    c1,c2=st.columns(2)
-    with c1:
-        st.markdown("**벽·세부 특징**")
-        st.caption("전체 최소 두께를 보증하지 않는 표본 측정입니다. 실제 공정의 검토 기준과 대조합니다.")
-        if st.button("벽 검토 실행",key="run_wall",width="stretch"):
-            with st.spinner("법선 관통거리 측정 중 · 최대 60초…"):
-                result=run_detail(model,profile,report["current_orientation"]["direction"],mode="wall")
+        st.markdown('**어느 높이에서 단면 모양과 넓이가 크게 바뀌나요?**')
+        guidance=section_guidance(process)
+        st.markdown(f"**{guidance['title']}**")
+        st.write(guidance["reason"])
+        st.caption(guidance["action"])
+        section_method=st.selectbox("단면 배치 방법",["형상 변화 기준 · 체적 정밀 검산","균등 간격 · 높이별 비교"],key="section_method")
+        sampling="events" if section_method.startswith("형상") else "uniform"
+        samples=64
+        if sampling=="uniform":
+            samples=st.number_input("높이 방향 단면 표본 수",min_value=2,max_value=1024,value=64,step=16,key="section_samples")
+            st.caption("현재 배치 높이를 균등 분할한 중간 단면입니다. 얇은 판을 표본 사이에서 놓칠 수 있습니다. 실제 출력 층 수와는 다릅니다.")
+        else:
+            st.caption("얇은 높이 구간도 포함하도록 검사할 높이를 자동으로 정합니다. 계산한 단면을 비교해 확인할 위치를 안내합니다.")
+        if st.button("단면 검토 실행",key="run_sections",type="primary"):
+            with st.spinner("단면 면적·둘레·변화를 계산하는 중 · 최대 90초…"):
+                result=run_detail(model,profile,report["current_orientation"]["direction"],mode="sections",sample_count=samples,sampling=sampling,timeout_s=90)
             st.session_state["report"]=attach_detail(report,result)
             st.rerun()
-        wall=next(f for f in report["findings"] if f["id"]=="wall")
-        st.write(wall["reason"])
-        if "minimum_mm" in wall["measurements"]:
-            st.metric("최소 법선 관통거리",f"{wall['measurements']['minimum_mm']:.4g} mm")
-            st.metric("면적 가중 하위 5% 거리",f"{wall['measurements']['area_weighted_p05_mm']:.4g} mm")
-            st.caption("곡면·모서리의 짧은 관통거리는 평행한 벽 두께와 다를 수 있습니다. 강조 위치와 표본을 함께 확인하세요.")
-            st.caption(f"유효 표본 {wall['measurements']['valid_samples']} / 요청 {wall['measurements']['requested_samples']}")
-    with c2:
-        st.markdown("**MEX 층간 검토**")
-        st.caption("고정 선폭의 잔여·층간 미지지·한 층 영역을 찾습니다. 실제 슬라이서 경로와 별도의 기하 검토입니다.")
-        if st.button("층간 검토 실행",disabled=process!="MEX",key="run_layers",width="stretch"):
-            with st.spinner("층간 관계 계산 중 · 최대 90초…"):
-                result=run_detail(model,profile,report["current_orientation"]["direction"],mode="layers",timeout_s=90)
-            st.session_state["report"]=attach_detail(report,result)
-            st.rerun()
-    details=report.get("details",{})
-    if "wall" in details and details["wall"]["status"] in ("measured","partial"):
-        st.plotly_chart(model_figure(model,report,"wall"),width="stretch")
-    if "layers" in details:
-        layers=details["layers"]
-        st.write(f"층간 결과: {layers['status']} · 확정 {layers.get('complete_layers',0)} / 요청 {layers.get('expected_layers','—')} 층")
-        if layers.get("reason"):st.info(layers["reason"])
-        if layers.get("layers"):
-            rows=pd.DataFrame([{ "층":r["index"],"높이 (mm)":r["z_mm"],"전체 윤곽 확정":r["complete"],
-                "선폭 후보 (mm²)":r.get("thin_candidate_area_mm2"),"미지지 후보 (mm²)":r.get("unsupported_candidate_area_mm2"),
-                "한 층 후보 (mm²)":r.get("single_layer_candidate_area_mm2")} for r in layers["layers"]])
-            st.line_chart(rows.set_index("높이 (mm)")[["선폭 후보 (mm²)","미지지 후보 (mm²)","한 층 후보 (mm²)"]])
-            st.dataframe(rows,hide_index=True)
-            st.caption("후보 면적에는 작은 세부가 포함됩니다. 미확정 값은 0으로 채우지 않습니다.")
+        sections=report.get("details",{}).get("sections")
+        if sections:
+            if sections.get("sampling","uniform")!=sampling or (sampling=="uniform" and sections.get("sample_count")!=samples):
+                st.info("아래는 이전 설정으로 계산한 결과입니다. 변경한 설정을 적용하려면 단면 검토 실행을 누르세요.")
+            render_section_result(sections,process,report['geometry'].get('mesh_signed_volume_mm3'))
+            with st.expander('이 공정에서 단면 결과를 사용하는 범위'):
+                for limitation in guidance['limitations']:st.write(limitation)
     if process=="MEX":
         with st.expander("슬라이서 경로 확인 · G-code"):
+            st.markdown('**실제 슬라이서에서도 이 부위가 남아 있나요?**')
             st.write("슬라이서가 실제로 생성한 경로를 읽어 얇은 특징의 누락·확대를 확인할 수 있습니다. 현재 형상과의 파일·배율·방향 일치는 자동 확정하지 않습니다.")
+            st.write('현재 방향 STL을 내보내 슬라이싱한 뒤 G-code를 넣으세요. 확인할 높이를 선택하고 얇은 부위에 압출 경로가 남아 있는지 확인합니다.')
             gcode_mode=st.selectbox("G-code 입력",["내 G-code","Cura 기준 실험"],key="gcode_source")
             gd=None
             if gcode_mode=="내 G-code":
@@ -336,7 +418,13 @@ elif tab=="정밀 검토":
             if gd:
                 try:
                     parsed=cached_gcode(gd,diameter,ENGINE_REVISION)
-                    st.write(f"해석 구간 {parsed['parsed_segments']:,}개 · 상태 {parsed['status']}")
+                    if gcode_mode=='Cura 기준 실험':
+                        st.info('연습용 실험 경로입니다. 현재 부품의 검사 결과가 아닙니다.')
+                    else:
+                        st.info('경로를 읽었습니다. 현재 모델의 파일·배율·방향과 일치하는지는 직접 확인해야 합니다.')
+                    st.write(f"읽은 압출 경로 구간: {parsed['parsed_segments']:,}개")
+                    if parsed['status']=='partial':
+                        st.warning('일부 명령을 완전히 해석하지 못했습니다. 아래 사유를 확인하고 원래 슬라이서에서도 경로를 확인하세요.')
                     if parsed["issues"]:st.warning(" · ".join(parsed["issues"]))
                     st.dataframe(pd.DataFrame([{"경로 종류":k,**v} for k,v in parsed["by_type"].items()]),hide_index=True)
                     if parsed["segments"]:
@@ -364,18 +452,27 @@ elif tab=="수정 전후":
     if baseline:
         comparison=compare_designs(baseline,report)
         st.write(f"{comparison['before']} → {comparison['after']}")
-        if comparison["reasons"]:st.info(" ".join(comparison["reasons"])+" 값은 나란히 표시하며 개선량은 계산하지 않습니다.")
+        if baseline['model_fingerprint']==report['model_fingerprint']:
+            st.info('비교 기준과 현재 형상이 같습니다. 왼쪽에서 수정한 파일을 선택하고 설계 검토를 실행하세요.')
+        elif comparison['reasons']:
+            st.warning('조건이 달라 개선량을 비교할 수 없습니다. '+ ' '.join(comparison['reasons']))
+            st.write('변경 전과 같은 공정·기준·방향·배율로 다시 검토하세요. 값은 참고용으로 나란히 표시합니다.')
+        else:
+            st.success('같은 검토 조건으로 전후 수치를 비교할 수 있습니다.')
+            st.write('하향면 후보와 높이가 줄었는지, 벽 거리와 체적이 어떻게 바뀌었는지 함께 확인하세요. 체적 증가나 거리 증가만으로 기능·강도가 개선됐다고 판단하지 않습니다.')
         st.dataframe(pd.DataFrame(comparison["metrics"]),hide_index=True)
         st.caption(comparison["scope"])
         st.download_button("전후 비교 JSON",json_bytes(comparison),file_name="AM-DFM_design_comparison.json",mime="application/json")
 else:
-    st.subheader("재현 가능한 검토 기록")
+    st.subheader('결과를 전달하거나 다음 작업으로 가져가세요')
+    st.write('**사람에게 설명하기:** HTML 보고서 · **슬라이서에서 확인하기:** 현재 방향 STL · **측정값과 조건 재현하기:** 전체 결과 JSON · **CAD 수정하기:** STEP 입력 원본')
     with st.container(horizontal=True):
         st.download_button("검토 보고서 HTML",html_report(report),file_name="AM-DFM_review.html",mime="text/html")
         st.download_button("전체 결과 JSON",json_bytes(report),file_name="AM-DFM_review.json",mime="application/json")
         st.download_button("현재 방향 STL · mm",placed_stl(model,report),file_name="AM-DFM_oriented_mm.stl",mime="model/stl")
         st.download_button("입력 원본",data,file_name=name,mime="application/octet-stream")
     st.caption("방향 STL에는 단위가 저장되지 않습니다. 슬라이서에서 mm로 읽고 JSON의 변환 행렬·배율을 함께 보관하세요.")
+    st.info('보고서에는 현재까지 실행한 검사와 아직 확인하지 않은 항목이 함께 저장됩니다. 정밀 검토를 추가로 실행하면 새 보고서에 반영됩니다.')
     st.write("**별도 확인할 제조 조건**")
     st.write(" · ".join(report["unassessed"]))
     st.write("**규칙의 이유와 출처**")
