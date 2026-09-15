@@ -1,0 +1,30 @@
+.F.                                                                      [100%]
+================================== FAILURES ===================================
+_ test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting _
+
+    def test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting():
+        app = AppTest.from_file(str(APP), default_timeout=60).run()
+        app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+        app.checkbox(key='use_build_MEX').set_value(True)
+        for axis in 'XYZ':
+            app.number_input(key=f'build_{axis}_MEX').set_value(1.)
+        app.sidebar.button[0].click().run()
+        assert not app.exception
+        report = app.session_state['report']
+        assert len(report['orientations']) >= 26
+        assert all(row['build_fit'] is False for row in report['orientations'])
+    
+        app.segmented_control(key='result_tab').set_value('방향 비교').run()
+        assert not app.exception
+        assert any('비교한 방향 중' in entry.value and '들어가는 후보가 없습니다' in entry.value
+                   for entry in app.warning)
+>       assert any('장비 공간 또는 부품 분할' in entry.value for entry in app.warning)
+E       assert False
+E        +  where False = any(<generator object test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting.<locals>.<genexpr> at 0x0000023F3143D7D0>)
+
+tests_v3\test_navigation_ux.py:60: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:33:44.194 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED tests_v3/test_navigation_ux.py::test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting
+1 failed, 2 passed in 23.62s

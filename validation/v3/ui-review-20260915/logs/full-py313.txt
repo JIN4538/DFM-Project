@@ -1,0 +1,126 @@
+..........................F............................................. [ 10%]
+........................................................................ [ 21%]
+........................................................................ [ 32%]
+..................FF.................................................... [ 43%]
+........................................................................ [ 54%]
+........................................................................ [ 64%]
+........................................................................ [ 75%]
+........................................................................ [ 86%]
+........................................................................ [ 97%]
+..................                                                       [100%]
+================================== FAILURES ===================================
+______________ test_design_comparison_and_cura_example_workflow _______________
+
+    def test_design_comparison_and_cura_example_workflow():
+        manifest=json.loads((APP.parent/"examples/cad/manifest.json").read_text(encoding="utf-8"))
+        names={c["id"]:c["title"] for c in manifest}
+        app=AppTest.from_file(str(APP),default_timeout=60).run()
+        app.selectbox(key="cad_example").select(names["02_thin_plate"]).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("수정 전후").run()
+        app.button(key="save_baseline").click().run()
+        app.selectbox(key="cad_example").select(names["14_thin_plate_improved"]).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("수정 전후").run()
+        assert not app.exception
+        assert app.session_state["comparison_baseline"]["model_fingerprint"]!=app.session_state["report"]["model_fingerprint"]
+>       table=app.dataframe[0].value
+              ^^^^^^^^^^^^^^^^
+
+tests_v3\test_app.py:78: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = ElementList(), idx = 0
+
+    def __getitem__(self, idx: int | slice) -> El_co | ElementList[El_co]:
+        if isinstance(idx, slice):
+            return ElementList(self._list[idx])
+>       return self._list[idx]
+               ^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+..\..\..\..\Desktop\AM-DFM_v3_0\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:284: IndexError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:27:53.330 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis __
+
+    def test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis():
+        app = AppTest.from_file(str(APP), default_timeout=60).run()
+        app.selectbox(key='cad_example').select('수직 관통홀 · 지름 4 mm').run()
+        app.sidebar.button[0].click().run()
+        assert not app.exception
+        first = app.session_state['report']
+    
+        # Recomputing from another tab must not replace a requested location with
+        # the default highlight when the result tab is opened for the first time.
+        app.segmented_control(key='result_tab').set_value('정밀 검토').run()
+        app.number_input(key='layer_MEX').set_value(.25)
+        app.sidebar.button[0].click().run()
+        assert not app.exception
+        assert app.segmented_control(key='result_tab').value == '정밀 검토'
+        report = app.session_state['report']
+        assert report['model_fingerprint'] == first['model_fingerprint']
+        assert report['profile']['layer_height_mm'] == .25
+        assert report['profile'] != first['profile']
+        hole_title = next(row['title'] for row in report['findings'] if row['id'] == 'cad_holes')
+>       assert hole_title in app.button(key='next_review_action').label
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_navigation_ux.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Button(key='run_wall', label='벽 검토 실행'), Button(key='apply_wall_criterion', disabled=True, label='이 기준으로 벽 다시 검토'), Button(key='FormSubmitter:review_settings-설계 검토', label='설계 검토', form_id='review_settings')])
+key = 'next_review_action'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'next_review_action'
+
+..\..\..\..\Desktop\AM-DFM_v3_0\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:30:16.993 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting _
+
+    def test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting():
+        app = AppTest.from_file(str(APP), default_timeout=60).run()
+        app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+        app.checkbox(key='use_build_MEX').set_value(True)
+        for axis in 'XYZ':
+            app.number_input(key=f'build_{axis}_MEX').set_value(1.)
+        app.sidebar.button[0].click().run()
+        assert not app.exception
+        report = app.session_state['report']
+        assert len(report['orientations']) >= 26
+        assert all(row['build_fit'] is False for row in report['orientations'])
+    
+        app.segmented_control(key='result_tab').set_value('방향 비교').run()
+        assert not app.exception
+        assert any('비교한 방향 중' in entry.value and '들어가는 후보가 없습니다' in entry.value
+                   for entry in app.warning)
+>       assert any('장비 공간 또는 부품 분할' in entry.value for entry in app.warning)
+E       assert False
+E        +  where False = any(<generator object test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting.<locals>.<genexpr> at 0x000001D31DAB7100>)
+
+tests_v3\test_navigation_ux.py:60: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:30:23.515 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+============================== warnings summary ===============================
+tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap
+  C:\Users\JIN\Desktop\AM-DFM_v3_0\.venv\Lib\site-packages\trimesh\triangles.py:302: RuntimeWarning: invalid value encountered in divide
+    center_mass = integrated[1:4] / volume
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests_v3/test_app.py::test_design_comparison_and_cura_example_workflow
+FAILED tests_v3/test_navigation_ux.py::test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis
+FAILED tests_v3/test_navigation_ux.py::test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting
+3 failed, 663 passed, 1 warning in 291.90s (0:04:51)
