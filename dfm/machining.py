@@ -34,12 +34,47 @@ SOURCES = {
     "CNC_FACE_RECOGNITION": {
         "title": "Yeo et al. — Machining feature recognition based on deep neural networks to support tight integration with 3D CAD systems (2021)",
         "url": "https://www.nature.com/articles/s41598-021-01313-3",
-        "scope": "A cylindrical feature can use one or multiple B-rep faces. This implementation measures face segments and does not implement complete machining-feature reconstruction.",
+        "scope": "원통 특징이 여러 B-rep 면으로 표현될 수 있다는 배경 근거입니다. 현재 코드는 면 구간을 측정하며 이 논문의 DNN·17종 특징 분류기를 구현하지 않습니다. 논문의 인식률은 가공 성공률이 아닙니다.",
+        "locator": "제공 PDF 5–9쪽의 면 표현; 13–17쪽의 분류 평가",
+        "access": "2026-09-21 제공 전문 20쪽 검토; 핵심 혼동행렬·표 원페이지 대조",
+        "local_path": "references/machining/Machining Feature Recognition Based on Deep Neural Networks to Support Tight Integration with 3D CAD Systems.pdf",
     },
     "CNC_ACCESS_SCOPE": {
         "title": "Autodesk Fusion — Shaft and Holder",
         "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm",
         "scope": "Actual shaft/holder collision checks involve toolpath and clearance conditions. This source does not validate the implementation's sampled point-ray algorithm.",
+    },
+    "CNC_SPATIAL_PLANNING": {
+        "title": "Nelaturi et al. (2015) — Automatic Spatial Planning for Machining Operations",
+        "url": None,
+        "scope": "점의 직선 가시성과 두께가 있는 공구의 접근은 다릅니다. 현재 표본 ray 검사는 초기 차폐 관측이며, 논문의 유한 공구 제거 체적·공정 순서·고정구 계획을 구현하지 않습니다.",
+        "locator": "제공 PDF 2–3쪽, Fig. 1–2: 무한히 가는 공구와 유한 공구의 차이",
+        "access": "2026-09-21 제공 전문 6쪽 검토·핵심 도해 대조",
+        "local_path": "references/machining/Automatic Spatial Planning for Machining Operations.pdf",
+    },
+    "CNC_MRSEV": {
+        "title": "Gupta et al. — Building MRSEV Models for CAM Applications",
+        "url": None,
+        "scope": "가공 특징은 면 하나와 같지 않으며 소재·제거 체적·접근 체적이 필요합니다. 현재 제한 포켓과 원통면 검출은 이 보고서의 일반 특징 인식·공정 계획 구현이 아닙니다.",
+        "locator": "제공 보고서 PDF 11–21쪽; 30–31쪽 구현 한계",
+        "access": "2026-09-21 제공 스캔 36쪽 OCR 검토·정의/알고리즘/도해 원페이지 대조",
+        "local_path": "references/machining/Building MRSEV Models for CAM Applications.pdf",
+    },
+    "CNC_CUTTING_PHYSICS": {
+        "title": "Budak (2006) — Analytical Models for High Performance Milling. Part I",
+        "url": "https://doi.org/10.1016/j.ijmachtools.2005.09.009",
+        "scope": "절삭력·변형·공차 예측에는 절삭 계수, 이송·절입, 공구/홀더/공작물 강성이 필요합니다. 현재 치수 비교에는 이 물리 모델이 포함되어 있지 않습니다.",
+        "locator": "제공 PDF 2–4쪽 힘·보정, 5–8쪽 강성·변형",
+        "access": "2026-09-21 제공 전문 11쪽 검토·수식/단위 대조",
+        "local_path": "references/machining/Analytical Models for High Performance Milling. Part I - Cutting Forces, Structural Deformations and Tolerance Integrity.pdf",
+    },
+    "CNC_GPS_REQUIREMENTS": {
+        "title": "KS A ISO 8015:2011 — GPS 기본사항·개념·원칙·규칙",
+        "url": None,
+        "scope": "도면의 명세와 실제 검증을 구분하는 근거입니다. 공차·PMI·데이텀·실측 없이 CAD 명목 치수로 공차 적합이나 가공 성공률을 계산하지 않습니다. 표준의 100% 가정은 실물 성공률이 아닙니다.",
+        "locator": "제공 PDF §4.4, §§5.3, 5.5, 5.10, 5.13; 국내 2023 개정판",
+        "access": "2026-09-21 제공 전페이지 캡처 21쪽 검토; 워터마크/OCR 한계 있음",
+        "local_path": "references/machining/KS A ISO 8015 전문 캡쳐본.pdf",
     },
 }
 
@@ -86,10 +121,10 @@ def _record_comparison(row, key, measured, limit):
 _MECHANISMS = {
     "cnc_input": ("STEP transfer metadata: validity, solid count and availability of B-rep face records", []),
     "cnc_coverage": ("Inventory of unsupported surfaces, unresolved cylinder material sides and incomplete planar boundary extraction", []),
-    "cnc_holes": ("Analytic cylindrical face diameter and UV axial bounds; fixed-axis and user tool-condition comparisons", ["CNC_GEOMETRY", "CNC_FACE_RECOGNITION", "CNC_TOOL_DIMENSIONS"]),
+    "cnc_holes": ("Analytic cylindrical face diameter and UV axial bounds; fixed-axis and user tool-condition comparisons", ["CNC_GEOMETRY", "CNC_FACE_RECOGNITION", "CNC_TOOL_DIMENSIONS", "CNC_MRSEV"]),
     "cnc_curved_corners": ("Concave analytic cylindrical face radius versus radius of the user-specified cylindrical end mill", ["CNC_CORNER"]),
-    "cnc_rectangular_pockets": ("Restricted B-rep adjacency recognition of four-sided floors; local width and wall-height comparisons", ["CNC_GEOMETRY", "CNC_CORNER", "CNC_TOOL_DIMENSIONS"]),
-    "cnc_visibility": ("point_visibility; deterministic sampled mesh points and straight rays; finite cutter and holder not modeled", ["CNC_ACCESS_SCOPE"]),
+    "cnc_rectangular_pockets": ("Restricted B-rep adjacency recognition of four-sided floors; local width and wall-height comparisons", ["CNC_GEOMETRY", "CNC_CORNER", "CNC_TOOL_DIMENSIONS", "CNC_MRSEV"]),
+    "cnc_visibility": ("point_visibility; deterministic sampled mesh points and straight rays; finite cutter and holder not modeled", ["CNC_ACCESS_SCOPE", "CNC_SPATIAL_PLANNING"]),
 }
 
 

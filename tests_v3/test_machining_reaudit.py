@@ -202,9 +202,11 @@ def test_finding_evidence_matches_calculation_and_does_not_claim_cad_for_mesh_ra
     assert "CNC_FACE_RECOGNITION" in _finding(report, "cnc_holes")["evidence"]
     visibility = _finding(report, "cnc_visibility")
     assert "sampled mesh" in visibility["method"]
-    assert visibility["evidence"] == ["CNC_ACCESS_SCOPE"]
+    assert visibility["evidence"] == ["CNC_ACCESS_SCOPE", "CNC_SPATIAL_PLANNING"]
     source = next(row for row in report["sources"] if row["id"] == "CNC_ACCESS_SCOPE")
     assert "does not validate" in source["scope"]
+    paper = next(row for row in report["sources"] if row["id"] == "CNC_SPATIAL_PLANNING")
+    assert "유한 공구" in paper["scope"] and "구현하지 않습니다" in paper["scope"]
 
 
 def test_small_real_hole_axis_tilt_is_not_rounded_into_axis_alignment(tmp_path):

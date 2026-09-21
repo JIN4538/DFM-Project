@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import html
 import json
+from urllib.parse import urlsplit
 
 import numpy as np
 import pandas as pd
@@ -26,6 +27,22 @@ VISIBILITY = {
 }
 
 
+def _source_web_url(source):
+    url = source.get("url")
+    try:
+        parsed = urlsplit(url) if isinstance(url, str) else None
+    except ValueError:
+        parsed = None
+    return url if parsed and parsed.scheme.lower() in ("http", "https") and parsed.netloc else None
+
+
+def _source_details(source):
+    """Keep evidence purpose and reading limits in both UI and portable report."""
+    labels = (("scope", "이 검토에서 사용하는 이유와 범위"), ("locator", "확인할 쪽·항목"),
+              ("access", "원문 확인 범위"), ("local_path", "저장소 PDF 위치"))
+    return [(label, source[key]) for key, label in labels if source.get(key)]
+
+
 @st.cache_data(max_entries=4, show_spinner=False)
 def cached_machining(fingerprint, profile, direction, visibility, code_revision, _model):
     report = review_machining(_model, MachiningProfile(**profile), direction, visibility=visibility)
@@ -35,7 +52,6 @@ def cached_machining(fingerprint, profile, direction, visibility, code_revision,
 
 def machining_html(report, model=None):
     """Portable, readable conditions and results; raw values remain available."""
-    from urllib.parse import urlsplit
     from amdfm.visuals import model_svg
 
     esc = lambda value: html.escape(str(value), quote=True)
@@ -44,14 +60,8 @@ def machining_html(report, model=None):
         return pd.DataFrame(rows).to_html(index=False, escape=True, float_format=lambda value: f"{value:.8g}") if rows else ""
 
     def source_link(source):
-        title, url = esc(source.get("title", "근거")), source.get("url")
-        try:
-            parsed = urlsplit(url) if isinstance(url, str) else None
-        except ValueError:
-            parsed = None
-        if not parsed or parsed.scheme.lower() not in ("http", "https") or not parsed.netloc:
-            return title
-        return f'<a href="{esc(url)}">{title}</a>'
+        title, url = esc(source.get("title", "근거")), _source_web_url(source)
+        return f'<a href="{esc(url)}">{title}</a>' if url else title
 
     profile = report["profile"]
     condition_labels = {
@@ -83,7 +93,9 @@ def machining_html(report, model=None):
             f'<p>{esc(finding["reason"])}</p><p><strong>다음 행동:</strong> {esc(finding["action"])}</p>'
             f'{table(rows)}<details><summary>계산 원자료</summary><pre>{esc(json.dumps(finding["measurements"], ensure_ascii=False, indent=2))}</pre></details>'
             f'<p>{esc(" / ".join(finding["limitations"]))}</p>{linked_evidence}</section>')
-    sources = ''.join(f'<li>{source_link(source)}</li>' for source in report["sources"])
+    sources = ''.join('<li>' + source_link(source) + ''.join(
+        f'<p><strong>{esc(label)}:</strong> {esc(value)}</p>'
+        for label, value in _source_details(source)) + '</li>' for source in report["sources"])
     return ('<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
         '<title>절삭 설계 검토</title><style>body{max-width:1050px;margin:40px auto;padding:0 24px;font-family:system-ui;line-height:1.7}'
         'section{border-top:1px solid #cbd5e1;padding:16px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}'
@@ -337,8 +349,15 @@ def render_machining(model, filename, data, code_revision):
         st.dataframe(pd.DataFrame([{"항목": f["title"], "결과": f["reason"], "다음 행동": f["action"]} for f in report["findings"]]), hide_index=True)
         st.json(report)
     with st.expander("근거와 내보내기"):
+        st.caption("각 문헌은 아래에 적힌 계산의 이유와 범위에 연결됩니다. 문헌을 인용했다는 사실만으로 해당 알고리즘의 구현이나 실제 가공 성공이 검증되는 것은 아닙니다.")
         for source in report["sources"]:
-            st.markdown(f"[{source['title']}]({source['url']})")
+            url = _source_web_url(source)
+            st.markdown(f"[{source['title']}]({url})" if url else f"**{source['title']}**")
+            for label, value in _source_details(source):
+                if label == "이 검토에서 사용하는 이유와 범위":
+                    st.write(f"{label}: {value}")
+                else:
+                    st.caption(f"{label}: {value}")
         st.caption("형상·공구 검토의 근거입니다. 제조사 서비스의 권장값을 보편적인 한계로 사용하지 않습니다.")
         with st.container(horizontal=True):
             st.download_button("절삭 검토 JSON", json_bytes(report), "machining_review.json", "application/json")

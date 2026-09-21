@@ -4,12 +4,34 @@ SOURCES = {
         url="https://dlmf.nist.gov/3.5.v",kind="numerical_reference",locator="Equations 3.5.19 and 3.5.21: Gaussian error and Gauss–Legendre rule",
         use="형상 변화 구간의 2점 Gauss 적분 수학 근거. 고정 다면체의 구간별 단면적이 2차식이라는 별도 유도와 수치 검사를 전제로 함. CAD 곡면·실물·표본 최대의 정확성 보증이 아님.",
         access="공식 공개 수학 참조; 2026-09-15 확인"),
-    "ISO52910": dict(title="ISO/ASTM 52910:2018 — Design requirements, guidelines and recommendations",
-        url="https://www.iso.org/standard/67289.html", kind="standard_scope", locator="Scope; local R11 §§6.6, 6.9, 7",
-        use="검토 항목과 설계 정보 전달의 근거. 공통 수치 임계값의 근거가 아님.", access="공식 범위·판 정보 및 저장소의 불완전 KS 캡처"),
+    "ISO52910": dict(title="KS D ISO/ASTM 52910:2018 — 적층제조 설계 요구사항·지침·권고",
+        url="https://www.iso.org/standard/67289.html", kind="standard_fulltext_capture", locator="국내 2019 제정판; §§6.6, 6.9, 7; 제공 PDF 33쪽",
+        local_path="KS D ISO.ASTM 52910.pdf",
+        use="검토 항목과 설계 정보 전달의 근거. 공통 수치 임계값의 근거가 아님.",
+        access="2026-09-21 사용자 제공 KS 전페이지 캡처 본문·참고문헌·해설 확인. 일부 워터마크·흐림이 남아 정확한 인용은 원페이지 대조 필요; 링크는 대응 ISO 판의 공식 안내"),
     "ISO52902": dict(title="ISO/ASTM 52902:2023 — Test artefacts; geometric capability assessment",
         url="https://www.iso.org/standard/79683.html", kind="standard_scope", locator="Scope",
         use="장비별 시험물과 측정에 의한 검증. 자체 CAD 예제는 표준 인증 시험물이 아님.", access="공식 범위·판 정보; 2023 전문 미확보"),
+    "KS52902_2019": dict(title="KS D ISO/ASTM 52902:2019 — 적층제조 시스템의 기하학적 성능 평가용 시험물",
+        url=None, kind="standard_fulltext_capture", locator="국내 2021 제정판; 본문 §§1–7·부속서 A–D; 제공 PDF 45쪽",
+        local_path="KS D ISO,ASTM 52902.pdf",
+        use="별도 제조 조건에서 시험물을 제작·측정하여 장비 성능을 평가할 근거. 자체 CAD의 계산 검산은 이 실물 평가나 인증을 대체하지 않음.",
+        access="2026-09-21 KS 2019 기반판 전페이지 캡처 확인. PDF 44쪽 해설 하단 일부 잘림·워터마크 있음. ISO 2023 전문 확보로 간주하지 않음"),
+    "KS52901_2017": dict(title="KS D ISO/ASTM 52901:2017 — 적층제조 부품 구매 요구사항",
+        url=None, kind="standard_fulltext_capture", locator="국내 2021 제정판; 구매 정보·요구사항·검사·부속서 A; 제공 PDF 17쪽",
+        local_path="KS D ISO ASTM 52901.pdf",
+        use="사용 목적·재료·치수·품질·검사와 수락 조건을 고객과 공급자가 합의할 근거. 형상 계산만으로 납품 적합·제조 성공을 판정할 수 없음.",
+        access="2026-09-21 KS 전페이지 캡처 본문·부속서·참고문헌·해설 확인; 워터마크가 겹친 문자는 원페이지 재확인 필요"),
+    "KS52903_1_2020": dict(title="KS D ISO/ASTM 52903-1:2020 — 플라스틱 재료의 압출 기반 적층제조 — 제1부: 공급재료",
+        url=None, kind="standard_fulltext_capture", locator="국내 2023 제정판; 원재료 식별·특성·문서화; 제공 PDF 12쪽",
+        local_path="KS D ISO,ASTM 52903-1.pdf",
+        use="플라스틱 MEX의 재료 조건과 추적성을 별도로 관리할 근거. 메시만으로 원재료 적합성이나 실제 접합 강도를 확인하지 않음.",
+        access="2026-09-21 KS 전페이지 캡처 확인; 타 AM 공정의 재료 합격 기준으로 사용하지 않음"),
+    "KS52903_2_2020": dict(title="KS D ISO/ASTM 52903-2:2020 — 플라스틱 재료의 압출 기반 적층제조 — 제2부: 공정 장치",
+        url=None, kind="standard_fulltext_capture", locator="국내 2023 제정판; 공정 장비·관리·적격성; 제공 PDF 12쪽",
+        local_path="KS D ISO,ASTM 52903-2.pdf",
+        use="플라스틱 MEX의 장비·공정 조건을 기록하고 검증할 근거. 기하 검토 완료는 장비 적격성·생산 품질 검증이 아님.",
+        access="2026-09-21 KS 전페이지 캡처 확인; 표·주석은 워터마크를 고려해 원페이지와 대조하며 보편 수치 기준으로 전환하지 않음"),
     "ISO52911M": dict(title="ISO/ASTM 52911-1:2019 — Laser-based powder bed fusion of metals",
         url="https://www.iso.org/standard/72951.html", kind="standard_scope", locator="Scope",
         use="금속 PBF 공정 고유의 설계 검토 필요성.", access="공식 공개 범위; 전문 미확보"),
@@ -209,3 +231,13 @@ def section_guidance(process: str) -> dict:
 
 def used_sources(findings):
     return {k:SOURCES[k] for k in dict.fromkeys(key for f in findings for key in f.evidence)}
+
+
+def review_context_sources(process: str) -> dict:
+    """Sources for unassessed production requirements, not geometry thresholds."""
+    if process not in _PROCESS_SOURCES:
+        raise ValueError(f"지원하는 AM 공정이 아닙니다: {process}")
+    keys = ["KS52901_2017", "KS52902_2019"]
+    if process == "MEX":
+        keys += ["KS52903_1_2020", "KS52903_2_2020"]
+    return {key: SOURCES[key] for key in keys}

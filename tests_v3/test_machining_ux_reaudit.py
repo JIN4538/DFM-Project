@@ -113,6 +113,24 @@ def test_html_escapes_user_text_and_rejects_active_non_web_links():
     assert '활성 링크로 만들지 않을 출처' in output
 
 
+def test_html_preserves_local_reference_scope_and_reading_limits_without_fake_link():
+    _, report = _export_fixture()
+    report["sources"].append({
+        "title": "제공한 전문", "url": None, "local_path": "references/machining/원문.pdf",
+        "scope": "가시성의 배경 근거이며 <유한 공구> 검증은 아닙니다.",
+        "locator": "PDF 2–3쪽", "access": "스캔 전문 검토·일부 OCR 한계",
+    })
+    before = json_bytes(report)
+    output = machining_html(report)
+    assert 'href="None"' not in output
+    assert '이 검토에서 사용하는 이유와 범위:' in output
+    assert '가시성의 배경 근거이며 &lt;유한 공구&gt; 검증은 아닙니다.' in output
+    assert '확인할 쪽·항목:</strong> PDF 2–3쪽' in output
+    assert '원문 확인 범위:</strong> 스캔 전문 검토·일부 OCR 한계' in output
+    assert '저장소 PDF 위치:</strong> references/machining/원문.pdf' in output
+    assert json_bytes(report) == before
+
+
 def test_html_rejects_different_shape_instead_of_attaching_stale_diagram():
     _, report = _export_fixture()
     other = Model(mesh=trimesh.creation.box(extents=[1, 1, 1]), metadata={})

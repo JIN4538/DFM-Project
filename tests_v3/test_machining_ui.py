@@ -34,6 +34,12 @@ def test_cnc_measure_without_tool_and_stale_condition_results():
     assert report["profile"]["tool_diameter_mm"] is None
     assert len(app.get("download_button")) == 3
     assert "미입력·미비교" in app.dataframe[0].value.to_string()
+    visible_text = "\n".join(element.value for element in list(app.markdown) + list(app.caption))
+    assert "](None)" not in visible_text
+    for source in report["sources"]:
+        for key in ("scope", "locator", "access", "local_path"):
+            if source.get(key):
+                assert source[key] in visible_text
     app.selectbox(key="cnc_direction").select("+X").run()
     assert not app.exception and not app.get("download_button")
     assert any("이전 검토 결과" in x.value for x in app.caption)

@@ -1,5 +1,7 @@
 # 원자료와 검토 범위
 
+**현재 파일 갱신(2026-09-21):** [43 PDF 원본 목록](../../references/README.md)과 [현재 SHA/페이지/교체 전 SHA](../../references/manifest-2026-09-21.json)를 사용한다. 아래는 2026-09-10 기준선의 이력이다. 당시 KS 4개 PDF는 새 전페이지 캡처로 교체됐으며 해당 과거 파일은 Git 이력에서 조회한다. 전문 읽기·남은 가림은 [최신 검토](../research/literature-update-2026-09-21/README.md)에 기록한다.
+
 기준 커밋: `1706eacf03ca30a59f83805dd0c46753e8852a24`. 검토: 2026-09-10~11. 원자료의 정확한 SHA-256·크기·PDF 페이지 수·ZIP 구성은 [SOURCE_MANIFEST.json](SOURCE_MANIFEST.json)에 보존한다.
 
 ## 참고문헌

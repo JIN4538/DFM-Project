@@ -12,7 +12,7 @@ import numpy as np
 
 from src.core.mesh_diagnostics import inspect_mesh
 from . import __version__
-from .evidence import section_guidance, sources_for, used_sources
+from .evidence import review_context_sources, section_guidance, sources_for, used_sources
 from .models import Finding, Model, plain
 from .orientation import compare_orientations, measure_orientation
 from .profiles import Profile, PROCESS_LABELS, UNASSESSED
@@ -236,7 +236,8 @@ def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, e
             "includes_current_direction":compare, "continuous_optimum":False,
             "scope":"finite candidates; mesh geometry; build-plane yaw limited to 0/90 degrees"},
         findings=[asdict(f) for f in findings],
-        unassessed=UNASSESSED[profile.process], sources=used_sources(findings),
+        unassessed=UNASSESSED[profile.process],
+        sources={**used_sources(findings), **review_context_sources(profile.process)},
         provenance={"code_sha256":code_digest(), "python":platform.python_version(), "platform":platform.platform(),
             "dependencies":{n:importlib.metadata.version(n) for n in ("numpy","trimesh","shapely","streamlit","cadquery-ocp-novtk")}},
         elapsed_seconds=time.perf_counter()-started))
