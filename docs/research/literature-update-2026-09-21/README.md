@@ -60,7 +60,16 @@
 
 ## 소프트웨어 검증
 
-최종 전체 회귀시험과 Git 원본 검증은 진행 중이며, 완료 결과를 여기에 기록한다. 과거의 818개 통과 기록을 이번 실행 결과로 대신하지 않는다.
+**현재 Windows 환경의 최종 전체 회귀시험 823개 통과, 실패·오류·건너뜀 0, 경고 1건, 283.84초. 별도 레거시 기본검사 55/55 통과.** 새 근거의 공정 간 오적용 방지, KS 판본 구분, 절삭 근거 화면과 HTML의 적용 범위 보존도 확인했다.
+
+- [전체 실행 로그](../../../validation/literature-update-2026-09-21/regression-final.txt) · [JUnit](../../../validation/literature-update-2026-09-21/regression-final.xml) · [별도 55개 검사](../../../validation/literature-update-2026-09-21/legacy.txt)
+- [실행 환경·소스/시험 파일 SHA·파일별 바탕화면 대조·문서 링크 검사](../../../validation/literature-update-2026-09-21/final-checks.json): 43/43 원본 해시 일치, 새 검토 문서와 원본 목록의 깨진 로컬 링크 0개.
+- [Git에 보관된 43개 PDF 바이트 검증](../../../validation/literature-update-2026-09-21/archive-head.json). 확인 명령은 `python scripts/verify_reference_archive.py --git-ref HEAD`다.
+- [첫 메모리 부족 중단·출처 목록 기대값 수정·재실행 조건](../../../validation/literature-update-2026-09-21/EXECUTION_NOTES.md)을 남겼다. 최초 중단과 822개 통과/1개 실패 실행을 최종 결과에 합산하지 않았다.
+
+검증한 계산 코드 SHA는 `c8e1fe81ef2df9c6a56ca05a9fe5594dfa6316400f7c3ee3b0660def27e8da9e`이며 소스 커밋은 `0aa8fa5`다. 경고는 기존 `test_aabb_overlap_is_not_solid_overlap`의 Trimesh 체적 기반 질량중심 계산에서 발생한 RuntimeWarning이고, 해당 검사는 통과했다. 이 결과는 **소프트웨어 검사 수**이며 실물 제조 횟수나 제조 성공률이 아니다.
+
+Git 작업 브랜치는 `codex/am-dfm-evidence-review`다. 원본 교체/추가(`ea40178`), 기존 절삭 기능·예제·검증 보관(`1a9919f`), 이번 전문 감사와 근거 개선(`0aa8fa5`), 최종 재검증 기록을 구분해 커밋한다. `main`으로 병합한 것으로 설명하지 않는다.
 
 ## 다음 개발의 우선순위
 
