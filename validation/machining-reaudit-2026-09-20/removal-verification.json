@@ -1,0 +1,28 @@
+{
+  "scope": "Removal of newly introduced injection and press implementation; original sources and prior AM/CNC history preserved",
+  "removed": {
+    "dfm/injection.py": true,
+    "dfm/press.py": true,
+    "dfm/review_contract.py": true,
+    "dfm/review_view.py": true,
+    "examples/injection": true,
+    "examples/press": true,
+    "validation/forming-2026-09-20": true,
+    "docs/USER_GUIDE_FORMING.md": true,
+    "docs/project-knowledge/FORMING_IMPLEMENTATION_2026-09-20.md": true,
+    "docs/research/INJECTION_EVIDENCE.md": true,
+    "docs/research/PRESS_EVIDENCE.md": true,
+    "docs/research/FOUR_PROCESS_EVALUATION_PROTOCOL.md": true,
+    "scripts/generate_injection_examples.py": true,
+    "scripts/generate_press_examples.py": true,
+    "scripts/verify_forming_examples.py": true,
+    "tests_v3/test_forming_ui.py": true,
+    "tests_v3/test_forming_presentation.py": true,
+    "tests_v3/test_injection_review.py": true,
+    "tests_v3/test_injection_independent.py": true,
+    "tests_v3/test_press_review.py": true,
+    "tests_v3/test_review_contract.py": true
+  },
+  "remaining_obsolete_bytecode": [],
+  "complete": true
+}

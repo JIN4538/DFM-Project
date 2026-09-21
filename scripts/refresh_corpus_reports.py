@@ -27,7 +27,8 @@ def sha(path):
 
 def engine_digest(root):
     digest = hashlib.sha256()
-    for path in sorted((root / "amdfm").glob("*.py")) + sorted((root / "src" / "core").glob("*.py")):
+    for path in (sorted((root / "amdfm").glob("*.py")) + sorted((root / "dfm").glob("*.py"))
+                 + sorted((root / "src" / "core").glob("*.py"))):
         digest.update(path.relative_to(root).as_posix().encode())
         digest.update(path.read_bytes())
     return digest.hexdigest()
@@ -237,7 +238,9 @@ def main(args):
     original_root, digest = args.engine_root, code_digest()
     args.engine_root = args.out / "engine-source"
     args.engine_root.mkdir()
-    for package in ("amdfm", "src"):
+    for package in ("amdfm", "dfm", "src"):
+        if package == "dfm" and not (original_root / package).is_dir():
+            continue
         shutil.copytree(original_root / package, args.engine_root / package,
             ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     if engine_digest(original_root) != digest or engine_digest(args.engine_root) != digest:

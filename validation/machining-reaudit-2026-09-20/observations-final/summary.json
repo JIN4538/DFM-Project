@@ -1,0 +1,399 @@
+{
+  "scope": "Geometric observations only; independent assertions are in tests_v3/test_machining_review.py",
+  "profile": {
+    "machine": "미확정",
+    "material": "미확정",
+    "tool_diameter_mm": 4.0,
+    "flute_length_mm": 10.0,
+    "reach_mm": 15.0,
+    "hole_depth_ratio_limit": null,
+    "basis": "Hypothetical test tool dimensions; not a manufacturer limit or validated machining condition"
+  },
+  "code_revision": "db20dc5cad4622249516b07d0adb34b4a6d41d5872f3e9ebe1dc174c4073ffe6",
+  "cases": [
+    {
+      "id": "01_rectangular_pocket",
+      "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 1,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 16080,
+        "pocket_width_mm": 12,
+        "pocket_length_mm": 20,
+        "pocket_wall_height_mm": 8,
+        "pocket_floor_center_mm": [
+          20,
+          15,
+          7
+        ],
+        "pocket_floor_area_mm2": 240
+      },
+      "actual_cad_volume_mm3": 16079.999999999996,
+      "observed_rectangular_pockets": 1,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "attention",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "02_narrow_deep_pocket",
+      "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 1,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 28800,
+        "pocket_width_mm": 3,
+        "pocket_length_mm": 20,
+        "pocket_wall_height_mm": 20,
+        "pocket_floor_center_mm": [
+          20,
+          15,
+          5
+        ],
+        "pocket_floor_area_mm2": 60
+      },
+      "actual_cad_volume_mm3": 28799.999999999996,
+      "observed_rectangular_pockets": 1,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "attention",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "03_rounded_pocket",
+      "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 4,
+        "volume_mm3": 16141.805328941535,
+        "internal_partial_cylinder_radius_mm": 3,
+        "internal_partial_cylinder_span_rad": 1.5707963267948966,
+        "floor_area_mm2": 232.27433388230813,
+        "floor_center_mm": [
+          20,
+          15,
+          7
+        ],
+        "exclusion": "Curved floor boundary is outside the rectangular-floor recognizer."
+      },
+      "actual_cad_volume_mm3": 16141.805328941502,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "observed",
+        "cnc_rectangular_pockets": "unknown",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "04_vertical_hole",
+      "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 1,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 17575.88499176538,
+        "cylinder_diameter_mm": 6,
+        "cylindrical_length_mm": 15,
+        "cylinder_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "actual_cad_volume_mm3": 17575.88499176537,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 1,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "observed",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "not_detected",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "05_side_hole",
+      "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 1,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 17497.345175425635,
+        "cylinder_diameter_mm": 4,
+        "cylindrical_length_mm": 40,
+        "cylinder_axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "actual_cad_volume_mm3": 17497.34517542563,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 1,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "attention",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "not_detected",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "06_boss",
+      "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 8400,
+        "exclusion": "Convex boss walls face away from the top-face center."
+      },
+      "actual_cad_volume_mm3": 8399.999999999998,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "not_detected",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "07_sealed_cavity",
+      "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 16080,
+        "cavity_shell_count": 1,
+        "exclusion": "Enclosed cavity walls meet an inward ceiling, not an outward open rim."
+      },
+      "actual_cad_volume_mm3": 16079.999999999996,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "unknown",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "08_open_channel",
+      "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 14160,
+        "exclusion": "Channel floor is not bounded by four inward walls."
+      },
+      "actual_cad_volume_mm3": 14159.999999999996,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "unknown",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "09_island_pocket",
+      "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 16208,
+        "exclusion": "Inner floor wire must not be discarded."
+      },
+      "actual_cad_volume_mm3": 16208.0,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "unknown",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "10_plain_block",
+      "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 18000,
+        "exclusion": "Exterior planes are not pockets."
+      },
+      "actual_cad_volume_mm3": 17999.999999999996,
+      "observed_rectangular_pockets": 0,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "not_detected",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "11_rotated_pocket",
+      "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+      "expected": {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "solid_count": 1,
+        "rectangular_pocket_count": 1,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "volume_mm3": 16080,
+        "pocket_width_mm": 12,
+        "pocket_length_mm": 20,
+        "pocket_wall_height_mm": 8,
+        "pocket_floor_center_mm": [
+          67,
+          5,
+          -15
+        ],
+        "pocket_floor_area_mm2": 240
+      },
+      "actual_cad_volume_mm3": 16080.0,
+      "observed_rectangular_pockets": 1,
+      "observed_internal_cylinder_faces": 0,
+      "finding_statuses": {
+        "cnc_input": "observed",
+        "cnc_coverage": "observed",
+        "cnc_holes": "not_detected",
+        "cnc_curved_corners": "not_detected",
+        "cnc_rectangular_pockets": "attention",
+        "cnc_visibility": "unknown"
+      }
+    },
+    {
+      "id": "12_two_solids",
+      "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+      "expected": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "solid_count": 2,
+        "rectangular_pocket_count": 0,
+        "internal_full_cylinder_face_count": 0,
+        "internal_partial_cylinder_face_count": 0,
+        "constituent_volume_sum_mm3": 16290,
+        "raw_rectangular_pocket_count": 1,
+        "exclusion": "Review must require a single selected solid before interpreting CAD machining features."
+      },
+      "actual_cad_volume_mm3": null,
+      "observed_rectangular_pockets": null,
+      "observed_internal_cylinder_faces": null,
+      "finding_statuses": {
+        "cnc_input": "unknown",
+        "cnc_coverage": "unknown",
+        "cnc_holes": "unknown",
+        "cnc_curved_corners": "unknown",
+        "cnc_rectangular_pockets": "unknown",
+        "cnc_visibility": "unknown"
+      }
+    }
+  ],
+  "visibility": "not_run_in_this_record; separately tested with independent geometry and UI",
+  "physical_machining_validation": false
+}

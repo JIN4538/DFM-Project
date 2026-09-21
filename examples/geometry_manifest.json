@@ -1,19 +1,20 @@
 {
   "schema": "amdfm-geometry-inventory/1",
   "path_base": "repository root",
-  "geometry_file_count": 106,
-  "unique_sha256_count": 100,
-  "total_bytes": 57613674,
+  "geometry_file_count": 128,
+  "unique_sha256_count": 122,
+  "total_bytes": 58309519,
   "groups": {
+    "existing/cura_run": 27,
     "examples/cad": 14,
     "examples/corpus": 26,
     "examples/external": 3,
     "examples/historical": 22,
+    "examples/machining": 12,
     "examples/regressions": 3,
-    "existing/cura_run": 27,
-    "existing/validation": 11
+    "existing/validation": 21
   },
-  "scope": "All standalone test geometry found in project, working study and deliverables, supplied Desktop corpus and deployed copy. Byte-identical repeated deployment/extraction copies are represented by existing paths. Archive inventory found no extra hashes. Unique bytes are not a count of physically distinct designs.",
+  "scope": "All standalone test geometry found in project, working study and deliverables, supplied Desktop corpus and deployed copy. Byte-identical repeated deployment/extraction copies are represented by existing paths. Archive inventory found no extra hashes. Unique bytes are not a count of physically distinct designs. Expanded 2026-09-19 with 12 original machining STEP geometry fixtures; source dimensions are in examples/machining/manifest.json. Expanded 2026-09-20 with 10 stored before/after STEP exports of 5 independent machining rotation/translation cases; design dimensions and transformations are in validation/machining-reaudit-2026-09-20/geometry/probe_geometry.py.",
   "files": [
     {
       "path": "cura_run/NIST_Test_Artifact_online__negX.stl",
@@ -660,6 +661,90 @@
       "sha256": "f94592aa114c5972217281c70f72620e705bd8605e95a9779642d992621ee13b"
     },
     {
+      "path": "examples/machining/01_rectangular_pocket.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 29652,
+      "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0"
+    },
+    {
+      "path": "examples/machining/02_narrow_deep_pocket.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 29710,
+      "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1"
+    },
+    {
+      "path": "examples/machining/03_rounded_pocket.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 44812,
+      "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627"
+    },
+    {
+      "path": "examples/machining/04_vertical_hole.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 19030,
+      "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362"
+    },
+    {
+      "path": "examples/machining/05_side_hole.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 19032,
+      "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc"
+    },
+    {
+      "path": "examples/machining/06_boss.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 29063,
+      "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2"
+    },
+    {
+      "path": "examples/machining/07_sealed_cavity.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 29357,
+      "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0"
+    },
+    {
+      "path": "examples/machining/08_open_channel.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 29904,
+      "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0"
+    },
+    {
+      "path": "examples/machining/09_island_pocket.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 43309,
+      "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56"
+    },
+    {
+      "path": "examples/machining/10_plain_block.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 15418,
+      "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23"
+    },
+    {
+      "path": "examples/machining/11_rotated_pocket.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 29837,
+      "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1"
+    },
+    {
+      "path": "examples/machining/12_two_solids.step",
+      "group": "examples/machining",
+      "format": "step",
+      "bytes": 46863,
+      "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5"
+    },
+    {
       "path": "examples/regressions/final-code-review-01/nested_shear_inches.3mf",
       "group": "examples/regressions",
       "format": "3mf",
@@ -756,6 +841,76 @@
       "format": "stl",
       "bytes": 684,
       "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_0.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 29054,
+      "sha256": "d2ed9c180bcdd9bed1314ed829af6512c0772a46a5d3b4af41727e154ab4aeb0"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_1.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 33331,
+      "sha256": "6f3d1e96d3c5a59a9debc8c2852fd810fbcf1b7dd66e8d72fb52767adca96a14"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_2.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 33748,
+      "sha256": "b3aee03c280da87ec59f8a2a7fb44bf93f918f168f249acd5a39707206c3e3ab"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_3.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 34391,
+      "sha256": "cda9951db5990b52722fe6d359b933e9c0929201084f3a81b8ab8c463f4c2de3"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_4.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 34405,
+      "sha256": "24010e8067fce0ba181336036777d285c128e93e3d5a291763135245891d61d7"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_0.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 29054,
+      "sha256": "c272ee9332e8dd8e7ac876074daa8e768ac3a06981a92bc748d564d41e8c360d"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_1.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 33331,
+      "sha256": "5e39cbc8c5983342d86a9077df63b6599231e7144706d76c30b82465c8b2cfd9"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_2.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 33748,
+      "sha256": "8016dcd355f84a084d75dd7ef9f997fc64b8611150715fe7c4b24e25ae94703a"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_3.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 34391,
+      "sha256": "c2a8d10b7c6e23f862e33f6aee8d7ea53b2d56aff4462417e23801fce7c7c47a"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_4.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 34405,
+      "sha256": "6ffbc303e4c84d636f175a60cd884747e6138f50c1d9752ed0aa95a0a6fe15ec"
     }
   ]
 }

@@ -1,0 +1,69 @@
+........................................................................ [  9%]
+........................................................................ [ 18%]
+........................................................................ [ 27%]
+........................................................................ [ 36%]
+........................................................................ [ 46%]
+........................................................................ [ 55%]
+..................................FF.................................... [ 64%]
+........................................................................ [ 73%]
+........................................................................ [ 83%]
+........................................................................ [ 92%]
+...........................................................              [100%]
+================================== FAILURES ===================================
+________________ test_timeout_stops_child_before_it_can_write _________________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-48/test_timeout_stops_child_befor0')
+
+    def test_timeout_stops_child_before_it_can_write(tmp_path):
+        marker=tmp_path/'orphan.txt'
+        started=tmp_path/'started.txt'
+        child="import time; from pathlib import Path; time.sleep(3); Path("+repr(str(marker))+").write_text('orphan')"
+        worker=("import subprocess,sys,time; from pathlib import Path; "
+                "subprocess.Popen([sys.executable,'-c',"+repr(child)+"]); "
+                "Path("+repr(str(started))+").write_text('ready'); time.sleep(30)")
+        with pytest.raises(subprocess.TimeoutExpired):
+            run_bounded([sys.executable,'-c',worker],cwd=tmp_path,timeout=1.5)
+>       assert started.exists(), 'The child must actually be launched to exercise cleanup.'
+E       AssertionError: The child must actually be launched to exercise cleanup.
+E       assert False
+E        +  where False = exists()
+E        +    where exists = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-48/test_timeout_stops_child_befor0/started.txt').exists
+
+tests_v3\test_processes.py:27: AssertionError
+________ test_timeout_owns_child_after_direct_parent_has_exited[False] ________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-48/test_timeout_owns_child_after_0')
+redirect_child = False
+
+    @pytest.mark.parametrize("redirect_child", [False, True])
+    def test_timeout_owns_child_after_direct_parent_has_exited(tmp_path, redirect_child):
+        if os.name != "nt" and redirect_child:
+            pytest.skip("Job active-process accounting is specific to Windows; Unix retains killpg on timeout.")
+        marker = tmp_path / "late-child.txt"
+        started = tmp_path / "parent-exited.txt"
+        child = ("import time; from pathlib import Path; time.sleep(2); Path(" +
+                 repr(str(marker)) + ").write_text('must not run')")
+        redirects = ", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL" if redirect_child else ""
+        worker = ("import subprocess,sys; from pathlib import Path; "
+                  "subprocess.Popen([sys.executable,'-c'," + repr(child) + "]" + redirects + "); "
+                  "Path(" + repr(str(started)) + ").write_text('parent exits now')")
+        before = time.monotonic()
+        with pytest.raises(subprocess.TimeoutExpired):
+            run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=.6)
+>       assert started.exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-48/test_timeout_owns_child_after_0/parent-exited.txt').exists
+
+tests_v3\test_processes.py:47: AssertionError
+============================== warnings summary ===============================
+tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap
+  C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\trimesh\triangles.py:302: RuntimeWarning: invalid value encountered in divide
+    center_mass = integrated[1:4] / volume
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\machining-2026-09-19\regression-final.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_processes.py::test_timeout_stops_child_before_it_can_write
+FAILED tests_v3/test_processes.py::test_timeout_owns_child_after_direct_parent_has_exited[False]
+2 failed, 777 passed, 1 warning in 455.25s (0:07:35)

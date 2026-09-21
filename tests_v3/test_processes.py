@@ -9,6 +9,20 @@ from amdfm.processes import run_bounded
 from amdfm import processes
 
 
+# The observed Windows worker first-print latency was 0.753--1.515 s on
+# 2026-09-19. Tests involving a nested child must budget both interpreter starts.
+# This is one absolute deadline from run_bounded entry, never reset by readiness.
+# See validation/machining-2026-09-19/process-timing/ for measurements and limits.
+_READY_TIMEOUT_S = 5.0
+_LATE_WRITE_DELAY_S = 6.0  # Longer than the entire worker timeout, not just startup.
+_CLEANUP_ALLOWANCE_S = 1.2  # Preserve the old .6 s timeout test's 1.2 s allowance.
+
+
+def _assert_absolute_timeout_window(before):
+    elapsed = time.monotonic() - before
+    assert _READY_TIMEOUT_S - .05 <= elapsed < _READY_TIMEOUT_S + _CLEANUP_ALLOWANCE_S
+
+
 def test_worker_output_and_exit_status(tmp_path):
     result=run_bounded([sys.executable,"-c","import sys; print('ready'); sys.exit(7)"],cwd=tmp_path,timeout=10)
     assert result.returncode==7
@@ -18,14 +32,22 @@ def test_worker_output_and_exit_status(tmp_path):
 def test_timeout_stops_child_before_it_can_write(tmp_path):
     marker=tmp_path/'orphan.txt'
     started=tmp_path/'started.txt'
-    child="import time; from pathlib import Path; time.sleep(3); Path("+repr(str(marker))+").write_text('orphan')"
+    child_ready=tmp_path/'child-ready.txt'
+    child=("import time; from pathlib import Path; Path("+repr(str(child_ready))+").write_text('ready'); "
+           "time.sleep("+repr(_LATE_WRITE_DELAY_S)+"); Path("+repr(str(marker))+").write_text('orphan')")
     worker=("import subprocess,sys,time; from pathlib import Path; "
             "subprocess.Popen([sys.executable,'-c',"+repr(child)+"]); "
             "Path("+repr(str(started))+").write_text('ready'); time.sleep(30)")
+    before = time.monotonic()
     with pytest.raises(subprocess.TimeoutExpired):
-        run_bounded([sys.executable,'-c',worker],cwd=tmp_path,timeout=1.5)
-    assert started.exists(), 'The child must actually be launched to exercise cleanup.'
-    time.sleep(3)
+        run_bounded([sys.executable,'-c',worker],cwd=tmp_path,timeout=_READY_TIMEOUT_S)
+    _assert_absolute_timeout_window(before)
+    assert started.exists(), 'The parent must execute Popen before the timeout.'
+    assert child_ready.exists(), 'The child interpreter must actually run before cleanup is tested.'
+    assert child_ready.read_text() == 'ready'
+    # A child that survived cleanup would now have enough time to write, even
+    # if it reached readiness just before the deadline.
+    time.sleep(_LATE_WRITE_DELAY_S)
     assert not marker.exists()
 
 
@@ -35,7 +57,9 @@ def test_timeout_owns_child_after_direct_parent_has_exited(tmp_path, redirect_ch
         pytest.skip("Job active-process accounting is specific to Windows; Unix retains killpg on timeout.")
     marker = tmp_path / "late-child.txt"
     started = tmp_path / "parent-exited.txt"
-    child = ("import time; from pathlib import Path; time.sleep(2); Path(" +
+    child_ready = tmp_path / "child-ready.txt"
+    child = ("import time; from pathlib import Path; Path(" + repr(str(child_ready)) +
+             ").write_text('ready'); time.sleep(" + repr(_LATE_WRITE_DELAY_S) + "); Path(" +
              repr(str(marker)) + ").write_text('must not run')")
     redirects = ", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL" if redirect_child else ""
     worker = ("import subprocess,sys; from pathlib import Path; "
@@ -43,10 +67,12 @@ def test_timeout_owns_child_after_direct_parent_has_exited(tmp_path, redirect_ch
               "Path(" + repr(str(started)) + ").write_text('parent exits now')")
     before = time.monotonic()
     with pytest.raises(subprocess.TimeoutExpired):
-        run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=.6)
+        run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=_READY_TIMEOUT_S)
+    _assert_absolute_timeout_window(before)
     assert started.exists()
-    assert time.monotonic() - before < 1.8
-    time.sleep(2)
+    assert child_ready.exists(), 'A Popen call alone does not prove the child interpreter executed.'
+    assert child_ready.read_text() == 'ready'
+    time.sleep(_LATE_WRITE_DELAY_S)
     assert not marker.exists()
 
 
@@ -68,9 +94,16 @@ def test_parent_exit_waits_for_successful_child_output_and_preserves_parent_code
 
 
 def test_timeout_preserves_already_flushed_output(tmp_path):
-    worker = "import sys,time; print('before timeout',flush=True); sys.stderr.write('error'); sys.stderr.flush(); time.sleep(10)"
+    flushed = tmp_path / "output-flushed.txt"
+    worker = ("import sys,time; from pathlib import Path; print('before timeout',flush=True); "
+              "sys.stderr.write('error'); sys.stderr.flush(); Path(" + repr(str(flushed)) +
+              ").write_text('flushed'); time.sleep(30)")
+    before = time.monotonic()
     with pytest.raises(subprocess.TimeoutExpired) as captured:
-        run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=.4)
+        run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=_READY_TIMEOUT_S)
+    _assert_absolute_timeout_window(before)
+    assert flushed.exists(), 'The child must flush both streams before output preservation is tested.'
+    assert flushed.read_text() == 'flushed'
     assert captured.value.output.strip() == b"before timeout"
     assert captured.value.stderr == b"error"
 

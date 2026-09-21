@@ -12,8 +12,8 @@ ROOT=Path(__file__).resolve().parents[1]
 def test_all_shipped_geometry_matches_published_inventory():
     result=verify(ROOT)
     assert result['verified'],result['errors']
-    assert result['geometry_files']==106
-    assert result['unique_sha256']==100
+    assert result['geometry_files']==128
+    assert result['unique_sha256']==122
 
 
 def test_corpus_including_supplier_metadata_matches_original_audit():

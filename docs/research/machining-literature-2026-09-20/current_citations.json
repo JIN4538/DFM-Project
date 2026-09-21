@@ -1,0 +1,979 @@
+{
+  "checked_date": "2026-09-20",
+  "scope": "Registry inventory is not full-text verification; documentation occurrences include historical and technical links.",
+  "runtime_registry_count": 29,
+  "runtime_registry": [
+    {
+      "id": "NIST_GAUSS",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 3,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "NIST DLMF §3.5(v) — Gauss Quadrature",
+      "url": "https://dlmf.nist.gov/3.5.v",
+      "kind": "numerical_reference",
+      "locator": "Equations 3.5.19 and 3.5.21: Gaussian error and Gauss–Legendre rule",
+      "use": "형상 변화 구간의 2점 Gauss 적분 수학 근거. 고정 다면체의 구간별 단면적이 2차식이라는 별도 유도와 수치 검사를 전제로 함. CAD 곡면·실물·표본 최대의 정확성 보증이 아님.",
+      "access": "공식 공개 수학 참조; 2026-09-15 확인"
+    },
+    {
+      "id": "ISO52910",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 7,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "ISO/ASTM 52910:2018 — Design requirements, guidelines and recommendations",
+      "url": "https://www.iso.org/standard/67289.html",
+      "kind": "standard_scope",
+      "locator": "Scope; local R11 §§6.6, 6.9, 7",
+      "use": "검토 항목과 설계 정보 전달의 근거. 공통 수치 임계값의 근거가 아님.",
+      "access": "공식 범위·판 정보 및 저장소의 불완전 KS 캡처"
+    },
+    {
+      "id": "ISO52902",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 10,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "ISO/ASTM 52902:2023 — Test artefacts; geometric capability assessment",
+      "url": "https://www.iso.org/standard/79683.html",
+      "kind": "standard_scope",
+      "locator": "Scope",
+      "use": "장비별 시험물과 측정에 의한 검증. 자체 CAD 예제는 표준 인증 시험물이 아님.",
+      "access": "공식 범위·판 정보; 2023 전문 미확보"
+    },
+    {
+      "id": "ISO52911M",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 13,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "ISO/ASTM 52911-1:2019 — Laser-based powder bed fusion of metals",
+      "url": "https://www.iso.org/standard/72951.html",
+      "kind": "standard_scope",
+      "locator": "Scope",
+      "use": "금속 PBF 공정 고유의 설계 검토 필요성.",
+      "access": "공식 공개 범위; 전문 미확보"
+    },
+    {
+      "id": "ISO52911P",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 16,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "ISO/ASTM 52911-2:2019 — Laser-based powder bed fusion of polymers",
+      "url": "https://www.iso.org/standard/72952.html",
+      "kind": "standard_scope",
+      "locator": "Scope",
+      "use": "고분자 PBF와 금속 PBF의 설계 조건 분리.",
+      "access": "공식 공개 범위; 전문 미확보"
+    },
+    {
+      "id": "MOYLAN2014",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 19,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Moylan et al. (2014), An Additive Manufacturing Test Artifact",
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/119/jres.119.017.pdf",
+      "kind": "original_research",
+      "locator": "Test artifact design and measurement",
+      "use": "알려진 형상과 독립 측정을 이용해 장비의 능력을 확인.",
+      "access": "공개 논문"
+    },
+    {
+      "id": "KUIPERS2020",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 22,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Kuipers et al. (2020), Adaptive width control of dense contour-parallel toolpaths",
+      "url": "https://arxiv.org/abs/2004.13497",
+      "kind": "original_research",
+      "locator": "Abstract; adaptive bead width framework",
+      "use": "고정 선폭 형태학 검토를 실제 슬라이서 출력 누락 판정과 구분.",
+      "access": "공개 저자 원고"
+    },
+    {
+      "id": "PRUSA_ARACHNE",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 25,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "PrusaSlicer — Arachne perimeter generator",
+      "url": "https://help.prusa3d.com/article/arachne-perimeter-generator_352769",
+      "kind": "vendor_documentation",
+      "locator": "Minimum feature size; minimum perimeter width",
+      "use": "얇은 특징의 생략·확대는 가변 선폭과 슬라이서 설정에 의존.",
+      "access": "공식 문서"
+    },
+    {
+      "id": "JIANG2018",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 28,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Jiang, Xu & Stringer (2018), A new support strategy for reducing waste in AM",
+      "url": null,
+      "kind": "original_research",
+      "locator": "저장소 PDF p.5; LITERATURE.md R06",
+      "use": "오버행/브리지 임계값은 장비·재료·냉각·처짐 허용 조건과 함께 정함. 2 mm를 기본 한계로 차용하지 않음.",
+      "access": "저장소 원문"
+    },
+    {
+      "id": "STAV2022",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 31,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Stavropoulos et al. (2022), Knowledge-based manufacturability assessment for optimization of AM",
+      "url": "https://doi.org/10.1007/s00170-022-09948-w",
+      "kind": "original_research",
+      "locator": "저장소 R07; STEP B-rep method; Table 2",
+      "use": "CAD 특징·공정 지식 연결. 원통면 탐지가 관통홀/제조 성공 보증은 아님.",
+      "access": "저장소 원문"
+    },
+    {
+      "id": "KIM2019",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 34,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Kim et al. (2019), A Design for Additive Manufacturing Ontology to Support Manufacturability Analysis",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=925693",
+      "kind": "original_research",
+      "locator": "Design features and design/process/material parameters",
+      "use": "특징·재료·공정·설계 규칙의 근거를 구조화.",
+      "access": "NIST 공개 저널 원고; 2018 학회판과 구분"
+    },
+    {
+      "id": "FORM4",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 37,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Formlabs — Design specifications for 3D models (Form 4 generation)",
+      "url": "https://formlabs.com/support/Design-specifications-for-3D-models-Form-4-generation/",
+      "kind": "vendor_experiment",
+      "locator": "Grey Resin V5, Form 4, 50 µm; drain holes",
+      "use": "장비·수지·층 높이별 가이드. 일반 홀과 배출 홀의 기준을 구분하며 보편 VPP 임계값으로 쓰지 않음.",
+      "access": "공개 제조사 문서; 설계값은 Grey Resin V5·50 µm, 같은 페이지의 공차 시험은 100 µm·별도 후경화 조건"
+    },
+    {
+      "id": "FORM_ORIENTATION",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 41,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Formlabs — Model orientation best practices for SLA printing",
+      "url": "https://formlabs.com/support/Model-Orientation/",
+      "kind": "vendor_documentation",
+      "locator": "Tilting a flat surface; Preserving integrity at intersections; Reducing minima; Preventing suction cups",
+      "use": "VPP 방향·신생 성분·컵 형태의 검토 필요성. Form 계열의 탱크 분리 동작을 모든 VPP 장비에 일반화하지 않음.",
+      "access": "공개 제조사 본문; Form 2 와이퍼·Form 3 계열 LFS 기구 설명을 구분"
+    },
+    {
+      "id": "PAN2017",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 46,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Pan, He, Xu & Feinerman (2017), Study of separation force in constrained surface projection stereolithography",
+      "url": "https://yayuepan.lab.uic.edu/wp-content/uploads/sites/779/2021/01/8edafea83b2e3d9d65896da53bcf9ab108dc.pdf",
+      "kind": "original_research",
+      "locator": "PDF pp.4–8 (printed pp.355–359), §§2.2–5.2; Eq.(6)",
+      "use": "Bottom-up 층 분리에서 면적·경계 길이·공극의 관련성. A/P는 mm 단위 기하량이며 박리력·성공률이 아님. 점도·속도·간극·필름 조건이 필요함.",
+      "access": "저자 대학 공개 PDF; 자체 bottom-up 투영 장비·PDMS·LS600M/G+ 수지 실험. 원통·강체·일정 점도 가정의 힘 식을 임의 형상에 이식하지 않음"
+    },
+    {
+      "id": "FUSE_DESIGN",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 51,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Formlabs — Fuse Series SLS Design Guide",
+      "url": "https://formlabs.com/eu/white-papers/fuse-series-sls-design-guide/",
+      "kind": "vendor_documentation",
+      "locator": "Reference Dimensions; Minimum Drain Hole Diameter; Reducing Stress Concentrations; Part Orientation and Build Chamber Packing",
+      "use": "고분자 SLS의 분말 지지·방향별 벽·배출·청소 고려. MEX의 무지지 규칙이나 보편 최소 치수로 사용하지 않음.",
+      "access": "공개 본문; Fuse Series·Nylon 12 기준, 재료별 지침 별도. Maintaining Uniform Thickness 절의 배출홀 중복 문단은 균일두께 근거로 채택하지 않음"
+    },
+    {
+      "id": "LI2020",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 56,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Li et al. (2020), Numerical Model and Experimental Validation for Laser Sinterable Semi-Crystalline Polymer: Shrinkage and Warping",
+      "url": "https://doi.org/10.3390/polym12061373",
+      "kind": "original_research",
+      "locator": "§§2.1–2.3, 3.3, 4; original full-text XML PMC7361694",
+      "use": "SLS 수축·휨은 물성·스캔·냉각 등 조건에 의존. 단면이나 종횡비 하나를 수축·열변형 예측값으로 바꾸지 않음.",
+      "access": "공개 원문 XML; EP-P3850·Farsoon FS3300PA(PA12)·50×10×1 mm 시험편, 층 높이 0.10–0.19 mm. layer-layer angle은 스캔각 차이이며 빌드 기울기가 아님"
+    },
+    {
+      "id": "MOHR2024",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 61,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Mohr et al. (online 2024; issue 2025), Thermal history transfer from complex components to representative test specimens in laser powder bed fusion",
+      "url": "https://link.springer.com/article/10.1007/s40964-024-00689-8",
+      "kind": "original_research",
+      "locator": "§§2.1–2.3, 3.1.1; experimental thermal history and macroscale FEM",
+      "use": "LPBF 단면 변화·층간 시간·열전달 경로를 함께 고려. 단면이 감소해도 온도가 상승한 구간이 있어 면적을 단조로운 열위험 점수로 사용하지 않음.",
+      "access": "공개 원문; SLM280HL·316L·275 W·700 mm/s·해치 0.12 mm·층 0.05 mm·베이스 100°C 조건"
+    },
+    {
+      "id": "CHENG2019",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 66,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Cheng et al. (2019), On utilizing topology optimization to design support structure to prevent residual stress induced build failure in laser powder bed metal additive manufacturing",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2214860418309035",
+      "kind": "original_research",
+      "locator": "Public abstract and introduction; DOI 10.1016/j.addma.2019.03.001",
+      "use": "금속 PBF 서포트의 기계적 고정·열 방출 역할. 면 각도나 지지량만으로 잔류응력 억제·출력 성공을 판정하지 않음.",
+      "access": "출판사 공개 초록·서론 확인; 상세 전문 재현·수치 모델 검증을 완료한 것으로 사용하지 않음"
+    },
+    {
+      "id": "HUNTER2020",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 71,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Hunter et al. (2020), Assessment of trapped powder removal and inspection strategies for powder bed fusion techniques",
+      "url": "https://link.springer.com/article/10.1007/s00170-020-04930-w",
+      "kind": "original_research",
+      "locator": "§§2.1–2.2, 3.1.2–3.1.3, 4; channel challenge devices, XCT and weighing",
+      "use": "금속 분말 제거는 채널 직경·길이·굴곡·세척법·분말 상태에 의존. 열린 통로나 원통면 탐지가 제거 성공을 보장하지 않음.",
+      "access": "공개 원문; Ti-6Al-4V·M2 Cusing L-PBF 및 A2XX EBSM 실험과 XCT·질량 대조. EBSM 소결 분말과 L-PBF 느슨한 분말의 결과를 구분"
+    },
+    {
+      "id": "ASTMF3530",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 76,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "ASTM F3530-22 — Design; post-processing for metal PBF-LB",
+      "url": "https://store.astm.org/f3530-22.html",
+      "kind": "standard_scope",
+      "locator": "Scope §1.1.1",
+      "use": "분말 제거 등 후처리 검토의 필요성. 형상만으로 제거 성공을 판정하지 않음.",
+      "access": "공개 범위; 전문 미확보"
+    },
+    {
+      "id": "OCCT",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 79,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Open CASCADE Technology — STEP translator",
+      "url": "https://dev.opencascade.org/doc/overview/html/occt_user_guides__step.html",
+      "kind": "software_documentation",
+      "locator": "STEP reader; units; shape transfer",
+      "use": "STEP 단위 변환·솔리드·곡면 입력 처리. CAD가 원래 설계 의도를 모두 복원하지는 않음.",
+      "access": "공식 API 문서 및 설치된 7.9.3 API"
+    },
+    {
+      "id": "3MF_CORE",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 82,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "3MF Consortium — Core Specification v1.4.0",
+      "url": "https://github.com/3MFConsortium/spec_core/blob/master/3MF%20Core%20Specification.md",
+      "kind": "format_specification",
+      "locator": "Published 2025-02-06; §§2.1, 2.3, 3.3–3.4, 4.1–4.2",
+      "use": "패키지 시작 모델·선언 단위·빌드 객체·성분 변환의 입력 근거. 3MF 메시가 CAD 설계 이력이나 실제 출력 공차를 제공한다는 뜻은 아님.",
+      "access": "공식 저장소 원문; 검토한 판은 v1.4.0. 지원하는 기하 입력 범위를 설명하며 전체 규격 적합 인증을 주장하지 않음"
+    },
+    {
+      "id": "3MF_PRODUCTION",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 87,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "3MF Consortium — Production Extension v1.2",
+      "url": "https://github.com/3MFConsortium/spec_production/blob/master/3MF%20Production%20Extension.md",
+      "kind": "format_specification",
+      "locator": "Published v1.2; §§2, 3.1–3.3",
+      "use": "패키지 내부 모델 참조·객체 식별·변환의 의미. 루트의 빌드 목록만 사용하며 비루트 모델에서 다른 파일을 다시 참조하는 구성은 허용되지 않음.",
+      "access": "공식 저장소 원문; Production 확장 전체 구현·대체 객체·제조 지시 해석 완료를 뜻하지 않음"
+    },
+    {
+      "id": "STL_FORMAT",
+      "registry": "현재 적층 및 공통 입력 출처 등록",
+      "file": "amdfm/evidence.py",
+      "line": 92,
+      "file_sha256": "86af2514c80a85567ed635a8b0bd78e5e26e39d2915aedb08e5b16cf5f2573bb",
+      "title": "Library of Congress — STL (STereoLithography) File Format Family",
+      "url": "https://wwws.loc.gov/preservation/digital/formats/fdd/fdd000504.shtml",
+      "kind": "format_documentation",
+      "locator": "Description; Identification and description; Format specifications",
+      "use": "STL 삼각형·정점·법선 구조와 표면 근사의 근거. 원통면의 설계 지름·설계 의도를 복원하는 CAD 입력으로 간주하지 않음.",
+      "access": "미국 의회도서관 공식 형식 해설. 원 1988 규격 전문 자체가 아니며, 해설도 해당 원문 미확보를 명시"
+    },
+    {
+      "id": "CNC_GEOMETRY",
+      "registry": "현재 절삭 출처 등록",
+      "file": "dfm/machining.py",
+      "line": 19,
+      "file_sha256": "aba3f23570060136ec408b2cfe9ad32a049862bb5aaaa0e888b7fd9f50c12ed8",
+      "title": "Protolabs — Design for Machining Toolkit",
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/",
+      "scope": "Internal corners, deep features and access motivate checks. Service-specific limits are not universal limits."
+    },
+    {
+      "id": "CNC_CORNER",
+      "registry": "현재 절삭 출처 등록",
+      "file": "dfm/machining.py",
+      "line": 24,
+      "file_sha256": "aba3f23570060136ec408b2cfe9ad32a049862bb5aaaa0e888b7fd9f50c12ed8",
+      "title": "Protolabs Network — Sharp corners in CNC machining",
+      "url": "https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/",
+      "scope": "Geometric cutter radius constraint; not a prediction of stability, surface quality or time."
+    },
+    {
+      "id": "CNC_TOOL_DIMENSIONS",
+      "registry": "현재 절삭 출처 등록",
+      "file": "dfm/machining.py",
+      "line": 29,
+      "file_sha256": "aba3f23570060136ec408b2cfe9ad32a049862bb5aaaa0e888b7fd9f50c12ed8",
+      "title": "Harvey Performance — The Anatomy of an End Mill",
+      "url": "https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/",
+      "scope": "Cutting length, overall length and length below shank are distinct. The entered tip-to-holder reach is an explicit user condition, not an inferred catalog value."
+    },
+    {
+      "id": "CNC_FACE_RECOGNITION",
+      "registry": "현재 절삭 출처 등록",
+      "file": "dfm/machining.py",
+      "line": 34,
+      "file_sha256": "aba3f23570060136ec408b2cfe9ad32a049862bb5aaaa0e888b7fd9f50c12ed8",
+      "title": "Yeo et al. — Machining feature recognition based on deep neural networks to support tight integration with 3D CAD systems (2021)",
+      "url": "https://www.nature.com/articles/s41598-021-01313-3",
+      "scope": "A cylindrical feature can use one or multiple B-rep faces. This implementation measures face segments and does not implement complete machining-feature reconstruction."
+    },
+    {
+      "id": "CNC_ACCESS_SCOPE",
+      "registry": "현재 절삭 출처 등록",
+      "file": "dfm/machining.py",
+      "line": 39,
+      "file_sha256": "aba3f23570060136ec408b2cfe9ad32a049862bb5aaaa0e888b7fd9f50c12ed8",
+      "title": "Autodesk Fusion — Shaft and Holder",
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm",
+      "scope": "Actual shaft/holder collision checks involve toolpath and clearance conditions. This source does not validate the implementation's sampled point-ray algorithm."
+    }
+  ],
+  "original_literature": [
+    {
+      "id": "R01",
+      "name": "Kerbrat, Mognol, Hascoët (2011)",
+      "title": "A new DFM approach to combine machining and additive manufacturing",
+      "raw_first_bold_text": "A new DFM approach to combine machining and additive manufacturing",
+      "doi": "10.1016/j.compind.2011.04.003",
+      "existing_note": "**A new DFM approach to combine machining and additive manufacturing**, Computers in Industry 62, 684–692. DOI: 10.1016/j.compind.2011.04.003. 9쪽, 본문 전체 읽음.\n\n목표는 단일 공정을 고집하지 않고 제품을 모듈로 나눠 절삭과 AM을 조합하는 설계 검토다. 표면을 적응형 octree 경계 셀로 표현하여 전역·국소 제조 난이도를 계산한다. 값은 0~1이며 **높을수록 어려움**이다. 현재 프로젝트의 높은 점수=좋음 체계와 방향이 다르다.\n\n- p3 Table 1: 절삭 전역 지표는 치수·제거량·재료 경도·거칠기, 국소 지표는 공구 유연성. AM 전역은 최대 치수·체적·표피 면적, 국소는 높이·플랫폼 중심으로부터 거리.\n- p5 Eq.1: 국소 평균은 셀 체적으로 가중한 평균. p6 Eq.2: 모듈별 지표의 가중 합. Eq.3: 모듈 체적/전체 모듈 체적을 가중치로 사용. 국소 최대값은 평균과 별도로 유지한다.\n- 절차: 원 CAD 평가 → 공정·분할 대안 선정 → 모듈 CAD 생성 → 재평가 → 비교. SolidWorks VBA/Excel 기반 사례.\n- 금형 코어 사례에서 칩 제거 지표 약 60%, 국소 유연성 최대 약 45%, 평균 약 53% 감소. 이는 지표의 변화이며 실제 원가·시간 감소의 실증값은 아니다.\n- 630×182×100 mm 금형 사례는 절삭 기반 위에 AM을 결합한다.\n- p8: 서로 다른 공정의 지표는 동일 척도가 아니므로 그대로 총합할 수 없다. 조립비·연결부·전체 제품 사양은 충분히 정량화되지 않았다.\n\n프로젝트 연결: 장기 하이브리드 제조성 검토와 국소 위험 위치의 근거. 지금 구현한 FDM 단일 부품 평가가 이 논문의 전체 분해 최적화라는 설명은 금지.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R02",
+      "name": "Ko et al. (2025), D-ECOmposer",
+      "title": "D-ECOmposer: Sustainable part decomposition for additive manufacturing using machine learning based life cycle assessment",
+      "raw_first_bold_text": "D-ECOmposer: Sustainable part decomposition for additive manufacturing using machine learning based life cycle assessment",
+      "doi": "10.1016/j.addma.2025.104759",
+      "existing_note": "**D-ECOmposer: Sustainable part decomposition for additive manufacturing using machine learning based life cycle assessment**, Additive Manufacturing 103, 104759. DOI: 10.1016/j.addma.2025.104759. 19쪽, 본문·표·참고문헌 읽음.\n\n빌드 공간보다 큰 모델을 grid로 분할하고, 재사용할 공통 모듈과 새로 생산할 맞춤 모듈을 구분한다. 모델의 grid 내 평행이동·회전을 GA로 최적화한다. 원래 한 번에 제작 가능한 부품에서의 이득을 일반 보장하지 않는다.\n\n### 데이터와 LCA\n\n- pp5–7: Baumann/Thingiverse 약 3만 STL에서 10 MB 초과·길고 얇은 형상 등을 제거하고 **14,000개** 사용. 최대 치수 정규화 후 30–90 mm로 스케일. 필터링은 산업·위상최적화 형상 일반화의 한계다.\n- Blender: X/Y/Z 치수, 모델 체적, 45° 기준 지지 체적. Tweaker 방향 선정. PrusaSlicer G-code: 재료량·제작 시간. openLCA: 탄소발자국 라벨.\n- Table 1 p7: FDM/ABS, infill 100%, 평균 속도 50 mm/s, 장비 전력 0.5 kW. 층 높이는 고정했다고 설명하지만 이 표에 수치가 없다. 임의 보충 금지.\n- Cradle-to-Gate: 원재료 생산 → 필라멘트 생산 → AM 제조. Ecoinvent 3.8, TRACI 2.1의 GWP/CO2e. 조립·후처리·사용·폐기 및 반복 재사용 효과는 범위 밖.\n- 전력은 제작 시간×고정 장비 전력으로 추정한다. 실제 시간대별 소비전력 계측이 아니다.\n\n### 예측·최적화\n\n- 5개 기하 입력, 2개 은닉층, ReLU, 1개 출력의 ANN. AutoKeras, Adam, RMSE; Python 3.11.3/TensorFlow 2.13.0/Keras 2.13.1.\n- 학습/시험 8:2; 학습 집합의 20%를 검증에 사용했다고 기술. 유사 모델 가족 단위 분리 여부는 제시되지 않는다.\n- p8 Table 2: 5-fold 평균 R² ANN 0.9266±0.0235, 선형회귀 **0.9321±0.0169**, RF 0.9035, XGBoost 0.7883, GBM 0.7974, LightGBM 0.8113, SVR 0.9070. ANN이 모든 비교모델보다 우수하다는 결론은 표와 다르다.\n- p8의 “R²는 0~1” 설명은 일반적으로 맞지 않는다. 나쁜 예측에서는 음수 가능. p9의 1,000회 Monte Carlo 입력 민감도와 실제 예측오차를 구분한다(일부 시험점 오차 20–40% 이상도 언급).\n- F1=공통 모듈 수 최대화; F2=맞춤 모듈 지지 체적 최소화; F3=맞춤 모듈 예측 탄소발자국 합 최소화. F3는 공통 모듈의 새 제조 부담을 제외하는 재사용 가정이다.\n- GA: population 30, crossover 0.7, mutation 0.02, 최대 100세대, 20연속 세대 변화가 tolerance 이하면 종료. Trimesh/DEAP/PyVista 활용.\n- Armadillo/Bunny/Dolphin/Moai, grid 10/15/20/25/30. 작은 모듈은 공통 모듈 체적의 10% 미만.\n- pp12–13 Table 4: F3가 대체로 탄소발자국 감소에 유리하나 Armadillo grid 10에서 F1=140, F3=141로 예외가 있다. 같은 p13의 “all cases” 서술을 그대로 인용하지 않는다.\n- Table 6: Dolphin 세대당 시간 grid10 2411.73 s → grid30 159.12 s. 크기만이 아니라 형상·분할 수 영향. p13은 Dolphin 246,329 mm³를 Armadillo 227,873 mm³보다 작다고 써 수치와 서술이 모순된다.\n- Table 7: 20% infill은 100% 대비 시간·재료·탄소 감소 사례. 구조 성능 동등성은 검증하지 않았다. 표의 carbon footprint 단위(g)와 앞 표·LCA 단위 연결은 재검증 대상이다.\n- 조립 연결은 나사/일체 체결/접착/에너지 접합을 논의하나 접합 성능·조립 LCA 최적화를 완료한 것은 아니다. 여러 장비는 경과 시간을 줄여도 총 에너지 감소를 보장하지 않는다.\n\n프로젝트 연결: AI 보정 전에 고정된 공정 조건, 라벨 정의, 독립 시험 집합이 필요하다. 지지량을 줄였다는 이유만으로 친환경 점수를 높일 수 없다. 현재 프로젝트는 LCA/ANN/GA 분해 미구현.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R03",
+      "name": "Medellín-Castillo & Zaragoza-Siqueiros (2019)",
+      "title": "Design and Manufacturing Strategies for Fused Deposition Modelling in Additive Manufacturing: A Review",
+      "raw_first_bold_text": "Design and Manufacturing Strategies for Fused Deposition Modelling in Additive Manufacturing: A Review",
+      "doi": "10.1186/s10033-019-0368-0",
+      "existing_note": "**Design and Manufacturing Strategies for Fused Deposition Modelling in Additive Manufacturing: A Review**, Chinese Journal of Mechanical Engineering 32:53. DOI: 10.1186/s10033-019-0368-0. 16쪽.\n\n형상·품질·재료·지속가능성 네 축의 FDM 설계/제조 전략 리뷰. 최종 요구사항, 공정 설정, 방향, 후처리를 함께 고려한다. 문헌의 권장값은 다수의 다른 연구를 재인용하므로 직접 실험과 구분한다.\n\n- 형상: 지지 제거 접근성, 오버행/간격, 빌드 공간과 분할·조립, 노즐 크기/모서리 반경, 공정 해상도와 실제 치수 정확도 차이.\n- Table 2의 층 높이 0.18/0.25/0.33 mm ↔ 벽 두께 0.71/1.02/1.32 mm는 해당 출처의 권고값. 모든 수직벽을 층 높이의 4배로 정할 물리 법칙이 아니다.\n- 오버행 1.8 mm, 간격 0.4 mm, 벽 1–1.5 mm 등의 권고가 등장하나 출처·출력 조건과 함께만 사용한다.\n- 방향은 지지·높이·품질·기계적 이방성의 다목적 선택. 래스터 각도, 내부 채움, 윤곽, 접착, 수축/뒤틀림 영향.\n- Eq.1 열 변형 모델, Eq.2 각도·층 높이 기반 거칠기 모델, Eq.3/4/5 특정 재료의 굽힘·마모 경험식, Eq.6/7 에너지·시간 모델은 해당 실험 영역 내 모델이다.\n- p9–10 D/E 인자 설명의 각도·폭 단위가 뒤바뀐 듯한 불일치와 마모식 반올림 계수가 있다. 그대로 코드에 옮기지 않는다.\n- 3D Touch 장비의 금형 패턴·오일 펌프·공압 조립 사례는 시각화/조립 검토이며 실제 기능 부품의 강도나 임상 성능 인증이 아니다.\n- LCA 연구들 간 결론이 달라 AM의 환경 우월성을 보편화하지 않는다. 층 높이와 강도의 관계도 재료·경로·조건에 의존한다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R04",
+      "name": "Alafaghani, Qattawi, Ablat (2017)",
+      "title": "Design Consideration for Additive Manufacturing: Fused Deposition Modelling",
+      "raw_first_bold_text": "Design Consideration for Additive Manufacturing: Fused Deposition Modelling",
+      "doi": "10.4236/ojapps.2017.76024",
+      "existing_note": "**Design Consideration for Additive Manufacturing: Fused Deposition Modelling**, Open Journal of Applied Sciences 7, 291–318. DOI: 10.4236/ojapps.2017.76024. 28쪽. p21–23 Table3는 회전된 표 이미지를 추가 대조했다.\n\n설계·FEA·제조의 연결을 사례 중심으로 설명한다. 균질 등방 재료 FEA만으로 실제 적층 이방성과 온도 의존성을 대표할 수 없다.\n\n- PLA 재료: 출력 인장시험 18개와 원재료 9개, 실온/50/60°C. Tg 부근 물성 변화가 커 사용 온도를 설계에 반영.\n- 주 실험 Taz 6, 노즐 0.5 mm, 3 mm PLA, 층 0.2 mm, shells 3, 선폭 0.5 mm, 200°C, 40 mm/s. 수치의 적용 조건을 보존.\n- 수평 기준 30–60° 오버행과 10–40 mm 브리지 제작 예. Jiang의 처짐 허용 0.15 mm와 같은 합격 기준이 제시된 실험이 아니므로 브리지 한계 수치를 단순 비교할 수 없다.\n- 조립 핀 1.5–4 mm, 간격 0.1–0.5 mm; 0.3 강제 삽입, 0.4 쉬운 삽입, 0.5 느슨한 조립의 사례. 간격 정의(직경 차/편측 간격)를 확인해서 적용.\n- 홀/핀 치수, 정수 층 높이, 플랫폼 부착과 휨, island와 지지, 적층 방향·래스터·infill, stringing/under-extrusion을 다룬다.\n- 수직 제작 2시간 대 눕힌 제작 32분 사례는 해당 형상. 평면 Ra 1.86–22.48 μm 등의 값은 인용 연구의 결과이며 현재 cusp 지표가 아니다.\n- 브래킷: 3개 강재 부품을 PLA로 재설계, 원형 봉→사각 봉, 위상최적화와 조립 방향. 35 kg 해석 하중/40 MPa/1.5 mm 변위와 실제 출력 5시간20분을 혼동하지 않는다. FEA 결과는 하중 시험이 아니다.\n- p21–23 Table 3 문헌 종합, p24–28 참고문헌 64개. 오기·서지 오류 가능성은 원 인용문헌 확인 전 유지.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R05",
+      "name": "Patterson, Chadha, Jasiuk (2021)",
+      "title": "Identification and Mapping of Manufacturability Constraints for Extrusion-Based Additive Manufacturing",
+      "raw_first_bold_text": "Identification and Mapping of Manufacturability Constraints for Extrusion-Based Additive Manufacturing",
+      "doi": "10.3390/jmmp5020033",
+      "existing_note": "**Identification and Mapping of Manufacturability Constraints for Extrusion-Based Additive Manufacturing**, JMMP 5:33. DOI: 10.3390/jmmp5020033. 37쪽.\n\n8개 요구사항(MCR)을 6개 길이 척도(MCL: submicro, micro, meso-element, meso-layer, macro-feature, macro-product)에 매핑하여 54개 제약으로 체계화한다. 3자유도·고정 원형 노즐·정상 보정된 장비를 가정한다. 제약 자체 CN, 공정변수 PP-CN, 교란요인 CF-CN을 구분하고 BP/MS/GS 표현과 실험·관찰·해석·모델링 등의 도출 경로를 표시한다.\n\n### Table 3, pp13–18의 전체 제약 범위\n\n1 순도/품질, 2 첨가제/색, 3 환경, 4 압출온도, 5 대기온도, 6 속도, 7 베드온도, 8 jerk/가속도, 9 결정화도, 10 수축률, 11 결함률, 12 균질성, 13 충전 밀도, 14 지지 가능성, 15 지지 제거성, 16 지지 간섭, 17 노즐 크기, 18 노즐 재료, 19 비드 폭, 20 비드 높이, 21 높이 변동, 22 높이/폭, 23 비래스터 배치, 24 래스터 각, 25 독립 비드 최소 길이, 26 회전 반경, 27 쉘 접촉, 28 이전 층 infill 접촉, 29 이전 층 쉘 접촉, 30 overlap/air gap, 31 비드 브리지, 32 쉘 두께, 33 쉘/infill 비율, 34 층 브리지, 35 층 오버행, 36 최소 층 수, 37 바닥/지붕, 38 응력집중, 39 브리지 형상, 40 오버행 형상, 41 홀, 42 얇은 벽, 43–49 비드/쉘/이전층/인접비드/외부층/형상의 치수오차, 50 재료 불확실성, 51 최소 안정 길이, 52 표면처리 접근성, 53 거칠기, 54 검사·검증·보증.\n\n### 수치와 한계\n\n- 높이/폭 ≤2/3, 구조 5층·바닥/지붕 3층 등은 조건부 제약/경험 지침이지 KS 숫자가 아니다.\n- p18: 노즐 0.5 mm에서 2.5 mm 특징(양측 쉘+infill=5개 노즐 지름) 설명. Table 4/p28에는 2.5개 노즐 지름 표현이 있어 서로 다르다. 원문 수치 통일 필요.\n- ABS/PC/PLA 온도 230/250/210°C, 베드 80/80/60°C, 예열 10분. 주 비드 폭 0.6 mm/높이 0.2 mm. 유리판 부착 길이 시험 등은 장비·재료에 한정.\n- p25 브리지 본문 속도는 10/50 mm/s인데 Table 5 및 Fig.16은 **20/70 mm/s**. 표의 안정 브리지 길이: 70에서 ABS3/PC7/PLA3 mm, 20에서 ABS6/PC8/PLA4 mm. 어느 조건이 맞는지 미해결.\n- 코너 최소 반경은 nozzle radius/width 표현이 혼재한다. 이전 고분자와의 접촉 길이 보수값은 노즐 폭, 더 짧은 비율은 별도 시험 필요.\n- IZOD 치수오차 실험의 노즐 0.4/층 0.2 조건에서 오차가 노즐 폭 이내라는 결과를 전체 제조오차 상한으로 쓰지 않는다.\n- 팬/스프링/트러스, 20 mm infill cube, gyroid/Scherk 사례로 제약 적용을 보여준다. 프린트 성공 사례는 분류기 정확도 검증이 아니다.\n\n프로젝트 연결: 현재 기하 규칙은 54개 전체를 구현하지 않는다. 원재료·공정·검사 정보를 모델링하지 않은 부분은 명시적인 미평가 범위다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R06",
+      "name": "Jiang, Xu, Stringer (2018)",
+      "title": "A new support strategy for reducing waste in additive manufacturing",
+      "raw_first_bold_text": "A new support strategy for reducing waste in additive manufacturing",
+      "doi": null,
+      "existing_note": "**A new support strategy for reducing waste in additive manufacturing**, CIE48, Auckland, 7쪽.\n\nPTOA는 표면 접선과 수평 XY 평면 사이의 인쇄 가능 임계각, LPBL은 요구 품질을 만족하는 인쇄 가능 브리지 길이. 지지 간격을 LPBL, 지지 기울기를 PTOA로 제한하여 짧고 적은 지지를 설계한다. 45°는 흔한 설정이나 반드시 시험으로 정해야 한다고 설명한다.\n\n- p5: Kossel Delta, 빌드 범위 180×180×300 mm 표기, 노즐 0.4 mm, PLA, 190°C, 20 mm/s, fan 250 RPM, infill30%, 층0.2 mm.\n- 측정 **PTOA40°, LPBL2.0 mm, 처짐 허용≤0.15 mm**. 이 세 값과 조건은 함께 기록해야 한다.\n- T 형상 지지 재료: 제안법0.3 g, Cura15.04 line2.1 g/grid2.3 g. 제거 용이성과 접촉 흔적 감소 사례. 기계적 강도/탄성률 개선을 시험한 것은 아니다.\n- 현재 코드의 브리지2 mm는 이 조건부 값 차용. 기본45°는 실측40° 자체가 아니라 보수적인 프로필 선택이다. 실제 장비·재료·온도·속도·냉각을 맞췄다는 뜻은 아니다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R07",
+      "name": "Stavropoulos et al. (2022)",
+      "title": "Knowledge-based manufacturability assessment for optimization of additive manufacturing",
+      "raw_first_bold_text": "Knowledge-based manufacturability assessment for optimization of additive manufacturing",
+      "doi": "10.1007/s00170-022-09948-w",
+      "existing_note": "**Knowledge-based manufacturability assessment for optimization of additive manufacturing**, IJAMT 122, 993–1007. DOI: 10.1007/s00170-022-09948-w. 15쪽.\n\nSTEP B-rep의 closed shell/advanced face/face bound/edge loop/oriented edge/curve/vertex와 원통·평면 등 기하 정보를 구조화하고 규칙 기반 제조성 검토를 수행한다. MATLAB 구조체로 부품, 높이별 특징, 경계 정보를 정리한다.\n\n- 브리지/오버행, unsupported 부분, 벽, 최소 특징, 종횡비, 홀/원통 등 7개 특징 범주. Table 2 p10에 특징별 조건.\n- 임계값은 공정·장비별 시험으로 보정할 것을 제안. 최소 비드 폭도 사전 시험 필요. 숫자가 자동으로 STEP에 포함되거나 표준에서 주어지는 것은 아니다.\n- NIST 계열 시험물을 이용한 치수·평행도·벽·홀·원통·브리지·오버행 측정 프로토콜. 반복 제작 10–15회 인용과 20회 측정 제안은 서로 다른 단계.\n- 평평한 기준면 가정과 단순 특징 연결 가정. 모든 STEP 파일이 항상 완전한 두 면/두 점 조건을 만족한다는 보장은 없다.\n- Benchy 실제 출력과 경고 위치의 정성 비교. 독립 데이터셋의 precision/recall이나 일반 성공률은 없다. 3축 외 확장·변형 예측은 후속 과제.\n- p11의 공정변수 독립성 서술과 변수별 실험 권고는 긴장이 있다. 메트롤로지 표준에 대한 일반화도 직접 원표준을 확인해야 한다.\n\n프로젝트 연결: STEP 확장의 구조적 참고. STL→STEP 변환만으로 원래 feature/PMI/설계 의도가 복구되지는 않는다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R08",
+      "name": "KS D ISO ASTM 52902:2019 (불완전 캡처)",
+      "title": "KS D ISO ASTM 52902:2019 (불완전 캡처)",
+      "raw_first_bold_text": "PDF1이 본문5절(인쇄쪽2)에서 시작",
+      "doi": null,
+      "existing_note": "저장 PDF29쪽은 원표준 전체가 아니다. **PDF1이 본문5절(인쇄쪽2)에서 시작**, PDF23의7.5 뒤 PDF24는 부속서C로 건너뛴다. 1–4절, 부속서A/B, C의 일부(원형 시험 절차 포함), 참고문헌 등이 없다. 도구모음이 본문을 가린 곳도 있다. 전 페이지 OCR을 읽었으나 가린 문장을 복원했다고 주장하지 않는다.\n\n- 5절: 적합 재료·공정 사양·디지털 파일/슬라이싱·시험 절차·위치/방향·지지/후처리를 기록해야 재현 가능하다.\n- 5.6: CAD→STL/AMF 최대 편차를 시스템 공차의 1/4 미만, 이상적으로1/10 미만 권고. 10 μm/2.5 μm 예시는 2019 기술 상황의 설명이며 모든 현재 장비의 한계가 아니다.\n- 5.7 AMF는 단위와 기하 정확도 보존 측면 선호. 변환 후 스케일 변경·장비 보정은 결과 해석과 기록에 영향.\n- 5.9: 통계적 시험은 통상5개 이상 표본, 적어도5회 측정 가능하도록 수량 협의. 간이 검증과 장비 전체 평가를 구분.\n- 5.13: 시험물 분포가 빌드판 영역 최소80%를 덮도록 권고. 중앙의 최적 위치만 측정한 결과를 전 작업영역 성능으로 확대하지 않는다.\n- 5.14–16: 형상 크기 변경 대신 배열 가능, 인접 부품/열/층 또는 픽셀 위상 영향, 지지 설계 기록, 원 적층물 상태 측정과 후처리 전후 측정 구분.\n- 6절: 측정 전략·측정 장치·해상도·교정·표준 불확도 기록. 같은 측정량도 샘플링 위치/필터에 따라 다르다. 특정 측정 장비를 일률 강제하지 않는다.\n- 7.2 선형 정확도: 55×5×8 mm 시험물, 비균일 간격5/7.5/10/12.5 mm. 위치·크기·진직도·평행도.\n- 7.2 원형 정확도: 동심원, coarse/medium/fine 세 크기; 원 지름/진원도·동심도·원통도·두께. 최소5위치 측정 설명.\n- 7.3 핀: coarse 지름4/3/2/1/0.5 mm; medium0.5/0.4/0.3/0.2/0.1; fine0.2/0.15/0.1/0.05/0.025. 길이/지름4/6/8/10. 이는 **시험할 크기**, 제조 가능 보증 크기가 아니다.\n- 홀: 같은 크기 단계, 높이2.5 mm 관통홀; 보이는 입구만으로 관통 여부를 판정하지 않으며 잔여재 제거와 방향을 고려.\n- 리브: 두께 coarse6..1 mm, medium1/.8/.6/.4/.2/.1, fine.1/.08/.06/.04/.02/.01; 높이10/20 mm. 슬롯은 대응한 틈 크기, 높이·형상 별 시험.\n- 7.4 표면 텍스처: 빌드판 기준0/15/30/45/60/75/90° 판의 양면. 프로파일/면적 측정, 거칠기·필터·측정길이/면적·방향을 함께 보고. 순수 계단 기하 외 분말·압출·중력·열·장비 조건 영향.\n- 7.5 방향/위치를 식별하는 비대칭 라벨, 측정 특성 방해 금지.\n- 부속서C는 **참고**: MPE≤.02 mm 마이크로미터/캘리퍼, 반복 위치 측정, 홀 핀게이지 .1 mm 증가/최대 내접 지름, 슬롯 필러게이지 .05 mm 증가, 무리한 힘 없이 관통 등. go/no-go는 실제 지름의 범위를 주며 완전한 형상 측정이 아니다.\n- 부속서D는 시험물 STEP 파일명·대략 크기 목록. 공식 형상 파일: https://standards.iso.org/iso/52902/ed-1/en (링크 접근 여부/파일은 사용 전 확인).\n\n판 정보: ISO 공식 페이지에서 국제표준 2019판이 2023판으로 대체된 사실을 확인했다: https://www.iso.org/standard/79683.html . **국제표준 개정과 KS 채택·확인일은 별개**이며 새 국제판 전체를 읽었다는 뜻이 아니다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R09",
+      "name": "KS D ISO ASTM 52903-1:2020",
+      "title": "KS D ISO ASTM 52903-1:2020",
+      "raw_first_bold_text": "공급재료",
+      "doi": null,
+      "existing_note": "플라스틱 재료 압출 AM의 **공급재료**. 표지 KS제정일2023-05-02, 국제2020 제1판과 IDT라고 개요에 설명. 9쪽 캡처이며 참고문헌 누락·툴바 가림 있음. OCR 전체 읽음, 부속서A 그림 확인.\n\n- 1절: 충전/미충전/강화 플라스틱과 첨가제를 포함하는 재료 요구사항 정의 및 공급망 의사소통.\n- 3절 filament/pellet 정의. 재료와 장비에 투입될 최종 공급재료의 역할 구분.\n- 4.1 분류·요구 물성·시험방법을 발주서에 명시. ASTM D4000/KS M ISO1043-1 등 분류와 압출을 뜻하는 E.\n- 4.2 조성·용융흐름지수·열/물리 특성의 공정 적합성, 스풀/필라멘트 장비 사양·공차, 수분 조건과 밀봉/보관/건조, 판매자·재료ID·로트·제조일 및 고유 식별.\n- 5절 요청 시 로트별 적합성 인증과 구매자 요구 물성 제공. 6절 보호 포장·수분·출하 정보. 7절 구매 사양에 따른 시편/시험 책임과 구매자의 검사 권리.\n- 부속서A는 **규정**: ABS 예시의 최대5개 블록(재료/충전재/용도·E/특성/추가정보). 예시125°C,4 g/10min,16 kJ/m²,2500 MPa는 재료 코드 예시이며 FDM 기본조건이 아니다.\n- 해설은 표준 일부가 아님. wall/bridge/overhang 숫자를 정하는 표준이 아니다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R10",
+      "name": "KS D ISO ASTM 52903-2:2020",
+      "title": "KS D ISO ASTM 52903-2:2020",
+      "raw_first_bold_text": "공정 장치·운영 변수",
+      "doi": null,
+      "existing_note": "플라스틱 재료 압출 AM의 **공정 장치·운영 변수**. 표지KS제정일2023-05-02, 국제2020판 IDT. 9쪽 캡처, 참고문헌 누락·본문/표 주석 가림. OCR 전체 읽음, 인장시험 Table1 시각 확인.\n\n- 4절 I/II/III 등급은 공정 사양과 추적성 수준이다. 프로젝트 A/B/C/F 설계점수 등급과 무관.\n- 5절 재료는52903-1. 6절 기본적으로 지지 제거 외 후처리 없는 시험편; 실제 제품 후처리가 물성에 영향을 주면 같은 후처리 시험편을 고려.\n- 방향무관·방향의존 비기계·인장 외 기계 물성: 별도 구매자/시험법 사양 없으면 제작당 최소3시험편. 방향의존은 불리한 위치·방향 고려.\n- Table1(PDF6): 인장 I등급 최소3 XY또는YX **그리고** 최소3 ZX또는ZY; II등급 최소3 XY또는YX; III등급 구매자 요청 없으면 요구 없음. 표 주석b가 툴바에 가려 정확한 예외 문구 미확인.\n- 7절 검사·시험 책임 및 구매자 권리. **8절 공차와 표면 거칠기는 제조자와 협의하여 구매자가 정의**한다. 보편 숫자 없음.\n- 9절 장비/노즐/플랫폼 유지보수, 원재료 상태, 재현성 변수 기록(열원온도·공급률·노즐직경·층높이·윤곽/infill·장비대기·판온도·시간 등). 일부 목록 가림으로 원문 필요.\n- 9.4 구매자 사양의 생산 요구사항,9.5 지지제거/가공/육안·내부 형상검사 등 후처리.10절 OEM기반 장비·제작·재검증.11절 요청시 출하 보고서.\n- SI와 inch-pound 체계의 값은 서로 임의 혼용하지 않는다고 개요에 명시. 해설은 표준 일부가 아니다.\n\n공식 국제판 상태 보조 확인: https://www.iso.org/standard/69968.html (2020판 Published/Confirmed 표기, 확인일2026-09-10). KS현행 상태를 대신하지 않는다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R11",
+      "name": "KS D ISO/ASTM 52910:2018",
+      "title": "적층제조—설계—요구사항, 지침 및 권고사항",
+      "raw_first_bold_text": "적층제조—설계—요구사항, 지침 및 권고사항",
+      "doi": null,
+      "existing_note": "**적층제조—설계—요구사항, 지침 및 권고사항**. KS제정2019-12-19, ISO2018제1판 IDT. 32쪽 캡처, 전체 OCR 읽음. 도구모음 가림과 참고문헌 누락 있음. 규격 인증에 사용할 완전한 원문은 아니다.\n\n- 1절: 모든 AM 방식에 적용할 일반 설계 고려사항. **구체적 설계 해법·특정 공정/재료 자료를 포함하지 않는다.**\n- 3절 7공정: binder jetting, DED, material extrusion, material jetting, PBF, sheet lamination, vat photopolymerization. SLA/SLS/DMLS는 이 분류와 같은 계층의 7대 공정명이 아니다.\n- 4절: AM 가능성/공정 선정 전략. 기능·재료·빌드공간·맞춤·경량·복잡성·경제성·위험 고려. 4.4 흐름도는 강제 규정 아님.\n- 5.2 기회: 툴링 감소, 맞춤·격자·기능성·재료분포·부품통합·짧은 lead time. 5.3 한계: 재료/공급품질·공정변동·이방성·형상 이산화·후처리·빌드 공간. 대량 단순부품은 전통 공정이 유리할 수 있다.\n- 6.2 제품: 기능 손실 없는 부품통합, 조립 형상, 다중 부품/유연 메커니즘, 전체 공정 사슬.\n- 6.3 사용 환경: 온도극값/작동범위/열주기/CTE, 화학·흡수·응력균열·부식, 방사선, 생물학적 노출, 복합 환경.\n- 6.4 지속가능성: 자원 절감·재활용/표시·재사용, 원재료·폐기물 흐름, 에너지·물·탄소·전체 수명 영향. 가벼움/지지감소 하나만으로 LCA 결론 불가.\n- 6.5 사업: AM 및 전체 공정비용/선행 엔지니어링, 재료, 주문량, 시간, 장비 활용, 후처리, 폐기, 검사, 노동, 포장/출하, 공급사슬.\n- 6.6 형상: 정확도와 정밀도, 실제 표면거칠기, 최소 양각/음각 특징, 종횡비, 최소 간격, 끼워맞춤, 빌드 크기, 무지지 크기, 두께·중력·열·방향, 메시 무결성, 데이터 교환.\n- 6.6.11: 닫힌 양의 재료 체적·비다양체/중복/내부면·법선 점검. **공동의 정당한 내벽을 불필요 내부면과 혼동해서 제거하면 안 된다.** 재료의 바깥쪽은 공동에서는 빈 공간 쪽이다.\n- 6.7 물성: 이방성과 시편 대표성, 인장·굽힘·충격·압축·전단·피로·creep, HDT/Tg/용융, 전기저항·유전·절연, 밀도/비중·경도·인화·수분. 실제 물성은 STL에서 알 수 없다. 일부 번역의 밀도/비중 또는Tg 표현을 물리학의 정밀 정의로 대체 사용하지 않는다.\n- 6.8 공정별 재료·지지·후처리/인증/검사와 주요 변수. 고분자PBF의 분말 자력지지와 금속PBF의 열/고정용 지지를 구분한다. DED 등의 기술 설명은2018판 맥락이며 모든 현재 장비의 절대 한계 아님.\n- 6.9 설계 의도·단위·공차·방향·보정·공정 한계를 설계자/제조자 간 전달.\n- 7절 red flags: 오버행/지지제거, 갑작스러운 두께 변화, 갇힌 재료, 계단화·피로, 청결, 미세부품 손상, NDT, tessellation, 파일 단위, CAD/CT/스캔 원천 품질.\n- 7.10 STL단위 부재와 AMF단위 명시.7.11 스캔해상도 한계. 해설은 표준 일부 아님.\n\n**프로젝트 해석:** 하드 게이트+소프트 점수는 이 표준에서 영감을 받은 자체 구조다. 표준7절 경고를 모두 절대 출력불가로 치환할 수 없다. 45°,2 mm,노즐0.4 mm,가중치0.2,등급A는 표준이 지정한 숫자가 아니다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R12",
+      "name": "Mochizuki, 3D 주석 모델 자료",
+      "title": "Manufacturability of Parts with 3D-Annotated Model Generated by 3D-CAD (정식 원문 서지 미확인)",
+      "raw_first_bold_text": "Manufacturability of Parts with 3D-Annotated Model Generated by 3D-CAD.pdf",
+      "doi": null,
+      "existing_note": "저장소 **Manufacturability of Parts with 3D-Annotated Model Generated by 3D-CAD.pdf**는5쪽 **한국어 번역/편집본**이다. 저자 Tatsuya Mochizuki/시즈오카문화예술대학 표기. 출판연도·권호·DOI가 없는 상태. 그림1–33을 본문에서 참조하지만 그림 자체를 모두 제공하지 않는다. 말미의 프로젝트 적용 시사점은 원문 연구결론과 별도다.\n\n- CAD 형상만이 아니라 datum/치수/공차 등 3D annotated model의 제품 특성을 정의해야 한다. B-rep/CSG/feature/NURBS의 역할, CAD-CAM-CAE-CAT 흐름.\n- 절삭 공구 접근/가공특징, 판금/사출 언더컷·draft·유동, 프레스 스프링백과 금형 노하우.\n- 조립/유지보수/공구 삽입/작업공간/부품흐름, E-BOM→M-BOM/작업순서/Gantt/작업지시.\n- 검사 datum과 좌표계, 프로브 충돌과 작은/깊은 홀 접근성, 검사리포트 및 설계 피드백. 최대실체조건 게이지 등 설계 의도와 측정 조건.\n- 규칙에 제조 노하우를 기술하는 것이 어려우며 공학교육의 연결을 논의한다. 파일에 붙은 AI·현재 프로젝트 제안은 편집자의 적용 해석으로 취급한다.\n\n**상태:** 번역 파일의 읽을 수 있는 내용은 읽었으나 영어 원문의 전 내용 및 그림을 검증하지 못했다. 원문 확보 전 정확한 논문 서지·인용과 세부 알고리즘의 직접 구현 근거로 확정하지 않는다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R13",
+      "name": "Mazlan et al. (2020)",
+      "title": "Overhang Analysis Fabricated Using Fused Deposition Modeling Technique",
+      "raw_first_bold_text": "Overhang Analysis Fabricated Using Fused Deposition Modeling Technique",
+      "doi": "10.30880/jaita.2020.01.01.005",
+      "existing_note": "**Overhang Analysis Fabricated Using Fused Deposition Modeling Technique**, Journal of Advanced Industrial Technology and Application 1(1),38–47. DOI:10.30880/jaita.2020.01.01.005. PDF11쪽(저작권 페이지 포함).\n\n- PLA1.75 mm,노즐.4,층.15,195°C,40 mm/s,infill20%. fan225의 단위가 mm/s로 표기되어 원문의 단위 오류 가능.\n- 외팔보 길이0.5–4 mm의12조건. Table4(PDF7)는1.5 mm까지 성공,2 mm 실패. p6 본문은≤2 성공으로 써 모순, 결론의below1.5도 경계 포함 여부가 다르다. **외팔보를 양끝 지지 브리지로 해석하지 않는다.**\n- 각도10–70°/5°간격13조건. overhang은 수직 기준, draft는 수평 기준.\n- Table5는overhang≤45° 성공/50° 실패.45° 모델 실측37.64°로 형상 오차도 존재. Table6는draft≥50° 성공.\n- 본문의70° 주장과 표의50° 합격 경계가 불일치한다. 초록 각도에mm단위, 표의각도열CAD data(mm) 등 오기.\n- 도입의 AM공정 분류도 ISO7분류와 다르므로 표준분류를 따로 참조한다.\n\n프로젝트 연결: 각도 정의·허용 형상오차와 조건을 기록해야 한다는 사례. 오류 있는 단일 문장으로 임계값을 확정하지 않는다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    },
+    {
+      "id": "R14",
+      "name": "Oh et al. (2021)",
+      "title": "Part decomposition and evaluation based on standard design guidelines for additive manufacturability and assemblability",
+      "raw_first_bold_text": "Part decomposition and evaluation based on standard design guidelines for additive manufacturability and assemblability",
+      "doi": "10.1016/j.addma.2020.101702",
+      "existing_note": "**Part decomposition and evaluation based on standard design guidelines for additive manufacturability and assemblability**, Additive Manufacturing37,101702. DOI:10.1016/j.addma.2020.101702(온라인2020).13쪽.\n\nISO52910의 다양한 고려사항에서8개 평가 지표(EI)를 골라 분해·조립 대안을 최적화한다. ISO 전체의 정량화가 아니다.\n\n- G1 표면: 법선/빌드 방향 각도와 면적으로 계산한 roughness 대리량. Ra측정값 아님.\n- G2 overhang: 임계각 이하 면의 투영 면적 합. 실제 지지 부피가 아님.\n- G3 sharpness: 모서리 길이와 인접면 각도의 임계조건. p4 Eq.3 이미지는 τ_SH < θ_e_SH일 때0,그 외L(e)로 읽힌다. p5의beyond threshold 서술과 대조가 필요하며 정의·부등호를 임의 수정하지 않는다.\n- G4 gap: facet중심 바깥법선 ray로 만나는 다른 성분까지 거리가 threshold보다 작으면 면적 집계. 모든 위치의 전역 최소간격이 아님.\n- G5 concavity: convex hull 체적−부품 체적 합. 값0이라도 구의 아래쪽은 지지가 필요할 수 있다.\n- G6 feasibility: bounding box 대각선<설정한계이면0,아니면큰패널티M. 방향무관 보수 proxy,정확한 box fitting과 다름.\n- G7 interface: 접촉면적합의 음수/2(중복접촉면 보정),G8 부품 수. G7부호와 정규화·본문최대화 설명은 구현 시 주의.\n- Eq.9 기본 V-HACD 대안의 ε로 정규화하여 가중 합. ε=0/초과시1 처리와 음수G7 정규화는 단순 양수비용과 같지 않다.\n- CPD: V-HACD 결과와 원래형상의 Boolean intersection으로 원표면 복원. VPD: 크기초과 성분 centroid기준 plane분할.\n- GA4개gene α/β/γ/maxconcavity,default .05/.05/.00125/.0025,pop10,gen300,mutation.3.\n- Table2 p8 **사용자가 설정한**threshold overhang60°,sharp170°,gap2 mm,feasible250 mm. **ISO규정값 아님.** 슬라이서support50°ME/45°VP와도 별개.\n-9모델,Cura4.5 ME/PrusaSlicer2.2 VP,설정상200×200×300빌드범위,층.2/.05,infill20/50%.이 표의가상실험범위를 실제SL1제품사양이라고 쓰지 않는다.\n- 평균 build time감소21%ME/70%VP,재료27%/22%의슬라이서결과. Nist1은 ME재료10→11/시간83→88,VP재료12→13으로 악화. 분할이 모든 부품에서 이득이라는 증거가 아님.\n-26%/62% NCD대비효과의초록평균표현과 p11 honeycomb사례 연결을 확인해서 인용해야 한다.\n-접착interface크기 중심 조립성,실제접합강도·전체조립비·출력성능 검증은후속범위.\n\n프로젝트 연결: ISO항목→명시적EI→조건부score 접근의 근거. 현재 ray/slice 지표는 이 논문 수식과 차이가 있으며 모두 같은 지표라고 부르면 안 된다.",
+      "review_status": "기존 2026-09-10~11 조사 기록의 재고 목록; 이번 전체 원문 재독을 뜻하지 않음"
+    }
+  ],
+  "documentation_url_occurrences": [
+    {
+      "file": "docs/EVENT_SECTION_METHOD.md",
+      "line": 13,
+      "url": "https://dlmf.nist.gov/3.5.v"
+    },
+    {
+      "file": "docs/ORIENTATION_METRIC_CONTRACT.md",
+      "line": 22,
+      "url": "https://help.prusa3d.com/article/place-on-face-tool_1781"
+    },
+    {
+      "file": "docs/ORIENTATION_METRIC_CONTRACT.md",
+      "line": 24,
+      "url": "https://help.prusa3d.com/article/layers-and-perimeters_1748"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 13,
+      "url": "https://dlmf.nist.gov/3.5#v"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 14,
+      "url": "https://people.eecs.berkeley.edu/~jfc/mirtich/massProps.html"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 14,
+      "url": "https://arxiv.org/abs/1108.0117"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 28,
+      "url": "https://numpy.org/doc/stable/release/2.3.5-notes.html"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 28,
+      "url": "https://docs.scipy.org/doc/scipy/release/1.17.0-notes.html"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 59,
+      "url": "https://www.iso.org/standard/79683.html"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 61,
+      "url": "https://www.nist.gov/el/intelligent-systems-division-73500/production-systems-group/nist-additive-manufacturing-test"
+    },
+    {
+      "file": "docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md",
+      "line": 61,
+      "url": "https://www.nist.gov/publications/additive-manufacturing-test-artifact"
+    },
+    {
+      "file": "docs/project-knowledge/DEVELOPMENT_DIRECTION.md",
+      "line": 31,
+      "url": "https://www.iso.org/standard/67289.html"
+    },
+    {
+      "file": "docs/project-knowledge/DEVELOPMENT_DIRECTION.md",
+      "line": 31,
+      "url": "https://www.nist.gov/publications/part-decomposition-and-evaluation-based-standard-design-guidelines-additive"
+    },
+    {
+      "file": "docs/project-knowledge/DEVELOPMENT_DIRECTION.md",
+      "line": 47,
+      "url": "https://help.prusa3d.com/article/arachne-perimeter-generator_352769"
+    },
+    {
+      "file": "docs/project-knowledge/INDEPENDENT_CAD_AUDIT_2026-09-14.md",
+      "line": 20,
+      "url": "https://github.com/Open-Cascade-SAS/OCCT/blob/V7_9_3/src/BRepGProp/BRepGProp.hxx"
+    },
+    {
+      "file": "docs/project-knowledge/INDEPENDENT_CAD_AUDIT_2026-09-14.md",
+      "line": 22,
+      "url": "https://github.com/Open-Cascade-SAS/OCCT/blob/V7_9_3/src/BRepBuilderAPI/BRepBuilderAPI_Copy.hxx"
+    },
+    {
+      "file": "docs/project-knowledge/LITERATURE.md",
+      "line": 156,
+      "url": "https://standards.iso.org/iso/52902/ed-1/en"
+    },
+    {
+      "file": "docs/project-knowledge/LITERATURE.md",
+      "line": 158,
+      "url": "https://www.iso.org/standard/79683.html"
+    },
+    {
+      "file": "docs/project-knowledge/LITERATURE.md",
+      "line": 185,
+      "url": "https://www.iso.org/standard/69968.html"
+    },
+    {
+      "file": "docs/project-knowledge/MACHINING_UX_AUDIT_2026-09-20.md",
+      "line": 19,
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-ACCESSIBILITY-ANALYSIS.htm"
+    },
+    {
+      "file": "docs/project-knowledge/MACHINING_UX_AUDIT_2026-09-20.md",
+      "line": 20,
+      "url": "https://dfmpro.com/blog/how-dfmpro-helps-with-the-design-review-process/"
+    },
+    {
+      "file": "docs/project-knowledge/MEETING_REPORT_REVIEW_2026-09-11.md",
+      "line": 28,
+      "url": "https://www.sciencedirect.com/science/article/pii/S221486042500123X"
+    },
+    {
+      "file": "docs/project-knowledge/MEETING_REPORT_REVIEW_2026-09-11.md",
+      "line": 86,
+      "url": "https://help.prusa3d.com/article/arachne-perimeter-generator_352769"
+    },
+    {
+      "file": "docs/project-knowledge/OPEN_QUESTIONS.md",
+      "line": 7,
+      "url": "https://www.iso.org/standard/79683.html"
+    },
+    {
+      "file": "docs/project-knowledge/RELEASE_V3_2026-09-14.md",
+      "line": 31,
+      "url": "http://127.0.0.1:8507`이다"
+    },
+    {
+      "file": "docs/project-knowledge/UI_REVIEW_RESPONSE_2026-09-15.md",
+      "line": 37,
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html"
+    },
+    {
+      "file": "docs/project-knowledge/UI_REVIEW_RESPONSE_2026-09-15.md",
+      "line": 37,
+      "url": "https://plotly.com/python/axes/"
+    },
+    {
+      "file": "docs/project-knowledge/USER_WORKFLOW_RESEARCH_2026-09-15.md",
+      "line": 15,
+      "url": "https://help.autodesk.com/cloudhelp/2025/ENU/NETF/files/GUID-320E31A8-80A9-4A82-B4F3-070334B1675A.htm"
+    },
+    {
+      "file": "docs/project-knowledge/USER_WORKFLOW_RESEARCH_2026-09-15.md",
+      "line": 16,
+      "url": "https://help.autodesk.com/cloudhelp/2025/ENU/NETF-LuaApiRef/files/lua-api-ref/objects/miscellaneous/NETF-LUA-ANALYSIS.html"
+    },
+    {
+      "file": "docs/project-knowledge/USER_WORKFLOW_RESEARCH_2026-09-15.md",
+      "line": 17,
+      "url": "https://help.prusa3d.com/article/ui-overview_1766"
+    },
+    {
+      "file": "docs/project-knowledge/USER_WORKFLOW_RESEARCH_2026-09-15.md",
+      "line": 18,
+      "url": "https://www.materialise.com/en/inspiration/articles/5-basic-3d-model-repair-functions"
+    },
+    {
+      "file": "docs/research/AI_SEQUENCING_NOTE_2026-09-19.md",
+      "line": 9,
+      "url": "https://www.nist.gov/publications/design-additive-manufacturing-ontology-support-manufacturability-analysis"
+    },
+    {
+      "file": "docs/research/AI_SEQUENCING_NOTE_2026-09-19.md",
+      "line": 10,
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/"
+    },
+    {
+      "file": "docs/research/AI_SEQUENCING_NOTE_2026-09-19.md",
+      "line": 11,
+      "url": "https://arxiv.org/abs/2605.28579v2"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 213,
+      "url": "https://www.iso.org/standard/67289.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 214,
+      "url": "https://www.iso.org/standard/79683.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 215,
+      "url": "https://www.iso.org/standard/72951.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 216,
+      "url": "https://www.iso.org/standard/72952.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 217,
+      "url": "https://yayuepan.lab.uic.edu/wp-content/uploads/sites/779/2021/01/8edafea83b2e3d9d65896da53bcf9ab108dc.pdf"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 217,
+      "url": "https://doi.org/10.1108/RPJ-12-2015-0188"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 218,
+      "url": "https://formlabs.com/support/Model-Orientation/"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 219,
+      "url": "https://formlabs.com/support/Design-specifications-for-3D-models-Form-4-generation/"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 220,
+      "url": "https://formlabs.com/eu/white-papers/fuse-series-sls-design-guide/"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 221,
+      "url": "https://doi.org/10.3390/polym12061373"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 221,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7361694/fullTextXML"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 222,
+      "url": "https://link.springer.com/article/10.1007/s40964-024-00689-8"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 223,
+      "url": "https://www.sciencedirect.com/science/article/pii/S2214860418309035"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 224,
+      "url": "https://doi.org/10.3390/ma16227164"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 224,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10673092/fullTextXML"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 225,
+      "url": "https://www.eos.info/content/blog/2022/support-free"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 226,
+      "url": "https://link.springer.com/article/10.1007/s00170-020-04930-w"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 227,
+      "url": "https://store.astm.org/f3530-22.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 228,
+      "url": "https://www.nature.com/articles/s44387-026-00088-0"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 229,
+      "url": "https://arxiv.org/abs/2004.13497"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 230,
+      "url": "https://help.prusa3d.com/article/arachne-perimeter-generator_352769"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 231,
+      "url": "https://dev.opencascade.org/doc/overview/html/occt_user_guides__step.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 232,
+      "url": "https://github.com/3MFConsortium/spec_core/blob/master/3MF%20Core%20Specification.md"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 233,
+      "url": "https://github.com/3MFConsortium/spec_production/blob/master/3MF%20Production%20Extension.md"
+    },
+    {
+      "file": "docs/research/AM_DFM_EVIDENCE_REAUDIT.md",
+      "line": 234,
+      "url": "https://wwws.loc.gov/preservation/digital/formats/fdd/fdd000504.shtml"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 179,
+      "url": "https://www.iso.org/standard/67289.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 180,
+      "url": "https://www.iso.org/standard/79683.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 181,
+      "url": "https://www.iso.org/standard/72951.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 182,
+      "url": "https://www.iso.org/standard/72952.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 183,
+      "url": "https://store.astm.org/f3530-22.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 184,
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/119/jres.119.017.pdf"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 185,
+      "url": "https://arxiv.org/pdf/2004.13497"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 185,
+      "url": "https://doi.org/10.1016/j.cad.2020.102907"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 186,
+      "url": "https://help.prusa3d.com/article/arachne-perimeter-generator_352769"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 187,
+      "url": "https://ultimaker.com/de/learn/unlock-the-power-of-variable-line-width-with-ultimaker-cura-5-0/"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 188,
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=925693"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 189,
+      "url": "https://formlabs.com/support/Design-specifications-for-3D-models-Form-4-generation/"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 190,
+      "url": "https://www.eos.info/content/blog/2021/metal-3d-printing-without-supports"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 191,
+      "url": "https://help.autodesk.com/view/fusion360/ENU/?contextId=MFG-AM-HOW-TO-ARRANGE"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 192,
+      "url": "https://www.autodesk.com/products/fusion-360/blog/new-arrangement-criteria-options-for-additive-arrange-in-fusion/"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 193,
+      "url": "https://www.materialise.com/en/academy/healthcare/mimics-innovation-suite/video-tutorials/analyze-wall-thickness"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 194,
+      "url": "https://www.materialise.com/en/academy/industrial/magics/video-tutorials/structures-module"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 195,
+      "url": "https://support.ntop.com/hc/en-us/articles/360060738793-How-to-use-the-Overhang-Constraint"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 195,
+      "url": "https://support.ntop.com/hc/en-us/articles/1500005688562-How-to-visualize-overhang-and-draft-angles"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 196,
+      "url": "https://dev.opencascade.org/doc/overview/html/occt_user_guides__step.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 197,
+      "url": "https://marlinfw.org/docs/gcode/G090.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 197,
+      "url": "https://marlinfw.org/docs/gcode/M082.html"
+    },
+    {
+      "file": "docs/research/AM_DFM_RESEARCH_AND_DESIGN.md",
+      "line": 197,
+      "url": "https://marlinfw.org/docs/gcode/M083.html"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE.md",
+      "line": 9,
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-inside-corners"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE.md",
+      "line": 18,
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-holes-cavities-pockets"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE.md",
+      "line": 27,
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE.md",
+      "line": 36,
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE.md",
+      "line": 45,
+      "url": "https://help.autodesk.com/view/fusion360/ENU/?contextId=DRILLING-COLLISION-AVOIDANCE"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 17,
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-inside-corners"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 18,
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-holes-cavities-pockets"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 19,
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 20,
+      "url": "https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 21,
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 22,
+      "url": "https://help.autodesk.com/view/fusion360/ENU/?contextId=DRILLING-COLLISION-AVOIDANCE"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 23,
+      "url": "https://arxiv.org/html/2002.07627"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 24,
+      "url": "https://www.nature.com/articles/s41598-021-01313-3"
+    },
+    {
+      "file": "docs/research/MACHINING_EVIDENCE_REAUDIT_2026-09-20.md",
+      "line": 25,
+      "url": "https://occt3d.com/dev/doc/refman/html/class_b_rep_tools.html"
+    }
+  ]
+}

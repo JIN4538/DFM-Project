@@ -1,0 +1,71 @@
+........................................................................ [  9%]
+...........................FF........................................... [ 18%]
+........................................................................ [ 27%]
+........................................................................ [ 36%]
+........................................................................ [ 46%]
+..........................................................F............. [ 55%]
+........................................................................ [ 64%]
+........................................................................ [ 73%]
+........................................................................ [ 83%]
+........................................................................ [ 92%]
+...........................................................              [100%]
+================================== FAILURES ===================================
+____ test_rejected_input_is_retained_and_existing_audit_is_not_overwritten ____
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-45/test_rejected_input_is_retaine0')
+
+    def test_rejected_input_is_retained_and_existing_audit_is_not_overwritten(tmp_path):
+        source = tmp_path / "inputs"
+        source.mkdir()
+        bad = source / "invalid.stp"
+        bad.write_bytes(b"not a STEP exchange file")
+        before = hashlib.sha256(bad.read_bytes()).hexdigest()
+        output = tmp_path / "audit"
+        result = run_audit(source, output)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r
+E         '
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe', 'C:\\Users\...rr=b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r\n').returncode
+
+tests_v3\test_corpus_audit.py:28: AssertionError
+_______ test_four_processes_get_sections_without_build_space_rejection ________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-45/test_four_processes_get_sectio0')
+
+    def test_four_processes_get_sections_without_build_space_rejection(tmp_path):
+        source = tmp_path / "inputs"
+        source.mkdir()
+        example = next((ROOT / "examples" / "cad").glob("01*"))
+        (source / "box.step").write_bytes(example.read_bytes())
+        output = tmp_path / "audit"
+        result = run_audit(source, output)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r
+E         '
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe', 'C:\\Users\...rr=b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r\n').returncode
+
+tests_v3\test_corpus_audit.py:50: AssertionError
+____________ test_all_shipped_geometry_matches_published_inventory ____________
+
+    def test_all_shipped_geometry_matches_published_inventory():
+        result=verify(ROOT)
+        assert result['verified'],result['errors']
+        assert result['geometry_files']==118
+>       assert result['unique_sha256']==112
+E       assert 112 == 100
+
+tests_v3\test_packaged_geometry.py:16: AssertionError
+============================== warnings summary ===============================
+tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap
+  C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\trimesh\triangles.py:302: RuntimeWarning: invalid value encountered in divide
+    center_mass = integrated[1:4] / volume
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\machining-2026-09-19\regression.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_corpus_audit.py::test_rejected_input_is_retained_and_existing_audit_is_not_overwritten
+FAILED tests_v3/test_corpus_audit.py::test_four_processes_get_sections_without_build_space_rejection
+FAILED tests_v3/test_packaged_geometry.py::test_all_shipped_geometry_matches_published_inventory
+3 failed, 776 passed, 1 warning in 372.66s (0:06:12)

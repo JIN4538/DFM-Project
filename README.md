@@ -2,6 +2,8 @@
 
 적층제조 부품의 **문제 위치·이유·수정 방법·방향별 손익**을 확인하는 한국어 설계 검토 도구다. STEP/STL/3MF를 읽고 CAD 원통면, 하향면, 바닥 접촉, 빌드 공간, 밀폐 공동, 법선 거리 표본, 높이별 단면과 MEX 층간 관계를 검토한다. 출력 성공 점수나 A/B 등급을 만들지 않는다.
 
+개발 중인 확장판에는 **제조 공정 → 절삭가공**이 추가됐다. 단일 STEP의 원통면, 제한된 직사각 포켓과 선택 공구 치수를 비교하고 표면 가림 표본을 표시한다. [절삭 사용법·지원 범위](docs/USER_GUIDE_MACHINING.md), [최신 계산·문헌·사용성 재검토](docs/project-knowledge/MACHINING_REAUDIT_2026-09-20.md)를 확인한다. 실제 CAM 충돌 검증·실물 가공 검증은 미완료다. **2026-09-20 사용자 지시에 따라 현재 범위는 적층·절삭이며, 추가했던 사출·프레스 구현과 검증 산출물은 제거했다. 명시적 재개 지시 전에는 진행하지 않는다.**
+
 최신 후속 검토: [외부 AI 검토보고의 타당성 판단과 독립 반례](docs/project-knowledge/CLAUDE_REVIEW_VALIDITY_2026-09-15.md). 자동 단면 선택, 부분 계산의 부피·누락 기여 범위, 작은 형상의 초기 벽 검토, 바닥·각도 경계 설명과 실측 기준 기록을 개선했다. 이전 검증은 [무작위 형상 전수 검토와 신뢰성 개선](docs/project-knowledge/RANDOM_CORPUS_REAUDIT_2026-09-14.md), [공정별 문헌 재조사](docs/research/AM_DFM_EVIDENCE_REAUDIT.md)에 보존한다.
 
 처음 사용한다면 [화면 읽는 법과 정밀 검토 안내](docs/USER_GUIDE_V3.md)를 참고한다. 최신 화면은 **현재 판단 → 확인할 위치 → 다음 행동** 순서로 안내하며, [개선 근거와 검증](docs/project-knowledge/USER_WORKFLOW_2026-09-15.md)에 변경 이유를 기록했다.
@@ -72,7 +74,7 @@ G-code의 고정 Cura 기록은 **사용법 연습**을 켰을 때만 표시한�
 - [실행한 검증 결과와 남은 한계](docs/VALIDATION_V3.md)
 - [기존 인수기록과 참고문헌](docs/project-knowledge/README.md)
 - [치수가 알려진 자체 CAD 14개](examples/cad/manifest.json)와 [생성 소스](scripts/generate_cad_examples.py)
-- [전체 테스트 형상 106개 파일과 사용법](examples/README.md), [경로·크기·SHA-256 색인](examples/geometry_manifest.json)
+- [전체 테스트 형상 118개 파일과 사용법](examples/README.md), [경로·크기·SHA-256 색인](examples/geometry_manifest.json)
 - [작성 보고서·발표 자료](docs/artifacts/README.md), [저장소 정리와 검증 기록](docs/project-knowledge/REPOSITORY_PUBLICATION_2026-09-15.md)
 
 ```powershell
