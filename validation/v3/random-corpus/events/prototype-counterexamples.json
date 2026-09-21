@@ -1,0 +1,216 @@
+{
+  "source_prototype_sha256": "81bed539d5ca19aa771127331d72f62f37037d83430abb08e639c63e590e13f5",
+  "source_results_sha256": "9b4a5f1d7784563da82964c94971da2b3befd84ba2c0728c37d34a6fc98a5a1c",
+  "case_conditions": {
+    "rotated_translated_prism": {
+      "extents_mm": [
+        10,
+        20,
+        30
+      ],
+      "rotation_radians": 0.831,
+      "rotation_axis": [
+        1,
+        2,
+        3
+      ],
+      "translation_mm": [
+        100000.0,
+        -200000.0,
+        300000.0
+      ]
+    },
+    "thin_plate_on_post": {
+      "post_width_mm": 1,
+      "post_depth_mm": 1,
+      "post_height_mm": 250,
+      "plate_width_mm": 10,
+      "plate_depth_mm": 20,
+      "plate_z_mm": [
+        123.4562,
+        123.4572
+      ]
+    },
+    "polygonal_cone": {
+      "radius_mm": 10,
+      "height_mm": 30,
+      "sides": 32
+    },
+    "sphere_mesh": {
+      "icosphere_subdivisions": 3,
+      "radius_mm": 10
+    },
+    "unrepresentable_gauss_nodes": {
+      "xy_extent_mm": [
+        1,
+        1
+      ],
+      "bottom_mm": 1,
+      "top_float": "numpy.nextafter(1.,2.)"
+    }
+  },
+  "fan_source_sha256": "a7e5a80f3be0af7faa60fc99f5ff5c9938582324c7a57be22a87af9aefdabe97",
+  "fan_model_fingerprint": "73105804e9017f967b6d0087e42f6b78c6b3cfa02b60deb4cfdd595806abe159",
+  "fan_cad_volume_mm3": 497834.0591968931,
+  "cases": {
+    "cooling_fan_body2": {
+      "status": "complete",
+      "estimated_volume_mm3": 497842.78742477775,
+      "known_interval_volume_mm3": 497842.78742477775,
+      "tetra_volume_mm3": 497842.7871037473,
+      "analytic_volume_mm3": null,
+      "elapsed_seconds": 0.022131099999569415,
+      "unresolved_height_mm": 0.0,
+      "omitted_interval_volume_envelope_mm3": 0.0,
+      "relative_difference_from_analytic": null,
+      "relative_difference_from_tetra": 6.448430678318573e-10,
+      "plan": {
+        "unique_heights": 6,
+        "intervals": 5,
+        "planned_samples": 10,
+        "planned_triangle_intersections": 636,
+        "min_interval_mm": 1.1999999999999886,
+        "max_interval_mm": 245.0,
+        "event_policy": "Exact unique projected vertex heights; no tolerance merging"
+      },
+      "examined_samples": 10,
+      "total_segments": 636,
+      "mesh_triangles": 536,
+      "watertight": true
+    },
+    "rotated_translated_prism": {
+      "status": "complete",
+      "estimated_volume_mm3": 5999.999999997501,
+      "known_interval_volume_mm3": 5999.999999997501,
+      "tetra_volume_mm3": 6000.000000003096,
+      "analytic_volume_mm3": 6000.0,
+      "elapsed_seconds": 0.022924199999579287,
+      "unresolved_height_mm": 0.0,
+      "omitted_interval_volume_envelope_mm3": 0.0,
+      "relative_difference_from_analytic": -4.1655567883935873e-13,
+      "relative_difference_from_tetra": -9.325873406851315e-13,
+      "plan": {
+        "unique_heights": 8,
+        "intervals": 7,
+        "planned_samples": 14,
+        "planned_triangle_intersections": 96,
+        "min_interval_mm": 3.2497376794344746,
+        "max_interval_mm": 16.517756599350832,
+        "event_policy": "Exact unique projected vertex heights; no tolerance merging"
+      },
+      "examined_samples": 14,
+      "total_segments": 96,
+      "mesh_triangles": 12,
+      "watertight": true
+    },
+    "thin_plate_on_post": {
+      "status": "complete",
+      "estimated_volume_mm3": 250.19900000000095,
+      "known_interval_volume_mm3": 250.19900000000095,
+      "tetra_volume_mm3": 250.19900000000092,
+      "analytic_volume_mm3": 250.19900000000095,
+      "elapsed_seconds": 0.008312500000101863,
+      "unresolved_height_mm": 0.0,
+      "omitted_interval_volume_envelope_mm3": 0.0,
+      "relative_difference_from_analytic": 0.0,
+      "relative_difference_from_tetra": 2.220446049250313e-16,
+      "plan": {
+        "unique_heights": 4,
+        "intervals": 3,
+        "planned_samples": 6,
+        "planned_triangle_intersections": 80,
+        "min_interval_mm": 0.0010000000000047748,
+        "max_interval_mm": 126.5428,
+        "event_policy": "Exact unique projected vertex heights; no tolerance merging"
+      },
+      "examined_samples": 6,
+      "total_segments": 80,
+      "mesh_triangles": 76,
+      "watertight": true
+    },
+    "polygonal_cone": {
+      "status": "complete",
+      "estimated_volume_mm3": 3121.4451522032814,
+      "known_interval_volume_mm3": 3121.4451522032814,
+      "tetra_volume_mm3": 3121.445152258052,
+      "analytic_volume_mm3": 3121.4451522580516,
+      "elapsed_seconds": 0.0039259999994101236,
+      "unresolved_height_mm": 0.0,
+      "omitted_interval_volume_envelope_mm3": 0.0,
+      "relative_difference_from_analytic": -1.7546408770385824e-11,
+      "relative_difference_from_tetra": -1.754663081499075e-11,
+      "plan": {
+        "unique_heights": 2,
+        "intervals": 1,
+        "planned_samples": 2,
+        "planned_triangle_intersections": 64,
+        "min_interval_mm": 30.0,
+        "max_interval_mm": 30.0,
+        "event_policy": "Exact unique projected vertex heights; no tolerance merging"
+      },
+      "examined_samples": 2,
+      "total_segments": 64,
+      "mesh_triangles": 64,
+      "watertight": true
+    },
+    "sphere_mesh": {
+      "status": "partial",
+      "estimated_volume_mm3": null,
+      "known_interval_volume_mm3": 4152.740817092913,
+      "tetra_volume_mm3": 4152.740817093058,
+      "analytic_volume_mm3": 4188.790204786391,
+      "elapsed_seconds": 0.6100525000001653,
+      "unresolved_height_mm": 1.7763568394002505e-15,
+      "omitted_interval_volume_envelope_mm3": 7.105427357601002e-13,
+      "relative_difference_from_analytic": null,
+      "relative_difference_from_tetra": null,
+      "plan": {
+        "unique_heights": 167,
+        "intervals": 166,
+        "planned_samples": 332,
+        "planned_triangle_intersections": 23672,
+        "min_interval_mm": 8.881784197001252e-16,
+        "max_interval_mm": 0.8108629344330351,
+        "event_policy": "Exact unique projected vertex heights; no tolerance merging"
+      },
+      "examined_samples": 328,
+      "total_segments": 23360,
+      "mesh_triangles": 1280,
+      "watertight": true
+    },
+    "unrepresentable_gauss_nodes": {
+      "status": "unknown",
+      "estimated_volume_mm3": null,
+      "known_interval_volume_mm3": 0.0,
+      "tetra_volume_mm3": 2.220446049250313e-16,
+      "analytic_volume_mm3": 2.220446049250313e-16,
+      "elapsed_seconds": 0.0004241999995429069,
+      "unresolved_height_mm": 2.220446049250313e-16,
+      "omitted_interval_volume_envelope_mm3": 2.220446049250313e-16,
+      "relative_difference_from_analytic": null,
+      "relative_difference_from_tetra": null,
+      "plan": {
+        "unique_heights": 2,
+        "intervals": 1,
+        "planned_samples": 2,
+        "planned_triangle_intersections": 16,
+        "min_interval_mm": 2.220446049250313e-16,
+        "max_interval_mm": 2.220446049250313e-16,
+        "event_policy": "Exact unique projected vertex heights; no tolerance merging"
+      },
+      "examined_samples": 0,
+      "total_segments": 0,
+      "mesh_triangles": 12,
+      "watertight": true
+    }
+  },
+  "limitations": [
+    "Tetrahedral reference is an independent integral over the same fixed triangular geometry, not an exact-CAD or manufacturing guarantee.",
+    "Omitted-height envelope excludes section reconstruction and other numerical error.",
+    "Sphere analytic volume is ideal smooth sphere; tetra reference belongs to its polyhedral approximation.",
+    "Prototype elapsed times exclude process creation and I/O."
+  ],
+  "source_reproduction": "scripts/audit_event_sections.py handles original corpus; tests_v3/test_event_sections.py creates synthetic independent fixtures.",
+  "production_unit_test_sha256": "6f3ac2135c7051eb74cde48b58b554d96650130b001df20b37fb5962fa19e534",
+  "reference": "https://dlmf.nist.gov/3.5.v"
+}

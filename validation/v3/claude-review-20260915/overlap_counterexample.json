@@ -1,0 +1,88 @@
+{
+  "purpose": "Counterexample to generalizing one overlapping-body success into a union-volume guarantee.",
+  "reviewed_commit": "ae2a86895b4a3885606e782aaf71741c82816efe",
+  "baseline_event_sections_sha256": "d5eb59c3fcbfbf191cb1328574bcc7646039a02fffea1d0b6f18ab8487d4c8e2",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "trimesh": "5.1.0",
+    "shapely": "2.1.2"
+  },
+  "input": {
+    "cube_extents_mm": [
+      10.0,
+      10.0,
+      10.0
+    ],
+    "second_rotation_y_radians": 0.5,
+    "second_translation_mm": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "assembly": "concatenated boundary shells; not Boolean union"
+  },
+  "oracle": "Sutherland-Hodgman clipping in XZ, shoelace overlap area, common Y depth 10 mm",
+  "overlap_polygon_xz_mm": [
+    [
+      5.0,
+      -2.1071973278176337
+    ],
+    [
+      5.0,
+      4.5122596772475845
+    ],
+    [
+      4.107197327817635,
+      5.0
+    ],
+    [
+      -2.5122596772475836,
+      5.0
+    ],
+    [
+      -5.0,
+      0.44622188439273014
+    ],
+    [
+      -5.0,
+      -1.4196546975600028
+    ],
+    [
+      1.5537781156072699,
+      -5.0
+    ],
+    [
+      3.419654697560003,
+      -5.0
+    ]
+  ],
+  "overlap_area_xz_mm2": 80.09975544706701,
+  "expected_union_volume_mm3": 1199.0024455293299,
+  "baseline_status": "complete",
+  "baseline_topology_ready": true,
+  "baseline_event_heights_mm": [
+    -5.785040502472879,
+    -5.0,
+    -0.9907851164308488,
+    2.9907851164308488,
+    5.0,
+    7.785040502472879
+  ],
+  "baseline_quadrature_volume_mm3": 1196.6831714466223,
+  "baseline_omitted_height_envelope_mm3": 0.0,
+  "relative_difference_percent": -0.19343364071986338,
+  "user_entry_check": {
+    "scope": "Current load_model and run_detail; the assembly guard also exists in the reviewed commit.",
+    "surface_component_count": 2,
+    "status": "unknown",
+    "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+    "volume_quadrature_estimate_mm3": null,
+    "source_sha256": {
+      "amdfm/io.py": "2b673fa45cc914020ed35f67847526f3dae2f5b3b7ec7393cc3d697d4ca72c84",
+      "amdfm/detail.py": "c24890ba210f3b1527d471e403282eb76f133ad133ff6cb06ccca13b741fd770",
+      "amdfm/detail_worker.py": "797865209b2483af504388538cd9f2b2c3603280f28122bcbd5f6eb2c55de2d2"
+    }
+  },
+  "limitation": "The oracle is floating-point analytic polygon arithmetic, not an exact-real certificate. The observed difference is orders of magnitude larger than coordinate rounding. Only the reviewed event module is loaded from Git; section dependencies are the repository version."
+}

@@ -1,0 +1,362 @@
+{
+  "created_utc": "2026-09-14T14:06:13.366654+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "analysis_code_sha256": "da5022ec34e2560243a3dcec65a56a1d74f8aa82056519dfdcdc7e105e1310d9",
+  "seed": 824,
+  "box_extents_mm": [
+    7.0,
+    13.0,
+    29.0
+  ],
+  "analytic": [
+    {
+      "angle_deg": 45.0,
+      "direction_count": 1000,
+      "max_height_error_mm": 1.4210854715202004e-14,
+      "max_projected_sum_error_mm2": 1.1368683772161603e-13,
+      "max_alignment_error": 6.465548846392924e-16,
+      "max_determinant_error": 8.881784197001252e-16
+    },
+    {
+      "angle_deg": 63.0,
+      "direction_count": 1000,
+      "max_height_error_mm": 1.4210854715202004e-14,
+      "max_projected_sum_error_mm2": 1.7053025658242404e-13,
+      "max_alignment_error": 6.465548846392924e-16,
+      "max_determinant_error": 8.881784197001252e-16
+    }
+  ],
+  "external_benchmarks": [
+    {
+      "file": "3DP_20546_S-0039.stl",
+      "sha256": "d7e305e49b611622b003bc7384d268894b580424d295a005c389d287fde45452",
+      "unit_status": "assumed",
+      "extents_mm": [
+        150.0,
+        142.0,
+        25000.0
+      ],
+      "face_count": 764,
+      "runs": [
+        {
+          "candidate_count": 6,
+          "seconds": 0.05196589999968637,
+          "profile": {
+            "process": "MEX",
+            "name": "장비 미정 · 탐색용 조건",
+            "machine": "미확정",
+            "material": "미확정",
+            "slicer": "미확정",
+            "layer_height_mm": 0.2,
+            "line_width_mm": 0.4,
+            "overhang_angle_deg": 45.0,
+            "minimum_wall_mm": null,
+            "minimum_hole_mm": null,
+            "build_volume_mm": null,
+            "clearance_mm": 0.0,
+            "threshold_basis": "사용자 탐색 조건; 실물 시편으로 보정하지 않음",
+            "process_notes": ""
+          }
+        },
+        {
+          "candidate_count": 26,
+          "seconds": 0.029170799999974406,
+          "profile": {
+            "process": "MEX",
+            "name": "장비 미정 · 탐색용 조건",
+            "machine": "미확정",
+            "material": "미확정",
+            "slicer": "미확정",
+            "layer_height_mm": 0.2,
+            "line_width_mm": 0.4,
+            "overhang_angle_deg": 45.0,
+            "minimum_wall_mm": null,
+            "minimum_hole_mm": null,
+            "build_volume_mm": null,
+            "clearance_mm": 0.0,
+            "threshold_basis": "사용자 탐색 조건; 실물 시편으로 보정하지 않음",
+            "process_notes": ""
+          }
+        }
+      ]
+    },
+    {
+      "file": "strong_corner_bracket_vcd.stl",
+      "sha256": "6af1b761a6d5cc47e4c2ade4aeae7a4fae2590bdee999e9e98b275bc8ab82557",
+      "unit_status": "assumed",
+      "extents_mm": [
+        45.0,
+        44.99999999999995,
+        15.0
+      ],
+      "face_count": 184110,
+      "runs": [
+        {
+          "candidate_count": 6,
+          "seconds": 0.4801195000000007,
+          "profile": {
+            "process": "MEX",
+            "name": "장비 미정 · 탐색용 조건",
+            "machine": "미확정",
+            "material": "미확정",
+            "slicer": "미확정",
+            "layer_height_mm": 0.2,
+            "line_width_mm": 0.4,
+            "overhang_angle_deg": 45.0,
+            "minimum_wall_mm": null,
+            "minimum_hole_mm": null,
+            "build_volume_mm": null,
+            "clearance_mm": 0.0,
+            "threshold_basis": "사용자 탐색 조건; 실물 시편으로 보정하지 않음",
+            "process_notes": ""
+          }
+        },
+        {
+          "candidate_count": 26,
+          "seconds": 0.7151264999997693,
+          "profile": {
+            "process": "MEX",
+            "name": "장비 미정 · 탐색용 조건",
+            "machine": "미확정",
+            "material": "미확정",
+            "slicer": "미확정",
+            "layer_height_mm": 0.2,
+            "line_width_mm": 0.4,
+            "overhang_angle_deg": 45.0,
+            "minimum_wall_mm": null,
+            "minimum_hole_mm": null,
+            "build_volume_mm": null,
+            "clearance_mm": 0.0,
+            "threshold_basis": "사용자 탐색 조건; 실물 시편으로 보정하지 않음",
+            "process_notes": ""
+          }
+        }
+      ]
+    },
+    {
+      "file": "strong_garden_tool_hook_vcd.stl",
+      "sha256": "b1d09b1eb2eac6164bd4567b7d330ca8a85df4d3bb0ab03f2c9d1e76f88c8d9b",
+      "unit_status": "assumed",
+      "extents_mm": [
+        93.19367980957031,
+        92.06343078613281,
+        53.341861724853516
+      ],
+      "face_count": 52738,
+      "runs": [
+        {
+          "candidate_count": 6,
+          "seconds": 0.18398209999986648,
+          "profile": {
+            "process": "MEX",
+            "name": "장비 미정 · 탐색용 조건",
+            "machine": "미확정",
+            "material": "미확정",
+            "slicer": "미확정",
+            "layer_height_mm": 0.2,
+            "line_width_mm": 0.4,
+            "overhang_angle_deg": 45.0,
+            "minimum_wall_mm": null,
+            "minimum_hole_mm": null,
+            "build_volume_mm": null,
+            "clearance_mm": 0.0,
+            "threshold_basis": "사용자 탐색 조건; 실물 시편으로 보정하지 않음",
+            "process_notes": ""
+          }
+        },
+        {
+          "candidate_count": 26,
+          "seconds": 0.2424791999997069,
+          "profile": {
+            "process": "MEX",
+            "name": "장비 미정 · 탐색용 조건",
+            "machine": "미확정",
+            "material": "미확정",
+            "slicer": "미확정",
+            "layer_height_mm": 0.2,
+            "line_width_mm": 0.4,
+            "overhang_angle_deg": 45.0,
+            "minimum_wall_mm": null,
+            "minimum_hole_mm": null,
+            "build_volume_mm": null,
+            "clearance_mm": 0.0,
+            "threshold_basis": "사용자 탐색 조건; 실물 시편으로 보정하지 않음",
+            "process_notes": ""
+          }
+        }
+      ]
+    }
+  ],
+  "originals": [
+    {
+      "path": "A new DFM approach to combine machining and additive manufacturing.pdf",
+      "unchanged": true,
+      "git_blob": "0fe99bb6402ccc01af313dbbacb5df5cd3243102",
+      "git_blob_sha256": "a0722cb226f443157a889bed605d208c5e9b797a5233fab75b523c376d7317c9",
+      "checkout_sha256": "a0722cb226f443157a889bed605d208c5e9b797a5233fab75b523c376d7317c9"
+    },
+    {
+      "path": "AM-DFM 개발 경과 보고서_초안.docx",
+      "unchanged": true,
+      "git_blob": "1876054cd2a14a9376e544496d57ae52430324c4",
+      "git_blob_sha256": "cbd192ca39c5d53fa4fd0e043898769e27123e301b3158d6cc39f44b92920ba9",
+      "checkout_sha256": "cbd192ca39c5d53fa4fd0e043898769e27123e301b3158d6cc39f44b92920ba9"
+    },
+    {
+      "path": "AM-DFM_1차_미팅_보고서_초안.docx",
+      "unchanged": true,
+      "git_blob": "a06f08033f6828189474067f084bcab1bc953ebd",
+      "git_blob_sha256": "2dd61fdbe482045c292dad678d886cf90396ca1d25ba5e8086663a37b94da38e",
+      "checkout_sha256": "2dd61fdbe482045c292dad678d886cf90396ca1d25ba5e8086663a37b94da38e"
+    },
+    {
+      "path": "AM-DFM_v1.zip",
+      "unchanged": true,
+      "git_blob": "4857a73a75fa56a526176feac820bb4f68f64dcc",
+      "git_blob_sha256": "e74b3d0b94120d48db41852b536598bb4a40f852e5eed0c811ad7a86a29518c6",
+      "checkout_sha256": "e74b3d0b94120d48db41852b536598bb4a40f852e5eed0c811ad7a86a29518c6"
+    },
+    {
+      "path": "AM-DFM_v2_1.zip",
+      "unchanged": true,
+      "git_blob": "43a58ebc94e2f284078c11e8542b521a48a3f2bd",
+      "git_blob_sha256": "e03802cbe32dbed2ae8f2f09060d325c5e40be02e48e04749c1354c6d79239fe",
+      "checkout_sha256": "e03802cbe32dbed2ae8f2f09060d325c5e40be02e48e04749c1354c6d79239fe"
+    },
+    {
+      "path": "AM-DFM_v2_6.zip",
+      "unchanged": true,
+      "git_blob": "df307d55a6f1ac5ef38e2ac0e9b416c0580fa568",
+      "git_blob_sha256": "7a33ee92d363ac2c77b23e9fc42601d157386402e9e84e77446fba78072531a0",
+      "checkout_sha256": "7a33ee92d363ac2c77b23e9fc42601d157386402e9e84e77446fba78072531a0"
+    },
+    {
+      "path": "AM_DFM_v25_리뷰_검토와_수정_결과.docx",
+      "unchanged": true,
+      "git_blob": "1d5f1f41c5b871b4aa332b4770b3095e80d93602",
+      "git_blob_sha256": "a9957e1f5ad4554287e89f5a85ae3de06947a81dda4afab8f459bd753bd1ed4b",
+      "checkout_sha256": "a9957e1f5ad4554287e89f5a85ae3de06947a81dda4afab8f459bd753bd1ed4b"
+    },
+    {
+      "path": "AM_DFM_v25_쉬운_설명서.docx",
+      "unchanged": true,
+      "git_blob": "0c10f70b8314e227632ea0fd835894536e99bb00",
+      "git_blob_sha256": "278cd541c38ced2329a15043ca3622bd389e3e629f2649aea14094780c2c46b0",
+      "checkout_sha256": "278cd541c38ced2329a15043ca3622bd389e3e629f2649aea14094780c2c46b0"
+    },
+    {
+      "path": "AM_DFM_v26_재검토와_개선계획.md",
+      "unchanged": true,
+      "git_blob": "6c60dd927853c362d11965e56c87326ff22e3ef4",
+      "git_blob_sha256": "10a0476994db0bf7d5ec39106265baba78578a2bf1139049233ca90ddd36bdf1",
+      "checkout_sha256": "27dc286d3519673d2b615de355cd86528c5e777c3dc6b21eac84aae91536462e"
+    },
+    {
+      "path": "D-ECOmposer Sustainable part decomposition for additive manufacturing using machine learning based life cycle assessment.pdf",
+      "unchanged": true,
+      "git_blob": "1fba865882c15c2e46a37b91717229cd3db5b231",
+      "git_blob_sha256": "b4692e0b1873001c1722b84cd9370fb2ad4262522ef9c97edf3c70f53dca2540",
+      "checkout_sha256": "b4692e0b1873001c1722b84cd9370fb2ad4262522ef9c97edf3c70f53dca2540"
+    },
+    {
+      "path": "Design Consideration for AM.pdf",
+      "unchanged": true,
+      "git_blob": "a46c772ffa0a9cdfedf8133ab1a547ffc60b3d86",
+      "git_blob_sha256": "6fd90d994adea962112efe3169caa45d3e358ccbadad8ad0a5fc6b5135aafe61",
+      "checkout_sha256": "6fd90d994adea962112efe3169caa45d3e358ccbadad8ad0a5fc6b5135aafe61"
+    },
+    {
+      "path": "Design and Manufacturing Strategies.pdf",
+      "unchanged": true,
+      "git_blob": "a072d97acc8c174b0f16eb22c36082d99af77f83",
+      "git_blob_sha256": "66575261c89c09006afa2de6aa1fcfb3fdde1032de5d07d7968f54c480e19989",
+      "checkout_sha256": "66575261c89c09006afa2de6aa1fcfb3fdde1032de5d07d7968f54c480e19989"
+    },
+    {
+      "path": "Identification and Mapping of Manufacturability Constraints.pdf",
+      "unchanged": true,
+      "git_blob": "cb1b01546b89e8179f655b7b498c5da486594c7e",
+      "git_blob_sha256": "ea3195aa384ab2413fff5ca6bf6884ca81ec8759dde66e11f41a4b9e08c5a5cf",
+      "checkout_sha256": "ea3195aa384ab2413fff5ca6bf6884ca81ec8759dde66e11f41a4b9e08c5a5cf"
+    },
+    {
+      "path": "Jiang, Xu, Stringer (2018) A new support strategy for reducing waste in additive manufacturing.pdf",
+      "unchanged": true,
+      "git_blob": "b7dd306efcbd91d5568d92e44ccd4cfad6529caf",
+      "git_blob_sha256": "42b11de4de67f9a229f5c6b6ed1be2e56bb3ad6ea0ec13e962bb5d335f4603b5",
+      "checkout_sha256": "42b11de4de67f9a229f5c6b6ed1be2e56bb3ad6ea0ec13e962bb5d335f4603b5"
+    },
+    {
+      "path": "KS D ISO,ASTM 52902.pdf",
+      "unchanged": true,
+      "git_blob": "f0ceb4f7f169660b9fcdeaa41e1a9191a001054a",
+      "git_blob_sha256": "2c38f6c166053b7e3a787dbc4536c80db53985427ee8dbca24e2dd2c9c5a4da9",
+      "checkout_sha256": "2c38f6c166053b7e3a787dbc4536c80db53985427ee8dbca24e2dd2c9c5a4da9"
+    },
+    {
+      "path": "KS D ISO,ASTM 52903-1.pdf",
+      "unchanged": true,
+      "git_blob": "c281a9753c76537951fefc98f379c5da3c13c7d1",
+      "git_blob_sha256": "7ffde228ffe7eabd735634907270cd8cc756338a553b5a3e538c69ff81211f9c",
+      "checkout_sha256": "7ffde228ffe7eabd735634907270cd8cc756338a553b5a3e538c69ff81211f9c"
+    },
+    {
+      "path": "KS D ISO,ASTM 52903-2.pdf",
+      "unchanged": true,
+      "git_blob": "ad3932777e8cc1710bbc52a0d0bc1fd0238f1fc7",
+      "git_blob_sha256": "ca92d488b482bc11f7413a259e146e7a87e49a13ddc8cc8f2f61342716ebd6d5",
+      "checkout_sha256": "ca92d488b482bc11f7413a259e146e7a87e49a13ddc8cc8f2f61342716ebd6d5"
+    },
+    {
+      "path": "KS D ISO.ASTM 52910.pdf",
+      "unchanged": true,
+      "git_blob": "78a19df2a6881bb5f464d0d99be788401c882cda",
+      "git_blob_sha256": "86d4606cf10c1f98b92a82bff47b4c2c1629bd19a37a4653ccd42d3c5ad67c49",
+      "checkout_sha256": "86d4606cf10c1f98b92a82bff47b4c2c1629bd19a37a4653ccd42d3c5ad67c49"
+    },
+    {
+      "path": "Knowledge‑based manufacturability assessment for optimization.pdf",
+      "unchanged": true,
+      "git_blob": "ffd0a362b45025dc13fa86dcc629218ddf7b6b81",
+      "git_blob_sha256": "0f3bf93c50696fc804c3c75610b440df1738c6edcef474642ce6da90387ee49b",
+      "checkout_sha256": "0f3bf93c50696fc804c3c75610b440df1738c6edcef474642ce6da90387ee49b"
+    },
+    {
+      "path": "Manufacturability of Parts with 3D-Annotated Model Generated by 3D-CAD.pdf",
+      "unchanged": true,
+      "git_blob": "ce7b55372012b5d1a14c585c3b655b4d2256821c",
+      "git_blob_sha256": "7d324ce20182da586f9f1e694f610462ce5d5d35479847358018232270e8761a",
+      "checkout_sha256": "7d324ce20182da586f9f1e694f610462ce5d5d35479847358018232270e8761a"
+    },
+    {
+      "path": "Overhang Analysis Fabricated Using Fused Deposition.pdf",
+      "unchanged": true,
+      "git_blob": "52a7c4f750b9a9954b9e615d32f1ca2f493c5c0c",
+      "git_blob_sha256": "131ef6a44446802df8af8112e12d802e85b993e2a5987975461110b9a96a4fdc",
+      "checkout_sha256": "131ef6a44446802df8af8112e12d802e85b993e2a5987975461110b9a96a4fdc"
+    },
+    {
+      "path": "Part decomposition and evaluation based on standard design guidelines for.pdf",
+      "unchanged": true,
+      "git_blob": "8f3b0a91975db97fb633f7770c7fa98b85ba5010",
+      "git_blob_sha256": "d4ef81a9138ce9e87b3c31a7091db6791512e0fa5abe12c2f1a43e5d63893a49",
+      "checkout_sha256": "d4ef81a9138ce9e87b3c31a7091db6791512e0fa5abe12c2f1a43e5d63893a49"
+    },
+    {
+      "path": "v24_단면검토_코드리뷰.md",
+      "unchanged": true,
+      "git_blob": "f734c92d39c3e0fef37593d547646db7ccc81598",
+      "git_blob_sha256": "8d33cac992cd1d33c433acaf84504f8958bca953b683504cdf7f0d3ac59002d6",
+      "checkout_sha256": "5a8016b61de5466d89846300ee6a9156e2cb0098be4fbd31b81274918ab7563a"
+    },
+    {
+      "path": "v25_재검토_결과.md",
+      "unchanged": true,
+      "git_blob": "3b4213bef00434d6239c9d481f7e86ef3c3eeeab",
+      "git_blob_sha256": "e9f229b97079d50010c11be751ab501fbdd9ce097045fcfb1c06fdbb46bc3389",
+      "checkout_sha256": "8673d53ef3ebd21097596858107ed2cdac95dfc85c4bf6e167a5f76a67bdbf2f"
+    }
+  ],
+  "scope": "Independent polyhedral geometry checks; curved tessellation, layer sampling and process physics are separate limitations."
+}

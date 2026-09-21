@@ -1,0 +1,76 @@
+..........F.F........................                                    [100%]
+================================== FAILURES ===================================
+_ test_user_can_follow_resolved_corner_condition_and_locate_each_measurement __
+
+    def test_user_can_follow_resolved_corner_condition_and_locate_each_measurement():
+        app = _open_rounded()
+        for key, value in (("cnc_diameter", 8.), ("cnc_flute", 10.), ("cnc_reach", 15.)):
+            app.number_input(key=key).set_value(value)
+        report = _submit(app)
+        corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
+        assert corner["status"] == "attention"
+        assert any("공구축과 나란한 오목 원통면" in row.value for row in app.warning)
+        assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "8 mm"
+        table = app.dataframe[0].value
+        assert list(table["공구 반경 (mm)"]) == [4.] * 4
+        assert list(table["오목면 반경 (mm)"]) == [3.] * 4
+        assert list(table["반경 차이 · 면−공구 (mm)"]) == [-1.] * 4
+        all_count = _highlight_triangle_count(app)
+        selected_face = str(corner["measurements"]["cylindrical_faces"][0]["face_id"])
+        app.selectbox(key="cnc_location").set_value(selected_face).run()
+        assert not app.exception
+        assert 0 < _highlight_triangle_count(app) < all_count
+        assert app.selectbox(key="cnc_location").value == selected_face
+        assert any("색 자체는 기준 미달을 뜻하지 않습니다" in row.value for row in app.caption)
+    
+        app.number_input(key="cnc_diameter").set_value(4.)
+        report = _submit(app)
+        corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
+        assert corner["status"] == "observed"
+        assert "더 작은 공구" not in corner["action"] and "반경 확대" not in corner["action"]
+        assert "경로" in corner["action"]
+        assert app.selectbox(key="cnc_location").value == selected_face
+        assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "4 mm"
+        assert list(app.dataframe[0].value["공구 반경 (mm)"]) == [2.] * 4
+    
+        app.number_input(key="cnc_diameter").set_value(None)
+        report = _submit(app)
+        corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
+        assert corner["status"] == "unknown"
+>       assert "공구 지름" in corner["action"]
+E       AssertionError: assert '공구 지름' in '사용할 원통형 엔드밀의 지름을 입력하면 측정 반경과 비교합니다.'
+
+tests_v3\test_machining_ux_reaudit.py:191: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-20 00:53:50.171 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__________ test_cnc_measure_without_tool_and_stale_condition_results __________
+
+    def test_cnc_measure_without_tool_and_stale_condition_results():
+        app = open_machining()
+        assert not app.get("download_button")
+        report = submit(app)
+        pocket = next(f for f in report["findings"] if f["id"] == "cnc_rectangular_pockets")
+        assert pocket["status"] == "attention"
+        assert pocket["measurements"]["pockets"][0]["width_mm"] == pytest.approx(12)
+        assert report["profile"]["tool_diameter_mm"] is None
+        assert len(app.get("download_button")) == 3
+        assert "미입력·미비교" in app.dataframe[0].value.to_string()
+        app.selectbox(key="cnc_direction").select("+X").run()
+        assert not app.exception and not app.get("download_button")
+        assert any("이전 검토 결과" in x.value for x in app.caption)
+        changed = submit(app)
+        assert changed["direction"] == [1., 0., 0.]
+>       assert next(f for f in changed["findings"] if f["id"] == "cnc_rectangular_pockets")["status"] == "not_detected"
+E       AssertionError: assert 'unknown' == 'not_detected'
+E         
+E         - not_detected
+E         + unknown
+
+tests_v3\test_machining_ui.py:42: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-20 00:54:01.700 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\machining-reaudit-2026-09-20\ux-first.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_machining_ux_reaudit.py::test_user_can_follow_resolved_corner_condition_and_locate_each_measurement
+FAILED tests_v3/test_machining_ui.py::test_cnc_measure_without_tool_and_stale_condition_results
+2 failed, 35 passed in 27.49s

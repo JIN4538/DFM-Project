@@ -1,0 +1,514 @@
+{
+  "source_sha256": "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2",
+  "model_fingerprint": "52210e3ca12d00b398d5b806147b080958f984faea428e7bdafa1fa7b38b445c",
+  "body": 67,
+  "source_code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+  "script_sha256": "68f5d0868fdd580664652cc5acfdf914c828e1a8bf5ca689075c64806c4b1316",
+  "coordinate_frame": "build_mm",
+  "endpoint_intersection_tolerance_mm": 1e-10,
+  "mesh_watertight": true,
+  "mesh_winding_consistent": true,
+  "findings": [
+    {
+      "z_mm": 5.84328339749941,
+      "independent_error": "ValueError: Invalid section ring at z=5.84328339749941: ['Self-intersection[1.77049494426988 3.59999999999991]']",
+      "unusual_segment_intersections": [
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003487627907610147,
+          "mesh_faces": [
+            465,
+            466
+          ],
+          "cad_faces": [
+            2083,
+            2083
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.770146181479117,
+            3.59999999999991
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003487627907610147,
+            0.0
+          ],
+          "mesh_faces": [
+            466,
+            901
+          ],
+          "cad_faces": [
+            2083,
+            2103
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.00034876279074591565,
+          "mesh_faces": [
+            551,
+            585
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003487627907616808,
+          "mesh_faces": [
+            583,
+            584
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701461814791168,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003487627907616808,
+            0.0
+          ],
+          "mesh_faces": [
+            584,
+            900
+          ],
+          "cad_faces": [
+            2084,
+            2103
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            -1.7701461814755475,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.00034876279074591565,
+            0.0
+          ],
+          "mesh_faces": [
+            585,
+            1067
+          ],
+          "cad_faces": [
+            2084,
+            2104
+          ]
+        }
+      ],
+      "segment_count": 305
+    },
+    {
+      "z_mm": 5.8433823974994095,
+      "independent_error": "ValueError: Invalid section ring at z=5.8433823974994095: ['Self-intersection[1.77050236329424 3.59999999999991]']",
+      "unusual_segment_intersections": [
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003524774964773769,
+          "mesh_faces": [
+            465,
+            466
+          ],
+          "cad_faces": [
+            2083,
+            2083
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701498857977627,
+            3.59999999999991
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003524774964773769,
+            0.0
+          ],
+          "mesh_faces": [
+            466,
+            901
+          ],
+          "cad_faces": [
+            2083,
+            2103
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.00035247749646205584,
+          "mesh_faces": [
+            551,
+            585
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.000352477496477821,
+          "mesh_faces": [
+            583,
+            584
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701498857977627,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.000352477496477821,
+            0.0
+          ],
+          "mesh_faces": [
+            584,
+            900
+          ],
+          "cad_faces": [
+            2084,
+            2103
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            -1.7701498857941935,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.00035247749646205584,
+            0.0
+          ],
+          "mesh_faces": [
+            585,
+            1067
+          ],
+          "cad_faces": [
+            2084,
+            2104
+          ]
+        }
+      ],
+      "segment_count": 305
+    },
+    {
+      "z_mm": 5.84338339749941,
+      "independent_error": "ValueError: Invalid section ring at z=5.84338339749941: ['Self-intersection[1.77050243823388 3.59999999999991]']",
+      "unusual_segment_intersections": [
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003525150187573267,
+          "mesh_faces": [
+            465,
+            466
+          ],
+          "cad_faces": [
+            2083,
+            2083
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701499232151228,
+            3.59999999999991
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003525150187573267,
+            0.0
+          ],
+          "mesh_faces": [
+            466,
+            901
+          ],
+          "cad_faces": [
+            2083,
+            2103
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003525150187422277,
+          "mesh_faces": [
+            551,
+            585
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003525150187577708,
+          "mesh_faces": [
+            583,
+            584
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701499232151228,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003525150187577708,
+            0.0
+          ],
+          "mesh_faces": [
+            584,
+            900
+          ],
+          "cad_faces": [
+            2084,
+            2103
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            -1.7701499232115534,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003525150187422277,
+            0.0
+          ],
+          "mesh_faces": [
+            585,
+            1067
+          ],
+          "cad_faces": [
+            2084,
+            2104
+          ]
+        }
+      ],
+      "segment_count": 305
+    },
+    {
+      "z_mm": 5.84338439749941,
+      "independent_error": "ValueError: Invalid section ring at z=5.84338439749941: ['Self-intersection[1.77050251317352 3.59999999999991]']",
+      "unusual_segment_intersections": [
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003525525410372765,
+          "mesh_faces": [
+            465,
+            466
+          ],
+          "cad_faces": [
+            2083,
+            2083
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701499606324829,
+            3.59999999999991
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003525525410372765,
+            0.0
+          ],
+          "mesh_faces": [
+            466,
+            901
+          ],
+          "cad_faces": [
+            2083,
+            2103
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003525525410221775,
+          "mesh_faces": [
+            551,
+            585
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003525525410377206,
+          "mesh_faces": [
+            583,
+            584
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701499606324829,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003525525410377206,
+            0.0
+          ],
+          "mesh_faces": [
+            584,
+            900
+          ],
+          "cad_faces": [
+            2084,
+            2103
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            -1.7701499606289135,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003525525410221775,
+            0.0
+          ],
+          "mesh_faces": [
+            585,
+            1067
+          ],
+          "cad_faces": [
+            2084,
+            2104
+          ]
+        }
+      ],
+      "segment_count": 305
+    },
+    {
+      "z_mm": 5.843483397499409,
+      "independent_error": "ValueError: Invalid section ring at z=5.843483397499409: ['Self-intersection[1.77050993219788 3.59999999999991]']",
+      "unusual_segment_intersections": [
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003562672467534167,
+          "mesh_faces": [
+            465,
+            466
+          ],
+          "cad_faces": [
+            2083,
+            2083
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701536649511287,
+            3.59999999999991
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003562672467534167,
+            0.0
+          ],
+          "mesh_faces": [
+            466,
+            901
+          ],
+          "cad_faces": [
+            2083,
+            2103
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.0003562672467380956,
+          "mesh_faces": [
+            551,
+            585
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 0.00035626724675408283,
+          "mesh_faces": [
+            583,
+            584
+          ],
+          "cad_faces": [
+            2084,
+            2084
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            1.7701536649511285,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.00035626724675408283,
+            0.0
+          ],
+          "mesh_faces": [
+            584,
+            900
+          ],
+          "cad_faces": [
+            2084,
+            2103
+          ]
+        },
+        {
+          "kind": "intersection_inside_segment",
+          "xy_mm": [
+            -1.7701536649475595,
+            3.2499999999999103
+          ],
+          "distance_to_endpoints_mm": [
+            0.0003562672467380956,
+            0.0
+          ],
+          "mesh_faces": [
+            585,
+            1067
+          ],
+          "cad_faces": [
+            2084,
+            2104
+          ]
+        }
+      ],
+      "segment_count": 305
+    }
+  ],
+  "scope": "Independent local intersections on frozen tessellation, not a diagnosis of raw CAD topology or a physical print defect."
+}

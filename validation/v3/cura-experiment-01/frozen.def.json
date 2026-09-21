@@ -1,0 +1,3578 @@
+{
+  "version": 2,
+  "name": "AM-DFM frozen experiment",
+  "settings": {
+    "build_volume_fan_nr": {
+      "label": "Build volume fan number",
+      "type": "int",
+      "default_value": 0
+    },
+    "machine_name": {
+      "label": "machine_name",
+      "type": "str",
+      "default_value": "AM-DFM synthetic CLI experiment"
+    },
+    "machine_show_variants": {
+      "label": "Show Machine Variants",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_start_gcode": {
+      "label": "machine_start_gcode",
+      "type": "str",
+      "default_value": "G21\nG90\nM82\nG92 E0\nG0 X0 Y0 Z0"
+    },
+    "machine_end_gcode": {
+      "label": "machine_end_gcode",
+      "type": "str",
+      "default_value": ""
+    },
+    "material_guid": {
+      "label": "Material GUID",
+      "type": "str",
+      "default_value": ""
+    },
+    "material_type": {
+      "label": "Material Type",
+      "type": "str",
+      "default_value": ""
+    },
+    "material_brand": {
+      "label": "Material Brand",
+      "type": "str",
+      "default_value": ""
+    },
+    "material_diameter": {
+      "label": "material_diameter",
+      "type": "float",
+      "default_value": 1.75
+    },
+    "material_bed_temp_wait": {
+      "label": "Wait for Build Plate Heatup",
+      "type": "bool",
+      "default_value": true
+    },
+    "material_print_temp_wait": {
+      "label": "Wait for Nozzle Heatup",
+      "type": "bool",
+      "default_value": true
+    },
+    "material_print_temp_prepend": {
+      "label": "material_print_temp_prepend",
+      "type": "bool",
+      "default_value": false
+    },
+    "material_bed_temp_prepend": {
+      "label": "material_bed_temp_prepend",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_width": {
+      "label": "machine_width",
+      "type": "float",
+      "default_value": 250.0
+    },
+    "machine_depth": {
+      "label": "machine_depth",
+      "type": "float",
+      "default_value": 250.0
+    },
+    "machine_height": {
+      "label": "machine_height",
+      "type": "float",
+      "default_value": 250.0
+    },
+    "machine_shape": {
+      "label": "Build Plate Shape",
+      "type": "enum",
+      "default_value": "rectangular"
+    },
+    "machine_buildplate_type": {
+      "label": "Build Plate Type",
+      "type": "enum",
+      "default_value": "glass"
+    },
+    "machine_heated_bed": {
+      "label": "Has Heated Build Plate",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_heated_build_volume": {
+      "label": "Has Build Volume Temperature Stabilization",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_always_write_active_tool": {
+      "label": "Always Write Active Tool",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_center_is_zero": {
+      "label": "machine_center_is_zero",
+      "type": "bool",
+      "default_value": true
+    },
+    "machine_extruder_count": {
+      "label": "Number of Extruders",
+      "type": "int",
+      "default_value": 1
+    },
+    "extruders_enabled_count": {
+      "label": "Number of Extruders That Are Enabled",
+      "type": "int",
+      "default_value": 1
+    },
+    "machine_nozzle_tip_outer_diameter": {
+      "label": "Outer Nozzle Diameter",
+      "type": "float",
+      "default_value": 1
+    },
+    "machine_nozzle_expansion_angle": {
+      "label": "Nozzle Angle",
+      "type": "int",
+      "default_value": 45
+    },
+    "machine_heat_zone_length": {
+      "label": "Heat Zone Length",
+      "type": "float",
+      "default_value": 16
+    },
+    "machine_nozzle_temp_enabled": {
+      "label": "Enable Nozzle Temperature Control",
+      "type": "bool",
+      "default_value": true
+    },
+    "machine_nozzle_heat_up_speed": {
+      "label": "Heat Up Speed",
+      "type": "float",
+      "default_value": 2.0
+    },
+    "machine_nozzle_cool_down_speed": {
+      "label": "Cool Down Speed",
+      "type": "float",
+      "default_value": 2.0
+    },
+    "machine_min_cool_heat_time_window": {
+      "label": "Minimal Time Standby Temperature",
+      "type": "float",
+      "default_value": 50.0
+    },
+    "machine_gcode_flavor": {
+      "label": "machine_gcode_flavor",
+      "type": "enum",
+      "default_value": "RepRap"
+    },
+    "machine_firmware_retract": {
+      "label": "Firmware Retraction",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_extruders_share_heater": {
+      "label": "Extruders Share Heater",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_extruders_share_nozzle": {
+      "label": "Extruders Share Nozzle",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_extruders_shared_nozzle_initial_retraction": {
+      "label": "Shared Nozzle Initial Retraction",
+      "type": "float",
+      "default_value": 0
+    },
+    "machine_disallowed_areas": {
+      "label": "Disallowed Areas",
+      "type": "polygons",
+      "default_value": []
+    },
+    "nozzle_disallowed_areas": {
+      "label": "Nozzle Disallowed Areas",
+      "type": "polygons",
+      "default_value": []
+    },
+    "machine_head_with_fans_polygon": {
+      "label": "Machine Head & Fan Polygon",
+      "type": "polygon",
+      "default_value": [
+        [
+          -20,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          -10
+        ],
+        [
+          -20,
+          -10
+        ]
+      ]
+    },
+    "gantry_height": {
+      "label": "Gantry Height",
+      "type": "float",
+      "default_value": 99999999999
+    },
+    "machine_time_estimation_factor": {
+      "label": "Print Time Estimation Factor",
+      "type": "float",
+      "default_value": 100
+    },
+    "machine_nozzle_id": {
+      "label": "Nozzle ID",
+      "type": "str",
+      "default_value": "unknown"
+    },
+    "machine_nozzle_size": {
+      "label": "machine_nozzle_size",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "machine_use_extruder_offset_to_offset_coords": {
+      "label": "Offset with Extruder",
+      "type": "bool",
+      "default_value": true
+    },
+    "machine_start_gcode_first": {
+      "label": "Start GCode must be first",
+      "type": "bool",
+      "default_value": false
+    },
+    "extruder_prime_pos_z": {
+      "label": "Extruder Prime Z Position",
+      "type": "float",
+      "default_value": 0
+    },
+    "extruder_prime_pos_abs": {
+      "label": "Absolute Extruder Prime Position",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_max_feedrate_x": {
+      "label": "Maximum Speed X",
+      "type": "float",
+      "default_value": 299792458000
+    },
+    "machine_max_feedrate_y": {
+      "label": "Maximum Speed Y",
+      "type": "float",
+      "default_value": 299792458000
+    },
+    "machine_max_feedrate_z": {
+      "label": "Maximum Speed Z",
+      "type": "float",
+      "default_value": 299792458000
+    },
+    "machine_max_feedrate_e": {
+      "label": "Maximum Speed E",
+      "type": "float",
+      "default_value": 299792458000
+    },
+    "machine_max_acceleration_x": {
+      "label": "Maximum Acceleration X",
+      "type": "float",
+      "default_value": 9000
+    },
+    "machine_max_acceleration_y": {
+      "label": "Maximum Acceleration Y",
+      "type": "float",
+      "default_value": 9000
+    },
+    "machine_max_acceleration_z": {
+      "label": "Maximum Acceleration Z",
+      "type": "float",
+      "default_value": 100
+    },
+    "machine_max_acceleration_e": {
+      "label": "Maximum Filament Acceleration",
+      "type": "float",
+      "default_value": 10000
+    },
+    "machine_acceleration": {
+      "label": "Default Acceleration",
+      "type": "float",
+      "default_value": 4000
+    },
+    "machine_max_jerk_xy": {
+      "label": "Default X-Y Jerk",
+      "type": "float",
+      "default_value": 20.0
+    },
+    "machine_max_jerk_z": {
+      "label": "Default Z Jerk",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "machine_max_jerk_e": {
+      "label": "Default Filament Jerk",
+      "type": "float",
+      "default_value": 5.0
+    },
+    "machine_steps_per_mm_x": {
+      "label": "Steps per Millimeter (X)",
+      "type": "float",
+      "default_value": 50
+    },
+    "machine_steps_per_mm_y": {
+      "label": "Steps per Millimeter (Y)",
+      "type": "float",
+      "default_value": 50
+    },
+    "machine_steps_per_mm_z": {
+      "label": "Steps per Millimeter (Z)",
+      "type": "float",
+      "default_value": 50
+    },
+    "machine_steps_per_mm_e": {
+      "label": "Steps per Millimeter (E)",
+      "type": "float",
+      "default_value": 1600
+    },
+    "machine_endstop_positive_direction_x": {
+      "label": "X Endstop in Positive Direction",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_endstop_positive_direction_y": {
+      "label": "Y Endstop in Positive Direction",
+      "type": "bool",
+      "default_value": false
+    },
+    "machine_endstop_positive_direction_z": {
+      "label": "Z Endstop in Positive Direction",
+      "type": "bool",
+      "default_value": true
+    },
+    "machine_minimum_feedrate": {
+      "label": "Minimum Feedrate",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "machine_feeder_wheel_diameter": {
+      "label": "Feeder Wheel Diameter",
+      "type": "float",
+      "default_value": 10.0
+    },
+    "machine_scale_fan_speed_zero_to_one": {
+      "label": "Scale Fan Speed To 0-1",
+      "type": "bool",
+      "default_value": false
+    },
+    "reset_flow_duration": {
+      "label": "Reset flow duration",
+      "type": "float",
+      "default_value": 2.0
+    },
+    "layer_height": {
+      "label": "layer_height",
+      "type": "float",
+      "default_value": 0.2
+    },
+    "layer_height_0": {
+      "label": "layer_height_0",
+      "type": "float",
+      "default_value": 0.2
+    },
+    "line_width": {
+      "label": "line_width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "wall_line_width": {
+      "label": "wall_line_width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "wall_line_width_0": {
+      "label": "wall_line_width_0",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "wall_line_width_x": {
+      "label": "wall_line_width_x",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "skin_line_width": {
+      "label": "Top/Bottom Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "infill_line_width": {
+      "label": "Infill Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "skirt_brim_line_width": {
+      "label": "Skirt/Brim Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "support_line_width": {
+      "label": "Support Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "support_interface_line_width": {
+      "label": "Support Interface Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "support_roof_line_width": {
+      "label": "Support Roof Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "support_bottom_line_width": {
+      "label": "Support Floor Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "prime_tower_line_width": {
+      "label": "Prime Tower Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "initial_layer_line_width_factor": {
+      "label": "initial_layer_line_width_factor",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "wall_extruder_nr": {
+      "label": "Wall Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "wall_0_extruder_nr": {
+      "label": "Outer Wall Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "wall_x_extruder_nr": {
+      "label": "Inner Wall Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "wall_thickness": {
+      "label": "Wall Thickness",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "wall_line_count": {
+      "label": "wall_line_count",
+      "type": "int",
+      "default_value": 2
+    },
+    "wall_transition_length": {
+      "label": "Wall Transition Length",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "wall_distribution_count": {
+      "label": "Wall Distribution Count",
+      "type": "int",
+      "default_value": 1
+    },
+    "wall_transition_angle": {
+      "label": "Wall Transitioning Threshold Angle",
+      "type": "float",
+      "default_value": 10
+    },
+    "wall_transition_filter_distance": {
+      "label": "Wall Transitioning Filter Distance",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_transition_filter_deviation": {
+      "label": "Wall Transitioning Filter Margin",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "wall_0_wipe_dist": {
+      "label": "Outer Wall Wipe Distance",
+      "type": "float",
+      "default_value": 0.2
+    },
+    "wall_0_inset": {
+      "label": "Outer Wall Inset",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "optimize_wall_printing_order": {
+      "label": "Optimize Wall Printing Order",
+      "type": "bool",
+      "default_value": true
+    },
+    "inset_direction": {
+      "label": "Wall Ordering",
+      "type": "enum",
+      "default_value": "inside_out"
+    },
+    "alternate_extra_perimeter": {
+      "label": "Alternate Extra Wall",
+      "type": "bool",
+      "default_value": false
+    },
+    "min_wall_line_width": {
+      "label": "min_wall_line_width",
+      "type": "float",
+      "default_value": 0.34
+    },
+    "min_even_wall_line_width": {
+      "label": "min_even_wall_line_width",
+      "type": "float",
+      "default_value": 0.34
+    },
+    "min_odd_wall_line_width": {
+      "label": "min_odd_wall_line_width",
+      "type": "float",
+      "default_value": 0.34
+    },
+    "fill_outline_gaps": {
+      "label": "fill_outline_gaps",
+      "type": "bool",
+      "default_value": true
+    },
+    "min_feature_size": {
+      "label": "min_feature_size",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "min_bead_width": {
+      "label": "min_bead_width",
+      "type": "float",
+      "default_value": 0.34
+    },
+    "xy_offset": {
+      "label": "Horizontal Expansion",
+      "type": "float",
+      "default_value": 0
+    },
+    "xy_offset_layer_0": {
+      "label": "xy_offset_layer_0",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "hole_xy_offset": {
+      "label": "Hole Horizontal Expansion",
+      "type": "float",
+      "default_value": 0
+    },
+    "hole_xy_offset_max_diameter": {
+      "label": "Hole Horizontal Expansion Max Diameter",
+      "type": "float",
+      "default_value": 0
+    },
+    "z_seam_type": {
+      "label": "Z Seam Alignment",
+      "type": "enum",
+      "default_value": "sharpest_corner"
+    },
+    "z_seam_on_vertex": {
+      "label": "Z Seam On Vertex",
+      "type": "bool",
+      "default_value": false
+    },
+    "z_seam_position": {
+      "label": "Z Seam Position",
+      "type": "enum",
+      "default_value": "back"
+    },
+    "z_seam_x": {
+      "label": "Z Seam X",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "z_seam_y": {
+      "label": "Z Seam Y",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "z_seam_corner": {
+      "label": "Seam Corner Preference",
+      "type": "enum",
+      "default_value": "z_seam_corner_inner"
+    },
+    "z_seam_relative": {
+      "label": "Z Seam Relative",
+      "type": "bool",
+      "default_value": false
+    },
+    "roofing_extruder_nr": {
+      "label": "Top Surface Skin Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "roofing_layer_count": {
+      "label": "roofing_layer_count",
+      "type": "int",
+      "default_value": 0
+    },
+    "roofing_line_width": {
+      "label": "Top Surface Skin Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "roofing_pattern": {
+      "label": "Top Surface Skin Pattern",
+      "type": "enum",
+      "default_value": "lines"
+    },
+    "roofing_monotonic": {
+      "label": "Monotonic Top Surface Order",
+      "type": "bool",
+      "default_value": true
+    },
+    "roofing_angles": {
+      "label": "Top Surface Skin Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "roofing_expansion": {
+      "label": "Top Surface Expansion",
+      "type": "float",
+      "default_value": "0"
+    },
+    "flooring_extruder_nr": {
+      "label": "Bottom Surface Skin Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "flooring_layer_count": {
+      "label": "flooring_layer_count",
+      "type": "int",
+      "default_value": 0
+    },
+    "flooring_line_width": {
+      "label": "Bottom Surface Skin Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "flooring_pattern": {
+      "label": "Bottom Surface Skin Pattern",
+      "type": "enum",
+      "default_value": "lines"
+    },
+    "flooring_monotonic": {
+      "label": "Monotonic Bottom Surface Order",
+      "type": "bool",
+      "default_value": true
+    },
+    "flooring_angles": {
+      "label": "Bottom Surface Skin Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "top_bottom_extruder_nr": {
+      "label": "Top/Bottom Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "top_bottom_thickness": {
+      "label": "Top/Bottom Thickness",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "top_thickness": {
+      "label": "Top Thickness",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "top_layers": {
+      "label": "Top Layers",
+      "type": "int",
+      "default_value": 8
+    },
+    "bottom_thickness": {
+      "label": "Bottom Thickness",
+      "type": "float",
+      "default_value": 0.6
+    },
+    "bottom_layers": {
+      "label": "Bottom Layers",
+      "type": "int",
+      "default_value": 6
+    },
+    "initial_bottom_layers": {
+      "label": "Initial Bottom Layers",
+      "type": "int",
+      "default_value": 6
+    },
+    "top_bottom_pattern": {
+      "label": "Top/Bottom Pattern",
+      "type": "enum",
+      "default_value": "lines"
+    },
+    "top_bottom_pattern_0": {
+      "label": "Bottom Pattern Initial Layer",
+      "type": "enum",
+      "default_value": "lines"
+    },
+    "connect_skin_polygons": {
+      "label": "Connect Top/Bottom Polygons",
+      "type": "bool",
+      "default_value": false
+    },
+    "skin_monotonic": {
+      "label": "Monotonic Top/Bottom Order",
+      "type": "bool",
+      "default_value": false
+    },
+    "skin_angles": {
+      "label": "Top/Bottom Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "small_skin_width": {
+      "label": "Small Top/Bottom Width",
+      "type": "float",
+      "default_value": 1
+    },
+    "small_skin_on_surface": {
+      "label": "Small Top/Bottom On Surface",
+      "type": "bool",
+      "default_value": false
+    },
+    "skin_no_small_gaps_heuristic": {
+      "label": "No Skin in Z Gaps",
+      "type": "bool",
+      "default_value": false
+    },
+    "skin_outline_count": {
+      "label": "Extra Skin Wall Count",
+      "type": "int",
+      "default_value": 1
+    },
+    "ironing_enabled": {
+      "label": "Enable Ironing",
+      "type": "bool",
+      "default_value": false
+    },
+    "ironing_only_highest_layer": {
+      "label": "Iron Only Highest Layer",
+      "type": "bool",
+      "default_value": false
+    },
+    "ironing_pattern": {
+      "label": "Ironing Pattern",
+      "type": "enum",
+      "default_value": "zigzag"
+    },
+    "ironing_monotonic": {
+      "label": "Monotonic Ironing Order",
+      "type": "bool",
+      "default_value": false
+    },
+    "ironing_line_spacing": {
+      "label": "Ironing Line Spacing",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "ironing_flow": {
+      "label": "Ironing Flow",
+      "type": "float",
+      "default_value": 10.0
+    },
+    "ironing_inset": {
+      "label": "Ironing Inset",
+      "type": "float",
+      "default_value": 0.35
+    },
+    "speed_ironing": {
+      "label": "Ironing Speed",
+      "type": "float",
+      "default_value": 20.0
+    },
+    "acceleration_ironing": {
+      "label": "Ironing Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "jerk_ironing": {
+      "label": "Ironing Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "skin_overlap": {
+      "label": "Skin Overlap Percentage",
+      "type": "float",
+      "default_value": 5
+    },
+    "skin_overlap_mm": {
+      "label": "Skin Overlap",
+      "type": "float",
+      "default_value": 0.02
+    },
+    "skin_preshrink": {
+      "label": "Skin Removal Width",
+      "type": "float",
+      "default_value": 1
+    },
+    "top_skin_preshrink": {
+      "label": "Top Skin Removal Width",
+      "type": "float",
+      "default_value": 1
+    },
+    "bottom_skin_preshrink": {
+      "label": "Bottom Skin Removal Width",
+      "type": "float",
+      "default_value": 1
+    },
+    "expand_skins_expand_distance": {
+      "label": "Skin Expand Distance",
+      "type": "float",
+      "default_value": 1
+    },
+    "top_skin_expand_distance": {
+      "label": "Top Skin Expand Distance",
+      "type": "float",
+      "default_value": 1
+    },
+    "bottom_skin_expand_distance": {
+      "label": "Bottom Skin Expand Distance",
+      "type": "float",
+      "default_value": 1
+    },
+    "max_skin_angle_for_expansion": {
+      "label": "Maximum Skin Angle for Expansion",
+      "type": "float",
+      "default_value": 90
+    },
+    "min_skin_width_for_expansion": {
+      "label": "Minimum Skin Width for Expansion",
+      "type": "float",
+      "default_value": 0
+    },
+    "infill_extruder_nr": {
+      "label": "Infill Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "infill_sparse_density": {
+      "label": "infill_sparse_density",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "infill_line_distance": {
+      "label": "Infill Line Distance",
+      "type": "float",
+      "default_value": 2
+    },
+    "infill_pattern": {
+      "label": "Infill Pattern",
+      "type": "enum",
+      "default_value": "grid"
+    },
+    "zig_zaggify_infill": {
+      "label": "Connect Infill Lines",
+      "type": "bool",
+      "default_value": false
+    },
+    "connect_infill_polygons": {
+      "label": "Connect Infill Polygons",
+      "type": "bool",
+      "default_value": true
+    },
+    "infill_angles": {
+      "label": "Infill Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "infill_offset_x": {
+      "label": "Infill X Offset",
+      "type": "float",
+      "default_value": 0
+    },
+    "infill_offset_y": {
+      "label": "Infill Y Offset",
+      "type": "float",
+      "default_value": 0
+    },
+    "infill_randomize_start_location": {
+      "label": "Randomize Infill Start",
+      "type": "bool",
+      "default_value": false
+    },
+    "infill_multiplier": {
+      "label": "Infill Line Multiplier",
+      "type": "int",
+      "default_value": 1
+    },
+    "infill_wall_line_count": {
+      "label": "Extra Infill Wall Count",
+      "type": "int",
+      "default_value": 0
+    },
+    "sub_div_rad_add": {
+      "label": "Cubic Subdivision Shell",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "infill_overlap": {
+      "label": "Infill Overlap Percentage",
+      "type": "float",
+      "default_value": 10
+    },
+    "infill_overlap_mm": {
+      "label": "Infill Overlap",
+      "type": "float",
+      "default_value": 0.04
+    },
+    "infill_wipe_dist": {
+      "label": "Infill Wipe Distance",
+      "type": "float",
+      "default_value": 0.04
+    },
+    "infill_sparse_thickness": {
+      "label": "Infill Layer Thickness",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "gradual_infill_steps": {
+      "label": "Gradual Infill Steps",
+      "type": "int",
+      "default_value": 0
+    },
+    "gradual_infill_step_height": {
+      "label": "Gradual Infill Step Height",
+      "type": "float",
+      "default_value": 1.5
+    },
+    "infill_before_walls": {
+      "label": "Infill Before Walls",
+      "type": "bool",
+      "default_value": true
+    },
+    "min_infill_area": {
+      "label": "Minimum Infill Area",
+      "type": "float",
+      "default_value": 0
+    },
+    "infill_support_enabled": {
+      "label": "Infill Support",
+      "type": "bool",
+      "default_value": false
+    },
+    "infill_support_angle": {
+      "label": "Infill Overhang Angle",
+      "type": "float",
+      "default_value": 40
+    },
+    "skin_support": {
+      "label": "Infill Skin Support",
+      "type": "bool",
+      "default_value": true
+    },
+    "skin_support_speed": {
+      "label": "Skin Support Speed",
+      "type": "float",
+      "default_value": 15
+    },
+    "skin_support_material_flow": {
+      "label": "Skin Support Flow",
+      "type": "float",
+      "default_value": 60
+    },
+    "skin_support_density": {
+      "label": "Skin Support Density",
+      "type": "float",
+      "default_value": 100
+    },
+    "skin_support_fan_speed": {
+      "label": "Skin Support Fan Speed",
+      "type": "float",
+      "default_value": 100
+    },
+    "skin_support_interlace_lines": {
+      "label": "Interlace Skin Support Lines",
+      "type": "bool",
+      "default_value": false
+    },
+    "lightning_infill_support_angle": {
+      "label": "Lightning Infill Support Angle",
+      "type": "float",
+      "default_value": 40
+    },
+    "lightning_infill_overhang_angle": {
+      "label": "Lightning Infill Overhang Angle",
+      "type": "float",
+      "default_value": 40
+    },
+    "lightning_infill_prune_angle": {
+      "label": "Lightning Infill Prune Angle",
+      "type": "float",
+      "default_value": 40
+    },
+    "lightning_infill_straightening_angle": {
+      "label": "Lightning Infill Straightening Angle",
+      "type": "float",
+      "default_value": 40
+    },
+    "infill_move_inwards_length": {
+      "label": "Infill Start/End Move Inwards Length",
+      "type": "float",
+      "default_value": 0
+    },
+    "infill_start_move_inwards_length": {
+      "label": "Infill Start Move Inwards Length",
+      "type": "float",
+      "default_value": 0
+    },
+    "infill_end_move_inwards_length": {
+      "label": "Infill End Move Inwards Length",
+      "type": "float",
+      "default_value": 0
+    },
+    "default_material_print_temperature": {
+      "label": "Default Printing Temperature",
+      "type": "float",
+      "default_value": 210
+    },
+    "build_volume_temperature": {
+      "label": "Build Volume Temperature",
+      "type": "float",
+      "default_value": 0
+    },
+    "material_print_temperature": {
+      "label": "Printing Temperature",
+      "type": "float",
+      "default_value": 210
+    },
+    "material_print_temperature_layer_0": {
+      "label": "Printing Temperature Initial Layer",
+      "type": "float",
+      "default_value": 215
+    },
+    "material_initial_print_temperature": {
+      "label": "Initial Printing Temperature",
+      "type": "float",
+      "default_value": 200
+    },
+    "material_final_print_temperature": {
+      "label": "Final Printing Temperature",
+      "type": "float",
+      "default_value": 195
+    },
+    "material_extrusion_cool_down_speed": {
+      "label": "Extrusion Cool Down Speed Modifier",
+      "type": "float",
+      "default_value": 0.7
+    },
+    "default_material_bed_temperature": {
+      "label": "Default Build Plate Temperature",
+      "type": "float",
+      "default_value": 60
+    },
+    "material_bed_temperature": {
+      "label": "Build Plate Temperature",
+      "type": "float",
+      "default_value": 60
+    },
+    "material_bed_temperature_layer_0": {
+      "label": "Build Plate Temperature Initial Layer",
+      "type": "float",
+      "default_value": 60
+    },
+    "material_adhesion_tendency": {
+      "label": "Adhesion Tendency",
+      "type": "int",
+      "default_value": 10
+    },
+    "material_surface_energy": {
+      "label": "Surface Energy",
+      "type": "int",
+      "default_value": 100
+    },
+    "material_shrinkage_percentage": {
+      "label": "Scaling Factor Shrinkage Compensation",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "material_shrinkage_percentage_xy": {
+      "label": "Horizontal Scaling Factor Shrinkage Compensation",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "material_shrinkage_percentage_z": {
+      "label": "Vertical Scaling Factor Shrinkage Compensation",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "material_crystallinity": {
+      "label": "Crystalline Material",
+      "type": "bool",
+      "default_value": false
+    },
+    "material_anti_ooze_retracted_position": {
+      "label": "Anti-ooze Retracted Position",
+      "type": "float",
+      "default_value": -4
+    },
+    "material_anti_ooze_retraction_speed": {
+      "label": "Anti-ooze Retraction Speed",
+      "type": "float",
+      "default_value": 5
+    },
+    "material_break_preparation_retracted_position": {
+      "label": "Break Preparation Retracted Position",
+      "type": "float",
+      "default_value": -16
+    },
+    "material_break_preparation_speed": {
+      "label": "Break Preparation Retraction Speed",
+      "type": "float",
+      "default_value": 2
+    },
+    "material_break_preparation_temperature": {
+      "label": "Break Preparation Temperature",
+      "type": "float",
+      "default_value": 50
+    },
+    "material_break_retracted_position": {
+      "label": "Break Retracted Position",
+      "type": "float",
+      "default_value": -50
+    },
+    "material_break_speed": {
+      "label": "Break Retraction Speed",
+      "type": "float",
+      "default_value": 25
+    },
+    "material_break_temperature": {
+      "label": "Break Temperature",
+      "type": "float",
+      "default_value": 50
+    },
+    "material_flush_purge_speed": {
+      "label": "Flush Purge Speed",
+      "type": "float",
+      "default_value": 0.5
+    },
+    "material_flush_purge_length": {
+      "label": "Flush Purge Length",
+      "type": "float",
+      "default_value": 60
+    },
+    "material_end_of_filament_purge_speed": {
+      "label": "End of Filament Purge Speed",
+      "type": "float",
+      "default_value": 0.5
+    },
+    "material_end_of_filament_purge_length": {
+      "label": "End of Filament Purge Length",
+      "type": "float",
+      "default_value": 20
+    },
+    "material_maximum_park_duration": {
+      "label": "Maximum Park Duration",
+      "type": "float",
+      "default_value": 300
+    },
+    "material_no_load_move_factor": {
+      "label": "No Load Move Factor",
+      "type": "float",
+      "default_value": 0.940860215
+    },
+    "material_flow": {
+      "label": "Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_material_flow": {
+      "label": "Wall Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_0_material_flow": {
+      "label": "Outer Wall Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_x_material_flow": {
+      "label": "Inner Wall(s) Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_0_material_flow_roofing": {
+      "label": "Top Surface Outer Wall Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_x_material_flow_roofing": {
+      "label": "Top Surface Inner Wall(s) Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_0_material_flow_flooring": {
+      "label": "Bottom Surface Outer Wall Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_x_material_flow_flooring": {
+      "label": "Bottom Surface Inner Wall(s) Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "skin_material_flow": {
+      "label": "Top/Bottom Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "roofing_material_flow": {
+      "label": "Top Surface Skin Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "flooring_material_flow": {
+      "label": "Bottom Surface Skin Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "infill_material_flow": {
+      "label": "Infill Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "skirt_brim_material_flow": {
+      "label": "Skirt/Brim Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_material_flow": {
+      "label": "Support Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_interface_material_flow": {
+      "label": "Support Interface Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_roof_material_flow": {
+      "label": "Support Roof Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_bottom_material_flow": {
+      "label": "Support Floor Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "prime_tower_flow": {
+      "label": "Prime Tower Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "material_flow_layer_0": {
+      "label": "Initial Layer Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_x_material_flow_layer_0": {
+      "label": "Initial Layer Inner Wall Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "wall_0_material_flow_layer_0": {
+      "label": "Initial Layer Outer Wall Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "skin_material_flow_layer_0": {
+      "label": "Initial Layer Bottom Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "material_standby_temperature": {
+      "label": "Standby Temperature",
+      "type": "float",
+      "default_value": 150
+    },
+    "material_is_support_material": {
+      "label": "Is support material",
+      "type": "bool",
+      "default_value": false
+    },
+    "gradual_flow_enabled": {
+      "label": "Gradual flow enabled",
+      "type": "bool",
+      "default_value": false
+    },
+    "max_flow_acceleration": {
+      "label": "Gradual flow max acceleration",
+      "type": "float",
+      "default_value": 1
+    },
+    "layer_0_max_flow_acceleration": {
+      "label": "Initial layer max flow acceleration",
+      "type": "float",
+      "default_value": 1
+    },
+    "gradual_flow_discretisation_step_size": {
+      "label": "Gradual flow discretisation step size",
+      "type": "float",
+      "default_value": 0.2
+    },
+    "material_pressure_advance_factor": {
+      "label": "Pressure advance factor",
+      "type": "float",
+      "default_value": 0.05
+    },
+    "material_max_flowrate": {
+      "label": "Material Maximum Flow Rate",
+      "type": "float",
+      "default_value": 16
+    },
+    "speed_print": {
+      "label": "speed_print",
+      "type": "float",
+      "default_value": 30.0
+    },
+    "speed_infill": {
+      "label": "Infill Speed",
+      "type": "float",
+      "default_value": 60
+    },
+    "speed_wall": {
+      "label": "speed_wall",
+      "type": "float",
+      "default_value": 30.0
+    },
+    "speed_wall_0": {
+      "label": "speed_wall_0",
+      "type": "float",
+      "default_value": 30.0
+    },
+    "speed_wall_x": {
+      "label": "speed_wall_x",
+      "type": "float",
+      "default_value": 30.0
+    },
+    "speed_wall_0_roofing": {
+      "label": "Top Surface Outer Wall Speed",
+      "type": "float",
+      "default_value": 30
+    },
+    "speed_wall_x_roofing": {
+      "label": "Top Surface Inner Wall Speed",
+      "type": "float",
+      "default_value": 60
+    },
+    "speed_wall_0_flooring": {
+      "label": "Bottom Surface Outer Wall Speed",
+      "type": "float",
+      "default_value": 30
+    },
+    "speed_wall_x_flooring": {
+      "label": "Bottom Surface Inner Wall Speed",
+      "type": "float",
+      "default_value": 60
+    },
+    "speed_roofing": {
+      "label": "Top Surface Skin Speed",
+      "type": "float",
+      "default_value": 25
+    },
+    "speed_flooring": {
+      "label": "Bottom Surface Skin Speed",
+      "type": "float",
+      "default_value": 25
+    },
+    "speed_topbottom": {
+      "label": "speed_topbottom",
+      "type": "float",
+      "default_value": 30.0
+    },
+    "speed_support": {
+      "label": "Support Speed",
+      "type": "float",
+      "default_value": 60
+    },
+    "speed_support_infill": {
+      "label": "Support Infill Speed",
+      "type": "float",
+      "default_value": 60
+    },
+    "speed_support_interface": {
+      "label": "Support Interface Speed",
+      "type": "float",
+      "default_value": 40
+    },
+    "speed_support_roof": {
+      "label": "Support Roof Speed",
+      "type": "float",
+      "default_value": 40
+    },
+    "speed_support_bottom": {
+      "label": "Support Floor Speed",
+      "type": "float",
+      "default_value": 40
+    },
+    "speed_prime_tower": {
+      "label": "Prime Tower Speed",
+      "type": "float",
+      "default_value": 60
+    },
+    "speed_travel": {
+      "label": "Travel Speed",
+      "type": "float",
+      "default_value": 120
+    },
+    "speed_layer_0": {
+      "label": "Initial Layer Speed",
+      "type": "float",
+      "default_value": 30
+    },
+    "speed_print_layer_0": {
+      "label": "Initial Layer Print Speed",
+      "type": "float",
+      "default_value": 30
+    },
+    "speed_travel_layer_0": {
+      "label": "Initial Layer Travel Speed",
+      "type": "float",
+      "default_value": 60
+    },
+    "skirt_brim_speed": {
+      "label": "Skirt/Brim Speed",
+      "type": "float",
+      "default_value": 30
+    },
+    "speed_z_hop": {
+      "label": "Z Hop Speed",
+      "type": "float",
+      "default_value": 10
+    },
+    "speed_slowdown_layers": {
+      "label": "Number of Slower Layers",
+      "type": "int",
+      "default_value": 2
+    },
+    "speed_equalize_flow_width_factor": {
+      "label": "Flow Equalization Ratio",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "acceleration_enabled": {
+      "label": "Enable Acceleration Control",
+      "type": "bool",
+      "default_value": false
+    },
+    "acceleration_travel_enabled": {
+      "label": "Enable Travel Acceleration",
+      "type": "bool",
+      "default_value": true
+    },
+    "acceleration_print": {
+      "label": "Print Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_infill": {
+      "label": "Infill Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_wall": {
+      "label": "Wall Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_wall_0": {
+      "label": "Outer Wall Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_wall_x": {
+      "label": "Inner Wall Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_wall_0_roofing": {
+      "label": "Top Surface Outer Wall Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_wall_x_roofing": {
+      "label": "Top Surface Inner Wall Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_wall_0_flooring": {
+      "label": "Bottom Surface Outer Wall Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_wall_x_flooring": {
+      "label": "Bottom Surface Inner Wall Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_roofing": {
+      "label": "Top Surface Skin Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_flooring": {
+      "label": "Bottom Surface Skin Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_topbottom": {
+      "label": "Top/Bottom Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_support": {
+      "label": "Support Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_support_infill": {
+      "label": "Support Infill Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_support_interface": {
+      "label": "Support Interface Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_support_roof": {
+      "label": "Support Roof Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_support_bottom": {
+      "label": "Support Floor Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_prime_tower": {
+      "label": "Prime Tower Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_travel": {
+      "label": "Travel Acceleration",
+      "type": "float",
+      "default_value": 5000
+    },
+    "acceleration_layer_0": {
+      "label": "Initial Layer Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_print_layer_0": {
+      "label": "Initial Layer Print Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_travel_layer_0": {
+      "label": "Initial Layer Travel Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "acceleration_skirt_brim": {
+      "label": "Skirt/Brim Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "jerk_enabled": {
+      "label": "Enable Jerk Control",
+      "type": "bool",
+      "default_value": false
+    },
+    "jerk_travel_enabled": {
+      "label": "Enable Travel Jerk",
+      "type": "bool",
+      "default_value": true
+    },
+    "jerk_print": {
+      "label": "Print Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_infill": {
+      "label": "Infill Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_wall": {
+      "label": "Wall Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_wall_0": {
+      "label": "Outer Wall Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_wall_x": {
+      "label": "Inner Wall Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_wall_0_roofing": {
+      "label": "Top Surface Outer Wall Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_wall_x_roofing": {
+      "label": "Top Surface Inner Wall Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_wall_0_flooring": {
+      "label": "Bottom Surface Outer Wall Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_wall_x_flooring": {
+      "label": "Bottom Surface Inner Wall Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_roofing": {
+      "label": "Top Surface Skin Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_flooring": {
+      "label": "Bottom Surface Skin Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_topbottom": {
+      "label": "Top/Bottom Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_support": {
+      "label": "Support Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_support_infill": {
+      "label": "Support Infill Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_support_interface": {
+      "label": "Support Interface Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_support_roof": {
+      "label": "Support Roof Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_support_bottom": {
+      "label": "Support Floor Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_prime_tower": {
+      "label": "Prime Tower Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_travel": {
+      "label": "Travel Jerk",
+      "type": "float",
+      "default_value": 30
+    },
+    "jerk_layer_0": {
+      "label": "Initial Layer Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_print_layer_0": {
+      "label": "Initial Layer Print Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_travel_layer_0": {
+      "label": "Initial Layer Travel Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "jerk_skirt_brim": {
+      "label": "Skirt/Brim Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "retraction_enable": {
+      "label": "retraction_enable",
+      "type": "bool",
+      "default_value": false
+    },
+    "retract_at_layer_change": {
+      "label": "Retract at Layer Change",
+      "type": "bool",
+      "default_value": false
+    },
+    "retraction_amount": {
+      "label": "Retraction Distance",
+      "type": "float",
+      "default_value": 6.5
+    },
+    "retraction_speed": {
+      "label": "Retraction Speed",
+      "type": "float",
+      "default_value": 25
+    },
+    "retraction_retract_speed": {
+      "label": "Retraction Retract Speed",
+      "type": "float",
+      "default_value": 25
+    },
+    "retraction_prime_speed": {
+      "label": "Retraction Prime Speed",
+      "type": "float",
+      "default_value": 25
+    },
+    "retraction_extra_prime_amount": {
+      "label": "Retraction Extra Prime Amount",
+      "type": "float",
+      "default_value": 0
+    },
+    "retraction_min_travel": {
+      "label": "Retraction Minimum Travel",
+      "type": "float",
+      "default_value": 1.5
+    },
+    "retraction_count_max": {
+      "label": "Maximum Retraction Count",
+      "type": "int",
+      "default_value": 90
+    },
+    "retraction_extrusion_window": {
+      "label": "Minimum Extrusion Distance Window",
+      "type": "float",
+      "default_value": 4.5
+    },
+    "retraction_combing": {
+      "label": "Combing Mode",
+      "type": "enum",
+      "default_value": "all"
+    },
+    "retraction_combing_max_distance": {
+      "label": "Max Comb Distance With No Retract",
+      "type": "float",
+      "default_value": 0
+    },
+    "retraction_combing_avoid_distance": {
+      "label": "Inside Travel Avoid Distance",
+      "type": "float",
+      "default_value": 0.6
+    },
+    "travel_retract_before_outer_wall": {
+      "label": "Retract Before Outer Wall",
+      "type": "bool",
+      "default_value": false
+    },
+    "travel_avoid_other_parts": {
+      "label": "Avoid Printed Parts When Traveling",
+      "type": "bool",
+      "default_value": true
+    },
+    "travel_avoid_supports": {
+      "label": "Avoid Supports When Traveling",
+      "type": "bool",
+      "default_value": false
+    },
+    "travel_avoid_distance": {
+      "label": "Travel Avoid Distance",
+      "type": "float",
+      "default_value": 0.625
+    },
+    "layer_start_at_z_seam": {
+      "label": "Layer Start at Z Seam",
+      "type": "bool",
+      "default_value": false
+    },
+    "layer_start_x": {
+      "label": "Layer Start X",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "layer_start_y": {
+      "label": "Layer Start Y",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "retraction_hop_enabled": {
+      "label": "Z Hop When Retracted",
+      "type": "bool",
+      "default_value": false
+    },
+    "retraction_hop_only_when_collides": {
+      "label": "Z Hop Only Over Printed Parts",
+      "type": "bool",
+      "default_value": false
+    },
+    "retraction_hop": {
+      "label": "Z Hop Height",
+      "type": "float",
+      "default_value": 1
+    },
+    "retraction_hop_after_extruder_switch": {
+      "label": "Z Hop After Extruder Switch",
+      "type": "bool",
+      "default_value": true
+    },
+    "retraction_hop_after_extruder_switch_height": {
+      "label": "Z Hop After Extruder Switch Height",
+      "type": "float",
+      "default_value": 1
+    },
+    "cool_fan_enabled": {
+      "label": "Enable Print Cooling",
+      "type": "bool",
+      "default_value": true
+    },
+    "build_fan_full_at_height": {
+      "label": "Build Volume Fan Speed at Height",
+      "type": "float",
+      "default_value": 0
+    },
+    "build_fan_full_layer": {
+      "label": "Build Volume Fan Speed at Layer",
+      "type": "int",
+      "default_value": 0
+    },
+    "build_volume_fan_speed_0": {
+      "label": "Initial Layers Build Volume Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "build_volume_fan_speed": {
+      "label": "Build Volume Fan Speed",
+      "type": "float",
+      "default_value": 100
+    },
+    "cool_fan_speed": {
+      "label": "Fan Speed",
+      "type": "float",
+      "default_value": 100
+    },
+    "cool_fan_speed_min": {
+      "label": "Regular Fan Speed",
+      "type": "float",
+      "default_value": 100
+    },
+    "cool_fan_speed_max": {
+      "label": "Maximum Fan Speed",
+      "type": "float",
+      "default_value": 100
+    },
+    "cool_min_layer_time_fan_speed_max": {
+      "label": "Regular/Maximum Fan Speed Threshold",
+      "type": "float",
+      "default_value": 10
+    },
+    "cool_fan_speed_0": {
+      "label": "Initial Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "cool_fan_full_at_height": {
+      "label": "Regular Fan Speed at Height",
+      "type": "float",
+      "default_value": 0.5
+    },
+    "cool_fan_full_layer": {
+      "label": "Regular Fan Speed at Layer",
+      "type": "int",
+      "default_value": 2
+    },
+    "cool_min_layer_time": {
+      "label": "Minimum Layer Time",
+      "type": "float",
+      "default_value": 5
+    },
+    "cool_min_speed": {
+      "label": "Minimum Speed",
+      "type": "float",
+      "default_value": 10
+    },
+    "cool_lift_head": {
+      "label": "Lift Head",
+      "type": "bool",
+      "default_value": false
+    },
+    "cool_min_temperature": {
+      "label": "Small Layer Printing Temperature",
+      "type": "float",
+      "default_value": 0
+    },
+    "cool_during_extruder_switch": {
+      "label": "Cooling during extruder switch",
+      "type": "enum",
+      "default_value": "unchanged"
+    },
+    "support_enable": {
+      "label": "support_enable",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_extruder_nr": {
+      "label": "Support Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "support_infill_extruder_nr": {
+      "label": "Support Infill Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "support_extruder_nr_layer_0": {
+      "label": "First Layer Support Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "support_interface_extruder_nr": {
+      "label": "Support Interface Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "support_roof_extruder_nr": {
+      "label": "Support Roof Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "support_bottom_extruder_nr": {
+      "label": "Support Floor Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "support_structure": {
+      "label": "Support Structure",
+      "type": "enum",
+      "default_value": "normal"
+    },
+    "support_tree_angle": {
+      "label": "Maximum Branch Angle",
+      "type": "float",
+      "default_value": 60
+    },
+    "support_tree_branch_diameter": {
+      "label": "Branch Diameter",
+      "type": "float",
+      "default_value": 5
+    },
+    "support_tree_max_diameter": {
+      "label": "Trunk Diameter",
+      "type": "float",
+      "default_value": 25
+    },
+    "support_tree_branch_diameter_angle": {
+      "label": "Branch Diameter Angle",
+      "type": "float",
+      "default_value": 7
+    },
+    "support_z_seam_away_from_model": {
+      "label": "Support Z Seam Away from Model",
+      "type": "bool",
+      "default_value": true
+    },
+    "support_z_seam_min_distance": {
+      "label": "Min Z Seam Distance from Model",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "support_type": {
+      "label": "Support Placement",
+      "type": "enum",
+      "default_value": "everywhere"
+    },
+    "support_tree_angle_slow": {
+      "label": "Preferred Branch Angle",
+      "type": "float",
+      "default_value": 50
+    },
+    "support_tree_max_diameter_increase_by_merges_when_support_to_model": {
+      "label": "Diameter Increase To Model",
+      "type": "float",
+      "default_value": 1
+    },
+    "support_tree_min_height_to_model": {
+      "label": "Minimum Height To Model",
+      "type": "float",
+      "default_value": 3
+    },
+    "support_tree_bp_diameter": {
+      "label": "Initial Layer Diameter",
+      "type": "float",
+      "default_value": 7.5
+    },
+    "support_tree_top_rate": {
+      "label": "Branch Density",
+      "type": "float",
+      "default_value": 15
+    },
+    "support_tree_tip_diameter": {
+      "label": "Tip Diameter",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "support_tree_limit_branch_reach": {
+      "label": "Limit Branch Reach",
+      "type": "bool",
+      "default_value": true
+    },
+    "support_tree_branch_reach_limit": {
+      "label": "Optimal Branch Range",
+      "type": "float",
+      "default_value": 30
+    },
+    "support_tree_rest_preference": {
+      "label": "Rest Preference",
+      "type": "enum",
+      "default_value": "buildplate"
+    },
+    "support_angle": {
+      "label": "Support Overhang Angle",
+      "type": "float",
+      "default_value": 50
+    },
+    "support_pattern": {
+      "label": "Support Pattern",
+      "type": "enum",
+      "default_value": "zigzag"
+    },
+    "support_wall_count": {
+      "label": "Support Wall Line Count",
+      "type": "int",
+      "default_value": 1
+    },
+    "support_interface_wall_count": {
+      "label": "Support Interface Wall Line Count",
+      "type": "int",
+      "default_value": 0
+    },
+    "support_roof_wall_count": {
+      "label": "Support Roof Wall Line Count",
+      "type": "int",
+      "default_value": 0
+    },
+    "support_bottom_wall_count": {
+      "label": "Support Bottom Wall Line Count",
+      "type": "int",
+      "default_value": 0
+    },
+    "zig_zaggify_support": {
+      "label": "Connect Support Lines",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_connect_zigzags": {
+      "label": "Connect Support ZigZags",
+      "type": "bool",
+      "default_value": true
+    },
+    "support_infill_rate": {
+      "label": "Support Density",
+      "type": "float",
+      "default_value": 15
+    },
+    "support_line_distance": {
+      "label": "Support Line Distance",
+      "type": "float",
+      "default_value": 2.66
+    },
+    "support_initial_layer_line_distance": {
+      "label": "Initial Layer Support Line Distance",
+      "type": "float",
+      "default_value": 2.66
+    },
+    "support_infill_density_multiplier_initial_layer": {
+      "label": "Support Infill Density Multiplier Initial Layer",
+      "type": "int",
+      "default_value": 1
+    },
+    "support_infill_angles": {
+      "label": "Support Infill Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "support_brim_enable": {
+      "label": "Enable Support Brim",
+      "type": "bool",
+      "default_value": true
+    },
+    "support_brim_width": {
+      "label": "Support Brim Width",
+      "type": "float",
+      "default_value": 1.2
+    },
+    "support_brim_line_count": {
+      "label": "Support Brim Line Count",
+      "type": "int",
+      "default_value": 3
+    },
+    "support_z_distance": {
+      "label": "Support Z Distance",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "support_top_distance": {
+      "label": "Support Top Distance",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "support_bottom_distance": {
+      "label": "Support Bottom Distance",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "support_xy_distance": {
+      "label": "Support X/Y Distance",
+      "type": "float",
+      "default_value": 0.7
+    },
+    "support_xy_overrides_z": {
+      "label": "Support Distance Priority",
+      "type": "enum",
+      "default_value": "z_overrides_xy"
+    },
+    "support_xy_distance_overhang": {
+      "label": "Minimum Support X/Y Distance",
+      "type": "float",
+      "default_value": 0.2
+    },
+    "support_bottom_stair_step_height": {
+      "label": "Support Stair Step Height",
+      "type": "float",
+      "default_value": 0.3
+    },
+    "support_bottom_stair_step_width": {
+      "label": "Support Stair Step Maximum Width",
+      "type": "float",
+      "default_value": 5.0
+    },
+    "support_bottom_stair_step_min_slope": {
+      "label": "Support Stair Step Minimum Slope Angle",
+      "type": "float",
+      "default_value": 10.0
+    },
+    "support_join_distance": {
+      "label": "Support Join Distance",
+      "type": "float",
+      "default_value": 2.0
+    },
+    "support_offset": {
+      "label": "Support Horizontal Expansion",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "support_infill_sparse_thickness": {
+      "label": "Support Infill Layer Thickness",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "gradual_support_infill_steps": {
+      "label": "Gradual Support Infill Steps",
+      "type": "int",
+      "default_value": 0
+    },
+    "gradual_support_infill_step_height": {
+      "label": "Gradual Support Infill Step Height",
+      "type": "float",
+      "default_value": 1
+    },
+    "minimum_support_area": {
+      "label": "Minimum Support Area",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "support_interface_enable": {
+      "label": "Enable Support Interface",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_roof_enable": {
+      "label": "Enable Support Roof",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_bottom_enable": {
+      "label": "Enable Support Floor",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_interface_height": {
+      "label": "Support Interface Thickness",
+      "type": "float",
+      "default_value": 1
+    },
+    "support_roof_height": {
+      "label": "Support Roof Thickness",
+      "type": "float",
+      "default_value": 1
+    },
+    "support_bottom_height": {
+      "label": "Support Floor Thickness",
+      "type": "float",
+      "default_value": 1
+    },
+    "support_interface_density": {
+      "label": "Support Interface Density",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_roof_density": {
+      "label": "Support Roof Density",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_roof_line_distance": {
+      "label": "Support Roof Line Distance",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "support_bottom_density": {
+      "label": "Support Floor Density",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_bottom_line_distance": {
+      "label": "Support Floor Line Distance",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "support_interface_pattern": {
+      "label": "Support Interface Pattern",
+      "type": "enum",
+      "default_value": "concentric"
+    },
+    "support_roof_pattern": {
+      "label": "Support Roof Pattern",
+      "type": "enum",
+      "default_value": "concentric"
+    },
+    "support_bottom_pattern": {
+      "label": "Support Floor Pattern",
+      "type": "enum",
+      "default_value": "concentric"
+    },
+    "minimum_interface_area": {
+      "label": "Minimum Support Interface Area",
+      "type": "float",
+      "default_value": 1.0
+    },
+    "minimum_roof_area": {
+      "label": "Minimum Support Roof Area",
+      "type": "float",
+      "default_value": 1.0
+    },
+    "minimum_bottom_area": {
+      "label": "Minimum Support Floor Area",
+      "type": "float",
+      "default_value": 1.0
+    },
+    "support_interface_offset": {
+      "label": "Support Interface Horizontal Expansion",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "support_roof_offset": {
+      "label": "Support Roof Horizontal Expansion",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "support_bottom_offset": {
+      "label": "Support Floor Horizontal Expansion",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "support_interface_priority": {
+      "label": "Support Interface Priority",
+      "type": "enum",
+      "default_value": "interface_area_overwrite_support_area"
+    },
+    "support_interface_angles": {
+      "label": "Support Interface Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "support_roof_angles": {
+      "label": "Support Roof Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "support_bottom_angles": {
+      "label": "Support Floor Line Directions",
+      "type": "[int]",
+      "default_value": "[ ]"
+    },
+    "support_fan_enable": {
+      "label": "Fan Speed Override",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_supported_skin_fan_speed": {
+      "label": "Supported Skin Fan Speed",
+      "type": "float",
+      "default_value": 100
+    },
+    "support_use_towers": {
+      "label": "Use Towers",
+      "type": "bool",
+      "default_value": true
+    },
+    "support_tower_diameter": {
+      "label": "Tower Diameter",
+      "type": "float",
+      "default_value": 3.0
+    },
+    "support_tower_maximum_supported_diameter": {
+      "label": "Maximum Tower-Supported Diameter",
+      "type": "float",
+      "default_value": 3.0
+    },
+    "support_tower_roof_angle": {
+      "label": "Tower Roof Angle",
+      "type": "int",
+      "default_value": 65
+    },
+    "support_mesh_drop_down": {
+      "label": "Drop Down Support Mesh",
+      "type": "bool",
+      "default_value": true
+    },
+    "support_meshes_present": {
+      "label": "Scene Has Support Meshes",
+      "type": "bool",
+      "default_value": false
+    },
+    "prime_blob_enable": {
+      "label": "Enable Prime Blob",
+      "type": "bool",
+      "default_value": false
+    },
+    "extruder_prime_pos_x": {
+      "label": "Extruder Prime X Position",
+      "type": "float",
+      "default_value": 0
+    },
+    "extruder_prime_pos_y": {
+      "label": "Extruder Prime Y Position",
+      "type": "float",
+      "default_value": 0
+    },
+    "adhesion_type": {
+      "label": "adhesion_type",
+      "type": "enum",
+      "default_value": "none"
+    },
+    "adhesion_extruder_nr": {
+      "label": "Build Plate Adhesion Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "skirt_brim_extruder_nr": {
+      "label": "Skirt/Brim Extruder",
+      "type": "optional_extruder",
+      "default_value": "-1"
+    },
+    "raft_base_extruder_nr": {
+      "label": "Raft Base Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "raft_interface_extruder_nr": {
+      "label": "Raft Middle Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "raft_surface_extruder_nr": {
+      "label": "Raft Top Extruder",
+      "type": "extruder",
+      "default_value": 0
+    },
+    "skirt_line_count": {
+      "label": "Skirt Line Count",
+      "type": "int",
+      "default_value": 1
+    },
+    "skirt_height": {
+      "label": "Skirt Height",
+      "type": "int",
+      "default_value": 3
+    },
+    "skirt_gap": {
+      "label": "Skirt Distance",
+      "type": "float",
+      "default_value": 3
+    },
+    "skirt_brim_minimal_length": {
+      "label": "Skirt/Brim Minimum Length",
+      "type": "float",
+      "default_value": 250
+    },
+    "brim_width": {
+      "label": "Brim Width",
+      "type": "float",
+      "default_value": 8.0
+    },
+    "brim_line_count": {
+      "label": "Brim Line Count",
+      "type": "int",
+      "default_value": 20
+    },
+    "brim_gap": {
+      "label": "Brim Distance",
+      "type": "float",
+      "default_value": 0
+    },
+    "brim_replaces_support": {
+      "label": "Brim Replaces Support",
+      "type": "bool",
+      "default_value": true
+    },
+    "brim_location": {
+      "label": "Brim Location",
+      "type": "enum",
+      "default_value": "outside"
+    },
+    "brim_inside_margin": {
+      "label": "Brim Avoid Margin",
+      "type": "float",
+      "default_value": "1.6"
+    },
+    "brim_smart_ordering": {
+      "label": "Smart Brim",
+      "type": "bool",
+      "default_value": true
+    },
+    "raft_margin": {
+      "label": "Raft Extra Margin",
+      "type": "float",
+      "default_value": 15
+    },
+    "raft_base_margin": {
+      "label": "Raft Base Extra Margin",
+      "type": "float",
+      "default_value": 15
+    },
+    "raft_interface_margin": {
+      "label": "Raft Middle Extra Margin",
+      "type": "float",
+      "default_value": 15
+    },
+    "raft_surface_margin": {
+      "label": "Raft Top Extra Margin",
+      "type": "float",
+      "default_value": 15
+    },
+    "raft_remove_inside_corners": {
+      "label": "Remove Raft Inside Corners",
+      "type": "bool",
+      "default_value": false
+    },
+    "raft_base_remove_inside_corners": {
+      "label": "Remove Raft Base Inside Corners",
+      "type": "bool",
+      "default_value": false
+    },
+    "raft_interface_remove_inside_corners": {
+      "label": "Remove Raft Middle Inside Corners",
+      "type": "bool",
+      "default_value": false
+    },
+    "raft_surface_remove_inside_corners": {
+      "label": "Remove Raft Top Inside Corners",
+      "type": "bool",
+      "default_value": false
+    },
+    "raft_smoothing": {
+      "label": "Raft Smoothing",
+      "type": "float",
+      "default_value": 5
+    },
+    "raft_base_smoothing": {
+      "label": "Raft Base Smoothing",
+      "type": "float",
+      "default_value": 5
+    },
+    "raft_interface_smoothing": {
+      "label": "Raft Middle Smoothing",
+      "type": "float",
+      "default_value": 5
+    },
+    "raft_surface_smoothing": {
+      "label": "Raft Top Smoothing",
+      "type": "float",
+      "default_value": 5
+    },
+    "raft_airgap": {
+      "label": "Raft Air Gap",
+      "type": "float",
+      "default_value": 0.3
+    },
+    "layer_0_z_overlap": {
+      "label": "Initial Layer Z Overlap",
+      "type": "float",
+      "default_value": 0.22
+    },
+    "raft_base_thickness": {
+      "label": "Raft Base Thickness",
+      "type": "float",
+      "default_value": 0.3
+    },
+    "raft_base_line_width": {
+      "label": "Raft Base Line Width",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "raft_base_line_spacing": {
+      "label": "Raft Base Line Spacing",
+      "type": "float",
+      "default_value": 1.6
+    },
+    "raft_base_infill_overlap": {
+      "label": "Raft Base Infill Overlap Percentage",
+      "type": "float",
+      "default_value": 0
+    },
+    "raft_base_infill_overlap_mm": {
+      "label": "Raft Base Infill Overlap",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "raft_interface_layers": {
+      "label": "Raft Middle Layers",
+      "type": "int",
+      "default_value": 1
+    },
+    "raft_interface_thickness": {
+      "label": "Raft Middle Thickness",
+      "type": "float",
+      "default_value": 0.15
+    },
+    "raft_interface_line_width": {
+      "label": "Raft Middle Line Width",
+      "type": "float",
+      "default_value": 0.7
+    },
+    "raft_interface_line_spacing": {
+      "label": "Raft Middle Spacing",
+      "type": "float",
+      "default_value": 0.9
+    },
+    "raft_interface_z_offset": {
+      "label": "Raft Interface Z Offset",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "raft_interface_infill_overlap": {
+      "label": "Raft Interface Infill Overlap Percentage",
+      "type": "float",
+      "default_value": 0
+    },
+    "raft_interface_infill_overlap_mm": {
+      "label": "Raft Interface Infill Overlap",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "raft_surface_layers": {
+      "label": "Raft Top Layers",
+      "type": "int",
+      "default_value": 2
+    },
+    "raft_surface_thickness": {
+      "label": "Raft Top Layer Thickness",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "raft_surface_line_width": {
+      "label": "Raft Top Line Width",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "raft_surface_line_spacing": {
+      "label": "Raft Top Spacing",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "raft_surface_z_offset": {
+      "label": "Raft Surface Z Offset",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "raft_surface_monotonic": {
+      "label": "Monotonic Raft Top Surface Order",
+      "type": "bool",
+      "default_value": false
+    },
+    "raft_surface_infill_overlap": {
+      "label": "Raft Surface Infill Overlap Percentage",
+      "type": "float",
+      "default_value": 0
+    },
+    "raft_surface_infill_overlap_mm": {
+      "label": "Raft Surface Infill Overlap",
+      "type": "float",
+      "default_value": 0.0
+    },
+    "raft_wall_count": {
+      "label": "Raft Wall Count",
+      "type": "int",
+      "default_value": 1
+    },
+    "raft_base_wall_count": {
+      "label": "Raft Base Wall Count",
+      "type": "int",
+      "default_value": 1
+    },
+    "raft_interface_wall_count": {
+      "label": "Raft Middle Wall Count",
+      "type": "int",
+      "default_value": 0
+    },
+    "raft_surface_wall_count": {
+      "label": "Raft Top Wall Count",
+      "type": "int",
+      "default_value": 0
+    },
+    "raft_speed": {
+      "label": "Raft Print Speed",
+      "type": "float",
+      "default_value": 20
+    },
+    "raft_base_speed": {
+      "label": "Raft Base Print Speed",
+      "type": "float",
+      "default_value": 15
+    },
+    "raft_interface_speed": {
+      "label": "Raft Middle Print Speed",
+      "type": "float",
+      "default_value": 15
+    },
+    "raft_surface_speed": {
+      "label": "Raft Top Print Speed",
+      "type": "float",
+      "default_value": 20
+    },
+    "raft_acceleration": {
+      "label": "Raft Print Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "raft_base_acceleration": {
+      "label": "Raft Base Print Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "raft_interface_acceleration": {
+      "label": "Raft Middle Print Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "raft_surface_acceleration": {
+      "label": "Raft Top Print Acceleration",
+      "type": "float",
+      "default_value": 3000
+    },
+    "raft_jerk": {
+      "label": "Raft Print Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "raft_base_jerk": {
+      "label": "Raft Base Print Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "raft_interface_jerk": {
+      "label": "Raft Middle Print Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "raft_surface_jerk": {
+      "label": "Raft Top Print Jerk",
+      "type": "float",
+      "default_value": 20
+    },
+    "raft_fan_speed": {
+      "label": "Raft Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "raft_base_fan_speed": {
+      "label": "Raft Base Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "raft_interface_fan_speed": {
+      "label": "Raft Middle Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "raft_surface_fan_speed": {
+      "label": "Raft Top Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "raft_flow": {
+      "label": "Raft Flow",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "raft_base_flow": {
+      "label": "Raft Base Flow",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "raft_interface_flow": {
+      "label": "Raft Interface Flow",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "raft_surface_flow": {
+      "label": "Raft Surface Flow",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "machine_scan_first_layer": {
+      "label": "Scan the first layer",
+      "type": "bool",
+      "default_value": false
+    },
+    "prime_tower_enable": {
+      "label": "Enable Prime Tower",
+      "type": "bool",
+      "default_value": false
+    },
+    "prime_tower_mode": {
+      "label": "Prime Tower Type",
+      "type": "enum",
+      "default_value": "normal"
+    },
+    "prime_tower_size": {
+      "label": "Prime Tower Size",
+      "type": "float",
+      "default_value": 20
+    },
+    "prime_tower_min_volume": {
+      "label": "Prime Tower Minimum Volume",
+      "type": "float",
+      "default_value": 6
+    },
+    "prime_tower_max_bridging_distance": {
+      "label": "Prime Tower Maximum Bridging Distance",
+      "type": "float",
+      "default_value": 5
+    },
+    "prime_tower_min_shell_thickness": {
+      "label": "Prime Tower Minimum Shell Thickness",
+      "type": "float",
+      "default_value": 0.4
+    },
+    "prime_tower_position_x": {
+      "label": "Prime Tower X Position",
+      "type": "float",
+      "default_value": 200
+    },
+    "prime_tower_position_y": {
+      "label": "Prime Tower Y Position",
+      "type": "float",
+      "default_value": 200
+    },
+    "prime_tower_wipe_enabled": {
+      "label": "Wipe Inactive Nozzle on Prime Tower",
+      "type": "bool",
+      "default_value": true
+    },
+    "prime_tower_brim_enable": {
+      "label": "Prime Tower Base",
+      "type": "bool",
+      "default_value": false
+    },
+    "prime_tower_base_size": {
+      "label": "Prime Tower Base Size",
+      "type": "float",
+      "default_value": 1.2
+    },
+    "prime_tower_base_height": {
+      "label": "Prime Tower Base Height",
+      "type": "float",
+      "default_value": 0
+    },
+    "prime_tower_base_curve_magnitude": {
+      "label": "Prime Tower Base Slope",
+      "type": "float",
+      "default_value": 4
+    },
+    "prime_tower_raft_base_line_spacing": {
+      "label": "Prime Tower Raft Line Spacing",
+      "type": "float",
+      "default_value": 1.6
+    },
+    "ooze_shield_enabled": {
+      "label": "Enable Ooze Shield",
+      "type": "bool",
+      "default_value": false
+    },
+    "ooze_shield_angle": {
+      "label": "Ooze Shield Angle",
+      "type": "float",
+      "default_value": 60
+    },
+    "ooze_shield_dist": {
+      "label": "Ooze Shield Distance",
+      "type": "float",
+      "default_value": 2
+    },
+    "switch_extruder_retraction_amount": {
+      "label": "Nozzle Switch Retraction Distance",
+      "type": "float",
+      "default_value": 20
+    },
+    "switch_extruder_retraction_speeds": {
+      "label": "Nozzle Switch Retraction Speed",
+      "type": "float",
+      "default_value": 20
+    },
+    "switch_extruder_retraction_speed": {
+      "label": "Nozzle Switch Retract Speed",
+      "type": "float",
+      "default_value": 20
+    },
+    "switch_extruder_prime_speed": {
+      "label": "Nozzle Switch Prime Speed",
+      "type": "float",
+      "default_value": 20
+    },
+    "switch_extruder_extra_prime_amount": {
+      "label": "Nozzle Switch Extra Prime Amount",
+      "type": "float",
+      "default_value": 0
+    },
+    "interlocking_enable": {
+      "label": "Generate Interlocking Structure",
+      "type": "bool",
+      "default_value": false
+    },
+    "interlocking_beam_width": {
+      "label": "Interlocking Beam Width",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "interlocking_orientation": {
+      "label": "Interlocking Structure Orientation",
+      "type": "float",
+      "default_value": 22.5
+    },
+    "interlocking_beam_layer_count": {
+      "label": "Interlocking Beam Layer Count",
+      "type": "int",
+      "default_value": 2
+    },
+    "interlocking_depth": {
+      "label": "Interlocking Depth",
+      "type": "int",
+      "default_value": 2
+    },
+    "interlocking_boundary_avoidance": {
+      "label": "Interlocking Boundary Avoidance",
+      "type": "int",
+      "default_value": 2
+    },
+    "multi_material_paint_resolution": {
+      "label": "Multi-material Precision",
+      "type": "float",
+      "default_value": 0.2
+    },
+    "multi_material_paint_depth": {
+      "label": "Multi-material Depth",
+      "type": "float",
+      "default_value": 4
+    },
+    "meshfix_union_all": {
+      "label": "Union Overlapping Volumes",
+      "type": "bool",
+      "default_value": true
+    },
+    "meshfix_union_all_remove_holes": {
+      "label": "Remove All Holes",
+      "type": "bool",
+      "default_value": false
+    },
+    "meshfix_extensive_stitching": {
+      "label": "Extensive Stitching",
+      "type": "bool",
+      "default_value": false
+    },
+    "meshfix_keep_open_polygons": {
+      "label": "Keep Disconnected Faces",
+      "type": "bool",
+      "default_value": false
+    },
+    "multiple_mesh_overlap": {
+      "label": "Merged Meshes Overlap",
+      "type": "float",
+      "default_value": 0.15
+    },
+    "carve_multiple_volumes": {
+      "label": "Remove Mesh Intersection",
+      "type": "bool",
+      "default_value": true
+    },
+    "alternate_carve_order": {
+      "label": "Alternate Mesh Removal",
+      "type": "bool",
+      "default_value": true
+    },
+    "remove_empty_first_layers": {
+      "label": "Remove Empty First Layers",
+      "type": "bool",
+      "default_value": true
+    },
+    "meshfix_maximum_resolution": {
+      "label": "Maximum Resolution",
+      "type": "float",
+      "default_value": 0.5
+    },
+    "meshfix_maximum_travel_resolution": {
+      "label": "Maximum Travel Resolution",
+      "type": "float",
+      "default_value": 1.0
+    },
+    "meshfix_maximum_deviation": {
+      "label": "Maximum Deviation",
+      "type": "float",
+      "default_value": 0.025
+    },
+    "meshfix_maximum_extrusion_area_deviation": {
+      "label": "Maximum Extrusion Area Deviation",
+      "type": "float",
+      "default_value": 50000
+    },
+    "meshfix_fluid_motion_enabled": {
+      "label": "Enable Fluid Motion",
+      "type": "bool",
+      "default_value": true
+    },
+    "meshfix_fluid_motion_shift_distance": {
+      "label": "Fluid Motion Shift Distance",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "meshfix_fluid_motion_small_distance": {
+      "label": "Fluid Motion Small Distance",
+      "type": "float",
+      "default_value": 0.01
+    },
+    "meshfix_fluid_motion_angle": {
+      "label": "Fluid Motion Angle",
+      "type": "float",
+      "default_value": 15
+    },
+    "print_sequence": {
+      "label": "Print Sequence",
+      "type": "enum",
+      "default_value": "all_at_once"
+    },
+    "user_defined_print_order_enabled": {
+      "label": "Set Print Sequence Manually",
+      "type": "bool",
+      "default_value": false
+    },
+    "infill_mesh": {
+      "label": "Infill Mesh",
+      "type": "bool",
+      "default_value": false
+    },
+    "infill_mesh_order": {
+      "label": "Mesh Processing Rank",
+      "type": "int",
+      "default_value": 0
+    },
+    "cutting_mesh": {
+      "label": "Cutting Mesh",
+      "type": "bool",
+      "default_value": false
+    },
+    "mold_enabled": {
+      "label": "Mold",
+      "type": "bool",
+      "default_value": false
+    },
+    "mold_width": {
+      "label": "Minimal Mold Width",
+      "type": "float",
+      "default_value": 5
+    },
+    "mold_roof_height": {
+      "label": "Mold Roof Height",
+      "type": "float",
+      "default_value": 0.5
+    },
+    "mold_angle": {
+      "label": "Mold Angle",
+      "type": "float",
+      "default_value": 40
+    },
+    "support_mesh": {
+      "label": "Support Mesh",
+      "type": "bool",
+      "default_value": false
+    },
+    "anti_overhang_mesh": {
+      "label": "Anti Overhang Mesh",
+      "type": "bool",
+      "default_value": false
+    },
+    "magic_mesh_surface_mode": {
+      "label": "Surface Mode",
+      "type": "enum",
+      "default_value": "normal"
+    },
+    "magic_spiralize": {
+      "label": "Spiralize Outer Contour",
+      "type": "bool",
+      "default_value": false
+    },
+    "smooth_spiralized_contours": {
+      "label": "Smooth Spiralized Contours",
+      "type": "bool",
+      "default_value": true
+    },
+    "relative_extrusion": {
+      "label": "Relative Extrusion",
+      "type": "bool",
+      "default_value": false
+    },
+    "slicing_tolerance": {
+      "label": "Slicing Tolerance",
+      "type": "enum",
+      "default_value": "middle"
+    },
+    "infill_enable_travel_optimization": {
+      "label": "Infill Travel Optimization",
+      "type": "bool",
+      "default_value": false
+    },
+    "material_flow_temp_graph": {
+      "label": "Flow Temperature Graph",
+      "type": "str",
+      "default_value": "[[3.5, 200],[7.0, 240]]"
+    },
+    "minimum_polygon_circumference": {
+      "label": "Minimum Polygon Circumference",
+      "type": "float",
+      "default_value": 1.0
+    },
+    "support_skip_some_zags": {
+      "label": "Break Up Support In Chunks",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_skip_zag_per_mm": {
+      "label": "Support Chunk Size",
+      "type": "float",
+      "default_value": 20
+    },
+    "support_zag_skip_count": {
+      "label": "Support Chunk Line Count",
+      "type": "int",
+      "default_value": 5
+    },
+    "draft_shield_enabled": {
+      "label": "Enable Draft Shield",
+      "type": "bool",
+      "default_value": false
+    },
+    "draft_shield_dist": {
+      "label": "Draft Shield X/Y Distance",
+      "type": "float",
+      "default_value": 10
+    },
+    "draft_shield_height_limitation": {
+      "label": "Draft Shield Limitation",
+      "type": "enum",
+      "default_value": "full"
+    },
+    "draft_shield_height": {
+      "label": "Draft Shield Height",
+      "type": "float",
+      "default_value": 10
+    },
+    "conical_overhang_enabled": {
+      "label": "Make Overhang Printable",
+      "type": "bool",
+      "default_value": false
+    },
+    "conical_overhang_angle": {
+      "label": "Maximum Model Angle",
+      "type": "float",
+      "default_value": 50
+    },
+    "conical_overhang_hole_size": {
+      "label": "Maximum Overhang Hole Area",
+      "type": "float",
+      "default_value": 0
+    },
+    "coasting_enable": {
+      "label": "Enable Coasting",
+      "type": "bool",
+      "default_value": false
+    },
+    "coasting_volume": {
+      "label": "Coasting Volume",
+      "type": "float",
+      "default_value": 0.064
+    },
+    "coasting_min_volume": {
+      "label": "Minimum Volume Before Coasting",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "coasting_speed": {
+      "label": "Coasting Speed",
+      "type": "float",
+      "default_value": 90
+    },
+    "cross_infill_pocket_size": {
+      "label": "Cross 3D Pocket Size",
+      "type": "float",
+      "default_value": 2.0
+    },
+    "cross_infill_density_image": {
+      "label": "Cross Infill Density Image",
+      "type": "str",
+      "default_value": ""
+    },
+    "cross_support_density_image": {
+      "label": "Cross Fill Density Image for Support",
+      "type": "str",
+      "default_value": ""
+    },
+    "support_conical_enabled": {
+      "label": "Enable Conical Support",
+      "type": "bool",
+      "default_value": false
+    },
+    "support_conical_angle": {
+      "label": "Conical Support Angle",
+      "type": "float",
+      "default_value": 30
+    },
+    "support_conical_min_width": {
+      "label": "Conical Support Minimum Width",
+      "type": "float",
+      "default_value": 5.0
+    },
+    "magic_fuzzy_skin_enabled": {
+      "label": "Fuzzy Skin",
+      "type": "bool",
+      "default_value": false
+    },
+    "magic_fuzzy_skin_outside_only": {
+      "label": "Fuzzy Skin Outside Only",
+      "type": "bool",
+      "default_value": false
+    },
+    "magic_fuzzy_skin_thickness": {
+      "label": "Fuzzy Skin Thickness",
+      "type": "float",
+      "default_value": 0.3
+    },
+    "magic_fuzzy_skin_point_density": {
+      "label": "Fuzzy Skin Density",
+      "type": "float",
+      "default_value": 1.25
+    },
+    "magic_fuzzy_skin_point_dist": {
+      "label": "Fuzzy Skin Point Distance",
+      "type": "float",
+      "default_value": 0.8
+    },
+    "flow_rate_max_extrusion_offset": {
+      "label": "Flow Rate Compensation Max Extrusion Offset",
+      "type": "float",
+      "default_value": 0
+    },
+    "flow_rate_extrusion_offset_factor": {
+      "label": "Flow Rate Compensation Factor",
+      "type": "float",
+      "default_value": 100
+    },
+    "adaptive_layer_height_enabled": {
+      "label": "Use Adaptive Layers",
+      "type": "bool",
+      "default_value": false
+    },
+    "adaptive_layer_height_variation": {
+      "label": "Adaptive Layers Maximum Variation",
+      "type": "float",
+      "default_value": 0.1
+    },
+    "adaptive_layer_height_variation_step": {
+      "label": "Adaptive Layers Variation Step Size",
+      "type": "float",
+      "default_value": 0.01
+    },
+    "adaptive_layer_height_threshold": {
+      "label": "Adaptive Layers Topography Size",
+      "type": "float",
+      "default_value": 0.2
+    },
+    "wall_overhang_angle": {
+      "label": "Overhanging Wall Angle",
+      "type": "float",
+      "default_value": 90
+    },
+    "cool_min_layer_time_overhang": {
+      "label": "Minimum Layer Time with Overhang",
+      "type": "float",
+      "default_value": 5
+    },
+    "cool_min_layer_time_overhang_min_segment_length": {
+      "label": "Minimum Overhang Segment Length",
+      "type": "float",
+      "default_value": 5
+    },
+    "seam_overhang_angle": {
+      "label": "Seam Overhanging Wall Angle",
+      "type": "float",
+      "default_value": 90
+    },
+    "wall_overhang_speed_factors": {
+      "label": "Overhanging Wall Speeds",
+      "type": "[int]",
+      "default_value": "[100]"
+    },
+    "bridge_settings_enabled": {
+      "label": "Enable Bridge Settings",
+      "type": "bool",
+      "default_value": false
+    },
+    "bridge_wall_min_length": {
+      "label": "Minimum Bridge Wall Length",
+      "type": "float",
+      "default_value": 5
+    },
+    "bridge_skin_support_threshold": {
+      "label": "Bridge Skin Support Threshold",
+      "type": "float",
+      "default_value": 50
+    },
+    "bridge_wall_coast": {
+      "label": "Bridge Wall Coasting",
+      "type": "float",
+      "default_value": 100
+    },
+    "bridge_wall_speed": {
+      "label": "Bridge Wall Speed",
+      "type": "float",
+      "default_value": 15
+    },
+    "bridge_wall_material_flow": {
+      "label": "Bridge Wall Flow",
+      "type": "float",
+      "default_value": 50
+    },
+    "bridge_skin_speed": {
+      "label": "Bridge Skin Speed",
+      "type": "float",
+      "default_value": 15
+    },
+    "bridge_skin_material_flow": {
+      "label": "Bridge Skin Flow",
+      "type": "float",
+      "default_value": 60
+    },
+    "bridge_skin_density": {
+      "label": "Bridge Skin Density",
+      "type": "float",
+      "default_value": 100
+    },
+    "bridge_fan_speed": {
+      "label": "Bridge Fan Speed",
+      "type": "float",
+      "default_value": 100
+    },
+    "bridge_interlace_lines": {
+      "label": "Interlace Bridge Lines",
+      "type": "bool",
+      "default_value": false
+    },
+    "bridge_enable_more_layers": {
+      "label": "Bridge Has Multiple Layers",
+      "type": "bool",
+      "default_value": true
+    },
+    "bridge_skin_speed_2": {
+      "label": "Bridge Second Skin Speed",
+      "type": "float",
+      "default_value": 25
+    },
+    "bridge_skin_material_flow_2": {
+      "label": "Bridge Second Skin Flow",
+      "type": "float",
+      "default_value": 100
+    },
+    "bridge_skin_density_2": {
+      "label": "Bridge Second Skin Density",
+      "type": "float",
+      "default_value": 75
+    },
+    "bridge_fan_speed_2": {
+      "label": "Bridge Second Skin Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "bridge_skin_speed_3": {
+      "label": "Bridge Third Skin Speed",
+      "type": "float",
+      "default_value": 15
+    },
+    "bridge_skin_material_flow_3": {
+      "label": "Bridge Third Skin Flow",
+      "type": "float",
+      "default_value": 110
+    },
+    "bridge_skin_density_3": {
+      "label": "Bridge Third Skin Density",
+      "type": "float",
+      "default_value": 80
+    },
+    "bridge_fan_speed_3": {
+      "label": "Bridge Third Skin Fan Speed",
+      "type": "float",
+      "default_value": 0
+    },
+    "clean_between_layers": {
+      "label": "Wipe Nozzle Between Layers",
+      "type": "bool",
+      "default_value": false
+    },
+    "max_extrusion_before_wipe": {
+      "label": "Material Volume Between Wipes",
+      "type": "float",
+      "default_value": 10
+    },
+    "wipe_retraction_enable": {
+      "label": "Wipe Retraction Enable",
+      "type": "bool",
+      "default_value": true
+    },
+    "wipe_retraction_amount": {
+      "label": "Wipe Retraction Distance",
+      "type": "float",
+      "default_value": 1
+    },
+    "wipe_retraction_extra_prime_amount": {
+      "label": "Wipe Retraction Extra Prime Amount",
+      "type": "float",
+      "default_value": 0
+    },
+    "wipe_retraction_speed": {
+      "label": "Wipe Retraction Speed",
+      "type": "float",
+      "default_value": 5
+    },
+    "wipe_retraction_retract_speed": {
+      "label": "Wipe Retraction Retract Speed",
+      "type": "float",
+      "default_value": 3
+    },
+    "wipe_retraction_prime_speed": {
+      "label": "Wipe Retraction Prime Speed",
+      "type": "float",
+      "default_value": 2
+    },
+    "wipe_pause": {
+      "label": "Wipe Pause",
+      "type": "float",
+      "default_value": 0
+    },
+    "wipe_hop_enable": {
+      "label": "Wipe Z Hop",
+      "type": "bool",
+      "default_value": true
+    },
+    "wipe_hop_amount": {
+      "label": "Wipe Z Hop Height",
+      "type": "float",
+      "default_value": 1
+    },
+    "wipe_hop_speed": {
+      "label": "Wipe Hop Speed",
+      "type": "float",
+      "default_value": 10
+    },
+    "wipe_brush_pos_x": {
+      "label": "Wipe Brush X Position",
+      "type": "float",
+      "default_value": 100
+    },
+    "wipe_repeat_count": {
+      "label": "Wipe Repeat Count",
+      "type": "int",
+      "default_value": 5
+    },
+    "wipe_move_distance": {
+      "label": "Wipe Move Distance",
+      "type": "float",
+      "default_value": 20
+    },
+    "small_hole_max_size": {
+      "label": "Small Hole Max Size",
+      "type": "float",
+      "default_value": 0
+    },
+    "small_feature_max_length": {
+      "label": "Small Feature Max Length",
+      "type": "float",
+      "default_value": 0
+    },
+    "small_feature_speed_factor": {
+      "label": "Small Feature Speed",
+      "type": "float",
+      "default_value": 50
+    },
+    "small_feature_speed_factor_0": {
+      "label": "Small Feature Initial Layer Speed",
+      "type": "float",
+      "default_value": 50
+    },
+    "material_alternate_walls": {
+      "label": "Alternate Wall Directions",
+      "type": "bool",
+      "default_value": false
+    },
+    "group_outer_walls": {
+      "label": "Group Outer Walls",
+      "type": "bool",
+      "default_value": true
+    },
+    "retraction_during_travel_ratio": {
+      "label": "Retraction During Travel Move",
+      "type": "float",
+      "default_value": 0
+    },
+    "keep_retracting_during_travel": {
+      "label": "Keep Retracting During Travel",
+      "type": "bool",
+      "default_value": false
+    },
+    "prime_during_travel_ratio": {
+      "label": "Prime During Travel Move",
+      "type": "float",
+      "default_value": 0
+    },
+    "scarf_joint_seam_length": {
+      "label": "Scarf Seam Length",
+      "type": "float",
+      "default_value": 0
+    },
+    "scarf_joint_seam_start_height_ratio": {
+      "label": "Scarf Seam Start Height",
+      "type": "float",
+      "default_value": 0
+    },
+    "scarf_split_distance": {
+      "label": "Scarf Seam Step Length",
+      "type": "float",
+      "default_value": 1.0
+    },
+    "wall_0_start_speed_ratio": {
+      "label": "Outer Wall Start Speed Ratio",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "wall_0_acceleration": {
+      "label": "Outer Wall Start Acceleration",
+      "type": "float",
+      "default_value": 20.0
+    },
+    "wall_0_end_speed_ratio": {
+      "label": "Outer Wall End Speed Ratio",
+      "type": "float",
+      "default_value": 100.0
+    },
+    "wall_0_deceleration": {
+      "label": "Outer Wall End Deceleration",
+      "type": "float",
+      "default_value": 20.0
+    },
+    "wall_0_speed_split_distance": {
+      "label": "Outer Wall Speed Split Distance",
+      "type": "float",
+      "default_value": 1.0
+    },
+    "ppr_enable": {
+      "label": "Enable Print Process Reporting",
+      "type": "bool",
+      "default_value": false
+    },
+    "flow_warn_limit": {
+      "label": "Flow Warning",
+      "type": "float",
+      "default_value": 15.0
+    },
+    "flow_anomaly_limit": {
+      "label": "Flow Limit",
+      "type": "float",
+      "default_value": 25.0
+    },
+    "print_temp_warn_limit": {
+      "label": "Print temperature Warning",
+      "type": "float",
+      "default_value": 3.0
+    },
+    "print_temp_anomaly_limit": {
+      "label": "Print temperature Limit",
+      "type": "float",
+      "default_value": 7.0
+    },
+    "bv_temp_warn_limit": {
+      "label": "Build Volume temperature Warning",
+      "type": "float",
+      "default_value": 7.5
+    },
+    "bv_temp_anomaly_limit": {
+      "label": "Build Volume temperature Limit",
+      "type": "float",
+      "default_value": 10.0
+    },
+    "center_object": {
+      "label": "Center Object",
+      "type": "bool",
+      "default_value": false
+    },
+    "mesh_position_x": {
+      "label": "Mesh Position X",
+      "type": "float",
+      "default_value": 0
+    },
+    "mesh_position_y": {
+      "label": "Mesh Position Y",
+      "type": "float",
+      "default_value": 0
+    },
+    "mesh_position_z": {
+      "label": "Mesh Position Z",
+      "type": "float",
+      "default_value": 0
+    },
+    "mesh_rotation_matrix": {
+      "label": "Mesh Rotation Matrix",
+      "type": "str",
+      "default_value": "[[1,0,0], [0,1,0], [0,0,1]]"
+    }
+  }
+}

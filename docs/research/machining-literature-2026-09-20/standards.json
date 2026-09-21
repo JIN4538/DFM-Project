@@ -1,0 +1,691 @@
+[
+  {
+    "id": "S01",
+    "title": "ISO 10303-242:2025 — Industrial automation systems and integration — Product data representation and exchange — Part 242: Application protocol: Managed model-based 3D engineering",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2025,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/84300.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "형상뿐 아니라 치수·기하공차, 표면 조건, 제조 특징, 제품·공정 정보를 교환할 수 있는 AP242 범위를 확인했다.",
+      "개발 권고: 파일 형식, 실제 포함된 정보, 현재 읽은 정보를 각각 표시한다."
+    ],
+    "supports": [
+      "STEP 입력의 PMI·검증 속성·형상 연결 요구사항 설계"
+    ],
+    "does_not_support": [
+      "AP242 파일이면 반드시 설계치수·공차가 있음",
+      "B-rep 로딩만으로 PMI를 읽었다는 주장",
+      "제조 성공 판정"
+    ],
+    "inputs": [
+      "원본 STEP",
+      "FILE_SCHEMA 및 AP 판",
+      "의미 PMI 엔티티",
+      "단위·형상 연결",
+      "내보내기 옵션"
+    ],
+    "implementation_priority": "P0 — STEP 입력 정보 수준 표시와 PMI 확장 기반",
+    "status_notes": "2025-08, 4판 Published. 2022판 Withdrawn. 90.92 개정 예정 및 차기 CD 표시; CD를 현행 규정으로 취급하지 않음.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S02",
+    "title": "STEP File Analyzer and Viewer User Guide (Update 7), NIST AMS 200-12",
+    "authors": [
+      "Robert R. Lipman",
+      "Soonjo Kwon"
+    ],
+    "year": 2021,
+    "kind": "정부기관 기술보고서·공개 검증 도구",
+    "url": "https://doi.org/10.6028/NIST.AMS.200-12",
+    "doi": "10.6028/NIST.AMS.200-12",
+    "additional_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/ams/NIST.AMS.200-12.pdf",
+      "https://www.nist.gov/services-resources/software/step-file-analyzer-and-viewer"
+    ],
+    "access_level": "공개 원문 PDF에서 관련 절 선별 열람; 전권 정독·도구 실행은 하지 않음",
+    "reviewed_sections": [
+      "표지와 2021-10 서지",
+      "6 Analysis Reports, 인쇄 p.40/PDF p.48",
+      "6.1 Semantic PMI, 인쇄 pp.42–44/PDF pp.50–52",
+      "6.1.3·6.1.4 치수와 기하공차, 인쇄 pp.44–47",
+      "6.1.7 Coverage, 인쇄 p.53",
+      "6.2 Graphic PMI, 인쇄 p.55",
+      "6.6.1 NIST 기대 주석과 대조, 인쇄 p.65"
+    ],
+    "findings": [
+      "의미 PMI는 계산 가능한 정의와 형상 연계를, 그래픽 PMI는 보이는 주석을 전달하므로 동일시할 수 없다.",
+      "치수 유형·값·상하한·대상 면 연결을 추적하고, NIST 기준 모델의 기대 주석과 대조하는 방법을 제공한다."
+    ],
+    "supports": [
+      "PMI 유무·가져오기 손실·면 연결 검사",
+      "NIST 기준 사례와 독립 대조"
+    ],
+    "does_not_support": [
+      "PMI 가져오기 성공이 실제 가공 가능성이나 치수 만족을 증명함",
+      "그래픽 주석 OCR만으로 검증된 의미 PMI 확보"
+    ],
+    "inputs": [
+      "PMI가 포함된 STEP",
+      "기대 주석이 알려진 기준 CAD/도면",
+      "파서 결과의 원본 엔티티 ID"
+    ],
+    "implementation_priority": "P0 — 장비 없이 가능한 입력 정확성 검증",
+    "status_notes": "문서는2021년판이다. 현재 NIST 도구 페이지는5.41 및2026-01 이후 GitHub 배포 안내를 표시하므로 문서 시점과 실행 버전을 분리할 것.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S03",
+    "title": "ISO 8015:2011 — Geometrical product specifications (GPS) — Fundamentals — Concepts, principles and rules",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2011,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/55979.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "GPS 표기의 작성·해석·적용의 기본 틀이다.",
+      "개발 권고: CAD 좌표에서 얻은 치수와 설계자가 지정한 요구사항을 다른 데이터로 관리한다."
+    ],
+    "supports": [
+      "적용 규격·판·기본 해석 규칙의 명시"
+    ],
+    "does_not_support": [
+      "공차 미입력 시 임의 일반공차 부여",
+      "ISO와 ASME 규칙의 무조건 혼합",
+      "절삭성 한계값"
+    ],
+    "inputs": [
+      "도면 또는 PMI의 적용 규격과 판",
+      "명시 요구사항",
+      "해당 형상·측정 연산 정의"
+    ],
+    "implementation_priority": "P1 — 공차 요구사항 모델의 기본",
+    "status_notes": "2011-06,2판 Published;2021 재확인. 본문 개별 기본원칙 조항은 이번 조사에서 검증하지 않음.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S04",
+    "title": "ISO 1101:2017 — Geometrical product specifications (GPS) — Geometrical tolerancing — Tolerances of form, orientation, location and run-out",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2017,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/66777.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "형상·자세·위치·흔들림에 대한 기하공차 언어와 해석의 기반이다.",
+      "개발 권고: 공차 종류·값·대상 특징·데이텀·수식어를 함께 저장한다."
+    ],
+    "supports": [
+      "GD&T 입력/표시 구조와 지원 유형 선언"
+    ],
+    "does_not_support": [
+      "공칭 CAD 형상만으로 완성품의 실제 평면도·위치도를 검사",
+      "공구가 들어가면 모든 GD&T 만족"
+    ],
+    "inputs": [
+      "공차 프레임",
+      "데이텀 연결",
+      "수식어",
+      "설계 요구 표준 판"
+    ],
+    "implementation_priority": "P1 — 공차를 읽는 기능부터 단계적 도입",
+    "status_notes": "2017-02,4판 Published;2022 재확인. 카탈로그가 ISO16792를 통한 3D CAD 부착 표기도 설명함.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S05",
+    "title": "ISO 5459:2024 — Geometrical product specifications (GPS) — Geometrical tolerancing — Datums and datum systems",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2024,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/87855.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "데이텀 및 데이텀계의 표시·이해·설정 연산을 다룬다. 검사 연산 자체는 적용 범위에서 분리된다.",
+      "개발 권고: CAD 세계좌표, 가공 셋업 좌표, 설계 데이텀계를 구분한다."
+    ],
+    "supports": [
+      "데이텀 없는 위치공차 검토의 보류",
+      "기준면·축·기준계 연결"
+    ],
+    "does_not_support": [
+      "평평한 면이면 자동으로 설계 데이텀 또는 안정한 고정면",
+      "표준만으로 지그·클램프 설계 자동 검증"
+    ],
+    "inputs": [
+      "데이텀 지정 면/특징",
+      "순서·수식어",
+      "좌표 변환",
+      "설계 공차"
+    ],
+    "implementation_priority": "P1 — 셋업·공차 확장의 데이터 기반",
+    "status_notes": "2024-10,3판 Published;2011판 Withdrawn. 최대·최소실체 데이텀 상세는 ISO2692의 별도 범위라고 카탈로그가 명시.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S06",
+    "title": "ISO 14405-1:2025 — Geometrical product specifications (GPS) — Dimensional tolerancing — Part 1: Linear sizes",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2025,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/14405-1",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "원통·구·서로 마주보는 평행 평면의 선형 크기 표기를 다룬다.",
+      "개발 권고: 직경·두께·평면 간격을 단순 길이 하나로 합치지 말고 치수의 대상과 정의를 남긴다."
+    ],
+    "supports": [
+      "치수 유형과 측정 연산 구분"
+    ],
+    "does_not_support": [
+      "모든 최단거리·임의 바운딩박스가 설계 크기 치수",
+      "선형 치수만으로 기능 적합성 추론"
+    ],
+    "inputs": [
+      "특징의 유형",
+      "치수 지정 방식",
+      "수식어",
+      "상하한과 단위"
+    ],
+    "implementation_priority": "P1 — 치수 의미가 정확한 PMI/도면 연계",
+    "status_notes": "2025-08,3판 Published;2016판 Withdrawn. 초록 자체가 기능/용도와 치수 특성의 관계는 제공하지 않는다고 명시.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S07",
+    "title": "ISO 286-1:2010 / ISO 286-2:2010 — Geometrical product specifications (GPS) — ISO code system for tolerances on linear sizes — Part 1: Basis of tolerances, deviations and fits; Part 2: Tables of standard tolerance classes and limit deviations for holes and shafts",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2010,
+    "kind": "국제표준 묶음(2부)",
+    "url": "https://www.iso.org/standard/45975.html",
+    "additional_urls": [
+      "https://www.iso.org/standard/54915.html"
+    ],
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람; 실제 공차표 수치는 미열람",
+    "reviewed_sections": [
+      "두 부의 Abstract·General information·Life cycle"
+    ],
+    "findings": [
+      "끼워맞춤·치수공차 등급과 편차 체계를 다루며2부에 구멍/축의 한계편차 표가 있다.",
+      "개발 권고: H7 같은 명시 기호를 치수 구간·규격 판과 함께 해석하는 모듈 후보이다."
+    ],
+    "supports": [
+      "명시 끼워맞춤 요구의 구조화"
+    ],
+    "does_not_support": [
+      "H7이 보편적으로 드릴링만으로 가능한지 판정",
+      "공칭 직경만으로 끼워맞춤 등급 자동 선택",
+      "실제값을 확인하지 않은 공차표 복제"
+    ],
+    "inputs": [
+      "공칭 치수",
+      "구멍/축 구분",
+      "명시 등급",
+      "상대 부품 조건",
+      "도면 지정 판"
+    ],
+    "implementation_priority": "P1 — 표준 본문과 공차표 확보 뒤 구현",
+    "status_notes": "둘 다2판 Published.1부2010-04/2026 재확인;2부2010-06/90.60 검토 종료 상태. 두 부 모두2013 Cor1 연결 확인. 개정판 자동 치환 금지.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S08",
+    "title": "ISO 2768-1:1989 — General tolerances — Part 1: Tolerances for linear and angular dimensions without individual tolerance indications",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 1989,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/7748.html",
+    "additional_urls": [
+      "https://www.iso.org/standard/85741.html"
+    ],
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람; 등급별 수치표 미열람",
+    "reviewed_sections": [
+      "기존판 Abstract·Life cycle",
+      "후속 ISO2768의 발행 단계"
+    ],
+    "findings": [
+      "개별 허용차가 표시되지 않은 선형·각도치수의 일반공차를 다룬다.",
+      "개발 권고: 도면의 명시 인용·등급이 있을 때만 해당 판을 적용한다."
+    ],
+    "supports": [
+      "일반공차 입력의 출처·등급·판 관리"
+    ],
+    "does_not_support": [
+      "도면 없는 STEP에 일반공차 자동 부여",
+      "2768의 모든 부가 이미 철회되었다는 주장",
+      "일반공차 등급을 장비 성능 보증으로 사용"
+    ],
+    "inputs": [
+      "도면의 규격 인용",
+      "등급",
+      "치수 범위",
+      "개별 공차의 우선 적용 여부"
+    ],
+    "implementation_priority": "P1 — 기존 도면 지원; 최신 발행 상태 추적",
+    "status_notes": "1989-11,1판 Published;2022 재확인 후 개정 예정. 후속 ISO2768은 확인 시60.00 Under publication이며 Published로 단정하지 않음. 후속판의 연도도 임의 부여하지 않음.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S09",
+    "title": "ISO 22081:2021 — Geometrical product specifications (GPS) — Geometrical tolerancing — General geometrical specifications and general size specifications",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2021,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/72514.html",
+    "additional_urls": [
+      "https://www.iso.org/standard/7749.html"
+    ],
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "22081 Abstract·Life cycle",
+      "2768-2 철회 및 대체 관계"
+    ],
+    "findings": [
+      "일반 기하·크기 요구의 정의와 해석 규칙이며 적용 대상과 제외 대상이 구분된다.",
+      "개발 권고: 옛2768-2 등급과 새22081 요구를 동일한 수치표인 것처럼 자동 변환하지 않는다."
+    ],
+    "supports": [
+      "일반 기하공차의 적용 범위 모델링",
+      "과거 인용과 현재판의 명시적 구분"
+    ],
+    "does_not_support": [
+      "22081이 모든 누락공차를 채워주는 보편 공차표",
+      "옛2768-mK의 K를 새표준으로 단순 이름 바꾸기"
+    ],
+    "inputs": [
+      "명시 일반 요구",
+      "대상 특징",
+      "규격 판",
+      "데이텀계 등 적용 정보"
+    ],
+    "implementation_priority": "P1 — 올바른 일반공차 안내",
+    "status_notes": "2021-02,1판 Published;2026 재확인. ISO2768-2:1989는2021-02-04 철회,22081로 대체. 부별 상태를 구분할 것.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S10",
+    "title": "ISO 21920-1/-2/-3:2021 — Geometrical product specifications (GPS) — Surface texture: Profile — Part 1: Indication of surface texture; Part 2: Terms, definitions and surface texture parameters; Part 3: Specification operators",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2021,
+    "kind": "국제표준 묶음(3부)",
+    "url": "https://www.iso.org/standard/72196.html",
+    "additional_urls": [
+      "https://www.iso.org/standard/72226.html",
+      "https://www.iso.org/standard/72228.html"
+    ],
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람; 매개변수 계산식·필터 기본값·평가 길이 조항 미열람",
+    "reviewed_sections": [
+      "세 부의 Abstract·General information·Life cycle"
+    ],
+    "findings": [
+      "표면거칠기는 요구 표시, 매개변수 정의, 평가 연산을 함께 다뤄야 한다.",
+      "개발 권고: Ra 숫자 하나만 받아 형상의 좋고 나쁨을 판정하지 말고 대상 면·매개변수·평가 조건·근거를 기록한다."
+    ],
+    "supports": [
+      "표면 요구의 구조화와 기존 표준 판 관리"
+    ],
+    "does_not_support": [
+      "CAD의 매끈한 면이 실제 저거칠기 가공 보증",
+      "Ra3.2µm 등을 모든 절삭의 보편 가능 한계로 설정",
+      "거칠기 요구가 입력되지 않았는데 통과 판정"
+    ],
+    "inputs": [
+      "대상 면",
+      "Ra/Rz 등 명시 매개변수",
+      "단위",
+      "평가 조건",
+      "표준 판",
+      "해당 가공·측정 증거"
+    ],
+    "implementation_priority": "P1 — 요구정보 수집; 실물 예측은 P2",
+    "status_notes": "세 부 모두2021-12,1판 Published/90.92 및 차기 CD.1부는1302:2002,2부는4287:1997 및13565-2/-3 등,3부는4288:1996을 대체.2부 영어·불어2022-06 수정판 표시.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S11",
+    "title": "ISO 13399-1:2006 — Cutting tool data representation and exchange — Part 1: Overview, fundamental principles and general information model",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2006,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/36757.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle",
+      "Amendments",
+      "Corrigenda"
+    ],
+    "findings": [
+      "절삭 공구 데이터의 범주·관계·정보 교환 모델을 정의한다.",
+      "개발 권고: 공구 본체, 날부, 섕크, 홀더와 조립 상태를 구분하여 실제 도달·충돌 검토에 연결한다. 개별 속성 코드는 관련 부·사전 확인 후 채택한다."
+    ],
+    "supports": [
+      "공구 카탈로그 데이터 표준화 확장"
+    ],
+    "does_not_support": [
+      "공구 전체 길이를 장착 돌출 길이로 치환",
+      "공구 데이터 형식 준수가 절삭 안정성 보증",
+      "1부만 보고 전체 사전 속성을 구현했다고 주장"
+    ],
+    "inputs": [
+      "제조사 공구 데이터",
+      "공구 조립/홀더 형상",
+      "장착 상태",
+      "속성 단위·정의"
+    ],
+    "implementation_priority": "P0 — 입력 용어 정리; P1 — 표준 공구 라이브러리",
+    "status_notes": "2006-02,1판 Published;2021 재확인. Amd1:2010,Cor1:2008,Cor2:2011 존재. 수정 문서의 실제 규정 내용은 이번 조사에서 미열람.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S12",
+    "title": "ISO 230-2:2014 — Test code for machine tools — Part 2: Determination of accuracy and repeatability of positioning of numerically controlled axes",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2014,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/55295.html",
+    "additional_urls": [
+      "https://www.iso.org/standard/63976.html"
+    ],
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle",
+      "Amendment1 존재"
+    ],
+    "findings": [
+      "직선·회전 개별축의 위치결정 정확도와 반복성을 직접 반복 측정하는 시험이다.",
+      "개발 권고: 장비 능력 자료의 시험조건과 불확도를 저장하고 완성품 공차와 구분한다."
+    ],
+    "supports": [
+      "외부 장비 성능 성적서의 기록 항목 설계"
+    ],
+    "does_not_support": [
+      "장비의 반복정밀도 숫자를 모든 형상의 가공공차로 복사",
+      "기계 시험 없이 기하 계산으로 장비 정확도 검증"
+    ],
+    "inputs": [
+      "장비별 시험성적서",
+      "축·위치",
+      "시험 환경",
+      "반복 측정",
+      "불확도"
+    ],
+    "implementation_priority": "P2 — 외부 장비 데이터가 확보될 때",
+    "status_notes": "2014-05,4판 Published;2025 재확인. Amd1:2016 존재. 본문 시험 절차·수식 미열람.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S13",
+    "title": "ISO 10791-7:2020 — Test conditions for machining centres — Part 7: Accuracy of finished test pieces",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2020,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/73814.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "정삭 조건의 표준 시험편을 이용해3~5동시축 머시닝센터의 절삭 정확도를 평가하는 범위다.",
+      "개발 권고: 향후 외부 가공 시험 자료를 얻으면 시험편·셋업·조건을 함께 비교한다."
+    ],
+    "supports": [
+      "실물 절삭 정확도 검증 계획과 외부 시험편 자료 선별"
+    ],
+    "does_not_support": [
+      "임의 STEP 몇 개의 CAD 치수를 읽는 테스트가 해당 표준 절삭시험 통과",
+      "이 표준의 시험공차를 모든 부품 허용공차로 전용"
+    ],
+    "inputs": [
+      "정의된 실물 시험편",
+      "장비·공구·셋업",
+      "정삭 조건",
+      "치수 측정과 불확도"
+    ],
+    "implementation_priority": "P2 — 외부 실물 검증 설계",
+    "status_notes": "2020-01,3판 Published;2025 재확인,2014판 Withdrawn. 시험편 도면·수치 허용값 본문은 미열람.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S14",
+    "title": "ISO 14253-1:2017 — Geometrical product specifications (GPS) — Inspection by measurement of workpieces and measuring equipment — Part 1: Decision rules for verifying conformity or nonconformity with specifications",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2017,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/70137.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "규격 경계 근처의 적합·부적합 판단에서 측정불확도를 고려하는 규칙의 범위다.",
+      "개발 권고: 계산 오차, 측정불확도, 공정 변동, 설계 허용공차를 별도 필드로 보존한다."
+    ],
+    "supports": [
+      "검사 결과와 적합 판정의 분리 설계"
+    ],
+    "does_not_support": [
+      "코드의1e-9mm 수치 비교대를 ISO 적합성 가드밴드로 설명",
+      "공정 데이터 없이 제조 성공 확률 도출",
+      "측정불확도와 실패 확률 동일시"
+    ],
+    "inputs": [
+      "실제 측정값",
+      "규격 상하한",
+      "측정불확도 모델",
+      "합의된 의사결정 규칙"
+    ],
+    "implementation_priority": "P0 — 용어·경계 해석 분리; 실제 규칙 구현은 P2",
+    "status_notes": "2017-10,3판 Published;2023 재확인. 기본 확률값·가드밴드 산식 등 유료 세부 조항을 이 조사로 확정하지 않음.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S15",
+    "title": "ISO 15530-3:2011 — Geometrical product specifications (GPS) — Coordinate measuring machines (CMM): Technique for determining the uncertainty of measurement — Part 3: Use of calibrated workpieces or measurement standards",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2011,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/53627.html",
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle"
+    ],
+    "findings": [
+      "교정된 유사 형상·치수의 시편/표준을 이용하는 CMM 측정불확도 평가 접근을 다룬다.",
+      "개발 권고: 외부 치수 측정 데이터를 받을 때 장비 명칭만 받지 말고 해당 측정 과업의 불확도 근거를 요구한다."
+    ],
+    "supports": [
+      "외부 측정 데이터의 신뢰성 평가 항목"
+    ],
+    "does_not_support": [
+      "CAD 기준형상 시험을 CMM 교정시험으로 간주",
+      "실측자료 없이 측정불확도를 가정한 적합 판정"
+    ],
+    "inputs": [
+      "실측 시편",
+      "교정성적서",
+      "측정 절차",
+      "기하·치수 유사성",
+      "측정 시스템"
+    ],
+    "implementation_priority": "P2 — 외부 실측 자료 검증",
+    "status_notes": "2011-10,1판 Published;2022 재확인.2004년 TS판 대체. 실험 절차 및 수식 세부 미열람.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S16",
+    "title": "ASME Y14.5-2018 (R2024) — Dimensioning and Tolerancing",
+    "authors": [
+      "American Society of Mechanical Engineers (ASME)"
+    ],
+    "year": 2018,
+    "kind": "미국 국가표준",
+    "url": "https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing",
+    "access_level": "발행기관 공식 상품 페이지의 판·설명 열람; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "상품 제목2018(R2024)",
+      "Description",
+      "이전2009판 대체 안내"
+    ],
+    "findings": [
+      "도면·디지털 모델의 GD&T 기호, 해석과 요구 정의를 다루는 체계다.",
+      "개발 권고: ISO GPS와 ASME의 적용 체계를 파일·도면 단위로 명시하고 서로 다른 기본규칙을 섞지 않는다."
+    ],
+    "supports": [
+      "ASME 기반 고객 도면/PMI 지원 모듈의 근거"
+    ],
+    "does_not_support": [
+      "일부 기호가 같다는 이유로 ISO와 동일한 해석",
+      "제조법별 가공 가능 수치 제공"
+    ],
+    "inputs": [
+      "명시 적용 규격·판",
+      "공차 프레임·데이텀·수식어",
+      "도면/PMI"
+    ],
+    "implementation_priority": "P1 — 실제 입력 도면이 ASME일 때",
+    "status_notes": "공식 제품 페이지에서2018(R2024) 확인. 일부 ASME 주제 소개 페이지의2019 표기와 충돌하므로 규격 제품 페이지를 우선함. R2024는 재확인 연도이며 새2018 본문 개정 연도가 아님.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S17",
+    "title": "ASME Y14.41-2026 — Digital Product Definition Data Practices",
+    "authors": [
+      "American Society of Mechanical Engineers (ASME)"
+    ],
+    "year": 2026,
+    "kind": "미국 국가표준",
+    "url": "https://www.asme.org/codes-standards/find-codes-standards/y14-41-digital-product-definition-data-practices",
+    "additional_urls": [
+      "https://share.ansi.org/Shared%20Documents/Standards%20Action/2026-PDFs/SAV5705.pdf"
+    ],
+    "access_level": "공식 ASME 제품 페이지 및 ANSI 승인 공고 해당 항목 열람; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "ASME 상품 제목2026·Description",
+      "ANSI Standards Action2026-01-30,Vol.57No.05,p.34:Final Actions"
+    ],
+    "findings": [
+      "디지털 제품 정의 데이터 세트의 작성·개정 요구를 다룬다.",
+      "개발 권고: 모델·주석·관련 문서와 변경 이력을 묶어 관리하며, 형상만 읽은 결과를 완전한 제품 정의로 표시하지 않는다."
+    ],
+    "supports": [
+      "디지털 제품 정의 입력·추적성 설계"
+    ],
+    "does_not_support": [
+      "2019판을 현행판으로 무조건 표기",
+      "AP242 형상 파일이 요구사항을 완전 전달한다고 가정"
+    ],
+    "inputs": [
+      "모델 및 주석",
+      "관련 도면·문서",
+      "개정 이력",
+      "적용 데이터 정의 체계"
+    ],
+    "implementation_priority": "P1 — 디지털 제품 정의 확장",
+    "status_notes": "공식 제품 제목2026 확인. ANSI 공고는2019판 개정,최종 승인2026-01-21로 명시. ASME 페이지의 일부 재확인 템플릿 변수는 미치환 상태라 그 변수를 근거로 삼지 않음.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "S18",
+    "title": "ISO 16792:2021 — Technical product documentation — Digital product definition data practices",
+    "authors": [
+      "국제표준화기구(ISO)"
+    ],
+    "year": 2021,
+    "kind": "국제표준",
+    "url": "https://www.iso.org/standard/73871.html",
+    "additional_urls": [
+      "https://www.iso.org/standard/83352.html"
+    ],
+    "access_level": "공식 카탈로그의 적용 범위·서지·발행/개정 상태 확인; 유료 규정 본문 미열람",
+    "reviewed_sections": [
+      "공식 페이지 Abstract",
+      "General information",
+      "Life cycle",
+      "후속 DIS의 개발 상태"
+    ],
+    "findings": [
+      "3D 모델 단독 또는 디지털2D도면과 함께 사용하는 제품 정의 데이터 작성·개정·표시를 다룬다.",
+      "개발 권고: 형상, PMI, 도면 간 누락과 연결 상태를 사용자에게 보여준다."
+    ],
+    "supports": [
+      "3D/2D 복합 입력의 범위와 추적성 설계"
+    ],
+    "does_not_support": [
+      "이 표준 하나로 GPS 공차 의미 전체를 해석",
+      "DIS 초안 문구를 발행된 의무 규정으로 표시"
+    ],
+    "inputs": [
+      "CAD/PMI/도면",
+      "판·개정",
+      "정보 간 연계"
+    ],
+    "implementation_priority": "P1 — 모델 기반 정의 요구사항",
+    "status_notes": "2021-04,3판 Published/90.92. 차기 ISO/DIS16792는4판 개발 중,40.20(2026-07-08)이며 발행판이 아님.",
+    "checked_date": "2026-09-20"
+  }
+]

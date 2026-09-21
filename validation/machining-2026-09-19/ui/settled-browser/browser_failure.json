@@ -1,0 +1,22 @@
+{
+  "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('오목한 부분 원통면 4개의 반경을 확인했습니다. 선택한 공구보다 작은 반경은 4개입니다.', { exact: true }) to be visible\u001b[22m\n",
+  "stack": "locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('오목한 부분 원통면 4개의 반경을 확인했습니다. 선택한 공구보다 작은 반경은 4개입니다.', { exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\validation\\machining-2026-09-19\\ui\\browser_workflow.cjs:67:92",
+  "steps": [
+    {
+      "name": "10_rectangle_tool8_wide",
+      "utc": "2026-09-19T14:44:06.955Z",
+      "layout": {
+        "viewport": [
+          1440,
+          1100
+        ],
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "mainWidth": 1140
+      },
+      "screenshot": "10_rectangle_tool8_wide.png",
+      "graph": "10_rectangle_tool8_wide.graph.png"
+    }
+  ],
+  "pageErrors": []
+}

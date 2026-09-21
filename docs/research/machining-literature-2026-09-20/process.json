@@ -1,0 +1,320 @@
+[
+  {
+    "id": "P01",
+    "title": "Milling inside corners",
+    "authors": [
+      "Sandvik Coromant"
+    ],
+    "year": null,
+    "kind": "공구 제조사 공식 적용 가이드",
+    "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-inside-corners",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Considerations; Solution – limit the arc of engagement; Roughing; Finishing",
+    "findings": "내부 코너에서 공구 물림이 커져 진동·날 손상이 생길 수 있다. 최종가공 안내의 공구 지름 D≤1.5R은 물림을 줄이는 공정 권고다.",
+    "supports": "R과 선택 공구 반경 비교, 반경·공구·경로의 대안 제시.",
+    "does_not_support": "1.5R을 보편 불가능 경계로 사용하거나, 기하 필요조건 D≤2R 충족을 실제 안정 가공으로 승격.",
+    "inputs": "내부 반경, 공구 형식·지름, 경로, 물림, 이송, 재료·장비.",
+    "implementation_priority": "즉시: 기하 한계와 조건부 권고를 따로 설명",
+    "status_notes": "기존 M01/E01 재확인. 코드에 Sandvik 직접 인용은 없고 코너 기능의 외부 교차 근거다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P02",
+    "title": "Milling holes and cavities/pockets",
+    "authors": [
+      "Sandvik Coromant"
+    ],
+    "year": null,
+    "kind": "공구 제조사 공식 적용 가이드",
+    "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-holes-cavities-pockets",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Hole milling: creating openings; Widening a hole or a cavity; How to open up / widen a cavity or pocket",
+    "findings": "동일 공동도 드릴링·램핑·플런지·잔삭 등 경로 선택이 달라진다. 긴 돌출, 안정성, 칩 배출 조건에 따라 전략을 바꾼다.",
+    "supports": "포켓 깊이·폭 검토에 공구/가공법과 경로 조건을 연결하고 다른 방법을 제시.",
+    "does_not_support": "깊이비 하나로 모든 포켓을 가공 불가 판정; 특정 전략의 절입·속도 수치를 모든 엔드밀에 이식.",
+    "inputs": "공동과 원소재, 공구·절입, 재료, 냉각·칩 배출, 장비 방향·출력.",
+    "implementation_priority": "즉시: 드릴/엔드밀 및 작업 전략 구분",
+    "status_notes": "기존 M02/E02 재확인. 현재 앱은 이 문서의 경로 생성·절삭력 모델을 구현하지 않았다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P03",
+    "title": "The Anatomy of an End Mill",
+    "authors": [
+      "Harvey Performance Company"
+    ],
+    "year": 2017,
+    "kind": "공구 제조사 공식 기술 문서",
+    "url": "https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Cutter Diameter; Shank Diameter; Overall Length (OAL) & Length of Cut (LOC); Overall Reach/Length Below Shank (LBS)",
+    "findings": "날 길이 LOC, 전장 OAL, 샹크 아래 길이 LBS는 서로 다르다. LBS는 감소 목부가 시작되는 곳부터 절삭 끝까지의 길이이며 목부 길이만을 뜻하지 않는다. 감소 목부는 깊은 포켓에서 샹크 마찰 회피에 관련된다.",
+    "supports": "공구 입력을 절삭부·목부·샹크·장착 돌출로 나누고 각 치수의 측정 시작점을 그림으로 표시.",
+    "does_not_support": "LBS를 장착한 공구 끝~홀더 앞면 길이로 간주; 긴 LOC만으로 깊은 벽 가공성을 확정.",
+    "inputs": "공구 카탈로그 치수, 공구 어셈블리와 실제 장착 상태.",
+    "implementation_priority": "즉시: 입력 계약 유지 및 공구 형상 확장",
+    "status_notes": "기존 E04, 코드 CNC_TOOL_DIMENSIONS. 게시 2017-12-10; 페이지 메타데이터에 2023-10-24 수정 시각도 노출.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P04",
+    "title": "CNC Machining DFM Toolkit / Designing for Machined Parts",
+    "authors": [
+      "Protolabs"
+    ],
+    "year": null,
+    "kind": "제조서비스 설계·견적 가이드",
+    "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Holes; Threading; Walls and Features; Radii; Navigating Critical Machining Advisories",
+    "findings": "영국판은 홀을 엔드밀로 보간하는 자사 방식을 설명하며 6D보다 깊은 홀은 전용 드릴·양면 작업 등이 필요할 수 있다고 한다. 얇은 벽도 자사 공구셋 조건의 난이도 안내다.",
+    "supports": "위치별 설계 조치, 사용자 공구/서비스 프로필, 공급자 한계 표시.",
+    "does_not_support": "6D를 드릴링 전체의 한계 또는 현재 원통면 축 구간/D의 보편 합격선으로 사용.",
+    "inputs": "실제 홀 깊이·지름, 공구·가공법, 소재, 공급자/지역 서비스 프로필.",
+    "implementation_priority": "즉시: 규칙 출처·측정 정의·공급자 조건 표시",
+    "status_notes": "기존 M03/E03, 코드 CNC_GEOMETRY. 미국판과 문구/수치가 다르므로 국가·조회일을 보존한다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P05",
+    "title": "Shaft and Holder Modes reference",
+    "authors": [
+      "Autodesk"
+    ],
+    "year": null,
+    "kind": "CAD/CAM 공식 기능 문서",
+    "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Five shaft/holder modes; Detect tool length",
+    "findings": "샤프트/홀더 충돌과 간격을 따로 처리하며, 무시·회피·경로 삭제·공구 돌출 수정·실패 등의 모드가 실제 경로에 영향을 준다.",
+    "supports": "공구 어셈블리와 홀더 간섭 검토, CAM 검증 조건·모드 기록.",
+    "does_not_support": "점 레이 가시성으로 유한 공구·홀더의 연속 진입/복귀 경로 무충돌을 보증.",
+    "inputs": "절삭부·목부·샹크·홀더 형상, 장착 길이, 가공 경로, 여유 거리, 부품/원소재.",
+    "implementation_priority": "우선 확장: 공구 어셈블리 충돌과 CAM 대조",
+    "status_notes": "기존 M04/E05, 코드 CNC_ACCESS_SCOPE. 문서 확인은 실제 Fusion 실행 검증과 구분한다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P06",
+    "title": "Drilling tips",
+    "authors": [
+      "Sandvik Coromant"
+    ],
+    "year": null,
+    "kind": "공구 제조사 공식 적용 가이드",
+    "url": "https://www.sandvik.coromant.com/en-us/knowledge/drilling/drilling-tips",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Internal/external coolant; Dry drilling; Chip control tips; Feeds and speeds; Hole quality; Material-specific tips",
+    "findings": "칩 배출은 소재, 드릴/인서트 형상, 냉각 압력·유량과 절삭 조건에 의존한다. >3D 내부 냉각 선호 문구는 해당 드릴 적용 가이드의 권고다.",
+    "supports": "깊은 홀의 칩·냉각 확인 항목과 부족 입력 표시; 드릴 형식을 분리한 프로필.",
+    "does_not_support": "3D가 넘으면 가공 불가; 깊이비만으로 칩 막힘 확률 산출; 드릴링 권고를 측면 밀링에 그대로 적용.",
+    "inputs": "진짜 드릴링 깊이, DC, 드릴 형식/팁/홈, 재료·경도, 이송·속도, 냉각 유량·압력.",
+    "implementation_priority": "우선 확장: 홀 입출구/교차 구조와 드릴 전용 조건",
+    "status_notes": "신규. 추정 URL /drilling/chip-control-and-cutting-fluid 는 열리지 않았고, 공식 Drilling 목차의 링크를 따라 이 실제 본문을 확인했다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P07",
+    "title": "How to reduce vibration in milling",
+    "authors": [
+      "Sandvik Coromant"
+    ],
+    "year": null,
+    "kind": "공구 제조사 공식 적용 가이드",
+    "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/vibration",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Cutting tool; Holding tool; Silent Tools; Cutting data and tool path; Machine tool; Workpiece and its fixture",
+    "findings": "진동에는 공구·홀더·장비·부품·고정구가 관여한다. 돌출이 공구 지름의 4배를 넘으면 진동 경향이 두드러질 수 있다는 안내는 감쇠 공구 선택의 맥락이다.",
+    "supports": "공구 돌출비와 지지 조건을 위험 요인으로 설명; 지름·길이만으로 안정성을 단정하지 않는 설계.",
+    "does_not_support": "4D를 홀 깊이 또는 보편 채터 한계로 사용; 형상만으로 안정 RPM을 계산.",
+    "inputs": "실제 돌출 길이·공구 지름, 홀더, 물림/경로, 회전수, 강성·감쇠, 고정 방향.",
+    "implementation_priority": "조건 수집부터; 안정성 정량 예측은 후속 연구",
+    "status_notes": "신규. 제품 홍보를 포함하는 제조사 권고로, 특정 제품의 성능 주장을 우리 도구의 검증값으로 채택하지 않는다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P08",
+    "title": "How to do milling in different materials",
+    "authors": [
+      "Sandvik Coromant"
+    ],
+    "year": null,
+    "kind": "공구 제조사 공식 소재별 적용 가이드",
+    "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-different-materials",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Milling steel; ferritic/martensitic and austenitic/duplex stainless steel; cast iron (선별)",
+    "findings": "같은 강재 계열도 합금·열처리·조직에 따라 가공성이 달라진다. 버·구성인선·가공경화·열균열은 재료와 절삭 조건의 결합 문제다.",
+    "supports": "소재 등급·열처리·경도를 별도 입력하고 버/표면 문제의 발생 기전을 설명.",
+    "does_not_support": "재료명 한 단어를 성공률 또는 처짐으로 변환; 본문 속도·냉각 권고의 무조건 전용.",
+    "inputs": "소재 표준·등급·상태·경도, 공구 재종/코팅, 절삭 속도·이송·절입·냉각.",
+    "implementation_priority": "우선: 소재 입력 구조화; 물리 수치는 검증 데이터 확보 후",
+    "status_notes": "신규. 전체 소재별 절삭 데이터베이스를 구축하거나 모든 절을 수치 검증한 자료가 아니다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P09",
+    "title": "Thread milling application tips",
+    "authors": [
+      "Sandvik Coromant"
+    ],
+    "year": null,
+    "kind": "공구 제조사 공식 나사 밀링 가이드",
+    "url": "https://www.sandvik.coromant.com/en-us/knowledge/threading/thread-milling/application-tips",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Choice of cutting diameter; Thread milling tool path; Feed per tooth; Machine software feed; Number of passes; Thread milling hole sizes",
+    "findings": "나사 밀링에서는 나사 지름·피치와 공구 지름에 따라 윤곽 오차와 실질 물림이 달라진다. 공구 지름≤나사 지름의 70%는 윤곽 편차 감소 권고다.",
+    "supports": "나사 규격·피치·유효 길이와 탭/나사밀의 가공법을 구분하고 원통면만으로 나사를 추정하지 않는 설계.",
+    "does_not_support": "70%를 일반 엔드밀/드릴 지름 한계나 나사 체결강도 보증으로 사용.",
+    "inputs": "나사 규격, 피치, 내외부, 유효 길이, 바닥 여유, 공구 형식, 허용 윤곽 편차, 3축 동시 경로.",
+    "implementation_priority": "중기: PMI/도면 또는 사용자 나사 지정 뒤 구현",
+    "status_notes": "신규. 현재 원통면 검토는 나사 가공 검토가 아니다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P10",
+    "title": "Advanced Tips for CNC Designs and Drawings [Webinar Recording]",
+    "authors": [
+      "Greg Paulsen",
+      "Steve Zimmerman",
+      "Xometry"
+    ],
+    "year": 2024,
+    "kind": "제조서비스 실무 웨비나·공식 전사",
+    "url": "https://www.xometry.com/resources/blog/advanced-tips-for-cnc-designs-and-drawings-webinar/",
+    "access_level": "공개 HTML 전사와 Q&A (영상 전체 시청 아님)",
+    "reviewed_sections": "Q&A; common features versus cost-driving features; walls, corners, holes, threads, edge breaks and technical drawings",
+    "findings": "박벽·특수공구·여러 작업·표면가공은 시간과 원가에 영향을 준다. 나사는 가공법과 바닥 여유를 함께 지정하며, 기능적 모따기와 단순 모서리 제거를 구분한다.",
+    "supports": "가공 불가/추가 작업/비용 요인을 분리하고 도면의 의도·공차·검사 조건을 요청하는 UX.",
+    "does_not_support": "금속 벽 0.030 in, 드릴 깊이 10D, 나사 길이 2D 등의 서비스 권고를 보편 실패 임계값이나 체결강도 설계로 전용.",
+    "inputs": "작업 종류, 공급자 공구셋, 도면·표면/모서리 요구, 수량, 셋업·공차·검사.",
+    "implementation_priority": "우선: 원가 유발 요인 설명; 가격 수치 모델은 별도 데이터 필요",
+    "status_notes": "신규. 게시 2024-08-08, 갱신 2026-02-27. 발표자의 구어적 범용 표현보다 명시 조건과 표준을 우선한다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P11",
+    "title": "Guide To Locating & Clamping Principles",
+    "authors": [
+      "Carr Lane Manufacturing"
+    ],
+    "year": null,
+    "kind": "고정구 제조사 설계 가이드",
+    "url": "https://www.carrlane.com/engineering-resources/fixture-design-principles/locating-clamping-principles",
+    "access_level": "공개 HTML 본문",
+    "reviewed_sections": "Basic principles; External surfaces/3-2-1; Machining forces; Locating guidelines; Redundant location; Clamp positioning",
+    "findings": "위치 결정과 눌러 고정하는 기능을 나누고, 절삭력 방향·지지점·고정 위치·칩 간섭을 고려한다. 약한 부분을 과도하게 조이면 변형될 수 있다.",
+    "supports": "셋업에 지지/클램프 영역·힘·기준면을 요구하고 공구 접근과 고정 안정성을 별도 검토.",
+    "does_not_support": "3-2-1 점이 있다는 이유만으로 마찰·강성·절삭력에 대한 고정 충분성 확정; 안내의 '12 freedoms'를 12 독립 강체 자유도로 설명.",
+    "inputs": "기준면, 접촉영역, 구속·마찰, 고정력/순서, 절삭력, 원소재·부품 형상.",
+    "implementation_priority": "우선: 고정 영역 입력과 충돌; 정량 고정력/변형은 후속",
+    "status_notes": "신규. 원문은 6 자유도의 양·음 방향을 따로 세어 12라고 서술한다. 독립 자유도 설명과 구분 필요.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P12",
+    "title": "Analytical Prediction of Stability Lobes in Milling",
+    "authors": [
+      "Yusuf Altintas",
+      "Erhan Budak"
+    ],
+    "year": 1995,
+    "kind": "동료심사 연구논문",
+    "url": "https://doi.org/10.1016/S0007-8506(07)62342-7",
+    "doi": "10.1016/S0007-8506(07)62342-7",
+    "access_level": "저자 업로드 페이지의 서지·초록 확인; PDF 페이지 존재만 확인, 본문 수식 미검토",
+    "reviewed_sections": "Abstract (저자 Yusuf Altintas 업로드 ResearchGate 페이지)",
+    "findings": "채터 안정성 계산에 구조 전달함수, 절삭력 계수, 반경 방향 물림, 날 수가 필요하다고 초록이 명시한다.",
+    "supports": "지름·길이만으로 채터 합격을 판정하지 않고 FRF와 공정 조건을 요구할 연구 근거.",
+    "does_not_support": "수식 구현 완료, 외부 FRF 없이 특정 RPM/절입의 안정성을 보증.",
+    "inputs": "접촉부 동특성/FRF, 절삭력 계수, 물림, 날 수, RPM·축 절입.",
+    "implementation_priority": "후속 연구: 동특성·계수 확보 후 전문 확인",
+    "status_notes": "신규. CIRP Annals 44(1), 357–362. https://www.researchgate.net/publication/223283875_Analytical_Prediction_of_Stability_Lobes_in_Milling 의 저자 업로드 초록을 읽었다. 웹 PDF 6쪽 인식/스크린샷 호출은 실제 수식 판독 증거로 세지 않았고 직접 다운로드는 403.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P13",
+    "title": "Analytical models for high performance milling. Part I: Cutting forces, structural deformations and tolerance integrity",
+    "authors": [
+      "Erhan Budak"
+    ],
+    "year": 2006,
+    "kind": "동료심사 연구논문",
+    "url": "https://research.sabanciuniv.edu/id/eprint/191/",
+    "doi": "10.1016/j.ijmachtools.2005.09.009",
+    "access_level": "저자 소속대학 저장소 서지·초록; 원문 PDF 등록 사용자 제한",
+    "reviewed_sections": "Abstract; official bibliographic record",
+    "findings": "절삭력, 공구·부품 처짐, 형상오차 모델로 공정 변수와 품질·장비 제약을 함께 검토하는 연구다.",
+    "supports": "박벽/공구 처짐을 힘-강성-공차 문제로 정의하고 기하 규칙과 분리할 연구 방향.",
+    "does_not_support": "초록만으로 세부 수식·계수의 정당성 검증; 재료/하중 없는 일반 처짐값 산출.",
+    "inputs": "절삭력 계수 또는 힘, 실제 공구/부품 강성, 절입·이송·속도, 요구 공차.",
+    "implementation_priority": "후속 연구: 원문 확보·수식·실험조건 재검토",
+    "status_notes": "신규. International Journal of Machine Tools and Manufacture 46(12–13), 1478–1488. 출판사 직접 열기도 실패하여 초록 수준으로 보존.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P14",
+    "title": "On-Machine Estimation of Workholding State for Thin-Walled Parts",
+    "authors": [
+      "Jingkai Zeng",
+      "Koji Teramoto",
+      "Hiroki Matsumoto"
+    ],
+    "year": 2021,
+    "kind": "공개 동료심사 연구논문",
+    "url": "https://www.jstage.jst.go.jp/article/ijat/15/6/15_860/_pdf",
+    "doi": "10.20965/ijat.2021.p0860",
+    "access_level": "공개 원문 PDF, 본문·표와 도면 선별 시각 확인",
+    "reviewed_sections": "§2–5; pp. 861–866; p.864 Tables 1–2, Fig.9 시각 확인",
+    "findings": "국소 변형률 측정과 접촉 FEM으로 고정력·변형을 추정한다. A2017 시험에서 고정 순서에 따라 변형이 달라졌다. 고정력 추정 평균 편차는 10% 미만이나 변형 추정 평균 차이는 약 22%로, 출력 지표마다 검증 성능이 다르다.",
+    "supports": "박벽 형상 하나로 변형을 확정할 수 없고 접촉·고정력·순서·물성·측정이 필요하다는 근거.",
+    "does_not_support": "본문의 마찰 0.1 또는 500/200 N을 모든 고정구 기본값으로 사용; 사례의 추정 오차를 범용 정확도나 성공 확률로 표시.",
+    "inputs": "CAD·재료 탄성, 접촉/마찰, 클램프 모델·힘·순서, 국소 변형률 측정, FEM.",
+    "implementation_priority": "중기: 고정 조건 기록; 정량 예측은 조건별 보정 자료 확보 후",
+    "status_notes": "신규. International Journal of Automation Technology 15(6), 860–867. PDF 본문 8쪽. 원문 p.864와 그림을 렌더해 표의 문자인식 깨짐을 시각 대조했다.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P15",
+    "title": "On-Machine Estimation of Workpiece Deformation for Thin-Structured Parts Machining",
+    "authors": [
+      "Koji Teramoto"
+    ],
+    "year": 2017,
+    "kind": "공개 동료심사 연구논문",
+    "url": "https://www.jstage.jst.go.jp/article/ijat/11/6/11_978/_pdf/-char/en",
+    "doi": "10.20965/ijat.2017.p0978",
+    "access_level": "공개 원문 PDF, 수식·실험 절과 도면 선별 시각 확인",
+    "reviewed_sections": "§3 Eq.(1) F=KU; §4–6; pp.979–983; p.981 Figs.3–7 시각 확인",
+    "findings": "탄성 FEM의 경계조건을 국소 변형률로 추정하고 다점/바이스 고정 사례와 비교한다. 소변형 선형 탄성 가정이며 실제 고정 변화에 맞추는 보정이 핵심이다.",
+    "supports": "벽 두께 기준만으로 공차를 보장할 수 없고 지지·하중·물성·허용 변형이 필요하다는 근거.",
+    "does_not_support": "측정 없이 현재 앱에서 고정 변형을 검증했다는 주장; 정적 고정 변형을 절삭 중 채터 모델로 사용.",
+    "inputs": "형상·물성, 지지/하중 후보, 접촉 가정, 변형률 측정점, 허용 치수 오차.",
+    "implementation_priority": "중기: 박벽의 미확정 이유 설명; 모델 도입은 별도 검증",
+    "status_notes": "신규. International Journal of Automation Technology 11(6), 978–983. 바이스 사례 알루미늄; 다점 힘 50/50/50 N과 30/50/40 N은 사례값.",
+    "checked_date": "2026-09-20"
+  },
+  {
+    "id": "P16",
+    "title": "Machining Cycle Time Prediction: Data-driven Modelling of Machine Tool Feedrate Behavior with Neural Networks",
+    "authors": [
+      "Chao Sun",
+      "Javier Dominguez-Caballero",
+      "Rob Ward",
+      "Sabino Ayvar-Soberanis",
+      "David Curtis"
+    ],
+    "year": 2021,
+    "kind": "저자 공개 연구 원고·프리프린트",
+    "url": "https://arxiv.org/abs/2106.09719v2",
+    "doi": "10.48550/arXiv.2106.09719",
+    "access_level": "공개 원문 PDF 20쪽; 방법·시험·표 확인 (게시된 프리프린트 기준)",
+    "reviewed_sections": "§2 입력/학습; §3 실험; §4 Tables 2–4; §5 한계; PDF p.17 Table 4 시각 확인",
+    "findings": "NC 명령 이송과 실제 이송은 다를 수 있다. 장비에서 얻은 이송 자료로 시간 예측을 학습했으며 새 경로 상황에서는 오차가 커지는 사례도 설명한다.",
+    "supports": "원가에 필요한 가공시간은 형상 체적만으로 확정하지 않고 경로·장비 거동·셋업 비용과 구분.",
+    "does_not_support": "논문의 90% 이상 시간 예측 정확도를 제조 성공 확률로 사용; 같은 부품 8포켓 결과를 모든 장비/부품 일반화 성능으로 표시.",
+    "inputs": "NC 경로, 명령 이송·가속도·경로 각도, 실제 이송/시간, 장비·제어기, 조건 분리 평가.",
+    "implementation_priority": "후속: 먼저 CAM 시간과 비용 항목 분리; 학습은 외부 실제 로그 확보 후",
+    "status_notes": "신규. v2 2021-12-02. Starrag Scharmann Ecospeed 2538/Siemens 840D 사례. 학습에 사용한 포켓도 전체 결과표에 포함된다. 저널 출판판 동일성은 이번에 검증하지 않았다.",
+    "checked_date": "2026-09-20"
+  }
+]

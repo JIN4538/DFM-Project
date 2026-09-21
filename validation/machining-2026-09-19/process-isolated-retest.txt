@@ -1,0 +1,94 @@
+.FFF..F...........                                                       [100%]
+================================== FAILURES ===================================
+________________ test_timeout_stops_child_before_it_can_write _________________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-49/test_timeout_stops_child_befor0')
+
+    def test_timeout_stops_child_before_it_can_write(tmp_path):
+        marker=tmp_path/'orphan.txt'
+        started=tmp_path/'started.txt'
+        child="import time; from pathlib import Path; time.sleep(3); Path("+repr(str(marker))+").write_text('orphan')"
+        worker=("import subprocess,sys,time; from pathlib import Path; "
+                "subprocess.Popen([sys.executable,'-c',"+repr(child)+"]); "
+                "Path("+repr(str(started))+").write_text('ready'); time.sleep(30)")
+        with pytest.raises(subprocess.TimeoutExpired):
+            run_bounded([sys.executable,'-c',worker],cwd=tmp_path,timeout=1.5)
+>       assert started.exists(), 'The child must actually be launched to exercise cleanup.'
+E       AssertionError: The child must actually be launched to exercise cleanup.
+E       assert False
+E        +  where False = exists()
+E        +    where exists = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-49/test_timeout_stops_child_befor0/started.txt').exists
+
+tests_v3\test_processes.py:27: AssertionError
+________ test_timeout_owns_child_after_direct_parent_has_exited[False] ________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-49/test_timeout_owns_child_after_0')
+redirect_child = False
+
+    @pytest.mark.parametrize("redirect_child", [False, True])
+    def test_timeout_owns_child_after_direct_parent_has_exited(tmp_path, redirect_child):
+        if os.name != "nt" and redirect_child:
+            pytest.skip("Job active-process accounting is specific to Windows; Unix retains killpg on timeout.")
+        marker = tmp_path / "late-child.txt"
+        started = tmp_path / "parent-exited.txt"
+        child = ("import time; from pathlib import Path; time.sleep(2); Path(" +
+                 repr(str(marker)) + ").write_text('must not run')")
+        redirects = ", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL" if redirect_child else ""
+        worker = ("import subprocess,sys; from pathlib import Path; "
+                  "subprocess.Popen([sys.executable,'-c'," + repr(child) + "]" + redirects + "); "
+                  "Path(" + repr(str(started)) + ").write_text('parent exits now')")
+        before = time.monotonic()
+        with pytest.raises(subprocess.TimeoutExpired):
+            run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=.6)
+>       assert started.exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-49/test_timeout_owns_child_after_0/parent-exited.txt').exists
+
+tests_v3\test_processes.py:47: AssertionError
+________ test_timeout_owns_child_after_direct_parent_has_exited[True] _________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-49/test_timeout_owns_child_after_1')
+redirect_child = True
+
+    @pytest.mark.parametrize("redirect_child", [False, True])
+    def test_timeout_owns_child_after_direct_parent_has_exited(tmp_path, redirect_child):
+        if os.name != "nt" and redirect_child:
+            pytest.skip("Job active-process accounting is specific to Windows; Unix retains killpg on timeout.")
+        marker = tmp_path / "late-child.txt"
+        started = tmp_path / "parent-exited.txt"
+        child = ("import time; from pathlib import Path; time.sleep(2); Path(" +
+                 repr(str(marker)) + ").write_text('must not run')")
+        redirects = ", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL" if redirect_child else ""
+        worker = ("import subprocess,sys; from pathlib import Path; "
+                  "subprocess.Popen([sys.executable,'-c'," + repr(child) + "]" + redirects + "); "
+                  "Path(" + repr(str(started)) + ").write_text('parent exits now')")
+        before = time.monotonic()
+        with pytest.raises(subprocess.TimeoutExpired):
+            run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=.6)
+>       assert started.exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-49/test_timeout_owns_child_after_1/parent-exited.txt').exists
+
+tests_v3\test_processes.py:47: AssertionError
+________________ test_timeout_preserves_already_flushed_output ________________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-49/test_timeout_preserves_already0')
+
+    def test_timeout_preserves_already_flushed_output(tmp_path):
+        worker = "import sys,time; print('before timeout',flush=True); sys.stderr.write('error'); sys.stderr.flush(); time.sleep(10)"
+        with pytest.raises(subprocess.TimeoutExpired) as captured:
+            run_bounded([sys.executable, "-c", worker], cwd=tmp_path, timeout=.4)
+>       assert captured.value.output.strip() == b"before timeout"
+E       AssertionError: assert b'' == b'before timeout'
+E         
+E         Use -v to get more diff
+
+tests_v3\test_processes.py:74: AssertionError
+=========================== short test summary info ===========================
+FAILED tests_v3/test_processes.py::test_timeout_stops_child_before_it_can_write
+FAILED tests_v3/test_processes.py::test_timeout_owns_child_after_direct_parent_has_exited[False]
+FAILED tests_v3/test_processes.py::test_timeout_owns_child_after_direct_parent_has_exited[True]
+FAILED tests_v3/test_processes.py::test_timeout_preserves_already_flushed_output
+4 failed, 14 passed in 35.73s

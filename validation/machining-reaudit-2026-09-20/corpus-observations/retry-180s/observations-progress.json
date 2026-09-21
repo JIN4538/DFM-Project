@@ -1,0 +1,92 @@
+[
+  {
+    "index": 14,
+    "path": "7.1 Pump_assy_3.stp",
+    "expected_sha256": "d073299876db256ed5db8a00904efa0184ed789007630157bebd3c5df5df755e",
+    "actual_sha256": "d073299876db256ed5db8a00904efa0184ed789007630157bebd3c5df5df755e",
+    "prior_processing_status": "load_timeout",
+    "prior_elapsed_seconds": 45.01020919997245,
+    "started_utc": "2026-09-19T16:13:52.131182+00:00",
+    "load_seconds": 66.92732780001825,
+    "processing_status": "completed",
+    "report": "model_14.json",
+    "analytic_cnc_scope": "unsupported_input_or_unresolved_cad",
+    "metadata": {
+      "source_format": "stp",
+      "cad_geometry_kind": "solid",
+      "cad_valid": true,
+      "solid_count": 5,
+      "cad_face_count": 208,
+      "cavity_shell_count": 0,
+      "unit_status": "declared_in_step",
+      "dimensions_confirmed": true,
+      "coordinate_unit": "mm"
+    },
+    "triangles": 134912,
+    "cad_features": 208,
+    "finding_statuses": {
+      "cnc_input": "unknown",
+      "cnc_coverage": "unknown",
+      "cnc_holes": "unknown",
+      "cnc_curved_corners": "unknown",
+      "cnc_rectangular_pockets": "unknown",
+      "cnc_visibility": "unknown"
+    },
+    "finding_reasons": {
+      "cnc_input": "현재 입력에서는 CAD 특징 치수를 확정하지 않습니다.",
+      "cnc_coverage": "CAD 특징 인식에 필요한 입력을 확인할 수 없습니다.",
+      "cnc_holes": "단일 STEP 솔리드가 없어 원통형 특징 검토를 보류합니다.",
+      "cnc_curved_corners": "단일 STEP 솔리드가 없어 오목 원통면 반경 검토를 보류합니다.",
+      "cnc_rectangular_pockets": "단일 STEP 솔리드가 없어 포켓 검토를 보류합니다.",
+      "cnc_visibility": "표면 표본의 직선 접근 검사를 아직 실행하지 않았습니다."
+    },
+    "visibility_status": "not_run_by_audit_design",
+    "elapsed_seconds": 66.94044029997895,
+    "source_unchanged": true
+  },
+  {
+    "index": 21,
+    "path": "Raspberry Pi 4 Model B.step",
+    "expected_sha256": "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2",
+    "actual_sha256": "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2",
+    "prior_processing_status": "load_timeout",
+    "prior_elapsed_seconds": 45.06767319998471,
+    "started_utc": "2026-09-19T16:14:59.134199+00:00",
+    "load_seconds": 142.36095999996178,
+    "processing_status": "completed",
+    "report": "model_21.json",
+    "analytic_cnc_scope": "unsupported_input_or_unresolved_cad",
+    "metadata": {
+      "source_format": "step",
+      "cad_geometry_kind": "solid",
+      "cad_valid": true,
+      "solid_count": 109,
+      "cad_face_count": 10316,
+      "cavity_shell_count": 0,
+      "unit_status": "declared_in_step",
+      "dimensions_confirmed": true,
+      "coordinate_unit": "mm"
+    },
+    "triangles": 241326,
+    "cad_features": 10316,
+    "finding_statuses": {
+      "cnc_input": "unknown",
+      "cnc_coverage": "unknown",
+      "cnc_holes": "unknown",
+      "cnc_curved_corners": "unknown",
+      "cnc_rectangular_pockets": "unknown",
+      "cnc_visibility": "unknown"
+    },
+    "finding_reasons": {
+      "cnc_input": "현재 입력에서는 CAD 특징 치수를 확정하지 않습니다.",
+      "cnc_coverage": "CAD 특징 인식에 필요한 입력을 확인할 수 없습니다.",
+      "cnc_holes": "단일 STEP 솔리드가 없어 원통형 특징 검토를 보류합니다.",
+      "cnc_curved_corners": "단일 STEP 솔리드가 없어 오목 원통면 반경 검토를 보류합니다.",
+      "cnc_rectangular_pockets": "단일 STEP 솔리드가 없어 포켓 검토를 보류합니다.",
+      "cnc_visibility": "표면 표본의 직선 접근 검사를 아직 실행하지 않았습니다."
+    },
+    "visibility_status": "not_run_by_audit_design",
+    "elapsed_seconds": 142.4079030000139,
+    "source_unchanged": true
+  }
+]

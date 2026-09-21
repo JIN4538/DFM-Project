@@ -1,0 +1,317 @@
+{
+  "schema_version": "dfm-review-1",
+  "process_family": "machining",
+  "process": "MILLING_3AXIS",
+  "created_utc": "2026-09-19T14:56:48.639427+00:00",
+  "model_fingerprint": "06ef3b36d74bf57f2983ac485d5585c1ec2594f140e5aec587b93de2fe866f31",
+  "input": {
+    "filename": "07_sealed_cavity.step",
+    "source_sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "source_bytes": 29357,
+    "source_format": "step",
+    "coordinate_unit": "mm",
+    "cad_kernel": "Open CASCADE via cadquery-ocp-novtk 7.9.3.1.1",
+    "cad_valid": true,
+    "declared_step_units": [
+      "millimetre"
+    ],
+    "transferred_roots": 1,
+    "solid_count": 1,
+    "cad_geometry_kind": "solid",
+    "cad_face_count": 12,
+    "bodies": [
+      {
+        "body_id": 1,
+        "valid": true,
+        "volume_mm3": 16079.999999999996,
+        "area_mm2": 5492.0,
+        "integration": {
+          "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+          "requested_relative_tolerance": 1e-09,
+          "exactly_zero_parameter_area_faces_excluded": 0,
+          "volume_relative_error_estimate": 3.789561257387202e-16,
+          "area_relative_error_estimate": 4.736951571734e-16,
+          "limitation": "Numerical quadrature estimates; not certified geometric or manufacturing error bounds."
+        },
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            40.0,
+            30.0,
+            15.0
+          ]
+        ],
+        "cavity_shell_count": 1
+      }
+    ],
+    "exact_volume_mm3": 16079.999999999996,
+    "exact_area_mm2": 5492.0,
+    "constituent_volume_sum_mm3": 16079.999999999996,
+    "cavity_shell_count": 1,
+    "property_integration": {
+      "requested_relative_tolerance": 1e-09,
+      "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+      "per_body": [
+        {
+          "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+          "requested_relative_tolerance": 1e-09,
+          "exactly_zero_parameter_area_faces_excluded": 0,
+          "volume_relative_error_estimate": 3.789561257387202e-16,
+          "area_relative_error_estimate": 4.736951571734e-16,
+          "limitation": "Numerical quadrature estimates; not certified geometric or manufacturing error bounds."
+        }
+      ]
+    },
+    "tessellation": {
+      "requested_linear_deflection_mm": 0.05,
+      "requested_angular_deflection_rad": 0.15,
+      "relative": false,
+      "triangle_count": 24,
+      "unmeshed_exactly_zero_area_faces": [],
+      "body_attempts": [
+        {
+          "body_id": 1,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 24,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        }
+      ],
+      "volume_relative_difference": 2.262424631275941e-16,
+      "limitation": "Requested deflection is not a certified Hausdorff error bound; volume agreement is not local accuracy.",
+      "exact_zero_area_cells_removed": 0,
+      "analysis_triangle_count": 24
+    },
+    "assembly_overlap": "not_applicable",
+    "analytic_boundary_geometry": {
+      "version": 1,
+      "maximum_model_edges": 50000,
+      "processed_edges": 48,
+      "limitation": "Trimmed face boundaries and adjacency; no automatic pocket/hole count or tool-access certification."
+    },
+    "surface_scope": null,
+    "cad_translation_policy": "OCCT default STEP transfer and built-in shape processing; no separate healing requested. Validity is checked after translation.",
+    "pmi": "not_imported",
+    "external_references": "No external reference resolution; all transfer roots must succeed.",
+    "cad_translation_messages": "",
+    "unit_status": "declared_in_step",
+    "dimensions_confirmed": true,
+    "unit_note": "STEP 선언 단위를 OCCT가 mm로 변환. 설계 공차·PMI는 해석하지 않음.",
+    "scale_factor": 1.0
+  },
+  "profile": {
+    "machine": "미확정",
+    "material": "미확정",
+    "tool_diameter_mm": 4.0,
+    "flute_length_mm": 10.0,
+    "reach_mm": 15.0,
+    "hole_depth_ratio_limit": null,
+    "basis": "Hypothetical test tool dimensions; not a manufacturer limit or validated machining condition"
+  },
+  "direction": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "current_orientation": {
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "findings": [
+    {
+      "id": "cnc_input",
+      "title": "절삭 검토 입력",
+      "status": "observed",
+      "reason": "단일 STEP 솔리드의 해석 곡면을 읽었습니다.",
+      "action": "공구 조건을 입력하고 위치별 결과를 확인하세요.",
+      "method": "analytic CAD dimensions and explicit user tool conditions",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "cad_feature_dimensions_available": true
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "공차·표면 거칠기·PMI·소재·고정 방법은 자동 추출하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_coverage",
+      "title": "CAD 면 정보와 특징 인식 범위",
+      "status": "observed",
+      "reason": "경계 미확정 평면 0개, 내·외부 미확정 원통면 0개, 미지원 곡면 0개입니다.",
+      "action": "아래 검토는 명시된 평면·원통면·직사각 바닥 범위입니다. 복잡한 특징은 별도 확인하세요.",
+      "method": "analytic CAD dimensions and explicit user tool conditions",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "incomplete_boundary_face_ids": [],
+        "unresolved_cylinder_face_ids": [],
+        "unsupported_face_ids": [],
+        "cad_features_available": true
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "경계 추출 완료와 전체 포켓·구멍 인식 완료는 다릅니다. 분할·교차·섬·곡선 경계 특징은 전수 인식하지 않습니다.",
+        "4변 외 평면 바닥(예: 챔퍼 때문에 8변이 된 포켓)은 폭·깊이 비교에서 제외됩니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_holes",
+      "title": "원통형 내부 특징과 공구",
+      "status": "not_detected",
+      "reason": "인식 범위에서 완전한 내부 원통면을 찾지 못했습니다.",
+      "action": "홀 입구와 막힘, 드릴 끝 형상, 실제 경로를 별도로 확인하세요.",
+      "method": "analytic CAD dimensions and explicit user tool conditions",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "cylindrical_faces": [],
+        "face_count": 0,
+        "unresolved_cylinder_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "원통면 구간은 홀 전체 깊이나 홀 개수가 아닙니다. 분할·교차 홀을 병합하지 않습니다.",
+        "축 정렬은 양쪽에서의 기하 방향 일치만 뜻합니다. 입구·막힘·홀더 충돌을 확인한 결과가 아닙니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_curved_corners",
+      "title": "공구축과 나란한 오목 원통면",
+      "status": "not_detected",
+      "reason": "오목한 부분 원통면 0개의 반경을 확인했습니다. 선택한 공구보다 작은 반경은 0개입니다.",
+      "action": "공구 반경보다 작은 면은 더 작은 공구 또는 설계 반경 확대를 검토하세요.",
+      "method": "analytic CAD dimensions and explicit user tool conditions",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "cylindrical_faces": [],
+        "unresolved_cylinder_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "부분 원통면을 포켓 코너로 확정하지 않습니다. 선택 축에서 원통형 엔드밀 옆날이 접근하는 조건의 기하 비교입니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_rectangular_pockets",
+      "title": "직사각 포켓 바닥과 내부 직각",
+      "status": "not_detected",
+      "reason": "현재 인식 범위의 직사각 포켓 바닥을 찾지 못했습니다.",
+      "action": "곡선·분할 면·섬이 있는 포켓은 별도 CAD/CAM 검토가 필요합니다.",
+      "method": "analytic CAD dimensions and explicit user tool conditions",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "pockets": [],
+        "count": 0,
+        "incomplete_boundary_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "직선 4변 바닥·평면 수직벽·동일 벽높이만 인식합니다. 전체 포켓 목록이 아닙니다.",
+        "벽 높이는 공구 경로 길이 또는 전체 진입 깊이를 보장하지 않습니다. 홀더·고정구·소재 제거 순서는 미검토입니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_visibility",
+      "title": "선택 방향의 표면 가림",
+      "status": "unknown",
+      "reason": "표면 표본의 직선 접근 검사를 아직 실행하지 않았습니다.",
+      "action": "표면 가림 검사를 실행해 선택 방향에서 가려진 위치를 확인하세요.",
+      "method": "analytic CAD dimensions and explicit user tool conditions",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER"
+      ],
+      "measurements": {},
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [],
+      "severity": "info"
+    }
+  ],
+  "visibility": null,
+  "sources": [
+    {
+      "title": "Protolabs — Design for Machining Toolkit",
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/",
+      "scope": "Internal corners, deep features and access motivate checks. Service-specific limits are not universal limits."
+    },
+    {
+      "title": "Protolabs Network — Sharp corners in CNC machining",
+      "url": "https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/",
+      "scope": "Geometric cutter radius constraint; not a prediction of stability, surface quality or time."
+    }
+  ],
+  "scope": "Fixed-axis geometric review; not machining certification or success probability.",
+  "unassessed": [
+    "공구·홀더·고정구의 실제 경로 충돌",
+    "소재와 고정·가공 순서",
+    "절삭력·처짐·진동·표면 품질",
+    "공차와 PMI",
+    "분할·자유곡면 포켓 및 교차 홀",
+    "가공 시간·비용·성공 확률"
+  ],
+  "code_revision": "2d668f2a637e9338356acae7f5fa3c7338faedb723a1200f0705d39003af6d86"
+}
