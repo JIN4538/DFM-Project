@@ -12,8 +12,21 @@ ROOT=Path(__file__).resolve().parents[1]
 def test_all_shipped_geometry_matches_published_inventory():
     result=verify(ROOT)
     assert result['verified'],result['errors']
-    assert result['geometry_files']==155
-    assert result['unique_sha256']==149
+    assert result['geometry_files']==454
+    assert result['unique_sha256']==448
+
+
+def test_archived_research_cad_has_original_source_and_exact_hash():
+    inventory=json.loads((ROOT/'examples/geometry_manifest.json').read_text(encoding='utf8'))
+    archive=json.loads((ROOT/'validation/workspace-archive-2026-10-01/manifest.json').read_text(encoding='utf8'))
+    sources={r['repository_file']:r for r in archive['files'] if r['status']=='archived'}
+    records=[r for r in inventory['files'] if r['group']=='existing/workspace-research-archive']
+    assert len(records)==299
+    for row in records:
+        source=sources[row['path']]
+        assert row['study_source']==source['study_file']
+        assert row['sha256']==source['sha256']
+        assert row['bytes']==source['bytes']
 
 
 def test_public_step_demos_have_original_hashes_and_explicit_rights():

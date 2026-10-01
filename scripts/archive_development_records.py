@@ -82,9 +82,37 @@ def main():
               'policy': 'Originals untouched; exact-byte copies or SHA references; external DB/environment/cache kept local',
               'pruned_directories': pruned, 'files': rows}
     (DEST / 'manifest.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf8')
+    update_geometry_inventory(rows)
     summary = {s: sum(r['status'] == s for r in rows) for s in ('archived', 'existing_repository_copy', 'local_only')}
     summary['archived_bytes'] = sum(r['bytes'] for r in rows if r['status'] == 'archived')
     print(json.dumps(summary, ensure_ascii=False))
+
+
+def update_geometry_inventory(rows):
+    """Register archived STEP bytes in the same all-repository geometry audit."""
+    inventory_path = ROOT / 'examples/geometry_manifest.json'
+    inventory = json.loads(inventory_path.read_text(encoding='utf8'))
+    existing = {r['path']: r for r in inventory['files']}
+    formats = {'.step', '.stp', '.stl', '.3mf', '.brep', '.iges', '.igs', '.obj', '.ply'}
+    for row in rows:
+        if row['status'] != 'archived' or Path(row['repository_file']).suffix.lower() not in formats:
+            continue
+        name = row['repository_file']
+        record = {'path': name, 'group': 'existing/workspace-research-archive',
+                  'format': Path(name).suffix.lower().lstrip('.'), 'bytes': row['bytes'],
+                  'sha256': row['sha256'], 'study_source': row['study_file']}
+        if name in existing and existing[name] != record:
+            raise ValueError('Preserve existing geometry inventory: ' + name)
+        existing[name] = record
+    records = sorted(existing.values(), key=lambda r: r['path'])
+    groups = {}
+    for record in records:
+        groups[record['group']] = groups.get(record['group'], 0) + 1
+    inventory.update(files=records, geometry_file_count=len(records),
+                     unique_sha256_count=len({r['sha256'] for r in records}),
+                     total_bytes=sum(r['bytes'] for r in records), groups=groups)
+    inventory['workspace_archive_note'] = '2026-10-01: independently archived research STEP and edited CAD pairs are indexed too; they are not additional app picker demos or universally unique physical designs.'
+    inventory_path.write_text(json.dumps(inventory, ensure_ascii=False, indent=2), encoding='utf8')
 
 
 if __name__ == '__main__':

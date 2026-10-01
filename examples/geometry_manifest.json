@@ -1,10 +1,11 @@
 {
   "schema": "amdfm-geometry-inventory/1",
   "path_base": "repository root",
-  "geometry_file_count": 155,
-  "unique_sha256_count": 149,
-  "total_bytes": 60118567,
+  "geometry_file_count": 454,
+  "unique_sha256_count": 448,
+  "total_bytes": 88058288,
   "groups": {
+    "existing/cura_run": 27,
     "examples/cad": 14,
     "examples/corpus": 26,
     "examples/external": 3,
@@ -13,8 +14,8 @@
     "examples/machining": 12,
     "examples/public_demo": 14,
     "examples/regressions": 3,
-    "existing/cura_run": 27,
-    "existing/validation": 21
+    "existing/validation": 21,
+    "existing/workspace-research-archive": 299
   },
   "scope": "All standalone test geometry found in project, working study and deliverables, supplied Desktop corpus and deployed copy. Byte-identical repeated deployment/extraction copies are represented by existing paths. Archive inventory found no extra hashes. Unique bytes are not a count of physically distinct designs. Expanded 2026-09-19 with 12 original machining STEP geometry fixtures; source dimensions are in examples/machining/manifest.json. Expanded 2026-09-20 with 10 stored before/after STEP exports of 5 independent machining rotation/translation cases; design dimensions and transformations are in validation/machining-reaudit-2026-09-20/geometry/probe_geometry.py. Expanded 2026-09-30 with 2 independent non-rectangular pocket fixtures and 14 public STEP demos (13 CC0 CadQuarry + 1 NIST public domain).",
   "files": [
@@ -663,6 +664,105 @@
       "sha256": "f94592aa114c5972217281c70f72620e705bd8605e95a9779642d992621ee13b"
     },
     {
+      "path": "examples/learning_validation/compound_edits/three_pockets_after.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 118877,
+      "sha256": "09da44277b0fe0527ef3a14d58ce4dd97e8a6ad35e9301c441558b96c9ec586e",
+      "purpose": "Independent three-pocket CAD edit reference"
+    },
+    {
+      "path": "examples/learning_validation/compound_edits/three_pockets_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 64967,
+      "sha256": "e289e8d5df2939a61905a7081318290ea478c550edac75cdf1478f346ddb2e12",
+      "purpose": "Independent three-pocket CAD edit reference"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/6sides_pocket_after_R1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 61503,
+      "sha256": "64f896301c6584c7093806c61eba7fe56ce80c3f7143cd1955c3f6eb1bef3b85",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/6sides_pocket_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 37735,
+      "sha256": "a5d4b6051d9aa273e73d54cbb0ae19c454ab5fe3c5958a7b8ac5bb874c29c283",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/rectangular_pocket_after_R1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 46085,
+      "sha256": "3425319ef05348039c3c88a5e5c1f6d438ffdec6f4a5fa0e918e3cbe57d807b3",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/rectangular_pocket_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 30495,
+      "sha256": "b314ea0b2006527d8a03ff2d6902b1f5d6e74ac6842cdb31a2ee6c66b40304c3",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/triangular_pocket_after_R1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 38727,
+      "sha256": "fa74e5bee7391764efca763076348e60c22aae524077134a03f88b3beb81f532",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/triangular_pocket_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 26905,
+      "sha256": "4f5c07fb1e5ac61b9e2e1ef3ce26a675722411e3ddcddf2dda8453d6b92732b2",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/hexagonal_pocket.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 37774,
+      "sha256": "d17f778573d9985d91128547b06d834ce7673a0c5420bb60ac881f8ed9e54844"
+    },
+    {
+      "path": "examples/learning_validation/hole_review/blind-3-0.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 27126,
+      "sha256": "ddb8a18cb86b511f16d50cc48ffa27bacc1f2538bfde71b2411c7acf926706ee"
+    },
+    {
+      "path": "examples/learning_validation/hole_review/split-3-1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 42564,
+      "sha256": "bbbab7d447e0f134a656cee68a7f81bfcb2ac3a6f8ea890e01840b7d40f5650a"
+    },
+    {
+      "path": "examples/learning_validation/hole_review/through-3-0.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 26461,
+      "sha256": "ea57f787832b98c569acce9873593d82709171781d825ffef5a992ea90acc9be"
+    },
+    {
+      "path": "examples/learning_validation/triangular_pocket.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 26883,
+      "sha256": "91fd1bce7f4ad5e5e9c37ff89e59dccc54c4d6574917ac073f607b4617dd3e29"
+    },
+    {
       "path": "examples/machining/01_rectangular_pocket.step",
       "group": "examples/machining",
       "format": "step",
@@ -745,188 +845,6 @@
       "format": "step",
       "bytes": 46863,
       "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5"
-    },
-    {
-      "path": "examples/regressions/final-code-review-01/nested_shear_inches.3mf",
-      "group": "examples/regressions",
-      "format": "3mf",
-      "bytes": 1597,
-      "sha256": "5bdd4e03aa5357aa1bc6e73f932b85415716cce63e5b544be8c6658ed81526a7"
-    },
-    {
-      "path": "examples/regressions/final-code-review-02/nested_shear_inches.3mf",
-      "group": "examples/regressions",
-      "format": "3mf",
-      "bytes": 1597,
-      "sha256": "caf7cf14a055ff0f45dae20baa26469d937fcdf3abd52024fbb0354b5c1d168d"
-    },
-    {
-      "path": "examples/regressions/final-code-review-03/nested_shear_inches.3mf",
-      "group": "examples/regressions",
-      "format": "3mf",
-      "bytes": 1597,
-      "sha256": "a542da0847744a95c3ec6ddd7047fcb34ffe966edab51ac9c4e1fddb6932df07"
-    },
-    {
-      "path": "validation/v3/cura-experiment-01/rib_0.08/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "f87ccd5a2db5f12543bb33afb5f8cd4515ba5eb9b46f0638e28d12b02f0cce9f"
-    },
-    {
-      "path": "validation/v3/cura-experiment-01/rib_0.15/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "7c51fd11859a5bc7e2206695e8bb57adddc71264366c96ba951243a0f97a5a4c"
-    },
-    {
-      "path": "validation/v3/cura-experiment-01/rib_0.3/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
-    },
-    {
-      "path": "validation/v3/cura-experiment-01/rib_0.6/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "1c7f74f73fac69ba6fb1da63fe2dd949b50f48fb0d3e7da0edcc23fc148aba70"
-    },
-    {
-      "path": "validation/v3/cura-experiment-01/rib_1.2/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "69d040bab59f6960746ae90823ef757de4f08105adf737fbd07da2bff3481b8b"
-    },
-    {
-      "path": "validation/v3/cura-experiment-02/rib_0.08/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "f87ccd5a2db5f12543bb33afb5f8cd4515ba5eb9b46f0638e28d12b02f0cce9f"
-    },
-    {
-      "path": "validation/v3/cura-experiment-02/rib_0.15/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "7c51fd11859a5bc7e2206695e8bb57adddc71264366c96ba951243a0f97a5a4c"
-    },
-    {
-      "path": "validation/v3/cura-experiment-02/rib_0.3/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
-    },
-    {
-      "path": "validation/v3/cura-experiment-02/rib_0.6/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "1c7f74f73fac69ba6fb1da63fe2dd949b50f48fb0d3e7da0edcc23fc148aba70"
-    },
-    {
-      "path": "validation/v3/cura-experiment-02/rib_1.2/input_mm.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "69d040bab59f6960746ae90823ef757de4f08105adf737fbd07da2bff3481b8b"
-    },
-    {
-      "path": "validation/v3/cura-pilot/thin_rib.stl",
-      "group": "existing/validation",
-      "format": "stl",
-      "bytes": 684,
-      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_0.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 29054,
-      "sha256": "d2ed9c180bcdd9bed1314ed829af6512c0772a46a5d3b4af41727e154ab4aeb0"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_1.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 33331,
-      "sha256": "6f3d1e96d3c5a59a9debc8c2852fd810fbcf1b7dd66e8d72fb52767adca96a14"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_2.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 33748,
-      "sha256": "b3aee03c280da87ec59f8a2a7fb44bf93f918f168f249acd5a39707206c3e3ab"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_3.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 34391,
-      "sha256": "cda9951db5990b52722fe6d359b933e9c0929201084f3a81b8ab8c463f4c2de3"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_4.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 34405,
-      "sha256": "24010e8067fce0ba181336036777d285c128e93e3d5a291763135245891d61d7"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_0.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 29054,
-      "sha256": "c272ee9332e8dd8e7ac876074daa8e768ac3a06981a92bc748d564d41e8c360d"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_1.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 33331,
-      "sha256": "5e39cbc8c5983342d86a9077df63b6599231e7144706d76c30b82465c8b2cfd9"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_2.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 33748,
-      "sha256": "8016dcd355f84a084d75dd7ef9f997fc64b8611150715fe7c4b24e25ae94703a"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_3.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 34391,
-      "sha256": "c2a8d10b7c6e23f862e33f6aee8d7ea53b2d56aff4462417e23801fce7c7c47a"
-    },
-    {
-      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_4.step",
-      "group": "existing/validation",
-      "format": "step",
-      "bytes": 34405,
-      "sha256": "6ffbc303e4c84d636f175a60cd884747e6138f50c1d9752ed0aa95a0a6fe15ec"
-    },
-    {
-      "path": "examples/learning_validation/hexagonal_pocket.step",
-      "group": "examples/learning_validation",
-      "format": "step",
-      "bytes": 37774,
-      "sha256": "d17f778573d9985d91128547b06d834ce7673a0c5420bb60ac881f8ed9e54844"
-    },
-    {
-      "path": "examples/learning_validation/triangular_pocket.step",
-      "group": "examples/learning_validation",
-      "format": "step",
-      "bytes": 26883,
-      "sha256": "91fd1bce7f4ad5e5e9c37ff89e59dccc54c4d6574917ac073f607b4617dd3e29"
     },
     {
       "path": "examples/public_demo/cadquarry_block_block_462c9d.step",
@@ -1027,89 +945,2565 @@
       "sha256": "74e88ac8e49031a8708bf201447b9a2f68223afae807d38614b9938cc967f97e"
     },
     {
-      "path": "examples/learning_validation/corner_edits/triangular_pocket_before.step",
-      "group": "examples/learning_validation",
-      "format": "step",
-      "bytes": 26905,
-      "sha256": "4f5c07fb1e5ac61b9e2e1ef3ce26a675722411e3ddcddf2dda8453d6b92732b2",
-      "purpose": "Independent CAD corner-edit pair fixture"
+      "path": "examples/regressions/final-code-review-01/nested_shear_inches.3mf",
+      "group": "examples/regressions",
+      "format": "3mf",
+      "bytes": 1597,
+      "sha256": "5bdd4e03aa5357aa1bc6e73f932b85415716cce63e5b544be8c6658ed81526a7"
     },
     {
-      "path": "examples/learning_validation/corner_edits/triangular_pocket_after_R1.step",
-      "group": "examples/learning_validation",
-      "format": "step",
-      "bytes": 38727,
-      "sha256": "fa74e5bee7391764efca763076348e60c22aae524077134a03f88b3beb81f532",
-      "purpose": "Independent CAD corner-edit pair fixture"
+      "path": "examples/regressions/final-code-review-02/nested_shear_inches.3mf",
+      "group": "examples/regressions",
+      "format": "3mf",
+      "bytes": 1597,
+      "sha256": "caf7cf14a055ff0f45dae20baa26469d937fcdf3abd52024fbb0354b5c1d168d"
     },
     {
-      "path": "examples/learning_validation/corner_edits/rectangular_pocket_before.step",
-      "group": "examples/learning_validation",
-      "format": "step",
-      "bytes": 30495,
-      "sha256": "b314ea0b2006527d8a03ff2d6902b1f5d6e74ac6842cdb31a2ee6c66b40304c3",
-      "purpose": "Independent CAD corner-edit pair fixture"
+      "path": "examples/regressions/final-code-review-03/nested_shear_inches.3mf",
+      "group": "examples/regressions",
+      "format": "3mf",
+      "bytes": 1597,
+      "sha256": "a542da0847744a95c3ec6ddd7047fcb34ffe966edab51ac9c4e1fddb6932df07"
     },
     {
-      "path": "examples/learning_validation/corner_edits/rectangular_pocket_after_R1.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_0.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 46085,
-      "sha256": "3425319ef05348039c3c88a5e5c1f6d438ffdec6f4a5fa0e918e3cbe57d807b3",
-      "purpose": "Independent CAD corner-edit pair fixture"
+      "bytes": 29054,
+      "sha256": "d2ed9c180bcdd9bed1314ed829af6512c0772a46a5d3b4af41727e154ab4aeb0"
     },
     {
-      "path": "examples/learning_validation/corner_edits/6sides_pocket_before.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_1.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 37735,
-      "sha256": "a5d4b6051d9aa273e73d54cbb0ae19c454ab5fe3c5958a7b8ac5bb874c29c283",
-      "purpose": "Independent CAD corner-edit pair fixture"
+      "bytes": 33331,
+      "sha256": "6f3d1e96d3c5a59a9debc8c2852fd810fbcf1b7dd66e8d72fb52767adca96a14"
     },
     {
-      "path": "examples/learning_validation/corner_edits/6sides_pocket_after_R1.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_2.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 61503,
-      "sha256": "64f896301c6584c7093806c61eba7fe56ce80c3f7143cd1955c3f6eb1bef3b85",
-      "purpose": "Independent CAD corner-edit pair fixture"
+      "bytes": 33748,
+      "sha256": "b3aee03c280da87ec59f8a2a7fb44bf93f918f168f249acd5a39707206c3e3ab"
     },
     {
-      "path": "examples/learning_validation/compound_edits/three_pockets_before.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_3.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 64967,
-      "sha256": "e289e8d5df2939a61905a7081318290ea478c550edac75cdf1478f346ddb2e12",
-      "purpose": "Independent three-pocket CAD edit reference"
+      "bytes": 34391,
+      "sha256": "cda9951db5990b52722fe6d359b933e9c0929201084f3a81b8ab8c463f4c2de3"
     },
     {
-      "path": "examples/learning_validation/compound_edits/three_pockets_after.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/after-rotation/transformed_4.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 118877,
-      "sha256": "09da44277b0fe0527ef3a14d58ce4dd97e8a6ad35e9301c441558b96c9ec586e",
-      "purpose": "Independent three-pocket CAD edit reference"
+      "bytes": 34405,
+      "sha256": "24010e8067fce0ba181336036777d285c128e93e3d5a291763135245891d61d7"
     },
     {
-      "path": "examples/learning_validation/hole_review/through-3-0.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_0.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 26461,
-      "sha256": "ea57f787832b98c569acce9873593d82709171781d825ffef5a992ea90acc9be"
+      "bytes": 29054,
+      "sha256": "c272ee9332e8dd8e7ac876074daa8e768ac3a06981a92bc748d564d41e8c360d"
     },
     {
-      "path": "examples/learning_validation/hole_review/blind-3-0.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_1.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 27126,
-      "sha256": "ddb8a18cb86b511f16d50cc48ffa27bacc1f2538bfde71b2411c7acf926706ee"
+      "bytes": 33331,
+      "sha256": "5e39cbc8c5983342d86a9077df63b6599231e7144706d76c30b82465c8b2cfd9"
     },
     {
-      "path": "examples/learning_validation/hole_review/split-3-1.step",
-      "group": "examples/learning_validation",
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_2.step",
+      "group": "existing/validation",
       "format": "step",
-      "bytes": 42564,
-      "sha256": "bbbab7d447e0f134a656cee68a7f81bfcb2ac3a6f8ea890e01840b7d40f5650a"
+      "bytes": 33748,
+      "sha256": "8016dcd355f84a084d75dd7ef9f997fc64b8611150715fe7c4b24e25ae94703a"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_3.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 34391,
+      "sha256": "c2a8d10b7c6e23f862e33f6aee8d7ea53b2d56aff4462417e23801fce7c7c47a"
+    },
+    {
+      "path": "validation/machining-reaudit-2026-09-20/geometry/before-rotation/transformed_4.step",
+      "group": "existing/validation",
+      "format": "step",
+      "bytes": 34405,
+      "sha256": "6ffbc303e4c84d636f175a60cd884747e6138f50c1d9752ed0aa95a0a6fe15ec"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.08/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "f87ccd5a2db5f12543bb33afb5f8cd4515ba5eb9b46f0638e28d12b02f0cce9f"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.15/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "7c51fd11859a5bc7e2206695e8bb57adddc71264366c96ba951243a0f97a5a4c"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.3/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_0.6/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "1c7f74f73fac69ba6fb1da63fe2dd949b50f48fb0d3e7da0edcc23fc148aba70"
+    },
+    {
+      "path": "validation/v3/cura-experiment-01/rib_1.2/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "69d040bab59f6960746ae90823ef757de4f08105adf737fbd07da2bff3481b8b"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.08/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "f87ccd5a2db5f12543bb33afb5f8cd4515ba5eb9b46f0638e28d12b02f0cce9f"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.15/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "7c51fd11859a5bc7e2206695e8bb57adddc71264366c96ba951243a0f97a5a4c"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.3/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_0.6/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "1c7f74f73fac69ba6fb1da63fe2dd949b50f48fb0d3e7da0edcc23fc148aba70"
+    },
+    {
+      "path": "validation/v3/cura-experiment-02/rib_1.2/input_mm.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "69d040bab59f6960746ae90823ef757de4f08105adf737fbd07da2bff3481b8b"
+    },
+    {
+      "path": "validation/v3/cura-pilot/thin_rib.stl",
+      "group": "existing/validation",
+      "format": "stl",
+      "bytes": 684,
+      "sha256": "8f3ba2bc2a0e2543a726a3cb5dc324855c1fd3077db9189b3346d581b052bc77"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/pair-pilot/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 176941,
+      "sha256": "ccb340079bff74c75cb909b84ec1fd12bb93aca496e19c8c8e1f3a187091adec",
+      "study_source": "ai-full-corpus-2026-09-30/pair-pilot/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/pair-pilot/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 163270,
+      "sha256": "00bc5acd0f49b1f11e113eebba656fce9003029d53b82b12ed586976d13e2bbd",
+      "study_source": "ai-full-corpus-2026-09-30/pair-pilot/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_1345-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 154609,
+      "sha256": "479920d024c7e20b1b3c07b000884921224272939e026efbaae42a3dfa0890de",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_1345-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_1345-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 144009,
+      "sha256": "cdeb625b064293ee90b855b0b7b08bd200ac8a3a42a47de6ce71dec083af80f2",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_1345-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_160-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 105954,
+      "sha256": "cb37479d58b0f3e4e6b73e514f593d2cfe8b1191c83c18866168d0fcba2a3db0",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_160-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_160-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 95470,
+      "sha256": "58425ce0127f50f397fe169f5b3b660d24dc2c61a2fa1221573e85f08ee0f2a9",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_160-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_2810-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 87209,
+      "sha256": "d8cdf9102676680c1dbfea918af3983efaca4cb61a4ab9a57df264d5706df399",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_2810-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_2810-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 70234,
+      "sha256": "6bb0e4cde727193748301205ac02c971366bbfbdc0db72f43a943d4f87ba7117",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_2810-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_944-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 132330,
+      "sha256": "0fa1272ae7a563a02a4598506d7064f2dfdb3407dda6dc78941927b234c6564f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_944-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_944-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 106933,
+      "sha256": "472d81b26b5e9a8644544c5593967c874cadb7f185cd3de624c4c2ea01ee8a9c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154647_944-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10116-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 103139,
+      "sha256": "a90f1fd241e8a0e8dd9e013d10f5bedfcceaf9a3293d1b87bcac0c2c49a0f434",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10116-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10116-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 86740,
+      "sha256": "8695c76d5d495c90a185d84f8924420720531902b4f917e2d8138fb5e41c6e8f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10116-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10267-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 73670,
+      "sha256": "ce986bd5c599a97b62698cdad62d9229bc5c19818ec303258cfe2725021fa08c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10267-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10267-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 56566,
+      "sha256": "8eee30de6e38678d3d933e06b301706039d098aa56c927ea395617f51e691e91",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10267-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10659-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 108432,
+      "sha256": "2e2a3f8c4de61adf03a9dd287caab97f43b544579e435a205ebf88ab090f0eaa",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10659-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10659-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 82473,
+      "sha256": "4beba41d3922d4b1314a6f0d1412caf6c84709e6f7af2b897a84266b913a96c8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10659-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10702-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 190278,
+      "sha256": "c6f1b2b8bf720d203f8871a57e866f2b11013b811528124a7603e89de4cef485",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10702-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10702-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 183946,
+      "sha256": "938ff67476e69ae20a66d955d75995824452add6910a3320a7d8b700efc1b991",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10702-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10831-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 141508,
+      "sha256": "8c78731fcb25d474ff564094044e69c7774dd959e45135bf5f9e9b49970c0628",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10831-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10831-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 117916,
+      "sha256": "40da89da5b265908c6c50aa5e7fa38eba57f51d91740e6917aa692f2820c3df1",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_10831-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_11407-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 195398,
+      "sha256": "f2c4d90a00b490c61ba5d636b15b8ad704e78d6442e7b3ac5070a61910580023",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_11407-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_11407-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 172086,
+      "sha256": "436b8351b61dd27ca359a39bddd9bfdae3b09fe8ee0b61ee330f5b6d621dbe7f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_11407-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12103-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 162411,
+      "sha256": "ebb7852bcfeb39fc1e0f8698f3bf6c082d2f91687e1b5c1a391cc3d4320ba4ab",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12103-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12103-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 151163,
+      "sha256": "6f870a5ce757f08a19e5f9071f88e6162dc1278b107dfe0b2a97598bff673660",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12103-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12678-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 189854,
+      "sha256": "a307b3439e871dafc950944e587b57209e7d3762db44e400fceed5e1b31cbb4b",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12678-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12678-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 170306,
+      "sha256": "9f8cbe0208be81f6140057b444e90c146f002e68f9243f37a66462b9709de6a8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12678-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12844-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 111514,
+      "sha256": "749206ae43d998e3bc34c096781fcf88a7647bdb4293548eda86b4150ae2ac07",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12844-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12844-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 88840,
+      "sha256": "e34c82991243c07bc515be67c931f866eb1dd533e1c3a423ddc520e2efcba2a1",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_12844-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13250-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 153967,
+      "sha256": "7b5af6df666276c350135414cd02ec346712fa055996fabccd891cbd322948fc",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13250-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13250-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 146054,
+      "sha256": "afac2acd52599c54aec511147b0da0579bd0f26f31af1a935b77094f06c4cd6f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13250-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13795-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 91607,
+      "sha256": "b27411a93594061d83644879c8b6880439c10250fdb5d69ab25730162f99724d",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13795-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13795-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 76221,
+      "sha256": "4bc448cd8bcabd50067a898a24e1fbf519117f0b0309bbcc1f853369dc203778",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13795-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13974-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 121093,
+      "sha256": "38fbda951dc39434af22750c698864c3621c49b9b7bff948c2f3fa5d337a9388",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13974-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13974-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 107553,
+      "sha256": "a2b7235d0218924d778bfcf1a2cfbf4efaf16fea70de02a8ee6d17c68c53611e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_13974-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_14938-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 125959,
+      "sha256": "187c0ea5fa5e42f1dfd924a9492ec7ceae4b38ce74db79720ecc5f6ec990208a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_14938-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_14938-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 110003,
+      "sha256": "154560165bd2519dd820973f96bfbe39a293c044c2bf82d4f06f40f9801d309f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_14938-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_15486-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 97526,
+      "sha256": "e160e13d7b4f1f234004278561952531584a008448253e9c3d6d2853a6d31461",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_15486-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_15486-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 71373,
+      "sha256": "37ed21d41126826fed67fa304fbc08bd053001f827181a7ed323520125b187de",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_15486-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_16709-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 140162,
+      "sha256": "bb17061dec1045740bf82d53fa7b74740b4c0203a3af05a0af653673c239b448",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_16709-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_16709-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 129964,
+      "sha256": "28793d95e713f4bffb3de46617e0973394469a67573f7e1507c5a505c3dd1d46",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_16709-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17436-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 97057,
+      "sha256": "f13ce0b1b74e21d2edeb297a0f01be361eb9188fd29727b326bb0f8c5960fd87",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17436-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17436-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 73008,
+      "sha256": "8d74dcee1d3b295d54a59014c545729517ef42b3c01ec84271a9fe483714ce16",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17436-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17694-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 114315,
+      "sha256": "f1f62a1a994817f19db0981b84646226f17353ec0eb08904b0e3074984b2aed5",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17694-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17694-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 98758,
+      "sha256": "a1b5edf126670ad27619d8476cba1507ed6179583d3220c2135a19ad2ca34222",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_17694-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_18339-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 141651,
+      "sha256": "5330119b107b743acfb8e9af5b559580edc6779dcb9a08324a293bf5da1d13df",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_18339-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_18339-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 116325,
+      "sha256": "e276463b74520b108b7d4a264d5c21bcc2241d42bb80ddafeffc7b91adddae51",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_18339-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_19196-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 134434,
+      "sha256": "14b25752c9294eb432e56c9db9d9e1f9c03c38b8514cc3fd4dbcc3dd3da9765f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_19196-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_19196-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 110730,
+      "sha256": "1bf8b89b8eb5dcb908984db8ea51a22d696ea9f1806062b179e605415e32882e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_19196-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20221-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 147846,
+      "sha256": "0de7a920c10e6cc3a4e8939bde64f66aafed1606f25cde3fcbbd5ed901515772",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20221-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20221-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 123757,
+      "sha256": "7330469c6c8859b49a918315fe62a830c107f04caf0f1a5b98ceb771740e23fc",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20221-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20539-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 107061,
+      "sha256": "3a69b0ce831fb77af28bf0c82544c1c8dc1de102a29cb2907c61a04b92f8b2b2",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20539-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20539-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 81763,
+      "sha256": "c2cc4792d94551bd498e9b22531bda86805ab240dd981aebb2a5cfad940f2b77",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20539-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20578-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 81298,
+      "sha256": "f9393585d39b913384b28f555f25e777ef568014b041e3157b59dfdb5f977b60",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20578-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20578-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 69392,
+      "sha256": "7a54406ff15c14ce5cb218f82870320f1232e8bdac616a21593bb4111e630bc2",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20578-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20736-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 155857,
+      "sha256": "b056c47a7e274733b815824d5582c6d2d75e0761005e692842ce06687d308f6f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20736-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20736-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 131042,
+      "sha256": "1f928d082ecf4618b9b5e214a3beb25c679e1171069a468fbd48ae1ef44fcd1e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20736-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20922-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 142471,
+      "sha256": "8acab98f1f23ee3df3e984b99ebef8afed60572d7c3b393d639f5901a698eee0",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20922-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20922-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 128261,
+      "sha256": "b0962ada01776e2cee71da961f5192647622833151bf8578ac1b12d13e15f95e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_20922-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21198-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 140449,
+      "sha256": "4589f268b5840b0fb385e67a90720329b0b6a001801b817a5f6075c36753900f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21198-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21198-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 117483,
+      "sha256": "2b45d6d0304a31e167cc7c21b7aa81b3f0a7352677d24c3ad216d69f0ba57236",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21198-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21509-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 117590,
+      "sha256": "9d813bf6fdfcb331bbd45aad2b88e97ef3754cbf7d78d0c5b404fce12416a3cb",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21509-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21509-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 102710,
+      "sha256": "1ca92289ab9627873a8e196c5dd78d7d170aba0f2bf4197e3572171b1f4602ff",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_21509-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22643-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 123372,
+      "sha256": "6615acd6cf2a22ed158452a18ef8830cbffc49c8d2b993e5a22dcc2d66360434",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22643-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22643-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 97254,
+      "sha256": "ea26e69c56588bf63e99125638d0e2c1bd16d13b82efc15d4fd932b47892bbcf",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22643-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22975-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 98198,
+      "sha256": "bc9e30a8ba664bd6d4dd48e61dc94351d4c4bb54a7006f54f1bce5e0e18dbf29",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22975-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22975-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 72018,
+      "sha256": "0088f28ab3f7fa12ed5578c0b5a8c3d8887a3a0fe8425976e51ade18bf46c1dc",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_22975-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_23346-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 73306,
+      "sha256": "93c55d67c299b2a28f97da1f8e6eecdce58125db6b436a2dfed81d5e8282b869",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_23346-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_23346-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 61489,
+      "sha256": "5fb0d1108e00273a787bec1c055921d3dbfb87a9ee8fc51d466227a818c968fe",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_23346-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3368-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 80240,
+      "sha256": "f14bd62a3ba13c7c42626f101a6604fe7835c715b137052d2ed292ff8746eb0d",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3368-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3368-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 68798,
+      "sha256": "5727fc714d30c34f1b60c2cee3c23da4ef721b436d3bc3918f73b4075ef8fb42",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3368-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3424-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 64780,
+      "sha256": "e6ac4a519f85d3c993e55f89a8254663e9ec14887ae0eca023093d08d55dea5c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3424-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3424-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 52557,
+      "sha256": "804115dcf4b9717047f74684d8497b72d645ec6a967b75c71db9dfe274635b19",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3424-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3652-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 103542,
+      "sha256": "316dff6a05345cb707df97532fcd6c07f9737a31f48613803ec4196172d564a6",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3652-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3652-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 91858,
+      "sha256": "3ed6052a3e789dbeae75bc289984815a824648781cd8fcefd5e7658395e1fdb6",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3652-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3851-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 103440,
+      "sha256": "1337a77cde13a2702617b3785ea9de419057971e22a77cd003a5990c5725bc77",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3851-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3851-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 79682,
+      "sha256": "231481e0775d3f0891484d9c9a5f18165b079bf54306ea14e249d779e7c1191d",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_3851-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_4173-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 186388,
+      "sha256": "9110035574e9da72c80476eca09df1da6441827086c62c6071bea3bd6d1557d3",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_4173-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_4173-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 180606,
+      "sha256": "a476c6ba360c53853e519e1738aebf501838b42a842eeb8f036223e2df7af413",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_4173-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5252-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 120437,
+      "sha256": "e76ee81a21db15292e8f1177ef4cbe1ceb44fcd4da3c91bcc5fe413f14c3589f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5252-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5252-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 96912,
+      "sha256": "fd52e2181ac3020863a3eed11a9e93cea5139bcd1a86bf9324726e6097ad3748",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5252-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5847-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 127663,
+      "sha256": "36ec56af939f3b53b3815558ee9b58721570463e69009a54e720f1517928771f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5847-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5847-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 111607,
+      "sha256": "2cd6eab3a3109b287e706d2f115cd008ad60c11d63d792c4c2fada96690d65bf",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_5847-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_6090-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 116718,
+      "sha256": "0f636f645e7590de920dbcef0d49a76a0f58d3bcee7b3246ecaef19fe17a94be",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_6090-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_6090-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 102483,
+      "sha256": "7dc081fa78569fe9349d7849c8743a752bd9a60d3dfc431978c70cacd60f43b1",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_6090-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_8634-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 158783,
+      "sha256": "6850681a195ca6e74b0f7bdd0fa6b89a8ae79c99089ee37155fef3b99be8d4b5",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_8634-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_8634-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 152821,
+      "sha256": "b8a04aa72b5212c91132a60dfca0599f0ab10a75e9bd470ec5465a921495e63a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_8634-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_9271-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 104124,
+      "sha256": "ba4947459befc87a6f88c0e8fe6888b03e83ec9e13244e120594f6f62bfea506",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_9271-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154648_9271-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 78100,
+      "sha256": "deda7d770d86be3332c8881efb67ca07feebf5a049589de826375a96fa495c34",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221121_154648_9271-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10123-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 133022,
+      "sha256": "9f636da6f34ab226a962ea40419e3b7b36e53be29ca371d25c1a3c1b9a4d8ac8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10123-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10123-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 107633,
+      "sha256": "40ae3a56e2e44de6bba44b7cf8c5b2ffea26bc9b905516ac1a118d41c72f9e42",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10123-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10506-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 131230,
+      "sha256": "2ab97bd2a5dc2f41894f96e4ee780d31ff8dd3e14fb6208df2b3103931dd585c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10506-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10506-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 119917,
+      "sha256": "d16cc05f72745ebc8e8223e122a5fdb06c70c98458ffd25102941f34fee59206",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10506-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10751-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 71705,
+      "sha256": "1a8b8b36c380e1c9bbc16e1434e627f45ea1f0c011f81dfc8aeb23e04f83d78e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10751-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10751-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 54652,
+      "sha256": "8ef79c4da6958c1ce4c7e6d2e78672d9428737e2ee3d97cb9af9ac9ba1ffaba8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10751-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10765-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 97741,
+      "sha256": "9e6ce428f42614b30bca3442e990f51ad225577a1cb99baa6d011087c1f23460",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10765-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10765-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 86838,
+      "sha256": "82c4a13e24416a60548f71b280caa3f4cba107e4f5f3d9ec195106753b09da63",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10765-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10847-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 128795,
+      "sha256": "b598820cbe83b9a85eea08753bada930a6220e194a556ee9b215dc4de1c37109",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10847-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10847-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 117620,
+      "sha256": "fd1c899ac118e11f126ceed45e18b50c240d3736ccc1a42d804c13dcb5bd89fe",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_10847-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_11784-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 71650,
+      "sha256": "b5f735be21480bce9f5f02ed956cf53e0da9baaebeff0ae47ab4899f69e637a8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_11784-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_11784-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 60176,
+      "sha256": "06230e8e18e028f21bd83216e20afe2a1f063ea441fdd27c5588b3875d2f2e91",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_11784-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1243-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 129360,
+      "sha256": "2561c693bf7156ea7e2b6a860bcb5a557cda8e6b2ee19a57252398cca9f54136",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1243-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1243-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 118051,
+      "sha256": "c3007c3ec0817535950e1e847d30ad9af7408cbd152cd192c39937546deab5c8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1243-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1249-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 123187,
+      "sha256": "01805a1baeb0813bda5d6aef0f82bbda13f7b91f97632e59decea8a4be1a6390",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1249-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1249-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 113790,
+      "sha256": "ca4d23720eb71e1ffdbd5fa5690a3bb45f5c1af1dd2b83c18072f953bfca75bb",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1249-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_13324-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 102916,
+      "sha256": "cf6413b2d3299a20f957d1a52b5ff51f88d30fb7882b2ad656bd0a70bed15298",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_13324-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_13324-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 88960,
+      "sha256": "ccdbefd52a0a2b41dbd69a46b0eba85e3559a814bf9e6ba8ac98eac5588cdced",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_13324-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_14770-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 89270,
+      "sha256": "4d140be671b2114339582a82c9c638ab0c1bec2dab8e47de313ba24a13169bf9",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_14770-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_14770-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 62921,
+      "sha256": "e4c8f91410ec60e6557c58cdb88588c8bc2f7b6df47fa012c8ff381cf0f634a7",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_14770-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1509-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 56810,
+      "sha256": "a73a6f27b1063b2ba910d088181e566c64e3fea67bac3af73d901df9d6f0af89",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1509-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1509-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 44117,
+      "sha256": "30864f0858dec02280245d1eb6f6418537d42635a7b80e5bdd67c6554316ad9a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1509-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_15223-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 187428,
+      "sha256": "d7269490f342fe8cc5e57332eac9bd6f787e6526ec1e6eedd8a1aa4ca0d08113",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_15223-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_15223-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 181486,
+      "sha256": "5a16a614e22e1ff94f29b437ddeef581bf8b11e74e56cba226b78580113edaa2",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_15223-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16485-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 128237,
+      "sha256": "201d1c1fe457d3d0333bf56d6cab3e8f9f92617d2f7d7c064a8eb7baab18f72c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16485-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16485-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 102747,
+      "sha256": "8084d0ca003510de11e68b87dd73f80e3b72f8586e72272cfdd45e4883b38019",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16485-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16775-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 94064,
+      "sha256": "492ba8254974d6e8117fde1762de075dcc72dcfc66307a265637695f05dfcd2a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16775-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16775-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 77128,
+      "sha256": "281dee07d645c73d71e0bc4aaa992d5a28b3426444c4ec28f2aa01fc2f19142f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_16775-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1718-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 115657,
+      "sha256": "319b1103950e42d21319e5883c82fe971449271d8c35858523d2c94bef914d6e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1718-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1718-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 100004,
+      "sha256": "cfb54ac980f5b1f9481eb9e89d0fdf91a33192e147f3bbeec56f09028ed96e3c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_1718-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18025-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 203995,
+      "sha256": "13be7ee0388fd3b39c3b0cb2fb9c2d0310f4374ae058e89162160bd8cc3a035a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18025-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18025-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 195255,
+      "sha256": "aa601d3869605b76eccaa80ec849d369786be0beb8fc27a9338f409e565a1d60",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18025-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18038-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 201427,
+      "sha256": "821f67add9d0a8a04a970c06bd2e240431f4589807f4c266af681a41ec36fa0e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18038-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18038-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 182319,
+      "sha256": "cef1be501f1b55cd3b820a5ea11d33c724a70f525aebe65dc02d5eba613f5bfd",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_18038-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19090-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 88241,
+      "sha256": "b9473d4cd2f92cf35e213a52dd7b068ff1fad69fbb7c98ce979254704e96e20e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19090-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19090-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 77225,
+      "sha256": "a6efb726238c80723dd87b0feb5e471c3aa737b1ecd10682ef19e57bd708ed2f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19090-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19271-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 112170,
+      "sha256": "46c24b1b6a42eef9a3e6d271314d792ae63f75834c524c42b2f11233e712b64b",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19271-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19271-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 97751,
+      "sha256": "e2992cfca4a472a1ef19d192c2d866d3e44348b6a30e4748639ac42a89a076c1",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19271-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19709-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 164132,
+      "sha256": "5844a181df6ef360a9a8e66896ba6bacec5ae45ec89215ed2f6b7f03448f52ec",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19709-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19709-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 152870,
+      "sha256": "7b872e855795520975b459098ee4c19e7a4f00a89d93291e09f80e575551e308",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_19709-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2322-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 73709,
+      "sha256": "783735b0ec7d69610ab901604a6adf885d690ad68539fd6670041c4a9ddbb77e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2322-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2322-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 57548,
+      "sha256": "1bc538da8b27015f80b3e0043ae687aea5fedc5ea474e8f34c8c95197305b559",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2322-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2692-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 107240,
+      "sha256": "3bf3519daf29bfb0955566a6e71453552f05573ba364172324232a785be8189e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2692-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2692-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 95712,
+      "sha256": "98ad8c6f63684c77f29ec8bea8bc7b204d60e0d26e9ee1d651fc189f46e388d6",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2692-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2736-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 125260,
+      "sha256": "9908951409d3667a046275ceade2f983895ddf5602a09aa6c893e7b6f7b4fbb4",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2736-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2736-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 111943,
+      "sha256": "1f73429d6c7b9759cf6713fcc983d06a84ffb9ba6f4e67500a2df08658683c70",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_2736-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3019-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 87360,
+      "sha256": "2d9fbafee7c66d7dc6e2479a6891f4d5b0785fe5efccd6508d1faf175bed0c21",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3019-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3019-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 75218,
+      "sha256": "7f4db56b745e9061f5a125bb71bad2438014682d9b575271985319b03aed68c2",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3019-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3216-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 98059,
+      "sha256": "6075b64675202d4cbbbb066aab6dc54433016142c61f83fef182a5e7b3881744",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3216-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3216-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 86416,
+      "sha256": "66fc86582a91d89912b63456c0610efabdf6f609ed429c56e6b0a9ac82d4925a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3216-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3683-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 155070,
+      "sha256": "300882553ccea8dbb72d87c743486e6cc0c8651e42f94fc1c24c820dca4de38f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3683-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3683-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 141025,
+      "sha256": "4e6b93925c7d477bd4e1ae7d876f923746ffe05f11baee47bde97f09fff5c938",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_3683-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_5412-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 86279,
+      "sha256": "eba50ed1c7d48103788402a0c7c987858f4fffd774b3fd33730d08089f52afb5",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_5412-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_5412-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 70778,
+      "sha256": "94f168511ee6b1695f09f000d8b3bb737c6a9437f36b07582b66a2fd8424f61e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_5412-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_8808-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 118631,
+      "sha256": "8d26577b9924d7028186edb5491e9758f5665cd388f1a89ea4179ef2d0e71a42",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_8808-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_8808-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 108842,
+      "sha256": "3b6966f48ec19595c51aa6b150d52d4ee219504ef6edad6bc9fc5ecc7b175f6b",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_8808-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_9672-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 184629,
+      "sha256": "67d8cb5fe008dfa3f55129f9cb6f1d8eb8ee46ad5e762f881bec94ff4cab62d7",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_9672-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221123_142528_9672-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 176209,
+      "sha256": "0c287b777b7dc5411dad535b87359a8a8a7a26bffb3b2b8a2285d2ae857663a4",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221123_142528_9672-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1061-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 85783,
+      "sha256": "4702c8f9cf15301bfa035dc48aab413941400fb6eb4d7929f4868ba8814d014d",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1061-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1061-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 69012,
+      "sha256": "4ebac81371988e229832eaab628156470a53d3bdbcd55f9b4f4c5d28c75d6b66",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1061-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1077-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 105147,
+      "sha256": "4993b9585637a33e8bf75af604e8cfdaa4df2442a723849094d5c861dcf716ad",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1077-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1077-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 96289,
+      "sha256": "c0eb3c62725db0d1ac41935d9e5763bd586ff3694138c39887c7f431a1ffa79c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_1077-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_11891-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 56093,
+      "sha256": "0adbe4d313246c6f765eea140500e752527d991370f8347be177a63bfe704ebf",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_11891-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_11891-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 39040,
+      "sha256": "daf3a7191edf3c4fe6136cc86b5800e8e0601238bf016f2bdbdf10fcd922c771",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_11891-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_12390-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 102717,
+      "sha256": "e2fa9d9de8d105baac5aed918e12d1e23b9de091782f7a94874b7283a6763f5b",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_12390-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_12390-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 86211,
+      "sha256": "3b45ae753fa08ec94708f596aca171cb42b3c749166158d701edef9a50195205",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_12390-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_13406-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 135066,
+      "sha256": "4fe3e4313395c17ab90b1bc9246ca2f766f2c43689b35d54e5798514de60bb8e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_13406-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_13406-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 109998,
+      "sha256": "716e32d167bde690946a181e1d3901b8b2b9b5b09b4c716dc339db77fd5777da",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_13406-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15908-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 124588,
+      "sha256": "8f18e525ecce712916234561de08502583ab96f996d35a1adf176fe290cadc3f",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15908-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15908-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 109122,
+      "sha256": "d0ab1046451e3641665df513f3b373dc09272fbc3897fa175aac979e7c16a446",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15908-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15997-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 121447,
+      "sha256": "f668c5ef31d2300752f0ed6447a7bde2e93cd63b46ec771e929994bc505ec1c0",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15997-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15997-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 110101,
+      "sha256": "12ae9450ec2174efa686d135b7727c047a9fa8557746ad78a9710cedc5edea89",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_15997-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16176-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 154578,
+      "sha256": "5f517e0a58d13366fd0196f48c7470cbf847147380d3ae7ecc77f0cc30ab4dad",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16176-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16176-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 130352,
+      "sha256": "fb36ee1b66bee3728053e5e2efbf6ee4d6b91e2ef1e138f5fe2d47dd66e085de",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16176-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16605-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 147031,
+      "sha256": "a250cd189272bd84f68fa5fd065e12c9ad4ee8c919f014454376d40b2eaaa05e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16605-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16605-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 135436,
+      "sha256": "4f92258a0089049e6777c402b18f4141f37220d3a01f1cce758057d0c2ebee09",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16605-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16635-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 121016,
+      "sha256": "48cc6afb3059dbda5ae8a61e145c1a6514ed24180d6560dc99cfb050a0dc9d83",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_16635-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_17983-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 108582,
+      "sha256": "91ee8f2cf0f0ffdde014836b6eb7ffac1972bc2273860d1477ce99c875f8f6ce",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_17983-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_17983-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 82237,
+      "sha256": "92190dd69bb305faf20410d84a48444473e4862e68706216bde8cdf0d673dcdb",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_17983-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18525-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 121461,
+      "sha256": "a80b1eaf2e6e2fbce41493ecfec199bd9d19b56dc21c0086f64e4b1e3a278b2c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18525-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18525-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 96590,
+      "sha256": "3c509eb781074ff5986973c5a0758145c283e5a3a9f576f75580acbfd9f005f1",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18525-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18696-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 98751,
+      "sha256": "40db4b7be35769219cc81e7515319bb83e7692bc83ce1cb9af37d5b026f63237",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18696-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18696-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 83869,
+      "sha256": "348bb0e8e4719b566b30feb83b650845a60c7b69ba14fa025f75108d135ce9d4",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18696-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18870-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 72189,
+      "sha256": "0c24cd423cae1462f76e2c06f0f4832444f7c141d2ab3db1bf49fd3e56ec29db",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18870-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18870-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 60268,
+      "sha256": "e0c889cfbc8a5bf4234e7f0234d53b09e9e20c959fe72cbaf85fcabbf9eac9c0",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_18870-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19427-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 133053,
+      "sha256": "36e18ffad6514f741573f74a1bc7076de6186cc0a4de24718d43a47e5ac78365",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19427-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19427-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 119225,
+      "sha256": "9ff7319aebb5a9c7d9f2117746fce7f1d7b5e81941e81647555b0887b0c681bc",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19427-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19928-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 130205,
+      "sha256": "5b778c166e5d3d714ae5b9f78263303ce7488d6eeefd1cbe1b76c7eae1a4db9e",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19928-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19928-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 105411,
+      "sha256": "c63d8e908aa0c8ee714b165b719a5ca32f960cbccd1e538f7d175fa6d37d7469",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_19928-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2081-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 100335,
+      "sha256": "47d7abc27617c92b418e1d31b8f6e8578e5a9e7a07f143ae00760d2d4c379685",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2081-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2081-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84864,
+      "sha256": "d191c98ee5fdada115a9a6e26661c2c038539625768048fe3f2b140457556e8b",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2081-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2281-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 145070,
+      "sha256": "5788884e92f08f0e3b57a994c1e4b6bb47f20a0ca3ae724f32c8b2cc1321edaf",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2281-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2281-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 122414,
+      "sha256": "cf59b0c8599c73f84fafead43df41d3eef768738600a9119bcafdf80bb73f30d",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2281-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2413-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 60590,
+      "sha256": "afa78aa0c2bbd8e7c724246769691cb162e62ca8e2b17f75e445bb28b87cbe47",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2413-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2413-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 47622,
+      "sha256": "181e6d9899357ada6024cc6e3d47f24d0a1676d355cf33108eb17204d5534edc",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2413-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2660-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 59841,
+      "sha256": "7eb231eba45bdf5c7c52f2d45ab0762a4c36da0abeb979d6a40a582c950755d4",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2660-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2660-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 47113,
+      "sha256": "24271497db840f9b6a4b35ff07ca2f06efdb52217625b6e0745664c472599e94",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2660-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2999-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 102222,
+      "sha256": "e4ced41eb0d233b1d120c290811ecb7186547d069b275619995a1ff16b0e1189",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2999-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2999-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 91421,
+      "sha256": "802a18720599151a66dbdbd2176dd56703e08b61dc5326a6c595263bd631eda8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_2999-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_3959-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 137026,
+      "sha256": "2f54e67c5894e2b8c6180f0ad852ec037260ed095458ab96f6485faf42d2f1dd",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_3959-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_3959-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 112669,
+      "sha256": "c9cfc97cdf97c8d913de32486c5e17fe94a388c5ad61c2663cc298aef73918a0",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_3959-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_4325-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 120684,
+      "sha256": "054974a2b76713979a195eddf8fb1db24654376d0ce405f3f6634a0f143a1f56",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_4325-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_4325-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 107339,
+      "sha256": "e18f3c844e5438087220fea086bbc9f9aaf798b5229d5f6bc6151424218f5b21",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_4325-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_44-rectangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 121920,
+      "sha256": "a86ac36e5b440d36a046b542d9ee7d36d7182dfe4fb8403df71bbe78d2cbc23a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_44-rectangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_44-rectangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 105719,
+      "sha256": "b9a52e21bfbd009786b623ed13e2926ddc1b77828580611bf6023119039232a0",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_44-rectangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5621-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 90934,
+      "sha256": "7f5a3c432ff2ae93923bae20142bed1f36e99be5448998ea4a307ef48de26f8b",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5621-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5621-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 78764,
+      "sha256": "9b3a3c4f48fe61ca40b330c98f5d43076e33dc1752498db0f387f126ecaec478",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5621-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5870-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 136516,
+      "sha256": "25befccff2f302ac3a015de97813671cfa0591dda50a619f0c3729bad7029dae",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5870-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5870-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 113338,
+      "sha256": "1758c40d51cd18c5bc707d36563728b142c993ad5f678750c0b65d6cb038aac2",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5870-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5992-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 113746,
+      "sha256": "f975c65d29243636a1320883cdcebd7d8236840a66e4f19e4dcb1d07fa5d15be",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5992-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5992-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 87972,
+      "sha256": "f1bdec2876d82e0a9e370f1f0c014f0c0330e887c8e5788bd5266b266c3cc858",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_5992-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_6941-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 110402,
+      "sha256": "171eebbfbba940754c084f937722793f2c938ef11ff9d86cee059d4500bb8a6c",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_6941-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_6941-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84569,
+      "sha256": "bf827b507a5fd7a8014027f5b8c34f9b534100a3083b35b522dff7873dfe5fa8",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_6941-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_695-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 113830,
+      "sha256": "d44394d4fcbe6f1f3a10078813cd76bd16c86aad2b08a1ab621643fa24622e45",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_695-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_695-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 90057,
+      "sha256": "81231666f58b7fa76d229cba0f9291c2187e22c4311a47bd5f19625b659804da",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_695-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_7147-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 131286,
+      "sha256": "e0359d496f59f12de5755796bf4e76106b1685dbbebb03c18127e27c68ae7980",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_7147-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_7147-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 123535,
+      "sha256": "478e7b0b789b85742b24fbe256fbcc4f98b3b24051f77f4bf2535382019c615d",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_7147-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_8506-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 88147,
+      "sha256": "3138732791129d2d4772d5afc4f2779cc01f57b320d028e777f2e43a37c3ed4d",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_8506-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_8506-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 76021,
+      "sha256": "05dd81d49d2771f28b4eceb7a7910123490ddb9ab2c51299085ed2358c1b9e58",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_8506-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_9288-triangular_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 122624,
+      "sha256": "025b594b32847c352f2620aac04445fe2a99624cef708fd36b85b40139672505",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_9288-triangular_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_9288-triangular_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 111277,
+      "sha256": "b84432b25bdb8809435084883d392efc742701c134ecaa56ef63bd263cf6d3fe",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_9288-triangular_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_933-6sides_pocket/after.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 140065,
+      "sha256": "2ba23822751445b00fb79377c26fd5a6904aef8512a61c98014758526c54d77a",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_933-6sides_pocket/after.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221124_154714_933-6sides_pocket/before.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 116962,
+      "sha256": "74d3d78272f09f1145b2504dec017672b169de2a48f74f6864d36c7e891b9081",
+      "study_source": "ai-full-corpus-2026-09-30/paired-cad/20221124_154714_933-6sides_pocket/before.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19724,
+      "sha256": "fec40e2cceda0cb4cc54d3bb32bdeb9b3833a5589a058fda619669a980a93b5e",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19724,
+      "sha256": "2978938a41a2ae10996cb7cbf0b80b3dbbaa8cad12bfdfde3f33d7485e60cd12",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19724,
+      "sha256": "d419427c19d181071ff273a2eb91cc2d487798a5157b3caaeea164a9d9db2487",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19724,
+      "sha256": "412e21faf868e2e439efc54a95d213232e7021e84b0fc6c6165d00c8a3e3b2a0",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19721,
+      "sha256": "5df23df361c1690613b2398f3be9ff2381f18531ca9a786a11ebb08ceaffbd33",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-0-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 39686,
+      "sha256": "12f2cdeee326cb8a78c83dc2d9815524abccea2ab6e9ee29021c3d8cdf9e9822",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 39693,
+      "sha256": "ef0098864754913cd45cef21c4aaf1eeea986040c7d484eeb576b818b81e6768",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 39693,
+      "sha256": "5f38dc22b67ddb7f0a19847f3afe49004ef2b20ab3b469d6e7a5b5eb5b1f9c6c",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 39697,
+      "sha256": "fa55d35c67bf5f5893cd1d975bf86aa311c14dfe50074c51b145ba47756c4fd0",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 39660,
+      "sha256": "e9b37f3edb38c13a4112faa4cd3d01bfd8738cbdd858343947766317407e9a98",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-1-1-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 23684,
+      "sha256": "04fd29321aed877365689838119c2240b2dd97900b539434dcab1540a1402ffa",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 23718,
+      "sha256": "feea1a8d3a7aa47d6286156111e1c25224b31f7a5c49d7becd5a0f63cf331ff4",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 23718,
+      "sha256": "14e88d808840441ef4adf0dd8ebe94b8a9b71504bfe58e3f6fd7f679fee60966",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 23692,
+      "sha256": "dbdd34bb5942b08bbdb5181133aa084c6a71beb8d3101b0896933fdb08f4d513",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 23711,
+      "sha256": "8c2e5265d48f8d193e6f9f0424b8edb2ebfdc76770e7cffdc8becfdf40cc514a",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-0-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 47588,
+      "sha256": "daf70a569d153f495c14ff51f0b423b4dbcf3f518f87972ac844a09dc45ea4e9",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 47679,
+      "sha256": "66a8924daeb8b905b4445a501e78fbb62ed28b7912440ecf7064e785b07daefc",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 47639,
+      "sha256": "8b9ac6517b3dedfe66f14f2ef0526b0d1d81e95165932ac1a9fbf3f0805c2b8a",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 47673,
+      "sha256": "7a020218989ee8bb99592c0bdfcf217e8572e6008cf82ddd252dc1dd11b390ef",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 47663,
+      "sha256": "37908348d5fa6481a4d0929124693b437e7e98594394c532fb05744c69559439",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-0-2-1-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 28662,
+      "sha256": "d5f53ee6e727d8375deb44f455eb91977fe2311a5ec604c9e645441057709355",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 28707,
+      "sha256": "3e4a9749bd7ff04ebcbdc319b92485da20a87693323939a644ef59ac4c73985d",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 28702,
+      "sha256": "5da8e3328c118bc88ea7a5d95f8c6182ca4bd668b7c50172380fb47addfb6d89",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 28709,
+      "sha256": "86a7eac8b7c3d468595dfe64e065ce7e37a74d2ccd26a0a7007288cbda325e6c",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 28658,
+      "sha256": "2c232f3f11fdbdde618630b6a7c602a06c6bdd1c6603fe79ae354cc5b355fd6e",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-0-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 57758,
+      "sha256": "ba9ab76fcb92015c03ee3fe5d003e61a6f6e5e0c3111d7f5a56404bf69a02b4e",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 57811,
+      "sha256": "c5da5887542be9b8de86c4de8c3b211970264a7bd6e1d247be47e3516d754d60",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 57752,
+      "sha256": "8c94c7d6447d19bb73ee387957c22995c714fec9788c104df41996c8d9ddc8c6",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 57810,
+      "sha256": "b9b4debe20deee0088d3dea1cf50cc630327f3a6b0d728bfd346d0e7bf4afe1a",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 57854,
+      "sha256": "4ffe910b1909abee39cc08caa228aaacadaa7c5d34a7402bcf259b3d088621c0",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-1-1-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41524,
+      "sha256": "0f2c9902dfafb5f3b031f9f1d281b9c037a0aef61f1e202b0044bd5dc511c86f",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41522,
+      "sha256": "5eabf82e8d200bba518c00185f02a6c394797fd1ae0ca20f00defd76b94c222b",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41516,
+      "sha256": "841c509374a496c44cd42e9bdad23da32fd1676fb0b5094c25f8f42970cf3f2f",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41555,
+      "sha256": "4952e66aa4729ef53929660c3e16aedd90c211fa152c55ce4a1e8b2b3b71f617",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41449,
+      "sha256": "7da9684649cd18f46ef5b7dd4ae6b640bc121cbaedc41d7dd3c2df7adf71e89e",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-0-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84489,
+      "sha256": "8ee109707e69a3cfdd2504a9443178097589460d438e74947ce3f94ff53edc5c",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84309,
+      "sha256": "be307665ac81b10a53cab8ecd0571d9103002af8f578ca9ec21c91c83874d2da",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84393,
+      "sha256": "70ee4162b2148d6780712b2919c79901f7dab4e22c6b2145c0fae28c021fd7da",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84377,
+      "sha256": "f03e8130e3a5a1c4db275a0968bebcd9c92e34118b00a1c4a1fd0ecffca694d7",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84474,
+      "sha256": "25fc32563985f6d0ad1a4d58d3ca4fd978630eba5d832b6941ae7d04e1d96068",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-3-2-1-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41382,
+      "sha256": "eefb3877eda5f96f1392ce68680d9a54ecca36c60cabdb187b69fdfe12041188",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41418,
+      "sha256": "73040f04b0c29d6d1d229f050065e15147a6d133403205df04e71f96bd9d7a81",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41386,
+      "sha256": "d553dc71e9ad2cb5311fdf64807d01d5d630a2d71280ce97beed5f06974f26db",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41378,
+      "sha256": "5426510662603101e8a88b90ad803e12d14b4bc22ad5ef95d50e86065dd03239",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 41382,
+      "sha256": "efbe32d996bf3f4aaf1f7bb9c2429361fa685aaaab3f082a724d51ad8b912653",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-0-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84060,
+      "sha256": "24e2fd0bd509cd594b268ba3d970288e3326b065ae39bd2b7fa5c99e383be2a4",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84123,
+      "sha256": "163d74c874ea9a6c6a0355d73f4c8aea62b41281977aa56ed0dd180e657d139b",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84063,
+      "sha256": "9753cb5752d84a213afde219fed6d5bdabd2ec1d8acff11359897004850ea5bf",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84034,
+      "sha256": "b0edbb025f64f8f1ebdc2e56c4243f11d2eb3b6971ca86df650cb05f7b1c9e55",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 84036,
+      "sha256": "f5fb195bf6e1eb5ffb00ca301b018c8db3037f6ae02e3160a923a0161dcebc19",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-1-1-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 67450,
+      "sha256": "f2d70abb5258be585d55ebfe603b0fc48d872c068d801dd7857dcfc44bc3d99c",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 67500,
+      "sha256": "47f4fd2f865080d84593dc6c557a8fb26ba3d930e8c354b6b21d25b169354740",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 67424,
+      "sha256": "ca4c3321d4e6330a84ca7fcbde10b77b37cca1da7fe7cf025a444fd21e89d81a",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 67446,
+      "sha256": "4a1ac85490cc55112b0c1c9e9e6e1d4f2cbb968db61c95d7f58fc9fd9dcc831f",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 67428,
+      "sha256": "7d73021796e0e1ffec408fcb8e63585a3b7e9e5d78afab99dadaea03089f8265",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-0-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 136543,
+      "sha256": "2acbd31674cf9c99bb2bb26318e15032ac975f9ff800a7c7d7f4c4cecb78c11d",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 137106,
+      "sha256": "b908dcd8a8feb2e9c90e895212ea58fa90e4db760107b3462c2763d1cc845caa",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-2.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 137379,
+      "sha256": "cd7514d97ed094a87cae0260291ebc02c284ebe71ee98bc5b740d8e39e502a1d",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-2.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-3.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 136921,
+      "sha256": "30fefc2738d10140dda3ed5fb9f95aafc57ec81a3ec73ea69f03c5c455f2a00f",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-3.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-4.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 137109,
+      "sha256": "ace46af2e27ce902e70d85b8b378cee7892931652478cf7fe3a84f056a004303",
+      "study_source": "ai-next-2026-09-30/independent-through-cad-v1/cad-6-2-1-4.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/raw-cad-affinity-audit/20221121_154647_2626.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 48338,
+      "sha256": "f06fa141e059b3fa2e808311a128248fcf85a17a26dad46dc2d33e1d5013a15c",
+      "study_source": "ai-next-2026-09-30/raw-cad-affinity-audit/20221121_154647_2626.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/raw-cad-affinity-audit/20221121_154648_17041.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 119411,
+      "sha256": "cdab26560c610155cbbc76a16852d08d4241ed7b33e48bbaefee7efe66546137",
+      "study_source": "ai-next-2026-09-30/raw-cad-affinity-audit/20221121_154648_17041.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/raw-cad-affinity-audit/20221121_154648_20210.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 131901,
+      "sha256": "7eaf71c0492530cd859676634c8d1ec08c489016c0f33bca4364e5fc5745abc2",
+      "study_source": "ai-next-2026-09-30/raw-cad-affinity-audit/20221121_154648_20210.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/raw-cad-affinity-audit/20221123_142528_1466.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 52374,
+      "sha256": "f2c9587b1692cfe7f466ead14edc4cdb959faefa8b6e13aa8de0d8295a092c9b",
+      "study_source": "ai-next-2026-09-30/raw-cad-affinity-audit/20221123_142528_1466.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/raw-cad-affinity-audit/20221123_142528_15541.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 38960,
+      "sha256": "28b5cc70e19f97d927357be4be3c2e577c64e36689618e2d95c7d4af74ac23ed",
+      "study_source": "ai-next-2026-09-30/raw-cad-affinity-audit/20221123_142528_15541.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/raw-cad-affinity-audit/20221123_142528_6187.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 58714,
+      "sha256": "b31687ddfd6d37158c73571d427d49214704883ae1a2fbeaee5cf1f514720404",
+      "study_source": "ai-next-2026-09-30/raw-cad-affinity-audit/20221123_142528_6187.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/ai-next-2026-09-30/raw-cad-affinity-audit/20221124_154714_10491.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 28975,
+      "sha256": "576916c8c6545e89c73f76bf42222ea9702bf0c6af4abd2f8b3266cd72dc64e9",
+      "study_source": "ai-next-2026-09-30/raw-cad-affinity-audit/20221124_154714_10491.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/axial_split-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 21619,
+      "sha256": "d85219f5388b886ea0b8c899e97fdd00f5212d146ed0bc85de6df1b2a4b1cf61",
+      "study_source": "practical-holes-2026-09-30/independent-cad/axial_split-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/axial_split-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 24832,
+      "sha256": "5193bea7146386c00222ca9c07965943bf33d3643f1f77e88db50beda8f86392",
+      "study_source": "practical-holes-2026-09-30/independent-cad/axial_split-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/blind-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19356,
+      "sha256": "8caf04b943911b403adbeef2c6f73fadd61e9c6909a0be390556ef9a1005abc1",
+      "study_source": "practical-holes-2026-09-30/independent-cad/blind-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/blind-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 22477,
+      "sha256": "c2fe0df5b983613dae489c6681794a58e90ca18ee3153887e9b0996dd239df5d",
+      "study_source": "practical-holes-2026-09-30/independent-cad/blind-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/blind-3-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 31492,
+      "sha256": "b93c5ace5138e7048509d0757784decee4c588ee253581e86c9d2f7c626695e6",
+      "study_source": "practical-holes-2026-09-30/independent-cad/blind-3-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/boss-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 23230,
+      "sha256": "45c972c04ecc8c5cf5c70db5f30fc5cd276f472072e00549d642af69a88f6262",
+      "study_source": "practical-holes-2026-09-30/independent-cad/boss-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/boss-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 26946,
+      "sha256": "ce4c260602c979e19f4209744afd43d006f13dfda8506312755faabdd79de718",
+      "study_source": "practical-holes-2026-09-30/independent-cad/boss-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/cross-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 42181,
+      "sha256": "3f1fbc54e888869d426ab8ed7eb648c01cedc891743b15103d60ccd2916a706b",
+      "study_source": "practical-holes-2026-09-30/independent-cad/cross-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/cross-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 46776,
+      "sha256": "7b69ceaae3ab976d71c412aad5ee946d6642f2ecc630322c1fa53553a5e8c696",
+      "study_source": "practical-holes-2026-09-30/independent-cad/cross-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/remote_boss-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 32828,
+      "sha256": "199f7e65744a903767f8abf2266a864bbc84fdb3882a42a90668167c8ac659bb",
+      "study_source": "practical-holes-2026-09-30/independent-cad/remote_boss-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/remote_boss-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 38167,
+      "sha256": "dba968f0d6fa437e1ffeebe837460f680f336f108601a7ff3709f06448054146",
+      "study_source": "practical-holes-2026-09-30/independent-cad/remote_boss-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/sealed-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19643,
+      "sha256": "7292e117c457cd2c2eef7fb4d8cc69c75dd2d7cddc06bf1e0dbfeb75c0b92e9c",
+      "study_source": "practical-holes-2026-09-30/independent-cad/sealed-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/sealed-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 22893,
+      "sha256": "64ee17c038616421d37ed4fca6cc513bac53eb32916a9d7e8f0b172cabf0d29f",
+      "study_source": "practical-holes-2026-09-30/independent-cad/sealed-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/split-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 22854,
+      "sha256": "af1a877a738fe182361c64da9e1e62909cf704f8e46ae34f3af8d684d77b7e3b",
+      "study_source": "practical-holes-2026-09-30/independent-cad/split-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/split-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 26117,
+      "sha256": "580e8aaa5fd251640980bcf6ba97c97312eca579dd837426eabb90f517df60d4",
+      "study_source": "practical-holes-2026-09-30/independent-cad/split-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/split-3-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 37631,
+      "sha256": "f7aa8fb20d83c444bf58c29b54526585637326e61d66faa47ae22700c46e3f03",
+      "study_source": "practical-holes-2026-09-30/independent-cad/split-3-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/stepped-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 23014,
+      "sha256": "9eb47049c31cc9a3fabe9c596340c9b7d19aa68c7f3accf3412ab4ce1fd8aa8a",
+      "study_source": "practical-holes-2026-09-30/independent-cad/stepped-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/stepped-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 26610,
+      "sha256": "b6f34b217915657e22ae1f4e70971e85f490cb28d9ec842b466a7ce897bb344f",
+      "study_source": "practical-holes-2026-09-30/independent-cad/stepped-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/through-1-0.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 19137,
+      "sha256": "d80246c231d92b3eb8e45be4d1f5134f5dca3801b75988fbc91c9406cfd33f3a",
+      "study_source": "practical-holes-2026-09-30/independent-cad/through-1-0.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/through-1-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 22100,
+      "sha256": "6f7a659bbb3d335a24d4664ca20d07715552de0a9ff7fca9e695f47f0c724672",
+      "study_source": "practical-holes-2026-09-30/independent-cad/through-1-1.step"
+    },
+    {
+      "path": "validation/workspace-archive-2026-10-01/files/practical-holes-2026-09-30/independent-cad/through-3-1.step",
+      "group": "existing/workspace-research-archive",
+      "format": "step",
+      "bytes": 30433,
+      "sha256": "7a1e7307052ead4404c8bfa0c7a2c21aa0ff0af36e59cc922f3af5a5ca40e6d9",
+      "study_source": "practical-holes-2026-09-30/independent-cad/through-3-1.step"
     }
-  ]
+  ],
+  "workspace_archive_note": "2026-10-01: independently archived research STEP and edited CAD pairs are indexed too; they are not additional app picker demos or universally unique physical designs."
 }

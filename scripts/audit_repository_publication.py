@@ -22,7 +22,7 @@ def main():
     large = []
     for name in sorted(names):
         path = ROOT / name
-        if not path.is_file() or path == OUTPUT:
+        if not path.is_file() or path == OUTPUT or (path.parent == OUTPUT.parent and path.name.startswith('file-integrity-audit-') and path.suffix == '.log'):
             continue
         size = path.stat().st_size
         if size >= 100 * 1024 * 1024:
@@ -41,8 +41,11 @@ def main():
         blob = meta.split()[-1].decode()
         name = name.decode('utf8')
         path = ROOT / name
-        preserved = path.is_file() and subprocess.check_output(['git', 'hash-object', '--no-filters', '--', name], cwd=ROOT).decode().strip() == blob
-        baseline.append({'file': name, 'original_git_blob': blob, 'preserved': preserved})
+        raw_blob = subprocess.check_output(['git', 'hash-object', '--no-filters', '--', name], cwd=ROOT).decode().strip() if path.is_file() else None
+        normalized_blob = subprocess.check_output(['git', 'hash-object', '--path=' + name, '--', name], cwd=ROOT).decode().strip() if path.is_file() else None
+        baseline.append({'file': name, 'original_git_blob': blob,
+                         'preserved': normalized_blob == blob, 'raw_bytes_match_git_blob': raw_blob == blob,
+                         'line_ending_normalization_only': normalized_blob == blob and raw_blob != blob})
     # Some baseline standards were explicitly replaced in September. Keep
     # their original Git blobs and identify replacements instead of claiming
     # every working file still has its initial bytes.
@@ -55,7 +58,7 @@ def main():
               'oversize_files': large, 'credential_pattern_files': suspicious,
               'workspace_references_checked': len(references), 'workspace_reference_failures': bad,
               'models': [r for r in files if r['file'].startswith('data/models/')],
-              'note': 'Excluded external DB/environment/cache are listed in workspace archive manifest; original blobs remain in Git history'}
+              'note': 'Excluded external DB/environment/cache are listed in workspace archive manifest; original blobs remain in Git history. Audit output and its own live stdout logs are excluded from this self-reference-free hash snapshot.'}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf8')
     print(json.dumps({k: v for k, v in result.items() if k not in ('files', 'original_baseline', 'models')}, ensure_ascii=False))
