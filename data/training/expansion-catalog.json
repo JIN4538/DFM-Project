@@ -1,0 +1,71 @@
+{
+  "schema": "dfm-public-expansion-1",
+  "date": "2026-09-30",
+  "db_root": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\ai-expansion-2026-09-30",
+  "new_raw_objects": 41000,
+  "datasets": [
+    {
+      "id": "PBF-orientation",
+      "raw": 40000,
+      "selected_for_quality_check": 2000,
+      "eligible": 1906,
+      "license": "Apache-2.0 declared by author",
+      "revision": "24d4f3f5f05cad5488fcf9a4cbc95e28ff528a8a",
+      "source": "https://huggingface.co/datasets/sebius/pbflbm-part-orientation"
+    },
+    {
+      "id": "CadQuarry",
+      "raw": 1000,
+      "eligible_meshes": 801,
+      "license": "CC0-1.0",
+      "revision": "be52b95de212431d995c3ebd25bdd9d56a5c96bf",
+      "source": "https://huggingface.co/datasets/jacobjennings/cadquarry"
+    },
+    {
+      "id": "MFInstSeg",
+      "raw_previous": 62495,
+      "certification_attempts": 5000,
+      "certified_graphs": 4996,
+      "rejected": 4,
+      "train": 3540,
+      "validation": 728,
+      "test": 728,
+      "source": "https://github.com/whjdark/AAGNet",
+      "license": "Author CC0 declaration"
+    }
+  ],
+  "am_geometry_count": 3758,
+  "am_geometry_by_dataset": {
+    "PBF-orientation": 1906,
+    "CadQuarry": 801,
+    "Thingi10K": 1051
+  },
+  "am_splits": {
+    "train": {
+      "meshes": 2666,
+      "groups": 2067
+    },
+    "validation": {
+      "meshes": 523,
+      "groups": 452
+    },
+    "test": {
+      "meshes": 569,
+      "groups": 446
+    }
+  },
+  "machine_additions": 20,
+  "public_step_files": 14,
+  "models": [
+    {
+      "file": "data/models/external_feature_mfinstseg_v1.json",
+      "sha256": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+      "bytes": 388547
+    },
+    {
+      "file": "data/models/neural_orientation_external_v3.json",
+      "sha256": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+      "bytes": 439431
+    }
+  ]
+}
