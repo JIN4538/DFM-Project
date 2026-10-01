@@ -1,0 +1,2557 @@
+[
+  {
+    "file": "examples/cad/01_box.step",
+    "sha256": "6b4c919555a646f3b3711d5e8c9156164171772856f9f1d3299da912812bce53",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 10.0,
+      "contact_triangle_area_mm2": 600.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/01_box.step",
+    "sha256": "6b4c919555a646f3b3711d5e8c9156164171772856f9f1d3299da912812bce53",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 10.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/01_box.step",
+    "sha256": "6b4c919555a646f3b3711d5e8c9156164171772856f9f1d3299da912812bce53",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 10.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/01_box.step",
+    "sha256": "6b4c919555a646f3b3711d5e8c9156164171772856f9f1d3299da912812bce53",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+X",
+    "outcomes": {
+      "height_mm": 10.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/02_thin_plate.step",
+    "sha256": "e401d096d93a59a8a0cec73c151046587aca50c57737c9fd3916102a1150d4b1",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 0.3,
+      "contact_triangle_area_mm2": 600.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/02_thin_plate.step",
+    "sha256": "e401d096d93a59a8a0cec73c151046587aca50c57737c9fd3916102a1150d4b1",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 0.3
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/02_thin_plate.step",
+    "sha256": "e401d096d93a59a8a0cec73c151046587aca50c57737c9fd3916102a1150d4b1",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 0.3
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/02_thin_plate.step",
+    "sha256": "e401d096d93a59a8a0cec73c151046587aca50c57737c9fd3916102a1150d4b1",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 0.3
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/03_vertical_hole.step",
+    "sha256": "8926215700394ae70161fe84d66e30fdaef9bcd4f4878cd285906e336284b396",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 10.0,
+      "contact_triangle_area_mm2": 387.44534427748073
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/03_vertical_hole.step",
+    "sha256": "8926215700394ae70161fe84d66e30fdaef9bcd4f4878cd285906e336284b396",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 10.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/03_vertical_hole.step",
+    "sha256": "8926215700394ae70161fe84d66e30fdaef9bcd4f4878cd285906e336284b396",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 10.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/03_vertical_hole.step",
+    "sha256": "8926215700394ae70161fe84d66e30fdaef9bcd4f4878cd285906e336284b396",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 10.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/04_horizontal_hole.step",
+    "sha256": "284f9968ba0dc6aef93f0e5094de8ae3b7383328404bd97b6647578029cd70f6",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 30.0,
+      "contact_triangle_area_mm2": 371.7520246243316
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/04_horizontal_hole.step",
+    "sha256": "284f9968ba0dc6aef93f0e5094de8ae3b7383328404bd97b6647578029cd70f6",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 30.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/04_horizontal_hole.step",
+    "sha256": "284f9968ba0dc6aef93f0e5094de8ae3b7383328404bd97b6647578029cd70f6",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 30.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/04_horizontal_hole.step",
+    "sha256": "284f9968ba0dc6aef93f0e5094de8ae3b7383328404bd97b6647578029cd70f6",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 4,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 20.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/05_sealed_cavity.step",
+    "sha256": "f6ed7931b6114f9357198e7b4b89d15d5f61df072ed65c42bbd2c9a3640f17de",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 18,
+    "reason": "",
+    "selected_id": "orientation:+X+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 28.2842712474619,
+      "contact_triangle_area_mm2": 0.0
+    },
+    "remaining": [
+      "평평한 바닥이 없어 바닥 형상 확인이 남습니다"
+    ],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.7071067811865475,
+          0.7071067811865475,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/05_sealed_cavity.step",
+    "sha256": "f6ed7931b6114f9357198e7b4b89d15d5f61df072ed65c42bbd2c9a3640f17de",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 18,
+    "reason": "",
+    "selected_id": "orientation:+X+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 28.2842712474619
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.7071067811865475,
+          0.7071067811865475,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/05_sealed_cavity.step",
+    "sha256": "f6ed7931b6114f9357198e7b4b89d15d5f61df072ed65c42bbd2c9a3640f17de",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 18,
+    "reason": "",
+    "selected_id": "orientation:+X+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 28.2842712474619
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.7071067811865475,
+          0.7071067811865475,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/05_sealed_cavity.step",
+    "sha256": "f6ed7931b6114f9357198e7b4b89d15d5f61df072ed65c42bbd2c9a3640f17de",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 20.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/06_open_cup.step",
+    "sha256": "d25ada36cf3a24d7f5b3fc9389167b80468b14dd3f289584168c5e10dc075cb0",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 20.0,
+      "contact_triangle_area_mm2": 400.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/06_open_cup.step",
+    "sha256": "d25ada36cf3a24d7f5b3fc9389167b80468b14dd3f289584168c5e10dc075cb0",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 20.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/06_open_cup.step",
+    "sha256": "d25ada36cf3a24d7f5b3fc9389167b80468b14dd3f289584168c5e10dc075cb0",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 20.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/06_open_cup.step",
+    "sha256": "d25ada36cf3a24d7f5b3fc9389167b80468b14dd3f289584168c5e10dc075cb0",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 20.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/07_bracket.step",
+    "sha256": "02c439606201b8ba98e9b0d8a71560c4b003d9594e723f8a145154fe8f84eab4",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 4,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 30.0,
+      "contact_triangle_area_mm2": 304.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/07_bracket.step",
+    "sha256": "02c439606201b8ba98e9b0d8a71560c4b003d9594e723f8a145154fe8f84eab4",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 30.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/07_bracket.step",
+    "sha256": "02c439606201b8ba98e9b0d8a71560c4b003d9594e723f8a145154fe8f84eab4",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 30.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/07_bracket.step",
+    "sha256": "02c439606201b8ba98e9b0d8a71560c4b003d9594e723f8a145154fe8f84eab4",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "height_mm": 30.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/08_bridge.step",
+    "sha256": "ca9910d7b8827a296a9cccc5e35bc390977e7bdb58b1dda21398e149596a431d",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 5.0,
+      "contact_triangle_area_mm2": 290.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/08_bridge.step",
+    "sha256": "ca9910d7b8827a296a9cccc5e35bc390977e7bdb58b1dda21398e149596a431d",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 5.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/08_bridge.step",
+    "sha256": "ca9910d7b8827a296a9cccc5e35bc390977e7bdb58b1dda21398e149596a431d",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 5.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/08_bridge.step",
+    "sha256": "ca9910d7b8827a296a9cccc5e35bc390977e7bdb58b1dda21398e149596a431d",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "height_mm": 5.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/09_cantilever.step",
+    "sha256": "e6344a51424219b073ab7d6b32a165d781aecdd4a429e573679aaecbf13c0f7f",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 3,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 5.0,
+      "contact_triangle_area_mm2": 90.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/09_cantilever.step",
+    "sha256": "e6344a51424219b073ab7d6b32a165d781aecdd4a429e573679aaecbf13c0f7f",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 5.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/09_cantilever.step",
+    "sha256": "e6344a51424219b073ab7d6b32a165d781aecdd4a429e573679aaecbf13c0f7f",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 5.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/09_cantilever.step",
+    "sha256": "e6344a51424219b073ab7d6b32a165d781aecdd4a429e573679aaecbf13c0f7f",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "height_mm": 5.0
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/10_inch_box.step",
+    "sha256": "089e834b788fa9c5f37b3183bf1c3c2fa102288e80d5e4617fff55d98920db01",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 25.4,
+      "contact_triangle_area_mm2": 645.16
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/10_inch_box.step",
+    "sha256": "089e834b788fa9c5f37b3183bf1c3c2fa102288e80d5e4617fff55d98920db01",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 25.4
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/10_inch_box.step",
+    "sha256": "089e834b788fa9c5f37b3183bf1c3c2fa102288e80d5e4617fff55d98920db01",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 25.4
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/10_inch_box.step",
+    "sha256": "089e834b788fa9c5f37b3183bf1c3c2fa102288e80d5e4617fff55d98920db01",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 25.4
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/11_two_bodies.step",
+    "sha256": "9ee64f34a6332674b326804b69e0eb7596fae2dd308b3a5fa51fcf9d0e6f0e15",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "입력 형상을 먼저 확인해야 합니다"
+  },
+  {
+    "file": "examples/cad/11_two_bodies.step",
+    "sha256": "9ee64f34a6332674b326804b69e0eb7596fae2dd308b3a5fa51fcf9d0e6f0e15",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "입력 형상을 먼저 확인해야 합니다"
+  },
+  {
+    "file": "examples/cad/11_two_bodies.step",
+    "sha256": "9ee64f34a6332674b326804b69e0eb7596fae2dd308b3a5fa51fcf9d0e6f0e15",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "입력 형상을 먼저 확인해야 합니다"
+  },
+  {
+    "file": "examples/cad/11_two_bodies.step",
+    "sha256": "9ee64f34a6332674b326804b69e0eb7596fae2dd308b3a5fa51fcf9d0e6f0e15",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "입력 형상을 먼저 확인해야 합니다"
+  },
+  {
+    "file": "examples/cad/12_sphere.step",
+    "sha256": "e1d68e4935d744238034c1f5a2491ddd8ba8d24ddc190ccf1fde27220be6e3ec",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 9,
+    "reason": "",
+    "selected_id": "orientation:-X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 155.3798740377363,
+      "height_mm": 19.98629534754574,
+      "contact_triangle_area_mm2": 0.0
+    },
+    "remaining": [
+      "변경 뒤 하향면 투영 합 155.4 mm²가 남습니다",
+      "평평한 바닥이 없어 바닥 형상 확인이 남습니다"
+    ],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/12_sphere.step",
+    "sha256": "e1d68e4935d744238034c1f5a2491ddd8ba8d24ddc190ccf1fde27220be6e3ec",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 9,
+    "reason": "",
+    "selected_id": "orientation:-X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 155.3798740377363,
+      "height_mm": 19.98629534754574
+    },
+    "remaining": [
+      "변경 뒤 하향면 투영 합 155.4 mm²가 남습니다"
+    ],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/12_sphere.step",
+    "sha256": "e1d68e4935d744238034c1f5a2491ddd8ba8d24ddc190ccf1fde27220be6e3ec",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 9,
+    "reason": "",
+    "selected_id": "orientation:-X",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 155.3798740377363,
+      "height_mm": 19.98629534754574
+    },
+    "remaining": [
+      "변경 뒤 하향면 투영 합 155.4 mm²가 남습니다"
+    ],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/12_sphere.step",
+    "sha256": "e1d68e4935d744238034c1f5a2491ddd8ba8d24ddc190ccf1fde27220be6e3ec",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 6,
+    "reason": "",
+    "selected_id": "orientation:+Y",
+    "outcomes": {
+      "height_mm": 19.97259069509148
+    },
+    "remaining": [],
+    "changes": [
+      {
+        "field": "direction",
+        "label": "빌드 방향",
+        "before": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "after": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "unit": "vector"
+      }
+    ],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/13_fine_pin.step",
+    "sha256": "50f22ec09438587c91875abafcdbf3427346e57dd2ce88f848581fe1d95ac8f0",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 6.0,
+      "contact_triangle_area_mm2": 100.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/13_fine_pin.step",
+    "sha256": "50f22ec09438587c91875abafcdbf3427346e57dd2ce88f848581fe1d95ac8f0",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 6.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/13_fine_pin.step",
+    "sha256": "50f22ec09438587c91875abafcdbf3427346e57dd2ce88f848581fe1d95ac8f0",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 6.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/13_fine_pin.step",
+    "sha256": "50f22ec09438587c91875abafcdbf3427346e57dd2ce88f848581fe1d95ac8f0",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 6.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/14_thin_plate_improved.step",
+    "sha256": "dd6d19c01200de1552da46d341da39f520942e73162a83491642f2b3bdd01222",
+    "process": "MEX",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 1.2,
+      "contact_triangle_area_mm2": 600.0
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/14_thin_plate_improved.step",
+    "sha256": "dd6d19c01200de1552da46d341da39f520942e73162a83491642f2b3bdd01222",
+    "process": "VPP",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 1.2
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/14_thin_plate_improved.step",
+    "sha256": "dd6d19c01200de1552da46d341da39f520942e73162a83491642f2b3bdd01222",
+    "process": "PBF_METAL",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "overhang_projected_area_sum_mm2": 0.0,
+      "height_mm": 1.2
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/cad/14_thin_plate_improved.step",
+    "sha256": "dd6d19c01200de1552da46d341da39f520942e73162a83491642f2b3bdd01222",
+    "process": "PBF_POLYMER",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "orientation:+Z",
+    "outcomes": {
+      "height_mm": 1.2
+    },
+    "remaining": [],
+    "changes": [],
+    "verification_scope": "현재 형상에서 직접 계산한 방향별 기하량"
+  },
+  {
+    "file": "examples/machining/01_rectangular_pocket.step",
+    "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "cnc:5ede3e530c884038",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 0.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.wall",
+        "label": "포켓 벽 높이",
+        "before": 8.0,
+        "after": 4.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/01_rectangular_pocket.step",
+    "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:10ca9d34460c9322",
+    "outcomes": {
+      "remaining_numeric_conflicts": 1,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 8.0,
+      "reach_mm": 8.0,
+      "tool_reach_diameter_ratio": 0.6666666666666666
+    },
+    "remaining": [
+      "포켓 내부 직각",
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "flute_length_mm",
+        "label": "날 길이",
+        "before": 4.0,
+        "after": 8.0,
+        "unit": "mm"
+      },
+      {
+        "field": "reach_mm",
+        "label": "돌출 길이",
+        "before": 6.0,
+        "after": 8.0,
+        "unit": "mm"
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/01_rectangular_pocket.step",
+    "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:5ede3e530c884038",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 0.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.wall",
+        "label": "포켓 벽 높이",
+        "before": 8.0,
+        "after": 4.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/01_rectangular_pocket.step",
+    "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:a57c1265e4867907",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 1.5,
+        "unit": "mm",
+        "cad_face_id": 11
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/01_rectangular_pocket.step",
+    "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:4f53cda18c2baa0c",
+    "outcomes": {
+      "remaining_numeric_conflicts": 1,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "포켓 내부 직각",
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/01_rectangular_pocket.step",
+    "sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:a57c1265e4867907",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 1.5,
+        "unit": "mm",
+        "cad_face_id": 11
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/02_narrow_deep_pocket.step",
+    "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 4,
+    "reason": "",
+    "selected_id": "cnc:f426fcbaa2037d7d",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 0.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.width",
+        "label": "포켓 폭",
+        "before": 3.0,
+        "after": 12.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "pocket.0.wall",
+        "label": "포켓 벽 높이",
+        "before": 20.0,
+        "after": 4.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/02_narrow_deep_pocket.step",
+    "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:3b3612a1c84778a2",
+    "outcomes": {
+      "remaining_numeric_conflicts": 1,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 20.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "포켓 내부 직각",
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "tool_diameter_mm",
+        "label": "공구 지름",
+        "before": 12.0,
+        "after": 3.0,
+        "unit": "mm"
+      },
+      {
+        "field": "flute_length_mm",
+        "label": "날 길이",
+        "before": 4.0,
+        "after": 20.0,
+        "unit": "mm"
+      },
+      {
+        "field": "reach_mm",
+        "label": "돌출 길이",
+        "before": 6.0,
+        "after": 20.0,
+        "unit": "mm"
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/02_narrow_deep_pocket.step",
+    "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:f426fcbaa2037d7d",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 0.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.width",
+        "label": "포켓 폭",
+        "before": 3.0,
+        "after": 12.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "pocket.0.wall",
+        "label": "포켓 벽 높이",
+        "before": 20.0,
+        "after": 4.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/02_narrow_deep_pocket.step",
+    "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "cnc:c9d3701530558b88",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 20.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 1.5,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "flute_length_mm",
+        "label": "날 길이",
+        "before": 15.0,
+        "after": 20.0,
+        "unit": "mm"
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/02_narrow_deep_pocket.step",
+    "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:17201d1e92d378fd",
+    "outcomes": {
+      "remaining_numeric_conflicts": 1,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 20.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "포켓 내부 직각",
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "flute_length_mm",
+        "label": "날 길이",
+        "before": 15.0,
+        "after": 20.0,
+        "unit": "mm"
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/02_narrow_deep_pocket.step",
+    "sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:c27e566ef410450d",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "pocket.0.wall",
+        "label": "포켓 벽 높이",
+        "before": 20.0,
+        "after": 15.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "pocket.0.corner_radius",
+        "label": "포켓 내부 반경",
+        "before": 0.0,
+        "after": 1.5,
+        "unit": "mm",
+        "cad_face_id": 11
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/03_rounded_pocket.step",
+    "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 2,
+    "reason": "",
+    "selected_id": "cnc:6becf0e774f47bbf",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 6.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 1.0
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "tool_diameter_mm",
+        "label": "공구 지름",
+        "before": 12.0,
+        "after": 6.0,
+        "unit": "mm"
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/03_rounded_pocket.step",
+    "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:6becf0e774f47bbf",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 6.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 1.0
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "tool_diameter_mm",
+        "label": "공구 지름",
+        "before": 12.0,
+        "after": 6.0,
+        "unit": "mm"
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/03_rounded_pocket.step",
+    "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:a3f96abce67cdbcf",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 0.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "corner.0.radius",
+        "label": "내부 반경",
+        "before": 3.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 7
+      },
+      {
+        "field": "corner.1.radius",
+        "label": "내부 반경",
+        "before": 3.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 9
+      },
+      {
+        "field": "corner.2.radius",
+        "label": "내부 반경",
+        "before": 3.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 11
+      },
+      {
+        "field": "corner.3.radius",
+        "label": "내부 반경",
+        "before": 3.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 13
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/03_rounded_pocket.step",
+    "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:4f53cda18c2baa0c",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/03_rounded_pocket.step",
+    "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:4f53cda18c2baa0c",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/03_rounded_pocket.step",
+    "sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:4f53cda18c2baa0c",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/04_vertical_hole.step",
+    "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 3,
+    "reason": "",
+    "selected_id": "cnc:6e59f1987598b7bc",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 0.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "hole.0.diameter",
+        "label": "구멍 지름",
+        "before": 6.0,
+        "after": 12.0,
+        "unit": "mm",
+        "cad_face_id": 7
+      },
+      {
+        "field": "hole.0.segment",
+        "label": "원통 구간",
+        "before": 15.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 7
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/04_vertical_hole.step",
+    "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:6c192bf8cb5f564d",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 6.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 15.0,
+      "tool_reach_diameter_ratio": 2.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "tool_diameter_mm",
+        "label": "공구 지름",
+        "before": 12.0,
+        "after": 6.0,
+        "unit": "mm"
+      },
+      {
+        "field": "reach_mm",
+        "label": "돌출 길이",
+        "before": 6.0,
+        "after": 15.0,
+        "unit": "mm"
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/04_vertical_hole.step",
+    "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:6e59f1987598b7bc",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 12.0,
+      "flute_length_mm": 4.0,
+      "reach_mm": 6.0,
+      "tool_reach_diameter_ratio": 0.5
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [
+      {
+        "field": "hole.0.diameter",
+        "label": "구멍 지름",
+        "before": 6.0,
+        "after": 12.0,
+        "unit": "mm",
+        "cad_face_id": 7
+      },
+      {
+        "field": "hole.0.segment",
+        "label": "원통 구간",
+        "before": 15.0,
+        "after": 6.0,
+        "unit": "mm",
+        "cad_face_id": 7
+      }
+    ],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/04_vertical_hole.step",
+    "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:4f53cda18c2baa0c",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/04_vertical_hole.step",
+    "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:4f53cda18c2baa0c",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/04_vertical_hole.step",
+    "sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 1,
+    "reason": "",
+    "selected_id": "cnc:4f53cda18c2baa0c",
+    "outcomes": {
+      "remaining_numeric_conflicts": 0,
+      "tool_diameter_mm": 3.0,
+      "flute_length_mm": 15.0,
+      "reach_mm": 20.0,
+      "tool_reach_diameter_ratio": 6.666666666666667
+    },
+    "remaining": [
+      "일부 특징·접근 범위는 미확인입니다"
+    ],
+    "changes": [],
+    "verification_scope": "제안 치수·공구 조건의 수치 관계 재계산; 수정 CAD·경로는 재검토 필요"
+  },
+  {
+    "file": "examples/machining/05_side_hole.step",
+    "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/05_side_hole.step",
+    "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/05_side_hole.step",
+    "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/05_side_hole.step",
+    "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/05_side_hole.step",
+    "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/05_side_hole.step",
+    "sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/06_boss.step",
+    "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/06_boss.step",
+    "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/06_boss.step",
+    "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/06_boss.step",
+    "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/06_boss.step",
+    "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/06_boss.step",
+    "sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/07_sealed_cavity.step",
+    "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/07_sealed_cavity.step",
+    "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/07_sealed_cavity.step",
+    "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/07_sealed_cavity.step",
+    "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/07_sealed_cavity.step",
+    "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/07_sealed_cavity.step",
+    "sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/08_open_channel.step",
+    "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/08_open_channel.step",
+    "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/08_open_channel.step",
+    "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/08_open_channel.step",
+    "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/08_open_channel.step",
+    "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/08_open_channel.step",
+    "sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/09_island_pocket.step",
+    "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/09_island_pocket.step",
+    "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/09_island_pocket.step",
+    "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/09_island_pocket.step",
+    "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/09_island_pocket.step",
+    "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/09_island_pocket.step",
+    "sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/10_plain_block.step",
+    "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/10_plain_block.step",
+    "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/10_plain_block.step",
+    "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/10_plain_block.step",
+    "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/10_plain_block.step",
+    "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/10_plain_block.step",
+    "sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/11_rotated_pocket.step",
+    "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/11_rotated_pocket.step",
+    "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/11_rotated_pocket.step",
+    "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/11_rotated_pocket.step",
+    "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/11_rotated_pocket.step",
+    "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/11_rotated_pocket.step",
+    "sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "공구와 비교할 원통·포켓 치수가 없습니다"
+  },
+  {
+    "file": "examples/machining/12_two_solids.step",
+    "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "단일 솔리드 STEP의 치수 검토가 필요합니다"
+  },
+  {
+    "file": "examples/machining/12_two_solids.step",
+    "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "단일 솔리드 STEP의 치수 검토가 필요합니다"
+  },
+  {
+    "file": "examples/machining/12_two_solids.step",
+    "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "단일 솔리드 STEP의 치수 검토가 필요합니다"
+  },
+  {
+    "file": "examples/machining/12_two_solids.step",
+    "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+    "process": "MILLING_3AXIS",
+    "preferences": {},
+    "candidate_count": 0,
+    "reason": "단일 솔리드 STEP의 치수 검토가 필요합니다"
+  },
+  {
+    "file": "examples/machining/12_two_solids.step",
+    "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "preserve_geometry": true
+    },
+    "candidate_count": 0,
+    "reason": "단일 솔리드 STEP의 치수 검토가 필요합니다"
+  },
+  {
+    "file": "examples/machining/12_two_solids.step",
+    "sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+    "process": "MILLING_3AXIS",
+    "preferences": {
+      "allow_tool_change": false
+    },
+    "candidate_count": 0,
+    "reason": "단일 솔리드 STEP의 치수 검토가 필요합니다"
+  }
+]

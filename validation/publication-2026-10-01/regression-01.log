@@ -1,0 +1,79 @@
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 13%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 26%]
+........................................................................ [ 30%]
+........................................................................ [ 34%]
+........................................................................ [ 39%]
+........................................................................ [ 43%]
+........................................................................ [ 48%]
+........................................................................ [ 52%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+........................................................................ [ 65%]
+.............................................................F.......... [ 69%]
+........................................................................ [ 74%]
+.............................F.......................................... [ 78%]
+........................................................................ [ 82%]
+........................................................................ [ 87%]
+........................................................................ [ 91%]
+........................................................................ [ 96%]
+.................................................................        [100%]
+================================== FAILURES ===================================
+____________ test_all_shipped_geometry_matches_published_inventory ____________
+
+    def test_all_shipped_geometry_matches_published_inventory():
+        result=verify(ROOT)
+>       assert result['verified'],result['errors']
+E       AssertionError: ['Unlisted geometry: validation/workspace-archive-2026-10-01/files/ai-full-corpus-2026-09-30/pair-pilot/after.step', '...-archive-2026-10-01/files/ai-full-corpus-2026-09-30/paired-cad/20221121_154647_160-triangular_pocket/before.step', ...]
+E       assert False
+
+tests_v3\test_packaged_geometry.py:14: AssertionError
+_______ test_public_demo_and_added_equipment_share_normal_review_inputs _______
+
+    def test_public_demo_and_added_equipment_share_normal_review_inputs():
+        app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=90).run()
+        app.selectbox(key='source').select('공개 STEP 시연').run()
+        assert not app.exception and not app.error
+        assert len(app.selectbox(key='public_demo').options)==14
+        assert any('브래킷' in x for x in app.selectbox(key='public_demo').options)
+        app.selectbox(key='machine_MEX').select('Bambu Lab A1 mini').run()
+        assert not app.exception and not app.error
+>       assert app.number_input(key='build_X_MEX').value==180
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_public_expansion_ui.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[NumberInput(key='wall_limit_MEX', _value=InitialValue(), label='이보다 얇은 벽 찾기 (mm)', min=0.001, step=0...lue(), label='받침 검토에 사용할 경사각 (°)', min=1.0, max=90.0, step=5.0, help='수평면에서 잰 각도입니다. 아래로 향한 면 중 이 각도보다 완만한 곳을 찾습니다.')])
+key = 'build_X_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'build_X_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-10-01 17:11:26.726 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+============================== warnings summary ===============================
+tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap
+  C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\trimesh\triangles.py:302: RuntimeWarning: invalid value encountered in divide
+    center_mass = integrated[1:4] / volume
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\publication-2026-10-01\regression-01.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_packaged_geometry.py::test_all_shipped_geometry_matches_published_inventory
+FAILED tests_v3/test_public_expansion_ui.py::test_public_demo_and_added_equipment_share_normal_review_inputs
+2 failed, 1647 passed, 1 warning in 1019.14s (0:16:59)

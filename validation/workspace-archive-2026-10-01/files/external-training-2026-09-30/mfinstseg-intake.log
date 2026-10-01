@@ -1,0 +1,70 @@
+{"imported": 1000, "seconds": 1.9539999999997235}
+{"imported": 2000, "seconds": 3.0469999999995707}
+{"imported": 3000, "seconds": 4.438000000000102}
+{"imported": 4000, "seconds": 5.734999999999673}
+{"imported": 5000, "seconds": 7.046999999999571}
+{"imported": 6000, "seconds": 8.407000000000153}
+{"imported": 7000, "seconds": 9.844000000000051}
+{"imported": 8000, "seconds": 11.453999999999724}
+{"imported": 9000, "seconds": 13.04699999999957}
+{"imported": 10000, "seconds": 14.54699999999957}
+{"imported": 11000, "seconds": 16.078999999999724}
+{"imported": 12000, "seconds": 17.657000000000153}
+{"imported": 13000, "seconds": 19.09400000000005}
+{"imported": 14000, "seconds": 20.203999999999724}
+{"imported": 15000, "seconds": 21.359999999999673}
+{"imported": 16000, "seconds": 22.84400000000005}
+{"imported": 17000, "seconds": 24.42199999999957}
+{"imported": 18000, "seconds": 26.032000000000153}
+{"imported": 19000, "seconds": 27.67199999999957}
+{"imported": 20000, "seconds": 29.203999999999724}
+{"imported": 21000, "seconds": 30.813000000000102}
+{"imported": 22000, "seconds": 32.375}
+{"imported": 23000, "seconds": 33.98499999999967}
+{"imported": 24000, "seconds": 35.59400000000005}
+{"imported": 25000, "seconds": 37.28200000000015}
+{"imported": 26000, "seconds": 38.875}
+{"imported": 27000, "seconds": 40.48499999999967}
+{"imported": 28000, "seconds": 42.09400000000005}
+{"imported": 29000, "seconds": 43.71900000000005}
+{"imported": 30000, "seconds": 45.29699999999957}
+{"imported": 31000, "seconds": 46.875}
+{"imported": 32000, "seconds": 48.51599999999962}
+{"imported": 33000, "seconds": 50.10999999999967}
+{"imported": 34000, "seconds": 51.70399999999972}
+{"imported": 35000, "seconds": 53.29699999999957}
+{"imported": 36000, "seconds": 54.90700000000015}
+{"imported": 37000, "seconds": 56.51599999999962}
+{"imported": 38000, "seconds": 58.07899999999972}
+{"imported": 39000, "seconds": 59.51599999999962}
+{"imported": 40000, "seconds": 60.53200000000015}
+{"imported": 41000, "seconds": 61.53200000000015}
+{"imported": 42000, "seconds": 62.46900000000005}
+{"imported": 43000, "seconds": 63.4380000000001}
+{"imported": 44000, "seconds": 64.375}
+{"imported": 45000, "seconds": 65.29699999999957}
+{"imported": 46000, "seconds": 66.20399999999972}
+{"imported": 47000, "seconds": 67.23499999999967}
+{"imported": 48000, "seconds": 68.375}
+{"imported": 49000, "seconds": 69.35999999999967}
+{"imported": 50000, "seconds": 70.3130000000001}
+{"imported": 51000, "seconds": 71.40700000000015}
+{"imported": 52000, "seconds": 72.9380000000001}
+{"imported": 53000, "seconds": 74.20399999999972}
+{"imported": 54000, "seconds": 75.73499999999967}
+{"imported": 55000, "seconds": 77.34400000000005}
+{"imported": 56000, "seconds": 78.875}
+{"imported": 57000, "seconds": 80.40700000000015}
+{"imported": 58000, "seconds": 81.96900000000005}
+{"imported": 59000, "seconds": 83.53200000000015}
+{"imported": 60000, "seconds": 85.10999999999967}
+{"imported": 61000, "seconds": 86.6880000000001}
+{"imported": 62000, "seconds": 88.29699999999957}
+Traceback (most recent call last):
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\import_mfinstseg_archive.py", line 63, in <module>
+    args=p.parse_args();main(args.root,args.partitions)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\import_mfinstseg_archive.py", line 42, in main
+    if len(matching)!=1:raise ValueError('Label identifier mismatch: '+identifier)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Label identifier mismatch: 20221225_205134_14

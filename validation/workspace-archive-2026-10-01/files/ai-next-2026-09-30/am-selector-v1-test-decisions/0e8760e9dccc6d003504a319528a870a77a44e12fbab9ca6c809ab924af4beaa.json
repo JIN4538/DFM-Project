@@ -1,0 +1,132 @@
+{
+  "id": "95037",
+  "dataset": "Thingi10K",
+  "group": "thing:32903",
+  "split": "test",
+  "process": "PBF_POLYMER",
+  "priority": "height",
+  "candidate_oracle": {
+    "legacy": 0.01777830695949239,
+    "blind": 0.01777830695949239,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "actual_product": {
+    "legacy": 0.01777830695949239,
+    "blind": 0.01777830695949239,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "common_reference_product": {
+    "legacy": 0.01777830695949239,
+    "blind": 0.01777830695949239,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.6629058343179436,
+        0.42383421838141055,
+        -0.6171875
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.6629058343179436,
+        0.42383421838141055,
+        -0.6171875
+      ],
+      "own_reference_score": 0.01777830695949239,
+      "fixed_reference_score": 0.01777830695949239,
+      "oracle_score": 0.01777830695949239,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.6629058343179436,
+        0.42383421838141055,
+        -0.6171875
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.6629058343179436,
+        0.42383421838141055,
+        -0.6171875
+      ],
+      "own_reference_score": 0.01777830695949239,
+      "fixed_reference_score": 0.01777830695949239,
+      "oracle_score": 0.01777830695949239,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.7589262304757498,
+        -0.3046419982457683,
+        0.5755208333333333
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.7589262304757498,
+        -0.3046419982457683,
+        0.5755208333333333
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.7589262304757498,
+        -0.3046419982457683,
+        0.5755208333333333
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.7589262304757498,
+        -0.3046419982457683,
+        0.5755208333333333
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.7589262304757498,
+        -0.3046419982457683,
+        0.5755208333333333
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.7589262304757498,
+        -0.3046419982457683,
+        0.5755208333333333
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "41230f9a71937ccb9e92039f44cbb22fda93e6d32977290f9a73d3e7d8364bb0"
+}

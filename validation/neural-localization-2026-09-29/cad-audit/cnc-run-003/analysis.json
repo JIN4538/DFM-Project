@@ -1,0 +1,214 @@
+{
+  "schema": "cad-audit-interpretation/1",
+  "source_run": "cnc-run-003",
+  "case_count": 594,
+  "status_counts": {
+    "passed": 594
+  },
+  "rl_status_counts": {
+    "proposed": 101,
+    "unavailable": 468,
+    "keep": 25
+  },
+  "comparison_counts": {
+    "equal": 121,
+    "unavailable": 466,
+    "fallback_unchanged": 6,
+    "better": 1
+  },
+  "adopted_count": 1,
+  "individually_rechecked_plans": 244,
+  "case_latency_including_review_baseline_and_enhanced_plan": {
+    "count": 594,
+    "mean_s": 0.014818906902363127,
+    "median_s": 0.0015072999999574677,
+    "p95_s": 0.07608154000006385,
+    "max_s": 0.2929785000001175
+  },
+  "active_rl_case_latency_including_review_and_both_plans": {
+    "count": 126,
+    "mean_s": 0.04389843492064092,
+    "median_s": 0.026506350000090606,
+    "p95_s": 0.1372868500000095,
+    "max_s": 0.2929785000001175
+  },
+  "independent_geometry_engine": false,
+  "visibility_checked": false,
+  "expected_feature_budget_fallback": {
+    "case_count": 6,
+    "model_id": "corpus_07",
+    "recognized_feature_count": 90,
+    "limit": 64,
+    "verification": "unchanged selected baseline object; rechecking larger state is explicitly unavailable"
+  },
+  "adopted_example": {
+    "id": "corpus_21",
+    "path": "examples\\corpus\\9.1 Pump_housing.stp",
+    "source_sha256": "3f6c7c9714a7728ed67d4f76fe22d189b8a98fa281af22e767df0571a266d37c",
+    "tool": {
+      "tool_diameter_mm": 4.0,
+      "flute_length_mm": 8.0,
+      "reach_mm": 10.0
+    },
+    "preferences": {},
+    "direction": [
+      0,
+      0,
+      1
+    ],
+    "baseline": {
+      "status": "recommended",
+      "source": "learned",
+      "selected": {
+        "id": "cnc:422ac24d20e09d3f",
+        "title": "공구 조건 변경",
+        "changes": [
+          {
+            "field": "reach_mm",
+            "label": "돌출 길이",
+            "before": 10.0,
+            "after": 30.0,
+            "unit": "mm"
+          }
+        ],
+        "outcomes": {
+          "remaining_numeric_conflicts": 0,
+          "tool_diameter_mm": 4.0,
+          "flute_length_mm": 8.0,
+          "reach_mm": 30.0,
+          "tool_reach_diameter_ratio": 7.5
+        },
+        "orientation": null,
+        "remaining": [
+          "일부 특징·접근 범위는 미확인입니다"
+        ],
+        "remaining_finding_ids": [
+          "cnc_coverage",
+          "cnc_visibility"
+        ]
+      },
+      "model": {
+        "id": "local-counterfactual-plan-ranker-v1",
+        "sha256": "1410bf301e9228873aa1bbac6e2a1ea3f54b9807b2d37471a890636bff9c15d2",
+        "training_scope": "Grouped candidate plans; target is disclosed project trade-off policy, not expert labels. Explicit user choices learn a separate residual."
+      }
+    },
+    "enhanced": {
+      "status": "recommended",
+      "source": "deep_rl_verified",
+      "selected": {
+        "id": "cnc-rl:25c979b2fea4790f",
+        "title": "특징별 형상·공구 순차 개선안",
+        "changes": [
+          {
+            "field": "reach_mm",
+            "label": "돌출 길이",
+            "before": 10.0,
+            "after": 13.0,
+            "unit": "mm"
+          },
+          {
+            "field": "hole.8.segment",
+            "label": "원통 구간",
+            "before": 30.0,
+            "after": 13.0,
+            "unit": "mm",
+            "cad_face_id": 57
+          }
+        ],
+        "outcomes": {
+          "remaining_numeric_conflicts": 0,
+          "tool_diameter_mm": 4.0,
+          "flute_length_mm": 8.0,
+          "reach_mm": 13.0,
+          "tool_reach_diameter_ratio": 3.25
+        },
+        "orientation": null,
+        "remaining": [
+          "일부 특징·접근 범위는 미확인입니다"
+        ],
+        "remaining_finding_ids": [
+          "cnc_coverage",
+          "cnc_visibility"
+        ]
+      },
+      "model": {
+        "id": "local-counterfactual-plan-ranker-v1",
+        "sha256": "1410bf301e9228873aa1bbac6e2a1ea3f54b9807b2d37471a890636bff9c15d2",
+        "training_scope": "Grouped candidate plans; target is disclosed project trade-off policy, not expert labels. Explicit user choices learn a separate residual."
+      }
+    },
+    "comparison": {
+      "state": "better",
+      "baseline": [
+        0,
+        0.61762254902
+      ],
+      "enhanced": [
+        0,
+        0.5963634832
+      ]
+    },
+    "exact_checks": [
+      {
+        "plan": "baseline",
+        "conflicts": 0,
+        "cost": 0.6176225490196078
+      },
+      {
+        "plan": "enhanced",
+        "conflicts": 0,
+        "cost": 0.596363483200154
+      }
+    ]
+  },
+  "adopted_steps": [
+    {
+      "number": 1,
+      "action": {
+        "kind": "reach",
+        "index": -1,
+        "value": 13.0
+      },
+      "changes": [
+        {
+          "field": "reach_mm",
+          "label": "돌출 길이",
+          "before": 10.0,
+          "after": 13.0,
+          "unit": "mm"
+        }
+      ],
+      "conflicts_before": 9,
+      "conflicts_after": 1,
+      "reward": 15.945327246283128
+    },
+    {
+      "number": 2,
+      "action": {
+        "kind": "hole_depth",
+        "index": 8,
+        "value": 13.0
+      },
+      "changes": [
+        {
+          "field": "hole.8.segment",
+          "label": "원통 구간",
+          "before": 30.0,
+          "after": 13.0,
+          "unit": "mm",
+          "cad_face_id": 57
+        }
+      ],
+      "conflicts_before": 1,
+      "conflicts_after": 0,
+      "reward": 1.9154521276595746
+    }
+  ],
+  "interpretation": [
+    "These counts verify runtime integration and the exact disclosed policy calculation, not model generalization accuracy.",
+    "The selected mixed plan edits CAD face57 cylinder segment30 to13mm and tool reach10 to13mm; this is a design tradeoff, not a free performance gain.",
+    "Coverage and visibility remain unresolved in both original and selected plans.",
+    "Unknown inputs, assemblies, surfaces and feature-budget fallbacks are counted separately from applicable plan comparisons."
+  ]
+}

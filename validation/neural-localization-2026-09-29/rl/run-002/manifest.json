@@ -1,0 +1,29 @@
+{
+  "model_sha256": "5b9329de329b9d12fc40db75ec2f8803a269810c9e622ff7cd835bb168c3b761",
+  "source_sha256": "452375102f8a56a627444c4ae9bb0e98f404bbe8c48a763966807a0ffcd150c8",
+  "training_script_sha256": "0c733f94edb5401a3a68e0ed3c7ed67c5a4d62f3495d502bcfedd95f885b210d",
+  "scenario_sha256": "64617fad6c5dae005b63be71fbcc745507fd128e91026be460caa00444043b03",
+  "method": "Double DQN",
+  "hidden_layers": [
+    64,
+    32
+  ],
+  "seed": 2026092987,
+  "episodes": 24000,
+  "transitions": 104944,
+  "gradient_updates": 26205,
+  "experience_replay_capacity": 20000,
+  "batch_size": 96,
+  "target_sync_updates": 100,
+  "gamma": 1.0,
+  "best_validation_episode": 23500,
+  "training_scenarios": 600,
+  "validation_scenarios": 80,
+  "heldout_families": [
+    5,
+    6
+  ],
+  "reward": "2*(conflicts_before-conflicts_after) - (policy_cost_after-policy_cost_before); finite-horizon undiscounted return",
+  "action_labels": false,
+  "elapsed_seconds": 478.92953910000006
+}

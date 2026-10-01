@@ -1,0 +1,56 @@
+{
+  "runtime_sha256": "50a7f9974fb3b330960bcbb6cb854c04ebb93fd6b44b7a23d8c3721da3a3c591",
+  "source_desktop_identical": true,
+  "compared_runtime_files": 78,
+  "source_unique_tests_latest_passed": 1445,
+  "source_initial_v3": {
+    "passed": 1277,
+    "failed": 1,
+    "reason": "Old missing-input fixture needed to turn off new default automatic proposals."
+  },
+  "source_followup": {
+    "passed": 177,
+    "suite": "167 legacy tests plus 10 CNC decision tests after fixture update"
+  },
+  "desktop_tests": {
+    "passed": 54,
+    "failed": 0
+  },
+  "step_audit": {
+    "files": 33,
+    "conditions": 297,
+    "states": {
+      "passed": 297
+    },
+    "auto_proposal_conditions": 44,
+    "automatic_field_count": 110,
+    "proposal_states": {
+      "conditional": 41,
+      "unavailable": 210,
+      "conflict": 25,
+      "not_applicable": 21
+    },
+    "runs": [
+      "cad-run-001/records.jsonl",
+      "cad-run-002/records.jsonl"
+    ],
+    "initial_load_limit_seconds": 75,
+    "replay_load_limit_seconds": 180,
+    "runtime_sha256": "50a7f9974fb3b330960bcbb6cb854c04ebb93fd6b44b7a23d8c3721da3a3c591",
+    "scope": "Measured-input integration and original engine recheck. Not independent feature recognition accuracy.",
+    "initial_interruption": "The 32nd file exceeded 75s on initial load; the final two files were replayed with a 180s audit-only limit. Runtime default was not changed."
+  },
+  "browser": {
+    "url": "http://127.0.0.1:8507/",
+    "automatic_blank_inputs": "D2.4 / flute21 / reach21; corner0→1.2 mm",
+    "manual_diameter_preserved": "D2 / automatic flute21 / reach21; corner0→1 mm",
+    "problem_location": "CAD face11 / floor width3 / wall20; heading focus moved",
+    "screenshot": "automatic-tool-proposal.png"
+  },
+  "trained_new_models": false,
+  "open_limitations": [
+    "MFCAD++ full dataset and model training are not completed; only public sample/split audits were run.",
+    "Missing-input tool dimensions use disclosed geometric assumptions, not a learned optimum or catalog product.",
+    "Normal STEP load timeout remains 75s. Raspberry Pi assembly needed an audit-only 180s retry."
+  ]
+}

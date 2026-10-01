@@ -1,0 +1,139 @@
+- log
+- log
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 절삭가공
+- button "Open":
+- heading "검토할 형상" [level=3]
+- list:
+  - listitem: 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토
+- paragraph: 입력
+- combobox "입력": 절삭 검증 형상
+- button "Open":
+- paragraph: 절삭 형상 선택
+- combobox "절삭 형상 선택": 좁고 깊은 포켓 · 폭 3 / 깊이 20 mm
+- button "Open":
+- paragraph: 치수·구조가 알려진 자체 CAD 형상입니다. 실제 제조 시편은 아닙니다.
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- separator
+- paragraph:
+  - strong: 절삭 조건 · 고정축 밀링
+- generic "keyboard_arrow_right 장비·재료·공구 조건 라이브러리":
+  - generic: keyboard_arrow_right
+  - paragraph: 장비·재료·공구 조건 라이브러리
+- paragraph: 공구가 오는 방향
+- combobox "공구가 오는 방향": +Z · 위쪽에서
+- button "Open":
+- paragraph: 화살표는 부품에서 공구 쪽을 향합니다. 공구는 반대 방향으로 진입합니다.
+- paragraph: 원통형 엔드밀의 치수입니다. 비워 두면 해당 공구 비교를 보류합니다.
+- paragraph: 엔드밀 지름 (mm)
+- spinbutton "엔드밀 지름 (mm)": "4.0000"
+- button "Clear value":
+- button "Decrement":
+- button "Increment":
+- paragraph: 날 길이 (mm)
+- button "Help for 날 길이 (mm)":
+- spinbutton "날 길이 (mm)": "8.0000"
+- button "Clear value":
+- button "Decrement":
+- button "Increment":
+- paragraph: 장착 후 돌출 길이 · 끝~홀더 (mm)
+- button "Help for 장착 후 돌출 길이 · 끝~홀더 (mm)":
+- spinbutton "장착 후 돌출 길이 · 끝~홀더 (mm)": "10.0000"
+- button "Clear value":
+- button "Decrement":
+- button "Increment":
+- generic "keyboard_arrow_right 재료·장비·근거와 추가 기준":
+  - generic: keyboard_arrow_right
+  - paragraph: 재료·장비·근거와 추가 기준
+- checkbox "선택 방향에서 가려진 표면도 확인" [checked]
+- paragraph: 선택 방향에서 가려진 표면도 확인
+- paragraph: 표면 가림도 한 번에 확인합니다. 최대 512개 표본·10초 안에서 계산하고, 미확인 영역은 별도로 표시합니다.
+- button "절삭 설계 검토" [active]:
+  - paragraph: 절삭 설계 검토
+- paragraph: 입력한 새 공구 조건은 위 실행 버튼을 누르면 결과에 적용됩니다.
+- paragraph: 현재는 단일 STEP의 원통면·제한된 직사각 포켓과 표면 표본을 검토합니다.
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "절삭가공 설계 검토" [level=1]:
+  - text: 절삭가공 설계 검토
+  - link "Link to heading":
+    - /url: "#b003ed7d"
+- paragraph: 원통형 엔드밀 · 고정축 밀링의 기하 검토 · 위치와 공구 조건을 비교합니다.
+- paragraph: 포켓 치수는 직선 4변 바닥과 같은 높이의 네 수직 벽에서만 비교합니다. 다른 포켓·자유곡면은 미검토입니다.
+- heading "먼저 바꿀 곳과 다음 행동" [level=3]:
+  - text: 먼저 바꿀 곳과 다음 행동
+  - link "Link to heading":
+    - /url: "#9c09ebd"
+- alert:
+  - paragraph: "현재 형상·공구 조건에서 확인할 후보 1개: 직사각 포켓 바닥과 내부 직각"
+- paragraph:
+  - strong: 1. 직사각 포켓 바닥과 내부 직각
+- paragraph: 포켓 폭 3 mm · 벽 높이 20 mm · 내부 직각
+- paragraph: "포켓 폭 / 공구 지름: 3 / 4 mm · 확인 필요"
+- paragraph: "벽 높이 / 날 길이: 20 / 8 mm · 확인 필요"
+- paragraph: "벽 높이 / 돌출 길이: 20 / 10 mm · 확인 필요"
+- paragraph:
+  - strong: 할 일
+  - text: · 폭 3 mm에 가공 여유를 확보할 더 작은 공구를 검토하거나 포켓 폭을 넓히세요. 포켓 깊이·접근 방향·재고정·장착 조건을 재검토하고, 실제 진입 깊이와 홀더 여유를 CAM에서 확인하세요. 분할 절입·목부 공구로 측벽에 접근할 수 있는지 간섭을 확인하세요. 긴 공구가 항상 해결책은 아닙니다. 내부 직각에는 반경이나 코너 여유를 추가하세요.
+- paragraph: 날 길이보다 깊어도 분할 절입·목부 공구를 쓸 수 있습니다. 더 긴 공구가 항상 해결책은 아닙니다.
+- button "이 위치 보기":
+  - paragraph: 이 위치 보기
+- paragraph: 후보는 관측된 형상·공구 조건의 확인 대상입니다. 미입력·미측정 항목은 통과로 처리하지 않습니다.
+- paragraph:
+  - strong: 이 결과에 적용된 공구 조건
+- paragraph: 엔드밀 지름
+- paragraph: 4 mm
+- paragraph: 날 길이
+- paragraph: 8 mm
+- paragraph: 장착 후 돌출 길이
+- paragraph: 10 mm
+- paragraph: "공구가 오는 방향: 0, 0, 1 (모델 좌표)"
+- paragraph: 확인할 항목
+- combobox "확인할 항목": 직사각 포켓 바닥과 내부 직각
+- button "Open":
+- paragraph:
+  - strong: 직사각 포켓 바닥과 내부 직각
+- paragraph: 조건 확인·수정 검토
+- paragraph: 같은 높이의 네 수직 벽으로 둘러싸인 직사각 바닥 1개를 찾았습니다. 내부 직각은 유한 반경의 원통형 엔드밀로 그대로 만들 수 없습니다.
+- paragraph:
+  - strong: 다음 행동
+  - text: · 모서리에 반경이나 코너 여유를 추가하고 폭·날 길이·도달 길이를 함께 확인하세요.
+- paragraph: 확인할 위치
+- combobox "확인할 위치": 이 항목의 측정·확인 위치 모두
+- button "Open":
+- toolbar:
+  - button "Download plot as a PNG":
+  - button "Zoom":
+  - button "Pan":
+  - button "Orbital rotation":
+  - button "Turntable rotation":
+  - button "Reset camera to default":
+  - button "Reset camera to last save":
+  - button "Fullscreen":
+- paragraph: "파란색: 선택한 측정·추가 확인 위치. 주황색: 이 항목에서 조건 확인이 필요한 위치. 실제 판단은 표의 비교값과 다음 행동을 함께 확인하세요."
+- paragraph:
+  - strong: 선택한 항목의 치수 비교
+- button "Show/hide columns":
+- button "Download as CSV":
+- button "Search":
+- button "Fullscreen":
+- paragraph: ‘아니오’는 해당 치수 비교에서 초과하지 않았다는 뜻입니다. 입구·전체 진입 깊이·공구 경로는 별도 확인이 필요합니다.
+- generic "keyboard_arrow_right 이 결과가 확인한 범위":
+  - generic: keyboard_arrow_right
+  - paragraph: 이 결과가 확인한 범위
+- generic "keyboard_arrow_right 모든 항목과 계산 원자료":
+  - generic: keyboard_arrow_right
+  - paragraph: 모든 항목과 계산 원자료
+- generic "keyboard_arrow_right 근거와 내보내기":
+  - generic: keyboard_arrow_right
+  - paragraph: 근거와 내보내기
+- generic "keyboard_arrow_right 표준·논문 근거 찾아보기":
+  - generic: keyboard_arrow_right
+  - paragraph: 표준·논문 근거 찾아보기
+- paragraph: 가공 경로·고정·절삭 물리 검증은 포함하지 않습니다. 계산 완료는 실제 가공 성공 판정이 아닙니다.

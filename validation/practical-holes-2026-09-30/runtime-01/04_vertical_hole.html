@@ -1,0 +1,556 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>절삭 설계 검토</title><style>body{max-width:1050px;margin:40px auto;padding:0 24px;font-family:system-ui;line-height:1.7}section{border-top:1px solid #cbd5e1;padding:16px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}th,td{padding:8px;border:1px solid #cbd5e1}svg{max-width:640px;width:100%;height:auto}p{overflow-wrap:anywhere}</style></head><body><h1>절삭 설계 검토</h1><p>04_vertical_hole.step</p><p>장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력</p><p>선택 공구축 (모델 X, Y, Z): [0.0, 0.0, 1.0] / 검토 시각: 2026-09-30T14:30:33.696153+00:00</p><p>고정축 밀링의 기하 검토 · 공구는 표시한 축의 반대 방향으로 진입합니다.</p><h2>종합 결론</h2><div class='decision info'><h3>결론을 완성하려면 추가 확인이 필요합니다</h3><p>수정 0건 · 추가 확인 2건</p><p><b>검토에 적용한 공구</b><br>엔드밀 지름 <b>4.8 mm</b> (자동) · 날 길이 <b>16 mm</b> (자동) · 돌출 길이 <b>16 mm</b> (자동)</p><details><summary>구멍 1개 · 치수와 입구 방향</summary><table><thead><tr><th>구멍</th><th>종류</th><th>지름 (mm)</th><th>깊이 (mm)</th><th>현재 방향</th><th>CAD 면</th></tr></thead><tbody><tr><td>1</td><td>관통</td><td>6</td><td>15</td><td>입구 방향 일치</td><td>7</td></tr></tbody></table></details><p>함께 확인: 일부 특징·접근 범위는 미확인입니다</p><p>추가 확인: 공구 접근 · 공구 제안 조건</p></div><details><summary>판단 근거·전체 항목</summary><p><b>CAD 입력 · 확인됨</b> · 단일 STEP 솔리드의 해석 곡면을 읽었습니다.<br>공구 조건을 입력하고 위치별 결과를 확인하세요.</p><p><b>구멍과 공구 · 확인됨</b> · 최소 지름 6 mm / 공구 4.8 mm / 최장 원통 구간 15 mm / 돌출 16 mm<br>다른 검토 항목을 확인하세요</p><p><b>내부 반경 · 확인됨</b> · 오목 원통면 0개<br>다른 검토 항목을 확인하세요</p><p><b>포켓 · 확인됨</b> · 직사각 포켓 0개<br>다른 검토 항목을 확인하세요</p><p><b>공구 접근 · 추가 확인</b> · <br>접근 표본 미확인</p><p><b>CAD 면 정보와 특징 인식 범위 · 확인됨</b> · 경계 미확정 평면 0개, 내·외부 미확정 원통면 0개, 미지원 곡면 0개입니다.<br>아래 검토는 명시된 평면·원통면·직사각 바닥 범위입니다. 복잡한 특징은 별도 확인하세요.</p><p><b>공구 제안 조건 · 추가 확인</b> · 측정 특징에서 공구 치수를 채웠습니다. 실제 진입면·공구 목부·홀더 조건은 확인이 필요합니다.<br>원호 밀링의 진입면과 공구 목부·홀더 조건을 확인하세요.</p></details><details><summary>추천·학습 기록</summary><p>전체 후보·측정 기록은 JSON 결과에 있습니다.</p><pre>{
+  &quot;selection_source&quot;: &quot;verified_policy&quot;,
+  &quot;model&quot;: {
+    &quot;id&quot;: &quot;external-cad-full-plan-ranker-v3&quot;,
+    &quot;sha256&quot;: &quot;930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f&quot;,
+    &quot;training_scope&quot;: &quot;Independent CAD triangle/rectangle/hexagon prism dimensions; counterfactual targets are disclosed project trade-off policy, not external expert improvement labels.&quot;
+  },
+  &quot;check_model&quot;: {
+    &quot;id&quot;: &quot;local-rule-actions-2026-09-29-v1&quot;,
+    &quot;sha256&quot;: &quot;07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7&quot;
+  },
+  &quot;learning&quot;: {
+    &quot;choices&quot;: 0,
+    &quot;scope&quot;: &quot;6c220454104e2663e3950a13636d38867a5976cc6fb4c25c8c9ca5266e78e225&quot;
+  },
+  &quot;selected_plan_id&quot;: &quot;cnc:4f53cda18c2baa0c&quot;,
+  &quot;checks&quot;: [
+    {
+      &quot;finding_id&quot;: &quot;cnc_holes&quot;,
+      &quot;state&quot;: &quot;clear&quot;,
+      &quot;origin&quot;: &quot;learned_verified&quot;,
+      &quot;complete&quot;: true
+    },
+    {
+      &quot;finding_id&quot;: &quot;cnc_curved_corners&quot;,
+      &quot;state&quot;: &quot;clear&quot;,
+      &quot;origin&quot;: &quot;rule_fallback&quot;,
+      &quot;complete&quot;: null
+    },
+    {
+      &quot;finding_id&quot;: &quot;cnc_rectangular_pockets&quot;,
+      &quot;state&quot;: &quot;clear&quot;,
+      &quot;origin&quot;: &quot;rule_fallback&quot;,
+      &quot;complete&quot;: null
+    },
+    {
+      &quot;finding_id&quot;: &quot;cnc_visibility&quot;,
+      &quot;state&quot;: &quot;review&quot;,
+      &quot;origin&quot;: &quot;unavailable&quot;,
+      &quot;complete&quot;: null
+    }
+  ],
+  &quot;reinforcement_planning&quot;: {
+    &quot;status&quot;: &quot;keep&quot;,
+    &quot;model&quot;: {
+      &quot;schema&quot;: &quot;cnc-sequential-ddqn-v1&quot;,
+      &quot;sha256&quot;: &quot;c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0&quot;,
+      &quot;training&quot;: {
+        &quot;method&quot;: &quot;Double DQN&quot;,
+        &quot;hidden_layers&quot;: [
+          64,
+          32
+        ],
+        &quot;seed&quot;: 2026092917,
+        &quot;episodes&quot;: 32070,
+        &quot;transitions&quot;: 78887,
+        &quot;gradient_updates&quot;: 19690,
+        &quot;experience_replay_capacity&quot;: 20000,
+        &quot;batch_size&quot;: 96,
+        &quot;target_sync_updates&quot;: 100,
+        &quot;gamma&quot;: 1.0,
+        &quot;best_validation_episode&quot;: 30000,
+        &quot;training_scenarios&quot;: 24070,
+        &quot;validation_scenarios&quot;: 1080,
+        &quot;heldout_families&quot;: [
+          5,
+          6
+        ],
+        &quot;external_counts&quot;: {
+          &quot;train&quot;: 23470,
+          &quot;val&quot;: 4979,
+          &quot;test&quot;: 4969
+        },
+        &quot;actually_visited_training_scenarios&quot;: 24070,
+        &quot;external_training_visited&quot;: 23470,
+        &quot;initialization&quot;: {
+          &quot;model_sha256&quot;: &quot;6d384fd061924fc11b91308d7208bc76bd7b362b2cf73db2c4f9b4777b0fad87&quot;,
+          &quot;path&quot;: &quot;data/models/rl_planner_v1.json&quot;,
+          &quot;previous_training&quot;: {
+            &quot;method&quot;: &quot;Double DQN&quot;,
+            &quot;hidden_layers&quot;: [
+              64,
+              32
+            ],
+            &quot;seed&quot;: 2026093049,
+            &quot;episodes&quot;: 12000,
+            &quot;transitions&quot;: 51333,
+            &quot;gradient_updates&quot;: 12802,
+            &quot;experience_replay_capacity&quot;: 20000,
+            &quot;batch_size&quot;: 96,
+            &quot;target_sync_updates&quot;: 100,
+            &quot;gamma&quot;: 1.0,
+            &quot;best_validation_episode&quot;: 11500,
+            &quot;training_scenarios&quot;: 600,
+            &quot;validation_scenarios&quot;: 80,
+            &quot;heldout_families&quot;: [
+              5,
+              6
+            ],
+            &quot;initialization&quot;: {
+              &quot;model_sha256&quot;: &quot;5b9329de329b9d12fc40db75ec2f8803a269810c9e622ff7cd835bb168c3b761&quot;,
+              &quot;path&quot;: &quot;validation/neural-localization-2026-09-29/rl/run-002/rl_planner_v1.json&quot;,
+              &quot;previous_training&quot;: {
+                &quot;method&quot;: &quot;Double DQN&quot;,
+                &quot;hidden_layers&quot;: [
+                  64,
+                  32
+                ],
+                &quot;seed&quot;: 2026092987,
+                &quot;episodes&quot;: 24000,
+                &quot;transitions&quot;: 104944,
+                &quot;gradient_updates&quot;: 26205,
+                &quot;experience_replay_capacity&quot;: 20000,
+                &quot;batch_size&quot;: 96,
+                &quot;target_sync_updates&quot;: 100,
+                &quot;gamma&quot;: 1.0,
+                &quot;best_validation_episode&quot;: 23500,
+                &quot;training_scenarios&quot;: 600,
+                &quot;validation_scenarios&quot;: 80,
+                &quot;heldout_families&quot;: [
+                  5,
+                  6
+                ],
+                &quot;reward&quot;: &quot;2*(conflicts_before-conflicts_after) - (policy_cost_after-policy_cost_before); finite-horizon undiscounted return&quot;,
+                &quot;action_labels&quot;: false,
+                &quot;elapsed_seconds&quot;: 478.92953910000006
+              },
+              &quot;note&quot;: &quot;continued network weights; fresh Adam, replay and scenario groups&quot;
+            },
+            &quot;reward&quot;: &quot;2*(conflicts_before-conflicts_after) - (policy_cost_after-policy_cost_before); finite-horizon undiscounted return&quot;,
+            &quot;action_labels&quot;: false,
+            &quot;elapsed_seconds&quot;: 122.4012147999997
+          },
+          &quot;note&quot;: &quot;continued network weights; fresh Adam, replay and scenario groups&quot;
+        },
+        &quot;reward&quot;: &quot;2*(conflicts_before-conflicts_after) - (policy_cost_after-policy_cost_before); finite-horizon undiscounted return&quot;,
+        &quot;action_labels&quot;: false,
+        &quot;elapsed_seconds&quot;: 162.9757772999983
+      },
+      &quot;validation&quot;: {
+        &quot;kind&quot;: &quot;Exact external CAD dimension counterfactuals plus procedural feature scenarios&quot;,
+        &quot;count&quot;: 5529,
+        &quot;mean_conflicts&quot;: 0.5029842647856755,
+        &quot;mean_cost&quot;: 0.5495667937928582,
+        &quot;zero_conflict&quot;: 3747,
+        &quot;mean_steps&quot;: 3.0587809730511846,
+        &quot;elapsed_seconds&quot;: 57.48506520000228,
+        &quot;greedy&quot;: {
+          &quot;count&quot;: 5529,
+          &quot;rl_better&quot;: 505,
+          &quot;rl_worse&quot;: 632,
+          &quot;equal&quot;: 4392,
+          &quot;baseline_mean_conflicts&quot;: 0.5029842647856755,
+          &quot;baseline_mean_cost&quot;: 0.5501212899205764
+        },
+        &quot;random&quot;: {
+          &quot;count&quot;: 5529,
+          &quot;rl_better&quot;: 3973,
+          &quot;rl_worse&quot;: 90,
+          &quot;equal&quot;: 1466,
+          &quot;baseline_mean_conflicts&quot;: 2.1334780249593055,
+          &quot;baseline_mean_cost&quot;: 0.4948592531152273
+        },
+        &quot;legacy&quot;: {
+          &quot;count&quot;: 5529,
+          &quot;rl_better&quot;: 7,
+          &quot;rl_worse&quot;: 814,
+          &quot;equal&quot;: 4708,
+          &quot;baseline_mean_conflicts&quot;: 0.5029842647856755,
+          &quot;baseline_mean_cost&quot;: 0.5425289762472872
+        },
+        &quot;untrained&quot;: {
+          &quot;count&quot;: 5529,
+          &quot;rl_better&quot;: 3762,
+          &quot;rl_worse&quot;: 25,
+          &quot;equal&quot;: 1742,
+          &quot;baseline_mean_conflicts&quot;: 1.6011937059142702,
+          &quot;baseline_mean_cost&quot;: 0.497031039816524
+        },
+        &quot;theoretical_exact_min_guard&quot;: {
+          &quot;worse&quot;: 0,
+          &quot;selected_rl&quot;: 7,
+          &quot;scope&quot;: &quot;pointwise minimum of stored raw qualities; not a runtime arbitration test&quot;
+        }
+      }
+    },
+    &quot;adopted&quot;: false,
+    &quot;reason&quot;: &quot;동일한 기존 개선안이 있어 중복을 제거했습니다&quot;,
+    &quot;proposal_conflicts&quot;: 0,
+    &quot;baseline_conflicts&quot;: 0
+  },
+  &quot;compound_planning&quot;: {
+    &quot;status&quot;: &quot;keep&quot;,
+    &quot;model&quot;: {
+      &quot;schema&quot;: &quot;cnc-compound-tool-proposal-v1&quot;,
+      &quot;sha256&quot;: &quot;585956479b44773ee6e35a3a1d472f0a511fda184baeac8e65711eb47536d7f7&quot;
+    },
+    &quot;search&quot;: {
+      &quot;policy&quot;: &quot;all&quot;,
+      &quot;requested_policy&quot;: &quot;hybrid&quot;,
+      &quot;used_learning&quot;: false,
+      &quot;configuration_count&quot;: 1,
+      &quot;evaluated_count&quot;: 1,
+      &quot;chosen_configuration&quot;: [
+        4.800000000000001,
+        16.0,
+        16.0
+      ],
+      &quot;candidate_indices&quot;: [
+        0
+      ]
+    },
+    &quot;adopted&quot;: false,
+    &quot;reason&quot;: &quot;동일한 기존 개선안을 유지했습니다&quot;
+  },
+  &quot;verified_selection&quot;: {
+    &quot;version&quot;: &quot;verified-tradeoff-2&quot;,
+    &quot;predicted_selected_id&quot;: &quot;cnc:4f53cda18c2baa0c&quot;,
+    &quot;final_selected_id&quot;: &quot;cnc:4f53cda18c2baa0c&quot;,
+    &quot;corrected&quot;: false,
+    &quot;minimum_numeric_conflicts&quot;: 0,
+    &quot;rejected_candidate_ids&quot;: [],
+    &quot;exact_score&quot;: -0.4923076923076922,
+    &quot;preference_score&quot;: 0.0
+  }
+}</pre></details><details><summary>전체 개선 항목</summary><p>판단에 필요한 정보·검토가 남아 있습니다.</p><p><strong>아직 판단하지 못한 항목:</strong> 선택 방향의 표면 가림 · 자동 공구 치수 제안</p></details><details><summary>형상·조건·항목별 근거</summary><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400' role='img' aria-label='원본 좌표의 입력 메시 참고도'><title>원본 좌표의 입력 메시 · 정밀 치수 도면 아님</title><rect width='640' height='400' fill='white'/><polygon points='507.93,242.00 293.15,25.00 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='293.15,25.00 132.07,118.00 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='319.15,213.36 320.85,213.36 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='322.55,213.43 293.15,118.00 320.85,213.36' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='317.45,213.43 319.15,213.36 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='324.24,213.58 293.15,118.00 322.55,213.43' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='315.76,213.58 317.45,213.43 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='325.90,213.80 293.15,118.00 324.24,213.58' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='314.10,213.80 315.76,213.58 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='327.52,214.09 293.15,118.00 325.90,213.80' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='312.48,214.09 314.10,213.80 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='303.89,217.20 293.15,118.00 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='329.11,214.45 293.15,118.00 327.52,214.09' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='310.89,214.45 312.48,214.09 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='330.64,214.87 293.15,118.00 329.11,214.45' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='309.36,214.87 310.89,214.45 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='332.12,215.36 293.15,118.00 330.64,214.87' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='307.88,215.36 309.36,214.87 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='333.53,215.92 293.15,118.00 332.12,215.36' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='306.47,215.92 307.88,215.36 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='334.86,216.53 293.15,118.00 333.53,215.92' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='305.14,216.53 306.47,215.92 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='336.11,217.20 293.15,118.00 334.86,216.53' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='303.89,217.20 305.14,216.53 293.15,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 293.15,118.00 336.11,217.20' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='293.15,118.00 132.07,118.00 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='302.73,217.92 303.89,217.20 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='301.67,218.69 302.73,217.92 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='300.71,219.50 301.67,218.69 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.86,220.35 300.71,219.50 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.12,221.24 299.86,220.35 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='298.50,222.16 299.12,221.24 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='298.00,223.10 298.50,222.16 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.62,224.05 298.00,223.10 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.36,225.03 297.62,224.05 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.24,226.01 297.36,225.03 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.24,226.99 297.24,226.01 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.36,227.97 297.24,226.99 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.62,228.95 297.36,227.97 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='298.00,229.90 297.62,228.95 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='298.50,230.84 298.00,229.90 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.12,231.76 298.50,230.84 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.86,232.65 299.12,231.76 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 336.11,217.20 337.27,217.92' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='300.71,233.50 299.86,232.65 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 337.27,217.92 338.33,218.69' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='301.67,234.31 300.71,233.50 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 338.33,218.69 339.29,219.50' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='302.73,235.08 301.67,234.31 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 339.29,219.50 340.14,220.35' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='303.89,235.80 302.73,235.08 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 340.14,220.35 340.88,221.24' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='319.15,120.36 293.15,25.00 320.85,120.36' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='322.55,120.43 320.85,120.36 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='317.45,120.43 293.15,25.00 319.15,120.36' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='315.76,120.58 293.15,25.00 317.45,120.43' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='324.24,120.58 322.55,120.43 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='325.90,120.80 324.24,120.58 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='314.10,120.80 293.15,25.00 315.76,120.58' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='327.52,121.09 325.90,120.80 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='312.48,121.09 293.15,25.00 314.10,120.80' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 340.88,221.24 341.50,222.16' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='303.89,124.20 132.07,118.00 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='329.11,121.45 327.52,121.09 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='310.89,121.45 293.15,25.00 312.48,121.09' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='320.85,120.36 320.85,213.36 319.15,213.36' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='320.85,120.36 322.55,213.43 320.85,213.36' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='319.15,120.36 319.15,213.36 317.45,213.43' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='330.64,121.87 329.11,121.45 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='309.36,121.87 293.15,25.00 310.89,121.45' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='317.45,120.43 317.45,213.43 315.76,213.58' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='324.24,120.58 324.24,213.58 322.55,213.43' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 341.50,222.16 342.00,223.10' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='315.76,120.58 315.76,213.58 314.10,213.80' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='325.90,120.80 325.90,213.80 324.24,213.58' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='332.12,122.36 330.64,121.87 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='307.88,122.36 293.15,25.00 309.36,121.87' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='325.90,120.80 327.52,214.09 325.90,213.80' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='314.10,120.80 314.10,213.80 312.48,214.09' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='333.53,122.92 332.12,122.36 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='306.47,122.92 293.15,25.00 307.88,122.36' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.00,223.10 342.38,224.05' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='329.11,121.45 329.11,214.45 327.52,214.09' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='310.89,121.45 312.48,214.09 310.89,214.45' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='334.86,123.53 333.53,122.92 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='305.14,123.53 293.15,25.00 306.47,122.92' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='310.89,121.45 310.89,214.45 309.36,214.87' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='330.64,121.87 330.64,214.87 329.11,214.45' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.38,224.05 342.64,225.03' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='336.11,124.20 334.86,123.53 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='303.89,124.20 293.15,25.00 305.14,123.53' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='330.64,121.87 332.12,215.36 330.64,214.87' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='309.36,121.87 309.36,214.87 307.88,215.36' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.64,225.03 342.76,226.01' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='307.88,122.36 307.88,215.36 306.47,215.92' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='333.53,122.92 333.53,215.92 332.12,215.36' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='306.47,122.92 306.47,215.92 305.14,216.53' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 293.15,25.00 507.93,242.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.76,226.01 342.76,226.99' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='334.86,123.53 334.86,216.53 333.53,215.92' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.76,226.99 342.64,227.97' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='336.11,124.20 336.11,217.20 334.86,216.53' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='303.89,124.20 305.14,216.53 303.89,217.20' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='336.11,124.20 337.27,217.92 336.11,217.20' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='303.89,124.20 303.89,217.20 302.73,217.92' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.64,227.97 342.38,228.95' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.38,228.95 342.00,229.90' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='302.73,124.92 302.73,217.92 301.67,218.69' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='338.33,125.69 338.33,218.69 337.27,217.92' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 342.00,229.90 341.50,230.84' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='300.71,126.50 301.67,218.69 300.71,219.50' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='339.29,126.50 339.29,219.50 338.33,218.69' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 341.50,230.84 340.88,231.76' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='339.29,126.50 340.14,220.35 339.29,219.50' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='300.71,126.50 300.71,219.50 299.86,220.35' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 340.88,231.76 340.14,232.65' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 340.14,232.65 339.29,233.50' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.86,127.35 299.86,220.35 299.12,221.24' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='340.88,128.24 340.88,221.24 340.14,220.35' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 339.29,233.50 338.33,234.31' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.12,128.24 299.12,221.24 298.50,222.16' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 338.33,234.31 337.27,235.08' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='341.50,129.16 341.50,222.16 340.88,221.24' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 337.27,235.08 336.11,235.80' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='298.50,129.16 298.50,222.16 298.00,223.10' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='341.50,129.16 342.00,223.10 341.50,222.16' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 336.11,124.20 293.15,25.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.62,131.05 298.00,223.10 297.62,224.05' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='342.38,131.05 342.38,224.05 342.00,223.10' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='297.62,131.05 297.62,224.05 297.36,225.03' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='342.38,131.05 342.64,225.03 342.38,224.05' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='297.36,132.03 297.36,225.03 297.24,226.01' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='342.76,133.01 342.76,226.01 342.64,225.03' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='297.24,133.01 297.24,226.01 297.24,226.99' fill='rgb(80,115,137)' stroke='white' stroke-width='.2'/><polygon points='342.76,133.99 342.76,226.99 342.76,226.01' fill='rgb(80,115,137)' stroke='white' stroke-width='.2'/><polygon points='297.24,133.99 297.24,226.99 297.36,227.97' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='342.64,134.97 342.64,227.97 342.76,226.99' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='297.36,134.97 297.36,227.97 297.62,228.95' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='342.64,134.97 342.38,228.95 342.64,227.97' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='320.85,120.36 319.15,213.36 319.15,120.36' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='322.55,120.43 322.55,213.43 320.85,120.36' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='319.15,120.36 317.45,213.43 317.45,120.43' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='324.24,120.58 322.55,213.43 322.55,120.43' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='317.45,120.43 315.76,213.58 315.76,120.58' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='325.90,120.80 324.24,213.58 324.24,120.58' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='315.76,120.58 314.10,213.80 314.10,120.80' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='327.52,121.09 327.52,214.09 325.90,120.80' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='314.10,120.80 312.48,214.09 312.48,121.09' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='298.00,136.90 297.62,228.95 298.00,229.90' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='342.00,136.90 342.00,229.90 342.38,228.95' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='329.11,121.45 327.52,214.09 327.52,121.09' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='312.48,121.09 312.48,214.09 310.89,121.45' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='330.64,121.87 329.11,214.45 329.11,121.45' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='298.00,136.90 298.00,229.90 298.50,230.84' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='342.00,136.90 341.50,230.84 342.00,229.90' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='310.89,121.45 309.36,214.87 309.36,121.87' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='332.12,122.36 332.12,215.36 330.64,121.87' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='309.36,121.87 307.88,215.36 307.88,122.36' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='333.53,122.92 332.12,215.36 332.12,122.36' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='298.50,137.84 298.50,230.84 299.12,231.76' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='307.88,122.36 306.47,215.92 306.47,122.92' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='340.88,138.76 340.88,231.76 341.50,230.84' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='334.86,123.53 333.53,215.92 333.53,122.92' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='306.47,122.92 305.14,216.53 305.14,123.53' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='299.12,138.76 299.12,231.76 299.86,232.65' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='336.11,124.20 334.86,216.53 334.86,123.53' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='305.14,123.53 305.14,216.53 303.89,124.20' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='340.14,139.65 340.14,232.65 340.88,231.76' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='340.14,139.65 339.29,233.50 340.14,232.65' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='337.27,124.92 337.27,217.92 336.11,124.20' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='303.89,124.20 302.73,217.92 302.73,124.92' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='300.71,140.50 299.86,232.65 300.71,233.50' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='338.33,125.69 337.27,217.92 337.27,124.92' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='300.71,140.50 300.71,233.50 301.67,234.31' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='302.73,124.92 301.67,218.69 301.67,125.69' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='338.33,141.31 338.33,234.31 339.29,233.50' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='339.29,126.50 338.33,218.69 338.33,125.69' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='301.67,125.69 301.67,218.69 300.71,126.50' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='301.67,141.31 301.67,234.31 302.73,235.08' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='337.27,142.08 337.27,235.08 338.33,234.31' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='302.73,142.08 302.73,235.08 303.89,235.80' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='337.27,142.08 336.11,235.80 337.27,235.08' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='300.71,126.50 299.86,220.35 299.86,127.35' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='340.14,127.35 340.14,220.35 339.29,126.50' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='303.89,142.80 303.89,235.80 305.14,236.47' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='340.88,128.24 340.14,220.35 340.14,127.35' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='334.86,143.47 334.86,236.47 336.11,235.80' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='299.86,127.35 299.12,221.24 299.12,128.24' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='305.14,143.47 305.14,236.47 306.47,237.08' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='333.53,144.08 333.53,237.08 334.86,236.47' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='341.50,129.16 340.88,221.24 340.88,128.24' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='306.47,144.08 306.47,237.08 307.88,237.64' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='299.12,128.24 298.50,222.16 298.50,129.16' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='332.12,144.64 332.12,237.64 333.53,237.08' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='307.88,144.64 307.88,237.64 309.36,238.13' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='332.12,144.64 330.64,238.13 332.12,237.64' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='309.36,145.13 309.36,238.13 310.89,238.55' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='330.64,145.13 329.11,238.55 330.64,238.13' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='298.50,129.16 298.00,223.10 298.00,130.10' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='342.00,130.10 342.00,223.10 341.50,129.16' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='310.89,145.55 310.89,238.55 312.48,238.91' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='327.52,145.91 327.52,238.91 329.11,238.55' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='298.00,130.10 298.00,223.10 297.62,131.05' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='342.38,131.05 342.00,223.10 342.00,130.10' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='312.48,145.91 312.48,238.91 314.10,239.20' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='325.90,146.20 325.90,239.20 327.52,238.91' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='314.10,146.20 314.10,239.20 315.76,239.42' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='325.90,146.20 324.24,239.42 325.90,239.20' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='322.55,146.57 322.55,239.57 324.24,239.42' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='317.45,146.57 315.76,239.42 317.45,239.57' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='317.45,146.57 317.45,239.57 319.15,239.64' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='320.85,146.64 320.85,239.64 322.55,239.57' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='319.15,146.64 319.15,239.64 320.85,239.64' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='297.62,131.05 297.36,225.03 297.36,132.03' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='342.64,132.03 342.64,225.03 342.38,131.05' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='342.76,133.01 342.64,225.03 342.64,132.03' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='297.36,132.03 297.24,226.01 297.24,133.01' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='342.76,133.99 342.76,226.01 342.76,133.01' fill='rgb(80,115,137)' stroke='white' stroke-width='.2'/><polygon points='297.24,133.01 297.24,226.99 297.24,133.99' fill='rgb(80,115,137)' stroke='white' stroke-width='.2'/><polygon points='342.64,134.97 342.76,226.99 342.76,133.99' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='297.24,133.99 297.36,227.97 297.36,134.97' fill='rgb(84,119,141)' stroke='white' stroke-width='.2'/><polygon points='297.36,134.97 297.62,228.95 297.62,135.95' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='342.38,135.95 342.38,228.95 342.64,134.97' fill='rgb(89,124,146)' stroke='white' stroke-width='.2'/><polygon points='297.62,135.95 297.62,228.95 298.00,136.90' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='342.00,136.90 342.38,228.95 342.38,135.95' fill='rgb(93,128,150)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 303.89,235.80 132.07,211.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='298.00,136.90 298.50,230.84 298.50,137.84' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='341.50,137.84 341.50,230.84 342.00,136.90' fill='rgb(98,133,155)' stroke='white' stroke-width='.2'/><polygon points='302.73,124.92 132.07,118.00 303.89,124.20' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='340.88,138.76 341.50,230.84 341.50,137.84' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='301.67,125.69 132.07,118.00 302.73,124.92' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='298.50,137.84 299.12,231.76 299.12,138.76' fill='rgb(102,137,159)' stroke='white' stroke-width='.2'/><polygon points='300.71,126.50 132.07,118.00 301.67,125.69' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='340.14,139.65 340.88,231.76 340.88,138.76' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='299.12,138.76 299.86,232.65 299.86,139.65' fill='rgb(106,141,163)' stroke='white' stroke-width='.2'/><polygon points='299.86,127.35 132.07,118.00 300.71,126.50' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.86,139.65 299.86,232.65 300.71,140.50' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='299.12,128.24 132.07,118.00 299.86,127.35' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='339.29,140.50 339.29,233.50 340.14,139.65' fill='rgb(110,145,167)' stroke='white' stroke-width='.2'/><polygon points='298.50,129.16 132.07,118.00 299.12,128.24' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='338.33,141.31 339.29,233.50 339.29,140.50' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='300.71,140.50 301.67,234.31 301.67,141.31' fill='rgb(114,149,171)' stroke='white' stroke-width='.2'/><polygon points='298.00,130.10 132.07,118.00 298.50,129.16' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='337.27,142.08 338.33,234.31 338.33,141.31' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='301.67,141.31 302.73,235.08 302.73,142.08' fill='rgb(118,153,175)' stroke='white' stroke-width='.2'/><polygon points='297.62,131.05 132.07,118.00 298.00,130.10' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.36,132.03 132.07,118.00 297.62,131.05' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='302.73,142.08 303.89,235.80 303.89,142.80' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='336.11,142.80 336.11,235.80 337.27,142.08' fill='rgb(121,156,178)' stroke='white' stroke-width='.2'/><polygon points='334.86,143.47 336.11,235.80 336.11,142.80' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='297.24,133.01 132.07,118.00 297.36,132.03' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='303.89,142.80 305.14,236.47 305.14,143.47' fill='rgb(124,159,181)' stroke='white' stroke-width='.2'/><polygon points='333.53,144.08 334.86,236.47 334.86,143.47' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='297.24,133.99 132.07,118.00 297.24,133.01' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 132.07,211.00 132.07,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='305.14,143.47 306.47,237.08 306.47,144.08' fill='rgb(127,162,184)' stroke='white' stroke-width='.2'/><polygon points='332.12,144.64 333.53,237.08 333.53,144.08' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='306.47,144.08 307.88,237.64 307.88,144.64' fill='rgb(130,165,187)' stroke='white' stroke-width='.2'/><polygon points='297.36,134.97 132.07,118.00 297.24,133.99' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='307.88,144.64 309.36,238.13 309.36,145.13' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='330.64,145.13 330.64,238.13 332.12,144.64' fill='rgb(133,168,190)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 305.14,236.47 303.89,235.80' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 336.11,235.80 334.86,236.47' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='297.62,135.95 132.07,118.00 297.36,134.97' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='309.36,145.13 310.89,238.55 310.89,145.55' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='329.11,145.55 329.11,238.55 330.64,145.13' fill='rgb(135,170,192)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 334.86,236.47 333.53,237.08' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 306.47,237.08 305.14,236.47' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='327.52,145.91 329.11,238.55 329.11,145.55' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='298.00,136.90 132.07,118.00 297.62,135.95' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='310.89,145.55 312.48,238.91 312.48,145.91' fill='rgb(137,172,194)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 307.88,237.64 306.47,237.08' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 333.53,237.08 332.12,237.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='325.90,146.20 327.52,238.91 327.52,145.91' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='312.48,145.91 314.10,239.20 314.10,146.20' fill='rgb(138,173,195)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 309.36,238.13 307.88,237.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 332.12,237.64 330.64,238.13' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='324.24,146.42 324.24,239.42 325.90,146.20' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='314.10,146.20 315.76,239.42 315.76,146.42' fill='rgb(139,174,196)' stroke='white' stroke-width='.2'/><polygon points='298.50,137.84 132.07,118.00 298.00,136.90' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='322.55,146.57 324.24,239.42 324.24,146.42' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='315.76,146.42 315.76,239.42 317.45,146.57' fill='rgb(140,175,197)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 330.64,238.13 329.11,238.55' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 310.89,238.55 309.36,238.13' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='320.85,146.64 322.55,239.57 322.55,146.57' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='317.45,146.57 319.15,239.64 319.15,146.64' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='319.15,146.64 320.85,239.64 320.85,146.64' fill='rgb(141,176,198)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 312.48,238.91 310.89,238.55' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 329.11,238.55 327.52,238.91' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 507.93,242.00 336.11,235.80' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.12,138.76 132.07,118.00 298.50,137.84' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 327.52,238.91 325.90,239.20' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 314.10,239.20 312.48,238.91' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 315.76,239.42 314.10,239.20' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 325.90,239.20 324.24,239.42' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 324.24,239.42 322.55,239.57' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 317.45,239.57 315.76,239.42' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 322.55,239.57 320.85,239.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 319.15,239.64 317.45,239.57' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,335.00 320.85,239.64 319.15,239.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='299.86,139.65 132.07,118.00 299.12,138.76' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 337.27,124.92 336.11,124.20' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='300.71,140.50 132.07,118.00 299.86,139.65' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 338.33,125.69 337.27,124.92' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='301.67,141.31 132.07,118.00 300.71,140.50' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 339.29,126.50 338.33,125.69' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='302.73,142.08 132.07,118.00 301.67,141.31' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 340.14,127.35 339.29,126.50' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='303.89,142.80 132.07,118.00 302.73,142.08' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 340.88,128.24 340.14,127.35' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 341.50,129.16 340.88,128.24' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.00,130.10 341.50,129.16' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.38,131.05 342.00,130.10' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.64,132.03 342.38,131.05' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.76,133.01 342.64,132.03' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.76,133.99 342.76,133.01' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.64,134.97 342.76,133.99' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.38,135.95 342.64,134.97' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 342.00,136.90 342.38,135.95' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 341.50,137.84 342.00,136.90' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 340.88,138.76 341.50,137.84' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 340.14,139.65 340.88,138.76' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 339.29,140.50 340.14,139.65' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 338.33,141.31 339.29,140.50' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 337.27,142.08 338.33,141.31' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 336.11,142.80 337.27,142.08' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,149.00 507.93,242.00 346.85,242.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 132.07,118.00 303.89,142.80' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 334.86,143.47 336.11,142.80' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 303.89,142.80 305.14,143.47' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 305.14,143.47 306.47,144.08' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 333.53,144.08 334.86,143.47' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 332.12,144.64 333.53,144.08' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 306.47,144.08 307.88,144.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 307.88,144.64 309.36,145.13' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 330.64,145.13 332.12,144.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 329.11,145.55 330.64,145.13' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 309.36,145.13 310.89,145.55' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 327.52,145.91 329.11,145.55' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 310.89,145.55 312.48,145.91' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 336.11,142.80 507.93,149.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 325.90,146.20 327.52,145.91' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 312.48,145.91 314.10,146.20' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 324.24,146.42 325.90,146.20' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 314.10,146.20 315.76,146.42' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 322.55,146.57 324.24,146.42' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 315.76,146.42 317.45,146.57' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 320.85,146.64 322.55,146.57' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 317.45,146.57 319.15,146.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 319.15,146.64 320.85,146.64' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='507.93,242.00 346.85,335.00 346.85,242.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><polygon points='346.85,242.00 346.85,335.00 132.07,118.00' fill='rgb(123,158,180)' stroke='white' stroke-width='.2'/><text x='20' y='370' font-size='14' fill='#394b59'>전체 메시 표시 · 정밀 판단은 원본 형상에서 확인</text></svg><p>원본 좌표의 형상 참고도입니다. 공구축에 맞춰 회전한 그림이나 정밀 치수 도면이 아닙니다. 항목별 위치는 앱의 측정 위치 선택과 CAD 면 번호를 함께 확인하세요.</p><h2>이 결과에 적용한 조건</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>적용 조건</th>
+      <th>값</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>절삭 장비</td>
+      <td>미확정</td>
+    </tr>
+    <tr>
+      <td>절삭 재료</td>
+      <td>미확정</td>
+    </tr>
+    <tr>
+      <td>엔드밀 지름 (mm)</td>
+      <td>4.8</td>
+    </tr>
+    <tr>
+      <td>날 길이 (mm)</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>장착 후 돌출 길이 · 공구 끝~홀더 (mm)</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>사용자 지정 원통 구간 길이/지름 기준</td>
+      <td>미입력·미비교</td>
+    </tr>
+    <tr>
+      <td>공구·기준의 출처</td>
+      <td>사용자 지정 공구·탐색 조건; 실제 가공 검증 전</td>
+    </tr>
+  </tbody>
+</table><p>‘아니오’는 해당 치수가 기준을 초과하지 않았다는 뜻입니다. ‘수치 경계’는 계산 오차 범위에서 같은 값입니다.</p><details><summary>조건 원자료</summary><pre>{
+  &quot;machine&quot;: &quot;미확정&quot;,
+  &quot;material&quot;: &quot;미확정&quot;,
+  &quot;tool_diameter_mm&quot;: 4.800000000000001,
+  &quot;flute_length_mm&quot;: 16.0,
+  &quot;reach_mm&quot;: 16.0,
+  &quot;hole_depth_ratio_limit&quot;: null,
+  &quot;basis&quot;: &quot;사용자 지정 공구·탐색 조건; 실제 가공 검증 전&quot;,
+  &quot;condition_evidence&quot;: {}
+}</pre></details><details><summary>사용자 요구·해석 출처</summary><pre>{}</pre></details><section><h2>절삭 검토 입력</h2><p><b>명시된 범위의 측정 완료</b></p><p>단일 STEP 솔리드의 해석 곡면을 읽었습니다.</p><p><strong>다음 행동:</strong> 공구 조건을 입력하고 위치별 결과를 확인하세요.</p><details><summary>계산 원자료</summary><pre>{
+  &quot;cad_feature_dimensions_available&quot;: true
+}</pre></details><p>공차·표면 거칠기·PMI·소재·고정 방법은 자동 추출하지 않습니다.</p></section><section><h2>CAD 면 정보와 특징 인식 범위</h2><p><b>명시된 범위의 측정 완료</b></p><p>경계 미확정 평면 0개, 내·외부 미확정 원통면 0개, 미지원 곡면 0개입니다.</p><p><strong>다음 행동:</strong> 아래 검토는 명시된 평면·원통면·직사각 바닥 범위입니다. 복잡한 특징은 별도 확인하세요.</p><details><summary>계산 원자료</summary><pre>{
+  &quot;incomplete_boundary_face_ids&quot;: [],
+  &quot;unresolved_cylinder_face_ids&quot;: [],
+  &quot;unsupported_face_ids&quot;: [],
+  &quot;cad_features_available&quot;: true
+}</pre></details><p>경계 추출 완료와 전체 포켓·구멍 인식 완료는 다릅니다. 분할·교차·섬·곡선 경계 특징은 전수 인식하지 않습니다. / 4변 외 평면 바닥(예: 챔퍼 때문에 8변이 된 포켓)은 폭·깊이 비교에서 제외됩니다.</p></section><section><h2>구멍 치수와 공구</h2><p><b>명시된 범위의 측정 완료</b></p><p>구멍 1개 · 방향·공구를 조정할 위치 0곳</p><p><strong>다음 행동:</strong> 측정한 구멍 치수와 공구 조건을 유지하세요.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>CAD 면</th>
+      <th>지름 (mm)</th>
+      <th>선택 축과 나란함</th>
+      <th>축 차이 (°)</th>
+      <th>구간 길이 / 지름</th>
+      <th>공구 지름 &gt; 특징 지름</th>
+      <th>원통 구간 &gt; 돌출 길이</th>
+      <th>입력 비율 기준 초과</th>
+      <th>구멍 깊이 (mm)</th>
+      <th>구멍 종류</th>
+      <th>입구 방향</th>
+      <th>입력 공구 지름 (mm)</th>
+      <th>입력 돌출 길이 (mm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7</td>
+      <td>6</td>
+      <td>예</td>
+      <td>0</td>
+      <td>2.5</td>
+      <td>아니오</td>
+      <td>아니오</td>
+      <td>미입력·미비교</td>
+      <td>15</td>
+      <td>관통</td>
+      <td>일치</td>
+      <td>4.8</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table><details><summary>계산 원자료</summary><pre>{
+  &quot;cylindrical_faces&quot;: [
+    {
+      &quot;face_id&quot;: 7,
+      &quot;face_ids&quot;: [
+        7
+      ],
+      &quot;body_id&quot;: 1,
+      &quot;hole_kind&quot;: &quot;through&quot;,
+      &quot;diameter_mm&quot;: 6.0,
+      &quot;depth_mm&quot;: 15.0,
+      &quot;cylindrical_length_mm&quot;: 15.0,
+      &quot;axis&quot;: [
+        0.0,
+        0.0,
+        1.0
+      ],
+      &quot;axis_endpoints_mm&quot;: [
+        [
+          20.0,
+          15.0,
+          0.0
+        ],
+        [
+          20.0,
+          15.0,
+          15.0
+        ]
+      ],
+      &quot;entry_directions&quot;: [
+        [
+          -0.0,
+          -0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      &quot;entry_centers_mm&quot;: [
+        [
+          20.0,
+          15.0,
+          0.0
+        ],
+        [
+          20.0,
+          15.0,
+          15.0
+        ]
+      ],
+      &quot;rim_face_ids&quot;: [
+        5,
+        3
+      ],
+      &quot;rim_edge_ids&quot;: [
+        [
+          14
+        ],
+        [
+          10
+        ]
+      ],
+      &quot;area_mm2&quot;: 282.7433388230815,
+      &quot;measurement_source&quot;: &quot;native-circular-rims-1&quot;,
+      &quot;axis_aligned&quot;: true,
+      &quot;axis_angle_deg&quot;: 0.0,
+      &quot;entry_blocked&quot;: false,
+      &quot;entry_matches_direction&quot;: true,
+      &quot;length_diameter_ratio&quot;: 2.5,
+      &quot;tool_too_large&quot;: false,
+      &quot;segment_exceeds_reach&quot;: false,
+      &quot;exceeds_ratio&quot;: null
+    }
+  ],
+  &quot;face_count&quot;: 1,
+  &quot;unresolved_cylinder_face_ids&quot;: [],
+  &quot;verified_hole_count&quot;: 1,
+  &quot;review_location_count&quot;: 1,
+  &quot;verified_cylinder_face_count&quot;: 1,
+  &quot;unverified_cylindrical_face_count&quot;: 0
+}</pre></details><p>원형 입구와 전체 원통 벽을 확인한 일정 지름의 관통 구멍·평평한 바닥 구멍만 개수와 깊이를 확정합니다. / 단차·교차·축 방향 분할·불완전 경계는 개별 원통 구간으로 보존합니다. / 입구 방향 일치는 구멍의 국소 기하입니다. 다른 형상·공구 몸통·홀더와의 경로 간섭은 별도 항목입니다. / CAD 기하 검산이며 학습 모델의 검출률을 변경하지 않습니다.</p><p><strong>이 항목의 근거:</strong> <a href="https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/">Protolabs — Design for Machining Toolkit</a> / <a href="https://www.nature.com/articles/s41598-021-01313-3">Yeo et al. — Machining feature recognition based on deep neural networks to support tight integration with 3D CAD systems (2021)</a> / <a href="https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/">Harvey Performance — The Anatomy of an End Mill</a> / Gupta et al. — Building MRSEV Models for CAM Applications</p></section><section><h2>공구축과 나란한 오목 원통면</h2><p><b>인식 범위 내 미검출</b></p><p>오목한 부분 원통면 0개의 반경을 확인했습니다. 선택한 공구보다 작은 반경은 0개입니다.</p><p><strong>다음 행동:</strong> 선택한 축과 나란한 오목 원통면은 확인되지 않았습니다. 다른 축이나 분할·복잡한 면은 CAD/CAM에서 확인하세요.</p><details><summary>계산 원자료</summary><pre>{
+  &quot;cylindrical_faces&quot;: [],
+  &quot;unresolved_cylinder_face_ids&quot;: []
+}</pre></details><p>부분 원통면을 포켓 코너로 확정하지 않습니다. 선택 축에서 원통형 엔드밀 옆날이 접근하는 조건의 기하 비교입니다. / 공구 반경과 형상 반경이 같은 수치 경계는 여유·안정성·표면 품질을 보장하지 않습니다.</p><p><strong>이 항목의 근거:</strong> <a href="https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/">Protolabs Network — Sharp corners in CNC machining</a></p></section><section><h2>직사각 포켓 바닥과 내부 직각</h2><p><b>인식 범위 내 미검출</b></p><p>현재 인식 범위의 직사각 포켓 바닥을 찾지 못했습니다.</p><p><strong>다음 행동:</strong> 곡선·분할 면·섬이 있는 포켓은 별도 CAD/CAM 검토가 필요합니다.</p><details><summary>계산 원자료</summary><pre>{
+  &quot;pockets&quot;: [],
+  &quot;count&quot;: 0,
+  &quot;incomplete_boundary_face_ids&quot;: [],
+  &quot;unresolved_floor_face_ids&quot;: []
+}</pre></details><p>직선 4변 바닥·평면 수직벽·동일 벽높이만 인식합니다. 전체 포켓 목록이 아닙니다. / 벽 높이는 공구 경로 길이 또는 전체 진입 깊이를 보장하지 않습니다. 홀더·고정구·소재 제거 순서는 미검토입니다. / 내부 바닥 후보는 채널·밀폐 공동·섬·곡선 경계나 수치 불일치일 수도 있습니다. 열린 포켓으로 확정한 수가 아닙니다. / 벽 높이가 날 길이보다 커도 여러 깊이의 절입이나 목부 공구를 사용할 수 있으므로 그 자체를 가공 불가로 판정하지 않습니다. / 수치 경계의 비교는 초과로 확정하지 않습니다. 같은 치수는 실제 가공 여유가 확보되었다는 뜻이 아닙니다.</p><p><strong>이 항목의 근거:</strong> <a href="https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/">Protolabs — Design for Machining Toolkit</a> / <a href="https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/">Protolabs Network — Sharp corners in CNC machining</a> / <a href="https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/">Harvey Performance — The Anatomy of an End Mill</a> / Gupta et al. — Building MRSEV Models for CAM Applications</p></section><section><h2>선택 방향의 표면 가림</h2><p><b>판단에 필요한 정보 부족</b></p><p>표면 표본의 직선 접근 검사를 아직 실행하지 않았습니다.</p><p><strong>다음 행동:</strong> 표면 가림 검사를 실행해 선택 방향에서 가려진 위치를 확인하세요.</p><details><summary>계산 원자료</summary><pre>{}</pre></details><p></p><p><strong>이 항목의 근거:</strong> <a href="https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm">Autodesk Fusion — Shaft and Holder</a> / Nelaturi et al. (2015) — Automatic Spatial Planning for Machining Operations</p></section><section><h2>자동 공구 치수 제안</h2><p><b>판단에 필요한 정보 부족</b></p><p>측정 특징에서 공구 치수를 채웠습니다. 실제 진입면·공구 목부·홀더 조건은 확인이 필요합니다.</p><p><strong>다음 행동:</strong> 원호 밀링의 진입면과 공구 목부·홀더 조건을 확인하세요.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>CAD 면</th>
+      <th>비교 항목</th>
+      <th>공구 값 (mm)</th>
+      <th>형상 비교값 (mm)</th>
+      <th>관계</th>
+      <th>확인 결과</th>
+      <th>기준</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7</td>
+      <td>엔드밀 지름</td>
+      <td>4.8</td>
+      <td>6</td>
+      <td>상한</td>
+      <td>치수 조건 내</td>
+      <td>측정 치수</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>날 길이</td>
+      <td>16</td>
+      <td>15</td>
+      <td>하한</td>
+      <td>치수 조건 내</td>
+      <td>구간 전체 절삭 가정</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>돌출 길이</td>
+      <td>16</td>
+      <td>15</td>
+      <td>하한</td>
+      <td>치수 조건 내</td>
+      <td>측정 치수</td>
+    </tr>
+  </tbody>
+</table><details><summary>계산 원자료</summary><pre>{
+  &quot;values&quot;: {
+    &quot;tool_diameter_mm&quot;: 4.800000000000001,
+    &quot;flute_length_mm&quot;: 16.0,
+    &quot;reach_mm&quot;: 16.0
+  },
+  &quot;automatic_fields&quot;: [
+    &quot;tool_diameter_mm&quot;,
+    &quot;flute_length_mm&quot;,
+    &quot;reach_mm&quot;
+  ],
+  &quot;fixed_fields&quot;: [],
+  &quot;constraints&quot;: [
+    {
+      &quot;kind&quot;: &quot;hole_milling&quot;,
+      &quot;cad_face_id&quot;: 7,
+      &quot;diameter_max_mm&quot;: 6.0,
+      &quot;flute_min_mm&quot;: 15.0,
+      &quot;reach_min_mm&quot;: 15.0,
+      &quot;length_basis&quot;: &quot;verified_hole_depth&quot;,
+      &quot;hole_kind&quot;: &quot;through&quot;,
+      &quot;cad_face_ids&quot;: [
+        7
+      ],
+      &quot;entry_centers_mm&quot;: [
+        [
+          20.0,
+          15.0,
+          0.0
+        ],
+        [
+          20.0,
+          15.0,
+          15.0
+        ]
+      ],
+      &quot;reach_candidate_mm&quot;: 15.0,
+      &quot;reach_basis&quot;: &quot;verified_circular_mouth_to_end&quot;
+    }
+  ],
+  &quot;comparisons&quot;: [
+    {
+      &quot;kind&quot;: &quot;hole_milling&quot;,
+      &quot;cad_face_id&quot;: 7,
+      &quot;field&quot;: &quot;tool_diameter_mm&quot;,
+      &quot;value_mm&quot;: 4.800000000000001,
+      &quot;limit_mm&quot;: 6.0,
+      &quot;relation&quot;: &quot;at_most&quot;,
+      &quot;conflict&quot;: false,
+      &quot;numerical_boundary&quot;: false,
+      &quot;assumption_only&quot;: false,
+      &quot;assumption_shortfall&quot;: false
+    },
+    {
+      &quot;kind&quot;: &quot;hole_milling&quot;,
+      &quot;cad_face_id&quot;: 7,
+      &quot;field&quot;: &quot;flute_length_mm&quot;,
+      &quot;value_mm&quot;: 16.0,
+      &quot;limit_mm&quot;: 15.0,
+      &quot;relation&quot;: &quot;at_least&quot;,
+      &quot;conflict&quot;: false,
+      &quot;numerical_boundary&quot;: false,
+      &quot;assumption_only&quot;: true,
+      &quot;assumption_shortfall&quot;: false
+    },
+    {
+      &quot;kind&quot;: &quot;hole_milling&quot;,
+      &quot;cad_face_id&quot;: 7,
+      &quot;field&quot;: &quot;reach_mm&quot;,
+      &quot;value_mm&quot;: 16.0,
+      &quot;limit_mm&quot;: 15.0,
+      &quot;relation&quot;: &quot;at_least&quot;,
+      &quot;conflict&quot;: false,
+      &quot;numerical_boundary&quot;: false,
+      &quot;assumption_only&quot;: false,
+      &quot;assumption_shortfall&quot;: false
+    }
+  ],
+  &quot;conflicts&quot;: [],
+  &quot;unresolved&quot;: [
+    {
+      &quot;code&quot;: &quot;access_unresolved&quot;,
+      &quot;reason&quot;: &quot;표면 접근 검토가 미완료입니다.&quot;
+    },
+    {
+      &quot;code&quot;: &quot;holder_path_unverified&quot;,
+      &quot;reason&quot;: &quot;공구 몸통·홀더와 진입 경로는 별도 확인이 필요합니다.&quot;
+    }
+  ],
+  &quot;assumptions&quot;: {
+    &quot;diameter_fraction&quot;: 0.8,
+    &quot;length_allowance_mm&quot;: 1.0,
+    &quot;policy&quot;: &quot;측정 개구·내부 반경의 지름 상한에 비율 적용; 축 구간·벽 높이에 길이 여유 추가&quot;,
+    &quot;provenance&quot;: &quot;앱의 편집 가능한 초기 제안 정책; 제조사 표준값·학습 예측·실재 제품 선택이 아님&quot;,
+    &quot;hole_strategy&quot;: &quot;원통 특징은 원호 밀링을 가정한 엔드밀 치수 제안; 드릴 명목지름 요구는 별도&quot;,
+    &quot;length_scope&quot;: &quot;검산된 일정 지름 구멍은 CAD 입구~끝 깊이; 나머지는 벽 높이·원통 구간과 메시 상단 투영 거리&quot;,
+    &quot;entry_reference&quot;: &quot;verified_circular_mouth_to_end는 CAD 원형 입구 기준; 다른 특징은 전체 형상 상단 기준&quot;,
+    &quot;unmeasured&quot;: &quot;단차·교차 홀 전체 깊이, 공구 몸통·홀더·고정구·경로 및 표본 밖의 곡면 여유&quot;
+  },
+  &quot;drill_requirements&quot;: [
+    {
+      &quot;cad_face_id&quot;: 7,
+      &quot;nominal_diameter_mm&quot;: 6.0,
+      &quot;measured_cylindrical_interval_mm&quot;: 15.0,
+      &quot;status&quot;: &quot;dimension_requirement&quot;,
+      &quot;scope&quot;: &quot;CAD 원형 입구·바닥으로 확인한 명목지름과 깊이; 드릴 끝 형상은 공구별 선택&quot;,
+      &quot;hole_kind&quot;: &quot;through&quot;,
+      &quot;depth_mm&quot;: 15.0
+    }
+  ]
+}</pre></details><p>측정한 구간 전체를 날 길이로 덮는 초기 가정입니다. 여러 깊이의 절입·목부 공구·다른 경로는 별도 비교합니다. / 형상 전체 상단 기준 돌출 후보는 떨어진 돌출부 때문에 길어질 수 있으며 실제 최소 길이를 뜻하지 않습니다.</p><p><strong>이 항목의 근거:</strong> <a href="https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/">Harvey Performance — The Anatomy of an End Mill</a> / <a href="https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/">Protolabs — Design for Machining Toolkit</a> / <a href="https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm">Autodesk Fusion — Shaft and Holder</a></p></section><h2>별도 확인이 필요한 범위</h2><p>공구·홀더·고정구의 실제 경로 충돌 / 소재와 고정·가공 순서 / 절삭력·처짐·진동·표면 품질 / 공차와 PMI / 분할·자유곡면 포켓 및 교차 홀 / 가공 시간·비용·성공 확률</p><h2>근거</h2><ul><li><a href="https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/">Protolabs — Design for Machining Toolkit</a><p><strong>이 검토에서 사용하는 이유와 범위:</strong> Internal corners, deep features and access motivate checks. Service-specific limits are not universal limits.</p></li><li><a href="https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/">Protolabs Network — Sharp corners in CNC machining</a><p><strong>이 검토에서 사용하는 이유와 범위:</strong> Geometric cutter radius constraint; not a prediction of stability, surface quality or time.</p></li><li><a href="https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/">Harvey Performance — The Anatomy of an End Mill</a><p><strong>이 검토에서 사용하는 이유와 범위:</strong> Cutting length, overall length and length below shank are distinct. The entered tip-to-holder reach is an explicit user condition, not an inferred catalog value.</p></li><li><a href="https://www.nature.com/articles/s41598-021-01313-3">Yeo et al. — Machining feature recognition based on deep neural networks to support tight integration with 3D CAD systems (2021)</a><p><strong>이 검토에서 사용하는 이유와 범위:</strong> 원통 특징이 여러 B-rep 면으로 표현될 수 있다는 배경 근거입니다. 현재 코드는 면 구간을 측정하며 이 논문의 DNN·17종 특징 분류기를 구현하지 않습니다. 논문의 인식률은 가공 성공률이 아닙니다.</p><p><strong>확인할 쪽·항목:</strong> 제공 PDF 5–9쪽의 면 표현; 13–17쪽의 분류 평가</p><p><strong>원문 확인 범위:</strong> 2026-09-21 제공 전문 20쪽 검토; 핵심 혼동행렬·표 원페이지 대조</p><p><strong>저장소 PDF 위치:</strong> references/machining/Machining Feature Recognition Based on Deep Neural Networks to Support Tight Integration with 3D CAD Systems.pdf</p></li><li><a href="https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm">Autodesk Fusion — Shaft and Holder</a><p><strong>이 검토에서 사용하는 이유와 범위:</strong> Actual shaft/holder collision checks involve toolpath and clearance conditions. This source does not validate the implementation&#x27;s sampled point-ray algorithm.</p></li><li>Nelaturi et al. (2015) — Automatic Spatial Planning for Machining Operations<p><strong>이 검토에서 사용하는 이유와 범위:</strong> 점의 직선 가시성과 두께가 있는 공구의 접근은 다릅니다. 현재 표본 ray 검사는 초기 차폐 관측이며, 논문의 유한 공구 제거 체적·공정 순서·고정구 계획을 구현하지 않습니다.</p><p><strong>확인할 쪽·항목:</strong> 제공 PDF 2–3쪽, Fig. 1–2: 무한히 가는 공구와 유한 공구의 차이</p><p><strong>원문 확인 범위:</strong> 2026-09-21 제공 전문 6쪽 검토·핵심 도해 대조</p><p><strong>저장소 PDF 위치:</strong> references/machining/Automatic Spatial Planning for Machining Operations.pdf</p></li><li>Gupta et al. — Building MRSEV Models for CAM Applications<p><strong>이 검토에서 사용하는 이유와 범위:</strong> 가공 특징은 면 하나와 같지 않으며 소재·제거 체적·접근 체적이 필요합니다. 현재 제한 포켓과 원통면 검출은 이 보고서의 일반 특징 인식·공정 계획 구현이 아닙니다.</p><p><strong>확인할 쪽·항목:</strong> 제공 보고서 PDF 11–21쪽; 30–31쪽 구현 한계</p><p><strong>원문 확인 범위:</strong> 2026-09-21 제공 스캔 36쪽 OCR 검토·정의/알고리즘/도해 원페이지 대조</p><p><strong>저장소 PDF 위치:</strong> references/machining/Building MRSEV Models for CAM Applications.pdf</p></li><li><a href="https://doi.org/10.1016/j.ijmachtools.2005.09.009">Budak (2006) — Analytical Models for High Performance Milling. Part I</a><p><strong>이 검토에서 사용하는 이유와 범위:</strong> 절삭력·변형·공차 예측에는 절삭 계수, 이송·절입, 공구/홀더/공작물 강성이 필요합니다. 현재 치수 비교에는 이 물리 모델이 포함되어 있지 않습니다.</p><p><strong>확인할 쪽·항목:</strong> 제공 PDF 2–4쪽 힘·보정, 5–8쪽 강성·변형</p><p><strong>원문 확인 범위:</strong> 2026-09-21 제공 전문 11쪽 검토·수식/단위 대조</p><p><strong>저장소 PDF 위치:</strong> references/machining/Analytical Models for High Performance Milling. Part I - Cutting Forces, Structural Deformations and Tolerance Integrity.pdf</p></li><li>KS A ISO 8015:2011 — GPS 기본사항·개념·원칙·규칙<p><strong>이 검토에서 사용하는 이유와 범위:</strong> 도면의 명세와 실제 검증을 구분하는 근거입니다. 공차·PMI·데이텀·실측 없이 CAD 명목 치수로 공차 적합이나 가공 성공률을 계산하지 않습니다. 표준의 100% 가정은 실물 성공률이 아닙니다.</p><p><strong>확인할 쪽·항목:</strong> 제공 PDF §4.4, §§5.3, 5.5, 5.10, 5.13; 국내 2023 개정판</p><p><strong>원문 확인 범위:</strong> 2026-09-21 제공 전페이지 캡처 21쪽 검토; 워터마크/OCR 한계 있음</p><p><strong>저장소 PDF 위치:</strong> references/machining/KS A ISO 8015 전문 캡쳐본.pdf</p></li><li><a href="https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-holes-cavities-pockets">Sandvik Coromant — Milling holes and cavities/pockets</a><p><strong>이 검토에서 사용하는 이유와 범위:</strong> 드릴과 원호 밀링을 구분하고 구멍 치수·입구·바닥 형상을 제시하는 이유. 인식 알고리즘 정확도나 앱의 80%·1 mm 정책 근거가 아님.</p><p><strong>확인할 쪽·항목:</strong> Creating an opening; circular ramping applications; updated hole geometry audit 2026-09-30</p><p><strong>원문 확인 범위:</strong> 공식 공개 자료 해당 항목 확인</p></li></ul><p>입력 SHA: b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362<br>코드 SHA: None</p></details></body></html>

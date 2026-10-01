@@ -1,0 +1,145 @@
+{
+  "input_sha256": "92f73ced2b883c113e6fb21a402c052661552b3236a52b2e062352b58f13d08b",
+  "policy": "retained4_residual20",
+  "split": "test",
+  "groups": 55,
+  "paired": {
+    "legacy": {
+      "cases": 275,
+      "distinct_groups": 55,
+      "better": 11,
+      "same": 259,
+      "worse": 5,
+      "mean_difference": -0.0013176051632381655,
+      "group_bootstrap_95_percentile_interval": [
+        -0.0031060539816378523,
+        8.883391514137677e-06
+      ]
+    },
+    "blind": {
+      "cases": 275,
+      "distinct_groups": 55,
+      "better": 26,
+      "same": 235,
+      "worse": 14,
+      "mean_difference": 0.0019502108340063258,
+      "group_bootstrap_95_percentile_interval": [
+        -0.003017496300154405,
+        0.008366313559625386
+      ]
+    }
+  },
+  "by_dataset": {
+    "CadQuarry": {
+      "legacy": {
+        "cases": 125,
+        "distinct_groups": 25,
+        "better": 0,
+        "same": 125,
+        "worse": 0,
+        "mean_difference": 0.0,
+        "group_bootstrap_95_percentile_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "blind": {
+        "cases": 125,
+        "distinct_groups": 25,
+        "better": 0,
+        "same": 122,
+        "worse": 3,
+        "mean_difference": 0.0005616343796450654,
+        "group_bootstrap_95_percentile_interval": [
+          0.0,
+          0.001474938690650159
+        ]
+      }
+    },
+    "PBF-orientation": {
+      "legacy": {
+        "cases": 125,
+        "distinct_groups": 25,
+        "better": 11,
+        "same": 112,
+        "worse": 2,
+        "mean_difference": -0.0031780053241658637,
+        "group_bootstrap_95_percentile_interval": [
+          -0.006882274362164384,
+          -0.0002654521460081019
+        ]
+      },
+      "blind": {
+        "cases": 125,
+        "distinct_groups": 25,
+        "better": 26,
+        "same": 92,
+        "worse": 7,
+        "mean_difference": 0.0024425651199077624,
+        "group_bootstrap_95_percentile_interval": [
+          -0.008209089539114102,
+          0.01627905185273864
+        ]
+      }
+    },
+    "Thingi10K": {
+      "legacy": {
+        "cases": 25,
+        "distinct_groups": 5,
+        "better": 0,
+        "same": 22,
+        "worse": 3,
+        "mean_difference": 0.0013963698252094981,
+        "group_bootstrap_95_percentile_interval": [
+          0.0,
+          0.004189109475628494
+        ]
+      },
+      "blind": {
+        "cases": 25,
+        "distinct_groups": 5,
+        "better": 0,
+        "same": 21,
+        "worse": 4,
+        "mean_difference": 0.006431321676305438,
+        "group_bootstrap_95_percentile_interval": [
+          0.0,
+          0.019293965028916314
+        ]
+      }
+    }
+  },
+  "counts": {
+    "retained4_residual20": [
+      6
+    ],
+    "legacy": [
+      6
+    ],
+    "blind": [
+      6
+    ]
+  },
+  "incremental_wall_time_seconds": {
+    "retained4_residual20": {
+      "median": 0.48400000000037835,
+      "p95": 0.5630000000006475,
+      "maximum": 0.6099999999987631
+    },
+    "legacy": {
+      "median": 0.4680000000007567,
+      "p95": 0.5521999999999027,
+      "maximum": 0.5930000000007567
+    },
+    "blind": {
+      "median": 0.0,
+      "p95": 0.01599999999962165,
+      "maximum": 0.01600000000144064
+    }
+  },
+  "time_scope": "Incremental selection/refinement and six exact queries after the identical shared 18-query ensemble; loading/26-view baseline excluded equally",
+  "inference_note": "Shape-local kernel residual fit on measured queries; pretrained network weights unchanged",
+  "normalization": "One exact-measured common candidate union per case; each method retains the same shared baseline; raw candidate utility separately from UI plan arbitration",
+  "neural_model_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+  "algorithm_sha256": "7258ad92622c9d54e5b3128738d816942d4480e8a796bea22ddd906837fa9aa5"
+}

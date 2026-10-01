@@ -1,0 +1,2661 @@
+{
+  "cases": 24,
+  "passed": 24,
+  "results": [
+    {
+      "file": "through-1-0.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                14
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 226.1946710584652,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.800000000000001,
+          "flute_length_mm": 13.0,
+          "reach_mm": 13.0
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "through-3-0.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                -14.0,
+                0.0,
+                0.0
+              ],
+              [
+                -14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                -14.0,
+                0.0,
+                0.0
+              ],
+              [
+                -14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                16
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 226.1946710584652,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 8,
+            "face_ids": [
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                17
+              ],
+              [
+                11
+              ]
+            ],
+            "area_mm2": 226.1946710584652,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 9,
+            "face_ids": [
+              9
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                14.0,
+                0.0,
+                0.0
+              ],
+              [
+                14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                14.0,
+                0.0,
+                0.0
+              ],
+              [
+                14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                18
+              ],
+              [
+                12
+              ]
+            ],
+            "area_mm2": 226.1946710584652,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 3,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.800000000000001,
+          "flute_length_mm": 13.0,
+          "reach_mm": 13.0
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          },
+          {
+            "cad_face_id": 8,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          },
+          {
+            "cad_face_id": 9,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "through-1-1.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.300000000000473,
+            "cylindrical_length_mm": 17.300000000000473,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                56.99999999999934,
+                -31.999999999992717,
+                18.00000000000028
+              ],
+              [
+                68.6592703814,
+                -33.4930935692346,
+                30.69338748194922
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                57.0,
+                -32.0,
+                18.0
+              ],
+              [
+                68.659270381404,
+                -33.49309356924,
+                30.693387481945
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                14
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 293.4875856983654,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.32,
+          "flute_length_mm": 18.300000000000473,
+          "reach_mm": 18.300000000000473
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.300000000000473,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.300000000000473
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "through-3-1.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.30000000000006,
+            "cylindrical_length_mm": 17.30000000000006,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                47.54496729550666,
+                -38.64388539804276,
+                25.90323625957063
+              ],
+              [
+                59.20423767690705,
+                -40.136978967284605,
+                38.59662374151927
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                47.544967295507,
+                -38.64388539804,
+                25.903236259571
+              ],
+              [
+                59.204237676911,
+                -40.13697896728,
+                38.596623741516
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                16
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 293.4875856983561,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 8,
+            "face_ids": [
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.300000000000473,
+            "cylindrical_length_mm": 17.300000000000473,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                56.99999999999934,
+                -31.999999999992717,
+                18.00000000000028
+              ],
+              [
+                68.6592703814,
+                -33.4930935692346,
+                30.69338748194922
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                57.0,
+                -32.0,
+                18.0
+              ],
+              [
+                68.659270381404,
+                -33.49309356924,
+                30.693387481945
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                17
+              ],
+              [
+                11
+              ]
+            ],
+            "area_mm2": 293.4875856983654,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 9,
+            "face_ids": [
+              9
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.300000000000008,
+            "cylindrical_length_mm": 17.300000000000008,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                66.45503270449265,
+                -25.356114601952754,
+                10.096763740429628
+              ],
+              [
+                78.11430308589301,
+                -26.849208171194597,
+                22.79015122237822
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                66.455032704493,
+                -25.35611460195,
+                10.096763740429
+              ],
+              [
+                78.114303085897,
+                -26.84920817119,
+                22.790151222375
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                18
+              ],
+              [
+                12
+              ]
+            ],
+            "area_mm2": 293.48758569835286,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 3,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.32,
+          "flute_length_mm": 18.300000000000473,
+          "reach_mm": 18.300000000000473
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.30000000000006,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.30000000000006
+          },
+          {
+            "cad_face_id": 8,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.300000000000473,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.300000000000473
+          },
+          {
+            "cad_face_id": 9,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.300000000000008,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.300000000000008
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "blind-1-0.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 6.0,
+            "depth_mm": 7.2,
+            "cylindrical_length_mm": 7.2,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                0.0,
+                0.0,
+                4.8
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              8,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                15
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 135.71680263507912,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.800000000000001,
+          "flute_length_mm": 8.2,
+          "reach_mm": 8.2
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 7.2,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 7.2
+          }
+        ],
+        "wrong_side_no_tool_dimensions": true,
+        "wrong_side_no_numeric_plan": true,
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "blind-3-0.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 6.0,
+            "depth_mm": 7.2,
+            "cylindrical_length_mm": 7.2,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                -14.0,
+                0.0,
+                4.8
+              ],
+              [
+                -14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                -14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              10,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                17
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 135.71680263507912,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 8,
+            "face_ids": [
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 6.0,
+            "depth_mm": 7.2,
+            "cylindrical_length_mm": 7.2,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                0.0,
+                0.0,
+                4.8
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              11,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                19
+              ],
+              [
+                11
+              ]
+            ],
+            "area_mm2": 135.71680263507912,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 9,
+            "face_ids": [
+              9
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 6.0,
+            "depth_mm": 7.2,
+            "cylindrical_length_mm": 7.2,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                14.0,
+                0.0,
+                4.8
+              ],
+              [
+                14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              12,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                21
+              ],
+              [
+                12
+              ]
+            ],
+            "area_mm2": 135.71680263507912,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 3,
+      "raw_neural_hole_candidate_count": 3,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.800000000000001,
+          "flute_length_mm": 8.2,
+          "reach_mm": 8.2
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 7.2,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 7.2
+          },
+          {
+            "cad_face_id": 8,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 7.2,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 7.2
+          },
+          {
+            "cad_face_id": 9,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 7.2,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 7.2
+          }
+        ],
+        "wrong_side_no_tool_dimensions": true,
+        "wrong_side_no_numeric_plan": true,
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "blind-1-1.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 5.4,
+            "depth_mm": 10.38000000000078,
+            "cylindrical_length_mm": 10.38000000000078,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                61.663708152562,
+                -32.59723742769,
+                23.077354992778
+              ],
+              [
+                68.65927038140273,
+                -33.49309356923517,
+                30.69338748194773
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                68.659270381404,
+                -33.49309356924,
+                30.693387481945
+              ]
+            ],
+            "rim_face_ids": [
+              8,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                15
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 176.0925514190284,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.32,
+          "flute_length_mm": 11.38000000000078,
+          "reach_mm": 11.38000000000078
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 10.38000000000078,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 10.38000000000078
+          }
+        ],
+        "wrong_side_no_tool_dimensions": true,
+        "wrong_side_no_numeric_plan": true,
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "blind-3-1.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 5.4,
+            "depth_mm": 10.380000000000049,
+            "cylindrical_length_mm": 10.380000000000049,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                52.208675448069,
+                -39.24112282574,
+                30.980591252349
+              ],
+              [
+                59.204237676909244,
+                -40.13697896728511,
+                38.596623741518194
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                59.204237676911,
+                -40.13697896728,
+                38.596623741516
+              ]
+            ],
+            "rim_face_ids": [
+              10,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                17
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 176.09255141901593,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 8,
+            "face_ids": [
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 5.4,
+            "depth_mm": 10.38000000000078,
+            "cylindrical_length_mm": 10.38000000000078,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                61.663708152562,
+                -32.59723742769,
+                23.077354992778
+              ],
+              [
+                68.65927038140273,
+                -33.49309356923517,
+                30.69338748194773
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                68.659270381404,
+                -33.49309356924,
+                30.693387481945
+              ]
+            ],
+            "rim_face_ids": [
+              11,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                19
+              ],
+              [
+                11
+              ]
+            ],
+            "area_mm2": 176.0925514190284,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 9,
+            "face_ids": [
+              9
+            ],
+            "body_id": 1,
+            "hole_kind": "blind",
+            "diameter_mm": 5.4,
+            "depth_mm": 10.380000000000003,
+            "cylindrical_length_mm": 10.380000000000003,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                71.118740857054,
+                -25.95335202965,
+                15.174118733208
+              ],
+              [
+                78.1143030858942,
+                -26.849208171195105,
+                22.790151222377155
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                78.114303085897,
+                -26.84920817119,
+                22.790151222375
+              ]
+            ],
+            "rim_face_ids": [
+              12,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                21
+              ],
+              [
+                12
+              ]
+            ],
+            "area_mm2": 176.09255141900135,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 3,
+      "raw_neural_hole_candidate_count": 3,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.32,
+          "flute_length_mm": 11.38000000000078,
+          "reach_mm": 11.38000000000078
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 10.380000000000049,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 10.380000000000049
+          },
+          {
+            "cad_face_id": 8,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 10.38000000000078,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 10.38000000000078
+          },
+          {
+            "cad_face_id": 9,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 10.380000000000003,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "blind",
+            "depth_mm": 10.380000000000003
+          }
+        ],
+        "wrong_side_no_tool_dimensions": true,
+        "wrong_side_no_numeric_plan": true,
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "split-1-0.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7,
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                15,
+                16
+              ],
+              [
+                10,
+                11
+              ]
+            ],
+            "area_mm2": 226.19467105847994,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 0,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.800000000000001,
+          "flute_length_mm": 13.0,
+          "reach_mm": 13.0
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "split-3-0.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7,
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                -14.0,
+                0.0,
+                0.0
+              ],
+              [
+                -14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                -14.0,
+                0.0,
+                0.0
+              ],
+              [
+                -14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                19,
+                20
+              ],
+              [
+                10,
+                11
+              ]
+            ],
+            "area_mm2": 226.19467105847994,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 9,
+            "face_ids": [
+              9,
+              10
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                21,
+                22
+              ],
+              [
+                12,
+                13
+              ]
+            ],
+            "area_mm2": 226.19467105847994,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 11,
+            "face_ids": [
+              11,
+              12
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                14.0,
+                0.0,
+                0.0
+              ],
+              [
+                14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                14.0,
+                0.0,
+                0.0
+              ],
+              [
+                14.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                23,
+                24
+              ],
+              [
+                14,
+                15
+              ]
+            ],
+            "area_mm2": 226.19467105847994,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 0,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.800000000000001,
+          "flute_length_mm": 13.0,
+          "reach_mm": 13.0
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          },
+          {
+            "cad_face_id": 9,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          },
+          {
+            "cad_face_id": 11,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "split-1-1.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7,
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.300000000000473,
+            "cylindrical_length_mm": 17.300000000000473,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                56.99999999999934,
+                -31.999999999992717,
+                18.00000000000028
+              ],
+              [
+                68.6592703814,
+                -33.4930935692346,
+                30.69338748194922
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                57.0,
+                -32.0,
+                18.0
+              ],
+              [
+                68.659270381404,
+                -33.49309356924,
+                30.693387481945
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                15,
+                16
+              ],
+              [
+                10,
+                11
+              ]
+            ],
+            "area_mm2": 293.4875856983799,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 0,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.32,
+          "flute_length_mm": 18.300000000000473,
+          "reach_mm": 18.300000000000473
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.300000000000473,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.300000000000473
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "split-3-1.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7,
+              8
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.30000000000053,
+            "cylindrical_length_mm": 17.30000000000053,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                47.54496729550634,
+                -38.64388539804272,
+                25.903236259570285
+              ],
+              [
+                59.20423767690705,
+                -40.136978967284605,
+                38.59662374151927
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                47.544967295507,
+                -38.64388539804,
+                25.903236259571
+              ],
+              [
+                59.204237676911,
+                -40.13697896728,
+                38.596623741516
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                19,
+                20
+              ],
+              [
+                10,
+                11
+              ]
+            ],
+            "area_mm2": 293.4875856983799,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 9,
+            "face_ids": [
+              9,
+              10
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.300000000000473,
+            "cylindrical_length_mm": 17.300000000000473,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                56.99999999999934,
+                -31.999999999992717,
+                18.00000000000028
+              ],
+              [
+                68.6592703814,
+                -33.4930935692346,
+                30.69338748194922
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                57.0,
+                -32.0,
+                18.0
+              ],
+              [
+                68.659270381404,
+                -33.49309356924,
+                30.693387481945
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                21,
+                22
+              ],
+              [
+                12,
+                13
+              ]
+            ],
+            "area_mm2": 293.4875856983799,
+            "measurement_source": "native-circular-rims-1"
+          },
+          {
+            "face_id": 11,
+            "face_ids": [
+              11,
+              12
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.300000000000797,
+            "cylindrical_length_mm": 17.300000000000797,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                66.45503270449265,
+                -25.356114601952754,
+                10.096763740429628
+              ],
+              [
+                78.11430308589354,
+                -26.849208171194665,
+                22.790151222378803
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                66.455032704493,
+                -25.35611460195,
+                10.096763740429
+              ],
+              [
+                78.114303085897,
+                -26.84920817119,
+                22.790151222375
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                23,
+                24
+              ],
+              [
+                14,
+                15
+              ]
+            ],
+            "area_mm2": 293.4875856983783,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 0,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.32,
+          "flute_length_mm": 18.300000000000797,
+          "reach_mm": 18.300000000000797
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.30000000000053,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.30000000000053
+          },
+          {
+            "cad_face_id": 9,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.300000000000473,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.300000000000473
+          },
+          {
+            "cad_face_id": 11,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.300000000000797,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.300000000000797
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "axial_split-1-0.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              7,
+              8
+            ],
+            "reason": "axially_split_or_zero_interval"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 2,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {}
+    },
+    {
+      "file": "axial_split-1-1.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              7,
+              8
+            ],
+            "reason": "axially_split_or_zero_interval"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 2,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {}
+    },
+    {
+      "file": "stepped-1-0.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              7
+            ],
+            "reason": "coaxial_radius_change"
+          },
+          {
+            "face_ids": [
+              8
+            ],
+            "reason": "coaxial_radius_change"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 2,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {}
+    },
+    {
+      "file": "stepped-1-1.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              7
+            ],
+            "reason": "coaxial_radius_change"
+          },
+          {
+            "face_ids": [
+              8
+            ],
+            "reason": "coaxial_radius_change"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 2,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {}
+    },
+    {
+      "file": "cross-1-0.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              6,
+              10
+            ],
+            "reason": "axially_split_or_zero_interval"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 2,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {}
+    },
+    {
+      "file": "cross-1-1.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              6,
+              10
+            ],
+            "reason": "axially_split_or_zero_interval"
+          },
+          {
+            "face_ids": [
+              8,
+              9
+            ],
+            "reason": "axially_split_or_zero_interval"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 4,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {}
+    },
+    {
+      "file": "sealed-1-0.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              7
+            ],
+            "reason": "no_open_mouth_or_flat_floor"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {}
+    },
+    {
+      "file": "sealed-1-1.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [
+          {
+            "face_ids": [
+              7
+            ],
+            "reason": "no_open_mouth_or_flat_floor"
+          }
+        ],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 0,
+      "checks": {}
+    },
+    {
+      "file": "boss-1-0.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 0,
+      "raw_neural_hole_candidate_count": 4,
+      "checks": {}
+    },
+    {
+      "file": "boss-1-1.step",
+      "passed": true,
+      "expected": [],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 0,
+      "raw_neural_hole_candidate_count": 4,
+      "checks": {}
+    },
+    {
+      "file": "remote_boss-1-0.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 6.0,
+            "depth_mm": 12.0,
+            "cylindrical_length_mm": 12.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                18
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 226.1946710584652,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.800000000000001,
+          "flute_length_mm": 13.0,
+          "reach_mm": 13.0
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 6.0,
+            "measured_cylindrical_interval_mm": 12.0,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 12.0
+          }
+        ],
+        "bounded_count": true
+      }
+    },
+    {
+      "file": "remote_boss-1-1.step",
+      "passed": true,
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "inventory": {
+        "version": "native-circular-rims-1",
+        "method": "Native cylinder area + closed incident circular rim wires",
+        "holes": [
+          {
+            "face_id": 7,
+            "face_ids": [
+              7
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 5.4,
+            "depth_mm": 17.300000000000473,
+            "cylindrical_length_mm": 17.300000000000473,
+            "axis": [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ],
+            "axis_endpoints_mm": [
+              [
+                56.99999999999934,
+                -31.999999999992717,
+                18.00000000000028
+              ],
+              [
+                68.6592703814,
+                -33.4930935692346,
+                30.69338748194922
+              ]
+            ],
+            "entry_directions": [
+              [
+                -0.6739462648208294,
+                0.08630598666137818,
+                -0.7337218197658145
+              ],
+              [
+                0.6739462648208294,
+                -0.08630598666137818,
+                0.7337218197658145
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                57.0,
+                -32.0,
+                18.0
+              ],
+              [
+                68.659270381404,
+                -33.49309356924,
+                30.693387481945
+              ]
+            ],
+            "rim_face_ids": [
+              5,
+              3
+            ],
+            "rim_edge_ids": [
+              [
+                18
+              ],
+              [
+                10
+              ]
+            ],
+            "area_mm2": 293.4875856983654,
+            "measurement_source": "native-circular-rims-1"
+          }
+        ],
+        "excluded": [],
+        "status": "complete"
+      },
+      "raw_full_cylinder_count": 1,
+      "raw_neural_hole_candidate_count": 1,
+      "checks": {
+        "entry_direction_works": true,
+        "values": {
+          "tool_diameter_mm": 4.32,
+          "flute_length_mm": 18.300000000000473,
+          "reach_mm": 18.300000000000473
+        },
+        "depth_proposals_correct": true,
+        "drill_requirements": [
+          {
+            "cad_face_id": 7,
+            "nominal_diameter_mm": 5.4,
+            "measured_cylindrical_interval_mm": 17.300000000000473,
+            "status": "dimension_requirement",
+            "scope": "CAD \uc6d0\ud615 \uc785\uad6c\u00b7\ubc14\ub2e5\uc73c\ub85c \ud655\uc778\ud55c \uba85\ubaa9\uc9c0\ub984\uacfc \uae4a\uc774; \ub4dc\ub9b4 \ub05d \ud615\uc0c1\uc740 \uacf5\uad6c\ubcc4 \uc120\ud0dd",
+            "hole_kind": "through",
+            "depth_mm": 17.300000000000473
+          }
+        ],
+        "bounded_count": true
+      }
+    }
+  ],
+  "source_manifest_sha256": "33d5c6496c5ac452fe846c16567ba71153ca2aa777d5cba37d29d28b2a455b13",
+  "geometry_complement_not_retraining": true
+}

@@ -1,0 +1,185 @@
+{
+  "timestamp_utc": "2026-09-28T07:43:09.157499+00:00",
+  "source": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project",
+  "destination": "C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0",
+  "backup": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\conditions-2026-09-28\\desktop-backup-20260928-164308",
+  "scope": "Conditions database and engine/UI integration; no deletion; existing environment, geometries and user outputs preserved",
+  "files": [
+    {
+      "path": "amdfm/analysis.py",
+      "before_sha256": "93a16fd83cbb6a51ade6c452a1067e9cd33b343c286a128e76c397b1e1ebff90",
+      "sha256": "2a6e7cce838f4ec89a40f3cb4c7718c28ed25de7ad0d2b55cc4b9dc11a292098",
+      "bytes": 20896,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/presentation.py",
+      "before_sha256": "c36cd1fc4772c02b7c7bcd445aefb88e8eabf4c5abd17b05322e4b6b9415c6b9",
+      "sha256": "3ea5b38300b31fe0ff70f2e7be264c93ef2fe3fa39b74d9731d1788c8a5b03f3",
+      "bytes": 16728,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/profiles.py",
+      "before_sha256": "b69c55c9b37667708e7c81c987d3694ebd43e9f2525496ddec5c682d3c022e20",
+      "sha256": "1edf267ce9a12977080bf66e1cd36ab25ed85735fa2158530a8ee98f4985272b",
+      "bytes": 3259,
+      "operation": "replace"
+    },
+    {
+      "path": "app.py",
+      "before_sha256": "9bf16858006abb2422d81a6a578dddb3755bb7fd214e34786e90a0db81bad6d1",
+      "sha256": "60560ae214523d53093c15356a02d27195be846faf64105b4b7f4ce9f6adecd7",
+      "bytes": 45996,
+      "operation": "replace"
+    },
+    {
+      "path": "data/conditions/README.md",
+      "before_sha256": null,
+      "sha256": "7c3a2ff1c8c53fc1963505c05c9e6abcae8ff09b6ec68b3fef2295013f65b4b4",
+      "bytes": 4596,
+      "operation": "add"
+    },
+    {
+      "path": "data/conditions/am.json",
+      "before_sha256": null,
+      "sha256": "52d3fc31f0847ccd6bb527352ee0ea9eda767e70be507723d0f09d2d577bc805",
+      "bytes": 85910,
+      "operation": "add"
+    },
+    {
+      "path": "data/conditions/literature.json",
+      "before_sha256": null,
+      "sha256": "3ee984c88136e057d34b5cac073c716d335bfbd10a240a18863b57c409f92860",
+      "bytes": 52999,
+      "operation": "add"
+    },
+    {
+      "path": "data/conditions/machining.json",
+      "before_sha256": null,
+      "sha256": "ce7b4065d4b6aa7535a848dc8d80a9c7ab73480b14344f56ee0e1aab912f2382",
+      "bytes": 114984,
+      "operation": "add"
+    },
+    {
+      "path": "dfm/conditions.py",
+      "before_sha256": null,
+      "sha256": "9ca4af3d82389e0e7844aa3977c2944c9ce0d8a136f7312f736c4959e6fee9b1",
+      "bytes": 20412,
+      "operation": "add"
+    },
+    {
+      "path": "dfm/conditions_view.py",
+      "before_sha256": null,
+      "sha256": "315b086b02822d80829c631e12b09fc37ec3bbbd581fd65aa0ef3fa40d1ca972",
+      "bytes": 19389,
+      "operation": "add"
+    },
+    {
+      "path": "dfm/machining.py",
+      "before_sha256": "96d53ae8c2c5470979e12ee942247ed6fd07105a6a632a862b46b3186802c757",
+      "sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+      "bytes": 33553,
+      "operation": "replace"
+    },
+    {
+      "path": "dfm/machining_view.py",
+      "before_sha256": "36d7d7d60bae73fcfd252bd32a5bab68a4de1e59166c1f83e6c9ae03c4725b38",
+      "sha256": "9765e834a6dba64f228217a28faff1c5e9e98ff913eab3525495bfd5500e1ec4",
+      "bytes": 27966,
+      "operation": "replace"
+    },
+    {
+      "path": "docs/CONDITION_LIBRARY.md",
+      "before_sha256": null,
+      "sha256": "7f1ce5852f35a1c52bc480daf801bb1f9e7edfb5b3268e85940514019854d7c7",
+      "bytes": 3653,
+      "operation": "add"
+    },
+    {
+      "path": "docs/project-knowledge/CONDITION_DATABASE_2026-09-28.md",
+      "before_sha256": null,
+      "sha256": "3ecc8f707d5e4348139ed5d4e5ec656d65d0ebcc81d43042ff9f51599961acbe",
+      "bytes": 3874,
+      "operation": "add"
+    },
+    {
+      "path": "docs/project-knowledge/README.md",
+      "before_sha256": "3f21efee57af7d68c6f8e017bc6b4a1e76dc212d0f75ce46b2f368160d48ed31",
+      "sha256": "1cbc59c4911ec28fb39ff5c96a605fda07af342eda8baa17c7c461b41b81ba08",
+      "bytes": 12760,
+      "operation": "replace"
+    },
+    {
+      "path": "docs/research/conditions-2026-09-28/AM_SOURCES.md",
+      "before_sha256": null,
+      "sha256": "4a7a417bcc8d5b4bab8df505a592b03d13c4da03df011199c8e03a7b9c180128",
+      "bytes": 9715,
+      "operation": "add"
+    },
+    {
+      "path": "docs/research/conditions-2026-09-28/CNC_SOURCES.md",
+      "before_sha256": null,
+      "sha256": "3e54c04e9075161d1df96cf6fb87d20456d31245806d163b636f50bca167fa33",
+      "bytes": 10212,
+      "operation": "add"
+    },
+    {
+      "path": "docs/research/conditions-2026-09-28/README.md",
+      "before_sha256": null,
+      "sha256": "d2fdec5c6f17175b14f9a584238fcd858c76165036a2484680f52804eb584b99",
+      "bytes": 4452,
+      "operation": "add"
+    },
+    {
+      "path": "scripts/audit_conditions.py",
+      "before_sha256": null,
+      "sha256": "ca1da5ae4038dcd9ebc6d05df10a27988e8ba42708a97613ba7682c50f9e706e",
+      "bytes": 4019,
+      "operation": "add"
+    },
+    {
+      "path": "scripts/audit_random_models.py",
+      "before_sha256": "796423c9fcc1f71943be722c40cfb6954a653009d989d5f6e4b88e74e313efdd",
+      "sha256": "8a8238fa8a9c2d9a70677f3f6be62dc7963883389aa674dde3c704d4c11e3a4b",
+      "bytes": 27595,
+      "operation": "replace"
+    },
+    {
+      "path": "scripts/index_condition_literature.py",
+      "before_sha256": null,
+      "sha256": "d6fc8fbcfebc3f2cb7f168b10593842885cd699e50cedf35464404a95c10c142",
+      "bytes": 3223,
+      "operation": "add"
+    },
+    {
+      "path": "scripts/refresh_corpus_reports.py",
+      "before_sha256": "1835d17aa34137d7c37b27ea130c1df5d6e363dc9a632420cf3766d1d3a7877a",
+      "sha256": "b1255a9e83c4b3f57369b35b156aa42358f90ffd4173422bce21e0b955df5b42",
+      "bytes": 17031,
+      "operation": "replace"
+    },
+    {
+      "path": "tests_v3/test_conditions.py",
+      "before_sha256": null,
+      "sha256": "eb169c0c8f71d0108653624cb3103b45a476e17d569f6ca235c3635fd5e0afe1",
+      "bytes": 9962,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_conditions_integration.py",
+      "before_sha256": null,
+      "sha256": "c76fea8efb41b946faf478d8b069a953bade126a5131b240173cfd70375607ce",
+      "bytes": 4931,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_conditions_ui.py",
+      "before_sha256": null,
+      "sha256": "7b15da67f8c130ba1e5f14d67a0c87a2119ef024eb35bf6032ce3e2ba4b81d9f",
+      "bytes": 9924,
+      "operation": "add"
+    }
+  ],
+  "verified": true
+}

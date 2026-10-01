@@ -1,0 +1,155 @@
+- log
+- log
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 적층제조
+- button "Open":
+- heading "검토할 형상" [level=3]
+- list:
+  - listitem: 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토
+- paragraph: 입력
+- combobox "입력": CAD 기준형상
+- button "Open":
+- paragraph: 형상 선택
+- combobox "형상 선택": 얇은 판 · 두께 0.3 mm
+- button "Open":
+- paragraph: 치수가 알려진 CAD 예제 · STEP 다운로드 가능
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- paragraph: 적층제조 공정
+- combobox "적층제조 공정": 재료 압출 · FFF/FDM
+- button "Open":
+- generic "keyboard_arrow_right 장비·재료·공구 조건 라이브러리":
+  - generic: keyboard_arrow_right
+  - paragraph: 장비·재료·공구 조건 라이브러리
+- paragraph: 위로 향할 모델 방향
+- button "Help for 위로 향할 모델 방향":
+- combobox "위로 향할 모델 방향": +Z
+- button "Open":
+- paragraph: "적층축 (모델 좌표): 0, 0, 1"
+- button "play_arrow 설계 검토":
+  - generic: play_arrow
+  - paragraph: 설계 검토
+- paragraph: 하향면 탐색 각도 · 수평면 기준 (°)
+- spinbutton "하향면 탐색 각도 · 수평면 기준 (°)": "45.00"
+- checkbox "대각선 포함 26방향 비교" [checked]
+- paragraph: 대각선 포함 26방향 비교
+- checkbox "주요 면 방향까지 비교"
+- paragraph: 주요 면 방향까지 비교
+- checkbox "벽·층간·단면까지 한 번에 검토" [checked]
+- paragraph: 벽·층간·단면까지 한 번에 검토
+- paragraph: 상세 계산 최대 45초 · 층간 검토는 FDM 전용
+- generic "keyboard_arrow_down 장비·재료와 검토 기준":
+  - generic: keyboard_arrow_down
+  - paragraph: 장비·재료와 검토 기준
+- paragraph: 문헌·제조사 자료의 비교 기준을 입력하세요. 모르는 값은 비워 둡니다.
+- paragraph: 슬라이서·버전
+- textbox "슬라이서·버전":
+  - /placeholder: ""
+  - text: 미확정
+- paragraph: 최소 벽 검토 기준 (mm, 선택)
+- spinbutton "최소 벽 검토 기준 (mm, 선택)": "1.00"
+- button "Clear value":
+- paragraph: 최소 홀 검토 기준 (mm, 선택)
+- spinbutton "최소 홀 검토 기준 (mm, 선택)"
+- paragraph: 기준 출처·시편 기록
+- textbox "기준 출처·시편 기록":
+  - /placeholder: ""
+  - text: 사용자 지정 검토 조건
+- paragraph: 공정 조건·설계 요구
+- textbox "공정 조건·설계 요구":
+  - /placeholder: 온도·속도·공차·하중·후처리 등
+- generic "keyboard_arrow_right 빌드 공간과 층 설정":
+  - generic: keyboard_arrow_right
+  - paragraph: 빌드 공간과 층 설정
+- banner:
+  - button "keyboard_double_arrow_right":
+    - generic: keyboard_double_arrow_right
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- paragraph:
+  - strong: DFM · 제조성 설계 검토
+- generic "keyboard_arrow_right 검토 조건 · 장비와 중요하게 볼 항목":
+  - generic: keyboard_arrow_right
+  - paragraph: 검토 조건 · 장비와 중요하게 볼 항목
+- paragraph: "02_thin_plate.step · 장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력"
+- paragraph: 결과 보기
+- radiogroup "결과 보기":
+  - radio "설계 조치" [checked]:
+    - paragraph: 설계 조치
+  - radio "방향 비교":
+    - paragraph: 방향 비교
+  - radio "정밀 검토":
+    - paragraph: 정밀 검토
+  - radio "수정 전후":
+    - paragraph: 수정 전후
+  - radio "근거·내보내기":
+    - paragraph: 근거·내보내기
+- generic "keyboard_arrow_right 형상 크기·공정 요약":
+  - generic: keyboard_arrow_right
+  - paragraph: 형상 크기·공정 요약
+- heading "내장 AI 검토" [level=3]:
+  - text: 내장 AI 검토
+  - link "Link to heading":
+    - /url: "#ai"
+- alert:
+  - paragraph: 수정 후보 1개
+- paragraph:
+  - strong: 벽 보강
+- paragraph: 최소 표본 0.3 mm / 기준 1 mm
+- paragraph: 표시된 벽을 기준 1 mm까지 보강하고 다시 검토하세요.
+- button "위치 보기":
+  - paragraph: 위치 보기
+- generic "keyboard_arrow_right AI 학습·검증 기록":
+  - generic: keyboard_arrow_right
+  - paragraph: AI 학습·검증 기록
+- paragraph:
+  - strong: 종합 방향 제안
+- status:
+  - paragraph: 현재 방향을 유지하세요
+- generic "keyboard_arrow_right 추천 기준·같은 수준의 대안·미검토 항목":
+  - generic: keyboard_arrow_right
+  - paragraph: 추천 기준·같은 수준의 대안·미검토 항목
+- heading "문제 위치와 측정값" [level=3]:
+  - text: 문제 위치와 측정값
+  - link "Link to heading":
+    - /url: "#415e542c"
+- paragraph: 이 화면에서 바로 확인할 항목
+- combobox "이 화면에서 바로 확인할 항목": 얇은 벽·세부 특징 · 입력한 벽 기준보다 작은 구간이 있습니다
+- button "Open":
+- generic "keyboard_arrow_right 전체 검토 현황 · 측정 근거":
+  - generic: keyboard_arrow_right
+  - paragraph: 전체 검토 현황 · 측정 근거
+- alert:
+  - paragraph: 입력한 벽 기준보다 작은 구간이 있습니다
+- paragraph: 측정한 최소 거리
+- paragraph: 0.3 mm
+- paragraph: 비교 기준
+- paragraph: 1 mm
+- paragraph:
+  - strong: 할 일
+  - text: · 표시된 위치의 벽을 보강하거나 CAD 두께를 수정하세요.
+- generic "keyboard_arrow_right 이 화면에서 벽 기준 입력·변경":
+  - generic: keyboard_arrow_right
+  - paragraph: 이 화면에서 벽 기준 입력·변경
+- paragraph: 확인할 측정 위치 · 짧은 거리순
+- combobox "확인할 측정 위치 · 짧은 거리순": 표본 1 · 0.3 mm · 메시 면 8
+- button "Open":
+- paragraph: 붉은 ◆ 기준 미만 · 회색 ● 기준 이상 · 주황 ◆ 선택 위치
+- switch "반대쪽·내부 표본도 보기" [checked]
+- paragraph: 반대쪽·내부 표본도 보기
+- toolbar:
+  - button "Download plot as a PNG":
+  - button "Zoom":
+  - button "Pan":
+  - button "Orbital rotation":
+  - button "Turntable rotation":
+  - button "Reset camera to default":
+  - button "Reset camera to last save":
+  - button "Fullscreen":
+- generic "keyboard_arrow_right 측정 방법·표본과 기준 출처":
+  - generic: keyboard_arrow_right
+  - paragraph: 측정 방법·표본과 기준 출처

@@ -1,0 +1,77 @@
+{
+  "seed": 2026092917,
+  "episodes": 32070,
+  "test_count": 80,
+  "source_files": {
+    "scripts/train_rl_planner.py": "8b7b5afb0c630a5d43b17b12f1fedac11399f3744a2f2ce076977e6122b0cb62",
+    "dfm/rl_planner.py": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1",
+    "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+    "dfm/plan_learning.py": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65"
+  },
+  "source_sha256": "dcc0028ea8969b67f08abe84c4706153a2990c6371c3ddba9165e3566aca7221",
+  "initialization": {
+    "model_sha256": "6d384fd061924fc11b91308d7208bc76bd7b362b2cf73db2c4f9b4777b0fad87",
+    "path": "data/models/rl_planner_v1.json",
+    "previous_training": {
+      "method": "Double DQN",
+      "hidden_layers": [
+        64,
+        32
+      ],
+      "seed": 2026093049,
+      "episodes": 12000,
+      "transitions": 51333,
+      "gradient_updates": 12802,
+      "experience_replay_capacity": 20000,
+      "batch_size": 96,
+      "target_sync_updates": 100,
+      "gamma": 1.0,
+      "best_validation_episode": 11500,
+      "training_scenarios": 600,
+      "validation_scenarios": 80,
+      "heldout_families": [
+        5,
+        6
+      ],
+      "initialization": {
+        "model_sha256": "5b9329de329b9d12fc40db75ec2f8803a269810c9e622ff7cd835bb168c3b761",
+        "path": "validation/neural-localization-2026-09-29/rl/run-002/rl_planner_v1.json",
+        "previous_training": {
+          "method": "Double DQN",
+          "hidden_layers": [
+            64,
+            32
+          ],
+          "seed": 2026092987,
+          "episodes": 24000,
+          "transitions": 104944,
+          "gradient_updates": 26205,
+          "experience_replay_capacity": 20000,
+          "batch_size": 96,
+          "target_sync_updates": 100,
+          "gamma": 1.0,
+          "best_validation_episode": 23500,
+          "training_scenarios": 600,
+          "validation_scenarios": 80,
+          "heldout_families": [
+            5,
+            6
+          ],
+          "reward": "2*(conflicts_before-conflicts_after) - (policy_cost_after-policy_cost_before); finite-horizon undiscounted return",
+          "action_labels": false,
+          "elapsed_seconds": 478.92953910000006
+        },
+        "note": "continued network weights; fresh Adam, replay and scenario groups"
+      },
+      "reward": "2*(conflicts_before-conflicts_after) - (policy_cost_after-policy_cost_before); finite-horizon undiscounted return",
+      "action_labels": false,
+      "elapsed_seconds": 122.4012147999997
+    },
+    "note": "continued network weights; fresh Adam, replay and scenario groups"
+  },
+  "selection": "validation mean conflicts then mean cost; no test checkpoint selection",
+  "heldout_families": [
+    5,
+    6
+  ]
+}

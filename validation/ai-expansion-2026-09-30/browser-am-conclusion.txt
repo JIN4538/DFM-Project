@@ -1,0 +1,88 @@
+- log
+- log
+- button "keyboard_double_arrow_left" [active]:
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 적층제조
+- button "Open":
+- heading "검토할 형상" [level=3]
+- paragraph: 입력
+- combobox "입력": CAD 기준형상
+- button "Open":
+- paragraph: 형상 선택
+- combobox "형상 선택": 얇은 판 · 두께 0.3 mm
+- button "Open":
+- paragraph: 치수가 알려진 CAD 예제 · STEP 다운로드 가능
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- paragraph: 적층제조 공정
+- combobox "적층제조 공정": 재료 압출 · FFF/FDM
+- button "Open":
+- paragraph: 위로 향할 모델 방향
+- button "Help for 위로 향할 모델 방향":
+- combobox "위로 향할 모델 방향": +Z
+- button "Open":
+- paragraph: "적층축 (모델 좌표): 0, 0, 1"
+- button "play_arrow 설계 검토":
+  - generic: play_arrow
+  - paragraph: 설계 검토
+- paragraph: 하향면 탐색 각도 · 수평면 기준 (°)
+- spinbutton "하향면 탐색 각도 · 수평면 기준 (°)": "45.00"
+- checkbox "대각선 포함 26방향 비교" [checked]
+- paragraph: 대각선 포함 26방향 비교
+- checkbox "주요 면 방향까지 비교"
+- paragraph: 주요 면 방향까지 비교
+- checkbox "AI 추가 방향 탐색" [checked]
+- paragraph: AI 추가 방향 탐색
+- checkbox "벽·층간·단면까지 한 번에 검토" [checked]
+- paragraph: 벽·층간·단면까지 한 번에 검토
+- paragraph: 상세 계산 최대 45초 · 층간 검토는 FDM 전용
+- banner:
+  - button "keyboard_double_arrow_right":
+    - generic: keyboard_double_arrow_right
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- paragraph:
+  - strong: DFM · 제조성 설계 검토
+- generic "keyboard_arrow_right 검토 조건":
+  - generic: keyboard_arrow_right
+  - paragraph: 검토 조건
+- paragraph: 02_thin_plate.step · Bambu Lab A1 mini
+- paragraph: 결과 보기
+- radiogroup "결과 보기":
+  - radio "종합 결론" [checked]:
+    - paragraph: 종합 결론
+  - radio "방향 비교":
+    - paragraph: 방향 비교
+  - radio "상세 검사":
+    - paragraph: 상세 검사
+  - radio "수정 전후":
+    - paragraph: 수정 전후
+  - radio "저장·근거":
+    - paragraph: 저장·근거
+- heading "종합 결론" [level=3]:
+  - text: 종합 결론
+  - link "Link to heading":
+    - /url: "#dfm-final-conclusion"
+- alert:
+  - paragraph: 벽 보강 + 현재 배치 유지하세요
+- paragraph: 수정 1건 · 추가 확인 0건
+- paragraph:
+  - strong: 추천 개선안 · 벽 보강 + 현재 배치 유지
+- paragraph: 표시된 얇은 구간의 목표 두께 · 0.3 → 1.2 mm
+- paragraph: 배치 방향 · 현재 방향 유지
+- button "문제 위치 보기":
+  - paragraph: 문제 위치 보기
+- generic "keyboard_arrow_right 판단 근거·전체 조치":
+  - generic: keyboard_arrow_right
+  - paragraph: 판단 근거·전체 조치
+- generic "keyboard_arrow_right 다른 개선안 비교":
+  - generic: keyboard_arrow_right
+  - paragraph: 다른 개선안 비교
+- generic "keyboard_arrow_right 추천·학습 기록":
+  - generic: keyboard_arrow_right
+  - paragraph: 추천·학습 기록
+- switch "문제 위치·측정값 보기"
+- paragraph: 문제 위치·측정값 보기

@@ -1,0 +1,73 @@
+F..F.................................................................... [ 63%]
+................................F........                                [100%]
+================================== FAILURES ===================================
+_________ test_duplicate_final_effects_are_independent_of_edit_order __________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000013E0AEABA10>
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-122/test_duplicate_final_effects_a0')
+
+    def test_duplicate_final_effects_are_independent_of_edit_order(monkeypatch, tmp_path):
+        original = report()
+        expected = prior.recommend_plan(original, feedback_path=tmp_path/'prefs.json')
+        candidate = deepcopy(expected['selected'])
+        candidate['changes'].reverse()
+        monkeypatch.setattr(enhanced, 'propose_rl_plan', lambda *a, **kw: {'proposal': candidate, 'status': 'proposed'})
+        got = enhanced.recommend_plan(original, feedback_path=tmp_path/'prefs.json')
+>       assert got['selected'] == expected['selected']
+E       AssertionError: assert {'_baseline':...e': 0.0}, ...} == {'_baseline':...e': 0.0}, ...}
+E         
+E         Omitting 18 identical items, use -vv to show
+E         Differing items:
+E         {'score': -0.6103243585669819} != {'score': -0.6139823960187103}
+E         {'prior_score': -0.6103243585669819} != {'prior_score': -0.6139823960187103}
+E         Use -v to get more diff
+
+tests_v3\test_enhanced_planning.py:25: AssertionError
+________ test_missing_model_retains_old_recommendation_and_preferences ________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000013E40457A10>
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-122/test_missing_model_retains_old0')
+
+    def test_missing_model_retains_old_recommendation_and_preferences(monkeypatch, tmp_path):
+        original = report()
+        path = tmp_path/'prefs.json'
+        monkeypatch.setattr(enhanced, 'propose_rl_plan', lambda *a, **kw: {'proposal': None, 'status': 'unavailable'})
+        expected = prior.recommend_plan(original, feedback_path=path)
+        got = enhanced.recommend_plan(original, feedback_path=path)
+>       assert got['selected'] == expected['selected']
+E       AssertionError: assert {'_baseline':...e': 0.0}, ...} == {'_baseline':...e': 0.0}, ...}
+E         
+E         Omitting 18 identical items, use -vv to show
+E         Differing items:
+E         {'score': -0.6103243585669819} != {'score': -0.6139823960187103}
+E         {'prior_score': -0.6103243585669819} != {'prior_score': -0.6139823960187103}
+E         Use -v to get more diff
+
+tests_v3\test_enhanced_planning.py:62: AssertionError
+__ test_am_apply_changes_real_review_and_tracks_override_and_disabled_build ___
+
+library = <dfm.conditions.ConditionLibrary object at 0x0000013E48A885F0>
+
+    def test_am_apply_changes_real_review_and_tracks_override_and_disabled_build(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        _apply(app, "am-wall")
+        assert app.number_input(key="wall_limit_MEX").value == 5.
+        assert not app.checkbox(key="use_build_MEX").value
+        assert [app.number_input(key=f"build_{axis}_MEX").value for axis in "XYZ"] == [120., 130., 140.]
+        report = _submit(app)
+        evidence = report["profile"]["condition_evidence"]
+        assert evidence["profile_id"] == "am-wall"
+        assert evidence["fields"]["build_volume_mm"]["status"] == "disabled"
+        assert evidence["fields"]["minimum_wall_mm"]["status"] == "source_value"
+>       wall = report["details"]["wall"]["measurements"]
+               ^^^^^^^^^^^^^^^^^
+E       KeyError: 'details'
+
+tests_v3\test_conditions_ui.py:88: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:44:03.817 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED tests_v3/test_enhanced_planning.py::test_duplicate_final_effects_are_independent_of_edit_order
+FAILED tests_v3/test_enhanced_planning.py::test_missing_model_retains_old_recommendation_and_preferences
+FAILED tests_v3/test_conditions_ui.py::test_am_apply_changes_real_review_and_tracks_override_and_disabled_build
+3 failed, 110 passed in 161.70s (0:02:41)

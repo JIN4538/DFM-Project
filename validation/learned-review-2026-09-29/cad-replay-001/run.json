@@ -1,0 +1,36 @@
+{
+  "schema": "learned-cad-adapter-replay/1",
+  "started_utc": "2026-09-29T02:32:04.540449+00:00",
+  "source_audit": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\validation\\learned-review-2026-09-29\\cad-integration-001",
+  "source_run_sha256": "7bdcb379d3e74d8f11cb6e5bbaa59bbcdfd0c4b8c1a638264afb677f76302c77",
+  "source_records_sha256": "24e04baac18b60fb0be40709feaecda3d7db23196d3d42749321f4bbcf0d1b60",
+  "source_summary_sha256": "9ac9cdd1379fe02b5e6e41628830c35c958a406eabb452ae0d832a7f57ffb0e3",
+  "original_geometry_code_sha256": "0695355499010b702c894ce30bf5b238951f070094fee2f9e60c0880d84b4847",
+  "current_code_sha256": "f60612fe843ff84a709b754b98c1f41cca3e8d9a6254a8f16050fb68a0d61bfb",
+  "original_adapter_sha256": [
+    "d6c7dab34e731e3f258237acc5311ab890a176e99f8d3826dd61725bfd6f4123"
+  ],
+  "current_adapter_sha256": "036e88937e2538979b477132c0342fff35461aa9854e8b4a92cf83775bca70f7",
+  "current_model_sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+  "teacher_source_changes": {
+    "dfm/learned_review.py": {
+      "original_sha256": "d6c7dab34e731e3f258237acc5311ab890a176e99f8d3826dd61725bfd6f4123",
+      "current_sha256": "036e88937e2538979b477132c0342fff35461aa9854e8b4a92cf83775bca70f7"
+    }
+  },
+  "unchanged_teacher_sources": {
+    "amdfm/analysis.py": "be11350875703db1e160f9d1e822defac402b66bf1906de6774a7af910ee6740",
+    "amdfm/detail_summary.py": "e826adaade8dfe3fdeed68a5fd5ce781204359944a9447378c18fb675c072ae1",
+    "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+    "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+    "dfm/accessibility.py": "79ef902e175da946e0accf251910e61f5b12bc4263139dfd766b9d316516bb7e"
+  },
+  "geometry_recomputed": false,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "scope": "New adapter/model inference on preserved geometric measurements; not a fresh geometry run",
+  "original_dimension_check_counts": {
+    "pass": 409
+  },
+  "planned_reports": 122
+}

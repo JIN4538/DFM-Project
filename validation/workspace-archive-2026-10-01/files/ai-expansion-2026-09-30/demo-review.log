@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\audit_public_demos.py", line 51, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);main(p.parse_args().root)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\audit_public_demos.py", line 35, in main
+    detail=run_detail(model,profile,mode='wall',timeout_s=15);report=attach_detail(report,detail,model=model,profile=profile)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: attach_detail() got an unexpected keyword argument 'model'

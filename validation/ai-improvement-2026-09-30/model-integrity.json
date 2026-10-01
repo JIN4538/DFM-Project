@@ -1,0 +1,525 @@
+{
+  "schema": "dfm-ai-improvement-model-integrity-1",
+  "checked_at": "2026-09-30T20:13:36.014714+09:00",
+  "reference": {
+    "file": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\validation\\ux-audit-2026-09-30\\model-integrity.json",
+    "sha256": "2a90795fbff48b4a9077a1d2d8faa4a203ee276aacba2120aa7a35a9b76fce34"
+  },
+  "scope": "Frozen model artifacts and inference/teacher contracts only. New CAD routing and recommendation wrapper behavior are checked by separate benchmarks, not asserted unchanged.",
+  "catalog_models": [
+    {
+      "file": "data/models/neural_orientation_external_v4.json",
+      "expected_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "repository_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "desktop_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "manifest_model_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "manifest_file": "data/models/neural_orientation_external_v4.manifest.json",
+      "manifest_repository_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "manifest_desktop_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "expected_manifest_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v2.json",
+      "expected_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "repository_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "desktop_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "manifest_model_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "manifest_file": "data/models/external_feature_mfinstseg_v2.manifest.json",
+      "manifest_repository_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "manifest_desktop_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "expected_manifest_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_localization_v1.json",
+      "expected_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "repository_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "desktop_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "manifest_model_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "manifest_file": "data/models/external_feature_localization_v1.manifest.json",
+      "manifest_repository_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "manifest_desktop_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "expected_manifest_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_v1.json",
+      "expected_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "repository_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "desktop_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "manifest_model_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "manifest_file": "data/models/plan_ranker_v1.manifest.json",
+      "manifest_repository_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "manifest_desktop_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "expected_manifest_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_external_v3.json",
+      "expected_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "repository_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "desktop_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "manifest_model_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "manifest_file": "data/models/plan_ranker_external_v3.manifest.json",
+      "manifest_repository_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "manifest_desktop_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "expected_manifest_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "passed": true
+    },
+    {
+      "file": "data/models/rl_planner_v1.json",
+      "expected_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "repository_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "desktop_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "manifest_model_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "manifest_file": "data/models/rl_planner_v1.manifest.json",
+      "manifest_repository_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "manifest_desktop_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "expected_manifest_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "passed": true
+    }
+  ],
+  "all_model_files": [
+    {
+      "file": "data/models/external_feature_gnn_v1.evaluation.json",
+      "expected_sha256": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc",
+      "repository_sha256": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc",
+      "desktop_sha256": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_gnn_v1.json",
+      "expected_sha256": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275",
+      "repository_sha256": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275",
+      "desktop_sha256": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_gnn_v1.manifest.json",
+      "expected_sha256": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf",
+      "repository_sha256": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf",
+      "desktop_sha256": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_gnn_v2.evaluation.json",
+      "expected_sha256": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d",
+      "repository_sha256": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d",
+      "desktop_sha256": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_gnn_v2.json",
+      "expected_sha256": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+      "repository_sha256": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+      "desktop_sha256": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_gnn_v2.manifest.json",
+      "expected_sha256": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990",
+      "repository_sha256": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990",
+      "desktop_sha256": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_localization_v1.json",
+      "expected_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "repository_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "desktop_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_localization_v1.manifest.json",
+      "expected_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "repository_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "desktop_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v1.json",
+      "expected_sha256": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+      "repository_sha256": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+      "desktop_sha256": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v1.manifest.json",
+      "expected_sha256": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f",
+      "repository_sha256": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f",
+      "desktop_sha256": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v2.json",
+      "expected_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "repository_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "desktop_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "passed": true
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v2.manifest.json",
+      "expected_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "repository_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "desktop_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_external_v2.json",
+      "expected_sha256": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+      "repository_sha256": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+      "desktop_sha256": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_external_v2.manifest.json",
+      "expected_sha256": "b4e5b2de42b3ae42c1492ecd5b0139ed9026dd4f9820d63d46762019bc6c9733",
+      "repository_sha256": "b4e5b2de42b3ae42c1492ecd5b0139ed9026dd4f9820d63d46762019bc6c9733",
+      "desktop_sha256": "b4e5b2de42b3ae42c1492ecd5b0139ed9026dd4f9820d63d46762019bc6c9733",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_external_v3.json",
+      "expected_sha256": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+      "repository_sha256": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+      "desktop_sha256": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_external_v3.manifest.json",
+      "expected_sha256": "8885636786a650ed8b020b0f9332bbe26dcd7f59b9d8db6be7e62693eaff8c6e",
+      "repository_sha256": "8885636786a650ed8b020b0f9332bbe26dcd7f59b9d8db6be7e62693eaff8c6e",
+      "desktop_sha256": "8885636786a650ed8b020b0f9332bbe26dcd7f59b9d8db6be7e62693eaff8c6e",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_external_v4.json",
+      "expected_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "repository_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "desktop_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_external_v4.manifest.json",
+      "expected_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "repository_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "desktop_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_v1.json",
+      "expected_sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+      "repository_sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+      "desktop_sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+      "passed": true
+    },
+    {
+      "file": "data/models/neural_orientation_v1.manifest.json",
+      "expected_sha256": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd",
+      "repository_sha256": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd",
+      "desktop_sha256": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_external_v2.json",
+      "expected_sha256": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53",
+      "repository_sha256": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53",
+      "desktop_sha256": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_external_v2.manifest.json",
+      "expected_sha256": "7ec462c0240670a07db16ce896fafe308e68f587e8a2ccbcea0f098e397b5e4a",
+      "repository_sha256": "7ec462c0240670a07db16ce896fafe308e68f587e8a2ccbcea0f098e397b5e4a",
+      "desktop_sha256": "7ec462c0240670a07db16ce896fafe308e68f587e8a2ccbcea0f098e397b5e4a",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_external_v3.json",
+      "expected_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "repository_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "desktop_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_external_v3.manifest.json",
+      "expected_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "repository_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "desktop_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_v1.json",
+      "expected_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "repository_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "desktop_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "passed": true
+    },
+    {
+      "file": "data/models/plan_ranker_v1.manifest.json",
+      "expected_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "repository_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "desktop_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "passed": true
+    },
+    {
+      "file": "data/models/rl_planner_v1.json",
+      "expected_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "repository_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "desktop_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "passed": true
+    },
+    {
+      "file": "data/models/rl_planner_v1.manifest.json",
+      "expected_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "repository_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "desktop_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "passed": true
+    },
+    {
+      "file": "data/models/rule_review_v1.json",
+      "expected_sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+      "repository_sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+      "desktop_sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+      "passed": true
+    },
+    {
+      "file": "data/models/rule_review_v1.manifest.json",
+      "expected_sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429",
+      "repository_sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429",
+      "desktop_sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429",
+      "passed": true
+    }
+  ],
+  "source_files": [
+    {
+      "file": "amdfm/neural_orientation.py",
+      "expected_sha256": "1259111d488447748dede872369c6f549f99ddf8e6395b660f2fd2944395f5e1",
+      "repository_sha256": "1259111d488447748dede872369c6f549f99ddf8e6395b660f2fd2944395f5e1",
+      "desktop_sha256": "1259111d488447748dede872369c6f549f99ddf8e6395b660f2fd2944395f5e1",
+      "passed": true
+    },
+    {
+      "file": "amdfm/orientation.py",
+      "expected_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+      "repository_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+      "desktop_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+      "passed": true
+    },
+    {
+      "file": "amdfm/recommendation.py",
+      "expected_sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+      "repository_sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+      "desktop_sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+      "passed": true
+    },
+    {
+      "file": "dfm/cad_graph.py",
+      "expected_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+      "repository_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+      "desktop_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+      "passed": true
+    },
+    {
+      "file": "dfm/feature_learning.py",
+      "expected_sha256": "380142d566693e11115f3bd2c12ea54f3915226c5d77083cdeaefc610f3e8cb2",
+      "repository_sha256": "380142d566693e11115f3bd2c12ea54f3915226c5d77083cdeaefc610f3e8cb2",
+      "desktop_sha256": "380142d566693e11115f3bd2c12ea54f3915226c5d77083cdeaefc610f3e8cb2",
+      "passed": true
+    },
+    {
+      "file": "dfm/feature_localization.py",
+      "expected_sha256": "cfa9d491bd90ea1c86ec9403d4f8288432483095bf62ff76e1c5e7cc9dcc0dc4",
+      "repository_sha256": "cfa9d491bd90ea1c86ec9403d4f8288432483095bf62ff76e1c5e7cc9dcc0dc4",
+      "desktop_sha256": "cfa9d491bd90ea1c86ec9403d4f8288432483095bf62ff76e1c5e7cc9dcc0dc4",
+      "passed": true
+    },
+    {
+      "file": "dfm/machining.py",
+      "expected_sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+      "repository_sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+      "desktop_sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+      "passed": true
+    },
+    {
+      "file": "dfm/plan_learning.py",
+      "expected_sha256": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65",
+      "repository_sha256": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65",
+      "desktop_sha256": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65",
+      "passed": true
+    },
+    {
+      "file": "dfm/rl_planner.py",
+      "expected_sha256": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1",
+      "repository_sha256": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1",
+      "desktop_sha256": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1",
+      "passed": true
+    }
+  ],
+  "runtime": {
+    "repo": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "root": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project",
+      "checks": [
+        {
+          "file": "neural_orientation_external_v4.json",
+          "loader": "amdfm.neural_orientation.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_mfinstseg_v2.json",
+          "loader": "dfm.feature_learning.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_localization_v1.json",
+          "loader": "dfm.feature_localization.load_model",
+          "passed": true
+        },
+        {
+          "file": "plan_ranker_v1.json",
+          "loader": "dfm.plan_learning.load_plan_model",
+          "passed": true
+        },
+        {
+          "file": "plan_ranker_external_v3.json",
+          "loader": "dfm.plan_learning.load_plan_model",
+          "passed": true
+        },
+        {
+          "file": "rl_planner_v1.json",
+          "loader": "dfm.rl_planner.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_gnn_v2.json",
+          "loader": "dfm.feature_learning.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_mfinstseg_v1.json",
+          "loader": "dfm.feature_learning.load_model",
+          "passed": true
+        },
+        {
+          "file": "neural_orientation_external_v2.json",
+          "loader": "amdfm.neural_orientation.load_model",
+          "passed": true
+        },
+        {
+          "file": "neural_orientation_external_v3.json",
+          "loader": "amdfm.neural_orientation.load_model",
+          "passed": true
+        }
+      ],
+      "contracts": {
+        "am_feature_contract_sha256": "a8cf1933622c2c7963efa9d613d436a4900133b502612d88cec5456a83bb676f",
+        "am_measurement_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+        "feature_graph_source_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+        "localization_contract_sha256": "894f2581a6c785f7f63086dc1462134c1ccccb4da3a4510a542f3c05c6216078",
+        "plan_teacher_sources": {
+          "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+          "amdfm/recommendation.py": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+          "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+          "dfm/plan_learning.py": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65"
+        },
+        "rl_source_sha256": "dcc0028ea8969b67f08abe84c4706153a2990c6371c3ddba9165e3566aca7221"
+      },
+      "passed": true,
+      "contracts_match_previous_audit": true
+    },
+    "desktop": {
+      "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+      "root": "C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0",
+      "checks": [
+        {
+          "file": "neural_orientation_external_v4.json",
+          "loader": "amdfm.neural_orientation.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_mfinstseg_v2.json",
+          "loader": "dfm.feature_learning.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_localization_v1.json",
+          "loader": "dfm.feature_localization.load_model",
+          "passed": true
+        },
+        {
+          "file": "plan_ranker_v1.json",
+          "loader": "dfm.plan_learning.load_plan_model",
+          "passed": true
+        },
+        {
+          "file": "plan_ranker_external_v3.json",
+          "loader": "dfm.plan_learning.load_plan_model",
+          "passed": true
+        },
+        {
+          "file": "rl_planner_v1.json",
+          "loader": "dfm.rl_planner.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_gnn_v2.json",
+          "loader": "dfm.feature_learning.load_model",
+          "passed": true
+        },
+        {
+          "file": "external_feature_mfinstseg_v1.json",
+          "loader": "dfm.feature_learning.load_model",
+          "passed": true
+        },
+        {
+          "file": "neural_orientation_external_v2.json",
+          "loader": "amdfm.neural_orientation.load_model",
+          "passed": true
+        },
+        {
+          "file": "neural_orientation_external_v3.json",
+          "loader": "amdfm.neural_orientation.load_model",
+          "passed": true
+        }
+      ],
+      "contracts": {
+        "am_feature_contract_sha256": "a8cf1933622c2c7963efa9d613d436a4900133b502612d88cec5456a83bb676f",
+        "am_measurement_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+        "feature_graph_source_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+        "localization_contract_sha256": "894f2581a6c785f7f63086dc1462134c1ccccb4da3a4510a542f3c05c6216078",
+        "plan_teacher_sources": {
+          "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+          "amdfm/recommendation.py": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+          "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+          "dfm/plan_learning.py": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65"
+        },
+        "rl_source_sha256": "dcc0028ea8969b67f08abe84c4706153a2990c6371c3ddba9165e3566aca7221"
+      },
+      "passed": true,
+      "contracts_match_previous_audit": true
+    }
+  },
+  "intentional_adapter_changes": {
+    "dfm/feature_routing.py": "984732bde8d2b66f9ba38034ea800ee752e37747280f97586997554e38f3c790",
+    "amdfm/cad_worker.py": "f74158c71ca4ce74dacedfe481f448717e7660f3397f310115ee0e2c6d7dfbe3"
+  },
+  "not_performed": [
+    "No retraining",
+    "No predictive-accuracy claim from hashes",
+    "No assertion that all application files are unchanged",
+    "Desktop adapter deployment is owned by root and not checked here"
+  ],
+  "summary": {
+    "catalog_models": 6,
+    "catalog_models_passed": 6,
+    "model_artifact_files": 30,
+    "model_artifact_files_passed": 30,
+    "frozen_sources": 9,
+    "frozen_sources_passed": 9,
+    "runtime_loaders": 20,
+    "runtime_loaders_passed": 20
+  },
+  "passed": true
+}

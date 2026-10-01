@@ -1,0 +1,38 @@
+{
+  "status": "research_only_not_deployed",
+  "selected_validation_policy": "retained4_residual20",
+  "decision": "Held-out mean utility is not better than the same six-query blind control; retain current full_search unchanged.",
+  "group_holdout": {
+    "groups": 55,
+    "cases": 275,
+    "source_groups": {
+      "PBF-orientation": 25,
+      "CadQuarry": 25,
+      "Thingi10K": 5
+    },
+    "prior_test_groups_excluded": true,
+    "training_group_overlap": 0
+  },
+  "original_weights_unchanged": true,
+  "model_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+  "measurement_contract_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+  "feature_contract_sha256": "a8cf1933622c2c7963efa9d613d436a4900133b502612d88cec5456a83bb676f",
+  "monotonic_clock_resolution_seconds": 0.015625,
+  "file_sha256": {
+    "amdfm/full_search.py": "ced865def1bd74436178b52241c40b222b06557fb0a9ab42e5bf9fd592188f3f",
+    "amdfm/neural_orientation.py": "1259111d488447748dede872369c6f549f99ddf8e6395b660f2fd2944395f5e1",
+    "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+    "amdfm/adaptive_search.py": "7258ad92622c9d54e5b3128738d816942d4480e8a796bea22ddd906837fa9aa5",
+    "data/models/neural_orientation_external_v4.json": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+    "data/models/neural_orientation_external_v4.manifest.json": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+    "scripts/benchmark_adaptive_am.py": "1f0f026b939234678cc76b3a848a2cea76d57080038fddf594197411d5a95287",
+    "scripts/summarize_adaptive_am.py": "024d9e2db1455b1118a64b35503e8b1e510ca49bf77746a97eca2b73aa0b02c9",
+    "scripts/verify_adaptive_am.py": "0bc8d0b651f204a11bd19c2afe51e66ccd072014b87a42a56fa0dccfcddbcf5d"
+  },
+  "independent_geometry_validation": {
+    "queries": 1650,
+    "maximum_normalized_error": 3.608224830031759e-16
+  },
+  "runtime_notes": "adaptive_search is imported only by experimental scripts/tests, not by the application; no UI strings or production numerical contracts changed",
+  "source_snapshots": "study/ai-improvement-2026-09-30/am-adaptive-validation{,-retained}/adaptive_search-source.py and am-adaptive-test/adaptive_search-source.py"
+}

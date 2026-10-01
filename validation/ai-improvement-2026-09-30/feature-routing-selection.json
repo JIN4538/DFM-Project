@@ -1,0 +1,178 @@
+{
+  "schema": "feature-routing-selection-1",
+  "created_at": "2026-09-30T11:04:20.948644+00:00",
+  "selected": "joint_agreement",
+  "criteria": "Validation only: MFInstSeg precision >=.97; precision and recall no lower than current runtime in each of MFInstSeg instances and MFCAD connected-semantic regions; then highest sum of source recalls.",
+  "thresholds": "Existing joint model class thresholds unchanged; four unconfirmed classes stay excluded.",
+  "frozen_before_new_holdout_execution": true,
+  "validation_sources": [
+    {
+      "path": "validation\\ai-improvement-2026-09-30\\feature-routing-validation-002\\summary.json",
+      "sha256": "e43987e6faf1cca918f8cad33f768ba252c343d77a14f670332f3f0f60ecd96a"
+    },
+    {
+      "path": "validation\\ai-improvement-2026-09-30\\feature-routing-mfcad-validation-002\\summary.json",
+      "sha256": "fc13fd8c63a0c91b4818b4e72eab411b02b4a7bacda871ff9bd925bc90ab1735"
+    }
+  ],
+  "trials": [
+    {
+      "method": "current_runtime",
+      "admissible": false,
+      "validation": [
+        {
+          "tp": 41233,
+          "fp": 1514,
+          "fn": 18434,
+          "ground_truth": 59667,
+          "precision": 0.9645823098696985,
+          "recall": 0.6910520052960598,
+          "pq": 0.8017908427598508,
+          "exact_recall": 0.6807783196741918
+        },
+        {
+          "tp": 8366,
+          "fp": 300,
+          "fn": 2028,
+          "ground_truth": 10394,
+          "precision": 0.9653819524578814,
+          "recall": 0.8048874350586877,
+          "pq": 0.8776686063149861,
+          "exact_recall": 0.8045025976524918
+        }
+      ]
+    },
+    {
+      "method": "joint",
+      "admissible": false,
+      "validation": [
+        {
+          "tp": 42599,
+          "fp": 1038,
+          "fn": 17068,
+          "ground_truth": 59667,
+          "precision": 0.9762128468959828,
+          "recall": 0.7139457321467478,
+          "pq": 0.8212949873229244,
+          "exact_recall": 0.703571488427439
+        },
+        {
+          "tp": 8030,
+          "fp": 136,
+          "fn": 2364,
+          "ground_truth": 10394,
+          "precision": 0.9833455792309577,
+          "recall": 0.7725610929382336,
+          "pq": 0.865301724137931,
+          "exact_recall": 0.7725610929382336
+        }
+      ]
+    },
+    {
+      "method": "joint_semantic_gate",
+      "admissible": false,
+      "validation": [
+        {
+          "tp": 42714,
+          "fp": 1836,
+          "fn": 16953,
+          "ground_truth": 59667,
+          "precision": 0.9587878787878787,
+          "recall": 0.7158730956810297,
+          "pq": 0.8138659380073928,
+          "exact_recall": 0.6982083898972632
+        },
+        {
+          "tp": 8031,
+          "fp": 142,
+          "fn": 2363,
+          "ground_truth": 10394,
+          "precision": 0.9826257188302949,
+          "recall": 0.7726573022897826,
+          "pq": 0.8650203766539201,
+          "exact_recall": 0.7724648835866846
+        }
+      ]
+    },
+    {
+      "method": "joint_confident_gate",
+      "admissible": false,
+      "validation": [
+        {
+          "tp": 42663,
+          "fp": 1246,
+          "fn": 17004,
+          "ground_truth": 59667,
+          "precision": 0.9716231296545127,
+          "recall": 0.715018351852783,
+          "pq": 0.820216724641012,
+          "exact_recall": 0.7041245579633634
+        },
+        {
+          "tp": 8030,
+          "fp": 136,
+          "fn": 2364,
+          "ground_truth": 10394,
+          "precision": 0.9833455792309577,
+          "recall": 0.7725610929382336,
+          "pq": 0.865301724137931,
+          "exact_recall": 0.7725610929382336
+        }
+      ]
+    },
+    {
+      "method": "hybrid_semantic_gate",
+      "admissible": false,
+      "validation": [
+        {
+          "tp": 41223,
+          "fp": 3086,
+          "fn": 18444,
+          "ground_truth": 59667,
+          "precision": 0.9303527500056422,
+          "recall": 0.6908844084669918,
+          "pq": 0.7861480758476219,
+          "exact_recall": 0.6706387115155781
+        },
+        {
+          "tp": 8367,
+          "fp": 302,
+          "fn": 2027,
+          "ground_truth": 10394,
+          "precision": 0.9651632252855,
+          "recall": 0.8049836444102366,
+          "pq": 0.8775654568027228,
+          "exact_recall": 0.8044063883009428
+        }
+      ]
+    },
+    {
+      "method": "joint_agreement",
+      "admissible": true,
+      "validation": [
+        {
+          "tp": 42732,
+          "fp": 1071,
+          "fn": 16935,
+          "ground_truth": 59667,
+          "precision": 0.9755496198890486,
+          "recall": 0.716174769973352,
+          "pq": 0.8225314007642219,
+          "exact_recall": 0.7057502472053229
+        },
+        {
+          "tp": 8642,
+          "fp": 304,
+          "fn": 1752,
+          "ground_truth": 10394,
+          "precision": 0.9660183322155154,
+          "recall": 0.8314412160862036,
+          "pq": 0.8935038074645106,
+          "exact_recall": 0.8310563786800077
+        }
+      ]
+    }
+  ],
+  "adapter_sha256": "984732bde8d2b66f9ba38034ea800ee752e37747280f97586997554e38f3c790",
+  "benchmark_sha256": "3e9819a14bed1d60006fa04b4fd1bae1287c2c1f7f3a23deb55d86dc9c66d7c5"
+}

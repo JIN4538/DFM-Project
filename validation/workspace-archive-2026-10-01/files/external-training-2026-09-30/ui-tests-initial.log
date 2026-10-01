@@ -1,0 +1,304 @@
+......FF......FFFF.FF...                                                 [100%]
+================================== FAILURES ===================================
+_ test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them[ai] _
+
+fake_ai = {'calls': [], 'intent': {'equipment': 'Prusa MK4S', 'material': 'PLA', 'notes': ['����Ʈ�� ���̰� �;�'], 'priority': 'support', ...}, 'network_failure': False}
+name_change = 'ai'
+
+    @pytest.mark.parametrize("name_change", ["ai", "manual"])
+    def test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them(fake_ai, name_change):
+        app = open_app()
+>       app.selectbox(key="condition_preview_MEX").select("am-prusa-mk4s").run()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_advisor_ui.py:222: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='machine_MEX', _value=InitialValue(), label='����� ���', options=['��Ȯ��', 'Original Prusa ...+X+Z', '+X+Y-Z', '+X+Y', '+X+Y+Z', '���� ���� �Է�'], help='�� 6��, �� ���� �밢�� 12��, �� ���� �밢�� 8���� �ֿ� �� ������ �����ϰų� ������ ���� �Է��մϴ�.')])
+key = 'condition_preview_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'condition_preview_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:27.796 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them[manual] _
+
+fake_ai = {'calls': [], 'intent': {'equipment': 'Prusa MK4S', 'material': 'PLA', 'notes': ['����Ʈ�� ���̰� �;�'], 'priority': 'support', ...}, 'network_failure': False}
+name_change = 'manual'
+
+    @pytest.mark.parametrize("name_change", ["ai", "manual"])
+    def test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them(fake_ai, name_change):
+        app = open_app()
+>       app.selectbox(key="condition_preview_MEX").select("am-prusa-mk4s").run()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_advisor_ui.py:222: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='machine_MEX', _value=InitialValue(), label='����� ���', options=['��Ȯ��', 'Original Prusa ...+X+Z', '+X+Y-Z', '+X+Y', '+X+Y+Z', '���� ���� �Է�'], help='�� 6��, �� ���� �밢�� 12��, �� ���� �밢�� 8���� �ֿ� �� ������ �����ϰų� ������ ���� �Է��մϴ�.')])
+key = 'condition_preview_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'condition_preview_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:28.172 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_____ test_preview_is_not_application_and_reference_material_cannot_apply _____
+
+library = <dfm.conditions.ConditionLibrary object at 0x000001D11E411130>
+
+    def test_preview_is_not_application_and_reference_material_cannot_apply(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+>       _choose(app, "am-wall")
+
+tests_v3\test_conditions_ui.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests_v3\test_conditions_ui.py:51: in _choose
+    app.selectbox(key=f"condition_preview_{process}").select(profile_id).run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='machine_MEX', _value=InitialValue(), label='����� ���', options=['��Ȯ��', 'UI test machine...+X+Z', '+X+Y-Z', '+X+Y', '+X+Y+Z', '���� ���� �Է�'], help='�� 6��, �� ���� �밢�� 12��, �� ���� �밢�� 8���� �ֿ� �� ������ �����ϰų� ������ ���� �Է��մϴ�.')])
+key = 'condition_preview_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'condition_preview_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:28.784 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__ test_am_apply_changes_real_review_and_tracks_override_and_disabled_build ___
+
+library = <dfm.conditions.ConditionLibrary object at 0x000001D11DA3E5A0>
+
+    def test_am_apply_changes_real_review_and_tracks_override_and_disabled_build(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+>       _apply(app, "am-wall")
+
+tests_v3\test_conditions_ui.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests_v3\test_conditions_ui.py:57: in _apply
+    _choose(app, profile_id, process)
+tests_v3\test_conditions_ui.py:51: in _choose
+    app.selectbox(key=f"condition_preview_{process}").select(profile_id).run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='machine_MEX', _value=InitialValue(), label='����� ���', options=['��Ȯ��', 'UI test machine...+X+Z', '+X+Y-Z', '+X+Y', '+X+Y+Z', '���� ���� �Է�'], help='�� 6��, �� ���� �밢�� 12��, �� ���� �밢�� 8���� �ֿ� �� ������ �����ϰų� ������ ���� �Է��մϴ�.')])
+key = 'condition_preview_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'condition_preview_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:29.124 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_______ test_condition_switches_are_separate_and_clear_resets_baseline ________
+
+library = <dfm.conditions.ConditionLibrary object at 0x000001D11D8BEF90>
+
+    def test_condition_switches_are_separate_and_clear_resets_baseline(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+>       _apply(app, "am-wall")
+
+tests_v3\test_conditions_ui.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests_v3\test_conditions_ui.py:57: in _apply
+    _choose(app, profile_id, process)
+tests_v3\test_conditions_ui.py:51: in _choose
+    app.selectbox(key=f"condition_preview_{process}").select(profile_id).run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='machine_MEX', _value=InitialValue(), label='����� ���', options=['��Ȯ��', 'UI test machine...+X+Z', '+X+Y-Z', '+X+Y', '+X+Y+Z', '���� ���� �Է�'], help='�� 6��, �� ���� �밢�� 12��, �� ���� �밢�� 8���� �ֿ� �� ������ �����ϰų� ������ ���� �Է��մϴ�.')])
+key = 'condition_preview_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'condition_preview_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:29.429 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__________ test_stale_database_blocks_review_until_reapply_or_clear ___________
+
+library = <dfm.conditions.ConditionLibrary object at 0x000001D11E4128D0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001D11E411B80>
+
+    def test_stale_database_blocks_review_until_reapply_or_clear(library, monkeypatch):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+>       _apply(app, "am-wall")
+
+tests_v3\test_conditions_ui.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests_v3\test_conditions_ui.py:57: in _apply
+    _choose(app, profile_id, process)
+tests_v3\test_conditions_ui.py:51: in _choose
+    app.selectbox(key=f"condition_preview_{process}").select(profile_id).run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='machine_MEX', _value=InitialValue(), label='����� ���', options=['��Ȯ��', 'UI test machine...+X+Z', '+X+Y-Z', '+X+Y', '+X+Y+Z', '���� ���� �Է�'], help='�� 6��, �� ���� �밢�� 12��, �� ���� �밢�� 8���� �ֿ� �� ������ �����ϰų� ������ ���� �Է��մϴ�.')])
+key = 'condition_preview_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'condition_preview_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:29.771 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+____ test_published_library_can_be_applied_in_all_supported_process_views _____
+
+    def test_published_library_can_be_applied_in_all_supported_process_views():
+        from dfm.conditions import load_library
+        actual_library = load_library()
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        for process in ("MEX", "VPP", "PBF_POLYMER", "PBF_METAL", "CNC"):
+            candidates = [r for r in actual_library.profiles_for(process)
+                          if any(p["application"] == "automatic" for p in r["parameters"].values())]
+            # A process containing reference information only must not fabricate a
+            # preset simply to make this integration test pass.
+            if not candidates:
+                continue
+            selected = max(candidates, key=lambda r: sum(p["application"] == "automatic" for p in r["parameters"].values()))
+            if process == "CNC":
+                app.selectbox(key="manufacturing_family").select("���谡��").run()
+            else:
+                app.selectbox(key="process").select(process).run()
+>           _apply(app, selected["id"], process)
+
+tests_v3\test_conditions_ui.py:186: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests_v3\test_conditions_ui.py:57: in _apply
+    _choose(app, profile_id, process)
+tests_v3\test_conditions_ui.py:51: in _choose
+    app.selectbox(key=f"condition_preview_{process}").select(profile_id).run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Selectbox(key='machine_MEX', _value=InitialValue(), label='����� ���', options=['��Ȯ��', 'Original Prusa ...+X+Z', '+X+Y-Z', '+X+Y', '+X+Y+Z', '���� ���� �Է�'], help='�� 6��, �� ���� �밢�� 12��, �� ���� �밢�� 8���� �ֿ� �� ������ �����ϰų� ������ ���� �Է��մϴ�.')])
+key = 'condition_preview_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'condition_preview_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:34.050 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__ test_optional_external_helper_is_closed_and_local_wall_card_is_actionable __
+
+    def test_optional_external_helper_is_closed_and_local_wall_card_is_actionable():
+        app = open_app()
+        optional = next(x for x in app.expander if x.label == '�ܺ� ���� �Է� ����� (����)')
+        assert optional.proto.expanded is False
+        assert app.button(key='advisor_interpret').disabled
+        assert 'AI �̿���' not in '\n'.join(visible_text(app.main))
+    
+        app.selectbox(key='cad_example').select('���� �� �� �β� 0.3 mm').run()
+        app.number_input(key='wall_limit_MEX').set_value(1.)
+        report = run_review(app)
+        wall = item(report, 'wall')
+        assert report['details']['wall']['measurements']['minimum_mm'] == pytest.approx(.3)
+        assert wall['state'] == 'confirmed'
+        assert wall['origin'] == 'learned_verified'
+        assert wall['predicted_issue'] is True
+        assert wall['model_action_ids'] == ['thicken_wall']
+        assert '1' in wall['action'] and '����' in wall['action']
+        assert report['learned_review']['model']['sha256']
+        assert app.session_state['highlight_finding'] == 'wall'
+        assert not any(widget.key == 'highlight_finding' for widget in app.selectbox)
+        assert not app.get('plotly_chart')
+        assert sum(row.value == '���� ���' for row in app.main.subheader) == 1
+        assert app.button(key='am_learned_wall').label == '��ġ��������'
+        assert not any(button.key == 'next_review_action' for button in app.button)
+        assert not any(button.key == 'action_location_wall' for button in app.button)
+        assert next(x for x in app.expander if x.label == '��õ���н� ���').proto.expanded is False
+>       assert next(x for x in app.expander if x.label == '���� ����').proto.expanded is False
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       StopIteration
+
+tests_v3\test_compact_am.py:89: StopIteration
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 10:26:34.468 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED tests_v3/test_advisor_ui.py::test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them[ai]
+FAILED tests_v3/test_advisor_ui.py::test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them[manual]
+FAILED tests_v3/test_conditions_ui.py::test_preview_is_not_application_and_reference_material_cannot_apply
+FAILED tests_v3/test_conditions_ui.py::test_am_apply_changes_real_review_and_tracks_override_and_disabled_build
+FAILED tests_v3/test_conditions_ui.py::test_condition_switches_are_separate_and_clear_resets_baseline
+FAILED tests_v3/test_conditions_ui.py::test_stale_database_blocks_review_until_reapply_or_clear
+FAILED tests_v3/test_conditions_ui.py::test_published_library_can_be_applied_in_all_supported_process_views
+FAILED tests_v3/test_compact_am.py::test_optional_external_helper_is_closed_and_local_wall_card_is_actionable
+8 failed, 16 passed in 66.19s (0:01:06)

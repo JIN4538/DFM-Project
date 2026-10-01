@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-30T11:54:59.291685+00:00",
+  "model_sha256": "605024a6a36636bf267aaf41f40e2455ffa6edfe9d01d40ba288765769cf6050",
+  "merge_threshold": 0.9,
+  "class_thresholds": {
+    "1": 0.9999,
+    "2": 0.9999,
+    "4": 0.9999,
+    "7": 0.999
+  },
+  "training": {
+    "train_pairs": 13435,
+    "val_pairs": 3014,
+    "selected_epoch": 19,
+    "seed": 20260930,
+    "validation_use": "Previously used source validation split; BCE selects epoch. Test is forbidden for training and threshold selection."
+  },
+  "test_viewed_for_this_version": false,
+  "independent_evaluation_viewed": false
+}

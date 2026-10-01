@@ -1,0 +1,1637 @@
+{
+  "timestamp_utc": "2026-09-30T05:03:32.519067+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "database_sha256": "c2718a2eeaded4c47c646e4b0922e490950ddde984ed6dd792bd05352d41f9cd",
+  "code_sha256": "63b11dbc4ed1f122747d74676b38413f443a2705e410a7d6303fc43c0ba3f24b",
+  "status": "passed",
+  "source_records": 55,
+  "distinct_source_urls": 50,
+  "profiles": 82,
+  "by_process": {
+    "MEX": 22,
+    "VPP": 10,
+    "PBF_POLYMER": 10,
+    "PBF_METAL": 7,
+    "CNC": 33
+  },
+  "by_category": {
+    "machine": 35,
+    "process": 16,
+    "material": 12,
+    "tool": 19
+  },
+  "parameters": {
+    "automatic": 86,
+    "reference_only": 204
+  },
+  "applicable_profiles": 60,
+  "literature_records": 43,
+  "literature_pages": 928,
+  "checks": [
+    {
+      "id": "am-prusa-mk4s",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          250.0,
+          210.0,
+          220.0
+        ],
+        "machine": "Original Prusa MK4S"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-xl",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          360.0,
+          360.0,
+          360.0
+        ],
+        "machine": "Original Prusa XL"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-core-one",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          250.0,
+          220.0,
+          270.0
+        ],
+        "machine": "Prusa CORE One"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-core-one-l",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          300.0,
+          300.0,
+          330.0
+        ],
+        "machine": "Prusa CORE One L"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-pla-015",
+      "process": "MEX",
+      "automatic_fields": [
+        "layer_height_mm",
+        "line_width_mm"
+      ],
+      "reference_fields": [
+        "nozzle_diameter_mm",
+        "nozzle_temperature_c",
+        "first_layer_nozzle_temperature_c",
+        "bed_temperature_c",
+        "slicer_density_g_cm3"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.15,
+        "line_width_mm": 0.45,
+        "machine": "Original Prusa MK4 (non-Input Shaper)",
+        "material": "Prusament PLA",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-pla-020",
+      "process": "MEX",
+      "automatic_fields": [
+        "layer_height_mm",
+        "line_width_mm"
+      ],
+      "reference_fields": [
+        "nozzle_diameter_mm",
+        "nozzle_temperature_c",
+        "first_layer_nozzle_temperature_c",
+        "bed_temperature_c",
+        "slicer_density_g_cm3"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.2,
+        "line_width_mm": 0.45,
+        "machine": "Original Prusa MK4 (non-Input Shaper)",
+        "material": "Prusament PLA",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-petg-020",
+      "process": "MEX",
+      "automatic_fields": [
+        "layer_height_mm",
+        "line_width_mm"
+      ],
+      "reference_fields": [
+        "nozzle_diameter_mm",
+        "nozzle_temperature_c",
+        "first_layer_nozzle_temperature_c",
+        "bed_temperature_c",
+        "slicer_density_g_cm3"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.2,
+        "line_width_mm": 0.45,
+        "machine": "Original Prusa MK4 (non-Input Shaper)",
+        "material": "Prusament PETG",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-asa-020",
+      "process": "MEX",
+      "automatic_fields": [
+        "layer_height_mm",
+        "line_width_mm"
+      ],
+      "reference_fields": [
+        "nozzle_diameter_mm",
+        "nozzle_temperature_c",
+        "first_layer_nozzle_temperature_c",
+        "bed_temperature_c",
+        "slicer_density_g_cm3"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.2,
+        "line_width_mm": 0.45,
+        "machine": "Original Prusa MK4 (non-Input Shaper)",
+        "material": "Prusament ASA",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-pcblend-020",
+      "process": "MEX",
+      "automatic_fields": [
+        "layer_height_mm",
+        "line_width_mm"
+      ],
+      "reference_fields": [
+        "nozzle_diameter_mm",
+        "nozzle_temperature_c",
+        "first_layer_nozzle_temperature_c",
+        "bed_temperature_c",
+        "slicer_density_g_cm3"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.2,
+        "line_width_mm": 0.45,
+        "machine": "Original Prusa MK4 (non-Input Shaper)",
+        "material": "Prusament PC Blend",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-pla-025-n06",
+      "process": "MEX",
+      "automatic_fields": [
+        "layer_height_mm",
+        "line_width_mm"
+      ],
+      "reference_fields": [
+        "nozzle_diameter_mm",
+        "nozzle_temperature_c",
+        "first_layer_nozzle_temperature_c",
+        "bed_temperature_c",
+        "slicer_density_g_cm3"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.25,
+        "line_width_mm": 0.65,
+        "machine": "Original Prusa MK4 (non-Input Shaper)",
+        "material": "Prusament PLA",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-petg-025-n06",
+      "process": "MEX",
+      "automatic_fields": [
+        "layer_height_mm",
+        "line_width_mm"
+      ],
+      "reference_fields": [
+        "nozzle_diameter_mm",
+        "nozzle_temperature_c",
+        "first_layer_nozzle_temperature_c",
+        "bed_temperature_c",
+        "slicer_density_g_cm3"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.25,
+        "line_width_mm": 0.65,
+        "machine": "Original Prusa MK4 (non-Input Shaper)",
+        "material": "Prusament PETG",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form4",
+      "process": "VPP",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          200.0,
+          125.0,
+          210.0
+        ],
+        "machine": "Formlabs Form 4"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form4l",
+      "process": "VPP",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          353.0,
+          196.0,
+          350.0
+        ],
+        "machine": "Formlabs Form 4L"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form3",
+      "process": "VPP",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          145.0,
+          145.0,
+          185.0
+        ],
+        "machine": "Formlabs Form 3"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form3l",
+      "process": "VPP",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          335.0,
+          200.0,
+          300.0
+        ],
+        "machine": "Formlabs Form 3L"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form4-grey-v5-005",
+      "process": "VPP",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "supported_wall_guidance_mm",
+        "unsupported_wall_guidance_mm",
+        "minimum_hole_mm",
+        "minimum_drain_hole_mm",
+        "minimum_clearance_mm",
+        "overhang_angle_reference_deg",
+        "horizontal_span_reference_mm"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.05,
+        "machine": "Formlabs Form 4",
+        "material": "Formlabs Grey Resin V5"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-sl1s-orange-0025",
+      "process": "VPP",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "exposure_time_s",
+        "initial_exposure_time_s"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.025,
+        "machine": "Original Prusa SL1S SPEED",
+        "material": "Prusament Resin Tough Prusa Orange",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-sl1s-orange-005",
+      "process": "VPP",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "exposure_time_s",
+        "initial_exposure_time_s"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.05,
+        "machine": "Original Prusa SL1S SPEED",
+        "material": "Prusament Resin Tough Prusa Orange",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-sl1s-orange-01",
+      "process": "VPP",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "exposure_time_s",
+        "initial_exposure_time_s"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.1,
+        "machine": "Original Prusa SL1S SPEED",
+        "material": "Prusament Resin Tough Prusa Orange",
+        "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse1",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "nominal_build_volume_mm",
+        "build_chamber_corner_radius_mm"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.11,
+        "machine": "Formlabs Fuse 1"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse1plus",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "nominal_build_volume_mm",
+        "build_chamber_corner_radius_mm"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.11,
+        "machine": "Formlabs Fuse 1+ 30W"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-p110-velocis",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [],
+      "reference_fields": [
+        "nominal_build_volume_mm"
+      ],
+      "resolved_values": {
+        "machine": "EOS FORMIGA P 110 Velocis"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon12",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [],
+      "reference_fields": [
+        "material_part_size_reference_mm",
+        "vertical_wall_guidance_mm",
+        "horizontal_wall_guidance_mm",
+        "minimum_hole_mm",
+        "minimum_drain_hole_mm"
+      ],
+      "resolved_values": {
+        "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+        "material": "Formlabs Nylon 12 Powder"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon12gf",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [],
+      "reference_fields": [
+        "material_part_size_reference_mm"
+      ],
+      "resolved_values": {
+        "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+        "material": "Formlabs Nylon 12 GF Powder"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon11",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [],
+      "reference_fields": [
+        "material_part_size_reference_mm",
+        "integrated_assembly_clearance_mm"
+      ],
+      "resolved_values": {
+        "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+        "material": "Formlabs Nylon 11 Powder"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon11cf",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [],
+      "reference_fields": [
+        "material_part_size_reference_mm"
+      ],
+      "resolved_values": {
+        "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+        "material": "Formlabs Nylon 11 CF Powder"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-tpu90a",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [],
+      "reference_fields": [
+        "material_part_size_reference_mm",
+        "integrated_assembly_clearance_mm"
+      ],
+      "resolved_values": {
+        "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+        "material": "Formlabs TPU 90A Powder"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse1-nylon12-properties-rev01",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [],
+      "reference_fields": [
+        "tensile_strength_mpa",
+        "tensile_modulus_mpa",
+        "elongation_xy_percent",
+        "elongation_z_percent"
+      ],
+      "resolved_values": {
+        "machine": "Formlabs Fuse 1",
+        "material": "Formlabs Nylon 12 Powder V1 FLP12G01"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290",
+      "process": "PBF_METAL",
+      "automatic_fields": [],
+      "reference_fields": [
+        "nominal_build_volume_mm"
+      ],
+      "resolved_values": {
+        "machine": "EOS M 290"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-316l-surface-020",
+      "process": "PBF_METAL",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "parameter_set",
+        "tensile_strength_vertical_mpa",
+        "tensile_strength_horizontal_mpa",
+        "minimum_wall_reference_range_mm"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.02,
+        "machine": "EOS M 290",
+        "material": "EOS StainlessSteel 316L"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-316l-flex-040",
+      "process": "PBF_METAL",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "parameter_set",
+        "tensile_strength_vertical_mpa",
+        "tensile_strength_horizontal_mpa",
+        "minimum_wall_reference_mm"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.04,
+        "machine": "EOS M 290",
+        "material": "EOS StainlessSteel 316L"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-alsi10mg-flex-030",
+      "process": "PBF_METAL",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "parameter_set",
+        "tensile_strength_vertical_mpa",
+        "tensile_strength_horizontal_mpa",
+        "minimum_wall_reference_mm",
+        "build_platform_temperature_c"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.03,
+        "machine": "EOS M 290",
+        "material": "EOS Aluminium AlSi10Mg"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-alsi10mg-core-060",
+      "process": "PBF_METAL",
+      "automatic_fields": [
+        "layer_height_mm"
+      ],
+      "reference_fields": [
+        "parameter_set",
+        "tensile_strength_vertical_mpa",
+        "tensile_strength_horizontal_mpa",
+        "build_platform_temperature_c"
+      ],
+      "resolved_values": {
+        "layer_height_mm": 0.06,
+        "machine": "EOS M 290",
+        "material": "EOS Aluminium AlSi10Mg"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_1_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          256.0,
+          256.0,
+          256.0
+        ],
+        "machine": "Bambu Lab A1"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_2_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "machine": "Bambu Lab A1 mini"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_3_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          256.0,
+          256.0,
+          256.0
+        ],
+        "machine": "Bambu Lab P1S"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_4_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          256.0,
+          256.0,
+          256.0
+        ],
+        "machine": "Bambu Lab P1P"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_5_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          330.0,
+          240.0,
+          300.0
+        ],
+        "machine": "UltiMaker S7"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_6_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          330.0,
+          240.0,
+          300.0
+        ],
+        "machine": "UltiMaker S5"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_7_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          230.0,
+          190.0,
+          200.0
+        ],
+        "machine": "UltiMaker S3"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_8_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          223.0,
+          220.0,
+          205.0
+        ],
+        "machine": "UltiMaker 2+ Connect"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_9_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          220.0,
+          220.0,
+          250.0
+        ],
+        "machine": "Creality Ender-3 V3"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_10_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          220.0,
+          220.0,
+          250.0
+        ],
+        "machine": "Creality Ender-3 V3 SE"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_11_PROFILE",
+      "process": "MEX",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          220.0,
+          220.0,
+          240.0
+        ],
+        "machine": "Creality Ender-3 V3 KE"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_12_PROFILE",
+      "process": "VPP",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          218.88,
+          122.88,
+          220.0
+        ],
+        "machine": "ELEGOO Saturn 4 Ultra (12K)"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_13_PROFILE",
+      "process": "VPP",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          223.0,
+          126.0,
+          230.0
+        ],
+        "machine": "Anycubic Photon Mono M7 Pro"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_14_PROFILE",
+      "process": "PBF_POLYMER",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          340.0,
+          340.0,
+          600.0
+        ],
+        "machine": "EOS P 396"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_15_PROFILE",
+      "process": "PBF_METAL",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          400.0,
+          400.0,
+          400.0
+        ],
+        "machine": "EOS M 400-4"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_16_PROFILE",
+      "process": "PBF_METAL",
+      "automatic_fields": [
+        "build_volume_mm"
+      ],
+      "reference_fields": [],
+      "resolved_values": {
+        "build_volume_mm": [
+          275.0,
+          275.0,
+          420.0
+        ],
+        "machine": "3D Systems DMP Flex 350 Dual"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_19_PROFILE",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "axis_travel_mm"
+      ],
+      "resolved_values": {
+        "machine": "Tormach 1100M"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_20_PROFILE",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "axis_travel_mm"
+      ],
+      "resolved_values": {
+        "machine": "Tormach 770M"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_21_PROFILE",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "axis_travel_mm"
+      ],
+      "resolved_values": {
+        "machine": "Tormach 1100MX"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "EXP_MACHINE_22_PROFILE",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "axis_travel_mm"
+      ],
+      "resolved_values": {
+        "machine": "Tormach 770MX"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068010e",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 1.0,
+        "flute_length_mm": 4.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068020e",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 2.0,
+        "flute_length_mm": 8.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068030e",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 3.0,
+        "flute_length_mm": 10.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068434e",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 4.0,
+        "flute_length_mm": 10.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068435e",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 5.0,
+        "flute_length_mm": 12.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068460e",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 6.0,
+        "flute_length_mm": 14.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068470e",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 10.0,
+        "flute_length_mm": 20.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068460l",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 6.0,
+        "flute_length_mm": 20.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068434f",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 4.0,
+        "flute_length_mm": 20.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068470l",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 10.0,
+        "flute_length_mm": 40.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0068493l",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application",
+        "catalog_l3_mm",
+        "neck_diameter_mm",
+        "tool_end_geometry"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 3.0,
+        "flute_length_mm": 8.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0078010k",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 1.0,
+        "flute_length_mm": 2.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0078018s",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 1.8,
+        "flute_length_mm": 1.5
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-datron-0078030k",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "catalog_material_application",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 3.0,
+        "flute_length_mm": 7.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-harvey-677722",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "catalog_overall_reach_mm",
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 1.0,
+        "flute_length_mm": 3.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-harvey-677745",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "catalog_overall_reach_mm",
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 2.0,
+        "flute_length_mm": 6.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-harvey-677761",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "catalog_overall_reach_mm",
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 4.0,
+        "flute_length_mm": 12.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-harvey-677666",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "catalog_overall_reach_mm",
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 6.0,
+        "flute_length_mm": 18.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-harvey-677670",
+      "process": "CNC",
+      "automatic_fields": [
+        "tool_diameter_mm",
+        "flute_length_mm"
+      ],
+      "reference_fields": [
+        "catalog_overall_reach_mm",
+        "shank_diameter_mm",
+        "overall_length_mm",
+        "flute_count",
+        "coating"
+      ],
+      "resolved_values": {
+        "tool_diameter_mm": 8.0,
+        "flute_length_mm": 24.0
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-haas-vf-2",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "axis_travel_mm",
+        "maximum_spindle_rpm"
+      ],
+      "resolved_values": {
+        "machine": "Haas VF-2"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-haas-vf-2ss",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "axis_travel_mm",
+        "maximum_spindle_rpm"
+      ],
+      "resolved_values": {
+        "machine": "Haas VF-2SS"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-haas-vf-3",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "axis_travel_mm",
+        "maximum_spindle_rpm"
+      ],
+      "resolved_values": {
+        "machine": "Haas VF-3"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-hydro-6061-t6",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "tensile_strength_min_mpa",
+        "yield_strength_02_min_mpa",
+        "thermal_conductivity_w_mk"
+      ],
+      "resolved_values": {
+        "material": "Hydro 6061 T6 / T6511 extrusion"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-hydro-6061-t4",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "tensile_strength_min_mpa",
+        "yield_strength_02_min_mpa",
+        "thermal_conductivity_w_mk"
+      ],
+      "resolved_values": {
+        "material": "Hydro 6061 T4 / T4511 extrusion"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-outokumpu-316l-4404",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "density_kg_dm3",
+        "elastic_modulus_gpa",
+        "thermal_conductivity_w_mk",
+        "thermal_expansion_per_k"
+      ],
+      "resolved_values": {
+        "material": "Outokumpu Supra 316L/4404"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-outokumpu-316ti-4571",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "density_kg_dm3",
+        "elastic_modulus_gpa",
+        "thermal_conductivity_w_mk",
+        "thermal_expansion_per_k"
+      ],
+      "resolved_values": {
+        "material": "Outokumpu Supra 316Ti/4571"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-ensinger-peek",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "density_g_cm3",
+        "tensile_modulus_mpa",
+        "tensile_strength_mpa"
+      ],
+      "resolved_values": {
+        "material": "Ensinger TECAPEEK natural"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-ensinger-pom",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "density_g_cm3",
+        "tensile_modulus_mpa",
+        "tensile_strength_mpa"
+      ],
+      "resolved_values": {
+        "material": "Ensinger TECAFORM AH natural"
+      },
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "cnc-sandvik-corner-finishing",
+      "process": "CNC",
+      "automatic_fields": [],
+      "reference_fields": [
+        "finishing_cutter_diameter_to_corner_radius_max"
+      ],
+      "resolved_values": {},
+      "profile_valid": true,
+      "sources_preserved": true,
+      "physical_validation": "not_validated_by_project"
+    }
+  ],
+  "verified_literature": [],
+  "files": [
+    {
+      "path": "data/conditions/am.json",
+      "sha256": "52d3fc31f0847ccd6bb527352ee0ea9eda767e70be507723d0f09d2d577bc805"
+    },
+    {
+      "path": "data/conditions/expanded_machines.json",
+      "sha256": "8a9741027c1743a5473add301f699db70ec65dfd0a0a6de73c17f7c942c4ecc6"
+    },
+    {
+      "path": "data/conditions/literature.json",
+      "sha256": "3ee984c88136e057d34b5cac073c716d335bfbd10a240a18863b57c409f92860"
+    },
+    {
+      "path": "data/conditions/machining.json",
+      "sha256": "ce7b4065d4b6aa7535a848dc8d80a9c7ab73480b14344f56ee0e1aab912f2382"
+    }
+  ],
+  "scope": "오프라인 구조·출처 연결·단위·프로필 검증. 원문 수치의 독립 대조와 실물 제조 검증은 별도이며 본 검사로 대체하지 않음."
+}

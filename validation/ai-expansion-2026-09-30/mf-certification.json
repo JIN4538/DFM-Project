@@ -1,0 +1,31 @@
+{
+  "audited": 5000,
+  "accepted": 4996,
+  "counts": [
+    [
+      null,
+      4
+    ],
+    [
+      "test",
+      728
+    ],
+    [
+      "train",
+      3540
+    ],
+    [
+      "val",
+      728
+    ]
+  ],
+  "failures": [
+    [
+      "Surface type order differs",
+      4
+    ]
+  ],
+  "ordinal_policy": "Every admitted graph independently matches ordered surface type, area, centroid after isotropic transform and all directed adjacency edges",
+  "sampling": "First author graph records; generated CAD corpus, feature-multiset family holdout; not an industrial external benchmark",
+  "seconds": 195.63999999999942
+}

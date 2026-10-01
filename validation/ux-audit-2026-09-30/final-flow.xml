@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="7" time="99.866" timestamp="2026-09-30T19:11:54.939116+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_novice_workflow" name="test_optional_settings_explain_thresholds_and_hide_unused_build_dimensions" time="0.690" /><testcase classname="tests_v3.test_novice_workflow" name="test_conclusion_reaches_another_issue_in_one_click_and_keeps_ready_measurements" time="33.222" /><testcase classname="tests_v3.test_app" name="test_design_comparison_and_cura_example_workflow" time="29.686" /><testcase classname="tests_v3.test_navigation_ux" name="test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis" time="9.003"><failure message="AssertionError: assert '설계 조치' == '정밀 검토'&#10;  &#10;  - 정밀 검토&#10;  + 설계 조치">def test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis():
+        app = AppTest.from_file(str(APP), default_timeout=60).run()
+        app.selectbox(key='cad_example').select('수직 관통홀 · 지름 4 mm').run()
+        # This focused navigation test deliberately uses the optional quick mode.
+        # The automatic one-click flow has separate real-worker coverage.
+        app.checkbox(key='initial_wall').uncheck()
+        next(b for b in app.sidebar.button if b.label == "설계 검토").click().run()
+        assert not app.exception
+        first = app.session_state['report']
+    
+        # Recomputing from another tab must not replace a requested location with
+        # the default highlight when the result tab is opened for the first time.
+        app.segmented_control(key='result_tab').set_value('정밀 검토').run()
+        app.number_input(key='layer_MEX').set_value(.25)
+        next(b for b in app.sidebar.button if b.label == "설계 검토").click().run()
+        assert not app.exception
+&gt;       assert app.segmented_control(key='result_tab').value == '정밀 검토'
+E       AssertionError: assert '설계 조치' == '정밀 검토'
+E         
+E         - 정밀 검토
+E         + 설계 조치
+
+tests_v3\test_navigation_ux.py:26: AssertionError</failure></testcase><testcase classname="tests_v3.test_navigation_ux" name="test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting" time="24.956" /><testcase classname="tests_v3.test_direction_current_fit_ui" name="test_current_only_fit_direction_view_preserves_result_without_apply_button[False]" time="0.334" /><testcase classname="tests_v3.test_direction_current_fit_ui" name="test_current_only_fit_direction_view_preserves_result_without_apply_button[True]" time="0.332" /></testsuite></testsuites>

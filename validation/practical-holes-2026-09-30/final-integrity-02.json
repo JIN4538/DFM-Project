@@ -1,0 +1,1832 @@
+{
+  "files_verified": 25,
+  "learned_artifacts_unchanged": 34,
+  "frozen_source_contracts": 9,
+  "preservation": [
+    {
+      "file": "amdfm/neural_orientation.py",
+      "sha256": "1259111d488447748dede872369c6f549f99ddf8e6395b660f2fd2944395f5e1",
+      "desktop_sha256": "1259111d488447748dede872369c6f549f99ddf8e6395b660f2fd2944395f5e1",
+      "expected_sha256": "1259111d488447748dede872369c6f549f99ddf8e6395b660f2fd2944395f5e1"
+    },
+    {
+      "file": "amdfm/orientation.py",
+      "sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+      "desktop_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+      "expected_sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae"
+    },
+    {
+      "file": "amdfm/recommendation.py",
+      "sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+      "desktop_sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+      "expected_sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1"
+    },
+    {
+      "file": "dfm/cad_graph.py",
+      "sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+      "desktop_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+      "expected_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91"
+    },
+    {
+      "file": "dfm/feature_learning.py",
+      "sha256": "380142d566693e11115f3bd2c12ea54f3915226c5d77083cdeaefc610f3e8cb2",
+      "desktop_sha256": "380142d566693e11115f3bd2c12ea54f3915226c5d77083cdeaefc610f3e8cb2",
+      "expected_sha256": "380142d566693e11115f3bd2c12ea54f3915226c5d77083cdeaefc610f3e8cb2"
+    },
+    {
+      "file": "dfm/feature_localization.py",
+      "sha256": "cfa9d491bd90ea1c86ec9403d4f8288432483095bf62ff76e1c5e7cc9dcc0dc4",
+      "desktop_sha256": "cfa9d491bd90ea1c86ec9403d4f8288432483095bf62ff76e1c5e7cc9dcc0dc4",
+      "expected_sha256": "cfa9d491bd90ea1c86ec9403d4f8288432483095bf62ff76e1c5e7cc9dcc0dc4"
+    },
+    {
+      "file": "dfm/machining.py",
+      "sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+      "desktop_sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+      "expected_sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf"
+    },
+    {
+      "file": "dfm/plan_learning.py",
+      "sha256": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65",
+      "desktop_sha256": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65",
+      "expected_sha256": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65"
+    },
+    {
+      "file": "dfm/rl_planner.py",
+      "sha256": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1",
+      "desktop_sha256": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1",
+      "expected_sha256": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1"
+    },
+    {
+      "file": "data/models/external_feature_gnn_v1.evaluation.json",
+      "sha256": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc",
+      "desktop_sha256": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc",
+      "expected_sha256": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc"
+    },
+    {
+      "file": "data/models/external_feature_gnn_v1.json",
+      "sha256": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275",
+      "desktop_sha256": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275",
+      "expected_sha256": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275"
+    },
+    {
+      "file": "data/models/external_feature_gnn_v1.manifest.json",
+      "sha256": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf",
+      "desktop_sha256": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf",
+      "expected_sha256": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf"
+    },
+    {
+      "file": "data/models/external_feature_gnn_v2.evaluation.json",
+      "sha256": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d",
+      "desktop_sha256": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d",
+      "expected_sha256": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d"
+    },
+    {
+      "file": "data/models/external_feature_gnn_v2.json",
+      "sha256": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+      "desktop_sha256": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+      "expected_sha256": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a"
+    },
+    {
+      "file": "data/models/external_feature_gnn_v2.manifest.json",
+      "sha256": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990",
+      "desktop_sha256": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990",
+      "expected_sha256": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990"
+    },
+    {
+      "file": "data/models/external_feature_localization_v1.json",
+      "sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "desktop_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+      "expected_sha256": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01"
+    },
+    {
+      "file": "data/models/external_feature_localization_v1.manifest.json",
+      "sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "desktop_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+      "expected_sha256": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1"
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v1.json",
+      "sha256": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+      "desktop_sha256": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+      "expected_sha256": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5"
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v1.manifest.json",
+      "sha256": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f",
+      "desktop_sha256": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f",
+      "expected_sha256": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f"
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v2.json",
+      "sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "desktop_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+      "expected_sha256": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1"
+    },
+    {
+      "file": "data/models/external_feature_mfinstseg_v2.manifest.json",
+      "sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "desktop_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+      "expected_sha256": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496"
+    },
+    {
+      "file": "data/models/neural_orientation_external_v2.json",
+      "sha256": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+      "desktop_sha256": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+      "expected_sha256": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a"
+    },
+    {
+      "file": "data/models/neural_orientation_external_v2.manifest.json",
+      "sha256": "b4e5b2de42b3ae42c1492ecd5b0139ed9026dd4f9820d63d46762019bc6c9733",
+      "desktop_sha256": "b4e5b2de42b3ae42c1492ecd5b0139ed9026dd4f9820d63d46762019bc6c9733",
+      "expected_sha256": "b4e5b2de42b3ae42c1492ecd5b0139ed9026dd4f9820d63d46762019bc6c9733"
+    },
+    {
+      "file": "data/models/neural_orientation_external_v3.json",
+      "sha256": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+      "desktop_sha256": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+      "expected_sha256": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7"
+    },
+    {
+      "file": "data/models/neural_orientation_external_v3.manifest.json",
+      "sha256": "8885636786a650ed8b020b0f9332bbe26dcd7f59b9d8db6be7e62693eaff8c6e",
+      "desktop_sha256": "8885636786a650ed8b020b0f9332bbe26dcd7f59b9d8db6be7e62693eaff8c6e",
+      "expected_sha256": "8885636786a650ed8b020b0f9332bbe26dcd7f59b9d8db6be7e62693eaff8c6e"
+    },
+    {
+      "file": "data/models/neural_orientation_external_v4.json",
+      "sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "desktop_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+      "expected_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64"
+    },
+    {
+      "file": "data/models/neural_orientation_external_v4.manifest.json",
+      "sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "desktop_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+      "expected_sha256": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6"
+    },
+    {
+      "file": "data/models/neural_orientation_v1.json",
+      "sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+      "desktop_sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+      "expected_sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34"
+    },
+    {
+      "file": "data/models/neural_orientation_v1.manifest.json",
+      "sha256": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd",
+      "desktop_sha256": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd",
+      "expected_sha256": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd"
+    },
+    {
+      "file": "data/models/plan_ranker_external_v2.json",
+      "sha256": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53",
+      "desktop_sha256": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53",
+      "expected_sha256": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53"
+    },
+    {
+      "file": "data/models/plan_ranker_external_v2.manifest.json",
+      "sha256": "7ec462c0240670a07db16ce896fafe308e68f587e8a2ccbcea0f098e397b5e4a",
+      "desktop_sha256": "7ec462c0240670a07db16ce896fafe308e68f587e8a2ccbcea0f098e397b5e4a",
+      "expected_sha256": "7ec462c0240670a07db16ce896fafe308e68f587e8a2ccbcea0f098e397b5e4a"
+    },
+    {
+      "file": "data/models/plan_ranker_external_v3.json",
+      "sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "desktop_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+      "expected_sha256": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f"
+    },
+    {
+      "file": "data/models/plan_ranker_external_v3.manifest.json",
+      "sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "desktop_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+      "expected_sha256": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d"
+    },
+    {
+      "file": "data/models/plan_ranker_v1.json",
+      "sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "desktop_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+      "expected_sha256": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733"
+    },
+    {
+      "file": "data/models/plan_ranker_v1.manifest.json",
+      "sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "desktop_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+      "expected_sha256": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912"
+    },
+    {
+      "file": "data/models/rl_planner_v1.json",
+      "sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "desktop_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+      "expected_sha256": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0"
+    },
+    {
+      "file": "data/models/rl_planner_v1.manifest.json",
+      "sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "desktop_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+      "expected_sha256": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807"
+    },
+    {
+      "file": "data/models/rule_review_v1.json",
+      "sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+      "desktop_sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+      "expected_sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7"
+    },
+    {
+      "file": "data/models/rule_review_v1.manifest.json",
+      "sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429",
+      "desktop_sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429",
+      "expected_sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429"
+    }
+  ],
+  "learned_artifact_sha256": {
+    "data/models/compound_planner_v1.json": "585956479b44773ee6e35a3a1d472f0a511fda184baeac8e65711eb47536d7f7",
+    "data/models/compound_planner_v1.manifest.json": "11be47a3743db76bba3e18a8db1dd28c86ab3c5782447c4f579b27d6e7696f4a",
+    "data/models/external_feature_affinity_v1.json": "605024a6a36636bf267aaf41f40e2455ffa6edfe9d01d40ba288765769cf6050",
+    "data/models/external_feature_affinity_v1.manifest.json": "a04069e9f7345c5c1350234f01d8326859da94b46536e4fe1ae605bd8c4c08f3",
+    "data/models/external_feature_gnn_v1.evaluation.json": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc",
+    "data/models/external_feature_gnn_v1.json": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275",
+    "data/models/external_feature_gnn_v1.manifest.json": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf",
+    "data/models/external_feature_gnn_v2.evaluation.json": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d",
+    "data/models/external_feature_gnn_v2.json": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+    "data/models/external_feature_gnn_v2.manifest.json": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990",
+    "data/models/external_feature_localization_v1.json": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+    "data/models/external_feature_localization_v1.manifest.json": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+    "data/models/external_feature_mfinstseg_v1.json": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+    "data/models/external_feature_mfinstseg_v1.manifest.json": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f",
+    "data/models/external_feature_mfinstseg_v2.json": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+    "data/models/external_feature_mfinstseg_v2.manifest.json": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496",
+    "data/models/neural_orientation_external_v2.json": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+    "data/models/neural_orientation_external_v2.manifest.json": "b4e5b2de42b3ae42c1492ecd5b0139ed9026dd4f9820d63d46762019bc6c9733",
+    "data/models/neural_orientation_external_v3.json": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+    "data/models/neural_orientation_external_v3.manifest.json": "8885636786a650ed8b020b0f9332bbe26dcd7f59b9d8db6be7e62693eaff8c6e",
+    "data/models/neural_orientation_external_v4.json": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+    "data/models/neural_orientation_external_v4.manifest.json": "805b0ce85ad05b02889afa17782e3c1669aa87b586313140f0ad3eb105339cb6",
+    "data/models/neural_orientation_v1.json": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+    "data/models/neural_orientation_v1.manifest.json": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd",
+    "data/models/plan_ranker_external_v2.json": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53",
+    "data/models/plan_ranker_external_v2.manifest.json": "7ec462c0240670a07db16ce896fafe308e68f587e8a2ccbcea0f098e397b5e4a",
+    "data/models/plan_ranker_external_v3.json": "930dbddbef68ecc61a530bca355f1cabc9f67dd4ba7cf71643f386d8137dbd7f",
+    "data/models/plan_ranker_external_v3.manifest.json": "ccb6231c326d05b6967b68d7fe3703ce6564999d54898228370b1aad72b9b61d",
+    "data/models/plan_ranker_v1.json": "d73cabd699da03addba7a047dcda805f7717a5e666e91879523ffb351d029733",
+    "data/models/plan_ranker_v1.manifest.json": "4c6f25d6ef82d4c1423d7d806c8dbed9365adddd5475cd6c5bbc1d645fc6a912",
+    "data/models/rl_planner_v1.json": "c22d833d95c6fe4a138d0b7d755aa202d8dc8247a3240c5aa036e717a634ead0",
+    "data/models/rl_planner_v1.manifest.json": "412f7afb975fd58df7422b17f79c3a284dccf1c847254351cc6c33f35a8b1807",
+    "data/models/rule_review_v1.json": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+    "data/models/rule_review_v1.manifest.json": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429"
+  },
+  "repository_passed": 153,
+  "desktop_passed": 55,
+  "remaining_failed": [],
+  "preserved_initial_failures": [
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_all_shipped_geometry_matches_published_inventory",
+      "status": "failed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_changed_geometry_keeps_option_order_and_selected_result_consistent",
+      "status": "failed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence",
+      "status": "failed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_changed_geometry_keeps_option_order_and_selected_result_consistent",
+      "status": "failed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence",
+      "status": "failed",
+      "run": "desktop-02.xml"
+    }
+  ],
+  "runs": [
+    {
+      "file": "targeted-01.xml",
+      "cases": 15
+    },
+    {
+      "file": "regression-01.xml",
+      "cases": 0
+    },
+    {
+      "file": "regression-02.xml",
+      "cases": 81
+    },
+    {
+      "file": "ui-regression-01.xml",
+      "cases": 72
+    },
+    {
+      "file": "packaging-02.xml",
+      "cases": 4
+    },
+    {
+      "file": "desktop-01.xml",
+      "cases": 36
+    },
+    {
+      "file": "final-targeted-02.xml",
+      "cases": 82
+    },
+    {
+      "file": "location-final-03.xml",
+      "cases": 37
+    },
+    {
+      "file": "desktop-02.xml",
+      "cases": 37
+    },
+    {
+      "file": "location-final-04.xml",
+      "cases": 20
+    },
+    {
+      "file": "desktop-03.xml",
+      "cases": 20
+    }
+  ],
+  "latest_unique_results": [
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[through]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[through-rotated]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[split-rotated]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[blind]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[stepped]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[cross]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[sealed]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[boss]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_incomplete_boundary_unknown_material_and_bad_inputs_are_not_promoted",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_split_walls_are_not_repeated_as_pocket_corners_and_raw_audit_survives",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_blind_wrong_side_has_no_numeric_plan_then_entry_direction_rechecks",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_local_mouth_depth_avoids_remote_boss_envelope_and_keeps_user_tool",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_entry_choice_does_not_pretend_one_axis_covers_different_axes",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_one_click_entry_rechecks_actual_report_and_opens_the_location[through-rotated]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_one_click_entry_rechecks_actual_report_and_opens_the_location[blind]",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_empty_pocket_input_gets_measured_starting_tool_and_keeps_sharp_corner",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_every_partial_input_combination_is_locked[fixed0]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_every_partial_input_combination_is_locked[fixed1]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_every_partial_input_combination_is_locked[fixed2]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_every_partial_input_combination_is_locked[fixed3]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_every_partial_input_combination_is_locked[fixed4]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_every_partial_input_combination_is_locked[fixed5]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_every_partial_input_combination_is_locked[fixed6]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_too_short_fixed_reach_does_not_invent_valid_combination",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_fixed_reach_at_measured_depth_reduces_only_added_allowance",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_fixed_oversize_diameter_stays_conflicting_after_recomputation",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_rounded_corner_lengths_require_matching_original_cad",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_hole_milling_tool_and_drill_requirement_are_distinct",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_other_axis_is_not_used_to_fill_tool_dimensions",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_feature_intersection_uses_smallest_opening_largest_length_not_average",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_zero_radius_never_creates_zero_diameter",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_invalid_and_missing_measured_dimensions_preserve_unresolved",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_unknown_faces_and_incomplete_pockets_are_preserved",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_unknown_faces_cannot_report_single_tool_match",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_cylindrical_intervals_without_entry_positions_stay_conditional",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_occluded_pocket_is_not_source_of_automatic_dimensions",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_stl_and_multibody_never_supply_analytic_dimensions",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_input_report_and_profile_are_not_mutated",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_condition_database_evidence_retained_and_generated_value_not_source_value",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_invalid_policy_parameters_are_rejected[options0]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_invalid_policy_parameters_are_rejected[options1]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_invalid_policy_parameters_are_rejected[options2]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_invalid_policy_parameters_are_rejected[options3]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_invalid_policy_parameters_are_rejected[options4]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_configurable_policy_has_exact_numeric_effect_without_touching_user_values",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_stepped_hole_reach_covers_both_segments_and_conclusion_keeps_entry_uncertainty",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_distant_boss_envelope_is_not_a_hard_reach_conflict",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_short_flute_on_hole_is_a_strategy_question_and_cannot_clear_conclusion",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_new_recommendation_finding_preserves_feature_locations",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_tool_recommendation",
+      "test_name": "test_no_recognized_internal_features_keeps_tool_proposal_not_applicable",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_selected_cad_location_preserves_measurements_unknowns_and_full_report[cnc_curved_corners-cylindrical_faces-face_id]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_selected_cad_location_preserves_measurements_unknowns_and_full_report[cnc_learned_pockets-pockets-floor_face_id]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_recognized_feature_opens_immediately_and_updates_without_second_button",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_display_rounds_measurements_without_changing_source_values_or_unknowns",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_display_explains_radius_and_flute_length_without_changing_stored_text",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_blank_tool_inputs_need_only_one_review_and_export_same_values",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_partial_manual_tool_is_preserved_and_auto_switch_invalidates_report",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_block_does_not_invent_tool_size_and_fixed_values_still_raise_conflicts",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_generated_library_input_is_not_exported_as_manufacturer_or_user_value",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_automatic_policy_change_recomputes_without_replacing_manual_value",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_external_labels_locate_independently_constructed_pockets[3-triangular_pocket]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_external_labels_locate_independently_constructed_pockets[4-rectangular_pocket]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_external_labels_locate_independently_constructed_pockets[6-6sides_pocket]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_predictions_do_not_depend_on_cad_scale_rotation_or_translation",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_curved_model_is_not_forced_into_planar_training_classes",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_unmodified_box_has_no_machining_feature_candidate",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_feature_model_checksum_is_required",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_full_step_pipeline_adds_real_corner_action_and_exports_evidence[3]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_full_step_pipeline_adds_real_corner_action_and_exports_evidence[6]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_triangle_caliper_width_must_not_clear_an_oversized_tool",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_external_feature_learning",
+      "test_name": "test_triangular_pocket_fills_missing_tool_from_verified_entry_circle",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_enhanced_planning",
+      "test_name": "test_duplicate_final_effects_are_independent_of_edit_order",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_enhanced_planning",
+      "test_name": "test_network_cannot_exchange_added_conflicts_for_lower_edit_cost",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_enhanced_planning",
+      "test_name": "test_changed_before_value_or_face_is_rejected",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_enhanced_planning",
+      "test_name": "test_missing_proposal_model_retains_verified_recommendation_and_preferences",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_enhanced_planning",
+      "test_name": "test_fewer_conflicts_rebuilds_semantics_and_removes_inadmissible_preferences",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_enhanced_planning",
+      "test_name": "test_disabled_and_repeat_search_strip_both_proposal_sources",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_enhanced_planning",
+      "test_name": "test_disabling_search_restores_baseline_pareto_flags",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_complete_measurement_and_partial_measurement_have_different_conclusions",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_observed_partial_issue_keeps_both_issue_and_missing_scope",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_input_defect_wins_over_learned_candidate_and_raw_data_unchanged",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_unlearned_partial_finding_and_missing_report_never_pass",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_unknown_process_does_not_hide_raw_numeric_warning",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_plan_suppresses_only_resolved_generic_action_and_keeps_remaining_issue",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_html_escapes_user_content_and_uses_one_conclusion_heading",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_plan_change_keeps_verified_cad_face_identity",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_conclusion",
+      "test_name": "test_residual_plan_keeps_issue_but_does_not_repeat_conflicting_generic_action",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_changed_conditions_clear_old_result_and_restart_at_conclusion",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_external_feature_location_and_main_location_can_be_open_together",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compound_integration",
+      "test_name": "test_fewer_edits_can_win_even_when_geometry_change_is_slightly_larger",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compound_integration",
+      "test_name": "test_compound_prediction_is_remeasured_and_cannot_forge_a_change",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compound_integration",
+      "test_name": "test_multi_pocket_before_after_is_available_from_normal_user_workflow",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_direction_current_fit_ui",
+      "test_name": "test_current_only_fit_direction_view_preserves_result_without_apply_button[False]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_direction_current_fit_ui",
+      "test_name": "test_current_only_fit_direction_view_preserves_result_without_apply_button[True]",
+      "status": "passed",
+      "run": "regression-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_circle_label_and_ring_follow_the_same_transformed_cad_location",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_neural_memory_error_does_not_destroy_independent_native_dimensions",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_packaged_hole_demo_is_reachable_from_the_normal_app",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_cnc_measure_without_tool_and_stale_condition_results",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_cnc_tool_comparison_and_invalid_condition_no_export",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_changed_geometry_keeps_option_order_and_selected_result_consistent",
+      "status": "passed",
+      "run": "location-final-04.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_visibility_shows_back_facing_and_tangent_samples_without_am_axis",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_switching_process_never_displays_other_process_report",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_problem_and_missing_information_are_separate_without_mutating_report",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_first_card_targets_an_offending_face_not_the_first_measured_face",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_axis_mismatch_does_not_fabricate_size_comparison",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_visibility_is_pending_not_a_zero_problem_count",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_deep_narrow_pocket_actions_address_each_observed_tool_conflict",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[None-False]",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[False-False]",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[False-True]",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_first_review_computes_visibility_and_location_button_selects_measured_floor",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_missing_tool_input_is_visible_and_user_can_opt_out_of_visibility",
+      "status": "passed",
+      "run": "location-final-03.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_first_page_contains_decision_action_without_raw_technical_records",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_wall_decisions_explain_the_same_4mm_measurement[None-False-\\ubcbd\\uc740 \\uce21\\uc815\\ub410\\uc9c0\\ub9cc \\ube44\\uad50 \\uae30\\uc900\\uc774 \\uc5c6\\uc2b5\\ub2c8\\ub2e4]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_wall_decisions_explain_the_same_4mm_measurement[1.0-False-\\uac80\\uc0ac\\ud55c \\ud45c\\ubcf8\\uc5d0\\uc11c \\uc785\\ub825\\ud55c \\ubcbd \\uae30\\uc900 \\ubbf8\\ub9cc\\uc774 \\uc5c6\\uc2b5\\ub2c8\\ub2e4]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_wall_decisions_explain_the_same_4mm_measurement[5.0-False-\\uc785\\ub825\\ud55c \\ubcbd \\uae30\\uc900\\ubcf4\\ub2e4 \\uc791\\uc740 \\uad6c\\uac04\\uc774 \\uc788\\uc2b5\\ub2c8\\ub2e4]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_wall_decisions_explain_the_same_4mm_measurement[1.0-True-\\ubcbd\\uc758 \\uc77c\\ubd80 \\ud45c\\ubcf8\\uc744 \\ud655\\uc778\\ud558\\uc9c0 \\ubabb\\ud588\\uc2b5\\ub2c8\\ub2e4]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_complete_zero_layers_are_explained_without_two_hundred_visible_rows",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_unknown_layer_scope_never_appears_as_zero_candidate_success[missing_value]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_unknown_layer_scope_never_appears_as_zero_candidate_success[missing_row]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_unknown_layer_scope_never_appears_as_zero_candidate_success[partial_scope]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_tiny_candidate_keeps_location_and_next_action_in_shared_report",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_section_volume_check_is_subordinate_and_partial_stale_value_is_not_promoted[False]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_section_volume_check_is_subordinate_and_partial_stale_value_is_not_promoted[True]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_other_process_report_does_not_offer_mex_layer_review[VPP]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_other_process_report_does_not_offer_mex_layer_review[PBF_POLYMER]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_other_process_report_does_not_offer_mex_layer_review[PBF_METAL]",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_report_ux",
+      "test_name": "test_user_text_is_escaped_and_report_remains_unchanged",
+      "status": "passed",
+      "run": "final-targeted-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_optional_external_helper_is_closed_and_local_wall_card_is_actionable",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_worker_timeout_stays_unknown_and_refreshes_export_without_returning_to_actions",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_input_defect_is_visible_before_learned_missing_condition_cards",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_measured_edits_are_one_plan_not_duplicate_actions",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_partial_and_transverse_scope_survives_numeric_edits",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_invalid_criteria_do_not_create_numeric_edits[None]",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_invalid_criteria_do_not_create_numeric_edits[0]",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_invalid_criteria_do_not_create_numeric_edits[nan]",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_invalid_criteria_do_not_create_numeric_edits[inf]",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_invalid_criteria_do_not_create_numeric_edits[True]",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_invalid_criteria_do_not_create_numeric_edits[-1]",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_unknown_material_side_not_assumed_to_be_a_hole",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_am_joint_planning",
+      "test_name": "test_no_measurements_do_not_create_a_wall_edit",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compact_cnc",
+      "test_name": "test_learned_cards_are_not_repeated_but_unlearned_issues_and_locations_remain",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compact_cnc",
+      "test_name": "test_input_blocker_is_visible_even_when_learned_summary_is_available",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_compact_cnc",
+      "test_name": "test_missing_tool_values_are_visible_and_rule_fallback_opens_actions",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_novice_workflow",
+      "test_name": "test_optional_settings_explain_thresholds_and_hide_unused_build_dimensions",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_novice_workflow",
+      "test_name": "test_conclusion_reaches_another_issue_in_one_click_and_keeps_ready_measurements",
+      "status": "passed",
+      "run": "ui-regression-01.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_all_shipped_geometry_matches_published_inventory",
+      "status": "passed",
+      "run": "packaging-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_public_step_demos_have_original_hashes_and_explicit_rights",
+      "status": "passed",
+      "run": "packaging-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_corpus_including_supplier_metadata_matches_original_audit",
+      "status": "passed",
+      "run": "packaging-02.xml"
+    },
+    {
+      "scope": "repository",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_random_corpus_picker_works_without_a_desktop_folder",
+      "status": "passed",
+      "run": "packaging-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[through]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[through-rotated]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[split-rotated]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_repeated_holes_have_independent_count_diameter_depth_and_orientation[blind]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[stepped]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[cross]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[sealed]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_counterexamples_are_not_named_as_simple_complete_holes[boss]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_incomplete_boundary_unknown_material_and_bad_inputs_are_not_promoted",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_split_walls_are_not_repeated_as_pocket_corners_and_raw_audit_survives",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_blind_wrong_side_has_no_numeric_plan_then_entry_direction_rechecks",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_local_mouth_depth_avoids_remote_boss_envelope_and_keeps_user_tool",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_circle_label_and_ring_follow_the_same_transformed_cad_location",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_entry_choice_does_not_pretend_one_axis_covers_different_axes",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_neural_memory_error_does_not_destroy_independent_native_dimensions",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_packaged_hole_demo_is_reachable_from_the_normal_app",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_one_click_entry_rechecks_actual_report_and_opens_the_location[through-rotated]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_verified_holes",
+      "test_name": "test_one_click_entry_rechecks_actual_report_and_opens_the_location[blind]",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_selected_cad_location_preserves_measurements_unknowns_and_full_report[cnc_curved_corners-cylindrical_faces-face_id]",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_selected_cad_location_preserves_measurements_unknowns_and_full_report[cnc_learned_pockets-pockets-floor_face_id]",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_recognized_feature_opens_immediately_and_updates_without_second_button",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_display_rounds_measurements_without_changing_source_values_or_unknowns",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_beginner_workflow",
+      "test_name": "test_display_explains_radius_and_flute_length_without_changing_stored_text",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_blank_tool_inputs_need_only_one_review_and_export_same_values",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_partial_manual_tool_is_preserved_and_auto_switch_invalidates_report",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_block_does_not_invent_tool_size_and_fixed_values_still_raise_conflicts",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_generated_library_input_is_not_exported_as_manufacturer_or_user_value",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_automatic_tooling_ui",
+      "test_name": "test_automatic_policy_change_recomputes_without_replacing_manual_value",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_optional_external_helper_is_closed_and_local_wall_card_is_actionable",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_worker_timeout_stays_unknown_and_refreshes_export_without_returning_to_actions",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_compact_am",
+      "test_name": "test_input_defect_is_visible_before_learned_missing_condition_cards",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_all_shipped_geometry_matches_published_inventory",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_public_step_demos_have_original_hashes_and_explicit_rights",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_corpus_including_supplier_metadata_matches_original_audit",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_packaged_geometry",
+      "test_name": "test_random_corpus_picker_works_without_a_desktop_folder",
+      "status": "passed",
+      "run": "desktop-01.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_cnc_measure_without_tool_and_stale_condition_results",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_cnc_tool_comparison_and_invalid_condition_no_export",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_changed_geometry_keeps_option_order_and_selected_result_consistent",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_visibility_shows_back_facing_and_tangent_samples_without_am_axis",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_ui",
+      "test_name": "test_switching_process_never_displays_other_process_report",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_problem_and_missing_information_are_separate_without_mutating_report",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_first_card_targets_an_offending_face_not_the_first_measured_face",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_axis_mismatch_does_not_fabricate_size_comparison",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_visibility_is_pending_not_a_zero_problem_count",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_deep_narrow_pocket_actions_address_each_observed_tool_conflict",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[None-False]",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[False-False]",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[False-True]",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_first_review_computes_visibility_and_location_button_selects_measured_floor",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_machining_decisions_ui",
+      "test_name": "test_missing_tool_input_is_visible_and_user_can_opt_out_of_visibility",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_changed_conditions_clear_old_result_and_restart_at_conclusion",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_external_feature_location_and_main_location_can_be_open_together",
+      "status": "passed",
+      "run": "desktop-02.xml"
+    },
+    {
+      "scope": "desktop",
+      "test_class": "tests_v3.test_cnc_conclusion_ui",
+      "test_name": "test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence",
+      "status": "passed",
+      "run": "desktop-03.xml"
+    }
+  ],
+  "independent_cad": {
+    "cases": 24,
+    "passed": 24,
+    "holes": 26
+  },
+  "actual_input": {
+    "files": 29,
+    "passed": 29,
+    "conditions": 98
+  },
+  "training_changed": false
+}

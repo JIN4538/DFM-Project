@@ -1,0 +1,63 @@
+{
+  "schema": "learned-cad-integration-audit/1",
+  "started_utc": "2026-09-29T02:19:03.696214+00:00",
+  "code_sha256": "0695355499010b702c894ce30bf5b238951f070094fee2f9e60c0880d84b4847",
+  "root": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "scope": "Held-out CAD integration, authored dimensions, rule coverage, and raw model disagreements",
+  "held_out": "The authored STEP geometries/labels are not model training rows; training uses synthetic numeric feature vectors",
+  "independent_scope": "Authored dimensions only; rule agreement is not independent evidence of the rule itself",
+  "am_wall_timeout_s": 10.0,
+  "cnc_visibility": "Current production worker: 512 samples, 10-second bound",
+  "quick_limit_per_family": null,
+  "planned_reports": 122,
+  "manifests": {
+    "am": {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\examples\\cad\\manifest.json",
+      "sha256": "d358828786969c6ca1add71895129c96f0592474e11418f2654aa6c0dee89862"
+    },
+    "cnc": {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\examples\\machining\\manifest.json",
+      "sha256": "168af3a4c9d8d9d6a3adf5f39dd4a253d8e0a583ba49a676c105f4c765327db0"
+    }
+  },
+  "finished_utc": "2026-09-29T02:22:29.227683+00:00",
+  "elapsed_seconds": 206.445162,
+  "status": "passed",
+  "final_code_sha256": "0695355499010b702c894ce30bf5b238951f070094fee2f9e60c0880d84b4847",
+  "originals_unchanged": true,
+  "completed_reports": 122,
+  "report_states": {
+    "passed": 122
+  },
+  "model_sha256": [
+    "b4460a2e4cfd9c32585bfcc9b88a93c5f8d63951eb20057a1e368a6882684482"
+  ],
+  "learned_item_states": {
+    "clear": 380,
+    "review": 145,
+    "unavailable": 20,
+    "confirmed": 63
+  },
+  "learned_item_origins": {
+    "learned_verified": 293,
+    "unavailable": 162,
+    "rule_fallback": 153
+  },
+  "evaluated_rows": 5198,
+  "learned_rows": 5198,
+  "raw_disagreement_rows": 0,
+  "fallback_rows": 0,
+  "unpredicted_rows": 0,
+  "dimension_checks": {
+    "pass": 409
+  },
+  "conclusion_checks": {
+    "pass": 608
+  },
+  "missing_value_checks": {
+    "pass": 84
+  },
+  "failed_cases": []
+}

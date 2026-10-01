@@ -1,0 +1,132 @@
+{
+  "id": "bracket_462c9e1e_0618",
+  "dataset": "CadQuarry",
+  "group": "cq:bracket:{\"version\": 2, \"volume\": 13600.0, \"surface_area\": 7230.0, \"principal_moments\": [3180000.0, 11799999.999999998, 13999999.999999998], \"n_faces\": 10, \"n_edges\": 24, \"n_vertices\": 16}",
+  "split": "test",
+  "process": "PBF_POLYMER",
+  "priority": "height",
+  "candidate_oracle": {
+    "legacy": 0.0,
+    "blind": 0.0,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "actual_product": {
+    "legacy": 2.0172091948074472e-16,
+    "blind": 2.0172091948074472e-16,
+    "geometric": 2.0172091948074472e-16,
+    "height_neural": 2.0172091948074472e-16,
+    "uncertainty05": 2.0172091948074472e-16
+  },
+  "common_reference_product": {
+    "legacy": 2.0172091948074472e-16,
+    "blind": 2.0172091948074472e-16,
+    "geometric": 2.0172091948074472e-16,
+    "height_neural": 2.0172091948074472e-16,
+    "uncertainty05": 2.0172091948074472e-16
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -2.0172091948074472e-16,
+      "fixed_selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "own_reference_score": 2.0172091948074472e-16,
+      "fixed_reference_score": 2.0172091948074472e-16,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 2.0172091948074472e-16
+    },
+    "blind": {
+      "selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -2.0172091948074472e-16,
+      "fixed_selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "own_reference_score": 2.0172091948074472e-16,
+      "fixed_reference_score": 2.0172091948074472e-16,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 2.0172091948074472e-16
+    },
+    "geometric": {
+      "selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -2.0172091948074472e-16,
+      "fixed_selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "own_reference_score": 2.0172091948074472e-16,
+      "fixed_reference_score": 2.0172091948074472e-16,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 2.0172091948074472e-16
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -2.0172091948074472e-16,
+      "fixed_selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "own_reference_score": 2.0172091948074472e-16,
+      "fixed_reference_score": 2.0172091948074472e-16,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 2.0172091948074472e-16
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -2.0172091948074472e-16,
+      "fixed_selected_direction": [
+        0.6420468970134393,
+        -0.7493811391880135,
+        -0.16187553942671273
+      ],
+      "own_reference_score": 2.0172091948074472e-16,
+      "fixed_reference_score": 2.0172091948074472e-16,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 2.0172091948074472e-16
+    }
+  },
+  "original_case_sha256": "80a0aee87b55e9b25e7b3f7098c2f5c220d384863502e5068127433d7fa7d520"
+}

@@ -1,0 +1,123 @@
+- log
+- log
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 절삭가공
+- button "Open":
+- heading "검토할 형상" [level=3]
+- list:
+  - listitem: 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토
+- paragraph: 입력
+- combobox "입력": 절삭 검증 형상
+- button "Open":
+- paragraph: 절삭 형상 선택
+- combobox "절삭 형상 선택": 좁고 깊은 포켓 · 폭 3 / 깊이 20 mm
+- button "Open":
+- paragraph: 치수가 알려진 절삭 CAD 예제
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- separator
+- paragraph:
+  - strong: 절삭 조건 · 고정축 밀링
+- generic "keyboard_arrow_right 장비·재료·공구 조건 라이브러리":
+  - generic: keyboard_arrow_right
+  - paragraph: 장비·재료·공구 조건 라이브러리
+- paragraph: 공구가 오는 방향
+- button "Help for 공구가 오는 방향":
+- combobox "공구가 오는 방향": +Z · 위쪽에서
+- button "Open":
+- paragraph: 엔드밀 지름 (mm)
+- button "Help for 엔드밀 지름 (mm)":
+- spinbutton "엔드밀 지름 (mm)": "4.0000"
+- button "Clear value":
+- paragraph: 날 길이 (mm)
+- button "Help for 날 길이 (mm)":
+- spinbutton "날 길이 (mm)": "8.0000"
+- button "Clear value":
+- paragraph: 장착 후 돌출 길이 · 끝~홀더 (mm)
+- button "Help for 장착 후 돌출 길이 · 끝~홀더 (mm)":
+- spinbutton "장착 후 돌출 길이 · 끝~홀더 (mm)": "10.0000"
+- button "Clear value":
+- generic "keyboard_arrow_right 재료·장비·근거와 추가 기준":
+  - generic: keyboard_arrow_right
+  - paragraph: 재료·장비·근거와 추가 기준
+- checkbox "선택 방향에서 가려진 표면도 확인" [checked]
+- paragraph: 선택 방향에서 가려진 표면도 확인
+- button "Help for 선택 방향에서 가려진 표면도 확인":
+- button "절삭 설계 검토":
+  - paragraph: 절삭 설계 검토
+- banner:
+  - button "keyboard_double_arrow_right":
+    - generic: keyboard_double_arrow_right
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "절삭가공 설계 검토" [level=1]:
+  - text: 절삭가공 설계 검토
+  - link "Link to heading":
+    - /url: "#b003ed7d"
+- generic "keyboard_arrow_right 검토 조건 · 장비와 중요하게 볼 항목":
+  - generic: keyboard_arrow_right
+  - paragraph: 검토 조건 · 장비와 중요하게 볼 항목
+- paragraph: "02_narrow_deep_pocket.step · 장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력"
+- heading "내장 AI 검토" [level=3]:
+  - text: 내장 AI 검토
+  - link "Link to heading":
+    - /url: "#ai"
+- alert:
+  - paragraph: 수정 후보 1개
+- paragraph:
+  - strong: 공구보다 좁은 포켓
+- paragraph: 최소 폭 3 mm / 공구 4 mm · 최대 벽 높이 20 mm / 날 8 mm · 돌출 10 mm
+- paragraph: 포켓을 넓히거나 더 작은 공구를 선택하세요.
+- generic "keyboard_arrow_right 함께 바꿀 항목 3개":
+  - generic: keyboard_arrow_right
+  - paragraph: 함께 바꿀 항목 3개
+- button "위치 보기":
+  - paragraph: 위치 보기
+- generic "keyboard_arrow_right AI 학습·검증 기록":
+  - generic: keyboard_arrow_right
+  - paragraph: AI 학습·검증 기록
+- generic "keyboard_arrow_right 전체 개선 항목 1개 · 치수와 조치":
+  - generic: keyboard_arrow_right
+  - paragraph: 전체 개선 항목 1개 · 치수와 조치
+- paragraph: 확인할 항목
+- combobox "확인할 항목": 직사각 포켓 바닥과 내부 직각
+- button "Open":
+- paragraph: 조건 확인·수정 검토
+- generic "keyboard_arrow_right 선택 항목의 판단·다음 행동":
+  - generic: keyboard_arrow_right
+  - paragraph: 선택 항목의 판단·다음 행동
+- paragraph: 확인할 위치
+- combobox "확인할 위치": 이 항목의 측정·확인 위치 모두
+- button "Open":
+- toolbar:
+  - button "Download plot as a PNG":
+  - button "Zoom":
+  - button "Pan":
+  - button "Orbital rotation":
+  - button "Turntable rotation":
+  - button "Reset camera to default":
+  - button "Reset camera to last save":
+  - button "Fullscreen":
+- paragraph: "파랑: 선택 위치 · 주황: 조건 확인 위치"
+- generic "keyboard_arrow_right 적용한 공구 조건":
+  - generic: keyboard_arrow_right
+  - paragraph: 적용한 공구 조건
+- generic "keyboard_arrow_right 선택한 항목의 치수 비교":
+  - generic: keyboard_arrow_right
+  - paragraph: 선택한 항목의 치수 비교
+- generic "keyboard_arrow_right 이 결과가 확인한 범위":
+  - generic: keyboard_arrow_right
+  - paragraph: 이 결과가 확인한 범위
+- generic "keyboard_arrow_right 모든 항목과 계산 원자료":
+  - generic: keyboard_arrow_right
+  - paragraph: 모든 항목과 계산 원자료
+- generic "keyboard_arrow_right 근거와 내보내기":
+  - generic: keyboard_arrow_right
+  - paragraph: 근거와 내보내기
+- generic "keyboard_arrow_right 표준·논문 근거 찾아보기":
+  - generic: keyboard_arrow_right
+  - paragraph: 표준·논문 근거 찾아보기

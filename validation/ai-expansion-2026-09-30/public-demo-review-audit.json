@@ -1,0 +1,1036 @@
+{
+  "files": 14,
+  "process_reviews": 70,
+  "results": [
+    {
+      "file": "cadquarry_bracket_bracket_462c.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 10904.60950367025,
+      "mesh_volume_mm3": 10904.717807845309,
+      "triangles": 360,
+      "face_count": 9,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "VPP": {
+          "title": "검토한 항목에서 수정할 문제가 없습니다",
+          "issues": [],
+          "pending": [],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "PBF_POLYMER": {
+          "title": "검토한 항목에서 수정할 문제가 없습니다",
+          "issues": [],
+          "pending": [],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "PBF_METAL": {
+          "title": "검토한 항목에서 수정할 문제가 없습니다",
+          "issues": [],
+          "pending": [],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_rectangular_pockets",
+            "cnc_visibility",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": 3.44,
+            "flute_length_mm": 9.0,
+            "reach_mm": 26.0
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": [
+        {
+          "parameter": "hole_d",
+          "source_value_mm": 4.3,
+          "analytic_diameters_mm": [
+            4.3
+          ],
+          "agrees": true
+        }
+      ]
+    },
+    {
+      "file": "cadquarry_block_block_462c9d.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 32955.32992844729,
+      "mesh_volume_mm3": 32956.759543558066,
+      "triangles": 1372,
+      "face_count": 10,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "+Y 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+Y 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": 3.44,
+            "flute_length_mm": 27.4,
+            "reach_mm": 27.4
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": [
+        {
+          "parameter": "hole_d",
+          "source_value_mm": 4.3,
+          "analytic_diameters_mm": [
+            4.3,
+            4.3,
+            4.3,
+            4.3
+          ],
+          "agrees": true
+        }
+      ]
+    },
+    {
+      "file": "cadquarry_plate_plate_462c9d.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 16776.0,
+      "mesh_volume_mm3": 16776.000000000004,
+      "triangles": 12,
+      "face_count": 6,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "VPP": {
+          "title": "검토한 항목에서 수정할 문제가 없습니다",
+          "issues": [],
+          "pending": [],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "PBF_POLYMER": {
+          "title": "검토한 항목에서 수정할 문제가 없습니다",
+          "issues": [],
+          "pending": [],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "PBF_METAL": {
+          "title": "검토한 항목에서 수정할 문제가 없습니다",
+          "issues": [],
+          "pending": [],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": "measured"
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_enclosure_enclosure_46.step",
+      "cad_valid": true,
+      "solid_count": 0,
+      "exact_volume_mm3": null,
+      "mesh_volume_mm3": 138102.84,
+      "triangles": 28,
+      "face_count": 11,
+      "checks": {
+        "MEX": {
+          "title": "입력 형상을 먼저 수정하세요",
+          "issues": [
+            "input",
+            "surface_input"
+          ],
+          "pending": [
+            "wall",
+            "overhang",
+            "contact",
+            "cavities",
+            "cad_holes",
+            "layers"
+          ],
+          "plan_title": null,
+          "neural_added": 0,
+          "wall_status": "unknown"
+        },
+        "VPP": {
+          "title": "입력 형상을 먼저 수정하세요",
+          "issues": [
+            "input",
+            "surface_input"
+          ],
+          "pending": [
+            "wall",
+            "overhang",
+            "cavities",
+            "cad_holes"
+          ],
+          "plan_title": null,
+          "neural_added": 0,
+          "wall_status": "unknown"
+        },
+        "PBF_POLYMER": {
+          "title": "입력 형상을 먼저 수정하세요",
+          "issues": [
+            "input",
+            "surface_input"
+          ],
+          "pending": [
+            "wall",
+            "cavities",
+            "cad_holes"
+          ],
+          "plan_title": null,
+          "neural_added": 18,
+          "wall_status": "unknown"
+        },
+        "PBF_METAL": {
+          "title": "입력 형상을 먼저 수정하세요",
+          "issues": [
+            "input",
+            "surface_input"
+          ],
+          "pending": [
+            "wall",
+            "overhang",
+            "cavities",
+            "cad_holes"
+          ],
+          "plan_title": null,
+          "neural_added": 0,
+          "wall_status": "unknown"
+        },
+        "CNC": {
+          "title": "입력 형상을 먼저 수정하세요",
+          "issues": [],
+          "pending": [
+            "cnc_input",
+            "cnc_holes",
+            "cnc_curved_corners",
+            "cnc_rectangular_pockets",
+            "cnc_visibility",
+            "cnc_coverage",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "outside_training_domain"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_ribbed_ribbed_462c9.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 10847.999999999998,
+      "mesh_volume_mm3": 10848.000000000002,
+      "triangles": 44,
+      "face_count": 16,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_rectangular_pockets",
+            "cnc_visibility",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_flanged_flanged_462c.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 91494.3172254606,
+      "mesh_volume_mm3": 91409.0224284858,
+      "triangles": 3048,
+      "face_count": 12,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": 3.44,
+            "flute_length_mm": 56.8,
+            "reach_mm": 56.8
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_gear_gear_462c9c8.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 62692.5706123977,
+      "mesh_volume_mm3": 62674.7096991724,
+      "triangles": 3776,
+      "face_count": 63,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_coverage",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": 4.800000000000001,
+            "flute_length_mm": 35.0,
+            "reach_mm": 35.00000000000001
+          },
+          "graph_status": [
+            "outside_training_domain"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_revolved_revolved_462.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 115710.09341948647,
+      "mesh_volume_mm3": 115714.4623048904,
+      "triangles": 754,
+      "face_count": 3,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_coverage",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_swept_swept_462c9f.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 12039.698973537777,
+      "mesh_volume_mm3": 11972.59360023628,
+      "triangles": 4592,
+      "face_count": 3,
+      "checks": {
+        "MEX": {
+          "title": "면 탐색 1 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "면 탐색 1 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "+X-Y+Z 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+X-Y+Z 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "+Y 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+Y 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "+X-Y+Z 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+X-Y+Z 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_coverage",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "outside_training_domain"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_sketched_sketched_462.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 5588.9782786188,
+      "mesh_volume_mm3": 5558.692498204707,
+      "triangles": 3026,
+      "face_count": 7,
+      "checks": {
+        "MEX": {
+          "title": "AI 확장 1 방향으로 바꾸고 남은 문제를 수정하세요",
+          "issues": [
+            "overhang"
+          ],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "AI 확장 1 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "AI 확장 1 방향으로 바꾸고 남은 문제를 수정하세요",
+          "issues": [
+            "overhang"
+          ],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "AI 확장 1 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "AI 확장 5 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "AI 확장 5 방향으로 변경",
+          "neural_added": 15,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "AI 확장 1 방향으로 바꾸고 남은 문제를 수정하세요",
+          "issues": [
+            "overhang"
+          ],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "AI 확장 1 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_coverage",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "outside_training_domain"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_compound_compound_462.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 106308.05258892136,
+      "mesh_volume_mm3": 106208.94781348477,
+      "triangles": 668,
+      "face_count": 5,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "AI 탐색 6 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "AI 탐색 6 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "+X+Y 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+X+Y 방향으로 변경",
+          "neural_added": 17,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "AI 탐색 6 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "AI 탐색 6 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_profiled_profiled_462.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 13071.204573261923,
+      "mesh_volume_mm3": 13075.949500182562,
+      "triangles": 2518,
+      "face_count": 3,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "+X+Y+Z 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+X+Y+Z 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "+X+Y 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+X+Y 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "+X+Y+Z 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "+X+Y+Z 방향으로 변경",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_coverage",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": null,
+            "flute_length_mm": null,
+            "reach_mm": null
+          },
+          "graph_status": [
+            "measured"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "cadquarry_lofted_lofted_462c9.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 37991.45724692881,
+      "mesh_volume_mm3": 37911.49190341548,
+      "triangles": 2590,
+      "face_count": 8,
+      "checks": {
+        "MEX": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "면 탐색 1 방향으로 배치하세요",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "면 탐색 1 방향으로 변경",
+          "neural_added": 14,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "현재 방향 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "결론을 완성하려면 추가 확인이 필요합니다",
+          "issues": [],
+          "pending": [
+            "cnc_visibility",
+            "cnc_coverage",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": 7.120000000000001,
+            "flute_length_mm": 48.7,
+            "reach_mm": 48.7
+          },
+          "graph_status": [
+            "outside_training_domain"
+          ]
+        }
+      },
+      "parameter_checks": []
+    },
+    {
+      "file": "nist_am_test_artifact_1.step",
+      "cad_valid": true,
+      "solid_count": 1,
+      "exact_volume_mm3": 100987.06165183091,
+      "mesh_volume_mm3": 100985.9487371095,
+      "triangles": 12304,
+      "face_count": 271,
+      "checks": {
+        "MEX": {
+          "title": "구멍 확대 + 현재 배치 유지하세요",
+          "issues": [
+            "overhang",
+            "cad_holes"
+          ],
+          "pending": [
+            "wall",
+            "layers"
+          ],
+          "plan_title": "구멍 확대 + 현재 배치 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "VPP": {
+          "title": "구멍 확대 + 현재 배치 유지하세요",
+          "issues": [
+            "overhang",
+            "cad_holes"
+          ],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "구멍 확대 + 현재 배치 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_POLYMER": {
+          "title": "구멍 확대 + 현재 배치 유지하세요",
+          "issues": [
+            "cad_holes"
+          ],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "구멍 확대 + 현재 배치 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "PBF_METAL": {
+          "title": "구멍 확대 + 현재 배치 유지하세요",
+          "issues": [
+            "overhang",
+            "cad_holes"
+          ],
+          "pending": [
+            "wall"
+          ],
+          "plan_title": "구멍 확대 + 현재 배치 유지",
+          "neural_added": 18,
+          "wall_status": null
+        },
+        "CNC": {
+          "title": "형상 치수 조정",
+          "issues": [
+            "cnc_rectangular_pockets"
+          ],
+          "pending": [
+            "cnc_visibility",
+            "cnc_tool_recommendation"
+          ],
+          "tool": {
+            "tool_diameter_mm": 0.19999999999999962,
+            "flute_length_mm": 18.0,
+            "reach_mm": 18.0
+          },
+          "graph_status": [
+            "outside_training_domain"
+          ]
+        }
+      },
+      "parameter_checks": []
+    }
+  ],
+  "dimension_matches": 2,
+  "dimension_checks": 2,
+  "seconds": 72.65599999999904
+}

@@ -1,0 +1,85 @@
+{
+  "selected_policies": [
+    "uncertainty05"
+  ],
+  "selector_sha256": "20e02474872a7511cd40f6b19edd407d41b9d8173e81cd0ee41bed22202abf4a",
+  "validation_summary_sha256": "bee003e31e7e459d9dee0af3fd40be4c0e0a6576fad2795fab37f295c3e1ef16",
+  "by_process_best_diagnostic": {
+    "PBF_POLYMER": "geometric",
+    "VPP": "height_neural",
+    "PBF_METAL": "height_neural",
+    "MEX": "height_neural"
+  },
+  "selection_rule": "Lowest mean exact six-query candidate-union objective on validation; no test access",
+  "frozen_at_utc": "2026-09-30T12:02:32.312848+00:00",
+  "product_candidate": "height_neural",
+  "product_candidate_scope": {
+    "angle_degrees": [
+      45.0
+    ],
+    "conditions": [
+      [
+        "MEX",
+        "balanced"
+      ],
+      [
+        "MEX",
+        "support"
+      ],
+      [
+        "VPP",
+        "balanced"
+      ],
+      [
+        "PBF_METAL",
+        "balanced"
+      ],
+      [
+        "PBF_POLYMER",
+        "height"
+      ]
+    ]
+  },
+  "polymer_policy": "exact geometric height only; same choices as height_neural, no neural contribution claimed",
+  "candidate_pool": "same 384 sphere/24 facet pool with frozen v4 continuous refinements; exclude existing 26+18 rows",
+  "product_gate": "Accept only if fresh test mean utility improves over legacy and blind with group bootstrap95 upper<0; no scope expansion or tuning from test cases; assess process-specific worse cases and added cost before deployment.",
+  "validation_control_comparisons": {
+    "legacy": {
+      "cases": 225,
+      "better": 32,
+      "same": 191,
+      "worse": 2,
+      "mean_difference": -0.0042629829117645885,
+      "group_mean_difference": -0.0042629829117645885,
+      "grouped_bootstrap95": [
+        -0.00741460031570657,
+        -0.0014731770828372796
+      ]
+    },
+    "blind": {
+      "cases": 225,
+      "better": 34,
+      "same": 191,
+      "worse": 0,
+      "mean_difference": -0.004259978871870638,
+      "group_mean_difference": -0.0042599788718706375,
+      "grouped_bootstrap95": [
+        -0.0074682561574361955,
+        -0.0015784223837167638
+      ]
+    },
+    "geometric": {
+      "cases": 225,
+      "better": 21,
+      "same": 193,
+      "worse": 11,
+      "mean_difference": -0.002672760165252912,
+      "group_mean_difference": -0.0026727601652529118,
+      "grouped_bootstrap95": [
+        -0.005693942054404347,
+        -0.0004478438866760066
+      ]
+    }
+  },
+  "test_started": false
+}

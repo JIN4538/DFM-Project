@@ -1,0 +1,132 @@
+{
+  "id": "swept_462c9d2a_0374",
+  "dataset": "CadQuarry",
+  "group": "cq:swept:{\"version\": 2, \"volume\": 983.0, \"surface_area\": 1330.0, \"principal_moments\": [24300.0, 288000.0, 305000.0], \"n_faces\": 3, \"n_edges\": 3, \"n_vertices\": 2}",
+  "split": "test",
+  "process": "VPP",
+  "priority": "balanced",
+  "candidate_oracle": {
+    "legacy": 0.029277157676727235,
+    "blind": 0.029277157676727235,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "actual_product": {
+    "legacy": 0.029277157676727235,
+    "blind": 0.029277157676727235,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "common_reference_product": {
+    "legacy": 0.029277157676727235,
+    "blind": 0.029277157676727235,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.3063838993014897,
+        -0.6717192568189879,
+        0.6744791666666667
+      ],
+      "selected_name": "AI \ud655\uc7a5 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.3063838993014897,
+        -0.6717192568189879,
+        0.6744791666666667
+      ],
+      "own_reference_score": 0.029277157676727235,
+      "fixed_reference_score": 0.029277157676727235,
+      "oracle_score": 0.029277157676727235,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.3063838993014897,
+        -0.6717192568189879,
+        0.6744791666666667
+      ],
+      "selected_name": "AI \ud655\uc7a5 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.3063838993014897,
+        -0.6717192568189879,
+        0.6744791666666667
+      ],
+      "own_reference_score": 0.029277157676727235,
+      "fixed_reference_score": 0.029277157676727235,
+      "oracle_score": 0.029277157676727235,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.2302294255507986,
+        0.6354967501961396,
+        -0.7369791666666667
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.2302294255507986,
+        0.6354967501961396,
+        -0.7369791666666667
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.2302294255507986,
+        0.6354967501961396,
+        -0.7369791666666667
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.2302294255507986,
+        0.6354967501961396,
+        -0.7369791666666667
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.2302294255507986,
+        0.6354967501961396,
+        -0.7369791666666667
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.2302294255507986,
+        0.6354967501961396,
+        -0.7369791666666667
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "39ce2c6818eadddff18e8e7f3a336291cd98b61995c1aa87988ea93ebfe439f7"
+}

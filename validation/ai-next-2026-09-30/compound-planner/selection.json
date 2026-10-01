@@ -1,0 +1,92 @@
+{
+  "selected": "gb120-d4",
+  "models": {
+    "gb80-d3": {
+      "queries": 240,
+      "best_in_budget": 232,
+      "mean_regret": 0.001509917129725001,
+      "maximum_regret": 0.19215404437100003,
+      "portable_max_difference": 0.0
+    },
+    "gb120-d4": {
+      "queries": 240,
+      "best_in_budget": 234,
+      "mean_regret": 0.00042259391633750015,
+      "maximum_regret": 0.02842241249199995,
+      "portable_max_difference": 0.0
+    },
+    "extra96-d10": {
+      "queries": 240,
+      "best_in_budget": 234,
+      "mean_regret": 0.0006032535773583338,
+      "maximum_regret": 0.050307356573999984,
+      "portable_max_difference": 1.0658141036401503e-14
+    }
+  },
+  "validation": {
+    "learned": {
+      "queries": 240,
+      "better": 27,
+      "same": 213,
+      "worse": 0,
+      "proposal_adopted": 27,
+      "mean_seconds": 0.021629166666707535,
+      "completed_configurations": 1437
+    },
+    "greedy": {
+      "queries": 240,
+      "better": 19,
+      "same": 221,
+      "worse": 0,
+      "proposal_adopted": 19,
+      "mean_seconds": 0.004700000000002547,
+      "completed_configurations": 1437
+    },
+    "random": {
+      "queries": 240,
+      "better": 9,
+      "same": 231,
+      "worse": 0,
+      "proposal_adopted": 9,
+      "mean_seconds": 0.002620833333344308,
+      "completed_configurations": 1437
+    },
+    "all": {
+      "queries": 240,
+      "better": 27,
+      "same": 213,
+      "worse": 0,
+      "proposal_adopted": 27,
+      "mean_seconds": 0.010791666666621798,
+      "completed_configurations": 4689
+    },
+    "hybrid": {
+      "queries": 240,
+      "better": 27,
+      "same": 213,
+      "worse": 0,
+      "proposal_adopted": 27,
+      "mean_seconds": 0.008770833333346672,
+      "completed_configurations": 2868
+    }
+  },
+  "learned_vs": {
+    "greedy": {
+      "better": 12,
+      "same": 228,
+      "worse": 0
+    },
+    "random": {
+      "better": 19,
+      "same": 221,
+      "worse": 0
+    },
+    "all": {
+      "better": 0,
+      "same": 239,
+      "worse": 1
+    }
+  },
+  "seconds": 86.75,
+  "source_unchanged": true
+}

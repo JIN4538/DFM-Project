@@ -1,0 +1,236 @@
+........................................................................ [  5%]
+............................................................F........... [ 11%]
+..................................................F..................... [ 16%]
+....................................FF.................................. [ 22%]
+........................................................................ [ 27%]
+........................................................................ [ 33%]
+........................................................................ [ 38%]
+........................................................................ [ 44%]
+........................................................................ [ 49%]
+........................................................................ [ 55%]
+...............F........................................................ [ 60%]
+.............................F.......................................... [ 66%]
+........................................................................ [ 72%]
+........................................................................ [ 77%]
+...................................................................F.... [ 83%]
+........................................................................ [ 88%]
+........................................................................ [ 94%]
+........................................................................ [ 99%]
+...                                                                      [100%]
+================================== FAILURES ===================================
+______ test_real_sphere_does_not_gain_height_from_new_mesh_orientations _______
+
+    def test_real_sphere_does_not_gain_height_from_new_mesh_orientations():
+        from amdfm.io import load_model
+        from amdfm.analysis import review
+        path = Path(__file__).parents[1] / 'examples/cad/12_sphere.step'
+        model = load_model(path.read_bytes(), path.name)
+        profile = Profile(process='PBF_POLYMER')
+        report = review(model, profile, dense=True)
+        original = deepcopy(report)
+        result = extend_review_orientations(model, profile, report, timeout_s=30.)
+        assert result['neural_search']['status'] == 'complete'
+>       assert result['neural_search']['measured_count'] > 0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'measured_count'
+
+tests_v3\test_ai_search_resolution.py:99: KeyError
+_____ test_blank_tool_inputs_need_only_one_review_and_export_same_values ______
+
+    def test_blank_tool_inputs_need_only_one_review_and_export_same_values():
+        app = _open()
+        assert app.toggle(key="cnc_auto_tool").value is True
+        app.checkbox(key="cnc_visibility").uncheck()
+        report = _submit(app, diameter=None, flute=None, reach=None)
+        profile = report["profile"]
+        assert profile["tool_diameter_mm"] == pytest.approx(2.4)
+        assert profile["flute_length_mm"] >= 20.
+        assert profile["reach_mm"] >= profile["flute_length_mm"]
+        assert set(report["tool_recommendation"]["automatic_fields"]) == {
+            "tool_diameter_mm", "flute_length_mm", "reach_mm"}
+        pocket = next(x for x in report["findings"] if x["id"] == "cnc_rectangular_pockets")
+        measurement = pocket["measurements"]["pockets"][0]
+        assert not measurement["width_too_small"]
+        assert not measurement["exceeds_flute_length"]
+        assert not measurement["exceeds_reach"]
+        # An exact internal right angle still needs a separate geometry action.
+        assert pocket["status"] == "attention"
+        assert app.number_input(key="cnc_diameter").value is None
+        metrics = {x.label: x.value for x in app.metric}
+        assert metrics["����� ���� �� �ڵ�"] == "2.4 mm"
+>       assert not app.get("plotly_chart")
+E       AssertionError: assert not [UnknownElement()]
+E        +  where [UnknownElement()] = get('plotly_chart')
+E        +    where get = AppTest(\n    _script_path='C:\\Users\\JIN\\AppData\\Local\\Temp\\tmp24ytxx9m\\cf6e237753d3a9779a187c27e767c419',\n    d...       }\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).get
+
+tests_v3\test_automatic_tooling_ui.py:31: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 11:03:38.664 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions _
+
+    def test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions():
+        app = _open()
+        report = _submit(app)
+        pocket = next(item for item in report["findings"] if item["id"] == "cnc_rectangular_pockets")
+        assert pocket["measurements"]["pockets"][0]["width_mm"] == pytest.approx(3.)
+        assert pocket["measurements"]["pockets"][0]["wall_height_mm"] == pytest.approx(20.)
+        assert app.session_state["cnc_location_details"] is False
+>       assert not app.get("plotly_chart")
+E       AssertionError: assert not [UnknownElement()]
+E        +  where [UnknownElement()] = get('plotly_chart')
+E        +    where get = AppTest(\n    _script_path='C:\\Users\\JIN\\AppData\\Local\\Temp\\tmp24ytxx9m\\cf6e237753d3a9779a187c27e767c419',\n    d...       }\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).get
+
+tests_v3\test_cnc_conclusion_ui.py:44: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 11:04:51.697 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_____ test_changed_conditions_clear_old_result_and_restart_at_conclusion ______
+
+    def test_changed_conditions_clear_old_result_and_restart_at_conclusion():
+        app = _open()
+        _submit(app)
+        app.toggle(key="cnc_location_details").set_value(True).run()
+        assert app.get("plotly_chart")
+        app.number_input(key="cnc_diameter").set_value(2.).run()
+        assert not app.exception
+        assert not app.get("download_button")
+        report = _submit(app, diameter=2.)
+        assert report["profile"]["tool_diameter_mm"] == 2.
+        assert app.session_state["cnc_location_details"] is False
+>       assert not app.get("plotly_chart")
+E       AssertionError: assert not [UnknownElement()]
+E        +  where [UnknownElement()] = get('plotly_chart')
+E        +    where get = AppTest(\n    _script_path='C:\\Users\\JIN\\AppData\\Local\\Temp\\tmp24ytxx9m\\cf6e237753d3a9779a187c27e767c419',\n    d...       }\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).get
+
+tests_v3\test_cnc_conclusion_ui.py:83: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 11:04:52.415 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+____ test_missing_tool_input_is_visible_and_user_can_opt_out_of_visibility ____
+
+    def test_missing_tool_input_is_visible_and_user_can_opt_out_of_visibility():
+        app = open_view("01_rectangular_pocket")
+        app.toggle(key="cnc_auto_tool").set_value(False)
+        app.checkbox(key="cnc_visibility").uncheck()
+        report = submit(app)
+        assert report["visibility"] is None
+        measurements = {item.label: item.value for item in app.metric}
+        assert measurements["����� ����"] == "���Է�"
+        assert measurements["�� ����"] == "���Է�"
+        assert measurements["���� �� ���� ����"] == "���Է�"
+        assert any("�߰� Ȯ��" in x.value for x in app.caption)
+        app.button(key="cnc_learned_cnc_visibility").click().run()
+>       assert not app.exception
+E       assert not ElementList(_list=[Exception(message='There are multiple `plotly_chart` elements with the same auto-generated ID. When...\\elements\\lib\\utils.py", line 158, in _register_element_id\n    raise StreamlitDuplicateElementId(element_type)'])])
+E        +  where ElementList(_list=[Exception(message='There are multiple `plotly_chart` elements with the same auto-generated ID. When...\\elements\\lib\\utils.py", line 158, in _register_element_id\n    raise StreamlitDuplicateElementId(element_type)'])]) = AppTest(\n    _script_path='C:\\Users\\JIN\\AppData\\Local\\Temp\\tmp24ytxx9m\\6814b71111eb900af9bc985b9af83762',\n    d...       }\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception
+
+tests_v3\test_machining_decisions_ui.py:158: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 11:08:26.475 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-30 11:08:29.611 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 827, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\AppData\Local\Temp\tmp24ytxx9m\6814b71111eb900af9bc985b9af83762", line 10, in <module>
+    render_machining(model(), '01_rectangular_pocket', b"", "decision-ui-test")
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\dfm\machining_view.py", line 499, in render_machining
+    _render_machining_location(model, report, direction, lookup)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\dfm\machining_view.py", line 558, in _render_machining_location
+    st.plotly_chart(machining_figure(model, report, selected, direction=direction, cad_face_ids=highlighted), width="stretch", config={"scrollZoom": False})
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 725, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\plotly_chart.py", line 751, in plotly_chart
+    plotly_chart_proto.id = compute_and_register_element_id(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 273, in compute_and_register_element_id
+    _register_element_id(ctx, element_type, element_id)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 158, in _register_element_id
+    raise StreamlitDuplicateElementId(element_type)
+streamlit.errors.StreamlitDuplicateElementId: There are multiple `plotly_chart` elements with the same auto-generated ID. When this element is created, it is assigned an internal ID based on the element type and provided parameters. Multiple elements with the same type and parameters will cause this error.
+
+To fix this error, please pass a unique `key` argument to the `plotly_chart` element.
+_ test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting _
+
+    def test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting():
+        app = AppTest.from_file(str(APP), default_timeout=60).run()
+        app.selectbox(key='cad_example').select('������ü �� 10��20��30 mm').run()
+        app.checkbox(key='use_build_MEX').set_value(True)
+        for axis in 'XYZ':
+>           app.number_input(key=f'build_{axis}_MEX').set_value(1.)
+
+tests_v3\test_navigation_ux.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1460: in set_value
+    return super().set_value(v)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:252: in set_value
+    self._assert_can_interact()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = NumberInput(key='build_X_MEX', disabled=True, _value=InitialValue(), label='X ���� (mm)', min=1.0, step=0.01)
+
+    def _assert_can_interact(self) -> None:
+        """Reject interactions that a browser user cannot perform."""
+        if getattr(self.proto, "disabled", False):
+            key_part = f" (key={self.key!r})" if self.key else ""
+>           raise AppTestError(
+                f"Cannot update a disabled {self.type} widget{key_part}. "
+                "A browser user cannot interact with a disabled widget."
+            )
+E           streamlit.testing.v1.errors.AppTestError: Cannot update a disabled number_input widget (key='build_X_MEX'). A browser user cannot interact with a disabled widget.
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:245: AppTestError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 11:10:07.566 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_process_calibrations_are_independent_and_survive_round_trips ______
+
+    def test_process_calibrations_are_independent_and_survive_round_trips():
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        assert not app.exception
+        for index, (process, values) in enumerate(SETTINGS.items()):
+            if app.selectbox(key="process").value != process:
+                app.selectbox(key="process").select(process).run()
+            assert not app.exception
+            # Opening a new process must not inherit the previous process's calibration.
+            assert app.selectbox(key=f"machine_{process}").value == "��Ȯ��"
+            assert app.selectbox(key=f"material_{process}").value == "��Ȯ��"
+            assert app.text_input(key=f"slicer_{process}").value == "��Ȯ��"
+            assert app.number_input(key=f"wall_limit_{process}").value == DEFAULT_WALL[process]
+            assert app.number_input(key=f"hole_limit_{process}").value is None
+>           assert app.text_input(key=f"basis_{process}").value.startswith("�� �⺻ �� �񱳰�")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_process_ui.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[TextInput(key='slicer_MEX', _value=InitialValue(), label='�����̼�������'), TextInput(key='advisor_api_key'...������ ����մϴ�. ���ϡ��������� �������� �ʽ��ϴ�.'), TextInput(key='advisor_model', _value=InitialValue(), label='API ��', max_chars=100)])
+key = 'basis_MEX'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'basis_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 11:10:57.470 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED tests_v3/test_ai_search_resolution.py::test_real_sphere_does_not_gain_height_from_new_mesh_orientations
+FAILED tests_v3/test_automatic_tooling_ui.py::test_blank_tool_inputs_need_only_one_review_and_export_same_values
+FAILED tests_v3/test_cnc_conclusion_ui.py::test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions
+FAILED tests_v3/test_cnc_conclusion_ui.py::test_changed_conditions_clear_old_result_and_restart_at_conclusion
+FAILED tests_v3/test_machining_decisions_ui.py::test_missing_tool_input_is_visible_and_user_can_opt_out_of_visibility
+FAILED tests_v3/test_navigation_ux.py::test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting
+FAILED tests_v3/test_process_ui.py::test_process_calibrations_are_independent_and_survive_round_trips
+7 failed, 1292 passed in 858.02s (0:14:18)

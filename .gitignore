@@ -8,5 +8,7 @@ validation/v3/external-quick/
 validation/v3/release-cases-01/*_full.json
 validation/v3/release-cases-01/*_quick.json
 *.log
+!validation/workspace-archive-2026-10-01/**/*.log
+!validation/publication-2026-10-01/*.log
 dist/
 logs/

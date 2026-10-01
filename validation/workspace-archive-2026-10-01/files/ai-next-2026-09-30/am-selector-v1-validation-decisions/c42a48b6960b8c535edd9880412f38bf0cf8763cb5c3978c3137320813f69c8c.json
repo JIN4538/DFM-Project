@@ -1,0 +1,201 @@
+{
+  "id": "153959",
+  "dataset": "Thingi10K",
+  "group": "thing:61534",
+  "split": "validation",
+  "process": "PBF_POLYMER",
+  "priority": "height",
+  "candidate_oracle": {
+    "legacy": 0.005383995314533885,
+    "blind": 0.0011409782883629455,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "learned": 0.005383995314533885,
+    "uncertainty05": 0.0,
+    "uncertainty1": 0.0,
+    "retain2_learned": 0.005383995314533885
+  },
+  "actual_product": {
+    "legacy": 0.005383995314533885,
+    "blind": 0.0011409782883629455,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "learned": 0.005383995314533885,
+    "uncertainty05": 0.0,
+    "uncertainty1": 0.0,
+    "retain2_learned": 0.005383995314533885
+  },
+  "common_reference_product": {
+    "legacy": 0.005383995314533885,
+    "blind": 0.0011409782883629455,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "learned": 0.005383995314533885,
+    "uncertainty05": 0.0,
+    "uncertainty1": 0.0,
+    "retain2_learned": 0.005383995314533885
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        0.5772797324759494,
+        -0.7973664919761586,
+        -0.17593972816317183
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.5772797324759494,
+        -0.7973664919761586,
+        -0.17593972816317183
+      ],
+      "own_reference_score": 0.005383995314533885,
+      "fixed_reference_score": 0.005383995314533885,
+      "oracle_score": 0.005383995314533885,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.42581219178567065,
+        -0.8430091381789676,
+        -0.3286633083771866
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.42581219178567065,
+        -0.8430091381789676,
+        -0.3286633083771866
+      ],
+      "own_reference_score": 0.0011409782883629455,
+      "fixed_reference_score": 0.0011409782883629455,
+      "oracle_score": 0.0011409782883629455,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "learned": {
+      "selected_direction": [
+        0.5772797324759494,
+        -0.7973664919761586,
+        -0.17593972816317183
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.5772797324759494,
+        -0.7973664919761586,
+        -0.17593972816317183
+      ],
+      "own_reference_score": 0.005383995314533885,
+      "fixed_reference_score": 0.005383995314533885,
+      "oracle_score": 0.005383995314533885,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty1": {
+      "selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.4299506914174926,
+        0.8409420541167602,
+        0.3285709429750355
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "retain2_learned": {
+      "selected_direction": [
+        0.5772797324759494,
+        -0.7973664919761586,
+        -0.17593972816317183
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.5772797324759494,
+        -0.7973664919761586,
+        -0.17593972816317183
+      ],
+      "own_reference_score": 0.005383995314533885,
+      "fixed_reference_score": 0.005383995314533885,
+      "oracle_score": 0.005383995314533885,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "dd5243576d4f09aef6619a1d5dec58786c02ec828b20730c5bd744d75fad044b"
+}

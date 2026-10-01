@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="44" time="209.420" timestamp="2026-09-30T19:00:23.937748+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_novice_workflow" name="test_optional_settings_explain_thresholds_and_hide_unused_build_dimensions" time="0.623" /><testcase classname="tests_v3.test_novice_workflow" name="test_conclusion_reaches_another_issue_in_one_click_and_keeps_ready_measurements" time="15.237" /><testcase classname="tests_v3.test_conditions_ui" name="test_preview_is_not_application_and_reference_material_cannot_apply" time="5.755" /><testcase classname="tests_v3.test_conditions_ui" name="test_am_apply_changes_real_review_and_tracks_override_and_disabled_build" time="0.512"><failure message="AttributeError: 'NoneType' object has no attribute 'startswith'">library = &lt;dfm.conditions.ConditionLibrary object at 0x00000160F2EED130&gt;
+
+    def test_am_apply_changes_real_review_and_tracks_override_and_disabled_build(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        _apply(app, "am-wall")
+        assert app.number_input(key="wall_limit_MEX").value == 5.
+        assert not app.checkbox(key="use_build_MEX").value
+        assert [app.session_state[f"build_{axis}_MEX"] for axis in "XYZ"] == [120., 130., 140.]
+&gt;       assert not any(w.key.startswith('build_') for w in app.number_input)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_conditions_ui.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+.0 = &lt;generator object ElementList.__iter__ at 0x00000160B2C93F40&gt;
+
+&gt;   assert not any(w.key.startswith('build_') for w in app.number_input)
+                   ^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'startswith'
+
+tests_v3\test_conditions_ui.py:83: AttributeError</failure></testcase><testcase classname="tests_v3.test_conditions_ui" name="test_condition_switches_are_separate_and_clear_resets_baseline" time="1.598" /><testcase classname="tests_v3.test_conditions_ui" name="test_stale_database_blocks_review_until_reapply_or_clear" time="0.770" /><testcase classname="tests_v3.test_conditions_ui" name="test_cnc_application_keeps_mount_reach_unknown_and_changes_feature_comparison" time="6.409" /><testcase classname="tests_v3.test_conditions_ui" name="test_published_library_can_be_applied_in_all_supported_process_views" time="19.838" /><testcase classname="tests_v3.test_navigation_ux" name="test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis" time="3.029" /><testcase classname="tests_v3.test_navigation_ux" name="test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting" time="13.258" /><testcase classname="tests_v3.test_app" name="test_initial_wall_is_bounded_and_manual_retry_gets_full_budget" time="2.133" /><testcase classname="tests_v3.test_app" name="test_complete_design_workflow_and_stale_results" time="6.482"><failure message="KeyError: '비교 기준'">def test_complete_design_workflow_and_stale_results():
+        app=AppTest.from_file(str(APP),default_timeout=45).run()
+        assert not app.exception
+        next(b for b in app.button if b.label == "설계 검토").click().run()
+        assert not app.exception
+        assert any(row.value == '종합 결론' for row in app.subheader)
+        assert not app.get('plotly_chart')
+        app.toggle(key='am_location_details').set_value(True).run()
+        app.selectbox(key='highlight_finding').set_value('wall').run()
+&gt;       assert {row.label: row.value for row in app.metric}['비교 기준'] == '1.2 mm'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: '비교 기준'
+
+tests_v3\test_app.py:48: KeyError</failure></testcase><testcase classname="tests_v3.test_app" name="test_wall_review_stays_attached_and_exportable" time="3.126" /><testcase classname="tests_v3.test_app" name="test_design_comparison_and_cura_example_workflow" time="15.913" /><testcase classname="tests_v3.test_app" name="test_custom_direction_comparison_application_and_stale_exports" time="18.804" /><testcase classname="tests_v3.test_app" name="test_non_fdm_sections_work_and_exports_preserve_measurements[VPP]" time="6.417" /><testcase classname="tests_v3.test_app" name="test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_POLYMER]" time="6.539" /><testcase classname="tests_v3.test_app" name="test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_METAL]" time="6.606" /><testcase classname="tests_v3.test_app" name="test_event_section_default_and_switch_keep_result_method_visible" time="5.392"><failure message="assert False&#10; +  where False = any(&lt;generator object test_event_section_default_and_switch_keep_result_method_visible.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000160F65A8FB0&gt;)">def test_event_section_default_and_switch_keep_result_method_visible():
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key="process").select("VPP").run()
+        next(b for b in app.button if b.label == "설계 검토").click().run()
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+        app.segmented_control(key="detail_focus").set_value("단면").run()
+        assert app.selectbox(key="section_method").value.startswith("자동")
+        app.button(key="run_sections").click().run()
+        assert not app.exception
+        result=app.session_state["report"]["details"]["sections"]
+        assert result["sampling"]=="events"
+        assert result['requested_sampling']=='auto' and result['fallback_performed'] is False
+        assert result["status"] in ("complete","partial")
+        app.selectbox(key="section_method").select("균등 간격 · 높이별 비교").run()
+        assert app.session_state["report"]["details"]["sections"]["sampling"]=="events"
+        # The stored method remains available in the compact result's methodology
+        # expander even when the user changes the next-run sampling control.
+        calculation_scope=next(x for x in app.expander if x.label=='계산 확인 · 부피 검산과 적용 범위')
+        assert any(element.value=='형상 변화 기준' for element in calculation_scope.caption)
+&gt;       assert any("이전 설정으로 계산한 결과" in element.value for element in app.info)
+E       assert False
+E        +  where False = any(&lt;generator object test_event_section_default_and_switch_keep_result_method_visible.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000160F65A8FB0&gt;)
+
+tests_v3\test_app.py:181: AssertionError</failure></testcase><testcase classname="tests_v3.test_app" name="test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile" time="33.095" /><testcase classname="tests_v3.test_app" name="test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart" time="16.046" /><testcase classname="tests_v3.test_direction_current_fit_ui" name="test_current_only_fit_direction_view_preserves_result_without_apply_button[False]" time="0.296" /><testcase classname="tests_v3.test_direction_current_fit_ui" name="test_current_only_fit_direction_view_preserves_result_without_apply_button[True]" time="0.522" /><testcase classname="tests_v3.test_workflow_ux" name="test_zero_quick_candidates_retains_wall_and_layer_pending_actions" time="0.056" /><testcase classname="tests_v3.test_workflow_ux" name="test_intentional_unlimited_build_space_is_not_an_unfinished_or_failed_check" time="0.054" /><testcase classname="tests_v3.test_workflow_ux" name="test_non_mex_does_not_require_a_mex_layer_check[VPP]" time="0.047" /><testcase classname="tests_v3.test_workflow_ux" name="test_non_mex_does_not_require_a_mex_layer_check[PBF_POLYMER]" time="0.052" /><testcase classname="tests_v3.test_workflow_ux" name="test_non_mex_does_not_require_a_mex_layer_check[PBF_METAL]" time="0.049" /><testcase classname="tests_v3.test_workflow_ux" name="test_completed_optional_sections_are_not_required_for_a_blanket_pass" time="0.055" /><testcase classname="tests_v3.test_workflow_ux" name="test_angle_boundary_does_not_lose_its_next_action_when_strict_candidates_are_empty" time="0.045" /><testcase classname="tests_v3.test_workflow_ux" name="test_recorded_wall_measured_without_criterion_is_still_actionable" time="0.047" /><testcase classname="tests_v3.test_workflow_ux" name="test_partial_wall_never_inherits_observed_finding_as_a_pass" time="0.055" /><testcase classname="tests_v3.test_workflow_ux" name="test_wall_criterion_clear_is_scoped_and_still_leaves_unrun_layers" time="0.049" /><testcase classname="tests_v3.test_workflow_ux" name="test_enabled_build_mismatch_is_prioritized_ahead_of_unrun_details" time="0.050" /><testcase classname="tests_v3.test_workflow_ux" name="test_absent_analytic_holes_does_not_demand_a_meaningless_hole_limit" time="0.055" /><testcase classname="tests_v3.test_workflow_ux" name="test_summary_does_not_mutate_audit_report" time="0.048" /><testcase classname="tests_v3.test_workflow_ux" name="test_direction_goal_ranking_respects_enabled_space_before_metric[\ub192\uc774\ub97c \ub0ae\ucd94\uae30-height_mm-values0-expected0]" time="0.001" /><testcase classname="tests_v3.test_workflow_ux" name="test_direction_goal_ranking_respects_enabled_space_before_metric[\ud558\ud5a5\uba74 \ud6c4\ubcf4 \uc904\uc774\uae30-overhang_projected_area_sum_mm2-values1-expected1]" time="0.001" /><testcase classname="tests_v3.test_workflow_ux" name="test_direction_goal_ranking_respects_enabled_space_before_metric[\ud3c9\ud3c9\ud55c \ubc14\ub2e5 \ub113\ud788\uae30-contact_triangle_area_mm2-values2-expected2]" time="0.001" /><testcase classname="tests_v3.test_workflow_ux" name="test_unmeasured_direction_metric_is_not_ranked_as_zero" time="0.001" /><testcase classname="tests_v3.test_cnc_conclusion_ui" name="test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions" time="8.008" /><testcase classname="tests_v3.test_cnc_conclusion_ui" name="test_changed_conditions_clear_old_result_and_restart_at_conclusion" time="3.388" /><testcase classname="tests_v3.test_cnc_conclusion_ui" name="test_external_feature_location_and_main_location_can_be_open_together" time="0.910" /><testcase classname="tests_v3.test_cnc_conclusion_ui" name="test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence" time="5.643" /></testsuite></testsuites>

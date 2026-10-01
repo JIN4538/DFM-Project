@@ -1,0 +1,4244 @@
+[
+  {
+    "file": "examples/machining/01_rectangular_pocket.step",
+    "source_sha256": "0b166a129be0c0dbed9c541149c780438d7f6711b519cd42087302fc51055de0",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.203999999999951
+  },
+  {
+    "file": "examples/machining/02_narrow_deep_pocket.step",
+    "source_sha256": "c91ebf2cfb1fa629da812dd85e20f9d3a0636ba231030331393f299b64fc89e1",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.093999999999824
+  },
+  {
+    "file": "examples/machining/03_rounded_pocket.step",
+    "source_sha256": "90d9dcb235228c3d9a912a6756236551713426d640be5c5b5d2640faa660a627",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [
+        {
+          "face_ids": [
+            7
+          ],
+          "reason": "intersecting_or_incomplete_wall"
+        },
+        {
+          "face_ids": [
+            9
+          ],
+          "reason": "intersecting_or_incomplete_wall"
+        },
+        {
+          "face_ids": [
+            11
+          ],
+          "reason": "intersecting_or_incomplete_wall"
+        },
+        {
+          "face_ids": [
+            13
+          ],
+          "reason": "intersecting_or_incomplete_wall"
+        }
+      ],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.3279999999999745
+  },
+  {
+    "file": "examples/machining/04_vertical_hole.step",
+    "source_sha256": "b4f73860206c82f4b620727c7c7c1cf800d0b88c32d2558de77ca5276f5a1362",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "covered_count": 1,
+          "total": 1
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 7,
+          "face_ids": [
+            7
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 6.0,
+          "depth_mm": 15.0,
+          "cylindrical_length_mm": 15.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              20.0,
+              15.0,
+              0.0
+            ],
+            [
+              20.0,
+              15.0,
+              15.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              20.0,
+              15.0,
+              0.0
+            ],
+            [
+              20.0,
+              15.0,
+              15.0
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              14
+            ],
+            [
+              10
+            ]
+          ],
+          "area_mm2": 282.7433388230815,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.359000000000151
+  },
+  {
+    "file": "examples/machining/05_side_hole.step",
+    "source_sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          "covered_count": 1,
+          "total": 1
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 6,
+          "face_ids": [
+            6
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.0,
+          "depth_mm": 40.0,
+          "cylindrical_length_mm": 40.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              15.0,
+              7.5
+            ],
+            [
+              40.0,
+              15.0,
+              7.5
+            ]
+          ],
+          "entry_directions": [
+            [
+              -1.0,
+              -0.0,
+              -0.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              15.0,
+              7.5
+            ],
+            [
+              40.0,
+              15.0,
+              7.5
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            7
+          ],
+          "rim_edge_ids": [
+            [
+              5
+            ],
+            [
+              14
+            ]
+          ],
+          "area_mm2": 502.65482457436684,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": true,
+          "axis_angle_deg": 0.0,
+          "entry_blocked": false,
+          "entry_matches_direction": true
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.3599999999999
+  },
+  {
+    "file": "examples/machining/06_boss.step",
+    "source_sha256": "ce585776e811a8493571a9b3e30176729347b5b3cb3c19c335c96168efa507e2",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.219000000000051
+  },
+  {
+    "file": "examples/machining/07_sealed_cavity.step",
+    "source_sha256": "2747c4f21c568040bd607275956557aab4dfc52b0551a3229b687d26907ce5d0",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.375
+  },
+  {
+    "file": "examples/machining/08_open_channel.step",
+    "source_sha256": "7ae7f3e62f2d15a004edb4878e6dfdbdabbba85a3dc85ca7f12c2969bad39bf0",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.343000000000075
+  },
+  {
+    "file": "examples/machining/09_island_pocket.step",
+    "source_sha256": "96fe83ab5fee9dc186c5783c9890a5c4a264c3b45487b98e6286f16322d26d56",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.218999999999824
+  },
+  {
+    "file": "examples/machining/10_plain_block.step",
+    "source_sha256": "3feb928e54e967a07e89c1275ab0639df2f7aff7f737ae0572399ab04c4a1c23",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.234000000000151
+  },
+  {
+    "file": "examples/machining/11_rotated_pocket.step",
+    "source_sha256": "ae879dfc8f1d4fe3d818050fad7d92ce86791f893bc17037b423bbd04d7062f1",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.328999999999951
+  },
+  {
+    "file": "examples/machining/12_two_solids.step",
+    "source_sha256": "8643ed53835034110d449c4bba0a23ec740ec4c29ae8ad139deba7709972efd5",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "unavailable",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "unavailable",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "unavailable",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "unavailable",
+      "reason": "Valid single STEP solid required"
+    },
+    "solids": 2,
+    "seconds": 4.186999999999898
+  },
+  {
+    "file": "examples/public_demo/cadquarry_block_block_462c9d.step",
+    "source_sha256": "d8f8a98c69384fa7c48e3cfe7a42058f43362080cc647a98fd0ced6337446939",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 4,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 4,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 4,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "covered_count": 4,
+          "total": 4
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 7,
+          "face_ids": [
+            7
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 26.4,
+          "cylindrical_length_mm": 26.4,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -17.654,
+              -9.065,
+              -13.2
+            ],
+            [
+              -17.654,
+              -9.065,
+              13.2
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -17.654,
+              -9.065,
+              -13.2
+            ],
+            [
+              -17.654,
+              -9.065,
+              13.2
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              17
+            ],
+            [
+              10
+            ]
+          ],
+          "area_mm2": 356.6335980355133,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 8,
+          "face_ids": [
+            8
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 26.4,
+          "cylindrical_length_mm": 26.4,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              17.654,
+              -9.065,
+              -13.2
+            ],
+            [
+              17.654,
+              -9.065,
+              13.2
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              17.654,
+              -9.065,
+              -13.2
+            ],
+            [
+              17.654,
+              -9.065,
+              13.2
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              18
+            ],
+            [
+              11
+            ]
+          ],
+          "area_mm2": 356.6335980355133,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 9,
+          "face_ids": [
+            9
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 26.4,
+          "cylindrical_length_mm": 26.4,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -17.654,
+              9.065,
+              -13.2
+            ],
+            [
+              -17.654,
+              9.065,
+              13.2
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -17.654,
+              9.065,
+              -13.2
+            ],
+            [
+              -17.654,
+              9.065,
+              13.2
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              19
+            ],
+            [
+              12
+            ]
+          ],
+          "area_mm2": 356.6335980355133,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 10,
+          "face_ids": [
+            10
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 26.4,
+          "cylindrical_length_mm": 26.4,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              17.654,
+              9.065,
+              -13.2
+            ],
+            [
+              17.654,
+              9.065,
+              13.2
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              17.654,
+              9.065,
+              -13.2
+            ],
+            [
+              17.654,
+              9.065,
+              13.2
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              20
+            ],
+            [
+              13
+            ]
+          ],
+          "area_mm2": 356.6335980355133,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.438000000000102
+  },
+  {
+    "file": "examples/public_demo/cadquarry_bracket_bracket_462c.step",
+    "source_sha256": "59cdb4f3e826163fe5bfbeb14147bc01cd33b338be659fcfd844df93a75af2cc",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "covered_count": 1,
+          "total": 1
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 9,
+          "face_ids": [
+            9
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 8.0,
+          "cylindrical_length_mm": 8.0,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              17.705,
+              0.0,
+              0.0
+            ],
+            [
+              17.705,
+              0.0,
+              8.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              17.705,
+              0.0,
+              0.0
+            ],
+            [
+              17.705,
+              0.0,
+              8.0
+            ]
+          ],
+          "rim_face_ids": [
+            4,
+            7
+          ],
+          "rim_edge_ids": [
+            [
+              16
+            ],
+            [
+              20
+            ]
+          ],
+          "area_mm2": 108.07078728348888,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.3279999999999745
+  },
+  {
+    "file": "examples/public_demo/cadquarry_compound_compound_462.step",
+    "source_sha256": "f8634d8bc61648f689c40bef08663b8254eff4a3b416b6e5891755193b2ce43c",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.218999999999824
+  },
+  {
+    "file": "examples/public_demo/cadquarry_enclosure_enclosure_46.step",
+    "source_sha256": "4b3c730817423bac6042983c08effc41e200e4691b836fed52a9982ccfe28fde",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "unavailable",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "unavailable",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "unavailable",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "unavailable",
+      "reason": "Valid single STEP solid required"
+    },
+    "solids": 0,
+    "seconds": 4.109000000000151
+  },
+  {
+    "file": "examples/public_demo/cadquarry_flanged_flanged_462c.step",
+    "source_sha256": "3ef2a5d51bcab5105af84a985dfa71cb790485ae42ea65bba817a10b2db2ecbd",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 7,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 7,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 7,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "covered_count": 7,
+          "total": 7
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 3,
+          "face_ids": [
+            3
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 6.899999999999999,
+          "cylindrical_length_mm": 6.899999999999999,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              13.8,
+              -23.90230114445,
+              0.0
+            ],
+            [
+              13.8,
+              -23.90230114445,
+              6.899999999999999
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              13.8,
+              -23.90230114445,
+              0.0
+            ],
+            [
+              13.8,
+              -23.90230114445,
+              6.9
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            10
+          ],
+          "rim_edge_ids": [
+            [
+              2
+            ],
+            [
+              12
+            ]
+          ],
+          "area_mm2": 93.21105403200916,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 4,
+          "face_ids": [
+            4
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 6.899999999999999,
+          "cylindrical_length_mm": 6.899999999999999,
+          "axis": [
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -13.8,
+              -23.90230114445,
+              0.0
+            ],
+            [
+              -13.8,
+              -23.90230114445,
+              6.899999999999999
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -13.8,
+              -23.90230114445,
+              0.0
+            ],
+            [
+              -13.8,
+              -23.90230114445,
+              6.9
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            10
+          ],
+          "rim_edge_ids": [
+            [
+              3
+            ],
+            [
+              14
+            ]
+          ],
+          "area_mm2": 93.21105403200916,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 5,
+          "face_ids": [
+            5
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 6.899999999999999,
+          "cylindrical_length_mm": 6.899999999999999,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              27.6,
+              0.0,
+              0.0
+            ],
+            [
+              27.6,
+              0.0,
+              6.899999999999999
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              27.6,
+              0.0,
+              0.0
+            ],
+            [
+              27.6,
+              0.0,
+              6.9
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            10
+          ],
+          "rim_edge_ids": [
+            [
+              4
+            ],
+            [
+              16
+            ]
+          ],
+          "area_mm2": 93.21105403200914,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 6,
+          "face_ids": [
+            6
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 6.899999999999999,
+          "cylindrical_length_mm": 6.899999999999999,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              13.8,
+              23.902301144451,
+              0.0
+            ],
+            [
+              13.8,
+              23.902301144451,
+              6.899999999999999
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              13.8,
+              23.902301144451,
+              0.0
+            ],
+            [
+              13.8,
+              23.902301144451,
+              6.9
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            10
+          ],
+          "rim_edge_ids": [
+            [
+              5
+            ],
+            [
+              18
+            ]
+          ],
+          "area_mm2": 93.21105403200916,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 7,
+          "face_ids": [
+            7
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 16.2,
+          "depth_mm": 55.8,
+          "cylindrical_length_mm": 55.8,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              55.8
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              55.8
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            11
+          ],
+          "rim_edge_ids": [
+            [
+              6
+            ],
+            [
+              20
+            ]
+          ],
+          "area_mm2": 2839.87409513903,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 8,
+          "face_ids": [
+            8
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 6.899999999999999,
+          "cylindrical_length_mm": 6.899999999999999,
+          "axis": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -27.6,
+              3.380025165647e-15,
+              0.0
+            ],
+            [
+              -27.6,
+              3.380025165647e-15,
+              6.899999999999999
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -27.6,
+              3.380025165647e-15,
+              0.0
+            ],
+            [
+              -27.6,
+              3.380025165647e-15,
+              6.9
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            10
+          ],
+          "rim_edge_ids": [
+            [
+              7
+            ],
+            [
+              22
+            ]
+          ],
+          "area_mm2": 93.21105403200914,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 9,
+          "face_ids": [
+            9
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.3,
+          "depth_mm": 6.899999999999999,
+          "cylindrical_length_mm": 6.899999999999999,
+          "axis": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -13.8,
+              23.902301144451,
+              0.0
+            ],
+            [
+              -13.8,
+              23.902301144451,
+              6.899999999999999
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -13.8,
+              23.902301144451,
+              0.0
+            ],
+            [
+              -13.8,
+              23.902301144451,
+              6.9
+            ]
+          ],
+          "rim_face_ids": [
+            1,
+            10
+          ],
+          "rim_edge_ids": [
+            [
+              8
+            ],
+            [
+              24
+            ]
+          ],
+          "area_mm2": 93.21105403200916,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.531000000000176
+  },
+  {
+    "file": "examples/public_demo/cadquarry_gear_gear_462c9c8.step",
+    "source_sha256": "9172be4f72d89c2bd6eeb7bacf8e1d502e434df6e51833708bec7437e83d3928",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "covered_count": 1,
+          "total": 1
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 63,
+          "face_ids": [
+            63
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 6.0,
+          "depth_mm": 34.0,
+          "cylindrical_length_mm": 34.0,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              34.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              34.0
+            ]
+          ],
+          "rim_face_ids": [
+            2,
+            4
+          ],
+          "rim_edge_ids": [
+            [
+              64
+            ],
+            [
+              125
+            ]
+          ],
+          "area_mm2": 640.884901332318,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 5.0
+  },
+  {
+    "file": "examples/public_demo/cadquarry_lofted_lofted_462c9.step",
+    "source_sha256": "1f11406034478d56fe2aa5914fb951241f67ba638c0bbe918bc5b39ea54dffb9",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 1,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "covered_count": 1,
+          "total": 1
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 8,
+          "face_ids": [
+            8
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 8.9,
+          "depth_mm": 47.7,
+          "cylindrical_length_mm": 47.7,
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              47.7
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              47.7
+            ]
+          ],
+          "rim_face_ids": [
+            2,
+            4
+          ],
+          "rim_edge_ids": [
+            [
+              9
+            ],
+            [
+              15
+            ]
+          ],
+          "area_mm2": 1333.7003292284749,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.343999999999824
+  },
+  {
+    "file": "examples/public_demo/cadquarry_plate_plate_462c9d.step",
+    "source_sha256": "b4a97a52a1185137451bcbce98f09847253c5a9bc8f9b5db723a5fce35f3b765",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.2029999999999745
+  },
+  {
+    "file": "examples/public_demo/cadquarry_profiled_profiled_462.step",
+    "source_sha256": "cd552a7187b472fe0464cbd9076363f36a9416a72aed166ff47b4a459d9f54a4",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.0629999999998745
+  },
+  {
+    "file": "examples/public_demo/cadquarry_revolved_revolved_462.step",
+    "source_sha256": "6470e0f34def398d17e83521b81d1a3fffb222c3a4e9a48bdc8213d664b5274b",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.141000000000076
+  },
+  {
+    "file": "examples/public_demo/cadquarry_ribbed_ribbed_462c9.step",
+    "source_sha256": "e85b059a14c5dddb143dbdb9aa46e8fb5f630632358845565ac5e616955af429",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.3279999999999745
+  },
+  {
+    "file": "examples/public_demo/cadquarry_sketched_sketched_462.step",
+    "source_sha256": "400607acfe49ed84f3601e493daf1fae3aa51720807824555bae65d0c8f4473e",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.2650000000001
+  },
+  {
+    "file": "examples/public_demo/cadquarry_swept_swept_462c9f.step",
+    "source_sha256": "5c686e4916c7465bcb87f0349dfebe145a2b76ea1b82e9cd33a70f72a8c15a87",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 0,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.531000000000176
+  },
+  {
+    "file": "examples/public_demo/nist_am_test_artifact_1.step",
+    "source_sha256": "74e88ac8e49031a8708bf201447b9a2f68223afae807d38614b9938cc967f97e",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 12,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 12,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 12,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "covered_count": 10,
+          "total": 12
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 1,
+          "face_ids": [
+            1,
+            260
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 3.0000000000000067,
+          "depth_mm": 3.0000000000000053,
+          "cylindrical_length_mm": 3.0000000000000053,
+          "axis": [
+            0.7071067811865476,
+            -0.7071067811865475,
+            -0.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -7.07106781186549,
+              63.63961030678928,
+              -5.0
+            ],
+            [
+              -4.9497474683058424,
+              61.518289963229634,
+              -5.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.7071067811865476,
+              0.7071067811865475,
+              0.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -7.071067811865485,
+              63.63961030678927,
+              -5.0
+            ]
+          ],
+          "rim_face_ids": [
+            47,
+            261
+          ],
+          "rim_edge_ids": [
+            [
+              324,
+              2
+            ],
+            [
+              614,
+              4
+            ]
+          ],
+          "area_mm2": 28.27433388230822,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 45.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 2,
+          "face_ids": [
+            2,
+            243
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 5.999999999999998,
+          "depth_mm": 5.000000000000011,
+          "cylindrical_length_mm": 5.000000000000011,
+          "axis": [
+            0.7071067811865476,
+            -0.7071067811865475,
+            -0.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -28.28427124746191,
+              42.42640687119286,
+              -5.0
+            ],
+            [
+              -24.748737341529164,
+              38.890872965260115,
+              -5.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.7071067811865476,
+              0.7071067811865475,
+              0.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -28.284271247461906,
+              42.42640687119285,
+              -5.0
+            ]
+          ],
+          "rim_face_ids": [
+            47,
+            244
+          ],
+          "rim_edge_ids": [
+            [
+              337,
+              6
+            ],
+            [
+              589,
+              8
+            ]
+          ],
+          "area_mm2": 94.24777960769389,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 45.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 3,
+          "face_ids": [
+            3,
+            236
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 0.2500000000000002,
+          "depth_mm": 2.0,
+          "cylindrical_length_mm": 2.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              7.07106781186547,
+              42.426406871192846,
+              -2.0
+            ],
+            [
+              7.07106781186547,
+              42.426406871192846,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              7.07106781186547,
+              42.426406871192846,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            237,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              580,
+              12
+            ],
+            [
+              141,
+              10
+            ]
+          ],
+          "area_mm2": 1.570796326794898,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 4,
+          "face_ids": [
+            4,
+            234
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 0.5000000000000004,
+          "depth_mm": 2.0,
+          "cylindrical_length_mm": 2.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              10.606601717798204,
+              38.89087296526011,
+              -2.0
+            ],
+            [
+              10.606601717798204,
+              38.89087296526011,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              10.606601717798204,
+              38.89087296526011,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            235,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              579,
+              16
+            ],
+            [
+              142,
+              14
+            ]
+          ],
+          "area_mm2": 3.141592653589796,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 5,
+          "face_ids": [
+            5,
+            232
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 1.0000000000000009,
+          "depth_mm": 2.0,
+          "cylindrical_length_mm": 2.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              14.14213562373094,
+              35.35533905932737,
+              -2.0
+            ],
+            [
+              14.14213562373094,
+              35.35533905932737,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              14.14213562373094,
+              35.35533905932737,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            233,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              578,
+              20
+            ],
+            [
+              143,
+              18
+            ]
+          ],
+          "area_mm2": 6.283185307179592,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 6,
+          "face_ids": [
+            6,
+            230
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 1.5000000000000013,
+          "depth_mm": 2.0,
+          "cylindrical_length_mm": 2.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              17.677669529663678,
+              31.81980515339463,
+              -2.0
+            ],
+            [
+              17.677669529663678,
+              31.81980515339463,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              17.677669529663678,
+              31.81980515339463,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            231,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              577,
+              24
+            ],
+            [
+              144,
+              22
+            ]
+          ],
+          "area_mm2": 9.42477796076939,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 7,
+          "face_ids": [
+            7,
+            228
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 2.0000000000000018,
+          "depth_mm": 2.0,
+          "cylindrical_length_mm": 2.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              21.21320343559642,
+              28.2842712474619,
+              -2.0
+            ],
+            [
+              21.21320343559642,
+              28.2842712474619,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              21.21320343559642,
+              28.2842712474619,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            229,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              576,
+              28
+            ],
+            [
+              145,
+              26
+            ]
+          ],
+          "area_mm2": 12.566370614359183,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 13,
+          "face_ids": [
+            13,
+            91
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.0000000000000036,
+          "depth_mm": 10.0,
+          "cylindrical_length_mm": 10.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              60.00000000000001,
+              6.284670049996888e-13,
+              -10.0
+            ],
+            [
+              60.00000000000001,
+              6.284670049996888e-13,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              60.00000000000001,
+              6.284670049996888e-13,
+              -10.0
+            ],
+            [
+              60.00000000000001,
+              6.284670049996888e-13,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            51,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              350,
+              52
+            ],
+            [
+              204,
+              50
+            ]
+          ],
+          "area_mm2": 125.66370614359182,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 14,
+          "face_ids": [
+            14,
+            90
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.000000000000001,
+          "depth_mm": 10.0,
+          "cylindrical_length_mm": 10.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              -60.00000000000001,
+              -10.0
+            ],
+            [
+              0.0,
+              -60.00000000000001,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              -60.00000000000001,
+              -10.0
+            ],
+            [
+              0.0,
+              -60.00000000000001,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            51,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              351,
+              56
+            ],
+            [
+              203,
+              54
+            ]
+          ],
+          "area_mm2": 125.66370614359175,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 15,
+          "face_ids": [
+            15,
+            89
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.0000000000000036,
+          "depth_mm": 10.0,
+          "cylindrical_length_mm": 10.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -60.00000000000001,
+              -2.0948900166656295e-13,
+              -10.0
+            ],
+            [
+              -60.00000000000001,
+              -2.0948900166656295e-13,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -60.00000000000001,
+              -2.0948900166656295e-13,
+              -10.0
+            ],
+            [
+              -60.00000000000001,
+              -2.0948900166656295e-13,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            51,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              352,
+              60
+            ],
+            [
+              202,
+              58
+            ]
+          ],
+          "area_mm2": 125.66370614359182,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 28,
+          "face_ids": [
+            28,
+            64
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 4.000000000000001,
+          "depth_mm": 10.0,
+          "cylindrical_length_mm": 10.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              60.00000000000001,
+              -10.0
+            ],
+            [
+              0.0,
+              60.00000000000001,
+              0.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              60.00000000000001,
+              -10.0
+            ],
+            [
+              0.0,
+              60.00000000000001,
+              0.0
+            ]
+          ],
+          "rim_face_ids": [
+            51,
+            36
+          ],
+          "rim_edge_ids": [
+            [
+              353,
+              112
+            ],
+            [
+              195,
+              110
+            ]
+          ],
+          "area_mm2": 125.66370614359175,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 33,
+          "face_ids": [
+            33,
+            55
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 10.0,
+          "depth_mm": 17.0,
+          "cylindrical_length_mm": 17.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              0.0,
+              -10.0
+            ],
+            [
+              0.0,
+              0.0,
+              7.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              0.0,
+              -10.0
+            ],
+            [
+              0.0,
+              0.0,
+              7.0
+            ]
+          ],
+          "rim_face_ids": [
+            51,
+            54
+          ],
+          "rim_edge_ids": [
+            [
+              354,
+              132
+            ],
+            [
+              356,
+              130
+            ]
+          ],
+          "area_mm2": 534.0707511102648,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 7.359000000000151
+  },
+  {
+    "file": "examples/learning_validation/hole_review/blind-3-0.step",
+    "source_sha256": "ddb8a18cb86b511f16d50cc48ffa27bacc1f2538bfde71b2411c7acf926706ee",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "covered_count": 3,
+          "total": 3
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 7,
+          "face_ids": [
+            7
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 6.0,
+          "depth_mm": 7.2,
+          "cylindrical_length_mm": 7.2,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -14.0,
+              0.0,
+              4.8
+            ],
+            [
+              -14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "rim_face_ids": [
+            10,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              17
+            ],
+            [
+              10
+            ]
+          ],
+          "area_mm2": 135.71680263507912,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 8,
+          "face_ids": [
+            8
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 6.0,
+          "depth_mm": 7.2,
+          "cylindrical_length_mm": 7.2,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              0.0,
+              4.8
+            ],
+            [
+              0.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "rim_face_ids": [
+            11,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              19
+            ],
+            [
+              11
+            ]
+          ],
+          "area_mm2": 135.71680263507912,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 9,
+          "face_ids": [
+            9
+          ],
+          "body_id": 1,
+          "hole_kind": "blind",
+          "diameter_mm": 6.0,
+          "depth_mm": 7.2,
+          "cylindrical_length_mm": 7.2,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              14.0,
+              0.0,
+              4.8
+            ],
+            [
+              14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "rim_face_ids": [
+            12,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              21
+            ],
+            [
+              12
+            ]
+          ],
+          "area_mm2": 135.71680263507912,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.375
+  },
+  {
+    "file": "examples/learning_validation/hole_review/split-3-1.step",
+    "source_sha256": "bbbab7d447e0f134a656cee68a7f81bfcb2ac3a6f8ea890e01840b7d40f5650a",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            0.6739462648208295,
+            -0.08630598666137819,
+            0.7337218197658146
+          ],
+          "covered_count": 3,
+          "total": 3
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 7,
+          "face_ids": [
+            7,
+            8
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 5.4,
+          "depth_mm": 17.30000000000053,
+          "cylindrical_length_mm": 17.30000000000053,
+          "axis": [
+            0.6739462648208294,
+            -0.08630598666137818,
+            0.7337218197658145
+          ],
+          "axis_endpoints_mm": [
+            [
+              47.54496729550634,
+              -38.64388539804272,
+              25.903236259570285
+            ],
+            [
+              59.20423767690705,
+              -40.136978967284605,
+              38.59662374151927
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.6739462648208294,
+              0.08630598666137818,
+              -0.7337218197658145
+            ],
+            [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              47.544967295507,
+              -38.64388539804,
+              25.903236259571
+            ],
+            [
+              59.204237676911,
+              -40.13697896728,
+              38.596623741516
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              19,
+              20
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          "area_mm2": 293.4875856983799,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 47.62762501716959,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 9,
+          "face_ids": [
+            9,
+            10
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 5.4,
+          "depth_mm": 17.300000000000473,
+          "cylindrical_length_mm": 17.300000000000473,
+          "axis": [
+            0.6739462648208294,
+            -0.08630598666137818,
+            0.7337218197658145
+          ],
+          "axis_endpoints_mm": [
+            [
+              56.99999999999934,
+              -31.999999999992717,
+              18.00000000000028
+            ],
+            [
+              68.6592703814,
+              -33.4930935692346,
+              30.69338748194922
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.6739462648208294,
+              0.08630598666137818,
+              -0.7337218197658145
+            ],
+            [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              57.0,
+              -32.0,
+              18.0
+            ],
+            [
+              68.659270381404,
+              -33.49309356924,
+              30.693387481945
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              21,
+              22
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "area_mm2": 293.4875856983799,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 47.62762501716959,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 11,
+          "face_ids": [
+            11,
+            12
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 5.4,
+          "depth_mm": 17.300000000000797,
+          "cylindrical_length_mm": 17.300000000000797,
+          "axis": [
+            0.6739462648208294,
+            -0.08630598666137818,
+            0.7337218197658145
+          ],
+          "axis_endpoints_mm": [
+            [
+              66.45503270449265,
+              -25.356114601952754,
+              10.096763740429628
+            ],
+            [
+              78.11430308589354,
+              -26.849208171194665,
+              22.790151222378803
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.6739462648208294,
+              0.08630598666137818,
+              -0.7337218197658145
+            ],
+            [
+              0.6739462648208294,
+              -0.08630598666137818,
+              0.7337218197658145
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              66.455032704493,
+              -25.35611460195,
+              10.096763740429
+            ],
+            [
+              78.114303085897,
+              -26.84920817119,
+              22.790151222375
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              23,
+              24
+            ],
+            [
+              14,
+              15
+            ]
+          ],
+          "area_mm2": 293.4875856983783,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 47.62762501716959,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.4220000000000255
+  },
+  {
+    "file": "examples/learning_validation/hole_review/through-3-0.step",
+    "source_sha256": "ea57f787832b98c569acce9873593d82709171781d825ffef5a992ea90acc9be",
+    "checks": [
+      {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "passed": true,
+        "holes": 3,
+        "inventory_status": "complete",
+        "raw_face_review_preserved": true,
+        "coverage_preserved": true
+      },
+      {
+        "auto_entry_direction": {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "covered_count": 3,
+          "total": 3
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "input_and_neural_unchanged": true,
+    "inventory": {
+      "version": "native-circular-rims-1",
+      "method": "Native cylinder area + closed incident circular rim wires",
+      "holes": [
+        {
+          "face_id": 7,
+          "face_ids": [
+            7
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "cylindrical_length_mm": 12.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              -14.0,
+              0.0,
+              0.0
+            ],
+            [
+              -14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              -14.0,
+              0.0,
+              0.0
+            ],
+            [
+              -14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              16
+            ],
+            [
+              10
+            ]
+          ],
+          "area_mm2": 226.1946710584652,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 8,
+          "face_ids": [
+            8
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "cylindrical_length_mm": 12.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              17
+            ],
+            [
+              11
+            ]
+          ],
+          "area_mm2": 226.1946710584652,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        },
+        {
+          "face_id": 9,
+          "face_ids": [
+            9
+          ],
+          "body_id": 1,
+          "hole_kind": "through",
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "cylindrical_length_mm": 12.0,
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_endpoints_mm": [
+            [
+              14.0,
+              0.0,
+              0.0
+            ],
+            [
+              14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "entry_directions": [
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "entry_centers_mm": [
+            [
+              14.0,
+              0.0,
+              0.0
+            ],
+            [
+              14.0,
+              0.0,
+              12.0
+            ]
+          ],
+          "rim_face_ids": [
+            5,
+            3
+          ],
+          "rim_edge_ids": [
+            [
+              18
+            ],
+            [
+              12
+            ]
+          ],
+          "area_mm2": 226.1946710584652,
+          "measurement_source": "native-circular-rims-1",
+          "axis_aligned": false,
+          "axis_angle_deg": 90.0,
+          "entry_blocked": false,
+          "entry_matches_direction": false
+        }
+      ],
+      "excluded": [],
+      "status": "complete"
+    },
+    "solids": 1,
+    "seconds": 4.358999999999924
+  }
+]

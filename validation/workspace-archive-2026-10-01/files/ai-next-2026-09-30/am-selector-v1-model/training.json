@@ -1,0 +1,39 @@
+{
+  "train_groups": 300,
+  "train_candidate_rows": 601855,
+  "members": [
+    {
+      "member": 0,
+      "sampled_groups": 194,
+      "trees": 180,
+      "leaves": 31,
+      "parity_error": 0.0
+    },
+    {
+      "member": 1,
+      "sampled_groups": 181,
+      "trees": 180,
+      "leaves": 31,
+      "parity_error": 0.0
+    },
+    {
+      "member": 2,
+      "sampled_groups": 193,
+      "trees": 180,
+      "leaves": 31,
+      "parity_error": 0.0
+    }
+  ],
+  "maximum_portable_error": 0.0,
+  "seconds": 136.19187860000056,
+  "weights_sha256": "20e02474872a7511cd40f6b19edd407d41b9d8173e81cd0ee41bed22202abf4a",
+  "pipeline_sha256": "e28637a9560494b8bcae266f9cc2595269d004397635c0ad4e76b007edbcc902",
+  "feature_sha256": "71f73d7feb58efe059810eba11714b30556a73a710d881ca88a20b4396bbfd04",
+  "predefined_validation_policies": [
+    "learned",
+    "uncertainty05",
+    "uncertainty1",
+    "retain2_learned"
+  ],
+  "selection": "Choose mean exact six-query utility on validation. Freeze policy before any new test measurements."
+}

@@ -1,0 +1,337 @@
+{
+  "model_sha256": "b4460a2e4cfd9c32585bfcc9b88a93c5f8d63951eb20057a1e368a6882684482",
+  "scope": "Post-freeze systematic adjacent floating point probes; not used for fitting or model selection. Teacher is production _length_comparison.",
+  "rows": [
+    {
+      "diameter_mm": 1e-08,
+      "tool_mm": 1e-08,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1e-08,
+      "tool_mm": 1.1e-08,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1e-08,
+      "tool_mm": 1.1000000000000001e-08,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1e-08,
+      "tool_mm": 1.1000000000000003e-08,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1e-06,
+      "tool_mm": 1e-06,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1e-06,
+      "tool_mm": 1.0009999999999998e-06,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1e-06,
+      "tool_mm": 1.001e-06,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1e-06,
+      "tool_mm": 1.0010000000000002e-06,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.0001,
+      "tool_mm": 0.0001,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.0001,
+      "tool_mm": 0.000100001,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.0001,
+      "tool_mm": 0.00010000100000000001,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.0001,
+      "tool_mm": 0.00010000100000000002,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.01,
+      "tool_mm": 0.01,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.01,
+      "tool_mm": 0.010000000999999998,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.01,
+      "tool_mm": 0.010000001,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.01,
+      "tool_mm": 0.010000001000000001,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.1,
+      "tool_mm": 0.1,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.1,
+      "tool_mm": 0.10000000099999999,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.1,
+      "tool_mm": 0.100000001,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 0.1,
+      "tool_mm": 0.10000000100000002,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1.0,
+      "tool_mm": 1.0,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1.0,
+      "tool_mm": 1.0000000009999999,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1.0,
+      "tool_mm": 1.000000001,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1.0,
+      "tool_mm": 1.0000000010000003,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 10.0,
+      "tool_mm": 10.0,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 10.0,
+      "tool_mm": 10.000000000999998,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 10.0,
+      "tool_mm": 10.000000001,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 10.0,
+      "tool_mm": 10.000000001000002,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000.0,
+      "tool_mm": 1000.0,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000.0,
+      "tool_mm": 1000.0000000999999,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000.0,
+      "tool_mm": 1000.0000001,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000.0,
+      "tool_mm": 1000.0000001000001,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000000.0,
+      "tool_mm": 1000000.0,
+      "teacher_mask": 0,
+      "raw_model_mask": 0,
+      "final_state": "clear",
+      "origin": "learned_verified",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000000.0,
+      "tool_mm": 1000000.0000999998,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000000.0,
+      "tool_mm": 1000000.0001,
+      "teacher_mask": 0,
+      "raw_model_mask": 1,
+      "final_state": "clear",
+      "origin": "rule_fallback",
+      "false_clear": false
+    },
+    {
+      "diameter_mm": 1000000.0,
+      "tool_mm": 1000000.0001000001,
+      "teacher_mask": 1,
+      "raw_model_mask": 1,
+      "final_state": "confirmed",
+      "origin": "learned_verified",
+      "false_clear": false
+    }
+  ],
+  "summary": {
+    "rows": 36,
+    "in_domain": 36,
+    "raw_mismatches": 13,
+    "out_of_domain": 0,
+    "verified_false_clear": 0
+  }
+}

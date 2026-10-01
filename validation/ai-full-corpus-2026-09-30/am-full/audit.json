@@ -1,0 +1,368 @@
+{
+  "counts": [
+    [
+      "CadQuarry",
+      "test",
+      0,
+      9,
+      9
+    ],
+    [
+      "CadQuarry",
+      "test",
+      1,
+      136,
+      136
+    ],
+    [
+      "CadQuarry",
+      "train",
+      0,
+      60,
+      60
+    ],
+    [
+      "CadQuarry",
+      "train",
+      1,
+      628,
+      628
+    ],
+    [
+      "CadQuarry",
+      "validation",
+      0,
+      11,
+      11
+    ],
+    [
+      "CadQuarry",
+      "validation",
+      1,
+      156,
+      156
+    ],
+    [
+      "PBF-orientation",
+      "test",
+      1,
+      5936,
+      5725
+    ],
+    [
+      "PBF-orientation",
+      "train",
+      1,
+      28272,
+      27400
+    ],
+    [
+      "PBF-orientation",
+      "validation",
+      1,
+      5792,
+      5624
+    ],
+    [
+      "Thingi10K",
+      "test",
+      1,
+      183,
+      49
+    ],
+    [
+      "Thingi10K",
+      "train",
+      0,
+      2,
+      2
+    ],
+    [
+      "Thingi10K",
+      "train",
+      1,
+      1043,
+      227
+    ],
+    [
+      "Thingi10K",
+      "validation",
+      0,
+      1,
+      1
+    ],
+    [
+      "Thingi10K",
+      "validation",
+      1,
+      149,
+      51
+    ]
+  ],
+  "attempted_this_run": 42314,
+  "complete_stream": true,
+  "seconds": 1148.0470000000023,
+  "rejected": [
+    [
+      "{\"id\": \"block_462c9d51_0413\", \"dataset\": \"CadQuarry\", \"family\": \"block\", \"group\": \"cq:block:{\\\"version\\\": 2, \\\"volume\\\": 5790.0, \\\"surface_area\\\": 3240.0, \\\"principal_moments\\\": [338000.0, 400000.0, 631000.0], \\\"n_faces\\\": 26, \\\"n_edges\\\": 64, \\\"n_vertices\\\": 36}\", \"split\": \"train\", \"sha256\": \"e65c7ba8972457e53ef9663c8d345bb02e5d92d98d6ca671bf90c952fa6f1443\", \"faces\": 2588, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"enclosure_462c9c59_0165\", \"dataset\": \"CadQuarry\", \"family\": \"enclosure\", \"group\": \"cq:enclosure:{\\\"version\\\": 2, \\\"volume\\\": 104000.0, \\\"surface_area\\\": 37400.0, \\\"principal_moments\\\": [64299999.99999999, 90000000.0, 117000000.0], \\\"n_faces\\\": 42, \\\"n_edges\\\": 124, \\\"n_vertices\\\": 85}\", \"split\": \"train\", \"sha256\": \"b0b3107ae7496b1166c75e2c618db345603c626f4882d8a143e2b2cde9343ff5\", \"faces\": 3684, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"profiled_462c9d5c_0424\", \"dataset\": \"CadQuarry\", \"family\": \"profiled\", \"group\": \"cq:profiled:{\\\"version\\\": 2, \\\"volume\\\": 107000.0, \\\"surface_area\\\": 28400.0, \\\"principal_moments\\\": [19600000.0, 185000000.0, 185000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"3bc712f437dda31b3c936dcb901e3459eaa54de24e7b519b56c667ce7c3e8dc6\", \"faces\": 3401, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"profiled_462c9dd2_0542\", \"dataset\": \"CadQuarry\", \"family\": \"profiled\", \"group\": \"cq:profiled:{\\\"version\\\": 2, \\\"volume\\\": 13100.0, \\\"surface_area\\\": 8370.0, \\\"principal_moments\\\": [403000.0, 11599999.999999998, 11599999.999999998], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"test\", \"sha256\": \"11847bf31868185bba73d7ae0323145b4c67676a50e35969298738f58bd5c99d\", \"faces\": 5165, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"profiled_462c9e74_0704\", \"dataset\": \"CadQuarry\", \"family\": \"profiled\", \"group\": \"cq:profiled:{\\\"version\\\": 2, \\\"volume\\\": 369000.0, \\\"surface_area\\\": 70400.0, \\\"principal_moments\\\": [130000000.0, 2040000000.0, 2040000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"e3c50a19870d7ec6788685a13740f5c29098d145f7fdfd727586425afcb500e9\", \"faces\": 4031, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9be3_0047\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 6260.0, \\\"surface_area\\\": 3540.0, \\\"principal_moments\\\": [276000.0, 754000.0, 754000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"35bb9f9a1328398d1a47a8a876cb26bc80dd1a22a785c36c78c984f809c752b2\", \"faces\": 2267, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c04_0080\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 143000.0, \\\"surface_area\\\": 32800.0, \\\"principal_moments\\\": [36000000.0, 243000000.0, 243000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"70be4a56103dd78ec6eb1cd9d58efaa1cc8a35ae7dd55ecb9db769cfdba0169c\", \"faces\": 3149, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c05_0081\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 49300.0, \\\"surface_area\\\": 14900.0, \\\"principal_moments\\\": [7360000.0, 29799999.999999996, 29799999.999999996], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"ca60de053dce6fca8d48f56be4efd68cc5c3b33cb5a1f73ec0f522084e4c7848\", \"faces\": 2645, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c14_0096\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 499000.0, \\\"surface_area\\\": 61800.0, \\\"principal_moments\\\": [653000000.0, 653000000.0, 922000000.0], \\\"n_faces\\\": 11, \\\"n_edges\\\": 17, \\\"n_vertices\\\": 11}\", \"split\": \"train\", \"sha256\": \"4d7d22de4180ea5cd3a4c36fd594c91893c9164d9914cf4455dfa4f442c04d4e\", \"faces\": 3885, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c17_0099\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 19800.0, \\\"surface_area\\\": 6290.0, \\\"principal_moments\\\": [3410000.0, 3410000.0, 6010000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"validation\", \"sha256\": \"1e827b8ba20ab015a57db1a409ff6387904018b7a7b3ba61880f3588e130ee92\", \"faces\": 1259, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c1a_0102\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 111000.0, \\\"surface_area\\\": 21300.0, \\\"principal_moments\\\": [47399999.99999999, 59899999.99999999, 59899999.99999999], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"validation\", \"sha256\": \"7f8513b78cb85a14b8e2d4538c0690f1f1ba8e8a1406d9b36d9b2ad3aced7f7f\", \"faces\": 1763, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c1b_0103\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 41300.0, \\\"surface_area\\\": 10100.0, \\\"principal_moments\\\": [10100000.0, 10100000.0, 14699999.999999998], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"a2ec40e74bf39ec4dbb68c5a1e33a1a4ea3086f302f4675a6615a56a0ec53651\", \"faces\": 1259, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c1c_0104\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 51800.0, \\\"surface_area\\\": 14400.0, \\\"principal_moments\\\": [9510000.0, 24799999.999999996, 24799999.999999996], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"f5bb0498c1c42afef5abe5aca4a06a2d0bdffc205b967d5db85248a169b093c4\", \"faces\": 2267, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c25_0113\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 29900.0, \\\"surface_area\\\": 11100.0, \\\"principal_moments\\\": [2800000.0, 16199999.999999998, 16199999.999999998], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"validation\", \"sha256\": \"822f4b5918f1c77398925bc1072cbead5de4b45b1b3b52fbe77b90b6068a0976\", \"faces\": 3681, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c2e_0122\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 1010.0, \\\"surface_area\\\": 998.0, \\\"principal_moments\\\": [15200.0, 29900.0, 29900.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"d7e8fbaf027a0bd2abe984b44ade32ce8fee33fd970ddc08223989eba66497a0\", \"faces\": 2015, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c68_0180\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 2370.0, \\\"surface_area\\\": 1630.0, \\\"principal_moments\\\": [79900.0, 96800.0, 96800.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"05a7d162792f8af7ff8221cc6deda47adf4ee6b4c1cab8651a388262895f28b4\", \"faces\": 1763, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c73_0191\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 17600.0, \\\"surface_area\\\": 6840.0, \\\"principal_moments\\\": [1690000.0, 3760000.0, 3760000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"a4918551879e5e28e6bd2f500c130c4262f67c43bc241894c315eb15d3f92d0e\", \"faces\": 2141, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c7a_0198\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 45600.0, \\\"surface_area\\\": 11200.0, \\\"principal_moments\\\": [11499999.999999998, 12999999.999999998, 12999999.999999998], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"test\", \"sha256\": \"9f086f13fdbefb423a4fc72782ff592ea79321848ccbbfe5edcd3e1aeae26e19\", \"faces\": 2301, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9c88_0212\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 261000.0, \\\"surface_area\\\": 39500.0, \\\"principal_moments\\\": [190000000.0, 262000000.0, 262000000.0], \\\"n_faces\\\": 9, \\\"n_edges\\\": 14, \\\"n_vertices\\\": 9}\", \"split\": \"train\", \"sha256\": \"8619bf1e56df61eab4a5109406e634d74314b378fdddac0d430094920e01bbf1\", \"faces\": 3415, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ca6_0242\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 651.0, \\\"surface_area\\\": 780.0, \\\"principal_moments\\\": [6290.0, 18200.0, 18200.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 7, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"6540146ffa24e3f91ee401e506aa8c99b49b311b882f61e875451afd67b4404c\", \"faces\": 3401, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9cae_0250\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 340000.0, \\\"surface_area\\\": 58200.0, \\\"principal_moments\\\": [154000000.0, 1010000000.0, 1010000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"c0cc68acaf9752c312af7511e2e0748c7694a96098274e12b85845b1660ac66b\", \"faces\": 3149, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9cb9_0261\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 182000.0, \\\"surface_area\\\": 36500.0, \\\"principal_moments\\\": [60699999.99999999, 292000000.0, 292000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"97adff5d7701bc6fc2def3616bf0831dc763eca21e8683097676658b20ae3e70\", \"faces\": 2771, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9cc3_0271\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 101000.0, \\\"surface_area\\\": 25200.0, \\\"principal_moments\\\": [22100000.0, 118000000.0, 118000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"validation\", \"sha256\": \"9708fd2d2571800f3acd3d2c174bf3ea3800632d7fe763827c246ddf31ebc378\", \"faces\": 2897, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9cd4_0288\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 96900.0, \\\"surface_area\\\": 19700.0, \\\"principal_moments\\\": [33800000.0, 53099999.99999999, 53099999.99999999], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"test\", \"sha256\": \"35d990e5e7307f73af8ac8c6cec4d1861a620fd3938bc3595e1dc1318f0bac3c\", \"faces\": 2435, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ce1_0301\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 2060.0, \\\"surface_area\\\": 1640.0, \\\"principal_moments\\\": [47000.0, 106000.0, 106000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"validation\", \"sha256\": \"e2c355252f8c61c3b651e0043e691adfeb976ff8552d9938d1d6e7d0ae898e7f\", \"faces\": 2141, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9cf3_0319\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 78200.0, \\\"surface_area\\\": 17100.0, \\\"principal_moments\\\": [28899999.999999996, 31199999.999999996, 31199999.999999996], \\\"n_faces\\\": 9, \\\"n_edges\\\": 14, \\\"n_vertices\\\": 9}\", \"split\": \"train\", \"sha256\": \"91164a4ca46e74ac5ff69ed18ecac8c335ea588c446d7df6d112e981185113ef\", \"faces\": 3309, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d2f_0379\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 273000.0, \\\"surface_area\\\": 42700.0, \\\"principal_moments\\\": [165000000.0, 368000000.0, 368000000.0], \\\"n_faces\\\": 7, \\\"n_edges\\\": 11, \\\"n_vertices\\\": 7}\", \"split\": \"train\", \"sha256\": \"218c368e40e9d7b7687dd67e8407c187eb262d9aefe7c3ea703999374911a474\", \"faces\": 3443, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d39_0389\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 1360.0, \\\"surface_area\\\": 1300.0, \\\"principal_moments\\\": [19800.0, 69300.0, 69300.0], \\\"n_faces\\\": 9, \\\"n_edges\\\": 14, \\\"n_vertices\\\": 9}\", \"split\": \"train\", \"sha256\": \"ef4193d35150b1152baeaf56807a8fdf739568e80c13ebdd3999d5a86bc16297\", \"faces\": 4305, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d41_0397\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 1140000.0, \\\"surface_area\\\": 124000.0, \\\"principal_moments\\\": [1500000000.0, 6180000000.0, 6180000000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 7, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"7c879ddd969b5562f2a0e7fcb890c3429f10854cc2c40bd91df20c98938c732f\", \"faces\": 3527, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d47_0403\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 75800.0, \\\"surface_area\\\": 15900.0, \\\"principal_moments\\\": [35600000.0, 35600000.0, 65499999.99999999], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"6484736604d00f55ada8d4e64bf0a16ab47a325ef1b5bd1cc898b7f3915fdf5a\", \"faces\": 1133, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d55_0417\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 964.0, \\\"surface_area\\\": 1170.0, \\\"principal_moments\\\": [8730.0, 57600.0, 57600.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"7881611bb7a0d05d514040dd2615401b2d57cd1773d05700c4c1e236298cf6ec\", \"faces\": 3149, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d75_0449\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 93300.0, \\\"surface_area\\\": 22400.0, \\\"principal_moments\\\": [22400000.0, 80000000.0, 80000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"validation\", \"sha256\": \"9f747fdfcc3e295dbc508f3a7b54cd7d1977d3ba0355621d1a23768cdcdc4365\", \"faces\": 2645, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d81_0461\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 280000.0, \\\"surface_area\\\": 44100.0, \\\"principal_moments\\\": [160000000.0, 407000000.0, 407000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"dcaf461c53d908532b18d4d35a28747002c729c5815b9e1866592e78d743791c\", \"faces\": 2267, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d87_0467\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 522000.0, \\\"surface_area\\\": 63400.0, \\\"principal_moments\\\": [551000000.0, 977000000.0, 977000000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 7, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"992240b35a8795b9cde992a92b9880bb1d8bbc9443177e59dcc49ddca4bcedfc\", \"faces\": 3401, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d8d_0473\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 605000.0, \\\"surface_area\\\": 84300.0, \\\"principal_moments\\\": [415000000.0, 2500000000.0, 2500000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"test\", \"sha256\": \"88eed68e0137a391a44313cf04483577a6caf4f1e8c262ce5600f8df98decdb4\", \"faces\": 3023, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d99_0485\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 289.0, \\\"surface_area\\\": 380.0, \\\"principal_moments\\\": [2190.0, 3080.0, 3080.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"4ab63cbda032ccc6a494a556ae5c2fb3cb7b2c2033b808dcd6fa501bf5dcb24d\", \"faces\": 2709, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d9b_0487\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 85300.0, \\\"surface_area\\\": 20000.0, \\\"principal_moments\\\": [22000000.0, 56599999.99999999, 56599999.99999999], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"602a0125beb0b54ee6db76830fe1f6d1bec6a49a356be5b464290bb9aaaed150\", \"faces\": 2267, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9d9d_0489\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 940.0, \\\"surface_area\\\": 863.0, \\\"principal_moments\\\": [18500.0, 19700.0, 19700.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"3c82353933501bf9fa14fef944dc6c8964c9c11743aa8f9ecb490580c0ef2644\", \"faces\": 1637, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9da6_0498\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 29800.0, \\\"surface_area\\\": 8920.0, \\\"principal_moments\\\": [5450000.0, 6680000.0, 6680000.0], \\\"n_faces\\\": 9, \\\"n_edges\\\": 14, \\\"n_vertices\\\": 9}\", \"split\": \"train\", \"sha256\": \"ace1286408e275bb0e09c013574c28488b836472526bcabf673f71e9f3eb7021\", \"faces\": 3309, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9dab_0503\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 9440.0, \\\"surface_area\\\": 3830.0, \\\"principal_moments\\\": [852000.0, 852000.0, 1100000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"b75dfa4971d80908e4b674ed96d05ae94a2c6fd6a30cf1b6543b8b1934a2e4e0\", \"faces\": 1385, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9db8_0516\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 34500.0, \\\"surface_area\\\": 9040.0, \\\"principal_moments\\\": [7370000.0, 7370000.0, 9850000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"validation\", \"sha256\": \"e528dabe81705a79538adbfa1e830ecbad478b2283c3cbddbd8c8f11ec8b3c8d\", \"faces\": 1385, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9dbc_0520\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 133000.0, \\\"surface_area\\\": 31000.0, \\\"principal_moments\\\": [31899999.999999996, 215000000.0, 215000000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"8d8b3c0fc08aa93133ed25fa15a57eb2eb1049a36bd434bf75048759886dc57e\", \"faces\": 3781, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ddb_0551\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 44400.0, \\\"surface_area\\\": 14200.0, \\\"principal_moments\\\": [5550000.0, 29999999.999999996, 29999999.999999996], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"6b797e0cd301e436d1f47611a15f6afe524b688599154a993aa50be0cbf99c72\", \"faces\": 3537, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9de1_0557\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 34000.0, \\\"surface_area\\\": 8870.0, \\\"principal_moments\\\": [7740000.0, 7740000.0, 12799999.999999998], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"9c98094f6de20b08014030659eb42f868c227530ac2544b9e850353f8c34f4dc\", \"faces\": 1259, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9df3_0575\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 252000.0, \\\"surface_area\\\": 44200.0, \\\"principal_moments\\\": [110000000.0, 463000000.0, 463000000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"validation\", \"sha256\": \"bb5a759ab7e9620e336425dc60437b0f1bf80e3a7174e93b1f8f6c488e5a011d\", \"faces\": 3319, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9dff_0587\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 49900.0, \\\"surface_area\\\": 15300.0, \\\"principal_moments\\\": [7200000.0, 32599999.999999996, 32599999.999999996], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"78f2f61336455352b3e827d7377440d647f7072601553f94625b47a052a15cce\", \"faces\": 2771, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e01_0589\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 615000.0, \\\"surface_area\\\": 80300.0, \\\"principal_moments\\\": [492000000.0, 2020000000.0, 2020000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"fb0edc9d596ceb0bb210a7b93299e755f8782f4606296b3460577e860c839594\", \"faces\": 2645, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e27_0627\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 593000.0, \\\"surface_area\\\": 80300.0, \\\"principal_moments\\\": [438000000.0, 2090000000.0, 2090000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"3ecad7655ffaa44c118f936ac694505d4062fca9e22c7cc0ad9e74cbfdb67630\", \"faces\": 2771, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e2d_0633\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 68000.0, \\\"surface_area\\\": 15200.0, \\\"principal_moments\\\": [22100000.0, 25599999.999999996, 25599999.999999996], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"c418f7f0be0048e617a068910c58d0f67eee72ea90f1d51304a51af4531825c2\", \"faces\": 1763, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e2e_0634\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 457000.0, \\\"surface_area\\\": 62900.0, \\\"principal_moments\\\": [336000000.0, 1030000000.0, 1030000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"4d38c10ec38431a2282ef37f075975e976ec2958805f1e49d26396e50f7803d5\", \"faces\": 2393, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e4a_0662\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 5770.0, \\\"surface_area\\\": 3340.0, \\\"principal_moments\\\": [242000.0, 650000.0, 650000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"1b868b7fbdea70cfe9a3247b5bb1e2ca725f7a6344170d7c391d3bae147666da\", \"faces\": 2267, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e4c_0664\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 268000.0, \\\"surface_area\\\": 37100.0, \\\"principal_moments\\\": [233000000.0, 240000000.0, 240000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"2bdcfa769c23dd237eb149801a0e1b0cba77c4668de6a8934baa3c9ff504e691\", \"faces\": 1637, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e54_0672\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 28500.0, \\\"surface_area\\\": 7990.0, \\\"principal_moments\\\": [6160000.0, 6160000.0, 10700000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"validation\", \"sha256\": \"9641c549d3c5ef08e45a7f605a6656f64ef3f9dbe49a5fe3257c2cbe1322d6a9\", \"faces\": 1259, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e7d_0713\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 6100.0, \\\"surface_area\\\": 3080.0, \\\"principal_moments\\\": [381000.0, 474000.0, 474000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"a54a29156903b057af882db842f42170ab5d77b7402aa6f26541aac12e6359a9\", \"faces\": 1763, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e7e_0714\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 13200.0, \\\"surface_area\\\": 4840.0, \\\"principal_moments\\\": [1780000.0, 1780000.0, 3180000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"fc2031d3aa32087f5d26fbaa1de86af651f578d71fc61a60257f0e7059b098c3\", \"faces\": 1259, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9e91_0733\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 122000.0, \\\"surface_area\\\": 22600.0, \\\"principal_moments\\\": [55699999.99999999, 69500000.0, 69500000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"523f7bf38c0906446df2d17a476b4adb6648fa068fd662466b0384d30aa6faeb\", \"faces\": 1763, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ebc_0776\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 2820.0, \\\"surface_area\\\": 2290.0, \\\"principal_moments\\\": [54800.0, 317000.0, 317000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"b97c9ea5d2f39345496a877755a98e278d62e7c4328d8316cb37984fbf7c5608\", \"faces\": 3809, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ec8_0788\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 31000.0, \\\"surface_area\\\": 9100.0, \\\"principal_moments\\\": [5690000.0, 7140000.0, 7140000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"423db8d95c5c98d4ca1848bdc7110600f4d8b34a81155d79548fd4e3c65cba2f\", \"faces\": 1763, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ed6_0802\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 188.0, \\\"surface_area\\\": 286.0, \\\"principal_moments\\\": [1270.0, 1270.0, 1470.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"test\", \"sha256\": \"9b915bcc42daf81a0c9e1cfb3a4a6f316be5e0fadc4a10712ae99a9cc6c9747a\", \"faces\": 1637, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9edb_0807\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 375000.0, \\\"surface_area\\\": 48600.0, \\\"principal_moments\\\": [339000000.0, 485000000.0, 485000000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"6fed2d109e4379d3f549bacca33c5817b9caa4b39481043c8a8e8d5c8fe0c719\", \"faces\": 2397, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ee4_0816\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 21600.0, \\\"surface_area\\\": 14100.0, \\\"principal_moments\\\": [7120000.0, 7120000.0, 13799999.999999998], \\\"n_faces\\\": 5, \\\"n_edges\\\": 7, \\\"n_vertices\\\": 5}\", \"split\": \"validation\", \"sha256\": \"f5b487840b6774500ea191496a68894c16decbc1919b0c689bedcc2b709ef6fd\", \"faces\": 1637, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ee8_0820\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 20900.0, \\\"surface_area\\\": 6320.0, \\\"principal_moments\\\": [3210000.0, 3210000.0, 4420000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"test\", \"sha256\": \"400e0c9f88036c92482d96bd634a7b7c4e4db8c8d5a2430496429c43f75574eb\", \"faces\": 1923, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9ef7_0835\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 145000.0, \\\"surface_area\\\": 26400.0, \\\"principal_moments\\\": [65799999.99999999, 105000000.0, 105000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"369166fd8172a630cdc36aa8da9b94fbf0c4c010cea58c7cf5c00466131ed713\", \"faces\": 1889, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9efa_0838\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 178000.0, \\\"surface_area\\\": 38500.0, \\\"principal_moments\\\": [53399999.99999999, 331000000.0, 331000000.0], \\\"n_faces\\\": 7, \\\"n_edges\\\": 10, \\\"n_vertices\\\": 7}\", \"split\": \"validation\", \"sha256\": \"5372966bd6e9134882c348f8fcec1b45e1cdf2e22575b085d5ec53dacbae56b0\", \"faces\": 4031, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f0a_0854\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 382000.0, \\\"surface_area\\\": 56900.0, \\\"principal_moments\\\": [427000000.0, 587000000.0, 587000000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 7, \\\"n_vertices\\\": 5}\", \"split\": \"test\", \"sha256\": \"b8159b0da10956c440d296beee1075a6571ed5a6a2dd23dccce3a168992090a2\", \"faces\": 2771, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f0f_0859\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 116000.0, \\\"surface_area\\\": 20000.0, \\\"principal_moments\\\": [56499999.99999999, 56499999.99999999, 85000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"test\", \"sha256\": \"73d6887766eb58126baffe155ce4919fcfa1d3f35e00e4f215d409af6e4ad10a\", \"faces\": 1259, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f18_0868\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 128000.0, \\\"surface_area\\\": 27300.0, \\\"principal_moments\\\": [38800000.0, 129000000.0, 129000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"59f7f7f2da3403ed4de0ffa8340329cffbb2c96edfbfa0ce89d228817a5cd197\", \"faces\": 2393, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f24_0880\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 1190000.0, \\\"surface_area\\\": 136000.0, \\\"principal_moments\\\": [2480000000.0, 5830000000.0, 5830000000.0], \\\"n_faces\\\": 11, \\\"n_edges\\\": 17, \\\"n_vertices\\\": 11}\", \"split\": \"train\", \"sha256\": \"d7cbdc940c6a4a13b39b8111e29294b116166a3f04ee12c68541bb88a7df627a\", \"faces\": 4933, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f27_0883\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 16300.0, \\\"surface_area\\\": 7880.0, \\\"principal_moments\\\": [1180000.0, 6350000.0, 6350000.0], \\\"n_faces\\\": 11, \\\"n_edges\\\": 17, \\\"n_vertices\\\": 11}\", \"split\": \"train\", \"sha256\": \"59ac4777587dd2bbd708912e5a7bd7efbfba8c8c9bef38d216fac19f270d3bc9\", \"faces\": 5295, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f28_0884\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 101000.0, \\\"surface_area\\\": 18400.0, \\\"principal_moments\\\": [44700000.0, 44700000.0, 64199999.99999999], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"052a8d043d558d589a80ccb2ff740ce381574c3d36316171d6b0a9abf45fec77\", \"faces\": 1385, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f2a_0886\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 3490.0, \\\"surface_area\\\": 2340.0, \\\"principal_moments\\\": [111000.0, 261000.0, 261000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"2f7751f1977e27c54ce64982a7e977e682a1a928da4bf96319cd7ab919fb7114\", \"faces\": 2141, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f2c_0888\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 26200.0, \\\"surface_area\\\": 9280.0, \\\"principal_moments\\\": [2970000.0, 9370000.0, 9370000.0], \\\"n_faces\\\": 7, \\\"n_edges\\\": 11, \\\"n_vertices\\\": 7}\", \"split\": \"train\", \"sha256\": \"c822defbd010dd8d1176878ad3f5943fc1dae876aa888c9f42a3d439212ed110\", \"faces\": 4177, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f42_0910\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 168000.0, \\\"surface_area\\\": 27200.0, \\\"principal_moments\\\": [107000000.0, 110000000.0, 110000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"b53c6837d1a4f2d4290dcf85f6a9526f9a915b02c4371480ccb8efcc9fb0e705\", \"faces\": 1637, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f52_0926\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 18800.0, \\\"surface_area\\\": 6480.0, \\\"principal_moments\\\": [2540000.0, 3050000.0, 3050000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"035fe9195887c3fb66d31e390329a97d681e071be8925bcda2815b980e447375\", \"faces\": 1763, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f5c_0936\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 458000.0, \\\"surface_area\\\": 61300.0, \\\"principal_moments\\\": [356000000.0, 953000000.0, 953000000.0], \\\"n_faces\\\": 5, \\\"n_edges\\\": 8, \\\"n_vertices\\\": 5}\", \"split\": \"train\", \"sha256\": \"791f685b7b3617ac51e0095aaa9b2e90bc376ac2da36e245ad2647913cccc9e5\", \"faces\": 2775, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f5d_0937\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 696000.0, \\\"surface_area\\\": 89600.0, \\\"principal_moments\\\": [566000000.0, 2770000000.0, 2770000000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"cd0b747d43e658b61dc64ec2b93716db170b1424be6be15ea09fd4a81595b1b6\", \"faces\": 2771, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"revolved_462c9f67_0947\", \"dataset\": \"CadQuarry\", \"family\": \"revolved\", \"group\": \"cq:revolved:{\\\"version\\\": 2, \\\"volume\\\": 109000.0, \\\"surface_area\\\": 19400.0, \\\"principal_moments\\\": [50499999.99999999, 50499999.99999999, 69300000.0], \\\"n_faces\\\": 3, \\\"n_edges\\\": 4, \\\"n_vertices\\\": 3}\", \"split\": \"train\", \"sha256\": \"3d18ff6f3c32411bbdbb5305798ff97eff9fbbc5879b0d7b2de2dfbd7f4b446a\", \"faces\": 1385, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"sketched_462c9db5_0513\", \"dataset\": \"CadQuarry\", \"family\": \"sketched\", \"group\": \"cq:sketched:{\\\"version\\\": 2, \\\"volume\\\": 17000.0, \\\"surface_area\\\": 4500.0, \\\"principal_moments\\\": [1640000.0, 2800000.0, 4020000.0], \\\"n_faces\\\": 8, \\\"n_edges\\\": 17, \\\"n_vertices\\\": 11}\", \"split\": \"train\", \"sha256\": \"6fecce6464904a9f00ed5c21197e30d7084e2096c9724625f3dc9127c49aba57\", \"faces\": 685, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"sketched_462c9f10_0860\", \"dataset\": \"CadQuarry\", \"family\": \"sketched\", \"group\": \"cq:sketched:{\\\"version\\\": 2, \\\"volume\\\": 19700.0, \\\"surface_area\\\": 5180.0, \\\"principal_moments\\\": [2120000.0, 4030000.0, 5700000.0], \\\"n_faces\\\": 13, \\\"n_edges\\\": 30, \\\"n_vertices\\\": 19}\", \"split\": \"test\", \"sha256\": \"20666b8c0469639c1102104f1735e2e50a6aa9a7b8b85dfddba5907c99df72f7\", \"faces\": 1089, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"sketched_462c9f75_0961\", \"dataset\": \"CadQuarry\", \"family\": \"sketched\", \"group\": \"cq:sketched:{\\\"version\\\": 2, \\\"volume\\\": 32200.0, \\\"surface_area\\\": 6150.0, \\\"principal_moments\\\": [4950000.0, 5580000.0, 8380000.0], \\\"n_faces\\\": 11, \\\"n_edges\\\": 25, \\\"n_vertices\\\": 16}\", \"split\": \"train\", \"sha256\": \"da5b56c0c6d4895a43ae69b593fc8248cef7c694ec2adf1dcbd14918ab5086c7\", \"faces\": 708, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"101881\", \"dataset\": \"Thingi10K\", \"family\": \"public_thing\", \"group\": \"thing:35167\", \"split\": \"train\", \"sha256\": \"5f2fba83a47537dd2d2c6aa5b8c581f82f59f2edc630349af9a3bbc65fe54659\", \"faces\": 56946, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"243014\", \"dataset\": \"Thingi10K\", \"family\": \"public_thing\", \"group\": \"thing:117080\", \"split\": \"train\", \"sha256\": \"e71d173d38bca769cb12125dc7b39bc56a0ad0905b9b0efb1de162a53da87380\", \"faces\": 17158, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ],
+    [
+      "{\"id\": \"939889\", \"dataset\": \"Thingi10K\", \"family\": \"public_thing\", \"group\": \"thing:584405\", \"split\": \"validation\", \"sha256\": \"cb85817a5ed3c260f878093634e329481943e441dfea8f297eba8c5504c46ddd\", \"faces\": 2898, \"accepted\": false, \"reason\": \"Not a closed, consistently wound positive volume\"}"
+    ]
+  ],
+  "independent_max_error": 2.1649348980190553e-15,
+  "cross_split_family_count": 0,
+  "query_views_per_mesh": 48,
+  "angles": [
+    25.0,
+    35.0,
+    45.0,
+    60.0,
+    75.0
+  ],
+  "complexity_limit": null,
+  "labels": "Exact original-mesh height and projected downward area. Every accepted mesh checked independently against runtime geometry engine."
+}

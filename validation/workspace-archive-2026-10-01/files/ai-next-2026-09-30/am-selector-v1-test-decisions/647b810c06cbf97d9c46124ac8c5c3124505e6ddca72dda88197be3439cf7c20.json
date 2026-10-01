@@ -1,0 +1,132 @@
+{
+  "id": "88855",
+  "dataset": "Thingi10K",
+  "group": "thing:30415",
+  "split": "test",
+  "process": "MEX",
+  "priority": "balanced",
+  "candidate_oracle": {
+    "legacy": 0.3698548603742119,
+    "blind": 0.3698548603742119,
+    "geometric": 0.3698548603742119,
+    "height_neural": 0.3698548603742119,
+    "uncertainty05": 0.3698548603742119
+  },
+  "actual_product": {
+    "legacy": 0.38309290410207475,
+    "blind": 0.3698548603742119,
+    "geometric": 0.3698548603742119,
+    "height_neural": 0.37565367598709165,
+    "uncertainty05": 0.3741122941137214
+  },
+  "common_reference_product": {
+    "legacy": 0.3698548603742119,
+    "blind": 0.3698548603742119,
+    "geometric": 0.3698548603742119,
+    "height_neural": 0.3698548603742119,
+    "uncertainty05": 0.3698548603742119
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.785038448721663,
+        0.3051818977091538,
+        0.5390534698333038
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.36817620031713816,
+      "fixed_selected_direction": [
+        0.09730574327517362,
+        0.9737592630154052,
+        -0.20572916666666674
+      ],
+      "own_reference_score": 0.38309290410207475,
+      "fixed_reference_score": 0.3698548603742119,
+      "oracle_score": 0.3698548603742119,
+      "actual_winner_gap": 0.013238043727862858
+    },
+    "blind": {
+      "selected_direction": [
+        0.09730574327517362,
+        0.9737592630154052,
+        -0.20572916666666674
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3679648632459024,
+      "fixed_selected_direction": [
+        0.09730574327517362,
+        0.9737592630154052,
+        -0.20572916666666674
+      ],
+      "own_reference_score": 0.3698548603742119,
+      "fixed_reference_score": 0.3698548603742119,
+      "oracle_score": 0.3698548603742119,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.09730574327517362,
+        0.9737592630154052,
+        -0.20572916666666674
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3705942847108157,
+      "fixed_selected_direction": [
+        0.09730574327517362,
+        0.9737592630154052,
+        -0.20572916666666674
+      ],
+      "own_reference_score": 0.3698548603742119,
+      "fixed_reference_score": 0.3698548603742119,
+      "oracle_score": 0.3698548603742119,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.3588685631790301,
+        0.9332972796816265,
+        0.01302083333333337
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3625331949250889,
+      "fixed_selected_direction": [
+        0.09730574327517362,
+        0.9737592630154052,
+        -0.20572916666666674
+      ],
+      "own_reference_score": 0.37565367598709165,
+      "fixed_reference_score": 0.3698548603742119,
+      "oracle_score": 0.3698548603742119,
+      "actual_winner_gap": 0.00579881561287976
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.550117522243527,
+        0.8332946592078894,
+        -0.05468749999999999
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 3",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.35978525790557353,
+      "fixed_selected_direction": [
+        0.09730574327517362,
+        0.9737592630154052,
+        -0.20572916666666674
+      ],
+      "own_reference_score": 0.3741122941137214,
+      "fixed_reference_score": 0.3698548603742119,
+      "oracle_score": 0.3698548603742119,
+      "actual_winner_gap": 0.004257433739509486
+    }
+  },
+  "original_case_sha256": "64813b043d7c89e584ad3c716950ca7819ffe9ebad5f1237429f712fe6c5958c"
+}

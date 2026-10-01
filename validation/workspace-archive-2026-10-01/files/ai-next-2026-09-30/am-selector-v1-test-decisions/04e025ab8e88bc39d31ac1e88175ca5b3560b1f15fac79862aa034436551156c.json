@@ -1,0 +1,132 @@
+{
+  "id": "50879",
+  "dataset": "Thingi10K",
+  "group": "thing:15446",
+  "split": "test",
+  "process": "MEX",
+  "priority": "support",
+  "candidate_oracle": {
+    "legacy": 0.29700426904829086,
+    "blind": 0.29700426904829086,
+    "geometric": 0.29334061481605955,
+    "height_neural": 0.293588765688657,
+    "uncertainty05": 0.29334061481605955
+  },
+  "actual_product": {
+    "legacy": 0.29700426904829086,
+    "blind": 0.29700426904829086,
+    "geometric": 0.29334061481605955,
+    "height_neural": 0.293588765688657,
+    "uncertainty05": 0.29334061481605955
+  },
+  "common_reference_product": {
+    "legacy": 0.29700426904829086,
+    "blind": 0.29700426904829086,
+    "geometric": 0.29334061481605955,
+    "height_neural": 0.293588765688657,
+    "uncertainty05": 0.29334061481605955
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.19082952723685612,
+        -0.9815921028504192,
+        -0.0078125
+      ],
+      "selected_name": "AI \ud655\uc7a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.29333333333333333,
+      "fixed_selected_direction": [
+        -0.19082952723685612,
+        -0.9815921028504192,
+        -0.0078125
+      ],
+      "own_reference_score": 0.29700426904829086,
+      "fixed_reference_score": 0.29700426904829086,
+      "oracle_score": 0.29700426904829086,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.19082952723685612,
+        -0.9815921028504192,
+        -0.0078125
+      ],
+      "selected_name": "AI \ud655\uc7a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.29333333333333333,
+      "fixed_selected_direction": [
+        -0.19082952723685612,
+        -0.9815921028504192,
+        -0.0078125
+      ],
+      "own_reference_score": 0.29700426904829086,
+      "fixed_reference_score": 0.29700426904829086,
+      "oracle_score": 0.29700426904829086,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.1496239377838839,
+        0.9854417683918975,
+        0.08072916666666663
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.29333333333333333,
+      "fixed_selected_direction": [
+        0.1496239377838839,
+        0.9854417683918975,
+        0.08072916666666663
+      ],
+      "own_reference_score": 0.29334061481605955,
+      "fixed_reference_score": 0.29334061481605955,
+      "oracle_score": 0.29334061481605955,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -0.2080607093258617,
+        -0.977934372898113,
+        -0.018844191126010063
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.29333333333333333,
+      "fixed_selected_direction": [
+        -0.2080607093258617,
+        -0.977934372898113,
+        -0.018844191126010063
+      ],
+      "own_reference_score": 0.293588765688657,
+      "fixed_reference_score": 0.293588765688657,
+      "oracle_score": 0.293588765688657,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.1496239377838839,
+        0.9854417683918975,
+        0.08072916666666663
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.29334061481605955,
+      "fixed_selected_direction": [
+        0.1496239377838839,
+        0.9854417683918975,
+        0.08072916666666663
+      ],
+      "own_reference_score": 0.29334061481605955,
+      "fixed_reference_score": 0.29334061481605955,
+      "oracle_score": 0.29334061481605955,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "7bf316958458c69d6d7decc4619b877a06ae3ad52a14b16c1d78b03e2efff074"
+}

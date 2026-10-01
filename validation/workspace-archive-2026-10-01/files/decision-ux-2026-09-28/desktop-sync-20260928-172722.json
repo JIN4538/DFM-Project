@@ -1,0 +1,171 @@
+{
+  "timestamp_utc": "2026-09-28T08:27:22.871980+00:00",
+  "source": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project",
+  "destination": "C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0",
+  "backup": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\decision-ux-2026-09-28\\desktop-backup-20260928-172722",
+  "scope": "Decision workflow UI, stable orientation recommendation, bounded automatic checks; no deletion",
+  "files": [
+    {
+      "path": "amdfm/action_view.py",
+      "before_sha256": null,
+      "sha256": "37f3e78876e4153e3536afef8fa8dd02c5dbc0edb2097af7ed4d7216f3abedd1",
+      "bytes": 6769,
+      "operation": "add"
+    },
+    {
+      "path": "amdfm/analysis.py",
+      "before_sha256": "2a6e7cce838f4ec89a40f3cb4c7718c28ed25de7ad0d2b55cc4b9dc11a292098",
+      "sha256": "22a545a452a7aff13d0bc5be61d02f4cc6f2c16c46c39bac59009fd65caef7d1",
+      "bytes": 21043,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/assessment.py",
+      "before_sha256": null,
+      "sha256": "5d9ab74643ec12940b204d94260980862baa228aef5f11b9613a78f7bc24b037",
+      "bytes": 9592,
+      "operation": "add"
+    },
+    {
+      "path": "amdfm/decision_view.py",
+      "before_sha256": null,
+      "sha256": "c69b17b7aa6272a733f117d4c176bf2a399ee9d0a975060a189fe0e86fa497f7",
+      "bytes": 4530,
+      "operation": "add"
+    },
+    {
+      "path": "amdfm/detail_summary.py",
+      "before_sha256": "1b90a2778e81c52fcae803eb32593c085940bf3176a0e897a0885542e9abc17e",
+      "sha256": "e826adaade8dfe3fdeed68a5fd5ce781204359944a9447378c18fb675c072ae1",
+      "bytes": 15097,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/orientation.py",
+      "before_sha256": "f33f9b8aef19381e6145d70b85fb6068f5bffc5b49b932bf19a72275529b9fde",
+      "sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+      "bytes": 10320,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/presentation.py",
+      "before_sha256": "3ea5b38300b31fe0ff70f2e7be264c93ef2fe3fa39b74d9731d1788c8a5b03f3",
+      "sha256": "2f8e44776283bb41c3058583aee1511618865de25f06d3ea1eae056616467b58",
+      "bytes": 18208,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/recommendation.py",
+      "before_sha256": null,
+      "sha256": "03fd9809cfc2df6868632188c5394eccec4aaf227db53ccee471893f048bd668",
+      "bytes": 14044,
+      "operation": "add"
+    },
+    {
+      "path": "amdfm/workflow.py",
+      "before_sha256": "819d3fd08fd6cd3d5d0a03dca71cd9bfedc0bbf4698b9464261b0088c0c7c243",
+      "sha256": "d79cd2ab891c4b593bf7323e05814ffd0eade6dc4c9d39adcc1f1e0c108a3901",
+      "bytes": 9416,
+      "operation": "replace"
+    },
+    {
+      "path": "app.py",
+      "before_sha256": "60560ae214523d53093c15356a02d27195be846faf64105b4b7f4ce9f6adecd7",
+      "sha256": "ee581528ec27c915fd01b966f8f6a6bf76562f0d2a710090ddde71f671197f89",
+      "bytes": 44124,
+      "operation": "replace"
+    },
+    {
+      "path": "dfm/machining_view.py",
+      "before_sha256": "9765e834a6dba64f228217a28faff1c5e9e98ff913eab3525495bfd5500e1ec4",
+      "sha256": "c235ebc2ca061aed02d0430c922588ce61c64fcf5989306c37b53e3731480fcc",
+      "bytes": 35945,
+      "operation": "replace"
+    },
+    {
+      "path": "docs/USER_DECISION_WORKFLOW.md",
+      "before_sha256": null,
+      "sha256": "7847f9919407864ea7c4f0dfad474b09dc3fcfc5794bbf78c100c9bc26448042",
+      "bytes": 6432,
+      "operation": "add"
+    },
+    {
+      "path": "docs/project-knowledge/README.md",
+      "before_sha256": "1cbc59c4911ec28fb39ff5c96a605fda07af342eda8baa17c7c461b41b81ba08",
+      "sha256": "f53889bcc2ddf4047c35176e6cdadb57de1b46b53522252ab2b3efdd1299ac3d",
+      "bytes": 13319,
+      "operation": "replace"
+    },
+    {
+      "path": "docs/project-knowledge/USER_DECISION_IMPLEMENTATION_2026-09-28.md",
+      "before_sha256": null,
+      "sha256": "70fd99a6dc4acc465e00aac4f5e6898bb3a4a5e758e268e7b7c6bfed95039301",
+      "bytes": 5459,
+      "operation": "add"
+    },
+    {
+      "path": "docs/project-knowledge/USER_DECISION_RESEARCH_2026-09-28.md",
+      "before_sha256": null,
+      "sha256": "669dc96dc669686f8e81b0ec3aa50c1d8ceba41e7be3dd2f0c47120b68ba1772",
+      "bytes": 8825,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_app.py",
+      "before_sha256": "83d857d361359aa3bde51616e2def521f361e42cf140dd96a7cb8774dcdaad30",
+      "sha256": "27c45e12ccfd674e69ea01827bbe699b631b0a346cc0dcb36ac5f3d1ee400608",
+      "bytes": 12157,
+      "operation": "replace"
+    },
+    {
+      "path": "tests_v3/test_assessment.py",
+      "before_sha256": null,
+      "sha256": "4b0cc628e4bd61b2f016e57e2c834b01f0ba32724af427283906af50a8f1a706",
+      "bytes": 10916,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_decision_workflow.py",
+      "before_sha256": null,
+      "sha256": "2477d993f77c29c8554339cee53b01b1e97890f0d048757e23211900af44a286",
+      "bytes": 4761,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_machining_decisions_ui.py",
+      "before_sha256": null,
+      "sha256": "bff72e7b08717d68d3290e6ff218fb15cab11ccde57b84c6c4e36f7901160a36",
+      "bytes": 5415,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_navigation_ux.py",
+      "before_sha256": "ec18366aeab7029e27a168ff67869cd0db587c2cbc5dd9dd4a3f3028ca4d98e5",
+      "sha256": "2e19e01b19bfc9f3d4064927476ca976176459c54c71f74fec404fe9a25ef273",
+      "bytes": 3668,
+      "operation": "replace"
+    },
+    {
+      "path": "tests_v3/test_orientation_recommendation.py",
+      "before_sha256": null,
+      "sha256": "fbc10d29066e46db138f4c77489234ab28112f79e6932c1966877d965450eeef",
+      "bytes": 11934,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_visual_accessibility.py",
+      "before_sha256": "c937b6b4a754c4465da1e18eb0f930b2ac4459c3eb40135c5a831925f9ad797e",
+      "sha256": "72bf409a6dbb04af1237697b2675b517202cc25f80306d1746ca5cd5fa0636b4",
+      "bytes": 6661,
+      "operation": "replace"
+    },
+    {
+      "path": "tests_v3/test_workflow_ux.py",
+      "before_sha256": "64e1c1a062af649e10511f0cad815eb0b226555a43ca5f87d6145cafd59c720a",
+      "sha256": "3e581d0dd6879882aac9c869d3fc2371ae78eccd07b5d7f944ba3b73c958f4fe",
+      "bytes": 6626,
+      "operation": "replace"
+    }
+  ],
+  "verified": true
+}

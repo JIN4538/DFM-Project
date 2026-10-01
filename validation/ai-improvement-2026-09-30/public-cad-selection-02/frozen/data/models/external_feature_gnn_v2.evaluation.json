@@ -1,0 +1,1656 @@
+{
+  "evaluation": {
+    "face_mlp": {
+      "accuracy": 0.9180829888225387,
+      "macro_f1": 0.8965877284541852,
+      "mean_iou": 0.8258110278759414,
+      "faces": 52248,
+      "parts": 2309,
+      "confusion": [
+        [
+          715,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2202,
+          5,
+          6,
+          0,
+          0,
+          0,
+          0,
+          2,
+          232,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          2582,
+          14,
+          0,
+          229,
+          0,
+          2,
+          1,
+          22,
+          309,
+          3,
+          15,
+          7,
+          0,
+          0
+        ],
+        [
+          1,
+          10,
+          2,
+          4385,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          479,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          0,
+          1390,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          267,
+          0,
+          3,
+          1615,
+          133,
+          0,
+          2,
+          0,
+          2,
+          0,
+          11,
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          168,
+          1198,
+          0,
+          42,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          8
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          18,
+          0,
+          0,
+          1959,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          22,
+          98,
+          0,
+          1192,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          38,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2498,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          3305,
+          0,
+          329,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          51,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5129,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          5,
+          0,
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          703,
+          0,
+          1751,
+          0,
+          328,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          11,
+          0,
+          0,
+          0,
+          5,
+          1,
+          0,
+          0,
+          0,
+          1374,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          6,
+          0,
+          0,
+          0,
+          7,
+          0,
+          524,
+          0,
+          1491,
+          1
+        ],
+        [
+          30,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          1,
+          7,
+          15182
+        ]
+      ],
+      "per_class": {
+        "chamfer": {
+          "precision": 0.9420289855072463,
+          "recall": 0.9958217270194986,
+          "iou": 0.9383202099737533,
+          "faces": 718
+        },
+        "triangular_passage": {
+          "precision": 0.9734748010610079,
+          "recall": 0.8995098039215687,
+          "iou": 0.8779904306220095,
+          "faces": 2448
+        },
+        "rectangular_passage": {
+          "precision": 0.8949740034662045,
+          "recall": 0.808643908549953,
+          "iou": 0.738558352402746,
+          "faces": 3193
+        },
+        "6sides_passage": {
+          "precision": 0.9840664272890485,
+          "recall": 0.899118310436744,
+          "iou": 0.8862166531932094,
+          "faces": 4877
+        },
+        "triangular_through_slot": {
+          "precision": 0.9754385964912281,
+          "recall": 0.9971305595408895,
+          "iou": 0.9727081875437369,
+          "faces": 1394
+        },
+        "rectangular_through_slot": {
+          "precision": 0.7798165137614679,
+          "recall": 0.7928325969563083,
+          "iou": 0.6478138788608103,
+          "faces": 2037
+        },
+        "rectangular_through_step": {
+          "precision": 0.8307905686546463,
+          "recall": 0.8436619718309859,
+          "iou": 0.7199519230769231,
+          "faces": 1420
+        },
+        "2sides_through_step": {
+          "precision": 0.9989801121876594,
+          "recall": 0.9893939393939394,
+          "iou": 0.9883955600403632,
+          "faces": 1980
+        },
+        "slanted_through_step": {
+          "precision": 0.9558941459502807,
+          "recall": 0.9057750759878419,
+          "iou": 0.8694383661560905,
+          "faces": 1316
+        },
+        "triangular_pocket": {
+          "precision": 0.9073737740646567,
+          "recall": 0.9850157728706624,
+          "iou": 0.8950197061984951,
+          "faces": 2536
+        },
+        "rectangular_pocket": {
+          "precision": 0.7639852057327785,
+          "recall": 0.9017735334242838,
+          "iou": 0.7052923602219376,
+          "faces": 3665
+        },
+        "6sides_pocket": {
+          "precision": 0.9140973088576011,
+          "recall": 0.9901544401544402,
+          "iou": 0.9058636524196397,
+          "faces": 5180
+        },
+        "rectangular_blind_slot": {
+          "precision": 0.6657794676806084,
+          "recall": 0.6218039772727273,
+          "iou": 0.47388362652232746,
+          "faces": 2816
+        },
+        "triangular_blind_step": {
+          "precision": 0.9927745664739884,
+          "recall": 0.9786324786324786,
+          "iou": 0.9717114568599717,
+          "faces": 1404
+        },
+        "rectangular_blind_step": {
+          "precision": 0.8107667210440457,
+          "recall": 0.7330383480825958,
+          "iou": 0.6259445843828715,
+          "faces": 2034
+        },
+        "stock": {
+          "precision": 0.9990129630848193,
+          "recall": 0.9968483256730137,
+          "iou": 0.9958674975401771,
+          "faces": 15230
+        }
+      }
+    },
+    "face_gnn": {
+      "accuracy": 0.9992152809676925,
+      "macro_f1": 0.9988243071294388,
+      "mean_iou": 0.9976579182687795,
+      "faces": 52248,
+      "parts": 2309,
+      "confusion": [
+        [
+          716,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2434,
+          10,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          3188,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          4874,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1394,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2036,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1419,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1980,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1316,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2536,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3665,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5177,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2812,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1404,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2034,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15222
+        ]
+      ],
+      "per_class": {
+        "chamfer": {
+          "precision": 0.988950276243094,
+          "recall": 0.9972144846796658,
+          "iou": 0.9862258953168044,
+          "faces": 718
+        },
+        "triangular_passage": {
+          "precision": 0.9987689782519491,
+          "recall": 0.994281045751634,
+          "iou": 0.993064055487556,
+          "faces": 2448
+        },
+        "rectangular_passage": {
+          "precision": 0.9950062421972534,
+          "recall": 0.998434074538052,
+          "iou": 0.9934559052664381,
+          "faces": 3193
+        },
+        "6sides_passage": {
+          "precision": 0.9987704918032787,
+          "recall": 0.9993848677465655,
+          "iou": 0.9981568707761622,
+          "faces": 4877
+        },
+        "triangular_through_slot": {
+          "precision": 0.9978525411596277,
+          "recall": 1.0,
+          "iou": 0.9978525411596277,
+          "faces": 1394
+        },
+        "rectangular_through_slot": {
+          "precision": 0.9990186457311089,
+          "recall": 0.9995090819833088,
+          "iou": 0.9985286905345758,
+          "faces": 2037
+        },
+        "rectangular_through_step": {
+          "precision": 0.9992957746478873,
+          "recall": 0.9992957746478873,
+          "iou": 0.9985925404644617,
+          "faces": 1420
+        },
+        "2sides_through_step": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "iou": 1.0,
+          "faces": 1980
+        },
+        "slanted_through_step": {
+          "precision": 0.9992406985573272,
+          "recall": 1.0,
+          "iou": 0.9992406985573272,
+          "faces": 1316
+        },
+        "triangular_pocket": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "iou": 1.0,
+          "faces": 2536
+        },
+        "rectangular_pocket": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "iou": 1.0,
+          "faces": 3665
+        },
+        "6sides_pocket": {
+          "precision": 1.0,
+          "recall": 0.9994208494208494,
+          "iou": 0.9994208494208494,
+          "faces": 5180
+        },
+        "rectangular_blind_slot": {
+          "precision": 1.0,
+          "recall": 0.9985795454545454,
+          "iou": 0.9985795454545454,
+          "faces": 2816
+        },
+        "triangular_blind_step": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "iou": 1.0,
+          "faces": 1404
+        },
+        "rectangular_blind_step": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "iou": 1.0,
+          "faces": 2034
+        },
+        "stock": {
+          "precision": 0.9999343099257703,
+          "recall": 0.9994747209455023,
+          "iou": 0.9994090998621233,
+          "faces": 15230
+        }
+      }
+    }
+  },
+  "counts": {
+    "train": 12840,
+    "val": 2639,
+    "test": 2309
+  },
+  "history": [
+    {
+      "model": "face_mlp",
+      "epoch": 1,
+      "loss": 1.5060401411339788,
+      "validation_macro_f1": 0.7470478116573239,
+      "validation_accuracy": 0.8141961658656043,
+      "seconds": 2.282000000000153
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 2,
+      "loss": 0.5072576872783132,
+      "validation_macro_f1": 0.8403676855479526,
+      "validation_accuracy": 0.8818874613936658,
+      "seconds": 2.782000000000153
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 3,
+      "loss": 0.36750605761414706,
+      "validation_macro_f1": 0.8649142820695821,
+      "validation_accuracy": 0.8977685995723607,
+      "seconds": 3.266000000000531
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 4,
+      "loss": 0.3268764069174776,
+      "validation_macro_f1": 0.8773091717007613,
+      "validation_accuracy": 0.90763720097224,
+      "seconds": 3.79700000000048
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 5,
+      "loss": 0.30642757380362784,
+      "validation_macro_f1": 0.881070296222473,
+      "validation_accuracy": 0.9119318700999652,
+      "seconds": 4.29700000000048
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 6,
+      "loss": 0.29455592151325527,
+      "validation_macro_f1": 0.8813031191299221,
+      "validation_accuracy": 0.9118404941610775,
+      "seconds": 4.828000000000429
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 7,
+      "loss": 0.2829738604550314,
+      "validation_macro_f1": 0.8876496331422683,
+      "validation_accuracy": 0.917560627935452,
+      "seconds": 5.344000000000051
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 8,
+      "loss": 0.27661820169132534,
+      "validation_macro_f1": 0.8854750766832065,
+      "validation_accuracy": 0.9131014821177288,
+      "seconds": 5.844000000000051
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 9,
+      "loss": 0.26606757407731346,
+      "validation_macro_f1": 0.8930826497359726,
+      "validation_accuracy": 0.9203019061020852,
+      "seconds": 6.391000000000531
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 10,
+      "loss": 0.2610950415382291,
+      "validation_macro_f1": 0.896331261566405,
+      "validation_accuracy": 0.9213984173687385,
+      "seconds": 6.938000000000102
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 11,
+      "loss": 0.25540863302084477,
+      "validation_macro_f1": 0.8942268057130711,
+      "validation_accuracy": 0.9185840384509951,
+      "seconds": 7.516000000000531
+    },
+    {
+      "model": "face_mlp",
+      "epoch": 12,
+      "loss": 0.2537419528949379,
+      "validation_macro_f1": 0.9002559779382298,
+      "validation_accuracy": 0.9233721376487143,
+      "seconds": 8.094000000000051
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 1,
+      "loss": 0.906483265432981,
+      "validation_macro_f1": 0.9116345339371941,
+      "validation_accuracy": 0.9440779254006835,
+      "seconds": 9.563000000000102
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 2,
+      "loss": 0.13449703817172806,
+      "validation_macro_f1": 0.9577520377583448,
+      "validation_accuracy": 0.9766808603958406,
+      "seconds": 10.969000000000051
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 3,
+      "loss": 0.075843529941717,
+      "validation_macro_f1": 0.9738416064833728,
+      "validation_accuracy": 0.9860377565379485,
+      "seconds": 12.360000000000582
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 4,
+      "loss": 0.04988001587588598,
+      "validation_macro_f1": 0.9852962269907294,
+      "validation_accuracy": 0.9923061459456496,
+      "seconds": 13.782000000000153
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 5,
+      "loss": 0.03624177192992503,
+      "validation_macro_f1": 0.9874573016674892,
+      "validation_accuracy": 0.9935671339023009,
+      "seconds": 15.20300000000043
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 6,
+      "loss": 0.025981203975653885,
+      "validation_macro_f1": 0.9920187303744832,
+      "validation_accuracy": 0.9954312030556114,
+      "seconds": 16.625
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 7,
+      "loss": 0.02036109126846094,
+      "validation_macro_f1": 0.9946326752262933,
+      "validation_accuracy": 0.9968566677022607,
+      "seconds": 18.07800000000043
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 8,
+      "loss": 0.015172578915400376,
+      "validation_macro_f1": 0.9953865968054533,
+      "validation_accuracy": 0.9974049233355873,
+      "seconds": 19.657000000000153
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 9,
+      "loss": 0.012857097076565618,
+      "validation_macro_f1": 0.9964385555723829,
+      "validation_accuracy": 0.9978800782178037,
+      "seconds": 21.157000000000153
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 10,
+      "loss": 0.011237037096098803,
+      "validation_macro_f1": 0.9972079608069614,
+      "validation_accuracy": 0.9982821323489098,
+      "seconds": 22.657000000000153
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 11,
+      "loss": 0.008853012091932025,
+      "validation_macro_f1": 0.9965742909022886,
+      "validation_accuracy": 0.9978618030300261,
+      "seconds": 24.17200000000048
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 12,
+      "loss": 0.008029578398857819,
+      "validation_macro_f1": 0.9978649690314495,
+      "validation_accuracy": 0.9986293609166834,
+      "seconds": 25.54700000000048
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 13,
+      "loss": 0.00715669991660605,
+      "validation_macro_f1": 0.9978337484185835,
+      "validation_accuracy": 0.9986293609166834,
+      "seconds": 27.063000000000102
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 14,
+      "loss": 0.0058416962084166775,
+      "validation_macro_f1": 0.9981580195708263,
+      "validation_accuracy": 0.9988486631700141,
+      "seconds": 28.735000000000582
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 15,
+      "loss": 0.004938573283742707,
+      "validation_macro_f1": 0.9980237751918879,
+      "validation_accuracy": 0.9987572872311263,
+      "seconds": 30.360000000000582
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 16,
+      "loss": 0.004846016529458806,
+      "validation_macro_f1": 0.9986480981235715,
+      "validation_accuracy": 0.9990862406111223,
+      "seconds": 32.0
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 17,
+      "loss": 0.004675393869943621,
+      "validation_macro_f1": 0.9985307042569853,
+      "validation_accuracy": 0.9989583142966794,
+      "seconds": 33.54700000000048
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 18,
+      "loss": 0.0038272559286630023,
+      "validation_macro_f1": 0.9987116345422942,
+      "validation_accuracy": 0.9990131398600121,
+      "seconds": 35.11000000000058
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 19,
+      "loss": 0.0029977961318880908,
+      "validation_macro_f1": 0.9982315351208568,
+      "validation_accuracy": 0.9988669383577916,
+      "seconds": 36.75
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 20,
+      "loss": 0.003512915577693372,
+      "validation_macro_f1": 0.9987289862149449,
+      "validation_accuracy": 0.9990496902355672,
+      "seconds": 38.29700000000048
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 21,
+      "loss": 0.0029063390767879527,
+      "validation_macro_f1": 0.999034838518882,
+      "validation_accuracy": 0.99917761655001,
+      "seconds": 39.76600000000053
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 22,
+      "loss": 0.0029141752938002274,
+      "validation_macro_f1": 0.998872235891606,
+      "validation_accuracy": 0.9991958917377876,
+      "seconds": 41.28200000000015
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 23,
+      "loss": 0.002547133680534466,
+      "validation_macro_f1": 0.9988340477896781,
+      "validation_accuracy": 0.9991045157988998,
+      "seconds": 42.71900000000005
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 24,
+      "loss": 0.021702996139313178,
+      "validation_macro_f1": 0.9986809961827969,
+      "validation_accuracy": 0.9990496902355672,
+      "seconds": 44.11000000000058
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 25,
+      "loss": 0.002707324443168311,
+      "validation_macro_f1": 0.9990498571370031,
+      "validation_accuracy": 0.9992141669255652,
+      "seconds": 45.40700000000015
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 26,
+      "loss": 0.002297581500537454,
+      "validation_macro_f1": 0.9992933730021063,
+      "validation_accuracy": 0.9993969188033407,
+      "seconds": 46.73500000000058
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 27,
+      "loss": 0.0017783880527108206,
+      "validation_macro_f1": 0.998957408064575,
+      "validation_accuracy": 0.9992141669255652,
+      "seconds": 48.15700000000015
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 28,
+      "loss": 0.0018216680114660044,
+      "validation_macro_f1": 0.9990019577161582,
+      "validation_accuracy": 0.99917761655001,
+      "seconds": 49.5630000000001
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 29,
+      "loss": 0.0017824899203531296,
+      "validation_macro_f1": 0.999077054749864,
+      "validation_accuracy": 0.999305542864453,
+      "seconds": 50.92200000000048
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 30,
+      "loss": 0.001690968087762548,
+      "validation_macro_f1": 0.9993100629610985,
+      "validation_accuracy": 0.9994517443666734,
+      "seconds": 52.20300000000043
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 31,
+      "loss": 0.0014442696808353252,
+      "validation_macro_f1": 0.9990928017336242,
+      "validation_accuracy": 0.9993603684277856,
+      "seconds": 53.54700000000048
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 32,
+      "loss": 0.0017556050456057552,
+      "validation_macro_f1": 0.9993080350081363,
+      "validation_accuracy": 0.9994517443666734,
+      "seconds": 54.90700000000015
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 33,
+      "loss": 0.0015443222260674333,
+      "validation_macro_f1": 0.9993427287499177,
+      "validation_accuracy": 0.9994517443666734,
+      "seconds": 56.20300000000043
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 34,
+      "loss": 0.0014550417964519602,
+      "validation_macro_f1": 0.9993862989595546,
+      "validation_accuracy": 0.9994882947422284,
+      "seconds": 57.57800000000043
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 35,
+      "loss": 0.001864942851693065,
+      "validation_macro_f1": 0.9992137182272239,
+      "validation_accuracy": 0.9993786436155632,
+      "seconds": 59.0
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 36,
+      "loss": 0.001265109684171344,
+      "validation_macro_f1": 0.9993790651652059,
+      "validation_accuracy": 0.9995248451177836,
+      "seconds": 60.4380000000001
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 37,
+      "loss": 0.002106105587168569,
+      "validation_macro_f1": 0.9986879119355032,
+      "validation_accuracy": 0.999141066174455,
+      "seconds": 61.84400000000005
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 38,
+      "loss": 0.0011688059328140064,
+      "validation_macro_f1": 0.9989965663904586,
+      "validation_accuracy": 0.999305542864453,
+      "seconds": 63.25
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 39,
+      "loss": 0.001370158763129799,
+      "validation_macro_f1": 0.998832202775625,
+      "validation_accuracy": 0.9991045157988998,
+      "seconds": 64.59400000000005
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 40,
+      "loss": 0.001399543135205634,
+      "validation_macro_f1": 0.9994837865581138,
+      "validation_accuracy": 0.9995796706811162,
+      "seconds": 65.89100000000053
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 41,
+      "loss": 0.00128834968502518,
+      "validation_macro_f1": 0.9994042565245926,
+      "validation_accuracy": 0.9994700195544509,
+      "seconds": 67.21900000000005
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 42,
+      "loss": 0.0011001541092674856,
+      "validation_macro_f1": 0.9993355948411917,
+      "validation_accuracy": 0.9994700195544509,
+      "seconds": 68.61000000000058
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 43,
+      "loss": 0.0015501216857055533,
+      "validation_macro_f1": 0.9994299331829288,
+      "validation_accuracy": 0.9995431203055611,
+      "seconds": 69.9380000000001
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 44,
+      "loss": 0.0010001617560156223,
+      "validation_macro_f1": 0.9993643443548944,
+      "validation_accuracy": 0.9994517443666734,
+      "seconds": 71.26600000000053
+    },
+    {
+      "model": "face_gnn",
+      "epoch": 45,
+      "loss": 0.0009812859660645573,
+      "validation_macro_f1": 0.9990324837620395,
+      "validation_accuracy": 0.9993238180522305,
+      "seconds": 72.6880000000001
+    }
+  ],
+  "export_max_abs_error": 1.5656130235575105e-06,
+  "threshold": 0.7,
+  "validation": {
+    "accuracy": 0.9995796706811162,
+    "macro_f1": 0.9994837865581138,
+    "mean_iou": 0.9989691939096367,
+    "faces": 54719,
+    "parts": 2639,
+    "confusion": [
+      [
+        729,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2274,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        3199,
+        7,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        4961,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1426,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2117,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1360,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2181,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1206,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3120,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3440,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5040,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2884,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1394,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2114,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17251
+      ]
+    ],
+    "per_class": {
+      "chamfer": {
+        "precision": 0.9972640218878249,
+        "recall": 1.0,
+        "iou": 0.9972640218878249,
+        "faces": 729
+      },
+      "triangular_passage": {
+        "precision": 0.9978060552874067,
+        "recall": 0.9982440737489026,
+        "iou": 0.9960578186596584,
+        "faces": 2278
+      },
+      "rectangular_passage": {
+        "precision": 0.9987511707773962,
+        "recall": 0.9965732087227415,
+        "iou": 0.9953329184816428,
+        "faces": 3210
+      },
+      "6sides_passage": {
+        "precision": 0.9983900181122962,
+        "recall": 0.9993956486704271,
+        "iou": 0.9977876106194691,
+        "faces": 4964
+      },
+      "triangular_through_slot": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "iou": 1.0,
+        "faces": 1426
+      },
+      "rectangular_through_slot": {
+        "precision": 0.9995278564683664,
+        "recall": 0.9995278564683664,
+        "iou": 0.999056158565361,
+        "faces": 2118
+      },
+      "rectangular_through_step": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "iou": 1.0,
+        "faces": 1360
+      },
+      "2sides_through_step": {
+        "precision": 0.9995417048579285,
+        "recall": 1.0,
+        "iou": 0.9995417048579285,
+        "faces": 2181
+      },
+      "slanted_through_step": {
+        "precision": 0.9991714995857498,
+        "recall": 1.0,
+        "iou": 0.9991714995857498,
+        "faces": 1206
+      },
+      "triangular_pocket": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "iou": 1.0,
+        "faces": 3120
+      },
+      "rectangular_pocket": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "iou": 1.0,
+        "faces": 3440
+      },
+      "6sides_pocket": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "iou": 1.0,
+        "faces": 5040
+      },
+      "rectangular_blind_slot": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "iou": 1.0,
+        "faces": 2884
+      },
+      "triangular_blind_step": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "iou": 1.0,
+        "faces": 1394
+      },
+      "rectangular_blind_step": {
+        "precision": 1.0,
+        "recall": 0.9995271867612293,
+        "iou": 0.9995271867612293,
+        "faces": 2115
+      },
+      "stock": {
+        "precision": 0.9999420357060052,
+        "recall": 0.9998261272748348,
+        "iou": 0.9997681831353231,
+        "faces": 17254
+      }
+    }
+  },
+  "seconds": 73.03200000000015,
+  "model_sha256": "3a6b45f448f4be6121e673a78c5167fdea8577214fb3a71aa6ae9bd536693b20"
+}

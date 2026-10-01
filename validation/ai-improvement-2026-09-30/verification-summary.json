@@ -1,0 +1,60 @@
+{
+  "unique_active_latest_tests": 236,
+  "latest_passed": 236,
+  "latest_failures": [],
+  "superseded_test_contracts": [
+    {
+      "old_test": "tests_v3.test_enhanced_planning::test_missing_model_retains_old_recommendation_and_preferences",
+      "new_test": "tests_v3.test_enhanced_planning::test_missing_proposal_model_retains_verified_recommendation_and_preferences",
+      "reason": "Intentional replacement of approximate-score identity by verified-choice contract",
+      "historical_result": {
+        "passed": false,
+        "xml": "initial-selection.xml"
+      }
+    }
+  ],
+  "historical_failures_preserved": [
+    {
+      "test": "tests_v3.test_enhanced_planning::test_duplicate_final_effects_are_independent_of_edit_order",
+      "xml": "initial-selection.xml"
+    },
+    {
+      "test": "tests_v3.test_enhanced_planning::test_missing_model_retains_old_recommendation_and_preferences",
+      "xml": "initial-selection.xml"
+    },
+    {
+      "test": "tests_v3.test_plan_preferences_ui::test_explicit_am_preference_rescores_recommends_and_reset_restores",
+      "xml": "initial-selection.xml"
+    },
+    {
+      "test": "tests_v3.test_plan_preferences_ui::test_cnc_allowance_reaches_recommendation_and_limits_edits[\\ud615\\uc0c1\\xb7\\uacf5\\uad6c \\ubaa8\\ub450]",
+      "xml": "initial-selection.xml"
+    },
+    {
+      "test": "tests_v3.test_plan_preferences_ui::test_cnc_allowance_reaches_recommendation_and_limits_edits[\\uacf5\\uad6c\\ub9cc \\xb7 \\uc6d0\\ub798 \\ud615\\uc0c1 \\uc720\\uc9c0]",
+      "xml": "initial-selection.xml"
+    },
+    {
+      "test": "tests_v3.test_plan_preferences_ui::test_cnc_allowance_reaches_recommendation_and_limits_edits[\\ud615\\uc0c1\\ub9cc \\xb7 \\ud604\\uc7ac \\uacf5\\uad6c \\uc720\\uc9c0]",
+      "xml": "initial-selection.xml"
+    },
+    {
+      "test": "tests_v3.test_plan_preferences_ui::test_cnc_preference_is_scoped_to_allowed_changes_and_reset_to_current_context",
+      "xml": "initial-selection.xml"
+    }
+  ],
+  "integration_tests": 232,
+  "desktop_tests": 57,
+  "deployed_distinct_files": 21,
+  "file_drift": [],
+  "model_drift": [],
+  "new_global_weight_training": 0,
+  "am_adaptive_search_adopted": false,
+  "browser_verification": {
+    "url": "http://127.0.0.1:8507/",
+    "am": "bracket review completed; current orientation retained",
+    "cnc": "triangular pocket: recognized floor 10; radius 0 to 4 mm; automatic tool 8/7/7 mm; direct problem location opened",
+    "screenshot": "final-conclusion.jpg",
+    "problem_screenshot": "final-problem-location.jpg"
+  }
+}

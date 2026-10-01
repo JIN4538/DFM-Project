@@ -1,0 +1,236 @@
+{
+  "print:0.15mm QUALITY @MK4 0.4": {
+    "layer_height": {
+      "value": "0.15",
+      "origin": "print:*0.15mm*"
+    },
+    "extrusion_width": {
+      "value": "0.45",
+      "origin": "print:*common*"
+    },
+    "perimeter_extrusion_width": {
+      "value": "0.45",
+      "origin": "print:*common*"
+    },
+    "external_perimeter_extrusion_width": {
+      "value": "0.45",
+      "origin": "print:*common*"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_model==\"MK4\" and nozzle_diameter[0]==0.4",
+      "origin": "print:0.15mm QUALITY @MK4 0.4"
+    }
+  },
+  "print:0.20mm QUALITY @MK4 0.4": {
+    "layer_height": {
+      "value": "0.2",
+      "origin": "print:*0.20mm*"
+    },
+    "extrusion_width": {
+      "value": "0.45",
+      "origin": "print:*common*"
+    },
+    "perimeter_extrusion_width": {
+      "value": "0.45",
+      "origin": "print:*common*"
+    },
+    "external_perimeter_extrusion_width": {
+      "value": "0.45",
+      "origin": "print:*common*"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_model==\"MK4\" and nozzle_diameter[0]==0.4",
+      "origin": "print:0.20mm QUALITY @MK4 0.4"
+    }
+  },
+  "print:0.25mm QUALITY @MK4 0.6": {
+    "layer_height": {
+      "value": "0.25",
+      "origin": "print:*0.25mm*"
+    },
+    "extrusion_width": {
+      "value": "0.65",
+      "origin": "print:0.25mm QUALITY @MK4 0.6"
+    },
+    "perimeter_extrusion_width": {
+      "value": "0.65",
+      "origin": "print:*0.6nozzle*"
+    },
+    "external_perimeter_extrusion_width": {
+      "value": "0.65",
+      "origin": "print:*0.6nozzleMK4*"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_model==\"MK4\" and nozzle_diameter[0]==0.6",
+      "origin": "print:0.25mm QUALITY @MK4 0.6"
+    }
+  },
+  "filament:Prusament PLA @PG": {
+    "temperature": {
+      "value": "215",
+      "origin": "filament:Prusament PLA"
+    },
+    "first_layer_temperature": {
+      "value": "215",
+      "origin": "filament:*PLA*"
+    },
+    "bed_temperature": {
+      "value": "60",
+      "origin": "filament:*PLA*"
+    },
+    "filament_density": {
+      "value": "1.24",
+      "origin": "filament:Prusament PLA"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_notes=~/.*MK4.*/ and printer_notes!~/.*MK4IS.*/ and nozzle_diameter[0]!=0.8 and nozzle_diameter[0]!=0.6",
+      "origin": "filament:Prusament PLA @PG"
+    }
+  },
+  "filament:Prusament PETG @PG": {
+    "temperature": {
+      "value": "250",
+      "origin": "filament:Prusament PETG"
+    },
+    "first_layer_temperature": {
+      "value": "240",
+      "origin": "filament:Prusament PETG"
+    },
+    "bed_temperature": {
+      "value": "90",
+      "origin": "filament:*PET*"
+    },
+    "filament_density": {
+      "value": "1.27",
+      "origin": "filament:Prusament PETG"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_notes=~/.*MK4.*/ and printer_notes!~/.*MK4IS.*/ and nozzle_diameter[0]!=0.8 and nozzle_diameter[0]!=0.6",
+      "origin": "filament:Prusament PETG @PG"
+    }
+  },
+  "filament:Prusament ASA @MK4": {
+    "temperature": {
+      "value": "260",
+      "origin": "filament:Prusament ASA"
+    },
+    "first_layer_temperature": {
+      "value": "260",
+      "origin": "filament:Prusament ASA"
+    },
+    "bed_temperature": {
+      "value": "110",
+      "origin": "filament:Prusament ASA"
+    },
+    "filament_density": {
+      "value": "1.07",
+      "origin": "filament:Prusament ASA"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_notes=~/.*MK4.*/ and nozzle_diameter[0]!=0.6 and nozzle_diameter[0]!=0.8 and ! single_extruder_multi_material",
+      "origin": "filament:*ABSPG*"
+    }
+  },
+  "filament:Prusament PC Blend @MK4": {
+    "temperature": {
+      "value": "275",
+      "origin": "filament:Prusament PC Blend"
+    },
+    "first_layer_temperature": {
+      "value": "275",
+      "origin": "filament:Prusament PC Blend"
+    },
+    "bed_temperature": {
+      "value": "115",
+      "origin": "filament:Prusament PC Blend"
+    },
+    "filament_density": {
+      "value": "1.22",
+      "origin": "filament:Prusament PC Blend"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_notes=~/.*MK4.*/ and nozzle_diameter[0]!=0.6 and nozzle_diameter[0]!=0.8 and ! single_extruder_multi_material",
+      "origin": "filament:*PCPG*"
+    }
+  },
+  "printer:Original Prusa MK4 0.4 nozzle": {
+    "nozzle_diameter": {
+      "value": "0.4",
+      "origin": "printer:*commonMK4*"
+    },
+    "printer_model": {
+      "value": "MK4",
+      "origin": "printer:*commonMK4*"
+    },
+    "bed_shape": {
+      "value": "0x0,250x0,250x210,0x210",
+      "origin": "printer:*commonMK4*"
+    },
+    "max_print_height": {
+      "value": "220",
+      "origin": "printer:*commonMK4*"
+    }
+  },
+  "printer:Original Prusa MK4 0.6 nozzle": {
+    "nozzle_diameter": {
+      "value": "0.6",
+      "origin": "printer:Original Prusa MK4 0.6 nozzle"
+    },
+    "printer_model": {
+      "value": "MK4",
+      "origin": "printer:*commonMK4*"
+    },
+    "bed_shape": {
+      "value": "0x0,250x0,250x210,0x210",
+      "origin": "printer:*commonMK4*"
+    },
+    "max_print_height": {
+      "value": "220",
+      "origin": "printer:*commonMK4*"
+    }
+  },
+  "filament:Prusament PLA @PG 0.6": {
+    "temperature": {
+      "value": "210",
+      "origin": "filament:Prusament PLA @PG 0.6"
+    },
+    "first_layer_temperature": {
+      "value": "215",
+      "origin": "filament:*PLA*"
+    },
+    "bed_temperature": {
+      "value": "60",
+      "origin": "filament:*PLA*"
+    },
+    "filament_density": {
+      "value": "1.24",
+      "origin": "filament:Prusament PLA"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_notes=~/.*MK4.*/ and printer_notes!~/.*MK4IS.*/ and nozzle_diameter[0]==0.6",
+      "origin": "filament:Prusament PLA @PG 0.6"
+    }
+  },
+  "filament:Prusament PETG @PG 0.6": {
+    "temperature": {
+      "value": "245",
+      "origin": "filament:Prusament PETG @PG 0.6"
+    },
+    "first_layer_temperature": {
+      "value": "240",
+      "origin": "filament:Prusament PETG"
+    },
+    "bed_temperature": {
+      "value": "90",
+      "origin": "filament:*PET*"
+    },
+    "filament_density": {
+      "value": "1.27",
+      "origin": "filament:Prusament PETG"
+    },
+    "compatible_printers_condition": {
+      "value": "printer_notes=~/.*MK4.*/ and printer_notes!~/.*MK4IS.*/ and nozzle_diameter[0]==0.6",
+      "origin": "filament:Prusament PETG @PG 0.6"
+    }
+  }
+}

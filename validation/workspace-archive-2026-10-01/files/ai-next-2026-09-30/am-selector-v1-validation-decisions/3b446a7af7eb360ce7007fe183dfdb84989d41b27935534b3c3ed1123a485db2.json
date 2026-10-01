@@ -1,0 +1,201 @@
+{
+  "id": "platonic_solids_with_inscriptions_0001408",
+  "dataset": "PBF-orientation",
+  "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"Materialise\", \"embossing_distance\": 9, \"num_faces\": 20, \"unit_circle_radius\": 64}",
+  "split": "validation",
+  "process": "MEX",
+  "priority": "support",
+  "candidate_oracle": {
+    "legacy": 0.15417101171348002,
+    "blind": 0.15417101171348002,
+    "geometric": 0.14989693015955186,
+    "height_neural": 0.15417101171348002,
+    "learned": 0.14989693214943797,
+    "uncertainty05": 0.14989693214943797,
+    "uncertainty1": 0.14989693214943797,
+    "retain2_learned": 0.15417101171348002
+  },
+  "actual_product": {
+    "legacy": 0.15417101171348002,
+    "blind": 0.15417101171348002,
+    "geometric": 0.14989693015955186,
+    "height_neural": 0.15417101171348002,
+    "learned": 0.14989693214943797,
+    "uncertainty05": 0.14989693214943797,
+    "uncertainty1": 0.14989693214943797,
+    "retain2_learned": 0.15417101171348002
+  },
+  "common_reference_product": {
+    "legacy": 0.15417101171348002,
+    "blind": 0.15417101171348002,
+    "geometric": 0.14989693015955186,
+    "height_neural": 0.15417101171348002,
+    "learned": 0.14989693214943797,
+    "uncertainty05": 0.14989693214943797,
+    "uncertainty1": 0.14989693214943797,
+    "retain2_learned": 0.15417101171348002
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.15417101171348002,
+      "fixed_selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "own_reference_score": 0.15417101171348002,
+      "fixed_reference_score": 0.15417101171348002,
+      "oracle_score": 0.15417101171348002,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.15417101171348002,
+      "fixed_selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "own_reference_score": 0.15417101171348002,
+      "fixed_reference_score": 0.15417101171348002,
+      "oracle_score": 0.15417101171348002,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.9717289939469909,
+        -0.18267275121225324,
+        0.14957749926815575
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.14989693015955188,
+      "fixed_selected_direction": [
+        0.9717289939469909,
+        -0.18267275121225324,
+        0.14957749926815575
+      ],
+      "own_reference_score": 0.14989693015955186,
+      "fixed_reference_score": 0.14989693015955186,
+      "oracle_score": 0.14989693015955186,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.15417101171348002,
+      "fixed_selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "own_reference_score": 0.15417101171348002,
+      "fixed_reference_score": 0.15417101171348002,
+      "oracle_score": 0.15417101171348002,
+      "actual_winner_gap": 0.0
+    },
+    "learned": {
+      "selected_direction": [
+        -0.9717289939469909,
+        0.18267275121225351,
+        -0.14957749926815578
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.149896932149438,
+      "fixed_selected_direction": [
+        -0.9717289939469909,
+        0.18267275121225351,
+        -0.14957749926815578
+      ],
+      "own_reference_score": 0.14989693214943797,
+      "fixed_reference_score": 0.14989693214943797,
+      "oracle_score": 0.14989693214943797,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        -0.9717289939469909,
+        0.18267275121225351,
+        -0.14957749926815578
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.149896932149438,
+      "fixed_selected_direction": [
+        -0.9717289939469909,
+        0.18267275121225351,
+        -0.14957749926815578
+      ],
+      "own_reference_score": 0.14989693214943797,
+      "fixed_reference_score": 0.14989693214943797,
+      "oracle_score": 0.14989693214943797,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty1": {
+      "selected_direction": [
+        -0.9717289939469909,
+        0.18267275121225351,
+        -0.14957749926815578
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.149896932149438,
+      "fixed_selected_direction": [
+        -0.9717289939469909,
+        0.18267275121225351,
+        -0.14957749926815578
+      ],
+      "own_reference_score": 0.14989693214943797,
+      "fixed_reference_score": 0.14989693214943797,
+      "oracle_score": 0.14989693214943797,
+      "actual_winner_gap": 0.0
+    },
+    "retain2_learned": {
+      "selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.15417101171348002,
+      "fixed_selected_direction": [
+        0.5344554151631021,
+        0.4350766158552136,
+        -0.7246142060012426
+      ],
+      "own_reference_score": 0.15417101171348002,
+      "fixed_reference_score": 0.15417101171348002,
+      "oracle_score": 0.15417101171348002,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "c2c4f5dfce522a608a7fe183bf33eb5b7ff21b0b1c241e14b297bef1ddae71b0"
+}

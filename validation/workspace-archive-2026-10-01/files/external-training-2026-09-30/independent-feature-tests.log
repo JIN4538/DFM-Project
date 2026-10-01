@@ -1,0 +1,13 @@
+.....F.                                                                  [100%]
+================================== FAILURES ===================================
+___________ test_unmodified_box_has_no_machining_feature_candidate ____________
+
+    def test_unmodified_box_has_no_machining_feature_candidate():
+        from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox
+>       assert not recognize_graph(extract_graph(BRepPrimAPI_MakeBox(40,30,12).Shape()))['candidates']
+E       AssertionError: assert not [{'area_mm2': 1199.9999999999998, 'confidence': 0.9998388967492045, 'face_ids': [5], 'feature': 'slanted_through_step'...a_mm2': 1199.9999999999998, 'confidence': 0.9998388967492045, 'face_ids': [6], 'feature': 'slanted_through_step', ...}]
+
+tests_v3\test_external_feature_learning.py:63: AssertionError
+=========================== short test summary info ===========================
+FAILED tests_v3/test_external_feature_learning.py::test_unmodified_box_has_no_machining_feature_candidate
+1 failed, 6 passed in 2.67s

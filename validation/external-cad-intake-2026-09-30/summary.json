@@ -1,0 +1,63 @@
+{
+  "database": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\external-cad-db-2026-09-30\\external_cad.sqlite",
+  "face_labels": 38,
+  "findings": {
+    "mfcad": [],
+    "mfinstseg": [
+      "train: 12 duplicate split rows",
+      "val: 1 duplicate split rows",
+      "train/val: 3 shared IDs",
+      "train/test: 1 shared IDs",
+      "val/test: 1 shared IDs"
+    ]
+  },
+  "geometry_checked": true,
+  "loaded_datasets": [
+    "mfcad",
+    "mfinstseg"
+  ],
+  "loaded_models": 2,
+  "mfcadpp_models": 0,
+  "raw_files": 12,
+  "schema_version": 1,
+  "scope": "Two repository samples only; not MFCAD++, a bulk importer, or a full training corpus.",
+  "split_scope": "Published ID lists are metadata: their rows are not imported CAD models.",
+  "training_performed": false,
+  "training_ready": false,
+  "weights_changed": false,
+  "verification": {
+    "sqlite_integrity": "ok",
+    "foreign_keys": "ok",
+    "raw_files_byte_identical": 12,
+    "source_manifest_byte_identical": true,
+    "unchanged_model_files": 8,
+    "targeted_tests_passed": 12,
+    "samples": [
+      {
+        "sample": "mfcad_sample",
+        "faces": 11,
+        "dimensions_mm": [
+          10.000000000000794,
+          10.000000000000254,
+          10.000000000000501
+        ],
+        "volume_mm3": 850.4647546712083,
+        "cad_valid": true,
+        "training_ready": false
+      },
+      {
+        "sample": "mfinstseg_sample",
+        "faces": 27,
+        "dimensions_mm": [
+          61.152894652546,
+          41.809024589595,
+          43.721100130878
+        ],
+        "volume_mm3": 38541.37027903047,
+        "cad_valid": true,
+        "training_ready": false
+      }
+    ]
+  },
+  "database_sha256": "7a866c430ab922201240e6f27da568429ea1d478e69ad5a531fa105b71f4915c"
+}

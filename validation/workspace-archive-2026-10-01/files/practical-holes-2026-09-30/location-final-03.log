@@ -1,0 +1,55 @@
+....................F...............F                                    [100%]
+================================== FAILURES ===================================
+___ test_changed_geometry_keeps_option_order_and_selected_result_consistent ___
+
+    def test_changed_geometry_keeps_option_order_and_selected_result_consistent():
+        app = open_machining()
+        app.number_input(key="cnc_diameter").set_value(8.)
+        app.number_input(key="cnc_flute").set_value(10.)
+        app.number_input(key="cnc_reach").set_value(15.)
+        submit(app)
+        assert app.selectbox(key="cnc_finding").value == "cnc_rectangular_pockets"
+        original_options = list(app.selectbox(key="cnc_finding").options)
+        app.selectbox(key="cnc_example").select(CASES["03_rounded_pocket"]).run()
+        submit(app)
+        # Optional automatic-tool conditions append an item; common CAD findings
+        # retain their order and the active finding follows the new report.
+        common_options = lambda options: [x for x in options if x != "자동 공구 치수 제안"]
+        assert common_options(app.selectbox(key="cnc_finding").options) == common_options(original_options)
+        assert app.selectbox(key="cnc_finding").value == "cnc_curved_corners"
+>       assert any("작은 반경은 4개" in x.value for x in app.markdown)
+E       assert False
+E        +  where False = any(<generator object test_changed_geometry_keeps_option_order_and_selected_result_consistent.<locals>.<genexpr> at 0x00000214B5D38A00>)
+
+tests_v3\test_machining_ui.py:97: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 23:49:56.498 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence _
+
+    def test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence():
+        app = _open("03_rounded_pocket")
+        app.toggle(key="cnc_auto_tool").set_value(False)
+        app.checkbox(key="cnc_visibility").uncheck()
+        report = _submit(app, diameter=None, flute=None, reach=None)
+        assert report["visibility"] is None
+        corner = next(item for item in report["findings"] if item["id"] == "cnc_curved_corners")
+        assert corner["status"] == "unknown"
+        assert app.session_state["cnc_location_details"] is False
+        app.toggle(key="cnc_location_details").set_value(True).run()
+        app.selectbox(key="cnc_finding").set_value("cnc_curved_corners").run()
+        table = next(item.value for item in app.dataframe if "공구 반경 (mm)" in item.value.columns)
+        assert set(table["공구 반경 (mm)"]) == {"미입력·미비교"}
+        app.selectbox(key="cnc_finding").set_value("cnc_visibility").run()
+        assert not app.exception
+        assert app.session_state["cnc_report"]["visibility"] is None
+>       assert "항목 전체 · 판단에 필요한 정보 부족" in [item.value for item in app.caption]
+E       AssertionError: assert '항목 전체 · 판단에 필요한 정보 부족' in ['입력 문장만 OpenAI에 전송합니다. CAD 파일은 전송하지 않습니다.', '환경변수 또는 .streamlit/secrets.toml의 OPENAI_API_KEY도 사용할 수 있습니다. API 사용료는 연결한 계정에 청구됩니다.', 'API 연결 필요', '03_rounded_pocket.step', '수정 0건 · 추가 확인 3건', '별도로 표시할 CAD 위치가 없습니다.', ...]
+
+tests_v3\test_cnc_conclusion_ui.py:120: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 23:50:54.485 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\practical-holes-2026-09-30\location-final-03.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_machining_ui.py::test_changed_geometry_keeps_option_order_and_selected_result_consistent
+FAILED tests_v3/test_cnc_conclusion_ui.py::test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence
+2 failed, 35 passed in 106.11s (0:01:46)

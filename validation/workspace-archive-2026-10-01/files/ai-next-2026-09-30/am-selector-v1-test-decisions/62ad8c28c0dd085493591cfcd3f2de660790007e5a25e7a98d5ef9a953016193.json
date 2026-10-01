@@ -1,0 +1,132 @@
+{
+  "id": "threaded_462c9c3b_0135",
+  "dataset": "CadQuarry",
+  "group": "cq:threaded:{\"version\": 2, \"volume\": 275.0, \"surface_area\": 419.0, \"principal_moments\": [714.0, 7050.0, 7050.0], \"n_faces\": 220, \"n_edges\": 562, \"n_vertices\": 344}",
+  "split": "test",
+  "process": "MEX",
+  "priority": "balanced",
+  "candidate_oracle": {
+    "legacy": 0.8005572839693784,
+    "blind": 0.8005572839693784,
+    "geometric": 0.8005572839693784,
+    "height_neural": 0.8005572839693784,
+    "uncertainty05": 0.8005572839693784
+  },
+  "actual_product": {
+    "legacy": 0.8005572839693784,
+    "blind": 0.8005572839693784,
+    "geometric": 0.8005572839693784,
+    "height_neural": 0.8005572839693784,
+    "uncertainty05": 0.8005572839693784
+  },
+  "common_reference_product": {
+    "legacy": 0.8005572839693784,
+    "blind": 0.8005572839693784,
+    "geometric": 0.8005572839693784,
+    "height_neural": 0.8005572839693784,
+    "uncertainty05": 0.8005572839693784
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "selected_name": "-X",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.8005572839693784,
+      "fixed_selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "own_reference_score": 0.8005572839693784,
+      "fixed_reference_score": 0.8005572839693784,
+      "oracle_score": 0.8005572839693784,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "selected_name": "-X",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.8005572839693784,
+      "fixed_selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "own_reference_score": 0.8005572839693784,
+      "fixed_reference_score": 0.8005572839693784,
+      "oracle_score": 0.8005572839693784,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "selected_name": "-X",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.8005572839693784,
+      "fixed_selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "own_reference_score": 0.8005572839693784,
+      "fixed_reference_score": 0.8005572839693784,
+      "oracle_score": 0.8005572839693784,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "selected_name": "-X",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.8005572839693784,
+      "fixed_selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "own_reference_score": 0.8005572839693784,
+      "fixed_reference_score": 0.8005572839693784,
+      "oracle_score": 0.8005572839693784,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "selected_name": "-X",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.8005572839693784,
+      "fixed_selected_direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "own_reference_score": 0.8005572839693784,
+      "fixed_reference_score": 0.8005572839693784,
+      "oracle_score": 0.8005572839693784,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "c8b673e0e6ff7ffb13e294ec7a3184864723239a8116f8674ee0fc206488796f"
+}

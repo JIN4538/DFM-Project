@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="2.161" timestamp="2026-09-29T14:12:38.676804+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_machining_contracts" name="test_every_sample_state_is_summarized_in_korean_including_unknown" time="0.005"><failure message="AssertionError: assert '미확인' in '이 방향에서 보이는 측정점입니다.'">def test_every_sample_state_is_summarized_in_korean_including_unknown():
+        _, report = _visibility_report()
+        rows = feature_rows(_finding(report, "cnc_visibility"))
+        by_label = {row["표본 분류"]: row for row in rows}
+        counts = report["visibility"]["measurements"]["sample_state_counts"]
+        assert set(by_label) == set(_KOREAN_LABELS.values())
+        for state, label in _KOREAN_LABELS.items():
+            assert by_label[label]["표본 수"] == counts[state]
+            assert by_label[label]["해석·다음 행동"]
+&gt;       assert "미확인" in by_label[_KOREAN_LABELS["visible"]]["해석·다음 행동"]
+E       AssertionError: assert '미확인' in '이 방향에서 보이는 측정점입니다.'
+
+tests_v3\test_machining_contracts.py:150: AssertionError</failure></testcase></testsuite></testsuites>

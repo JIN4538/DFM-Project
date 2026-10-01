@@ -1,0 +1,38 @@
+.F                                                                       [100%]
+================================== FAILURES ===================================
+_ test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting _
+
+    def test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting():
+        app = AppTest.from_file(str(APP), default_timeout=60).run()
+        app.selectbox(key='cad_example').select('������ü �� 10��20��30 mm').run()
+        app.checkbox(key='use_build_MEX').set_value(True)
+        for axis in 'XYZ':
+>           app.number_input(key=f'build_{axis}_MEX').set_value(1.)
+
+tests_v3\test_navigation_ux.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1460: in set_value
+    return super().set_value(v)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:252: in set_value
+    self._assert_can_interact()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = NumberInput(key='build_X_MEX', disabled=True, _value=InitialValue(), label='X ���� (mm)', min=1.0, step=0.01)
+
+    def _assert_can_interact(self) -> None:
+        """Reject interactions that a browser user cannot perform."""
+        if getattr(self.proto, "disabled", False):
+            key_part = f" (key={self.key!r})" if self.key else ""
+>           raise AppTestError(
+                f"Cannot update a disabled {self.type} widget{key_part}. "
+                "A browser user cannot interact with a disabled widget."
+            )
+E           streamlit.testing.v1.errors.AppTestError: Cannot update a disabled number_input widget (key='build_X_MEX'). A browser user cannot interact with a disabled widget.
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:245: AppTestError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 11:11:10.172 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED tests_v3/test_navigation_ux.py::test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting
+1 failed, 1 passed in 12.89s
