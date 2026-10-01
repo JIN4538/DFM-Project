@@ -1,0 +1,431 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "ocp_package": "7.9.3.1",
+  "scope": "two official repository samples only; MFInstSeg face mapping follows unique TopExp explorer order but upstream pythonocc 7.5.1 was not executed",
+  "mfcad": {
+    "valid": true,
+    "solids": 1,
+    "faces": 11,
+    "bounds_mm": [
+      -2.9332092310596636e-13,
+      -2.5356106103657794e-13,
+      -5.000444502911705e-13,
+      10.000000000000501,
+      10.0,
+      10.0
+    ],
+    "dimensions_mm": [
+      10.000000000000794,
+      10.000000000000254,
+      10.000000000000501
+    ],
+    "volume_mm3": 850.4647546712083,
+    "label_surfaces": {
+      "15:GeomAbs_Plane": 6,
+      "0:GeomAbs_Plane": 5
+    },
+    "face_rows": [
+      {
+        "index": 0,
+        "step_name": "0",
+        "surface": "GeomAbs_Plane",
+        "label": 15,
+        "normal": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "index": 1,
+        "step_name": "2",
+        "surface": "GeomAbs_Plane",
+        "label": 15,
+        "normal": [
+          1.0,
+          0.0,
+          -0.0
+        ]
+      },
+      {
+        "index": 2,
+        "step_name": "10",
+        "surface": "GeomAbs_Plane",
+        "label": 0,
+        "normal": [
+          -0.7071067811865476,
+          0.0,
+          0.7071067811865476
+        ]
+      },
+      {
+        "index": 3,
+        "step_name": "5",
+        "surface": "GeomAbs_Plane",
+        "label": 0,
+        "normal": [
+          0.0,
+          0.7071067811865476,
+          -0.7071067811865476
+        ]
+      },
+      {
+        "index": 4,
+        "step_name": "6",
+        "surface": "GeomAbs_Plane",
+        "label": 15,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "index": 5,
+        "step_name": "1",
+        "surface": "GeomAbs_Plane",
+        "label": 0,
+        "normal": [
+          -0.7071067811865476,
+          -0.7071067811865476,
+          0.0
+        ]
+      },
+      {
+        "index": 6,
+        "step_name": "4",
+        "surface": "GeomAbs_Plane",
+        "label": 0,
+        "normal": [
+          -0.7071067811865476,
+          0.0,
+          -0.7071067811865476
+        ]
+      },
+      {
+        "index": 7,
+        "step_name": "9",
+        "surface": "GeomAbs_Plane",
+        "label": 15,
+        "normal": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "index": 8,
+        "step_name": "8",
+        "surface": "GeomAbs_Plane",
+        "label": 0,
+        "normal": [
+          0.7071067811865476,
+          0.0,
+          0.7071067811865476
+        ]
+      },
+      {
+        "index": 9,
+        "step_name": "7",
+        "surface": "GeomAbs_Plane",
+        "label": 15,
+        "normal": [
+          1.0,
+          0.0,
+          -0.0
+        ]
+      },
+      {
+        "index": 10,
+        "step_name": "3",
+        "surface": "GeomAbs_Plane",
+        "label": 15,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "mfinstseg": {
+    "valid": true,
+    "solids": 1,
+    "faces": 27,
+    "bounds_mm": [
+      -1e-07,
+      -4.440892098501e-16,
+      0.0,
+      61.152894552546,
+      41.809024589595,
+      43.721100130878
+    ],
+    "dimensions_mm": [
+      61.152894652546,
+      41.809024589595,
+      43.721100130878
+    ],
+    "volume_mm3": 38541.37027903047,
+    "label_surfaces": {
+      "24:GeomAbs_Plane": 6,
+      "23:GeomAbs_Cylinder": 2,
+      "22:GeomAbs_Plane": 10,
+      "1:GeomAbs_Cylinder": 9
+    },
+    "face_rows": [
+      {
+        "index": 0,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 24,
+        "normal": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "index": 1,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 24,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "index": 2,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 23,
+        "radius_mm": 2.60917027932
+      },
+      {
+        "index": 3,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          -1.0,
+          0.0,
+          -0.0
+        ]
+      },
+      {
+        "index": 4,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 24,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "index": 5,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          -1.629953101559e-32,
+          0.0,
+          -1.0
+        ]
+      },
+      {
+        "index": 6,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 24,
+        "normal": [
+          1.0,
+          0.0,
+          -0.0
+        ]
+      },
+      {
+        "index": 7,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "index": 8,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "index": 9,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          1.629953101559e-32,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "index": 10,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 23,
+        "radius_mm": 0.245726835751
+      },
+      {
+        "index": 11,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 24,
+        "normal": [
+          1.0,
+          0.0,
+          -0.0
+        ]
+      },
+      {
+        "index": 12,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 24,
+        "normal": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "index": 13,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "index": 14,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          -0.0,
+          -1.0,
+          -0.0
+        ]
+      },
+      {
+        "index": 15,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          1.0,
+          -6.165034939171e-32,
+          -1.629953101559e-32
+        ]
+      },
+      {
+        "index": 16,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.0
+      },
+      {
+        "index": 17,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "index": 18,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.0
+      },
+      {
+        "index": 19,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.724421494828
+      },
+      {
+        "index": 20,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.687556247351
+      },
+      {
+        "index": 21,
+        "step_name": "",
+        "surface": "GeomAbs_Plane",
+        "label": 22,
+        "normal": [
+          6.165034939171e-32,
+          1.0,
+          -0.0
+        ]
+      },
+      {
+        "index": 22,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.60432165975
+      },
+      {
+        "index": 23,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 5.81583301252
+      },
+      {
+        "index": 24,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.724421494828
+      },
+      {
+        "index": 25,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.0
+      },
+      {
+        "index": 26,
+        "step_name": "",
+        "surface": "GeomAbs_Cylinder",
+        "label": 1,
+        "radius_mm": 1.401153208596
+      }
+    ]
+  }
+}

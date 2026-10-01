@@ -1,0 +1,284 @@
+{
+  "kind": "mfinstseg",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Selected sample and/or ID partitions only; no training or whole-corpus certification",
+  "inputs": [
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfinstseg_sample.step",
+      "bytes": 203057,
+      "sha256": "fbcbc8d3d1996801de47b72432d37de15c8a571201262e6b9f660c782063e2dc"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfinstseg_sample.json",
+      "bytes": 19246,
+      "sha256": "58dba6aa90fdd06be5f68209667afb183c76e3b5f192ae7786177aecea9ea63a"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfinstseg_train.txt",
+      "bytes": 939589,
+      "sha256": "27ac1f66365f7b414e503d8488f7ca35ec243f0213374d67dfc831152c4e625b"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfinstseg_val.txt",
+      "bytes": 201368,
+      "sha256": "bfbc9179f0ff0f2e774bd80ebdc2c80e289e42bf67db4b47dd4d3b19f35e009f"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfinstseg_test.txt",
+      "bytes": 201426,
+      "sha256": "095c8d7778412ffeab11bff78edf62daebc9a77b4c2faabc8d17a32c5218dbd0"
+    }
+  ],
+  "findings": [
+    "train: 12 duplicate split rows",
+    "val: 1 duplicate split rows",
+    "train/val: 3 shared IDs",
+    "train/test: 1 shared IDs",
+    "val/test: 1 shared IDs"
+  ],
+  "sample": {
+    "step_face_count": 27,
+    "label_count": 27,
+    "checks": {
+      "face_count_matches": true,
+      "seg_keys_complete": true,
+      "bottom_keys_complete": true,
+      "semantic_range_valid": true,
+      "bottom_binary": true,
+      "instance_square": true,
+      "instance_symmetric": true,
+      "instance_binary": true
+    },
+    "semantic_counts": {
+      "24": 6,
+      "23": 2,
+      "22": 10,
+      "1": 9
+    },
+    "bottom_counts": {
+      "0": 23,
+      "1": 4
+    },
+    "mapping": "JSON face ordinal must match the upstream B-Rep traversal; count equality alone is insufficient"
+  },
+  "geometry": {
+    "ocp_version": "7.9.3.1",
+    "valid": true,
+    "solid_count": 1,
+    "face_count": 27,
+    "bounds_mm": [
+      -1e-07,
+      -4.440892098501e-16,
+      0.0,
+      61.152894552546,
+      41.809024589595,
+      43.721100130878
+    ],
+    "dimensions_mm": [
+      61.152894652546,
+      41.809024589595,
+      43.721100130878
+    ],
+    "volume_mm3": 38541.37027903047,
+    "face_rows": [
+      {
+        "index": 0,
+        "step_name": "",
+        "label": 24,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 1,
+        "step_name": "",
+        "label": 24,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 2,
+        "step_name": "",
+        "label": 23,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 3,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 4,
+        "step_name": "",
+        "label": 24,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 5,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 6,
+        "step_name": "",
+        "label": 24,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 7,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 8,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 9,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 10,
+        "step_name": "",
+        "label": 23,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 11,
+        "step_name": "",
+        "label": 24,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 12,
+        "step_name": "",
+        "label": 24,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 13,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 14,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 15,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 16,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 17,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 18,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 19,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 20,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 21,
+        "step_name": "",
+        "label": 22,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 22,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 23,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 24,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 25,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      },
+      {
+        "index": 26,
+        "step_name": "",
+        "label": 1,
+        "surface": "GeomAbs_Cylinder"
+      }
+    ],
+    "ordinal_limit": "MFInstSeg upstream pythonocc traversal was not run; geometric agreement here is a sample check"
+  },
+  "splits": {
+    "counts": {
+      "train": {
+        "rows": 43745,
+        "unique": 43733,
+        "duplicate_rows": 12
+      },
+      "val": {
+        "rows": 9375,
+        "unique": 9374,
+        "duplicate_rows": 1
+      },
+      "test": {
+        "rows": 9375,
+        "unique": 9375,
+        "duplicate_rows": 0
+      }
+    },
+    "overlap_ids": {
+      "train/val": [
+        "20221225_205134_10",
+        "20221225_205134_44",
+        "20221225_205134_52"
+      ],
+      "train/test": [
+        "20221225_205134_40"
+      ],
+      "val/test": [
+        "20221225_205134_32"
+      ]
+    },
+    "total_rows": 62495,
+    "unique_union": 62477
+  },
+  "status": "findings"
+}

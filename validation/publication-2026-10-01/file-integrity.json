@@ -1,6 +1,6 @@
 {
   "schema": "dfm-publication-audit-1",
-  "repository_files": 4743,
+  "repository_files": 4747,
   "files": [
     {
       "file": ".gitattributes",
@@ -10,7 +10,7 @@
     {
       "file": ".github/workflows/validate.yml",
       "bytes": 1096,
-      "sha256": "138c8b4c62ca66ada320a822430cbe239d0ec3bee18b287c4f58fccd4574ed0f"
+      "sha256": "651b032ba9d0f27dd020b738836b93e124614a23cc67fe0fc967e918c4b6d4c1"
     },
     {
       "file": ".gitignore",
@@ -1274,8 +1274,8 @@
     },
     {
       "file": "docs/project-knowledge/REPOSITORY_PUBLICATION_2026-10-01.md",
-      "bytes": 5930,
-      "sha256": "4e17c2e42565c9d0d76b39a8d003c0d96648115c0402ae6c3d5926aee84370c7"
+      "bytes": 7324,
+      "sha256": "25b7d7b01077aeb8eb902ebda21a58fe634bfe265c1cf59fdb0020ec703be613"
     },
     {
       "file": "docs/project-knowledge/SECTION_UX_2026-09-15.md",
@@ -1564,8 +1564,8 @@
     },
     {
       "file": "examples/README.md",
-      "bytes": 4016,
-      "sha256": "ad2c2b2c7898a61fdeea700f1b65dc0ad8d6aa266c0317d28182a9c22c1a1eb6"
+      "bytes": 4137,
+      "sha256": "f16c9626110a11873d3e6cbece450e8d4db672c2939d195282f8caa54fab65f9"
     },
     {
       "file": "examples/cad/01_box.step",
@@ -2699,8 +2699,8 @@
     },
     {
       "file": "scripts/audit_repository_publication.py",
-      "bytes": 3934,
-      "sha256": "ce23509d8b36bf8cccd17193739906eca27262bc454881989d2ef87510f78cd0"
+      "bytes": 4145,
+      "sha256": "a081a5c26bbefa46ac9404fd94103619124c5e098701e9926fea03234c777040"
     },
     {
       "file": "scripts/audit_rl_planner.py",
@@ -3669,8 +3669,8 @@
     },
     {
       "file": "tests_v3/test_public_expansion_ui.py",
-      "bytes": 1134,
-      "sha256": "b821b6a52edbdbd8134b6a778e2fae9fc69da2ea7337f3e815f688c113c58f95"
+      "bytes": 1434,
+      "sha256": "f2c058875f870acd56a8cdc6a83a9d4291cc171be0d9c14b7ae51d8fbab884df"
     },
     {
       "file": "tests_v3/test_reference_scope.py",
@@ -11503,9 +11503,14 @@
       "sha256": "311b764fd2751968be66f75f9c872023df8593a4305364c52b5c2d6686e1c33b"
     },
     {
-      "file": "validation/publication-2026-10-01/file-integrity-audit-02.log",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "file": "validation/publication-2026-10-01/equipment-recheck-03.log",
+      "bytes": 233,
+      "sha256": "30984c886c70a70726df2d756f52a16ccc101927a54fa24011f2215fca83ad25"
+    },
+    {
+      "file": "validation/publication-2026-10-01/equipment-recheck-03.xml",
+      "bytes": 1885,
+      "sha256": "715a91a85dcd08592f9a50f3e2a254c5ca5d8bfcbd7b06f8f4fbb9de26928c96"
     },
     {
       "file": "validation/publication-2026-10-01/geometry-inventory-02.json",
@@ -11523,6 +11528,11 @@
       "sha256": "2b0e7d0e79331d7d9a8327c2131cc4280705e36b6d26e2b3e0be40f01de5aa70"
     },
     {
+      "file": "validation/publication-2026-10-01/geometry-tracked-final.json",
+      "bytes": 94,
+      "sha256": "34eea14bb55f3c3679d469bc400a455783a667dbab639442deb3bc6993453af3"
+    },
+    {
       "file": "validation/publication-2026-10-01/legacy-01.log",
       "bytes": 14769,
       "sha256": "5837452e7ff36d407a4b8d198a6481484e533f59904a12687afe2ddc2422a3fe"
@@ -11536,6 +11546,11 @@
       "file": "validation/publication-2026-10-01/regression-01.xml",
       "bytes": 245173,
       "sha256": "3b92232e753681a7e795e0b374236589aa7d06f6348785f4647d78d06fe0bc8b"
+    },
+    {
+      "file": "validation/publication-2026-10-01/test-summary.json",
+      "bytes": 385166,
+      "sha256": "61f582e305bf746c3066fe0d947a4cd0dcb7600f9000f40173a9fb0b74309217"
     },
     {
       "file": "validation/ux-audit-2026-09-30/am-detail-followup.xml",
@@ -12736,6 +12751,11 @@
       "file": "validation/v3/user-workflow-20260915/ux-legacy-py313.log",
       "bytes": 14769,
       "sha256": "5837452e7ff36d407a4b8d198a6481484e533f59904a12687afe2ddc2422a3fe"
+    },
+    {
+      "file": "validation/workspace-archive-2026-10-01/README.md",
+      "bytes": 1636,
+      "sha256": "a42f1ca790cb93aac18e8c44a09c381042615de5b0d945a4bdfeeefa3aff5d02"
     },
     {
       "file": "validation/workspace-archive-2026-10-01/files/ai-advisor-2026-09-28/deploy_desktop.py",
@@ -24070,5 +24090,5 @@
       "sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429"
     }
   ],
-  "note": "Excluded external DB/environment/cache are listed in workspace archive manifest; original blobs remain in Git history"
+  "note": "Excluded external DB/environment/cache are listed in workspace archive manifest; original blobs remain in Git history. Audit output and its own live stdout logs are excluded from this self-reference-free hash snapshot."
 }

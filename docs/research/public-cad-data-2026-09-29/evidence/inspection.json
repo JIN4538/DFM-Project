@@ -1,0 +1,151 @@
+{
+  "scope": "small official repository samples and public partition files only; no whole-corpus geometry validation",
+  "python": "3.12.14",
+  "date": "2026-09-29",
+  "mfcad": {
+    "face_count": 11,
+    "label_count": 11,
+    "step_face_name_order": [
+      0,
+      2,
+      10,
+      5,
+      6,
+      1,
+      4,
+      9,
+      8,
+      7,
+      3
+    ],
+    "labels_by_name_index": [
+      15,
+      0,
+      15,
+      15,
+      0,
+      0,
+      15,
+      15,
+      0,
+      15,
+      0
+    ],
+    "names_are_index_permutation": true,
+    "file_order_equals_name_order": false,
+    "file_order_labels": [
+      15,
+      15,
+      0,
+      0,
+      15,
+      0,
+      0,
+      15,
+      0,
+      15,
+      15
+    ],
+    "surface_types": {
+      "PLANE": 11
+    }
+  },
+  "mfinstseg": {
+    "sample_id": "test",
+    "step_face_count": 27,
+    "label_count": 27,
+    "keys": [
+      "seg",
+      "inst",
+      "bottom"
+    ],
+    "seg_index_complete": true,
+    "instance_rows": 27,
+    "instance_row_lengths": {
+      "27": 27
+    },
+    "instance_symmetric": true,
+    "bottom_labels": {
+      "0": 23,
+      "1": 4
+    },
+    "semantic_labels": {
+      "24": 6,
+      "23": 2,
+      "22": 10,
+      "1": 9
+    },
+    "step_name_values": {
+      "": 27
+    }
+  },
+  "mfcad_splits": {
+    "counts": {
+      "train": {
+        "rows": 9292,
+        "unique": 9292,
+        "duplicate_rows": 0
+      },
+      "val": {
+        "rows": 3097,
+        "unique": 3097,
+        "duplicate_rows": 0
+      },
+      "test": {
+        "rows": 3099,
+        "unique": 3099,
+        "duplicate_rows": 0
+      }
+    },
+    "overlap_ids": {
+      "train/val": [],
+      "train/test": [],
+      "val/test": []
+    },
+    "total_rows": 15488,
+    "unique_union": 15488
+  },
+  "mfinstseg_splits": {
+    "counts": {
+      "train": {
+        "rows": 43745,
+        "unique": 43733,
+        "duplicate_rows": 12
+      },
+      "val": {
+        "rows": 9375,
+        "unique": 9374,
+        "duplicate_rows": 1
+      },
+      "test": {
+        "rows": 9375,
+        "unique": 9375,
+        "duplicate_rows": 0
+      }
+    },
+    "overlap_ids": {
+      "train/val": [
+        "20221225_205134_10",
+        "20221225_205134_44",
+        "20221225_205134_52"
+      ],
+      "train/test": [
+        "20221225_205134_40"
+      ],
+      "val/test": [
+        "20221225_205134_32"
+      ]
+    },
+    "total_rows": 62495,
+    "unique_union": 62477
+  },
+  "mfcad_inventory": {
+    "step_count": 15488,
+    "truth_count": 15488,
+    "tree_truncated": false,
+    "source_commit": "ef6d58a40164d5192666821ce98d0cc90e379fac",
+    "uncompressed_step_bytes": 1158435999,
+    "uncompressed_truth_bytes": 824494
+  },
+  "aagnet_source_commit": "e0e36b7a12a7f01a29d7be36efc22730d293a1bd"
+}
