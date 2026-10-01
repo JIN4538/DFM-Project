@@ -1,20 +1,22 @@
 {
   "schema": "amdfm-geometry-inventory/1",
   "path_base": "repository root",
-  "geometry_file_count": 128,
-  "unique_sha256_count": 122,
-  "total_bytes": 58309519,
+  "geometry_file_count": 155,
+  "unique_sha256_count": 149,
+  "total_bytes": 60118567,
   "groups": {
-    "existing/cura_run": 27,
     "examples/cad": 14,
     "examples/corpus": 26,
     "examples/external": 3,
     "examples/historical": 22,
+    "examples/learning_validation": 13,
     "examples/machining": 12,
+    "examples/public_demo": 14,
     "examples/regressions": 3,
+    "existing/cura_run": 27,
     "existing/validation": 21
   },
-  "scope": "All standalone test geometry found in project, working study and deliverables, supplied Desktop corpus and deployed copy. Byte-identical repeated deployment/extraction copies are represented by existing paths. Archive inventory found no extra hashes. Unique bytes are not a count of physically distinct designs. Expanded 2026-09-19 with 12 original machining STEP geometry fixtures; source dimensions are in examples/machining/manifest.json. Expanded 2026-09-20 with 10 stored before/after STEP exports of 5 independent machining rotation/translation cases; design dimensions and transformations are in validation/machining-reaudit-2026-09-20/geometry/probe_geometry.py.",
+  "scope": "All standalone test geometry found in project, working study and deliverables, supplied Desktop corpus and deployed copy. Byte-identical repeated deployment/extraction copies are represented by existing paths. Archive inventory found no extra hashes. Unique bytes are not a count of physically distinct designs. Expanded 2026-09-19 with 12 original machining STEP geometry fixtures; source dimensions are in examples/machining/manifest.json. Expanded 2026-09-20 with 10 stored before/after STEP exports of 5 independent machining rotation/translation cases; design dimensions and transformations are in validation/machining-reaudit-2026-09-20/geometry/probe_geometry.py. Expanded 2026-09-30 with 2 independent non-rectangular pocket fixtures and 14 public STEP demos (13 CC0 CadQuarry + 1 NIST public domain).",
   "files": [
     {
       "path": "cura_run/NIST_Test_Artifact_online__negX.stl",
@@ -911,6 +913,203 @@
       "format": "step",
       "bytes": 34405,
       "sha256": "6ffbc303e4c84d636f175a60cd884747e6138f50c1d9752ed0aa95a0a6fe15ec"
+    },
+    {
+      "path": "examples/learning_validation/hexagonal_pocket.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 37774,
+      "sha256": "d17f778573d9985d91128547b06d834ce7673a0c5420bb60ac881f8ed9e54844"
+    },
+    {
+      "path": "examples/learning_validation/triangular_pocket.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 26883,
+      "sha256": "91fd1bce7f4ad5e5e9c37ff89e59dccc54c4d6574917ac073f607b4617dd3e29"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_block_block_462c9d.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 34877,
+      "sha256": "d8f8a98c69384fa7c48e3cfe7a42058f43362080cc647a98fd0ced6337446939"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_bracket_bracket_462c.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 27183,
+      "sha256": "59cdb4f3e826163fe5bfbeb14147bc01cd33b338be659fcfd844df93a75af2cc"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_compound_compound_462.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 9644,
+      "sha256": "f8634d8bc61648f689c40bef08663b8254eff4a3b416b6e5891755193b2ce43c"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_enclosure_enclosure_46.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 30608,
+      "sha256": "4b3c730817423bac6042983c08effc41e200e4691b836fed52a9982ccfe28fde"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_flanged_flanged_462c.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 42736,
+      "sha256": "3ef2a5d51bcab5105af84a985dfa71cb790485ae42ea65bba817a10b2db2ecbd"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_gear_gear_462c9c8.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 375311,
+      "sha256": "9172be4f72d89c2bd6eeb7bacf8e1d502e434df6e51833708bec7437e83d3928"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_lofted_lofted_462c9.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 30597,
+      "sha256": "1f11406034478d56fe2aa5914fb951241f67ba638c0bbe918bc5b39ea54dffb9"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_plate_plate_462c9d.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 15506,
+      "sha256": "b4a97a52a1185137451bcbce98f09847253c5a9bc8f9b5db723a5fce35f3b765"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_profiled_profiled_462.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 6728,
+      "sha256": "cd552a7187b472fe0464cbd9076363f36a9416a72aed166ff47b4a459d9f54a4"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_revolved_revolved_462.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 6705,
+      "sha256": "6470e0f34def398d17e83521b81d1a3fffb222c3a4e9a48bdc8213d664b5274b"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_ribbed_ribbed_462c9.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 43027,
+      "sha256": "e85b059a14c5dddb143dbdb9aa46e8fb5f630632358845565ac5e616955af429"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_sketched_sketched_462.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 15742,
+      "sha256": "400607acfe49ed84f3601e493daf1fae3aa51720807824555bae65d0c8f4473e"
+    },
+    {
+      "path": "examples/public_demo/cadquarry_swept_swept_462c9f.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 19398,
+      "sha256": "5c686e4916c7465bcb87f0349dfebe145a2b76ea1b82e9cd33a70f72a8c15a87"
+    },
+    {
+      "path": "examples/public_demo/nist_am_test_artifact_1.step",
+      "group": "examples/public_demo",
+      "format": "step",
+      "bytes": 564884,
+      "sha256": "74e88ac8e49031a8708bf201447b9a2f68223afae807d38614b9938cc967f97e"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/triangular_pocket_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 26905,
+      "sha256": "4f5c07fb1e5ac61b9e2e1ef3ce26a675722411e3ddcddf2dda8453d6b92732b2",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/triangular_pocket_after_R1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 38727,
+      "sha256": "fa74e5bee7391764efca763076348e60c22aae524077134a03f88b3beb81f532",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/rectangular_pocket_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 30495,
+      "sha256": "b314ea0b2006527d8a03ff2d6902b1f5d6e74ac6842cdb31a2ee6c66b40304c3",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/rectangular_pocket_after_R1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 46085,
+      "sha256": "3425319ef05348039c3c88a5e5c1f6d438ffdec6f4a5fa0e918e3cbe57d807b3",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/6sides_pocket_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 37735,
+      "sha256": "a5d4b6051d9aa273e73d54cbb0ae19c454ab5fe3c5958a7b8ac5bb874c29c283",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/corner_edits/6sides_pocket_after_R1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 61503,
+      "sha256": "64f896301c6584c7093806c61eba7fe56ce80c3f7143cd1955c3f6eb1bef3b85",
+      "purpose": "Independent CAD corner-edit pair fixture"
+    },
+    {
+      "path": "examples/learning_validation/compound_edits/three_pockets_before.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 64967,
+      "sha256": "e289e8d5df2939a61905a7081318290ea478c550edac75cdf1478f346ddb2e12",
+      "purpose": "Independent three-pocket CAD edit reference"
+    },
+    {
+      "path": "examples/learning_validation/compound_edits/three_pockets_after.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 118877,
+      "sha256": "09da44277b0fe0527ef3a14d58ce4dd97e8a6ad35e9301c441558b96c9ec586e",
+      "purpose": "Independent three-pocket CAD edit reference"
+    },
+    {
+      "path": "examples/learning_validation/hole_review/through-3-0.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 26461,
+      "sha256": "ea57f787832b98c569acce9873593d82709171781d825ffef5a992ea90acc9be"
+    },
+    {
+      "path": "examples/learning_validation/hole_review/blind-3-0.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 27126,
+      "sha256": "ddb8a18cb86b511f16d50cc48ffa27bacc1f2538bfde71b2411c7acf926706ee"
+    },
+    {
+      "path": "examples/learning_validation/hole_review/split-3-1.step",
+      "group": "examples/learning_validation",
+      "format": "step",
+      "bytes": 42564,
+      "sha256": "bbbab7d447e0f134a656cee68a7f81bfcb2ac3a6f8ea890e01840b7d40f5650a"
     }
   ]
 }
