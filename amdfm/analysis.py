@@ -21,7 +21,9 @@ from .profiles import Profile, PROCESS_LABELS, UNASSESSED
 def code_digest():
     digest = hashlib.sha256()
     root = Path(__file__).resolve().parents[1]
-    files = sorted((root/"amdfm").glob("*.py")) + sorted((root/"dfm").glob("*.py")) + sorted((root/"src/core").glob("*.py"))
+    files = (sorted((root/"amdfm").glob("*.py")) + sorted((root/"dfm").glob("*.py"))
+             + sorted((root/"src/core").glob("*.py")) + sorted((root/"data/conditions").glob("*.json"))
+             + sorted((root/"data/models").rglob("*.json")))
     for path in files:
         digest.update(path.relative_to(root).as_posix().encode())
         with path.open("rb") as f:
@@ -221,7 +223,7 @@ def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, e
     orientations = compare_orientations(mesh, profile, reliable_normals=reliable, extended=extended,
         dense=dense, current_direction=measured["direction"]) if compare else []
     attention = sum(f.status == "attention" for f in findings)
-    return plain(dict(schema="amdfm-review/3.0", app_version=__version__,
+    result = plain(dict(schema="amdfm-review/3.0", app_version=__version__,
         timestamp_utc=datetime.now(timezone.utc).isoformat(), model=model.metadata,
         model_fingerprint=model.fingerprint, profile=profile.to_dict(), process_label=PROCESS_LABELS[profile.process],
         summary={"review_status":"geometry_review" if reliable else "partial_geometry",
@@ -241,3 +243,6 @@ def review(model: Model, profile: Profile, direction=(0,0,1), *, compare=True, e
         provenance={"code_sha256":code_digest(), "python":platform.python_version(), "platform":platform.platform(),
             "dependencies":{n:importlib.metadata.version(n) for n in ("numpy","trimesh","shapely","streamlit","cadquery-ocp-novtk")}},
         elapsed_seconds=time.perf_counter()-started))
+    from .recommendation import recommend_orientation
+    result['orientation_recommendation'] = recommend_orientation(result)
+    return result

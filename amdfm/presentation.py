@@ -8,6 +8,7 @@ import trimesh
 
 from .models import json_bytes
 from .visuals import wall_samples, add_wall_markers, section_svg, model_svg
+from dfm.learned_output import learned_html
 
 STATUS = {"attention":"검토 필요", "observed":"측정됨", "not_detected":"범위 내 미검출",
           "unknown":"추가 확인", "not_applicable":"해당 없음"}
@@ -85,7 +86,10 @@ def html_report(report, model=None):
     """Portable illustrated decisions; full unmodified data is exported as JSON."""
     from .detail_summary import summarize_wall, summarize_layers
     from .section_summary import summarize_sections
-    from .workflow import summarize_review
+    from .workflow import summarize_review, action_plan
+    from dfm.enhanced_planning import orientation_recommendation as recommend_orientation
+    from dfm.conclusion import conclusion_html
+    from dfm.advisor import context_summary
 
     esc=lambda x: html.escape(str(x))
     def value(x):
@@ -110,6 +114,19 @@ def html_report(report, model=None):
                 f"<p><b>다음에 할 일</b> · {esc(action)}</p></div>")
 
     overview=summarize_review(report)
+    plan=action_plan(report)
+    recommendation=recommend_orientation(report)
+    direction_summary=decision('info',recommendation['title'],recommendation['observation'],recommendation['next_action'])
+    if recommendation.get('recommended'):
+        direction_summary+=table([{'항목':d['label'],'현재':f"{d['current']:.4g} {d['unit']}",
+            '추천 후보':f"{d['recommended']:.4g} {d['unit']}",
+            '변화':{'same':'같음','improvement':'유리','tradeoff':'불리'}[d['change']]}
+            for d in recommendation['current_comparison'].get('differences',[])])
+    direction_summary+=table([{'비교 지표':c['label'],
+        '우선 방향':'작을수록 유리' if c['direction']=='min' else '클수록 유리'}
+        for c in recommendation['criteria']])
+    plan_html=table([{'순서':i,'항목':x['label'],'구분':x['category'],'확인 내용':x['observation'],
+                     '개선·확인 방법':x['next_action']} for i,x in enumerate(plan['actions'],1)])
     profile=report['profile']
     details=report.get('details',{})
     findings={f['id']:f for f in report['findings']}
@@ -119,12 +136,15 @@ def html_report(report, model=None):
         card=(f"<section id='check-{esc(key)}'><h2>{esc(item['label'])}</h2>"
               +decision(item['level'],item['state'],item['observation'],item['next_action']))
         if key=='wall':
+            from .wall_visual import wall_report_svg
             wall=summarize_wall(details.get('wall'),profile.get('minimum_wall_mm'))
             if wall['minimum_mm'] is not None:
                 criterion=value(wall['minimum_wall_mm'])+' mm' if wall['criterion_available'] else '미입력'
                 card+=(f"<p><b>가장 짧게 측정한 거리</b> {value(wall['minimum_mm'])} mm · "
                        f"<b>입력한 최소 벽 기준</b> {criterion}</p>")
                 card+=f"<p><b>기준 근거</b> · {esc(profile.get('threshold_basis','미입력'))}</p>"
+                if model is not None and wall_samples(report):
+                    card+='<h3>가장 얇게 측정한 위치와 확대 단면</h3>'+wall_report_svg(model,report)
             card+=f"<p class='scope'>{esc(wall['scope'])}</p>"
         elif key=='layers':
             layers=summarize_layers(details.get('layers'))
@@ -182,7 +202,8 @@ def html_report(report, model=None):
         sources.append(f"<li id='source-{esc(key)}'><b>{esc(key)}</b> {title}. {esc(s['locator'])}. {esc(s['access'])}. {esc(s['use'])}</li>")
     navigation=''.join(f"<li><a href='#check-{esc(i['id'])}'>{esc(i['label'])}</a> · {esc(i['state'])}</li>"
                        for i in overview['checklist'])
-    conditions=table([{'조건':'장비','설정':profile.get('machine')},
+    from dfm.conditions import condition_html
+    conditions=condition_html(profile.get('condition_evidence')) + table([{'조건':'장비','설정':profile.get('machine')},
                       {'조건':'재료','설정':profile.get('material')},
                       {'조건':'슬라이서','설정':profile.get('slicer')},
                       {'조건':'빌드 공간','설정':'크기 제한 미적용' if profile.get('build_volume_mm') is None else profile['build_volume_mm']},
@@ -200,17 +221,18 @@ def html_report(report, model=None):
 <title>AM-DFM 설계 검토 — {esc(report['model']['filename'])}</title>
 <style>body{{font-family:'Malgun Gothic',system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;color:#222;line-height:1.65}}h1{{font-size:28px}}h2{{font-size:21px;margin-top:34px}}h3{{font-size:17px;margin:0}}.scope,small{{font-size:13px;color:#555}}.decision{{padding:18px 20px;border-left:5px solid #315f78;background:#f3f7fa;border-radius:4px}}.decision.warning{{border-color:#a76818;background:#fff6e8}}.decision.success{{border-color:#39715a;background:#eff8f2}}table{{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}}td,th{{border:1px solid #ddd;padding:8px;text-align:left;overflow-wrap:anywhere}}th{{background:#f4f4f4}}.table-scroll{{overflow-x:auto}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}}a{{color:#245d87}}details{{margin:14px 0;padding:12px;border:1px solid #ddd;border-radius:5px}}summary{{cursor:pointer;font-weight:bold}}svg{{display:block;width:100%;max-width:640px;height:auto;margin:16px auto}}section{{break-inside:avoid}}@media print{{body{{margin:0;max-width:none}}.decision{{break-inside:avoid}}}}</style>
 <h1>적층제조 설계 검토</h1><p>{esc(report['model']['filename'])} · {esc(report['process_label'])} · AM-DFM {esc(report['app_version'])}</p>
-{decision(overview['level'],overview['title'],overview['observation'],overview['next_action'])}
-<p class='scope'>형상과 입력 조건을 이용한 설계 검토입니다. 검사별 판단은 해당 범위에 한정되며 실제 출력 성공·강도·표준 적합을 보증하지 않습니다.</p>
+<p>{esc(context_summary(report.get('review_context',{}),profile['process']))}</p>
+{conclusion_html(report)}
+<details><summary>전체 개선 순서·방향 비교</summary>{plan_html}{direction_summary}</details>
 {model_svg(model, report) if model is not None else ''}
 <p>전체 표본·층별 원자료는 별도 <code>AM-DFM_review.json</code>에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.</p>
-<h2>항목별 판단과 다음 행동</h2><ul>{navigation}</ul>
+<details><summary>항목별 측정값·그림</summary><ul>{navigation}</ul>
 <details><summary>이번 검토의 형상·공정 조건</summary><p>{esc(report['model']['unit_note'])}</p>{conditions}
+{raw('사용자 요구·해석 출처',report.get('review_context',{}))}
 <p>현재 높이: {value(report['current_orientation']['height_mm'])} mm · 모델 적층축: {value(report['current_orientation']['direction'])}. 이 방향이 프린터 +Z를 향합니다.</p></details>
 {''.join(cards)}
-<h2>방향을 바꿀 때</h2><p>프로그램의 방향 비교에서 {esc(goals_text)} 중 원하는 목적을 고르고 현재 방향과의 손익을 확인하세요. 적용 후에는 같은 방향으로 정밀 검토를 다시 실행하세요.</p>
-<details><summary>방향별 전체 측정값</summary><p>비교한 후보 안에서의 기하 지표입니다. 비지배 대안은 지표 간 절충안이며 전체 방향의 최적해가 아닙니다. 투영면적 합은 실제 서포트 부피가 아니며 높이는 인쇄 시간이 아닙니다.</p>{table(orientation_table(report))}</details>
-<h2>실제 제작 전에 확인할 내용</h2><p>{esc(' · '.join(report['unassessed']))}</p>
+</details><details><summary>방향별 전체 측정값</summary>{table(orientation_table(report))}</details>
+<details><summary>검토 범위 밖 항목</summary><p>{esc(' · '.join(report['unassessed']))}</p></details>
 <h2>검토 근거와 재현 기록</h2><details><summary>검토 규칙의 이유와 출처</summary><ol>{''.join(sources)}</ol></details>
 {raw('입력·설정·코드 식별자와 실행 환경',provenance)}
 </html>"""

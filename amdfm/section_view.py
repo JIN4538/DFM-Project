@@ -17,22 +17,14 @@ def render_section_result(detail, process, mesh_volume_mm3):
             st.warning(summary["completion_title"])
         else:
             st.info(summary["completion_title"])
-        st.write(summary["completion_text"])
-        st.caption(f"{method} 결과")
-        if summary['selection_note']:
-            st.info(summary['selection_note'])
-        st.markdown(f"**형상에서 확인한 내용** · {summary['change_text']}")
-        st.write(summary["interpretation"])
-        st.markdown(f"**다음에 할 일** · {summary['next_step']}")
-        if summary["reason"]:
-            st.write(summary["reason"])
-        partial=summary['partial_volume']
-        if partial['available']:
-            cols=st.columns(2)
-            cols[0].metric('확인한 구간의 부피 합',f"{partial['known_mm3']:,.8g} mm³")
-            cols[1].metric('빠진 높이 구간의 부피 기여 상한',
-                           '미확정' if partial['omitted_envelope_mm3'] is None else f"{partial['omitted_envelope_mm3']:.6g} mm³")
-            st.caption(partial['explanation'])
+        change=summary['change']
+        if change:
+            st.write(f"**표본 간 최대 변화** · 높이 {change['z_before_mm']:.4g} → {change['z_after_mm']:.4g} mm · 달라진 면적 {change['symmetric_change_mm2']:,.4g} mm²")
+            st.caption('두 단면을 겹쳐 보고, 가는 부분·돌출부가 설계 의도와 맞는지 확인하세요.')
+        else:
+            st.write(summary['change_text'])
+        if summary['status']!='complete':
+            st.caption('미확인 단면이 남았습니다. 계산 범위에서 사유를 확인하세요.')
 
     rows = detail.get("rows") or []
     if rows:
@@ -47,7 +39,8 @@ def render_section_result(detail, process, mesh_volume_mm3):
             st.session_state["section_index"] = summary["default_row_index"] or 0
 
         change = summary["change"]
-        if change and st.button("변화가 가장 크게 관측된 두 단면 보기", key="show_section_change"):
+        if (change and st.session_state['section_index'] != change['row_index']
+                and st.button("변화가 가장 큰 단면으로 돌아가기", key="show_section_change")):
             st.session_state["section_index"] = change["row_index"]
 
         def label(i):
@@ -55,7 +48,7 @@ def render_section_result(detail, process, mesh_volume_mm3):
             area = f"{row['area_mm2']:,.4g} mm²" if row.get("area_mm2") is not None else "미확정"
             return f"{i + 1}번 · 높이 {row['z_mm']:.4g} mm · 재료 면적 {area}"
 
-        chosen = st.selectbox("살펴볼 단면 · 높이와 넓이로 선택", list(range(len(rows))),
+        chosen = st.selectbox("살펴볼 높이 · 단면을 바로 표시합니다", list(range(len(rows))),
                               format_func=label, key="section_index")
         current = rows[chosen]
         previous = rows[chosen - 1] if chosen > 0 else None
@@ -64,14 +57,18 @@ def render_section_result(detail, process, mesh_volume_mm3):
         if comparable:
             st.write(f"높이 {previous['z_mm']:.4g} mm와 {current['z_mm']:.4g} mm를 비교합니다. "
                      f"재료 면적은 {previous['area_mm2']:,.4g} → {current['area_mm2']:,.4g} mm²입니다.")
-            st.caption("단면 사이에서 정확히 어느 높이에 변화가 생겼는지는 이 두 표본만으로 확정하지 않습니다.")
 
         outline_col, area_col = st.columns(2)
         with outline_col:
             st.markdown('**선택한 높이의 단면 모양**')
             if current.get("outlines") or (comparable and previous.get("outlines")):
-                st.plotly_chart(section_outline_figure(rows, chosen), width="stretch")
-                st.caption("파란 점선: 이전 단면 · 주황 실선: 현재 단면. 같은 길이는 같은 배율로 표시합니다.")
+                outline_figure=section_outline_figure(rows, chosen)
+                st.plotly_chart(outline_figure, width="stretch")
+                shown={trace.legendgroup for trace in outline_figure.data}
+                legend=[label for key,label in (('이전 단면','파란 점선: 이전'),
+                                                ('현재 단면','주황 실선: 현재')) if key in shown]
+                if legend:
+                    st.caption(' · '.join(legend)+' · 같은 배율')
             if not current.get("complete"):
                 st.warning("이 높이의 재료 단면은 확정되지 않았습니다. 아래 전체 측정값에서 누락 사유를 확인하세요.")
             elif not current.get("outlines_complete"):
@@ -81,7 +78,11 @@ def render_section_result(detail, process, mesh_volume_mm3):
             area_figure = section_area_figure(rows, chosen)
             if area_figure is not None:
                 st.plotly_chart(area_figure, width="stretch")
-            st.caption("◆ 현재 단면 · ■ 이전 단면 · ● 다른 단면. 점 하나가 실제 계산한 단면이며, 점 사이를 연결하거나 형상을 추정하지 않습니다.")
+                shown={trace.name for trace in area_figure.data}
+                legend=[label for key,label in (('현재 단면','◆ 현재'),('이전 단면','■ 이전'),
+                                                ('다른 단면','● 다른 단면')) if key in shown]
+                if legend:
+                    st.caption(' · '.join(legend))
 
         with st.expander("전체 측정값 · 항목 뜻과 미확정 사유"):
             st.write("면적은 재료가 차지한 넓이입니다. 둘레에는 내부 구멍의 경계도 포함합니다. "
@@ -103,6 +104,21 @@ def render_section_result(detail, process, mesh_volume_mm3):
                 st.json(unresolved, expanded=False)
 
     with st.expander("계산 확인 · 부피 검산과 적용 범위"):
+        st.write(summary['completion_text'])
+        st.caption(method)
+        if summary['selection_note']:
+            st.write(summary['selection_note'])
+        st.write(summary['next_step'])
+        if summary['reason']:
+            st.write(summary['reason'])
+        partial=summary['partial_volume']
+        if partial['available']:
+            cols=st.columns(2)
+            cols[0].metric('확인한 구간의 부피 합',f"{partial['known_mm3']:,.8g} mm³")
+            cols[1].metric('누락 구간의 부피 기여 상한',
+                           '미확정' if partial['omitted_envelope_mm3'] is None else f"{partial['omitted_envelope_mm3']:.6g} mm³")
+            st.caption(partial['explanation'])
+        st.caption('점 하나는 계산한 단면입니다. 표본 사이의 형상·변화 높이는 추정하지 않습니다.')
         volume = summary["volume"]
         if volume["available"]:
             display = volume["display"]

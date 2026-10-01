@@ -7,29 +7,40 @@ import streamlit as st
 from .detail_summary import summarize_wall, summarize_layers
 from .presentation import model_figure
 from .visuals import wall_samples
+from .wall_visual import wall_context_figure, wall_measurement_figure, wall_sample_geometry
 
 
 def decision_card(summary):
     with st.container(border=True):
         getattr(st, summary['level'])(summary['title'])
         st.write(summary['observation'])
-        st.markdown(f"**다음에 할 일** · {summary['next_action']}")
+        st.markdown(f"**할 일** · {summary['next_action']}")
 
 
 def render_wall_result(model, report, *, criterion_controls=None):
     detail=report.get('details', {}).get('wall')
     summary=summarize_wall(detail, report['profile'].get('minimum_wall_mm'))
-    decision_card(summary)
     if summary.get('minimum_mm') is None:
+        decision_card(summary)
         return
-    cols=st.columns(2)
-    cols[0].metric('표본에서 가장 짧게 측정한 거리', f"{summary['minimum_mm']:.4g} mm")
+    getattr(st, summary['level'])(summary['title'])
     limit=summary.get('minimum_wall_mm')
-    cols[1].metric('내가 입력한 최소 벽 기준', f'{limit:g} mm' if limit is not None else '미입력')
-    st.caption(summary['scope'])
+    with st.container(horizontal=True):
+        st.metric('가장 얇게 측정된 위치', f"{summary['minimum_mm']:.4g} mm", width='content',
+                  help='표면에서 반대 면까지 측정한 거리입니다. 곡면·모서리에서는 CAD 두께와 다를 수 있습니다.')
+        st.metric('이보다 얇으면 확인', f'{limit:g} mm' if limit is not None else '미입력', width='content',
+                  help='얇은 벽을 찾기 위해 비교할 두께입니다. 사용 조건에 맞게 변경할 수 있습니다.')
+    action = {
+        'attention':'표시된 위치의 벽을 보강하거나 CAD 두께를 수정하세요.',
+        'criterion_needed':'비교할 벽 두께를 입력하면 그보다 얇게 측정된 위치를 표시합니다.',
+        'partial':'미확인 표본이 남았습니다. 측정 위치를 확인하고 필요하면 추가 계산하세요.',
+        'within_criterion':'검사한 표본은 기준 이상입니다. 다른 항목을 확인하세요.',
+    }.get(summary['status'], summary['next_action'])
+    if not summary['complete']:
+        st.caption('일부 표본 미확인 · 관측한 최솟값입니다.')
+    st.write('**할 일** · '+action)
     if criterion_controls is not None:
         criterion_controls()
-    st.markdown('**어디를 확인하나요?**')
     samples=wall_samples(report)
     selected=None
     if samples:
@@ -37,21 +48,40 @@ def render_wall_result(model, report, *, criterion_controls=None):
         if st.session_state.get('wall_sample_result')!=identity or st.session_state.get('wall_sample') not in range(len(samples)):
             st.session_state['wall_sample_result']=identity
             st.session_state['wall_sample']=0
-        selected=st.selectbox('확인할 측정 위치 · 짧은 거리순',list(range(len(samples))),
-            format_func=lambda i:f"표본 {i+1} · {samples[i]['normal_chord_mm']:.5g} mm · 메시 면 {samples[i]['source_face']}",
+        selected=st.selectbox('확인할 위치 · 얇은 순서',list(range(len(samples))),
+            format_func=lambda i:f"위치 {i+1} · {samples[i]['normal_chord_mm']:.5g} mm"+
+                (' · 기준 미만' if limit is not None and samples[i]['normal_chord_mm']<limit else ''),
             key='wall_sample')
-        point=samples[selected]['point_mm']
-        st.caption('선택 위치(원본 모델 좌표 mm): '+', '.join(f'{v:.5g}' for v in point))
-    if limit is not None:
-        st.write('붉은 ◆는 기준 미만, 회색 ●는 기준 이상으로 측정된 표본입니다. 주황 ◆와 숫자는 선택한 위치입니다. 표본 밖의 벽은 이 색으로 판단하지 않습니다.')
-    else:
-        st.write('점이 실제 측정 위치입니다. 짧은 거리는 진한 파랑, 긴 거리는 옅은 파랑으로 표시합니다. 주황 ◆와 숫자가 선택한 표본이며, 색 자체가 기준 미달을 뜻하지 않습니다.')
     if samples:
-        see_through=st.toggle('반대쪽·내부 표본도 보기',value=True,key='wall_transparent')
-        st.plotly_chart(model_figure(model,report,'wall',transparent=see_through,selected_sample=selected),width='stretch',config={'scrollZoom':False})
+        show_all=st.session_state.get('wall_show_all_samples',False)
+        views=st.columns(2)
+        with views[0]:
+            st.markdown('**부품에서의 위치**')
+            context=wall_context_figure(model,report,selected_sample=selected,show_all=show_all)
+            st.plotly_chart(context,width='stretch',config={'scrollZoom':False,'displaylogo':False},key='wall_context_plot')
+            omitted=context.layout.meta['omitted_sample_markers']
+            if omitted:
+                st.caption(f'겹침을 줄이기 위해 {omitted}개 표시 생략 · 모든 위치는 위 선택창에서 확인')
+        with views[1]:
+            st.markdown(f'**위치 {selected+1} 확대 · 두 면 사이 거리**')
+            closeup=wall_measurement_figure(model,report,selected_sample=selected)
+            if closeup is not None:
+                st.plotly_chart(closeup,width='stretch',config={'scrollZoom':False,'displaylogo':False},key='wall_measurement_plot')
+                st.caption('선택한 측정선을 지나는 실제 단면 · 가로·세로 동일 배율')
+            else:
+                st.info('이 표본의 반대 면 좌표를 확인할 수 없어 확대 단면은 표시하지 않습니다.')
+        if wall_sample_geometry(model,report,selected) is None:
+            st.info('선택한 표본 좌표가 현재 형상과 맞지 않습니다. 벽 검토를 다시 실행하세요.')
+        st.caption('선택 위치 ◆ · 기준 미만 ×' if limit is not None else '선택 위치 ◆ · 측정한 거리')
+        st.toggle('나머지 측정 위치도 표시',key='wall_show_all_samples')
     else:
-        st.info('이 기록에는 표본 좌표가 없습니다. 측정값만 표시하며 면 전체를 측정 위치로 대신 칠하지 않습니다.')
+        st.info('측정 위치가 저장되지 않은 결과입니다. 위치를 보려면 벽 검토를 다시 실행하세요.')
     with st.expander('측정 방법·표본과 기준 출처'):
+        st.write(summary['observation'])
+        st.caption(summary['scope'])
+        st.write(summary['next_action'])
+        if selected is not None:
+            st.caption('선택 위치 (모델 X, Y, Z mm): '+', '.join(f'{v:.5g}' for v in samples[selected]['point_mm']))
         st.write('표면에서 안쪽 법선 방향으로 반대 면까지의 거리를 잽니다. 평행한 벽에서는 두께에 대응하지만, 곡면·모서리에서는 다른 의미의 짧은 거리일 수 있습니다.')
         st.write(f"기준 출처: {report['profile']['threshold_basis']}")
         if summary.get('p05_mm') is not None:
@@ -81,36 +111,46 @@ def layer_table(rows):
 def render_layer_result(model, report):
     detail=report.get('details',{}).get('layers')
     summary=summarize_layers(detail)
-    decision_card(summary)
+    title=summary['title']
+    if summary['status']=='no_candidates':
+        title=(f"검사한 {len(detail['layers']):,}개 층에서 좁은 구간·아래층 지지 부족·"
+               '한 층에만 생기는 부분의 후보가 발견되지 않았습니다')
+    getattr(st, summary['level'])(title)
     if not detail or not detail.get('layers'):
+        st.write(summary['observation'])
+        st.write('**할 일** · '+summary['next_action'])
         return
-    compact_clear=summary['complete'] and all(c['candidate_layers']==0 for c in summary['checks'])
-    for check in ([] if compact_clear else summary['checks']):
-        with st.container(border=True):
-            count=check['candidate_layers']
-            result=f'후보가 관측된 층 {count}개' if count is not None else '후보 유무 미확인'
-            st.markdown(f"**{check['label']}** · {result}")
-            st.write(check['description'])
-            st.caption(f"전체 범위를 확인한 층: {check['fully_measured_layers']}개 · 일부라도 측정한 층: {check['known_layers']}개")
-            if check['candidate_layers']:
-                st.write(check['next_action'])
+    if not summary['complete']:
+        st.caption('일부 범위 미확인 · 추가 후보가 있을 수 있습니다.')
+    labels={'thin':'재료 한 줄보다 좁은 부분',
+            'unsupported':'아래층 지지가 부족한 부분',
+            'single_layer':'한 층에만 나타난 부분'}
+    notes=[]
+    for check in summary['checks']:
+        count=check['candidate_layers']
+        if count:
+            notes.append(f"{labels[check['key']]} {count}층")
+        elif count is None:
+            notes.append(f"{labels[check['key']]} 미확인")
+    if notes:
+        st.caption(' · '.join(notes))
     affected=summary['affected_rows']
     if affected:
-        st.markdown('**확인할 층만 모았습니다**')
-        st.dataframe(layer_table(affected),hide_index=True)
         choices=list(range(len(affected)))
         identity=(report.get('model_fingerprint'),report.get('timestamp_utc'),detail.get('elapsed_seconds'))
         if st.session_state.get('layer_result')!=identity or st.session_state.get('layer_location') not in choices:
             st.session_state['layer_result']=identity
             st.session_state['layer_location']=0
-        index=st.selectbox('위치를 확인할 층',choices,
+        index=st.selectbox('확인할 층 · 위치를 바로 표시합니다',choices,
                            format_func=lambda i:f"{affected[i]['index']+1}층 · 높이 {affected[i]['z_mm']:.4g} mm",
                            key='layer_location')
         row=affected[index]
         st.write(row['action'])
         figure=model_figure(model,report,'layers',transparent=True)
         markers=0
-        labels={'thin':'선폭 후보 위치','unsupported':'미지지 후보 위치','single_layer':'한 층 후보 위치'}
+        # Stable colors and line styles keep overlapping regions distinguishable.
+        styles={'thin':('#c43c39','solid'),'unsupported':('#c47700','dash'),
+                'single_layer':('#6254a4','dot')}
         for prefix,label in labels.items():
             for i,region in enumerate(row.get(prefix+'_details',[])):
                 bounds=region.get('bounds_mm')
@@ -123,18 +163,24 @@ def render_layer_result(model, report):
                     continue
                 figure.add_trace(go.Scatter3d(x=[x0,x1,x1,x0,x0],y=[y0,y0,y1,y1,y0],
                                              z=[row['z_mm']]*5,mode='lines',name=label,
-                                             line=dict(width=6),showlegend=i==0))
+                                             line=dict(width=6,color=styles[prefix][0],dash=styles[prefix][1]),showlegend=i==0))
                 markers+=1
         figure.update_layout(showlegend=True)
         if markers:
             st.plotly_chart(figure,width='stretch',config={'scrollZoom':False})
-            st.caption('사각형은 후보 영역이 있는 위치의 경계 상자입니다. 실제 결함 모양이나 서포트가 아닙니다. 작은 세부를 포함하며, 위치 기록은 종류별 최대 50개입니다.')
+            st.caption('사각형: 후보 영역의 위치 범위 · 종류별 최대 50개')
         else:
             st.info('이 결과에는 후보의 위치 경계가 없습니다. 표시된 높이를 슬라이서 미리보기에서 확인하세요.')
-    else:
-        st.write('확인할 후보가 없어서 빈 그래프를 표시하지 않습니다.' if summary['complete'] else
-                 '미확정 범위가 남아 있어 전체 후보 유무를 판단하지 않습니다. 아래 측정값에서 확인 범위를 살펴보세요.')
+        with st.expander(f'확인할 층 {len(affected)}개 · 측정값'):
+            st.dataframe(layer_table(affected),hide_index=True)
+    elif not summary['complete']:
+        st.caption('미확인 범위는 아래 측정값에서 확인하세요.')
     with st.expander('전체 층 측정값·계산 범위'):
+        st.write(summary['observation'])
+        st.write(summary['next_action'])
+        for check in summary['checks']:
+            st.write(f"**{check['label']}** · {check['description']}")
+            st.caption(f"전체 범위 {check['fully_measured_layers']}층 · 일부 측정 {check['known_layers']}층")
         st.caption(summary['scope'])
         st.write('층 번호는 1부터 표시합니다. 높이는 층 중간의 검사 평면이며 슬라이서 노즐 Z와 다를 수 있습니다. 빈 값은 미확정입니다. 0은 해당 검사 범위에서 후보 면적이 없다는 뜻입니다.')
         st.dataframe(layer_table(detail['layers']),hide_index=True)

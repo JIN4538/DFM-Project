@@ -5,7 +5,7 @@ visibility is not a swept-volume tool, holder or fixture collision simulation.
 """
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 import math
 
@@ -137,8 +137,11 @@ class MachiningProfile:
     reach_mm: float | None = None
     hole_depth_ratio_limit: float | None = None
     basis: str = "사용자 지정 공구·탐색 조건; 실제 가공 검증 전"
+    condition_evidence: dict = field(default_factory=dict)
 
     def validate(self):
+        from .conditions import validate_context
+        validate_context(self.condition_evidence, "CNC", self.to_dict())
         for name in ("tool_diameter_mm", "flute_length_mm", "reach_mm", "hole_depth_ratio_limit"):
             value = getattr(self, name)
             if value is not None and (isinstance(value, bool) or not math.isfinite(value) or value <= 0):

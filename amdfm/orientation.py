@@ -160,6 +160,7 @@ def candidates(mesh, include_face_normals=False, *, dense=False):
 def compare_orientations(mesh, profile, *, reliable_normals=True, extended=False, dense=False, current_direction=None):
     rows = []
     options = candidates(mesh, extended, dense=dense)
+    search_names = set(options)
     if current_direction is not None:
         d = unit_direction(current_direction)
         if not any(np.array_equal(d, unit_direction(v)) for v in options.values()):
@@ -168,6 +169,9 @@ def compare_orientations(mesh, profile, *, reliable_normals=True, extended=False
         row = measure_orientation(mesh, direction, profile, reliable_normals=reliable_normals)
         row.pop("overhang_face_indices")
         row["name"] = name
+        # The current custom direction remains visible, but must not alter the
+        # reference candidate set or normalization of the default recommendation.
+        row["candidate_role"] = "search" if name in search_names else "current_only"
         rows.append(row)
     eligible = [i for i,r in enumerate(rows) if r["build_fit"] is not False]
     keys = ["height_mm"]

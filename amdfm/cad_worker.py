@@ -210,6 +210,7 @@ def convert(source, destination, deflection):
         raise ValueError("OCCT B-rep 유효성 검사가 실패했습니다. CAD에서 형상 검사/복구 후 다시 내보내세요.")
 
     vertices, triangles, face_ids, body_ids, features, bodies = [], [], [], [], [], []
+    learned_features = []
     unmeshed_zero_area_faces = []
     tessellation_attempts = []
     offset = 0
@@ -229,6 +230,25 @@ def convert(source, destination, deflection):
                 bounds_mm=[list(bounds[:3]), list(bounds[3:])], cavity_shell_count=cavity_shells))
         solid, attempt = prepare_tessellation(solid, deflection, 600_000-total_triangles, surface_only=surface_only)
         tessellation_attempts.append(dict(body_id=body_id, **attempt))
+        # Same unique face traversal is shared by tessellation, graph inference
+        # and exact remeasurement. Training face names are deliberately unused.
+        face_offset = face_id
+        graph_faces = [TopoDS.Face_s(f) for f in items(solid, TopAbs_FACE)]
+        if not surface_only and len(graph_faces) <= 200:
+            try:
+                from dfm.cad_graph import extract_graph
+                from dfm.feature_instance_refinement import recognize_refined_features
+                graph = extract_graph(solid, graph_faces)
+                for measurement in graph['measurements']:
+                    measurement['face_id'] += face_offset
+                recognition = recognize_refined_features(graph)
+                learned_features.append(dict(body_id=body_id, **recognition))
+            except (ValueError, OSError, KeyError, MemoryError) as exc:
+                reason = '학습 특징 인식 메모리 부족 · CAD 치수 측정 유지' if isinstance(exc, MemoryError) else str(exc)
+                learned_features.append(dict(body_id=body_id,status='unavailable',candidates=[],reason=reason,
+                                              error_type=type(exc).__name__))
+        else:
+            learned_features.append(dict(body_id=body_id,status='outside_training_domain',candidates=[]))
         boundary_context = BoundaryContext(solid, face_id, surface_only=surface_only,
                                            remaining_edges=boundary_edges_remaining)
         for raw_face in items(solid, TopAbs_FACE):
@@ -304,7 +324,8 @@ def convert(source, destination, deflection):
             body_attempts=tessellation_attempts,
             volume_relative_difference=(abs(mesh.volume-exact_volume)/exact_volume if exact_volume else None),
             limitation="Requested deflection is not a certified Hausdorff error bound; volume agreement is not local accuracy."),
-        features=features, assembly_overlap="not_checked" if len(bodies)>1 else "not_applicable",
+        features=features, external_feature_recognition=learned_features,
+        assembly_overlap="not_checked" if len(bodies)>1 else "not_applicable",
         analytic_boundary_geometry=dict(version=1, maximum_model_edges=MAX_MODEL_BOUNDARY_EDGES,
             processed_edges=MAX_MODEL_BOUNDARY_EDGES-boundary_edges_remaining,
             limitation="Trimmed face boundaries and adjacency; no automatic pocket/hole count or tool-access certification."),

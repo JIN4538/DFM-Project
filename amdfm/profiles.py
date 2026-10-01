@@ -1,4 +1,4 @@
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 import math
 
 PROCESS_LABELS = {
@@ -24,8 +24,11 @@ class Profile:
     clearance_mm: float = 0.0
     threshold_basis: str = "사용자 탐색 조건; 실물 시편으로 보정하지 않음"
     process_notes: str = ""
+    condition_evidence: dict = field(default_factory=dict)
 
     def validate(self):
+        from dfm.conditions import validate_context
+        validate_context(self.condition_evidence, self.process, self.to_dict())
         if self.process not in PROCESS_LABELS:
             raise ValueError("지원하는 AM 공정이 아닙니다.")
         for key in ("layer_height_mm", "line_width_mm"):
@@ -57,4 +60,3 @@ UNASSESSED = {
     "PBF_POLYMER": ["분말 배출 통로", "열수축·뒤틀림", "패킹·열 이력", "실제 표면·공차·강도"],
     "PBF_METAL": ["열전달·잔류응력·변형", "서포트 및 분말 제거 접근성", "스캔 전략·기공·금속 조직", "후가공 여유·검사·강도"],
 }
-
