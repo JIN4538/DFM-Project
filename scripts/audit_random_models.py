@@ -38,7 +38,9 @@ def sha(path):
 def engine_digest(root):
     digest = hashlib.sha256()
     files = (sorted((root / "amdfm").glob("*.py")) + sorted((root / "dfm").glob("*.py"))
-             + sorted((root / "src" / "core").glob("*.py")))
+             + sorted((root / "src" / "core").glob("*.py"))
+             + sorted((root / "data" / "conditions").glob("*.json"))
+             + sorted((root / "data" / "models").rglob("*.json")))
     for path in files:
         digest.update(path.relative_to(root).as_posix().encode())
         with path.open("rb") as handle:
@@ -324,9 +326,9 @@ def main(args):
     # editor changes cannot silently produce mixed-code cases in one audit.
     frozen_engine = out / "engine-source"
     frozen_engine.mkdir()
-    for package in ("amdfm", "dfm", "src"):
-        if package == "dfm" and not (original_engine / package).is_dir():
-            continue  # Older immutable engines predate the machining package.
+    for package in ("amdfm", "dfm", "src", "data/conditions", "data/models"):
+        if package in ("dfm", "data/conditions", "data/models") and not (original_engine / package).is_dir():
+            continue  # Older immutable engines predate these packages/data.
         shutil.copytree(original_engine / package, frozen_engine / package,
                         ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     if engine_digest(frozen_engine) != original_digest or engine_digest(original_engine) != original_digest:

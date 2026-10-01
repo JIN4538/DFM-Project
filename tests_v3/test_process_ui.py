@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 from streamlit.testing.v1 import AppTest
+from dfm.defaults import wall_default_basis
 
 
 APP = Path(__file__).resolve().parents[1] / "app.py"
@@ -12,6 +13,14 @@ SETTINGS = {
     "PBF_POLYMER": dict(machine="Fuse 1+ 30W", material="Nylon 12", wall=.6, hole=3., layer=.12, angle=45.),
     "PBF_METAL": dict(machine="SLM280HL", material="316L", wall=.8, hole=4., layer=.025, angle=33.),
 }
+DEFAULT_WALL = {"MEX": 1.2, "VPP": .4, "PBF_POLYMER": .6, "PBF_METAL": .4}
+
+
+def _set_name(app, key, value):
+    widget = app.selectbox(key=key)
+    if value not in widget.options:
+        widget.options.append(value)  # Simulate accept_new_options entry.
+    widget.set_value(value).run()
 
 
 def _submit(app):
@@ -28,7 +37,7 @@ def _assert_profile(app, process, index):
     assert profile["slicer"] == f"{process} slicer test"
     assert profile["minimum_wall_mm"] == values["wall"]
     assert profile["minimum_hole_mm"] == values["hole"]
-    assert profile["threshold_basis"] == f"{process} test coupon only"
+    assert profile["threshold_basis"] == wall_default_basis(process)
     assert profile["process_notes"] == f"{process} process notes"
     assert profile["layer_height_mm"] == values["layer"]
     assert profile["overhang_angle_deg"] == values["angle"]
@@ -44,25 +53,25 @@ def test_process_calibrations_are_independent_and_survive_round_trips():
             app.selectbox(key="process").select(process).run()
         assert not app.exception
         # Opening a new process must not inherit the previous process's calibration.
-        assert app.text_input(key=f"machine_{process}").value == "미확정"
-        assert app.text_input(key=f"material_{process}").value == "미확정"
+        assert app.selectbox(key=f"machine_{process}").value == "미확정"
+        assert app.selectbox(key=f"material_{process}").value == "미확정"
         assert app.text_input(key=f"slicer_{process}").value == "미확정"
-        assert app.number_input(key=f"wall_limit_{process}").value is None
+        assert app.number_input(key=f"wall_limit_{process}").value == DEFAULT_WALL[process]
         assert app.number_input(key=f"hole_limit_{process}").value is None
-        assert app.text_input(key=f"basis_{process}").value == "사용자 탐색 조건; 실물 시편으로 보정하지 않음"
+        assert not any(w.key==f"basis_{process}" for w in app.text_input)
+        assert app.session_state[f"basis_{process}"] == wall_default_basis(process)
         assert not app.checkbox(key=f"use_build_{process}").value
         assert app.number_input(key=f"clearance_{process}").value == 0.
-        app.text_input(key=f"machine_{process}").set_value(values["machine"])
-        app.text_input(key=f"material_{process}").set_value(values["material"])
+        _set_name(app, f"machine_{process}", values["machine"])
+        _set_name(app, f"material_{process}", values["material"])
         app.text_input(key=f"slicer_{process}").set_value(f"{process} slicer test")
         app.number_input(key=f"wall_limit_{process}").set_value(values["wall"])
         app.number_input(key=f"hole_limit_{process}").set_value(values["hole"])
-        app.text_input(key=f"basis_{process}").set_value(f"{process} test coupon only")
         app.text_area(key=f"notes_{process}").set_value(f"{process} process notes")
         app.number_input(key=f"layer_{process}").set_value(values["layer"])
         if process != "PBF_POLYMER":
             app.number_input(key=f"angle_{process}").set_value(values["angle"])
-        app.checkbox(key=f"use_build_{process}").check()
+        app.checkbox(key=f"use_build_{process}").check().run()
         for axis, dimension in zip("XYZ", (110., 120., 130.)):
             app.number_input(key=f"build_{axis}_{process}").set_value(dimension + index)
         app.number_input(key=f"clearance_{process}").set_value(.5 + index)

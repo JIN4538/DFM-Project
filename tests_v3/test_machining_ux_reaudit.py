@@ -164,6 +164,20 @@ def test_location_colors_follow_original_attention_subset_without_changing_repor
     assert json_bytes(report) == before
 
 
+def test_anonymous_learned_feature_highlights_original_faces_and_crops_view():
+    model, report = _export_fixture()
+    model.face_ids = np.array([17] * 6 + [19] * 6)
+    before = json_bytes(report)
+    figure = machining_figure(model, report, cad_face_ids=[19])
+    highlights = [t for t in figure.data if t.type == "mesh3d" and t.name != "입력 형상"]
+    assert len(highlights) == 1
+    assert len(highlights[0].i) == 6
+    assert set(highlights[0].facecolor) == {"#1476b8"}
+    assert len(figure.layout.scene.xaxis.range) == 2
+    assert "-feature-19" in figure.layout.uirevision
+    assert json_bytes(report) == before
+
+
 def _open_rounded():
     from streamlit.testing.v1 import AppTest
     root = Path(__file__).resolve().parents[1]
@@ -180,6 +194,8 @@ def _open_rounded():
 def _submit(app):
     next(button for button in app.button if button.label == "절삭 설계 검토").click().run()
     assert not app.exception
+    app.toggle(key="cnc_location_details").set_value(True).run()
+    assert not app.exception
     return app.session_state["cnc_report"]
 
 
@@ -194,6 +210,10 @@ def _highlight_triangle_count(app):
     return len(indices) if isinstance(indices, list) else len(np.frombuffer(base64.b64decode(indices["bdata"]), dtype=indices["dtype"]))
 
 
+def _corner_table(app):
+    return next(row.value for row in app.dataframe if "공구 반경 (mm)" in row.value.columns)
+
+
 def test_user_can_follow_resolved_corner_condition_and_locate_each_measurement():
     app = _open_rounded()
     for key, value in (("cnc_diameter", 8.), ("cnc_flute", 10.), ("cnc_reach", 15.)):
@@ -201,9 +221,11 @@ def test_user_can_follow_resolved_corner_condition_and_locate_each_measurement()
     report = _submit(app)
     corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
     assert corner["status"] == "attention"
-    assert any("공구축과 나란한 오목 원통면" in row.value for row in app.warning)
+    learned = next(row for row in report["learned_review"]["items"] if row["finding_id"] == "cnc_curved_corners")
+    assert learned["state"] == "confirmed"
+    assert any("내부 반경 · 수정" in row.value for row in app.markdown)
     assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "8 mm"
-    table = app.dataframe[0].value
+    table = _corner_table(app)
     assert list(table["공구 반경 (mm)"]) == [4.] * 4
     assert list(table["오목면 반경 (mm)"]) == [3.] * 4
     assert list(table["반경 차이 · 면−공구 (mm)"]) == [-1.] * 4
@@ -214,7 +236,9 @@ def test_user_can_follow_resolved_corner_condition_and_locate_each_measurement()
     assert not app.exception
     assert 0 < _highlight_triangle_count(app) < all_count
     assert app.selectbox(key="cnc_location").value == selected_face
-    assert any("파란색" in row.value and "주황색" in row.value for row in app.caption)
+    assert len(_corner_table(app)) == 1
+    assert _corner_table(app).iloc[0]["CAD 면"] == int(selected_face)
+    assert any("파랑: 선택 위치" in row.value and "주황: 조건 확인 위치" in row.value for row in app.caption)
 
     app.number_input(key="cnc_diameter").set_value(4.)
     report = _submit(app)
@@ -222,23 +246,30 @@ def test_user_can_follow_resolved_corner_condition_and_locate_each_measurement()
     assert corner["status"] == "observed"
     assert "더 작은 공구" not in corner["action"] and "반경 확대" not in corner["action"]
     assert "경로" in corner["action"]
+    # Fresh conditions focus the next remaining issue. A resolved feature is
+    # still selectable, including each measured CAD face.
+    app.selectbox(key="cnc_finding").set_value("cnc_curved_corners").run()
+    app.selectbox(key="cnc_location").set_value(selected_face).run()
     assert app.selectbox(key="cnc_location").value == selected_face
     assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "4 mm"
-    assert list(app.dataframe[0].value["공구 반경 (mm)"]) == [2.] * 4
+    assert list(_corner_table(app)["공구 반경 (mm)"]) == [2.]
     assert set(_highlight_trace(app)["facecolor"]) == {"#1476b8"}
 
     app.number_input(key="cnc_diameter").set_value(6.)
     _submit(app)
-    assert list(app.dataframe[0].value["공구 반경 > 오목면 반경"]) == ["수치 경계·별도 확인"] * 4
+    app.selectbox(key="cnc_finding").set_value("cnc_curved_corners").run()
+    assert list(_corner_table(app)["공구 반경 > 오목면 반경"]) == ["수치 경계·별도 확인"] * 4
     assert any("수치상 같은 경계값" in row.value for row in app.info)
 
     app.number_input(key="cnc_diameter").set_value(None)
+    app.toggle(key="cnc_auto_tool").set_value(False)
     report = _submit(app)
     corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
     assert corner["status"] == "unknown"
     assert "지름" in corner["action"] and "입력" in corner["action"]
+    app.selectbox(key="cnc_finding").set_value("cnc_curved_corners").run()
     assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "미입력"
-    assert list(app.dataframe[0].value["공구 반경 (mm)"]) == ["미입력·미비교"] * 4
+    assert list(_corner_table(app)["공구 반경 (mm)"]) == ["미입력·미비교"] * 4
 
 
 def test_allowed_small_tool_value_has_nonzero_display_and_applied_condition():
@@ -249,7 +280,10 @@ def test_allowed_small_tool_value_has_nonzero_display_and_applied_condition():
     report = _submit(app)
     assert report["profile"]["tool_diameter_mm"] == .001
     assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "0.001 mm"
-    assert any("실행 버튼을 누르면 결과에 적용" in row.value for row in app.caption)
+    app.number_input(key="cnc_diameter").set_value(.002)
+    changed = _submit(app)
+    assert changed["profile"]["tool_diameter_mm"] == .002
+    assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "0.002 mm"
 
 
 def test_custom_small_angle_keeps_visible_value_and_calculation_in_agreement():

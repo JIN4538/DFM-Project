@@ -12,8 +12,24 @@ ROOT=Path(__file__).resolve().parents[1]
 def test_all_shipped_geometry_matches_published_inventory():
     result=verify(ROOT)
     assert result['verified'],result['errors']
-    assert result['geometry_files']==128
-    assert result['unique_sha256']==122
+    assert result['geometry_files']==155
+    assert result['unique_sha256']==149
+
+
+def test_public_step_demos_have_original_hashes_and_explicit_rights():
+    directory=ROOT/'examples/public_demo'
+    records=json.loads((directory/'manifest.json').read_text(encoding='utf-8'))
+    assert len(records)==14
+    assert len(list(directory.glob('*.step')))==14
+    for row in records:
+        assert hashlib.sha256((directory/row['file']).read_bytes()).hexdigest()==row['sha256']
+        assert row['source_url'].startswith('https://')
+        assert row['license'] in ('CC0-1.0','U.S. Government public domain; acknowledge NIST')
+        if row['solid_count']:
+            assert row['cad_volume_mm3']>0 and row['cad_geometry_kind']=='solid'
+        else:
+            assert row['cad_volume_mm3'] is None and row['cad_geometry_kind']=='surface'
+            assert '표면 모델' in row['title']
 
 
 def test_corpus_including_supplier_metadata_matches_original_audit():

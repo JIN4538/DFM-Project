@@ -46,11 +46,14 @@ def test_zero_layers_show_a_clear_scoped_result_and_hide_blank_graph():
     assert not app.get("plotly_chart")
     assert not app.get("vega_lite_chart")
     assert not app.selectbox
-    assert "다음에 할 일" in text(app)
     assert "슬라이서" in text(app)
     assert len(app.expander) == 1
     assert app.expander[0].label == "전체 층 측정값·계산 범위"
     assert not app.expander[0].proto.expanded
+    assert any('다른 검토 항목을 확인' in element.value for element in app.expander[0].markdown)
+    assert any('좁은 구간·아래층 지지 부족·한 층에만 생기는 부분' in element.value
+               for element in app.success)
+    assert not any('세 종류의 층간 후보 없음' in element.value for element in app.caption)
     assert app.dataframe[0].value["층"].tolist() == [1, 2, 3]
     assert app.session_state["original_report"]["details"]["layers"] == detail
 
@@ -67,11 +70,11 @@ def test_affected_rows_precede_full_table_and_coordinates_are_recorded_build_fra
     assert "2층" in app.selectbox(key="layer_location").options[0]
     assert float(app.dataframe[0].value.iloc[0]["선폭보다 좁을 수 있는 영역 (mm²)"]) == 1e-12
     plot = json.loads(app.get("plotly_chart")[0].proto.spec)
-    marker = next(trace for trace in plot["data"] if trace.get("name")=="선폭 후보 위치")
+    marker = next(trace for trace in plot["data"] if trace.get("name")=="재료 한 줄보다 좁은 부분")
     assert marker["x"] == [1., 3., 3., 1., 1.]
     assert marker["y"] == [2., 2., 4., 4., 2.]
     assert marker["z"] == [detail["layers"][1]["z_mm"]]*5
-    assert any("경계 상자" in caption.value for caption in app.caption)
+    assert any('사각형' in caption.value and '후보 영역의 위치 범위' in caption.value for caption in app.caption)
     assert app.session_state["original_report"]["details"]["layers"] == detail
 
 
@@ -117,8 +120,15 @@ def test_wall_measurement_without_criterion_explains_what_color_and_distance_mea
     assert not app.success
     assert any("비교 기준이 없습니다" in message.value for message in app.info)
     assert [metric.value for metric in app.metric] == ["4 mm", "미입력"]
-    assert "색 자체가 기준 미달을 뜻하지 않습니다" in text(app)
-    assert "다음에 할 일" in text(app)
+    # The selected location is distinct by symbol. No criterion means no
+    # threshold-failure trace, and a legacy sample does not acquire an endpoint.
+    assert any('선택 위치 ◆' in caption.value and '측정한 거리' in caption.value
+               for caption in app.caption)
+    plot = json.loads(app.get('plotly_chart')[0].proto.spec)
+    traces = {trace.get('name') for trace in plot['data']}
+    assert '기준 미만 위치' not in traces and '측정선' not in traces
+    assert any('반대 면 좌표를 확인할 수 없어' in message.value for message in app.info)
+    assert '**할 일**' in text(app) and '비교할 벽 두께를 입력' in text(app)
     assert any("전체 최소 벽두께" in caption.value for caption in app.caption)
     assert "장비 자료에서 가져온 사용자 입력" in text(app)
     assert not app.expander[0].proto.expanded

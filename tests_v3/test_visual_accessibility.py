@@ -117,15 +117,17 @@ def test_orientation_default_numbers_manual_choice_and_apply_are_distinct():
     app.button(key='start_from_model').click().run()
     app.segmented_control(key='result_tab').set_value('방향 비교').run()
     assert not app.exception
-    assert app.selectbox(key='orientation_choice').value=='+Y'
-    assert app.metric[0].value=='30 mm'
+    assert app.selectbox(key='orientation_choice').value=='+Z'
+    assert app.metric[0].value=='40 mm'
     assert app.session_state['report']['current_orientation']['direction']==[0,0,1]
     assert len(app.get('plotly_chart'))==2
-    app.selectbox(key='orientation_choice').set_value('+Z').run()
+    app.selectbox(key='orientation_choice').set_value('+Y').run()
     app.run()
-    assert app.selectbox(key='orientation_choice').value=='+Z'
+    assert app.selectbox(key='orientation_choice').value=='+Y'
+    app.selectbox(key='orientation_choice').set_value('+Z').run()
     assert all(metric.delta=='' for metric in app.metric)
     app.button(key='select_ranked_direction').click().run()
-    assert app.selectbox(key='orientation_choice').value=='+Y'
+    assert app.selectbox(key='orientation_choice').value=='+Z'
+    app.selectbox(key='orientation_choice').set_value('+Y').run()
     app.button(key='apply_orientation').click().run()
     assert not app.exception and app.session_state['report']['current_orientation']['direction']==[0,1,0]

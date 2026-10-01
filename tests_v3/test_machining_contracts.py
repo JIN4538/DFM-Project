@@ -147,11 +147,18 @@ def test_every_sample_state_is_summarized_in_korean_including_unknown():
     for state, label in _KOREAN_LABELS.items():
         assert by_label[label]["표본 수"] == counts[state]
         assert by_label[label]["해석·다음 행동"]
-    assert "미확인" in by_label[_KOREAN_LABELS["visible"]]["해석·다음 행동"]
+    # Visible samples describe the measured line of sight concisely. Unknown
+    # samples retain their own explanation; the collision scope stays in the
+    # optional HTML evidence below rather than repeating beside every point.
+    visible = by_label[_KOREAN_LABELS["visible"]]["해석·다음 행동"]
+    assert "방향" in visible and ("측정점" in visible or "표본" in visible)
+    unknown = by_label[_KOREAN_LABELS["unknown"]]["해석·다음 행동"]
+    assert "원인" in unknown and "확인" in unknown
     assert "별도 확인" in by_label[_KOREAN_LABELS["tangent"]]["해석·다음 행동"]
     html = machining_html(report)
     assert all(label in html for label in _KOREAN_LABELS.values())
-    assert "기하 검토이며 실제 가공 성공 판정이 아닙니다" in html
+    assert "고정축 밀링의 기하 검토" in html
+    assert "실제 공구·홀더 충돌은 미검토입니다" in html
 
 
 @pytest.mark.parametrize("category", ["all", *_KOREAN_LABELS])

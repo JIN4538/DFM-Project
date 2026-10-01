@@ -39,7 +39,7 @@ def test_zero_quick_candidates_retains_wall_and_layer_pending_actions():
     assert "추가 확인" in result["title"]
     assert item(result, "wall")["needs_action"]
     assert item(result, "layers")["needs_action"]
-    assert result["next_item"]["target"] == "정밀 검토"
+    assert result["next_item"]["target"] == "설계 조치"
 
 
 def test_intentional_unlimited_build_space_is_not_an_unfinished_or_failed_check():

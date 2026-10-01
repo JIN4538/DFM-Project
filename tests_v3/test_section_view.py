@@ -43,7 +43,9 @@ def test_change_pair_selected_without_fake_slope_or_mutating_original_measuremen
     assert app.session_state["original_detail"] == original
     assert not app.metric, "Tiny numerical cross-check must not be a giant primary verdict"
     text = "\n".join(element.value for element in app.markdown)
-    assert "다음에 할 일" in text and "제작" in text
+    assert '**표본 간 최대 변화**' in text and '1,080 mm²' in text
+    assert any('두 단면을 겹쳐 보고' in element.value and '설계 의도와 맞는지 확인' in element.value
+               for element in app.caption)
     assert "0.0001% 미만" in text
     plot = json.loads(app.get("plotly_chart")[0].proto.spec)
     assert len(plot["data"]) == 2
