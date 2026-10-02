@@ -1,10 +1,12 @@
 # AM-DFM 3.0
 
+**2026-10-02:** 형상 입력을 **적층 시연용 형상 / 절삭 시연용 형상 / 업로드**로 통합했다. 시연 목록과 다운로드 제목은 한글이며, 절삭 추천 수정은 실제 STEP 적용·치수 재검토·전후 보기로 이어진다. [이번 개선·새 학습·비교 결과](docs/project-knowledge/VERIFIED_IMPROVEMENTS_2026-10-02.md), [적층 사용 순서](docs/USER_GUIDE_V3.md), [절삭 사용 순서](docs/USER_GUIDE_MACHINING.md)를 확인한다.
+
 **2026-10-01 현재판:** 적층·절삭의 종합 결론, 문제 위치, 방향·공구 개선안, 검산된 포켓 STEP 수정까지 연결한 한국어 설계 검토 툴이다. [현재 AI의 역할과 평가](docs/project-knowledge/AI_CAPABILITY_AUDIT_2026-09-30.md), [최근 학습·복합 개선안](docs/project-knowledge/AI_NEXT_2026-09-30.md), [구멍 치수·입구 방향 개선](docs/project-knowledge/PRACTICAL_HOLES_2026-09-30.md)을 확인한다. 사용법은 [적층·절삭 통합 안내](docs/DFM_사용안내_적층과절삭.docx)와 [종합 결론 사용 순서](docs/USER_DECISION_WORKFLOW.md)에 있다.
 
 파일은 실행 코드(`amdfm/`, `dfm/`), 조건·모델·학습 카탈로그(`data/`), 시연 형상(`examples/`), 수집·학습·검증 스크립트(`scripts/`), 테스트(`tests_v3/`), 결과·실패·배포 기록(`validation/`), 사용자·연구 문서(`docs/`), 참고문헌(`references/`)으로 나눈다. [2026-10-01 공개 범위와 재현 안내](docs/project-knowledge/REPOSITORY_PUBLICATION_2026-10-01.md), [교수님과 논의할 연구 주제](docs/research/RESEARCH_AGENDA_2026-10-01.md).
 
-시연은 앱의 **절삭 검증 형상**에서 구멍·복수 포켓을 선택하거나 `examples/public_demo/`의 공개 STEP을 입력한다. 아래 9월 기록은 이전 단계의 설명이며 현재 기능·데이터 수·검증 범위는 위 최신 기록을 따른다.
+시연은 앱의 **절삭 시연용 형상**에서 구멍·복수 포켓을 선택한다. 공개 STEP도 같은 목록에 포함된다. 아래 9월 기록은 이전 단계의 설명이며 현재 기능·데이터 수·검증 범위는 위 최신 기록을 따른다.
 
 2026-09-21 갱신: [적층·절삭 참고문헌 원본 43 PDF](references/README.md), [전문과 현행 코드의 대조 결과](docs/research/literature-update-2026-09-21/README.md). KS 표준 캡처 4개 교체·52901 추가, 절삭 28개 PDF를 별도 폴더로 보관했다. 표준의 판본·적용 범위와 실제 계산의 한계를 근거 화면·보고서에 연결한다.
 
