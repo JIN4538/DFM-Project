@@ -1,0 +1,72 @@
+{
+  "evaluation": "held-out grouped generated geometry; objectives disclosed, not human expert labels",
+  "shapes": 120,
+  "scenarios": 960,
+  "added_measurement_budget": 12,
+  "normalized_surrogate_mae": {
+    "height": 0.03252784464158083,
+    "overhang": 0.05235671040060443
+  },
+  "methods": {
+    "baseline_26": {
+      "mean_regret": 0.21372407408306734,
+      "mean_improvement": 0.0,
+      "improving_scenarios": 0
+    },
+    "neural": {
+      "mean_regret": 0.1740433251868255,
+      "mean_improvement": 0.03968074889624184,
+      "improving_scenarios": 473
+    },
+    "random": {
+      "mean_regret": 0.17354543591070742,
+      "mean_improvement": 0.04017863817235997,
+      "improving_scenarios": 347
+    },
+    "uniform": {
+      "mean_regret": 0.01604257905554448,
+      "mean_improvement": 0.19768149502752286,
+      "improving_scenarios": 642
+    },
+    "interpolation": {
+      "mean_regret": 0.18446032022129896,
+      "mean_improvement": 0.02926375386176839,
+      "improving_scenarios": 468
+    },
+    "neural_sphere_only": {
+      "mean_regret": 0.19193139597354023,
+      "mean_improvement": 0.02179267810952714,
+      "improving_scenarios": 410
+    }
+  },
+  "neural_vs": {
+    "random": {
+      "better": 347,
+      "equal": 431,
+      "worse": 182,
+      "mean_score_delta": 0.0004978892761181297
+    },
+    "uniform": {
+      "better": 132,
+      "equal": 324,
+      "worse": 504,
+      "mean_score_delta": 0.15800074613128104
+    },
+    "interpolation": {
+      "better": 244,
+      "equal": 468,
+      "worse": 248,
+      "mean_score_delta": -0.010416995034473452
+    }
+  },
+  "elapsed_s": 87.21900000000005,
+  "model_sha256": "444b3dea804aa1b4a9fe8e41bad32457edb0ecc13694caa1e1db58bd36482c3c",
+  "training_samples": 20922,
+  "validation_samples": 5204,
+  "training_groups": 192,
+  "validation_groups": 48,
+  "export_max_abs_error": {
+    "height": 0.0,
+    "overhang": 0.0
+  }
+}

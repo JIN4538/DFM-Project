@@ -1,0 +1,6 @@
+{
+  "status": "audit_script_failed",
+  "reason": "The first audit compared raw working-tree bytes against Git blob bytes for all original files. AM_DFM_v26_재검토와_개선계획.md has Windows checkout CRLF normalization, so that byte comparison failed. No original file was edited.",
+  "correction": "Use git hash-object with configured clean filters to compare original Git content; also record raw checkout SHA-256 and blob SHA-256 separately. Rerun into orientations-02.",
+  "numerical_audit": "The in-memory analytic assertions passed before the original-file check; no numerical summary was saved by this failed invocation. The successful rerun is the reportable result."
+}

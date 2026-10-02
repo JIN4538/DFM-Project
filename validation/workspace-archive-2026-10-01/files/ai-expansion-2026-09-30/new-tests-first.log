@@ -1,0 +1,209 @@
+FF......F.......                                                         [100%]
+================================== FAILURES ===================================
+___________ test_measured_edits_are_one_plan_not_duplicate_actions ____________
+
+    def test_measured_edits_are_one_plan_not_duplicate_actions():
+>       report,result=inputs();before=deepcopy([report,result]);out=combine_am_plan(report,result);p=out['selected']
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_am_joint_planning.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+report = {'details': {'wall': {'measurements': {'minimum_mm': 0.3, 'missing_samples': 0, 'requested_samples': 2, 'samples': [{'...ace_count': 0}, 'status': 'attention'}], 'profile': {'minimum_hole_mm': 3.0, 'minimum_wall_mm': 1.2, 'process': 'MEX'}}
+result = {'alternatives': [], 'ranking': [{'changes': [], 'covered_finding_ids': ['overhang'], 'evidence': [], 'id': 'orientati...': {'changes': [], 'covered_finding_ids': ['overhang'], 'evidence': [], 'id': 'orientation:+Z', ...}, 'status': 'keep'}
+
+    def combine_am_plan(report,result):
+        if not result.get('selected'):return result
+        profile=report.get('profile',{});edits=[];covered=[];pending=[];evidence=[]
+        detail=report.get('details',{}).get('wall',{});limit=profile.get('minimum_wall_mm')
+        wall=summarize_wall(detail,limit)
+        if wall['status']=='attention' and _positive(limit):
+            measured=wall['minimum_mm']
+            # A chord is a local measurement, not a certified global minimum.
+            edits.append(dict(field='minimum_wall_mm',label='표시된 얇은 구간의 목표 두께',before=measured,after=limit,unit='mm',
+                              finding_id='wall',measurement_scope='normal-chord samples',cad_regenerated=False,
+                              source_faces=wall['below_limit_face_indices']))
+            covered.append('wall');evidence.append(f'벽 표본 {measured:g} mm / 목표 {limit:g} mm')
+            if not wall['complete']:pending.append('벽 미측정 구간')
+        hole_limit=profile.get('minimum_hole_mm')
+        hole=next((f for f in report.get('findings',[]) if f.get('id')=='cad_holes'),{})
+        cylinders=hole.get('measurements',{}).get('cylindrical_faces',[])
+        if _positive(hole_limit):
+            seen=set()
+            for c in cylinders:
+                if c.get('role')!='inner' or not _positive(c.get('diameter_mm')) or c['diameter_mm']>=hole_limit:continue
+                # A split cylindrical surface may have several faces. Keep explicit
+                # IDs rather than silently calling each face a separate hole.
+                identifier=c.get('face_id')
+                if identifier is None or identifier in seen:continue
+                seen.add(identifier)
+                edits.append(dict(field='diameter_mm',label=f'구멍 면 {identifier} 목표 지름',before=c['diameter_mm'],after=hole_limit,
+                                  unit='mm',cad_face_id=identifier,finding_id='cad_holes',cad_regenerated=False))
+            if seen:
+                covered.append('cad_holes');evidence.append(f'기준 미만 원통 면 {len(seen)}개 / 목표 지름 {hole_limit:g} mm')
+                # Direction and diameter are distinct; diameter edits do not clear
+                # transverse-hole or incomplete analytic recognition findings.
+                if hole.get('status') in ('unknown','partial') or hole.get('measurements',{}).get('transverse_inner_face_count') not in (0,):
+                    pending.append('구멍 축 방향·천장 형상')
+        if not edits:return result
+        output=deepcopy(result);ranking=[]
+        for old in output.get('ranking',[]):
+            p=deepcopy(old);p['direction_keep_current']=p['keep_current'];p['keep_current']=False
+            p['changes'].extend(deepcopy(edits));p['covered_finding_ids']=list(dict.fromkeys(p.get('covered_finding_ids',[])+covered))
+            p['remaining']=list(dict.fromkeys(p.get('remaining',[])+pending))
+            # Always retain a hole-axis check unless the raw record explicitly
+            # reports no transverse groups and complete measurement scope.
+            if 'cad_holes' in covered and ('구멍 축 방향·천장 형상' in pending):
+                p['remaining_finding_ids']=list(dict.fromkeys(p.get('remaining_finding_ids',[])+['cad_holes']))
+            if 'wall' in covered and not wall['complete']:
+                p['remaining_finding_ids']=list(dict.fromkeys(p.get('remaining_finding_ids',[])+['wall']))
+            names=[]
+            if 'wall' in covered:names.append('벽 보강')
+            if 'cad_holes' in covered:names.append('구멍 확대')
+            names.append('현재 배치 유지' if p['direction_keep_current'] else p['orientation']['name']+' 배치')
+            p['title']=' + '.join(names);p['evidence'].extend(evidence)
+>           p['verification_scope']+='; 국소 목표 치수와 입력 기준 대조';p['cad_regenerated']=False
+            ^^^^^^^^^^^^^^^^^^^^^^^
+E           KeyError: 'verification_scope'
+
+dfm\am_joint_planning.py:63: KeyError
+__________ test_partial_and_transverse_scope_survives_numeric_edits ___________
+
+    def test_partial_and_transverse_scope_survives_numeric_edits():
+>       r,p=inputs(complete=False,transverse=2);out=combine_am_plan(r,p)['selected']
+                                                    ^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_am_joint_planning.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+report = {'details': {'wall': {'measurements': {'minimum_mm': 0.3, 'missing_samples': 1, 'requested_samples': 3, 'samples': [{'...ace_count': 2}, 'status': 'attention'}], 'profile': {'minimum_hole_mm': 3.0, 'minimum_wall_mm': 1.2, 'process': 'MEX'}}
+result = {'alternatives': [], 'ranking': [{'changes': [], 'covered_finding_ids': ['overhang'], 'evidence': [], 'id': 'orientati...': {'changes': [], 'covered_finding_ids': ['overhang'], 'evidence': [], 'id': 'orientation:+Z', ...}, 'status': 'keep'}
+
+    def combine_am_plan(report,result):
+        if not result.get('selected'):return result
+        profile=report.get('profile',{});edits=[];covered=[];pending=[];evidence=[]
+        detail=report.get('details',{}).get('wall',{});limit=profile.get('minimum_wall_mm')
+        wall=summarize_wall(detail,limit)
+        if wall['status']=='attention' and _positive(limit):
+            measured=wall['minimum_mm']
+            # A chord is a local measurement, not a certified global minimum.
+            edits.append(dict(field='minimum_wall_mm',label='표시된 얇은 구간의 목표 두께',before=measured,after=limit,unit='mm',
+                              finding_id='wall',measurement_scope='normal-chord samples',cad_regenerated=False,
+                              source_faces=wall['below_limit_face_indices']))
+            covered.append('wall');evidence.append(f'벽 표본 {measured:g} mm / 목표 {limit:g} mm')
+            if not wall['complete']:pending.append('벽 미측정 구간')
+        hole_limit=profile.get('minimum_hole_mm')
+        hole=next((f for f in report.get('findings',[]) if f.get('id')=='cad_holes'),{})
+        cylinders=hole.get('measurements',{}).get('cylindrical_faces',[])
+        if _positive(hole_limit):
+            seen=set()
+            for c in cylinders:
+                if c.get('role')!='inner' or not _positive(c.get('diameter_mm')) or c['diameter_mm']>=hole_limit:continue
+                # A split cylindrical surface may have several faces. Keep explicit
+                # IDs rather than silently calling each face a separate hole.
+                identifier=c.get('face_id')
+                if identifier is None or identifier in seen:continue
+                seen.add(identifier)
+                edits.append(dict(field='diameter_mm',label=f'구멍 면 {identifier} 목표 지름',before=c['diameter_mm'],after=hole_limit,
+                                  unit='mm',cad_face_id=identifier,finding_id='cad_holes',cad_regenerated=False))
+            if seen:
+                covered.append('cad_holes');evidence.append(f'기준 미만 원통 면 {len(seen)}개 / 목표 지름 {hole_limit:g} mm')
+                # Direction and diameter are distinct; diameter edits do not clear
+                # transverse-hole or incomplete analytic recognition findings.
+                if hole.get('status') in ('unknown','partial') or hole.get('measurements',{}).get('transverse_inner_face_count') not in (0,):
+                    pending.append('구멍 축 방향·천장 형상')
+        if not edits:return result
+        output=deepcopy(result);ranking=[]
+        for old in output.get('ranking',[]):
+            p=deepcopy(old);p['direction_keep_current']=p['keep_current'];p['keep_current']=False
+            p['changes'].extend(deepcopy(edits));p['covered_finding_ids']=list(dict.fromkeys(p.get('covered_finding_ids',[])+covered))
+            p['remaining']=list(dict.fromkeys(p.get('remaining',[])+pending))
+            # Always retain a hole-axis check unless the raw record explicitly
+            # reports no transverse groups and complete measurement scope.
+            if 'cad_holes' in covered and ('구멍 축 방향·천장 형상' in pending):
+                p['remaining_finding_ids']=list(dict.fromkeys(p.get('remaining_finding_ids',[])+['cad_holes']))
+            if 'wall' in covered and not wall['complete']:
+                p['remaining_finding_ids']=list(dict.fromkeys(p.get('remaining_finding_ids',[])+['wall']))
+            names=[]
+            if 'wall' in covered:names.append('벽 보강')
+            if 'cad_holes' in covered:names.append('구멍 확대')
+            names.append('현재 배치 유지' if p['direction_keep_current'] else p['orientation']['name']+' 배치')
+            p['title']=' + '.join(names);p['evidence'].extend(evidence)
+>           p['verification_scope']+='; 국소 목표 치수와 입력 기준 대조';p['cad_regenerated']=False
+            ^^^^^^^^^^^^^^^^^^^^^^^
+E           KeyError: 'verification_scope'
+
+dfm\am_joint_planning.py:63: KeyError
+_____________ test_unknown_material_side_not_assumed_to_be_a_hole _____________
+
+    def test_unknown_material_side_not_assumed_to_be_a_hole():
+        r,p=inputs();r['findings'][0]['measurements']['cylindrical_faces'][0]['role']='unknown'
+>       assert not any(c['field']=='diameter_mm' for c in combine_am_plan(r,p)['selected']['changes'])
+                                                          ^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_am_joint_planning.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+report = {'details': {'wall': {'measurements': {'minimum_mm': 0.3, 'missing_samples': 0, 'requested_samples': 2, 'samples': [{'...ace_count': 0}, 'status': 'attention'}], 'profile': {'minimum_hole_mm': 3.0, 'minimum_wall_mm': 1.2, 'process': 'MEX'}}
+result = {'alternatives': [], 'ranking': [{'changes': [], 'covered_finding_ids': ['overhang'], 'evidence': [], 'id': 'orientati...': {'changes': [], 'covered_finding_ids': ['overhang'], 'evidence': [], 'id': 'orientation:+Z', ...}, 'status': 'keep'}
+
+    def combine_am_plan(report,result):
+        if not result.get('selected'):return result
+        profile=report.get('profile',{});edits=[];covered=[];pending=[];evidence=[]
+        detail=report.get('details',{}).get('wall',{});limit=profile.get('minimum_wall_mm')
+        wall=summarize_wall(detail,limit)
+        if wall['status']=='attention' and _positive(limit):
+            measured=wall['minimum_mm']
+            # A chord is a local measurement, not a certified global minimum.
+            edits.append(dict(field='minimum_wall_mm',label='표시된 얇은 구간의 목표 두께',before=measured,after=limit,unit='mm',
+                              finding_id='wall',measurement_scope='normal-chord samples',cad_regenerated=False,
+                              source_faces=wall['below_limit_face_indices']))
+            covered.append('wall');evidence.append(f'벽 표본 {measured:g} mm / 목표 {limit:g} mm')
+            if not wall['complete']:pending.append('벽 미측정 구간')
+        hole_limit=profile.get('minimum_hole_mm')
+        hole=next((f for f in report.get('findings',[]) if f.get('id')=='cad_holes'),{})
+        cylinders=hole.get('measurements',{}).get('cylindrical_faces',[])
+        if _positive(hole_limit):
+            seen=set()
+            for c in cylinders:
+                if c.get('role')!='inner' or not _positive(c.get('diameter_mm')) or c['diameter_mm']>=hole_limit:continue
+                # A split cylindrical surface may have several faces. Keep explicit
+                # IDs rather than silently calling each face a separate hole.
+                identifier=c.get('face_id')
+                if identifier is None or identifier in seen:continue
+                seen.add(identifier)
+                edits.append(dict(field='diameter_mm',label=f'구멍 면 {identifier} 목표 지름',before=c['diameter_mm'],after=hole_limit,
+                                  unit='mm',cad_face_id=identifier,finding_id='cad_holes',cad_regenerated=False))
+            if seen:
+                covered.append('cad_holes');evidence.append(f'기준 미만 원통 면 {len(seen)}개 / 목표 지름 {hole_limit:g} mm')
+                # Direction and diameter are distinct; diameter edits do not clear
+                # transverse-hole or incomplete analytic recognition findings.
+                if hole.get('status') in ('unknown','partial') or hole.get('measurements',{}).get('transverse_inner_face_count') not in (0,):
+                    pending.append('구멍 축 방향·천장 형상')
+        if not edits:return result
+        output=deepcopy(result);ranking=[]
+        for old in output.get('ranking',[]):
+            p=deepcopy(old);p['direction_keep_current']=p['keep_current'];p['keep_current']=False
+            p['changes'].extend(deepcopy(edits));p['covered_finding_ids']=list(dict.fromkeys(p.get('covered_finding_ids',[])+covered))
+            p['remaining']=list(dict.fromkeys(p.get('remaining',[])+pending))
+            # Always retain a hole-axis check unless the raw record explicitly
+            # reports no transverse groups and complete measurement scope.
+            if 'cad_holes' in covered and ('구멍 축 방향·천장 형상' in pending):
+                p['remaining_finding_ids']=list(dict.fromkeys(p.get('remaining_finding_ids',[])+['cad_holes']))
+            if 'wall' in covered and not wall['complete']:
+                p['remaining_finding_ids']=list(dict.fromkeys(p.get('remaining_finding_ids',[])+['wall']))
+            names=[]
+            if 'wall' in covered:names.append('벽 보강')
+            if 'cad_holes' in covered:names.append('구멍 확대')
+            names.append('현재 배치 유지' if p['direction_keep_current'] else p['orientation']['name']+' 배치')
+            p['title']=' + '.join(names);p['evidence'].extend(evidence)
+>           p['verification_scope']+='; 국소 목표 치수와 입력 기준 대조';p['cad_regenerated']=False
+            ^^^^^^^^^^^^^^^^^^^^^^^
+E           KeyError: 'verification_scope'
+
+dfm\am_joint_planning.py:63: KeyError
+=========================== short test summary info ===========================
+FAILED tests_v3/test_am_joint_planning.py::test_measured_edits_are_one_plan_not_duplicate_actions
+FAILED tests_v3/test_am_joint_planning.py::test_partial_and_transverse_scope_survives_numeric_edits
+FAILED tests_v3/test_am_joint_planning.py::test_unknown_material_side_not_assumed_to_be_a_hole
+3 failed, 13 passed in 1.44s

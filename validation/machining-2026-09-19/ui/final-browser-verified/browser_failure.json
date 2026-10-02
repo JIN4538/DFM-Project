@@ -1,0 +1,71 @@
+{
+  "message": "TimeoutError: locator.check: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('checkbox', { name: '선택 방향에서 가려진 표면도 확인', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <input title=\"\" tabindex=\"0\" type=\"checkbox\" aria-label=\"선택 방향에서 가려진 표면도 확인\" data-react-aria-pressable=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div overflow=\"visible\" data-testid=\"stForm\" class=\"stForm st-emotion-cache-1qba6qo e1wbhg7m1\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"st-emotion-cache-xy5z10 e1e6q2zh4\"></div> intercepts pointer events\u001b[22m\n\u001b[2m  41 × retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div overflow=\"visible\" data-testid=\"stForm\" class=\"stForm st-emotion-cache-1qba6qo e1wbhg7m1\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"st-emotion-cache-xy5z10 e1e6q2zh4\"></div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"st-emotion-cache-xy5z10 e1e6q2zh4\"></div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div overflow=\"visible\" data-testid=\"stForm\" class=\"stForm st-emotion-cache-1qba6qo e1wbhg7m1\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+  "stack": "locator.check: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('checkbox', { name: '선택 방향에서 가려진 표면도 확인', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <input title=\"\" tabindex=\"0\" type=\"checkbox\" aria-label=\"선택 방향에서 가려진 표면도 확인\" data-react-aria-pressable=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div overflow=\"visible\" data-testid=\"stForm\" class=\"stForm st-emotion-cache-1qba6qo e1wbhg7m1\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"st-emotion-cache-xy5z10 e1e6q2zh4\"></div> intercepts pointer events\u001b[22m\n\u001b[2m  41 × retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div overflow=\"visible\" data-testid=\"stForm\" class=\"stForm st-emotion-cache-1qba6qo e1wbhg7m1\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"st-emotion-cache-xy5z10 e1e6q2zh4\"></div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"st-emotion-cache-xy5z10 e1e6q2zh4\"></div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div overflow=\"visible\" data-testid=\"stForm\" class=\"stForm st-emotion-cache-1qba6qo e1wbhg7m1\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-rac=\"\" data-react-aria-pressable=\"true\" class=\"st-emotion-cache-1sw1ha3 e1e6q2zh3\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\n    at C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\validation\\machining-2026-09-19\\ui\\browser_workflow.cjs:84:77",
+  "steps": [
+    {
+      "name": "10_rectangle_tool8_wide",
+      "url": "http://127.0.0.1:8510/",
+      "utc": "2026-09-19T14:53:12.678Z",
+      "layout": {
+        "viewport": [
+          1440,
+          1100
+        ],
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "mainWidth": 1140
+      },
+      "screenshot": "10_rectangle_tool8_wide.png",
+      "graph": "10_rectangle_tool8_wide.graph.png"
+    },
+    {
+      "name": "11_rounded_tool8_wide",
+      "url": "http://127.0.0.1:8510/",
+      "utc": "2026-09-19T14:53:21.799Z",
+      "layout": {
+        "viewport": [
+          1440,
+          1100
+        ],
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "mainWidth": 1140
+      },
+      "screenshot": "11_rounded_tool8_wide.png",
+      "graph": "11_rounded_tool8_wide.graph.png"
+    },
+    {
+      "name": "12_rounded_tool4_wide",
+      "url": "http://127.0.0.1:8510/",
+      "utc": "2026-09-19T14:53:24.323Z",
+      "layout": {
+        "viewport": [
+          1440,
+          1100
+        ],
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "mainWidth": 1140
+      },
+      "screenshot": "12_rounded_tool4_wide.png",
+      "graph": "12_rounded_tool4_wide.graph.png"
+    },
+    {
+      "name": "13_rounded_tool4_narrow",
+      "url": "http://127.0.0.1:8510/",
+      "utc": "2026-09-19T14:53:25.579Z",
+      "layout": {
+        "viewport": [
+          780,
+          1000
+        ],
+        "documentWidth": 780,
+        "bodyWidth": 780,
+        "mainWidth": 480
+      },
+      "screenshot": "13_rounded_tool4_narrow.png",
+      "graph": "13_rounded_tool4_narrow.graph.png"
+    }
+  ],
+  "pageErrors": []
+}

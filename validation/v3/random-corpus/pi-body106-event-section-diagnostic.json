@@ -1,0 +1,174 @@
+{
+  "source_sha256": "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2",
+  "model_fingerprint": "4f5ce641be42385705f2acbf6c39d8e36d35e39c339bbfbc79a2b4b1eb891129",
+  "body": 106,
+  "script_sha256": "edf911e65302016a5f60de3ef458b8c3d8d8d8e5e729c8dc951e0cfe708f53ad",
+  "coordinate_frame": "build_mm",
+  "endpoint_intersection_tolerance_mm": 1e-10,
+  "mesh_watertight": true,
+  "mesh_winding_consistent": true,
+  "scope": "Independent local intersections on frozen tessellation, not a diagnosis of raw CAD topology or a physical print defect.",
+  "mesh_import_and_uniform_reference_code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+  "event_section_code_sha256": "dfa1f3f44c96a19ee5ffd3dd11fc8b882034b5dfdf51783bf0bc29fc01ea45fa",
+  "diagnostic_rows": [
+    {
+      "z_mm": 4.155004287382559,
+      "independent_loop_classification": "complete",
+      "segment_count": 331,
+      "overlap_length_sum_mm": 0,
+      "intersections": []
+    },
+    {
+      "z_mm": 4.155103287382558,
+      "independent_loop_classification": "self_intersection",
+      "segment_count": 332,
+      "overlap_length_sum_mm": 1.9229480363591733e-07,
+      "intersections": [
+        {
+          "kind": "intersection_inside_segment",
+          "distance_to_endpoints_mm": [
+            0.0,
+            1.9229480363591733e-07
+          ],
+          "mesh_faces": [
+            3992,
+            4454
+          ],
+          "cad_faces": [
+            8335,
+            8364
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 1.9229480363591733e-07,
+          "mesh_faces": [
+            4453,
+            4454
+          ],
+          "cad_faces": [
+            8364,
+            8364
+          ]
+        }
+      ]
+    },
+    {
+      "z_mm": 4.155104287382558,
+      "independent_loop_classification": "self_intersection",
+      "segment_count": 332,
+      "overlap_length_sum_mm": 2.143274695498576e-07,
+      "intersections": [
+        {
+          "kind": "intersection_inside_segment",
+          "distance_to_endpoints_mm": [
+            0.0,
+            2.143274695498576e-07
+          ],
+          "mesh_faces": [
+            3992,
+            4454
+          ],
+          "cad_faces": [
+            8335,
+            8364
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 2.143274695498576e-07,
+          "mesh_faces": [
+            4453,
+            4454
+          ],
+          "cad_faces": [
+            8364,
+            8364
+          ]
+        }
+      ]
+    },
+    {
+      "z_mm": 4.1551052873825585,
+      "independent_loop_classification": "self_intersection",
+      "segment_count": 332,
+      "overlap_length_sum_mm": 2.3636013568584247e-07,
+      "intersections": [
+        {
+          "kind": "intersection_inside_segment",
+          "distance_to_endpoints_mm": [
+            0.0,
+            2.3636013568584247e-07
+          ],
+          "mesh_faces": [
+            3992,
+            4454
+          ],
+          "cad_faces": [
+            8335,
+            8364
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 2.3636013568584247e-07,
+          "mesh_faces": [
+            4453,
+            4454
+          ],
+          "cad_faces": [
+            8364,
+            8364
+          ]
+        }
+      ]
+    },
+    {
+      "z_mm": 4.155204287382558,
+      "independent_loop_classification": "self_intersection",
+      "segment_count": 331,
+      "overlap_length_sum_mm": 2.4175940780413185e-06,
+      "intersections": [
+        {
+          "kind": "intersection_inside_segment",
+          "distance_to_endpoints_mm": [
+            0.0,
+            2.4175940780413185e-06
+          ],
+          "mesh_faces": [
+            3992,
+            4454
+          ],
+          "cad_faces": [
+            8335,
+            8364
+          ]
+        },
+        {
+          "kind": "overlap",
+          "length_mm": 2.4175940780413185e-06,
+          "mesh_faces": [
+            4453,
+            4454
+          ],
+          "cad_faces": [
+            8364,
+            8364
+          ]
+        }
+      ]
+    }
+  ],
+  "event_production_summary": {
+    "status": "partial",
+    "requested_samples": 3098,
+    "complete_samples": 3004,
+    "first_incomplete_index": 1228,
+    "first_incomplete_z_mm": 4.155104287382558,
+    "grid_mm": 1e-10,
+    "unresolved_length_mm": 2.142999999676931e-07,
+    "whole_volume_estimate_mm3": null
+  },
+  "native_CAD_self_intersection": "not_determined",
+  "source_mesh_changed": false
+}

@@ -1,0 +1,15 @@
+....................................................................F... [100%]
+================================== FAILURES ===================================
+____________ test_all_shipped_geometry_matches_published_inventory ____________
+
+    def test_all_shipped_geometry_matches_published_inventory():
+        result=verify(ROOT)
+        assert result['verified'],result['errors']
+>       assert result['geometry_files']==152
+E       assert 155 == 152
+
+tests_v3\test_packaged_geometry.py:15: AssertionError
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\practical-holes-2026-09-30\ui-regression-01.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_packaged_geometry.py::test_all_shipped_geometry_matches_published_inventory
+1 failed, 71 passed in 177.97s (0:02:57)

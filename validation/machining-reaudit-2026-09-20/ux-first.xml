@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="37" time="27.487" timestamp="2026-09-20T00:53:48.283806+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_corner_table_compares_radius_to_radius_and_preserves_missing[8.0-4.0--1.0-\uc608]" time="0.001" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_corner_table_compares_radius_to_radius_and_preserves_missing[4.0-2.0-1.0-\uc544\ub2c8\uc624]" time="0.052" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_corner_table_compares_radius_to_radius_and_preserves_missing[None-\ubbf8\uc785\ub825\xb7\ubbf8\ube44\uad50-\ubbf8\uc785\ub825\xb7\ubbf8\ube44\uad50-\ubbf8\uc785\ub825\xb7\ubbf8\ube44\uad50]" time="0.001" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_missing_visibility_categories_do_not_become_zero_count" time="0.000" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_equality_boundary_is_explicit_instead_of_an_unqualified_no" time="0.000" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_axis_mismatch_is_not_presented_as_missing_tool_dimensions" time="0.000" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_html_has_portable_shape_human_conditions_and_preserves_precision" time="0.005" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_html_escapes_user_text_and_rejects_active_non_web_links" time="0.003" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_html_rejects_different_shape_instead_of_attaching_stale_diagram" time="0.001" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_text_only_export_explicitly_identifies_missing_diagram" time="0.002" /><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_user_can_follow_resolved_corner_condition_and_locate_each_measurement" time="10.889"><failure message="AssertionError: assert '공구 지름' in '사용할 원통형 엔드밀의 지름을 입력하면 측정 반경과 비교합니다.'">def test_user_can_follow_resolved_corner_condition_and_locate_each_measurement():
+        app = _open_rounded()
+        for key, value in (("cnc_diameter", 8.), ("cnc_flute", 10.), ("cnc_reach", 15.)):
+            app.number_input(key=key).set_value(value)
+        report = _submit(app)
+        corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
+        assert corner["status"] == "attention"
+        assert any("공구축과 나란한 오목 원통면" in row.value for row in app.warning)
+        assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "8 mm"
+        table = app.dataframe[0].value
+        assert list(table["공구 반경 (mm)"]) == [4.] * 4
+        assert list(table["오목면 반경 (mm)"]) == [3.] * 4
+        assert list(table["반경 차이 · 면−공구 (mm)"]) == [-1.] * 4
+        all_count = _highlight_triangle_count(app)
+        selected_face = str(corner["measurements"]["cylindrical_faces"][0]["face_id"])
+        app.selectbox(key="cnc_location").set_value(selected_face).run()
+        assert not app.exception
+        assert 0 &lt; _highlight_triangle_count(app) &lt; all_count
+        assert app.selectbox(key="cnc_location").value == selected_face
+        assert any("색 자체는 기준 미달을 뜻하지 않습니다" in row.value for row in app.caption)
+    
+        app.number_input(key="cnc_diameter").set_value(4.)
+        report = _submit(app)
+        corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
+        assert corner["status"] == "observed"
+        assert "더 작은 공구" not in corner["action"] and "반경 확대" not in corner["action"]
+        assert "경로" in corner["action"]
+        assert app.selectbox(key="cnc_location").value == selected_face
+        assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "4 mm"
+        assert list(app.dataframe[0].value["공구 반경 (mm)"]) == [2.] * 4
+    
+        app.number_input(key="cnc_diameter").set_value(None)
+        report = _submit(app)
+        corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
+        assert corner["status"] == "unknown"
+&gt;       assert "공구 지름" in corner["action"]
+E       AssertionError: assert '공구 지름' in '사용할 원통형 엔드밀의 지름을 입력하면 측정 반경과 비교합니다.'
+
+tests_v3\test_machining_ux_reaudit.py:191: AssertionError</failure></testcase><testcase classname="tests_v3.test_machining_ux_reaudit" name="test_allowed_small_tool_value_has_nonzero_display_and_applied_condition" time="0.630" /><testcase classname="tests_v3.test_machining_ui" name="test_cnc_measure_without_tool_and_stale_condition_results" time="0.744"><failure message="AssertionError: assert 'unknown' == 'not_detected'&#10;  &#10;  - not_detected&#10;  + unknown">def test_cnc_measure_without_tool_and_stale_condition_results():
+        app = open_machining()
+        assert not app.get("download_button")
+        report = submit(app)
+        pocket = next(f for f in report["findings"] if f["id"] == "cnc_rectangular_pockets")
+        assert pocket["status"] == "attention"
+        assert pocket["measurements"]["pockets"][0]["width_mm"] == pytest.approx(12)
+        assert report["profile"]["tool_diameter_mm"] is None
+        assert len(app.get("download_button")) == 3
+        assert "미입력·미비교" in app.dataframe[0].value.to_string()
+        app.selectbox(key="cnc_direction").select("+X").run()
+        assert not app.exception and not app.get("download_button")
+        assert any("이전 검토 결과" in x.value for x in app.caption)
+        changed = submit(app)
+        assert changed["direction"] == [1., 0., 0.]
+&gt;       assert next(f for f in changed["findings"] if f["id"] == "cnc_rectangular_pockets")["status"] == "not_detected"
+E       AssertionError: assert 'unknown' == 'not_detected'
+E         
+E         - not_detected
+E         + unknown
+
+tests_v3\test_machining_ui.py:42: AssertionError</failure></testcase><testcase classname="tests_v3.test_machining_ui" name="test_cnc_tool_comparison_and_invalid_condition_no_export" time="3.000" /><testcase classname="tests_v3.test_machining_ui" name="test_changed_geometry_keeps_option_order_and_selected_result_consistent" time="3.380" /><testcase classname="tests_v3.test_machining_ui" name="test_visibility_shows_back_facing_and_tangent_samples_without_am_axis" time="4.554" /><testcase classname="tests_v3.test_machining_ui" name="test_switching_process_never_displays_other_process_report" time="2.255" /><testcase classname="tests_v3.test_machining_contracts" name="test_unknown_material_side_preserves_hole_and_corner_uncertainty[partial-cylinder]" time="0.003" /><testcase classname="tests_v3.test_machining_contracts" name="test_unknown_material_side_preserves_hole_and_corner_uncertainty[full-cylinder]" time="0.002" /><testcase classname="tests_v3.test_machining_contracts" name="test_confirmed_bad_corner_survives_other_unresolved_cylinders[False]" time="0.001" /><testcase classname="tests_v3.test_machining_contracts" name="test_confirmed_bad_corner_survives_other_unresolved_cylinders[True]" time="0.001" /><testcase classname="tests_v3.test_machining_contracts" name="test_known_hole_conflict_is_not_erased_by_unresolved_neighbor" time="0.001" /><testcase classname="tests_v3.test_machining_contracts" name="test_missing_tool_diameter_does_not_report_zero_failed_corner_comparisons" time="0.001" /><testcase classname="tests_v3.test_machining_contracts" name="test_worker_failure_cannot_be_presented_as_zero_obstructions[timeout]" time="0.013" /><testcase classname="tests_v3.test_machining_contracts" name="test_worker_failure_cannot_be_presented_as_zero_obstructions[start-failure]" time="0.018" /><testcase classname="tests_v3.test_machining_contracts" name="test_every_sample_state_is_summarized_in_korean_including_unknown" time="0.005" /><testcase classname="tests_v3.test_machining_contracts" name="test_visibility_uses_recorded_points_and_symbols_not_face_coloring[all]" time="0.017" /><testcase classname="tests_v3.test_machining_contracts" name="test_visibility_uses_recorded_points_and_symbols_not_face_coloring[visible]" time="0.010" /><testcase classname="tests_v3.test_machining_contracts" name="test_visibility_uses_recorded_points_and_symbols_not_face_coloring[occluded]" time="0.011" /><testcase classname="tests_v3.test_machining_contracts" name="test_visibility_uses_recorded_points_and_symbols_not_face_coloring[back_facing]" time="0.011" /><testcase classname="tests_v3.test_machining_contracts" name="test_visibility_uses_recorded_points_and_symbols_not_face_coloring[tangent]" time="0.014" /><testcase classname="tests_v3.test_machining_contracts" name="test_visibility_uses_recorded_points_and_symbols_not_face_coloring[unknown]" time="0.010" /><testcase classname="tests_v3.test_machining_contracts" name="test_cylindrical_span_comparison_label_does_not_claim_total_entry_reach" time="0.001" /><testcase classname="tests_v3.test_machining_contracts" name="test_pocket_table_names_local_wall_height_and_keeps_missing_values[False-False]" time="0.000" /><testcase classname="tests_v3.test_machining_contracts" name="test_pocket_table_names_local_wall_height_and_keeps_missing_values[True-True]" time="0.001" /><testcase classname="tests_v3.test_machining_contracts" name="test_pocket_table_names_local_wall_height_and_keeps_missing_values[None-None]" time="0.001" /><testcase classname="tests_v3.test_machining_contracts" name="test_complete_face_information_is_not_described_as_all_pockets_recognized" time="0.001" /></testsuite></testsuites>

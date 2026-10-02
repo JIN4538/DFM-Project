@@ -1,0 +1,2368 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "AM-PRUSA-FAQ",
+      "title": "FAQ - Frequently Asked Questions: printer dimensions",
+      "publisher": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/faq-frequently-asked-questions_1932?product=xl",
+      "accessed": "2026-09-28",
+      "locator": "What are the printer dimensions? / CORE One, CORE One L, XL, MK4/S",
+      "revision": "발행판 미표기; 2026-09-28 열람본",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "MINI+ 행은 다른 공식 사양과 불일치 가능성이 있어 채택하지 않음.",
+        "명목 공간은 브림·서포트·다중 재료 구조의 공간을 보장하지 않음."
+      ]
+    },
+    {
+      "id": "AM-PRUSA-SETTINGS-1142",
+      "title": "PrusaSlicer-settings / PrusaResearch 1.14.2",
+      "publisher": "Prusa Research",
+      "url": "https://github.com/prusa3d/PrusaSlicer-settings/blob/a40f669e7c3ff4dfe05a937fc08fc57993dcf0d5/live/PrusaResearch/1.14.2.ini",
+      "accessed": "2026-09-28",
+      "locator": "INI section/key and inherited section; 각 파라미터의 줄 번호 참조",
+      "revision": "config_version 1.14.2; commit a40f669e7c3ff4dfe05a937fc08fc57993dcf0d5",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "해당 판의 명시적 프로필만 채택; 최신 설정이라는 의미가 아님.",
+        "설정값은 재료의 출력 한계·강도·실제 압출폭을 보증하지 않음."
+      ],
+      "sha256": "dcac7cbf4b32ead42d145481cde0f162b949bf4024c7fe45f88ac0b2c2ec1371"
+    },
+    {
+      "id": "AM-FORMLABS-VOLUME",
+      "title": "What is the largest part I can print on a Formlabs printer?",
+      "publisher": "Formlabs",
+      "url": "https://formlabs.com/support/What-is-the-build-volume-of-the-Form-3L-and-Form-3BL/",
+      "accessed": "2026-09-28",
+      "locator": "Form 4/4L/3/3L sections; Fuse table and corner-radius note",
+      "revision": "발행판 미표기; 2026-09-28 열람본",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "외곽 박스 검토에만 사용. 서포트·플랫폼 부착·배치 여유를 별도 고려.",
+        "Fuse 치수는 재료·PreForm 설정판에 따라 변경되며 모서리가 둥글다."
+      ]
+    },
+    {
+      "id": "AM-FORMLABS-FORM4-DESIGN",
+      "title": "Design specifications for 3D models (Form 4 generation)",
+      "publisher": "Formlabs",
+      "url": "https://formlabs.com/support/Design-specifications-for-3D-models-Form-4-generation/",
+      "accessed": "2026-09-28",
+      "locator": "Grey Resin V5 / 50 microns note; named feature sections",
+      "revision": "발행판 미표기; 2026-09-28 열람본",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "Form 4 + Grey Resin V5 + 50 µm 기준. 다른 레진·방향·크기에서 보편 한계 아님.",
+        "벽 0.2 mm 권장과 0.2 mm 이하 변형 경고가 함께 있음; 경계값을 합격으로 자동 판정하지 않음."
+      ]
+    },
+    {
+      "id": "AM-FORMLABS-FUSE-SPECS",
+      "title": "Fuse Series SLS 3D Printers Technical Specifications",
+      "publisher": "Formlabs",
+      "url": "https://formlabs.com/3d-printers/fuse-1/tech-specs/",
+      "accessed": "2026-09-28",
+      "locator": "Quick Stats / Fuse 1 and Fuse 1+ 30W columns",
+      "revision": "발행판 미표기; 2026-09-28 열람본",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "빌드 공간의 둥근 모서리·재료별 수축 보정을 이 표만으로 처리할 수 없음."
+      ]
+    },
+    {
+      "id": "AM-FORMLABS-FUSE-DESIGN",
+      "title": "Design specifications for 3D models (Fuse 1 generation)",
+      "publisher": "Formlabs",
+      "url": "https://formlabs.com/support/Design-specifications-for-3D-models-Fuse-1/",
+      "accessed": "2026-09-28",
+      "locator": "Nylon 12 basis; wall/hole/drain sections; material-specific characteristics",
+      "revision": "발행판 미표기; 2026-09-28 열람본",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "기본 특징 치수는 Fuse 1 + Nylon 12 기준; 다른 분말로 복사하지 않음.",
+        "서비스 Form Now의 별도 강화 기준과 구분. 제조 성공률 자료가 아님."
+      ]
+    },
+    {
+      "id": "AM-FORMLABS-NYLON12-TDS-REV01",
+      "title": "Nylon 12 Powder: Material Properties Data",
+      "publisher": "Formlabs",
+      "url": "https://formlabs-media.formlabs.com/datasheets/2201730-TDS-ENUS-0.pdf",
+      "accessed": "2026-09-28",
+      "locator": "PDF p.2, Mechanical Properties and footnotes 1-2",
+      "revision": "Rev.01 / 11.04.2020 as printed; V1 FLP12G01",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "과거 판본의 시험 재료 물성; 현행 분말의 설계 허용응력으로 사용하지 않음.",
+        "현재 다른 TDS에 탄성률 1900 MPa도 존재하므로 판본을 섞지 않음."
+      ],
+      "sha256": "d2742113e14b958ae21c68f92df2ffe9a6006e2c4a70974c7d80d22a02b9f400"
+    },
+    {
+      "id": "AM-EOS-P110",
+      "title": "FORMIGA P 110 Velocis",
+      "publisher": "EOS GmbH",
+      "url": "https://www.eos.info/polymer-solutions/polymer-printers/formiga-p-110-velocis",
+      "accessed": "2026-09-28",
+      "locator": "Technical Data / Build Volume; Materials & Processes",
+      "revision": "발행판 미표기; 2026-09-28 열람본",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "챔버 명목 치수; 열수축 보정 후 완성 부품 크기와 동일하다고 보장하지 않음."
+      ]
+    },
+    {
+      "id": "AM-EOS-M290",
+      "title": "EOS M 290 System Data Sheet",
+      "publisher": "EOS GmbH",
+      "url": "https://www.eos.info/metal-solutions/metal-printers/data-sheets/sds-eos-m-290",
+      "accessed": "2026-09-28",
+      "locator": "Technical Data / Build Volume and asterisk",
+      "revision": "Last changed 2026-07-23; status 2026-09-28",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "325 mm 높이는 빌드 플랫폼 포함·응용조건 의존. 실제 부품 공간으로 자동 대입하지 않음."
+      ]
+    },
+    {
+      "id": "AM-EOS-316L-202207",
+      "title": "EOS StainlessSteel 316L Material Data Sheet",
+      "publisher": "EOS GmbH",
+      "url": "https://www.eos.info/03_system-related-assets/material-related-contents/metal-materials-and-examples/metal-material-datasheet/stainlesssteel/material_datasheet_eos_stainlesssteel_316l_en_web.pdf",
+      "accessed": "2026-09-28",
+      "locator": "PDF pp.5,7,10,12; p.29 limitations",
+      "revision": "Status 07/2022; 29 pages",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "지정 장비·ParameterSet·분말에 한한 자료. 현재 316L-4404/4441 제품명에 임의 대응시키지 않음.",
+        "물성은 보증값 또는 설계 허용응력이 아님."
+      ],
+      "sha256": "c834280f977c0dde9039319b8fa11d3882d48ad75e50b47754359ce9044eac6f"
+    },
+    {
+      "id": "AM-EOS-ALSI10MG-PDF",
+      "title": "EOS Aluminium AlSi10Mg Material Data Sheet",
+      "publisher": "EOS GmbH",
+      "url": "https://www.eos.info/03_system-related-assets/material-related-contents/metal-materials-and-examples/metal-material-datasheet/aluminium/material_datasheet_eos_aluminium-alsi10mg_en_web.pdf",
+      "accessed": "2026-09-28",
+      "locator": "PDF pp.5,7,11,13; p.36 limitations",
+      "revision": "36-page PDF; M290 sections CR774; immutable SHA recorded",
+      "verification": "primary_source_checked",
+      "limitations": [
+        "웹 현행 분말 설명과 PDF의 조성값을 섞지 않음.",
+        "물성은 지정 장비·분말·설정·가공 시험편 조건의 관측치이며 부품 강도 보증값 아님."
+      ],
+      "sha256": "5af0eb6a8884baaaeed3850260b651abe14dcdd3d8d9ea39e937496fe992c41f"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "am-prusa-mk4s",
+      "label": "Original Prusa MK4S · 공간 사양",
+      "process": "MEX",
+      "category": "machine",
+      "machine": "Original Prusa MK4S",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 빌드 공간을 선택한 시나리오"
+      ],
+      "limitations": [
+        "소재·노즐·온도·벽 기준은 미확정. 공간만 맞아도 출력 가능 판정은 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-FAQ"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            250,
+            210,
+            220
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-PRUSA-FAQ"
+          ],
+          "locator": "What are the printer dimensions? / MK4/S, MK3.9/S / Build volume",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-xl",
+      "label": "Original Prusa XL · 공간 사양",
+      "process": "MEX",
+      "category": "machine",
+      "machine": "Original Prusa XL",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 빌드 공간을 선택한 시나리오"
+      ],
+      "limitations": [
+        "소재·노즐·온도·벽 기준은 미확정. 공간만 맞아도 출력 가능 판정은 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-FAQ"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            360,
+            360,
+            360
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-PRUSA-FAQ"
+          ],
+          "locator": "What are the printer dimensions? / XL / Build volume",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-core-one",
+      "label": "Prusa CORE One · 공간 사양",
+      "process": "MEX",
+      "category": "machine",
+      "machine": "Prusa CORE One",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 빌드 공간을 선택한 시나리오"
+      ],
+      "limitations": [
+        "소재·노즐·온도·벽 기준은 미확정. 공간만 맞아도 출력 가능 판정은 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-FAQ"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            250,
+            220,
+            270
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-PRUSA-FAQ"
+          ],
+          "locator": "What are the printer dimensions? / CORE One / Build volume",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-core-one-l",
+      "label": "Prusa CORE One L · 공간 사양",
+      "process": "MEX",
+      "category": "machine",
+      "machine": "Prusa CORE One L",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 빌드 공간을 선택한 시나리오"
+      ],
+      "limitations": [
+        "소재·노즐·온도·벽 기준은 미확정. 공간만 맞아도 출력 가능 판정은 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-FAQ"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            300,
+            300,
+            330
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-PRUSA-FAQ"
+          ],
+          "locator": "What are the printer dimensions? / CORE One L / Build volume",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-mk4-pla-015",
+      "label": "MK4 · Prusament PLA · 0.15mm QUALITY @MK4 0.4",
+      "process": "MEX",
+      "category": "process",
+      "machine": "Original Prusa MK4 (non-Input Shaper)",
+      "material": "Prusament PLA",
+      "conditions": [
+        "PrusaResearch 1.14.2의 선택된 공식 프리셋 조합",
+        "실제 슬라이싱 시 원본 전체 프로필이 필요함"
+      ],
+      "limitations": [
+        "노즐 지름을 최소 벽 두께로 사용하지 않음.",
+        "열변형·접착·건조·챔버 환경은 계산하지 않음.",
+        "밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.15,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.15mm QUALITY @MK4 0.4 -> print:*0.15mm* / layer_height; L832",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "line_width_mm": {
+          "value": 0.45,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.15mm QUALITY @MK4 0.4 -> print:*common* / perimeter_extrusion_width; L334",
+          "conditions": [
+            "명목 둘레 선폭을 사용하는 고정폭 기하 탐색. 실제 경로의 가변폭·첫층·브리지 폭은 다를 수 있음."
+          ],
+          "application": "automatic"
+        },
+        "nozzle_diameter_mm": {
+          "value": 0.4,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "printer:Original Prusa MK4 0.4 nozzle -> printer:*commonMK4* / nozzle_diameter; L21316",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "nozzle_temperature_c": {
+          "value": 215.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:Prusament PLA / temperature; L14525",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "first_layer_nozzle_temperature_c": {
+          "value": 215.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:*PLA* / first_layer_temperature; L6281",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "bed_temperature_c": {
+          "value": 60.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:*PLA* / bed_temperature; L6271",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "slicer_density_g_cm3": {
+          "value": 1.24,
+          "unit": "g/cm3",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:Prusament PLA / filament_density; L14527",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-mk4-pla-020",
+      "label": "MK4 · Prusament PLA · 0.20mm QUALITY @MK4 0.4",
+      "process": "MEX",
+      "category": "process",
+      "machine": "Original Prusa MK4 (non-Input Shaper)",
+      "material": "Prusament PLA",
+      "conditions": [
+        "PrusaResearch 1.14.2의 선택된 공식 프리셋 조합",
+        "실제 슬라이싱 시 원본 전체 프로필이 필요함"
+      ],
+      "limitations": [
+        "노즐 지름을 최소 벽 두께로 사용하지 않음.",
+        "열변형·접착·건조·챔버 환경은 계산하지 않음.",
+        "밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.2,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*0.20mm* / layer_height; L852",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "line_width_mm": {
+          "value": 0.45,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*common* / perimeter_extrusion_width; L334",
+          "conditions": [
+            "명목 둘레 선폭을 사용하는 고정폭 기하 탐색. 실제 경로의 가변폭·첫층·브리지 폭은 다를 수 있음."
+          ],
+          "application": "automatic"
+        },
+        "nozzle_diameter_mm": {
+          "value": 0.4,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "printer:Original Prusa MK4 0.4 nozzle -> printer:*commonMK4* / nozzle_diameter; L21316",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "nozzle_temperature_c": {
+          "value": 215.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:Prusament PLA / temperature; L14525",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "first_layer_nozzle_temperature_c": {
+          "value": 215.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:*PLA* / first_layer_temperature; L6281",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "bed_temperature_c": {
+          "value": 60.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:*PLA* / bed_temperature; L6271",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "slicer_density_g_cm3": {
+          "value": 1.24,
+          "unit": "g/cm3",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG -> filament:Prusament PLA / filament_density; L14527",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-mk4-petg-020",
+      "label": "MK4 · Prusament PETG · 0.20mm QUALITY @MK4 0.4",
+      "process": "MEX",
+      "category": "process",
+      "machine": "Original Prusa MK4 (non-Input Shaper)",
+      "material": "Prusament PETG",
+      "conditions": [
+        "PrusaResearch 1.14.2의 선택된 공식 프리셋 조합",
+        "실제 슬라이싱 시 원본 전체 프로필이 필요함"
+      ],
+      "limitations": [
+        "노즐 지름을 최소 벽 두께로 사용하지 않음.",
+        "열변형·접착·건조·챔버 환경은 계산하지 않음.",
+        "밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.2,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*0.20mm* / layer_height; L852",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "line_width_mm": {
+          "value": 0.45,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*common* / perimeter_extrusion_width; L334",
+          "conditions": [
+            "명목 둘레 선폭을 사용하는 고정폭 기하 탐색. 실제 경로의 가변폭·첫층·브리지 폭은 다를 수 있음."
+          ],
+          "application": "automatic"
+        },
+        "nozzle_diameter_mm": {
+          "value": 0.4,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "printer:Original Prusa MK4 0.4 nozzle -> printer:*commonMK4* / nozzle_diameter; L21316",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "nozzle_temperature_c": {
+          "value": 250.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG -> filament:Prusament PETG / temperature; L12176",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "first_layer_nozzle_temperature_c": {
+          "value": 240.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG -> filament:Prusament PETG / first_layer_temperature; L12175",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "bed_temperature_c": {
+          "value": 90.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG -> filament:*PET* / bed_temperature; L6369",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "slicer_density_g_cm3": {
+          "value": 1.27,
+          "unit": "g/cm3",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG -> filament:Prusament PETG / filament_density; L12178",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-mk4-asa-020",
+      "label": "MK4 · Prusament ASA · 0.20mm QUALITY @MK4 0.4",
+      "process": "MEX",
+      "category": "process",
+      "machine": "Original Prusa MK4 (non-Input Shaper)",
+      "material": "Prusament ASA",
+      "conditions": [
+        "PrusaResearch 1.14.2의 선택된 공식 프리셋 조합",
+        "실제 슬라이싱 시 원본 전체 프로필이 필요함"
+      ],
+      "limitations": [
+        "노즐 지름을 최소 벽 두께로 사용하지 않음.",
+        "열변형·접착·건조·챔버 환경은 계산하지 않음.",
+        "밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.2,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*0.20mm* / layer_height; L852",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "line_width_mm": {
+          "value": 0.45,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*common* / perimeter_extrusion_width; L334",
+          "conditions": [
+            "명목 둘레 선폭을 사용하는 고정폭 기하 탐색. 실제 경로의 가변폭·첫층·브리지 폭은 다를 수 있음."
+          ],
+          "application": "automatic"
+        },
+        "nozzle_diameter_mm": {
+          "value": 0.4,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "printer:Original Prusa MK4 0.4 nozzle -> printer:*commonMK4* / nozzle_diameter; L21316",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "nozzle_temperature_c": {
+          "value": 260.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament ASA @MK4 -> filament:Prusament ASA / temperature; L7505",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "first_layer_nozzle_temperature_c": {
+          "value": 260.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament ASA @MK4 -> filament:Prusament ASA / first_layer_temperature; L7503",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "bed_temperature_c": {
+          "value": 110.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament ASA @MK4 -> filament:Prusament ASA / bed_temperature; L7506",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "slicer_density_g_cm3": {
+          "value": 1.07,
+          "unit": "g/cm3",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament ASA @MK4 -> filament:Prusament ASA / filament_density; L7500",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-mk4-pcblend-020",
+      "label": "MK4 · Prusament PC Blend · 0.20mm QUALITY @MK4 0.4",
+      "process": "MEX",
+      "category": "process",
+      "machine": "Original Prusa MK4 (non-Input Shaper)",
+      "material": "Prusament PC Blend",
+      "conditions": [
+        "PrusaResearch 1.14.2의 선택된 공식 프리셋 조합",
+        "실제 슬라이싱 시 원본 전체 프로필이 필요함"
+      ],
+      "limitations": [
+        "노즐 지름을 최소 벽 두께로 사용하지 않음.",
+        "열변형·접착·건조·챔버 환경은 계산하지 않음.",
+        "밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.2,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*0.20mm* / layer_height; L852",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "line_width_mm": {
+          "value": 0.45,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.20mm QUALITY @MK4 0.4 -> print:*common* / perimeter_extrusion_width; L334",
+          "conditions": [
+            "명목 둘레 선폭을 사용하는 고정폭 기하 탐색. 실제 경로의 가변폭·첫층·브리지 폭은 다를 수 있음."
+          ],
+          "application": "automatic"
+        },
+        "nozzle_diameter_mm": {
+          "value": 0.4,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "printer:Original Prusa MK4 0.4 nozzle -> printer:*commonMK4* / nozzle_diameter; L21316",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "nozzle_temperature_c": {
+          "value": 275.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PC Blend @MK4 -> filament:Prusament PC Blend / temperature; L7556",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "first_layer_nozzle_temperature_c": {
+          "value": 275.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PC Blend @MK4 -> filament:Prusament PC Blend / first_layer_temperature; L7554",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "bed_temperature_c": {
+          "value": 115.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PC Blend @MK4 -> filament:Prusament PC Blend / bed_temperature; L7557",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "slicer_density_g_cm3": {
+          "value": 1.22,
+          "unit": "g/cm3",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PC Blend @MK4 -> filament:Prusament PC Blend / filament_density; L7551",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-mk4-pla-025-n06",
+      "label": "MK4 · Prusament PLA · 0.25mm QUALITY @MK4 0.6",
+      "process": "MEX",
+      "category": "process",
+      "machine": "Original Prusa MK4 (non-Input Shaper)",
+      "material": "Prusament PLA",
+      "conditions": [
+        "PrusaResearch 1.14.2의 선택된 공식 프리셋 조합",
+        "실제 슬라이싱 시 원본 전체 프로필이 필요함"
+      ],
+      "limitations": [
+        "노즐 지름을 최소 벽 두께로 사용하지 않음.",
+        "열변형·접착·건조·챔버 환경은 계산하지 않음.",
+        "밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.25,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.25mm QUALITY @MK4 0.6 -> print:*0.25mm* / layer_height; L865",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "line_width_mm": {
+          "value": 0.65,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.25mm QUALITY @MK4 0.6 -> print:*0.6nozzle* / perimeter_extrusion_width; L608",
+          "conditions": [
+            "명목 둘레 선폭을 사용하는 고정폭 기하 탐색. 실제 경로의 가변폭·첫층·브리지 폭은 다를 수 있음."
+          ],
+          "application": "automatic"
+        },
+        "nozzle_diameter_mm": {
+          "value": 0.6,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "printer:Original Prusa MK4 0.6 nozzle -> printer:Original Prusa MK4 0.6 nozzle / nozzle_diameter; L21368",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "nozzle_temperature_c": {
+          "value": 210.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG 0.6 -> filament:Prusament PLA @PG 0.6 / temperature; L14545",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "first_layer_nozzle_temperature_c": {
+          "value": 215.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG 0.6 -> filament:*PLA* / first_layer_temperature; L6281",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "bed_temperature_c": {
+          "value": 60.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG 0.6 -> filament:*PLA* / bed_temperature; L6271",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "slicer_density_g_cm3": {
+          "value": 1.24,
+          "unit": "g/cm3",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PLA @PG 0.6 -> filament:Prusament PLA / filament_density; L14527",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-mk4-petg-025-n06",
+      "label": "MK4 · Prusament PETG · 0.25mm QUALITY @MK4 0.6",
+      "process": "MEX",
+      "category": "process",
+      "machine": "Original Prusa MK4 (non-Input Shaper)",
+      "material": "Prusament PETG",
+      "conditions": [
+        "PrusaResearch 1.14.2의 선택된 공식 프리셋 조합",
+        "실제 슬라이싱 시 원본 전체 프로필이 필요함"
+      ],
+      "limitations": [
+        "노즐 지름을 최소 벽 두께로 사용하지 않음.",
+        "열변형·접착·건조·챔버 환경은 계산하지 않음.",
+        "밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.25,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.25mm QUALITY @MK4 0.6 -> print:*0.25mm* / layer_height; L865",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "line_width_mm": {
+          "value": 0.65,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "print:0.25mm QUALITY @MK4 0.6 -> print:*0.6nozzle* / perimeter_extrusion_width; L608",
+          "conditions": [
+            "명목 둘레 선폭을 사용하는 고정폭 기하 탐색. 실제 경로의 가변폭·첫층·브리지 폭은 다를 수 있음."
+          ],
+          "application": "automatic"
+        },
+        "nozzle_diameter_mm": {
+          "value": 0.6,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "printer:Original Prusa MK4 0.6 nozzle -> printer:Original Prusa MK4 0.6 nozzle / nozzle_diameter; L21368",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "nozzle_temperature_c": {
+          "value": 245.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG 0.6 -> filament:Prusament PETG @PG 0.6 / temperature; L12189",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "first_layer_nozzle_temperature_c": {
+          "value": 240.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG 0.6 -> filament:Prusament PETG / first_layer_temperature; L12175",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "bed_temperature_c": {
+          "value": 90.0,
+          "unit": "degC",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG 0.6 -> filament:*PET* / bed_temperature; L6369",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "slicer_density_g_cm3": {
+          "value": 1.27,
+          "unit": "g/cm3",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "filament:Prusament PETG @PG 0.6 -> filament:Prusament PETG / filament_density; L12178",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-form4",
+      "label": "Formlabs Form 4 · 공간 사양",
+      "process": "VPP",
+      "category": "machine",
+      "machine": "Formlabs Form 4",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 공간"
+      ],
+      "limitations": [
+        "서포트·플랫폼 여유·레진별 후경화 변형은 포함하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-VOLUME"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            200,
+            125,
+            210
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-VOLUME"
+          ],
+          "locator": "Form 4 and Form 4B",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form4l",
+      "label": "Formlabs Form 4L · 공간 사양",
+      "process": "VPP",
+      "category": "machine",
+      "machine": "Formlabs Form 4L",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 공간"
+      ],
+      "limitations": [
+        "서포트·플랫폼 여유·레진별 후경화 변형은 포함하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-VOLUME"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            353,
+            196,
+            350
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-VOLUME"
+          ],
+          "locator": "Form 4L and Form 4BL",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form3",
+      "label": "Formlabs Form 3 · 공간 사양",
+      "process": "VPP",
+      "category": "machine",
+      "machine": "Formlabs Form 3",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 공간"
+      ],
+      "limitations": [
+        "서포트·플랫폼 여유·레진별 후경화 변형은 포함하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-VOLUME"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            145,
+            145,
+            185
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-VOLUME"
+          ],
+          "locator": "Form 3 and Form 3B",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form3l",
+      "label": "Formlabs Form 3L · 공간 사양",
+      "process": "VPP",
+      "category": "machine",
+      "machine": "Formlabs Form 3L",
+      "material": "미확정",
+      "conditions": [
+        "제조사 명목 공간"
+      ],
+      "limitations": [
+        "서포트·플랫폼 여유·레진별 후경화 변형은 포함하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-VOLUME"
+      ],
+      "parameters": {
+        "build_volume_mm": {
+          "value": [
+            335,
+            200,
+            300
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-VOLUME"
+          ],
+          "locator": "Form 3L and Form 3BL",
+          "conditions": [
+            "X,Y,Z 순서"
+          ],
+          "application": "automatic"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-form4-grey-v5-005",
+      "label": "Form 4 · Grey Resin V5 · 0.05 mm 설계 가이드",
+      "process": "VPP",
+      "category": "process",
+      "machine": "Formlabs Form 4",
+      "material": "Formlabs Grey Resin V5",
+      "conditions": [
+        "제조사 CAD 특징 권장값; 실측 완성 치수와 구분"
+      ],
+      "limitations": [
+        "벽 레이 표본은 연결 측면·전체 최소 두께를 보증하지 않아 벽 기준 자동 적용 제외.",
+        "구멍·배출구·간격은 자료 열람용이며 현재 검사 완료 표시를 하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FORM4-DESIGN"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.05,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Opening note: Grey Resin V5 at 50 microns",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "supported_wall_guidance_mm": {
+          "value": 0.2,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Minimum supported wall thickness",
+          "conditions": [
+            "다른 벽에 두 측면 이상 연결된 벽. 0.2 mm 이하 변형 가능 경고 포함."
+          ],
+          "application": "reference_only"
+        },
+        "unsupported_wall_guidance_mm": {
+          "value": 0.2,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Minimum unsupported wall thickness",
+          "conditions": [
+            "다른 벽에 두 측면 미만 연결된 벽. 0.2 mm 이하 변형·탈락 경고 포함."
+          ],
+          "application": "reference_only"
+        },
+        "minimum_hole_mm": {
+          "value": 0.5,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Minimum hole diameter",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "minimum_drain_hole_mm": {
+          "value": 0.75,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Minimum drain hole diameter",
+          "conditions": [
+            "밀폐 공동의 레진·공기 배출 목적; 현재 공동 연결성은 자동 계산하지 않음."
+          ],
+          "application": "reference_only"
+        },
+        "minimum_clearance_mm": {
+          "value": 0.4,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Minimum clearance",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "overhang_angle_reference_deg": {
+          "value": 10,
+          "unit": "deg",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Minimum unsupported overhang angle",
+          "conditions": [
+            "수평 기준; 길이35×폭10×두께3 mm 시험형상. 10° 이하 파손 경고."
+          ],
+          "application": "reference_only"
+        },
+        "horizontal_span_reference_mm": {
+          "value": 29,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FORM4-DESIGN"
+          ],
+          "locator": "Maximum horizontal support span length",
+          "conditions": [
+            "폭5×두께3 mm 보; 다른 단면으로 일반화하지 않음."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-prusa-sl1s-orange-0025",
+      "label": "SL1S · Tough Prusa Orange · 0.025 mm",
+      "process": "VPP",
+      "category": "process",
+      "machine": "Original Prusa SL1S SPEED",
+      "material": "Prusament Resin Tough Prusa Orange",
+      "conditions": [
+        "PrusaResearch 1.14.2의 레진·층높이 일치 프리셋"
+      ],
+      "limitations": [
+        "노출시간은 원본 프로필 설정값; 다른 색상·레진·장비에 적용하지 않음.",
+        "후경화·세척·구조강도 검증 미포함."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.025,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_print:0.025 UltraDetail @SL1S -> sla_print:0.025 UltraDetail @SL1S / layer_height; L16401",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "exposure_time_s": {
+          "value": 1.8,
+          "unit": "s",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_material:Prusament Resin Tough Prusa Orange @0.025 SL1S -> sla_material:Prusament Resin Tough Prusa Orange @0.025 SL1S / exposure_time; L18148",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "initial_exposure_time_s": {
+          "value": 25.0,
+          "unit": "s",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_material:Prusament Resin Tough Prusa Orange @0.025 SL1S -> sla_material:Prusament Resin Tough Prusa Orange @0.025 SL1S / initial_exposure_time; L18149",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-sl1s-orange-005",
+      "label": "SL1S · Tough Prusa Orange · 0.05 mm",
+      "process": "VPP",
+      "category": "process",
+      "machine": "Original Prusa SL1S SPEED",
+      "material": "Prusament Resin Tough Prusa Orange",
+      "conditions": [
+        "PrusaResearch 1.14.2의 레진·층높이 일치 프리셋"
+      ],
+      "limitations": [
+        "노출시간은 원본 프로필 설정값; 다른 색상·레진·장비에 적용하지 않음.",
+        "후경화·세척·구조강도 검증 미포함."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.05,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_print:0.05 Normal @SL1S -> sla_print:0.05 Normal @SL1S / layer_height; L16406",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "exposure_time_s": {
+          "value": 2.0,
+          "unit": "s",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_material:Prusament Resin Tough Prusa Orange @0.05 SL1S -> sla_material:Prusament Resin Tough Prusa Orange @0.05 SL1S / exposure_time; L18592",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "initial_exposure_time_s": {
+          "value": 25.0,
+          "unit": "s",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_material:Prusament Resin Tough Prusa Orange @0.05 SL1S -> sla_material:Prusament Resin Tough Prusa Orange @0.05 SL1S / initial_exposure_time; L18593",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-prusa-sl1s-orange-01",
+      "label": "SL1S · Tough Prusa Orange · 0.1 mm",
+      "process": "VPP",
+      "category": "process",
+      "machine": "Original Prusa SL1S SPEED",
+      "material": "Prusament Resin Tough Prusa Orange",
+      "conditions": [
+        "PrusaResearch 1.14.2의 레진·층높이 일치 프리셋"
+      ],
+      "limitations": [
+        "노출시간은 원본 프로필 설정값; 다른 색상·레진·장비에 적용하지 않음.",
+        "후경화·세척·구조강도 검증 미포함."
+      ],
+      "source_ids": [
+        "AM-PRUSA-SETTINGS-1142"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.1,
+          "unit": "mm",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_print:0.1 Fast @SL1S -> sla_print:0.1 Fast @SL1S / layer_height; L16410",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "exposure_time_s": {
+          "value": 2.6,
+          "unit": "s",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_material:Prusament Resin Tough Prusa Orange @0.1 SL1S -> sla_material:Prusament Resin Tough Prusa Orange @0.1 SL1S / exposure_time; L19364",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "initial_exposure_time_s": {
+          "value": 25.0,
+          "unit": "s",
+          "kind": "slicer_setting",
+          "source_ids": [
+            "AM-PRUSA-SETTINGS-1142"
+          ],
+          "locator": "sla_material:Prusament Resin Tough Prusa Orange @0.1 SL1S -> sla_material:Prusament Resin Tough Prusa Orange @0.1 SL1S / initial_exposure_time; L19365",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project",
+      "slicer": "PrusaSlicer / PrusaResearch 1.14.2"
+    },
+    {
+      "id": "am-fuse1",
+      "label": "Formlabs Fuse 1 · 모서리·수축 보정 필요",
+      "process": "PBF_POLYMER",
+      "category": "machine",
+      "machine": "Formlabs Fuse 1",
+      "material": "미확정",
+      "conditions": [
+        "Fuse 1 generation; 110 µm = 0.11 mm"
+      ],
+      "limitations": [
+        "명목 박스는 실제 허용 부품 공간이 아니므로 공간 한계에 자동 대입하지 않음.",
+        "현행 PreForm에서 재료·설정판별 실제 배치 확인 필요."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FUSE-SPECS",
+        "AM-FORMLABS-FUSE-DESIGN"
+      ],
+      "parameters": {
+        "nominal_build_volume_mm": {
+          "value": [
+            165,
+            165,
+            300
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-SPECS"
+          ],
+          "locator": "Quick Stats / Formlabs Fuse 1 / Build Volume",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "layer_height_mm": {
+          "value": 0.11,
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-SPECS"
+          ],
+          "locator": "Quick Stats / Formlabs Fuse 1 / Layer Thickness",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "build_chamber_corner_radius_mm": {
+          "value": 16,
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Build volume / rounded-corners note",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse1plus",
+      "label": "Formlabs Fuse 1+ 30W · 모서리·수축 보정 필요",
+      "process": "PBF_POLYMER",
+      "category": "machine",
+      "machine": "Formlabs Fuse 1+ 30W",
+      "material": "미확정",
+      "conditions": [
+        "Fuse 1 generation; 110 µm = 0.11 mm"
+      ],
+      "limitations": [
+        "명목 박스는 실제 허용 부품 공간이 아니므로 공간 한계에 자동 대입하지 않음.",
+        "현행 PreForm에서 재료·설정판별 실제 배치 확인 필요."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FUSE-SPECS",
+        "AM-FORMLABS-FUSE-DESIGN"
+      ],
+      "parameters": {
+        "nominal_build_volume_mm": {
+          "value": [
+            165,
+            165,
+            300
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-SPECS"
+          ],
+          "locator": "Quick Stats / Formlabs Fuse 1+ 30W / Build Volume",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "layer_height_mm": {
+          "value": 0.11,
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-SPECS"
+          ],
+          "locator": "Quick Stats / Formlabs Fuse 1+ 30W / Layer Thickness",
+          "conditions": [],
+          "application": "automatic"
+        },
+        "build_chamber_corner_radius_mm": {
+          "value": 16,
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Build volume / rounded-corners note",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-p110-velocis",
+      "label": "EOS FORMIGA P 110 Velocis · 명목 공간",
+      "process": "PBF_POLYMER",
+      "category": "machine",
+      "machine": "EOS FORMIGA P 110 Velocis",
+      "material": "미확정",
+      "conditions": [
+        "제조사 장비 사양"
+      ],
+      "limitations": [
+        "수축 보정·재료·여유 공간 미확정; 실제 부품 허용 박스로 자동 적용하지 않음."
+      ],
+      "source_ids": [
+        "AM-EOS-P110"
+      ],
+      "parameters": {
+        "nominal_build_volume_mm": {
+          "value": [
+            200,
+            250,
+            330
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-EOS-P110"
+          ],
+          "locator": "Technical Data / Build Volume",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon12",
+      "label": "Fuse 1 계열 · Nylon 12 Powder 설계 참고",
+      "process": "PBF_POLYMER",
+      "category": "material",
+      "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+      "material": "Formlabs Nylon 12 Powder",
+      "conditions": [
+        "Nylon 12 기본 특징은 Fuse 1 시험조건; 나머지는 각 재료별 절의 가이드"
+      ],
+      "limitations": [
+        "재료 지원 장비·현행 PreForm 설정판 확인 필요. 기본 Nylon 12 특징 규칙을 다른 분말로 복사하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FUSE-DESIGN"
+      ],
+      "parameters": {
+        "material_part_size_reference_mm": {
+          "value": [
+            160.2,
+            160.2,
+            297.3
+          ],
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Build volume / Nylon 12 Powder",
+          "conditions": [
+            "웹 자료의 최대 치수; 모서리 R16과 설정판 갱신 때문에 완전한 허용 직육면체가 아님."
+          ],
+          "application": "reference_only"
+        },
+        "vertical_wall_guidance_mm": {
+          "value": 0.6,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Minimum supported/unsupported wall thickness",
+          "conditions": [
+            "수직 벽; 두 연결 조건 모두 같은 권장값."
+          ],
+          "application": "reference_only"
+        },
+        "horizontal_wall_guidance_mm": {
+          "value": 0.3,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Minimum supported/unsupported wall thickness",
+          "conditions": [
+            "수평 벽; 방향이 다른 벽으로 일반화하지 않음."
+          ],
+          "application": "reference_only"
+        },
+        "minimum_hole_mm": {
+          "value": 1.0,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Minimum hole diameter",
+          "conditions": [
+            "구멍 길이·벽 두께·분말 제거 접근성이 별도로 영향."
+          ],
+          "application": "reference_only"
+        },
+        "minimum_drain_hole_mm": {
+          "value": 3.5,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Minimum drain hole diameter",
+          "conditions": [
+            "공동마다 최소 두 개 배출구 권장; 현재 공동 연결성 검사는 미지원."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon12gf",
+      "label": "Fuse 1 계열 · Nylon 12 GF Powder 설계 참고",
+      "process": "PBF_POLYMER",
+      "category": "material",
+      "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+      "material": "Formlabs Nylon 12 GF Powder",
+      "conditions": [
+        "Nylon 12 기본 특징은 Fuse 1 시험조건; 나머지는 각 재료별 절의 가이드"
+      ],
+      "limitations": [
+        "재료 지원 장비·현행 PreForm 설정판 확인 필요. 기본 Nylon 12 특징 규칙을 다른 분말로 복사하지 않음.",
+        "내부 표면 세척 접근성·취성·거친 표면을 별도 검토."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FUSE-DESIGN"
+      ],
+      "parameters": {
+        "material_part_size_reference_mm": {
+          "value": [
+            159.9,
+            159.9,
+            294.1
+          ],
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Build volume / Nylon 12 GF Powder",
+          "conditions": [
+            "웹 자료의 최대 치수; 모서리 R16과 설정판 갱신 때문에 완전한 허용 직육면체가 아님."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon11",
+      "label": "Fuse 1 계열 · Nylon 11 Powder 설계 참고",
+      "process": "PBF_POLYMER",
+      "category": "material",
+      "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+      "material": "Formlabs Nylon 11 Powder",
+      "conditions": [
+        "Nylon 12 기본 특징은 Fuse 1 시험조건; 나머지는 각 재료별 절의 가이드"
+      ],
+      "limitations": [
+        "재료 지원 장비·현행 PreForm 설정판 확인 필요. 기본 Nylon 12 특징 규칙을 다른 분말로 복사하지 않음.",
+        "큰 XY 단면의 휨·작은 특징 재현은 정량 판정하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FUSE-DESIGN"
+      ],
+      "parameters": {
+        "material_part_size_reference_mm": {
+          "value": [
+            158.3,
+            158.3,
+            295.0
+          ],
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Build volume / Nylon 11 Powder",
+          "conditions": [
+            "웹 자료의 최대 치수; 모서리 R16과 설정판 갱신 때문에 완전한 허용 직육면체가 아님."
+          ],
+          "application": "reference_only"
+        },
+        "integrated_assembly_clearance_mm": {
+          "value": 1.0,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Nylon 11 Powder design considerations / Clearances",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-nylon11cf",
+      "label": "Fuse 1 계열 · Nylon 11 CF Powder 설계 참고",
+      "process": "PBF_POLYMER",
+      "category": "material",
+      "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+      "material": "Formlabs Nylon 11 CF Powder",
+      "conditions": [
+        "Nylon 12 기본 특징은 Fuse 1 시험조건; 나머지는 각 재료별 절의 가이드"
+      ],
+      "limitations": [
+        "재료 지원 장비·현행 PreForm 설정판 확인 필요. 기본 Nylon 12 특징 규칙을 다른 분말로 복사하지 않음.",
+        "탄소섬유 정렬 때문에 X/Y/Z 물성이 다름; 등방성 강도로 취급하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FUSE-DESIGN"
+      ],
+      "parameters": {
+        "material_part_size_reference_mm": {
+          "value": [
+            164.6,
+            164.6,
+            291.7
+          ],
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Build volume / Nylon 11 CF Powder",
+          "conditions": [
+            "웹 자료의 최대 치수; 모서리 R16과 설정판 갱신 때문에 완전한 허용 직육면체가 아님."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse-tpu90a",
+      "label": "Fuse 1 계열 · TPU 90A Powder 설계 참고",
+      "process": "PBF_POLYMER",
+      "category": "material",
+      "machine": "Formlabs Fuse 1 generation · 재료 지원 모델 확인 필요",
+      "material": "Formlabs TPU 90A Powder",
+      "conditions": [
+        "Nylon 12 기본 특징은 Fuse 1 시험조건; 나머지는 각 재료별 절의 가이드"
+      ],
+      "limitations": [
+        "재료 지원 장비·현행 PreForm 설정판 확인 필요. 기본 Nylon 12 특징 규칙을 다른 분말로 복사하지 않음.",
+        "XY 축의 원형 구멍은 타원화 가능; 현재 물리 변형 계산 없음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-FUSE-DESIGN"
+      ],
+      "parameters": {
+        "material_part_size_reference_mm": {
+          "value": [
+            161.2,
+            161.2,
+            295.0
+          ],
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "Build volume / TPU 90A Powder",
+          "conditions": [
+            "웹 자료의 최대 치수; 모서리 R16과 설정판 갱신 때문에 완전한 허용 직육면체가 아님."
+          ],
+          "application": "reference_only"
+        },
+        "integrated_assembly_clearance_mm": {
+          "value": 1.0,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-FORMLABS-FUSE-DESIGN"
+          ],
+          "locator": "TPU 90A Powder design considerations / Clearances",
+          "conditions": [
+            "두꺼운 단면 근처는 더 큰 간격이 필요할 수 있음."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-fuse1-nylon12-properties-rev01",
+      "label": "Fuse 1 · Nylon 12 V1 · 2020 물성 판본",
+      "process": "PBF_POLYMER",
+      "category": "material",
+      "machine": "Formlabs Fuse 1",
+      "material": "Formlabs Nylon 12 Powder V1 FLP12G01",
+      "conditions": [
+        "과거 판본의 제조사 시험값을 비교·추적하기 위한 기록"
+      ],
+      "limitations": [
+        "현재 분말·부품의 강도 계산 또는 설계 허용응력으로 자동 적용하지 않음."
+      ],
+      "source_ids": [
+        "AM-FORMLABS-NYLON12-TDS-REV01"
+      ],
+      "parameters": {
+        "tensile_strength_mpa": {
+          "value": 50,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-FORMLABS-NYLON12-TDS-REV01"
+          ],
+          "locator": "PDF p.2 / Ultimate Tensile Strength",
+          "conditions": [
+            "ASTM D638 Type 1; 23°C·50%RH에서 7일 조절. 시험편 방향은 해당 행에 미명시."
+          ],
+          "application": "reference_only"
+        },
+        "tensile_modulus_mpa": {
+          "value": 1850,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-FORMLABS-NYLON12-TDS-REV01"
+          ],
+          "locator": "PDF p.2 / Tensile Modulus",
+          "conditions": [
+            "ASTM D638 Type 1; 23°C·50%RH에서 7일 조절."
+          ],
+          "application": "reference_only"
+        },
+        "elongation_xy_percent": {
+          "value": 11,
+          "unit": "%",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-FORMLABS-NYLON12-TDS-REV01"
+          ],
+          "locator": "PDF p.2 / Elongation at Break (X/Y)",
+          "conditions": [
+            "ASTM D638 Type 1; XY 시편; 23°C·50%RH에서 7일 조절."
+          ],
+          "application": "reference_only"
+        },
+        "elongation_z_percent": {
+          "value": 6,
+          "unit": "%",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-FORMLABS-NYLON12-TDS-REV01"
+          ],
+          "locator": "PDF p.2 / Elongation at Break (Z)",
+          "conditions": [
+            "ASTM D638 Type 1; Z 시편; 23°C·50%RH에서 7일 조절."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290",
+      "label": "EOS M 290 · 플랫폼 포함 명목 공간",
+      "process": "PBF_METAL",
+      "category": "machine",
+      "machine": "EOS M 290",
+      "material": "미확정",
+      "conditions": [
+        "높이에는 빌드 플랫폼 포함"
+      ],
+      "limitations": [
+        "플랫폼·서포트·베이스 제거 여유 미확정; actual build_volume_mm 자동 적용 제외."
+      ],
+      "source_ids": [
+        "AM-EOS-M290"
+      ],
+      "parameters": {
+        "nominal_build_volume_mm": {
+          "value": [
+            250,
+            250,
+            325
+          ],
+          "unit": "mm",
+          "kind": "machine_specification",
+          "source_ids": [
+            "AM-EOS-M290"
+          ],
+          "locator": "Technical Data / Build Volume and asterisk",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-316l-surface-020",
+      "label": "M290 · EOS StainlessSteel 316L · 0.02 mm · 316L_Surface_1.X",
+      "process": "PBF_METAL",
+      "category": "process",
+      "machine": "EOS M 290",
+      "material": "EOS StainlessSteel 316L",
+      "conditions": [
+        "EOS M 290; 316L_Surface_1.X",
+        "분말 제품번호 9011-0032; Argon",
+        "EOSPRINT 2.7 이상; EOSYSTEM 2.11 이상; HSS blade"
+      ],
+      "limitations": [
+        "명시된 판본·ParameterSet의 제조사 조건; 현재 판매/장비 설정과 동일함을 자동 보증하지 않음.",
+        "전체 제조 레시피가 아니며 장비 실행에는 제조사 원본 ParameterSet·작업지침이 필요.",
+        "제조사 평균/대표 시험편 값은 부품 강도·피로·공차·성공 확률이 아님.",
+        "열응력·변형·서포트·스캔 경로·분말 제거는 별도 검토."
+      ],
+      "source_ids": [
+        "AM-EOS-316L-202207"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.02,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.5 / Process Information / Layer thickness",
+          "conditions": [
+            "EOS M 290; 316L_Surface_1.X",
+            "분말 제품번호 9011-0032; Argon",
+            "EOSPRINT 2.7 이상; EOSYSTEM 2.11 이상; HSS blade"
+          ],
+          "application": "automatic"
+        },
+        "parameter_set": {
+          "value": "316L_Surface_1.X",
+          "unit": "text",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.5 / EOSPAR or MaterialSet",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "tensile_strength_vertical_mpa": {
+          "value": 540,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.7 / as manufactured / Vertical / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태",
+            "n=189"
+          ],
+          "application": "reference_only"
+        },
+        "tensile_strength_horizontal_mpa": {
+          "value": 640,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.7 / as manufactured / Horizontal / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태",
+            "n=162"
+          ],
+          "application": "reference_only"
+        },
+        "minimum_wall_reference_range_mm": {
+          "value": [
+            0.3,
+            0.4
+          ],
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.5 / Minimum wall thickness",
+          "conditions": [
+            "벽의 방향·높이·지지 조건이 이 행에 완전히 특정되지 않아 자동 비교 제외."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-316l-flex-040",
+      "label": "M290 · EOS StainlessSteel 316L · 0.04 mm · 316L_040_FlexM291_1.X",
+      "process": "PBF_METAL",
+      "category": "process",
+      "machine": "EOS M 290",
+      "material": "EOS StainlessSteel 316L",
+      "conditions": [
+        "EOS M 290; 316L_040_FlexM291_1.X",
+        "분말 제품번호 9011-0032; Argon",
+        "EOSPRINT 2.7 이상; EOSYSTEM 2.11 이상; HSS blade"
+      ],
+      "limitations": [
+        "명시된 판본·ParameterSet의 제조사 조건; 현재 판매/장비 설정과 동일함을 자동 보증하지 않음.",
+        "전체 제조 레시피가 아니며 장비 실행에는 제조사 원본 ParameterSet·작업지침이 필요.",
+        "제조사 평균/대표 시험편 값은 부품 강도·피로·공차·성공 확률이 아님.",
+        "열응력·변형·서포트·스캔 경로·분말 제거는 별도 검토."
+      ],
+      "source_ids": [
+        "AM-EOS-316L-202207"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.04,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.10 / Process Information / Layer thickness",
+          "conditions": [
+            "EOS M 290; 316L_040_FlexM291_1.X",
+            "분말 제품번호 9011-0032; Argon",
+            "EOSPRINT 2.7 이상; EOSYSTEM 2.11 이상; HSS blade"
+          ],
+          "application": "automatic"
+        },
+        "parameter_set": {
+          "value": "316L_040_FlexM291_1.X",
+          "unit": "text",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.10 / EOSPAR or MaterialSet",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "tensile_strength_vertical_mpa": {
+          "value": 570,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.12 / as manufactured / Vertical / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태",
+            "n=105"
+          ],
+          "application": "reference_only"
+        },
+        "tensile_strength_horizontal_mpa": {
+          "value": 640,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.12 / as manufactured / Horizontal / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태",
+            "n=90"
+          ],
+          "application": "reference_only"
+        },
+        "minimum_wall_reference_mm": {
+          "value": 0.1,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-316L-202207"
+          ],
+          "locator": "PDF p.10 / Minimum wall thickness",
+          "conditions": [
+            "벽의 방향·높이·지지 조건이 이 행에 완전히 특정되지 않아 자동 비교 제외."
+          ],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-alsi10mg-flex-030",
+      "label": "M290 · EOS Aluminium AlSi10Mg · 0.03 mm · AlSi10Mg_FlexM291 2.01",
+      "process": "PBF_METAL",
+      "category": "process",
+      "machine": "EOS M 290",
+      "material": "EOS Aluminium AlSi10Mg",
+      "conditions": [
+        "EOS M 290; AlSi10Mg_FlexM291 2.01",
+        "분말 제품번호 9011-0024; Argon",
+        "EOSPRINT 1.6 이상; EOSYSTEM 2.4 이상; HSS blade"
+      ],
+      "limitations": [
+        "명시된 판본·ParameterSet의 제조사 조건; 현재 판매/장비 설정과 동일함을 자동 보증하지 않음.",
+        "전체 제조 레시피가 아니며 장비 실행에는 제조사 원본 ParameterSet·작업지침이 필요.",
+        "제조사 평균/대표 시험편 값은 부품 강도·피로·공차·성공 확률이 아님.",
+        "열응력·변형·서포트·스캔 경로·분말 제거는 별도 검토."
+      ],
+      "source_ids": [
+        "AM-EOS-ALSI10MG-PDF"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.03,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.5 / Process Information / Layer thickness",
+          "conditions": [
+            "EOS M 290; AlSi10Mg_FlexM291 2.01",
+            "분말 제품번호 9011-0024; Argon",
+            "EOSPRINT 1.6 이상; EOSYSTEM 2.4 이상; HSS blade"
+          ],
+          "application": "automatic"
+        },
+        "parameter_set": {
+          "value": "AlSi10Mg_FlexM291 2.01",
+          "unit": "text",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.5 / EOSPAR or MaterialSet",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "tensile_strength_vertical_mpa": {
+          "value": 460,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.7 / as manufactured / Vertical / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태; B10 절삭 시험편",
+            "n=261"
+          ],
+          "application": "reference_only"
+        },
+        "tensile_strength_horizontal_mpa": {
+          "value": 450,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.7 / as manufactured / Horizontal / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태; B10 절삭 시험편",
+            "n=108"
+          ],
+          "application": "reference_only"
+        },
+        "minimum_wall_reference_mm": {
+          "value": 0.4,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.5 / Minimum wall thickness",
+          "conditions": [
+            "벽의 방향·높이·지지 조건이 이 행에 완전히 특정되지 않아 자동 비교 제외."
+          ],
+          "application": "reference_only"
+        },
+        "build_platform_temperature_c": {
+          "value": 35,
+          "unit": "degC",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.5 / Build platform temperature",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    },
+    {
+      "id": "am-eos-m290-alsi10mg-core-060",
+      "label": "M290 · EOS Aluminium AlSi10Mg · 0.06 mm · AlSi10Mg_060_CoreM291 1.00",
+      "process": "PBF_METAL",
+      "category": "process",
+      "machine": "EOS M 290",
+      "material": "EOS Aluminium AlSi10Mg",
+      "conditions": [
+        "EOS M 290; AlSi10Mg_060_CoreM291 1.00",
+        "분말 제품번호 9011-0024; Argon",
+        "EOSPRINT 2.6 이상; EOSYSTEM 2.6 이상; HSS blade"
+      ],
+      "limitations": [
+        "명시된 판본·ParameterSet의 제조사 조건; 현재 판매/장비 설정과 동일함을 자동 보증하지 않음.",
+        "전체 제조 레시피가 아니며 장비 실행에는 제조사 원본 ParameterSet·작업지침이 필요.",
+        "제조사 평균/대표 시험편 값은 부품 강도·피로·공차·성공 확률이 아님.",
+        "열응력·변형·서포트·스캔 경로·분말 제거는 별도 검토."
+      ],
+      "source_ids": [
+        "AM-EOS-ALSI10MG-PDF"
+      ],
+      "parameters": {
+        "layer_height_mm": {
+          "value": 0.06,
+          "unit": "mm",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.11 / Process Information / Layer thickness",
+          "conditions": [
+            "EOS M 290; AlSi10Mg_060_CoreM291 1.00",
+            "분말 제품번호 9011-0024; Argon",
+            "EOSPRINT 2.6 이상; EOSYSTEM 2.6 이상; HSS blade"
+          ],
+          "application": "automatic"
+        },
+        "parameter_set": {
+          "value": "AlSi10Mg_060_CoreM291 1.00",
+          "unit": "text",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.11 / EOSPAR or MaterialSet",
+          "conditions": [],
+          "application": "reference_only"
+        },
+        "tensile_strength_vertical_mpa": {
+          "value": 440,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.13 / as manufactured / Vertical / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태; B10 절삭 시험편",
+            "표본 수 미표기"
+          ],
+          "application": "reference_only"
+        },
+        "tensile_strength_horizontal_mpa": {
+          "value": 440,
+          "unit": "MPa",
+          "kind": "material_property",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.13 / as manufactured / Horizontal / Tensile strength",
+          "conditions": [
+            "ISO 6892-1; 제조상태; B10 절삭 시험편",
+            "표본 수 미표기"
+          ],
+          "application": "reference_only"
+        },
+        "build_platform_temperature_c": {
+          "value": 100,
+          "unit": "degC",
+          "kind": "manufacturer_guidance",
+          "source_ids": [
+            "AM-EOS-ALSI10MG-PDF"
+          ],
+          "locator": "PDF p.11 / Build platform temperature",
+          "conditions": [],
+          "application": "reference_only"
+        }
+      },
+      "physical_validation": "not_validated_by_project"
+    }
+  ]
+}

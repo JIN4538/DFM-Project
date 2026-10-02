@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-09-19T16:13:52.113693+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "code_digest": "9b8fda0296c7bccb9fa320a9ffa15638f11a738ca497bc11b6925dfbdf674fe5",
+  "manifest_sha256": "f81334d220509a31491d55d6796a2c6929ff726a70bfe14702634613aaff8de4",
+  "source_sha256": {
+    "dfm/machining.py": "aba3f23570060136ec408b2cfe9ad32a049862bb5aaaa0e888b7fd9f50c12ed8",
+    "amdfm/io.py": "2b673fa45cc914020ed35f67847526f3dae2f5b3b7ec7393cc3d697d4ca72c84",
+    "amdfm/cad_worker.py": "48b187d6fa1303c5b8fc04f5220c5a4a66b83a4a899d1d0c5a629d7786b71eca",
+    "amdfm/cad_features.py": "2f1fbada2effa6ff922a1457129add958b9d009b9cdbd784a3b6024aee87edb2"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "trimesh": "5.1.0",
+    "cadquery-ocp-novtk": "7.9.3.1.1",
+    "streamlit": "1.63.0",
+    "shapely": "2.1.2"
+  },
+  "profile": {
+    "machine": "미확정",
+    "material": "미확정",
+    "tool_diameter_mm": 4.0,
+    "flute_length_mm": 10.0,
+    "reach_mm": 15.0,
+    "hole_depth_ratio_limit": null,
+    "basis": "감사 시연 조건: 지름4/날길이10/끝날-홀더 돌출길이15mm. 실제 공구·재료·장비의 검증된 가공 조건이 아님."
+  },
+  "direction": [
+    0,
+    0,
+    1
+  ],
+  "visibility": false,
+  "load_timeout_seconds": 180,
+  "mesh_unit_policy": "STL default mm is an unconfirmed assumption; STEP and 3MF use declared units.",
+  "execution_policy": "One model at a time; preserve assembly inputs; no auto body choice; no shape repair; no ray visibility; source bytes never changed.",
+  "interpretation": "Observed processing and scope only. No dimensional oracle and no physical machining trial.",
+  "prior_summary_sha256": "122b0ab58cfe15c80391d247e6b7fb5c372afdbec614ea3c0f892647b87ecfb8",
+  "retry_scope": "Only original indices 14 and 21 which exceeded the first 45-second audit limit; same geometry and demo profile; no body selection.",
+  "concurrency_context": "Parent full regression finished before this retry. Ordinary browser/app processes may still exist."
+}

@@ -1,0 +1,31 @@
+...F......................                                               [100%]
+================================== FAILURES ===================================
+________ test_missing_model_retains_old_recommendation_and_preferences ________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A8B370C470>
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-123/test_missing_model_retains_old0')
+
+    def test_missing_model_retains_old_recommendation_and_preferences(monkeypatch, tmp_path):
+        original = report()
+        path = tmp_path/'prefs.json'
+        monkeypatch.setattr(enhanced, 'propose_rl_plan', lambda *a, **kw: {'proposal': None, 'status': 'unavailable'})
+        expected = prior.recommend_plan(original, feedback_path=path)
+        got = enhanced.recommend_plan(original, feedback_path=path, model_path=prior.MODEL_PATH)
+        assert got['selected'] == expected['selected']
+        candidate = got['alternatives'][0]
+        enhanced.record_plan_preference(original, candidate['id'], feedback_path=path)
+        updated = enhanced.recommend_plan(original, feedback_path=path)
+        assert updated['learning']['choices'] == 1
+>       assert prior.recommend_plan(original, feedback_path=path)['selected'] == updated['selected']
+E       AssertionError: assert {'_baseline':...e': 0.0}, ...} == {'_baseline':...e': 0.0}, ...}
+E         
+E         Omitting 18 identical items, use -vv to show
+E         Differing items:
+E         {'score': -0.8791757353640215} != {'score': -0.8755176979122932}
+E         {'prior_score': -0.6139823960187103} != {'prior_score': -0.6103243585669819}
+E         Use -v to get more diff
+
+tests_v3\test_enhanced_planning.py:67: AssertionError
+=========================== short test summary info ===========================
+FAILED tests_v3/test_enhanced_planning.py::test_missing_model_retains_old_recommendation_and_preferences
+1 failed, 25 passed in 30.81s

@@ -1,0 +1,66 @@
+{
+  "schema": "dfm-ai-next-catalog-1",
+  "existing_corpus_catalog": "data/training/full-corpus-catalog.json",
+  "existing_catalog_sha256": "c5a1613f91b56f512c8fb3b124bafa80072736a127a98cba3b8a9d638f9825d0",
+  "new_external_downloads": 0,
+  "old_learned_artifacts_preserved": 30,
+  "new_deployed_models": [
+    {
+      "file": "data/models/external_feature_affinity_v1.json",
+      "sha256": "605024a6a36636bf267aaf41f40e2455ffa6edfe9d01d40ba288765769cf6050",
+      "manifest": {
+        "sha256": "605024a6a36636bf267aaf41f40e2455ffa6edfe9d01d40ba288765769cf6050",
+        "schema": "dfm-disconnected-feature-affinity-manifest-1",
+        "model_id": "mfinstseg-disconnected-affinity-v1",
+        "source": "MFInstSeg author instance memberships on certified CAD face order",
+        "training_records": 43730,
+        "training_pairs": 13435,
+        "validation_records": 9424,
+        "validation_pairs": 3014,
+        "test_records": 9241,
+        "test_pairs": 3143,
+        "selection": "Validation BCE epoch 19, validation-only merge and class thresholds; test reused solely for regression.",
+        "validation": "validation/ai-next-2026-09-30/affinity-runtime-comparison.json"
+      }
+    },
+    {
+      "file": "data/models/compound_planner_v1.json",
+      "sha256": "585956479b44773ee6e35a3a1d472f0a511fda184baeac8e65711eb47536d7f7",
+      "manifest": {
+        "sha256": "585956479b44773ee6e35a3a1d472f0a511fda184baeac8e65711eb47536d7f7",
+        "sources": {
+          "dfm/compound_planning.py": "791c531e122f6ee8741972f8868e99c8e49f1ac5f893682eb26ef2b020a744a2",
+          "dfm/rl_planner.py": "443d7aa2267e9d613458ae92b37fe3cdde68d96ed3095fc3543f3baa366924e1",
+          "dfm/plan_learning.py": "6f5509018ecf3d38b82cbd675665b86817c26b6447d7928df9889166c8a00a65",
+          "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf"
+        }
+      }
+    }
+  ],
+  "affinity": {
+    "scanned_existing_train_cad_records": 43730,
+    "training_face_group_pairs": 13435,
+    "author_instance_labels": true,
+    "test_cad_regression_reused": 9241
+  },
+  "compound": {
+    "training_procedural_shape_groups": 320,
+    "training_conditions": 960,
+    "training_tool_combinations": 15912,
+    "validation_shape_groups": 80,
+    "test_shape_groups": 224,
+    "test_conditions": 672
+  },
+  "am_experiment": {
+    "new_weight_adopted": false,
+    "training_existing_original_groups": 300,
+    "training_candidate_condition_rows": 601855,
+    "validation_original_groups": 45,
+    "test_original_groups": 58,
+    "test_conditions": 290,
+    "adopted_policy": "Retain all 24 old measurements; up to six more exact height/contact plus frozen v4 neural-area queries within the original remaining deadline; freeze the pre-extra measured comparison range",
+    "final_product_regression": "validation/ai-next-2026-09-30/guided-public-04/summary.json",
+    "same_query_experiment_distinct_from_product": true
+  },
+  "count_note": "Derived pairs/conditions are not new CAD parts and overlap prior original records; do not add them to the full-corpus original count."
+}

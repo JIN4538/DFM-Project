@@ -1,0 +1,79 @@
+{
+  "selection": {
+    "180-leaves-15": {
+      "queries": 34148,
+      "exact_objective_best": 31622,
+      "mean_objective_regret": 0.0002716808927209916,
+      "maximum_objective_regret": 0.10733364039928273,
+      "baseline_mean_objective_regret": 0.024009148437749366,
+      "different_from_fixed_baseline": 30538,
+      "better_than_fixed_objective": 29329,
+      "worse_than_fixed_objective": 1182
+    },
+    "300-leaves-31": {
+      "queries": 34148,
+      "exact_objective_best": 32661,
+      "mean_objective_regret": 0.00012590115375289975,
+      "maximum_objective_regret": 0.10733364039928273,
+      "baseline_mean_objective_regret": 0.024009148437749366,
+      "different_from_fixed_baseline": 30292,
+      "better_than_fixed_objective": 29566,
+      "worse_than_fixed_objective": 692
+    }
+  },
+  "selected": "300-leaves-31",
+  "all_heldout": {
+    "queries": 36087,
+    "exact_objective_best": 34447,
+    "mean_objective_regret": 0.00024043783298878906,
+    "maximum_objective_regret": 0.07066990518767235,
+    "baseline_mean_objective_regret": 0.02562007292089333,
+    "different_from_fixed_baseline": 31292,
+    "better_than_fixed_objective": 30514,
+    "worse_than_fixed_objective": 748
+  },
+  "external_new": {
+    "queries": 32970,
+    "exact_objective_best": 31636,
+    "mean_objective_regret": 7.154689784036367e-05,
+    "maximum_objective_regret": 0.01754123794190232,
+    "baseline_mean_objective_regret": 0.02321738473872642,
+    "different_from_fixed_baseline": 29617,
+    "better_than_fixed_objective": 28974,
+    "worse_than_fixed_objective": 643
+  },
+  "external_old": {
+    "queries": 32970,
+    "exact_objective_best": 26485,
+    "mean_objective_regret": 0.0010458816448800758,
+    "maximum_objective_regret": 0.043525218584356096,
+    "baseline_mean_objective_regret": 0.02321738473872642,
+    "different_from_fixed_baseline": 29004,
+    "better_than_fixed_objective": 26498,
+    "worse_than_fixed_objective": 2506
+  },
+  "candidate_rows": {
+    "train": 493573,
+    "validation": 105640,
+    "test": 121585
+  },
+  "query_counts": {
+    "train": 160226,
+    "validation": 34148,
+    "test": 36087
+  },
+  "external_candidate_rows": {
+    "train": 462696,
+    "validation": 98088,
+    "test": 98472
+  },
+  "groups": {
+    "train": 24406,
+    "validation": 5225,
+    "test": 5383
+  },
+  "cross_split_group_overlap": 0,
+  "portable_max_error": 0.0,
+  "seconds": 216.4529999999977,
+  "target_definition": "Disclosed geometric change-priority policy; source datasets do not contain expert improvement labels"
+}

@@ -1,0 +1,132 @@
+{
+  "id": "366957",
+  "dataset": "Thingi10K",
+  "group": "thing:195960",
+  "split": "test",
+  "process": "PBF_METAL",
+  "priority": "balanced",
+  "candidate_oracle": {
+    "legacy": 0.1760448703967713,
+    "blind": 0.1760448703967713,
+    "geometric": 0.1760448703967713,
+    "height_neural": 0.1760448703967713,
+    "uncertainty05": 0.1760448703967713
+  },
+  "actual_product": {
+    "legacy": 0.1885062204093116,
+    "blind": 0.1885062204093116,
+    "geometric": 0.1760448703967713,
+    "height_neural": 0.1885062204093116,
+    "uncertainty05": 0.1885062204093116
+  },
+  "common_reference_product": {
+    "legacy": 0.1760448703967713,
+    "blind": 0.1760448703967713,
+    "geometric": 0.1760448703967713,
+    "height_neural": 0.1760448703967713,
+    "uncertainty05": 0.1760448703967713
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.06248662431245467,
+        0.45553750816810507,
+        -0.8880208333333333
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.154639405253918,
+      "fixed_selected_direction": [
+        0.11302404855926963,
+        0.5204903351775554,
+        -0.8463541666666667
+      ],
+      "own_reference_score": 0.1885062204093116,
+      "fixed_reference_score": 0.1760448703967713,
+      "oracle_score": 0.1760448703967713,
+      "actual_winner_gap": 0.012461350012540284
+    },
+    "blind": {
+      "selected_direction": [
+        -0.06248662431245467,
+        0.45553750816810507,
+        -0.8880208333333333
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.154639405253918,
+      "fixed_selected_direction": [
+        0.11302404855926963,
+        0.5204903351775554,
+        -0.8463541666666667
+      ],
+      "own_reference_score": 0.1885062204093116,
+      "fixed_reference_score": 0.1760448703967713,
+      "oracle_score": 0.1760448703967713,
+      "actual_winner_gap": 0.012461350012540284
+    },
+    "geometric": {
+      "selected_direction": [
+        0.11302404855926963,
+        0.5204903351775554,
+        -0.8463541666666667
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.1760448703967713,
+      "fixed_selected_direction": [
+        0.11302404855926963,
+        0.5204903351775554,
+        -0.8463541666666667
+      ],
+      "own_reference_score": 0.1760448703967713,
+      "fixed_reference_score": 0.1760448703967713,
+      "oracle_score": 0.1760448703967713,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -0.06248662431245467,
+        0.45553750816810507,
+        -0.8880208333333333
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.154639405253918,
+      "fixed_selected_direction": [
+        0.11302404855926963,
+        0.5204903351775554,
+        -0.8463541666666667
+      ],
+      "own_reference_score": 0.1885062204093116,
+      "fixed_reference_score": 0.1760448703967713,
+      "oracle_score": 0.1760448703967713,
+      "actual_winner_gap": 0.012461350012540284
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        -0.06248662431245467,
+        0.45553750816810507,
+        -0.8880208333333333
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.16057095978045133,
+      "fixed_selected_direction": [
+        0.11302404855926963,
+        0.5204903351775554,
+        -0.8463541666666667
+      ],
+      "own_reference_score": 0.1885062204093116,
+      "fixed_reference_score": 0.1760448703967713,
+      "oracle_score": 0.1760448703967713,
+      "actual_winner_gap": 0.012461350012540284
+    }
+  },
+  "original_case_sha256": "47e1f896187e10db362d5411685888c609490ba73e7e5a9401c17cfac9e14f3a"
+}

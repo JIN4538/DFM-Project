@@ -1,0 +1,6051 @@
+{
+  "_id": "6a20e773de563092248ccde9",
+  "id": "jacobjennings/cadquarry",
+  "author": "jacobjennings",
+  "sha": "be52b95de212431d995c3ebd25bdd9d56a5c96bf",
+  "lastModified": "2026-06-10T17:19:53.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "language:code",
+    "license:cc0-1.0",
+    "size_categories:100K<n<1M",
+    "modality:tabular",
+    "modality:text",
+    "modality:3d",
+    "region:us",
+    "cad",
+    "cadquery",
+    "procedural-generation",
+    "parametric",
+    "3d",
+    "synthetic"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tCadQuarry\n\t\n\nProcedurally generated, execution-validated, fully parametric CadQuery\nprograms and the geometry they produce. Every part is a pure Python function of\ntyped, range-bounded parameters and is reproducible bit-for-bit from a seed.\n\nGenerator (canonical source): https://github.com/jacobjennings/CadQuarry\ngenerator version v0.6.0, config configs/default.toml\nCode license: Apache-2.0 \u00b7 Data license: CC0-1.0\n\nEach corpus in this dataset is a convenience artifact: the\u2026 See the full description on the dataset page: https://huggingface.co/datasets/jacobjennings/cadquarry.",
+  "downloads": 1071,
+  "likes": 1,
+  "cardData": {
+    "license": "cc0-1.0",
+    "pretty_name": "CadQuarry",
+    "language": [
+      "code"
+    ],
+    "tags": [
+      "cad",
+      "cadquery",
+      "procedural-generation",
+      "parametric",
+      "3d",
+      "synthetic"
+    ],
+    "size_categories": [
+      "100K<n<1M"
+    ],
+    "configs": [
+      {
+        "config_name": "1k",
+        "data_files": "1k/corpus.jsonl",
+        "default": true
+      },
+      {
+        "config_name": "1k-renders",
+        "data_files": "1k/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-stl",
+        "data_files": "1k/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-step",
+        "data_files": "1k/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-geo",
+        "data_files": "1k/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-full",
+        "data_files": "1k/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-t0-2",
+        "data_files": "1k/tier0-2/corpus.jsonl"
+      },
+      {
+        "config_name": "1k-t0-2-renders",
+        "data_files": "1k/tier0-2/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-t0-2-stl",
+        "data_files": "1k/tier0-2/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-t0-2-step",
+        "data_files": "1k/tier0-2/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-t0-2-geo",
+        "data_files": "1k/tier0-2/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "1k-t0-2-full",
+        "data_files": "1k/tier0-2/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k",
+        "data_files": "2k/corpus.jsonl"
+      },
+      {
+        "config_name": "2k-renders",
+        "data_files": "2k/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-stl",
+        "data_files": "2k/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-step",
+        "data_files": "2k/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-geo",
+        "data_files": "2k/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-full",
+        "data_files": "2k/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-t0-2",
+        "data_files": "2k/tier0-2/corpus.jsonl"
+      },
+      {
+        "config_name": "2k-t0-2-renders",
+        "data_files": "2k/tier0-2/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-t0-2-stl",
+        "data_files": "2k/tier0-2/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-t0-2-step",
+        "data_files": "2k/tier0-2/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-t0-2-geo",
+        "data_files": "2k/tier0-2/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "2k-t0-2-full",
+        "data_files": "2k/tier0-2/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k",
+        "data_files": "5k/corpus.jsonl"
+      },
+      {
+        "config_name": "5k-renders",
+        "data_files": "5k/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-stl",
+        "data_files": "5k/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-step",
+        "data_files": "5k/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-geo",
+        "data_files": "5k/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-full",
+        "data_files": "5k/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-t0-2",
+        "data_files": "5k/tier0-2/corpus.jsonl"
+      },
+      {
+        "config_name": "5k-t0-2-renders",
+        "data_files": "5k/tier0-2/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-t0-2-stl",
+        "data_files": "5k/tier0-2/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-t0-2-step",
+        "data_files": "5k/tier0-2/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-t0-2-geo",
+        "data_files": "5k/tier0-2/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "5k-t0-2-full",
+        "data_files": "5k/tier0-2/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k",
+        "data_files": "10k/corpus.jsonl"
+      },
+      {
+        "config_name": "10k-renders",
+        "data_files": "10k/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-stl",
+        "data_files": "10k/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-step",
+        "data_files": "10k/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-geo",
+        "data_files": "10k/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-full",
+        "data_files": "10k/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-t0-2",
+        "data_files": "10k/tier0-2/corpus.jsonl"
+      },
+      {
+        "config_name": "10k-t0-2-renders",
+        "data_files": "10k/tier0-2/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-t0-2-stl",
+        "data_files": "10k/tier0-2/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-t0-2-step",
+        "data_files": "10k/tier0-2/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-t0-2-geo",
+        "data_files": "10k/tier0-2/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "10k-t0-2-full",
+        "data_files": "10k/tier0-2/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k",
+        "data_files": "20k/corpus.jsonl"
+      },
+      {
+        "config_name": "20k-renders",
+        "data_files": "20k/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-stl",
+        "data_files": "20k/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-step",
+        "data_files": "20k/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-geo",
+        "data_files": "20k/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-full",
+        "data_files": "20k/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-t0-2",
+        "data_files": "20k/tier0-2/corpus.jsonl"
+      },
+      {
+        "config_name": "20k-t0-2-renders",
+        "data_files": "20k/tier0-2/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-t0-2-stl",
+        "data_files": "20k/tier0-2/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-t0-2-step",
+        "data_files": "20k/tier0-2/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-t0-2-geo",
+        "data_files": "20k/tier0-2/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "20k-t0-2-full",
+        "data_files": "20k/tier0-2/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k",
+        "data_files": "50k/corpus.jsonl"
+      },
+      {
+        "config_name": "50k-renders",
+        "data_files": "50k/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-stl",
+        "data_files": "50k/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-step",
+        "data_files": "50k/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-geo",
+        "data_files": "50k/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-full",
+        "data_files": "50k/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-t0-2",
+        "data_files": "50k/tier0-2/corpus.jsonl"
+      },
+      {
+        "config_name": "50k-t0-2-renders",
+        "data_files": "50k/tier0-2/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-t0-2-stl",
+        "data_files": "50k/tier0-2/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-t0-2-step",
+        "data_files": "50k/tier0-2/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-t0-2-geo",
+        "data_files": "50k/tier0-2/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "50k-t0-2-full",
+        "data_files": "50k/tier0-2/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k",
+        "data_files": "100k/corpus.jsonl"
+      },
+      {
+        "config_name": "100k-renders",
+        "data_files": "100k/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-stl",
+        "data_files": "100k/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-step",
+        "data_files": "100k/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-geo",
+        "data_files": "100k/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-full",
+        "data_files": "100k/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-t0-2",
+        "data_files": "100k/tier0-2/corpus.jsonl"
+      },
+      {
+        "config_name": "100k-t0-2-renders",
+        "data_files": "100k/tier0-2/corpus-renders.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-t0-2-stl",
+        "data_files": "100k/tier0-2/corpus-stl.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-t0-2-step",
+        "data_files": "100k/tier0-2/corpus-step.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-t0-2-geo",
+        "data_files": "100k/tier0-2/corpus-geo.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          }
+        ]
+      },
+      {
+        "config_name": "100k-t0-2-full",
+        "data_files": "100k/tier0-2/corpus-full.parquet",
+        "features": [
+          {
+            "name": "part_id",
+            "dtype": "string"
+          },
+          {
+            "name": "family",
+            "dtype": "string"
+          },
+          {
+            "name": "tier",
+            "dtype": "int32"
+          },
+          {
+            "name": "seed",
+            "dtype": "int64"
+          },
+          {
+            "name": "symmetry",
+            "dtype": "string"
+          },
+          {
+            "name": "op_count",
+            "dtype": "int32"
+          },
+          {
+            "name": "ir_hash",
+            "dtype": "string"
+          },
+          {
+            "name": "generator_version",
+            "dtype": "string"
+          },
+          {
+            "name": "license",
+            "dtype": "string"
+          },
+          {
+            "name": "geometry_signature",
+            "dtype": "string"
+          },
+          {
+            "name": "dimensions",
+            "dtype": "string"
+          },
+          {
+            "name": "source",
+            "dtype": "string"
+          },
+          {
+            "name": "params",
+            "dtype": "string"
+          },
+          {
+            "name": "render_front",
+            "dtype": "image"
+          },
+          {
+            "name": "render_top",
+            "dtype": "image"
+          },
+          {
+            "name": "render_right",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fr",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_fl",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_br",
+            "dtype": "image"
+          },
+          {
+            "name": "render_iso_bl",
+            "dtype": "image"
+          },
+          {
+            "name": "stl_bytes",
+            "dtype": "binary"
+          },
+          {
+            "name": "step_bytes",
+            "dtype": "binary"
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "100k/corpus-full.parquet"
+    },
+    {
+      "rfilename": "100k/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "100k/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "100k/corpus-step.parquet"
+    },
+    {
+      "rfilename": "100k/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "100k/corpus.jsonl"
+    },
+    {
+      "rfilename": "100k/tier0-2/corpus-full.parquet"
+    },
+    {
+      "rfilename": "100k/tier0-2/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "100k/tier0-2/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "100k/tier0-2/corpus-step.parquet"
+    },
+    {
+      "rfilename": "100k/tier0-2/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "100k/tier0-2/corpus.jsonl"
+    },
+    {
+      "rfilename": "10k/corpus-full.parquet"
+    },
+    {
+      "rfilename": "10k/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "10k/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "10k/corpus-step.parquet"
+    },
+    {
+      "rfilename": "10k/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "10k/corpus.jsonl"
+    },
+    {
+      "rfilename": "10k/tier0-2/corpus-full.parquet"
+    },
+    {
+      "rfilename": "10k/tier0-2/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "10k/tier0-2/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "10k/tier0-2/corpus-step.parquet"
+    },
+    {
+      "rfilename": "10k/tier0-2/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "10k/tier0-2/corpus.jsonl"
+    },
+    {
+      "rfilename": "1k/corpus-full.parquet"
+    },
+    {
+      "rfilename": "1k/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "1k/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "1k/corpus-step.parquet"
+    },
+    {
+      "rfilename": "1k/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "1k/corpus.jsonl"
+    },
+    {
+      "rfilename": "1k/tier0-2/corpus-full.parquet"
+    },
+    {
+      "rfilename": "1k/tier0-2/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "1k/tier0-2/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "1k/tier0-2/corpus-step.parquet"
+    },
+    {
+      "rfilename": "1k/tier0-2/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "1k/tier0-2/corpus.jsonl"
+    },
+    {
+      "rfilename": "20k/corpus-full.parquet"
+    },
+    {
+      "rfilename": "20k/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "20k/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "20k/corpus-step.parquet"
+    },
+    {
+      "rfilename": "20k/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "20k/corpus.jsonl"
+    },
+    {
+      "rfilename": "20k/tier0-2/corpus-full.parquet"
+    },
+    {
+      "rfilename": "20k/tier0-2/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "20k/tier0-2/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "20k/tier0-2/corpus-step.parquet"
+    },
+    {
+      "rfilename": "20k/tier0-2/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "20k/tier0-2/corpus.jsonl"
+    },
+    {
+      "rfilename": "2k/corpus-full.parquet"
+    },
+    {
+      "rfilename": "2k/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "2k/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "2k/corpus-step.parquet"
+    },
+    {
+      "rfilename": "2k/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "2k/corpus.jsonl"
+    },
+    {
+      "rfilename": "2k/tier0-2/corpus-full.parquet"
+    },
+    {
+      "rfilename": "2k/tier0-2/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "2k/tier0-2/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "2k/tier0-2/corpus-step.parquet"
+    },
+    {
+      "rfilename": "2k/tier0-2/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "2k/tier0-2/corpus.jsonl"
+    },
+    {
+      "rfilename": "50k/corpus-full.parquet"
+    },
+    {
+      "rfilename": "50k/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "50k/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "50k/corpus-step.parquet"
+    },
+    {
+      "rfilename": "50k/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "50k/corpus.jsonl"
+    },
+    {
+      "rfilename": "50k/tier0-2/corpus-full.parquet"
+    },
+    {
+      "rfilename": "50k/tier0-2/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "50k/tier0-2/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "50k/tier0-2/corpus-step.parquet"
+    },
+    {
+      "rfilename": "50k/tier0-2/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "50k/tier0-2/corpus.jsonl"
+    },
+    {
+      "rfilename": "5k/corpus-full.parquet"
+    },
+    {
+      "rfilename": "5k/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "5k/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "5k/corpus-step.parquet"
+    },
+    {
+      "rfilename": "5k/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "5k/corpus.jsonl"
+    },
+    {
+      "rfilename": "5k/tier0-2/corpus-full.parquet"
+    },
+    {
+      "rfilename": "5k/tier0-2/corpus-geo.parquet"
+    },
+    {
+      "rfilename": "5k/tier0-2/corpus-renders.parquet"
+    },
+    {
+      "rfilename": "5k/tier0-2/corpus-step.parquet"
+    },
+    {
+      "rfilename": "5k/tier0-2/corpus-stl.parquet"
+    },
+    {
+      "rfilename": "5k/tier0-2/corpus.jsonl"
+    },
+    {
+      "rfilename": "README.md"
+    }
+  ],
+  "createdAt": "2026-06-04T02:48:19.000Z",
+  "usedStorage": 3135369229981
+}

@@ -1,0 +1,105 @@
+........................................................................ [  7%]
+........................................................................ [ 15%]
+.................................................F................FF.... [ 23%]
+........................................................................ [ 30%]
+........................................................................ [ 38%]
+........................................................................ [ 46%]
+........................................................................ [ 53%]
+........................................................................ [ 61%]
+........................................................................ [ 69%]
+........................................................................ [ 77%]
+........................................................................ [ 84%]
+........................................................................ [ 92%]
+......................................................................   [100%]
+================================== FAILURES ===================================
+__ test_am_apply_changes_real_review_and_tracks_override_and_disabled_build ___
+
+library = <dfm.conditions.ConditionLibrary object at 0x000001C5645D5A90>
+
+    def test_am_apply_changes_real_review_and_tracks_override_and_disabled_build(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        _apply(app, "am-wall")
+        assert app.number_input(key="wall_limit_MEX").value == 5.
+        assert not app.checkbox(key="use_build_MEX").value
+        assert [app.number_input(key=f"build_{axis}_MEX").value for axis in "XYZ"] == [120., 130., 140.]
+        report = _submit(app)
+        evidence = report["profile"]["condition_evidence"]
+        assert evidence["profile_id"] == "am-wall"
+        assert evidence["fields"]["build_volume_mm"]["status"] == "disabled"
+        assert evidence["fields"]["minimum_wall_mm"]["status"] == "source_value"
+        wall = report["details"]["wall"]["measurements"]
+        assert wall["minimum_mm"] == pytest.approx(4.)
+        assert wall["minimum_wall_mm"] == 5.
+        assert wall["below_limit_face_indices"]
+        app.number_input(key="wall_limit_MEX").set_value(3.)
+        report = _submit(app)
+        field = report["profile"]["condition_evidence"]["fields"]["minimum_wall_mm"]
+        assert field == dict(expected=5., effective=3., overridden=True, status="user_override")
+        assert not report["details"]["wall"]["measurements"]["below_limit_face_indices"]
+        _apply(app, "am-machine")
+        assert app.number_input(key="wall_limit_MEX").value is None
+        assert app.number_input(key="hole_limit_MEX").value is None
+        assert not app.checkbox(key="use_build_MEX").value
+        app.number_input(key="wall_limit_MEX").set_value(1.)
+        report = _submit(app)
+        evidence = report["profile"]["condition_evidence"]
+        assert "minimum_wall_mm" not in evidence["fields"]
+        assert evidence["user_inputs"]["minimum_wall_mm"]["effective"] == 1.
+>       assert evidence["user_inputs"]["minimum_wall_mm"]["status"] == "user_input"
+E       AssertionError: assert 'user_input_o...ation_default' == 'user_input'
+E         
+E         - user_input
+E         + user_input_or_exploration_default
+
+tests_v3\test_conditions_ui.py:106: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-28 16:33:33.766 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+____ test_rejected_input_is_retained_and_existing_audit_is_not_overwritten ____
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-74/test_rejected_input_is_retaine0')
+
+    def test_rejected_input_is_retained_and_existing_audit_is_not_overwritten(tmp_path):
+        source = tmp_path / "inputs"
+        source.mkdir()
+        bad = source / "invalid.stp"
+        bad.write_bytes(b"not a STEP exchange file")
+        before = hashlib.sha256(bad.read_bytes()).hexdigest()
+        output = tmp_path / "audit"
+        result = run_audit(source, output)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r
+E         '
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe', 'C:\\Users\...rr=b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r\n').returncode
+
+tests_v3\test_corpus_audit.py:28: AssertionError
+_______ test_four_processes_get_sections_without_build_space_rejection ________
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-74/test_four_processes_get_sectio0')
+
+    def test_four_processes_get_sections_without_build_space_rejection(tmp_path):
+        source = tmp_path / "inputs"
+        source.mkdir()
+        example = next((ROOT / "examples" / "cad").glob("01*"))
+        (source / "box.step").write_bytes(example.read_bytes())
+        output = tmp_path / "audit"
+        result = run_audit(source, output)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r
+E         '
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe', 'C:\\Users\...rr=b'Engine changed while taking the audit snapshot; preserve this attempt and retry in a fresh output directory.\r\n').returncode
+
+tests_v3\test_corpus_audit.py:50: AssertionError
+============================== warnings summary ===============================
+tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap
+  C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\trimesh\triangles.py:302: RuntimeWarning: invalid value encountered in divide
+    center_mass = integrated[1:4] / volume
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\conditions-2026-09-28\regression-01.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_conditions_ui.py::test_am_apply_changes_real_review_and_tracks_override_and_disabled_build
+FAILED tests_v3/test_corpus_audit.py::test_rejected_input_is_retained_and_existing_audit_is_not_overwritten
+FAILED tests_v3/test_corpus_audit.py::test_four_processes_get_sections_without_build_space_rejection
+3 failed, 931 passed, 1 warning in 483.55s (0:08:03)

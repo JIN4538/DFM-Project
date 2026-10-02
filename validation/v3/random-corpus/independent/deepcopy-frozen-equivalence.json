@@ -1,0 +1,95 @@
+{
+  "frozen_worker_sha256": "36e5b875ba44b0b83b65cbe51c55de33b4b9a36b7dcd8ccec3d67766993801fa",
+  "current_worker_sha256": "2565015727d9cf5b66f77b4418a78c0a2b2cad65957d05468f48fb995e934919",
+  "comparison": "Frozen final-01 copyGeom=False vs current copyGeom=True; copyMesh=False both; input .05mm; exact array and entire CAD metadata equality",
+  "cases": [
+    {
+      "case": "assembly",
+      "arrays": [
+        {
+          "array": "vertices",
+          "shape": [
+            79192,
+            3
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "array": "faces",
+          "shape": [
+            134450,
+            3
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "array": "face_ids",
+          "shape": [
+            134450
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "array": "body_ids",
+          "shape": [
+            134450
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ],
+      "json_metadata_exactly_equal": true,
+      "npz_sha256_frozen": "c75d41305bc013fa6506cc6768ebd36063bc197a2249fe1d83a43e5391ea7e36",
+      "npz_sha256_current": "c75d41305bc013fa6506cc6768ebd36063bc197a2249fe1d83a43e5391ea7e36",
+      "json_sha256_frozen": "4c5bb8ac74b7fa3adc73ff0c7d0c13b49eb549d3d05fcfe9c56f947fa5b3b9b9",
+      "json_sha256_current": "4c5bb8ac74b7fa3adc73ff0c7d0c13b49eb549d3d05fcfe9c56f947fa5b3b9b9"
+    },
+    {
+      "case": "pump",
+      "arrays": [
+        {
+          "array": "vertices",
+          "shape": [
+            79197,
+            3
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "array": "faces",
+          "shape": [
+            134928,
+            3
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "array": "face_ids",
+          "shape": [
+            134928
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "array": "body_ids",
+          "shape": [
+            134928
+          ],
+          "exactly_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ],
+      "json_metadata_exactly_equal": true,
+      "npz_sha256_frozen": "1952b0d261fa092673b20ff20298b0c84c773c4eea5a200efe6b685252a17e14",
+      "npz_sha256_current": "1952b0d261fa092673b20ff20298b0c84c773c4eea5a200efe6b685252a17e14",
+      "json_sha256_frozen": "9f1e4f427770cba0a0d2d7f9f2bfd5bad8212647b641008060f06a7f11c60aee",
+      "json_sha256_current": "9f1e4f427770cba0a0d2d7f9f2bfd5bad8212647b641008060f06a7f11c60aee"
+    }
+  ]
+}

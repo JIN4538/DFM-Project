@@ -1,0 +1,200 @@
+{
+  "split": "test",
+  "records": 9241,
+  "pairs": 3143,
+  "pair_accuracy": 0.9268215081132676,
+  "merge_threshold": 0.9,
+  "class_thresholds": {
+    "1": 0.9999,
+    "2": 0.9999,
+    "4": 0.9999,
+    "7": 0.999
+  },
+  "proposed": {
+    "1": {
+      "tp": 2659,
+      "fp": 36,
+      "ground": 3106,
+      "exact": 2655,
+      "merged": 149,
+      "iou_sum": 2657.666666666666,
+      "precision": 0.9866419294990724,
+      "recall": 0.8560849967804249,
+      "exact_recall": 0.8547971667739859
+    },
+    "2": {
+      "tp": 1555,
+      "fp": 18,
+      "ground": 2927,
+      "exact": 1551,
+      "merged": 49,
+      "iou_sum": 1553.492857142857,
+      "precision": 0.9885568976478067,
+      "recall": 0.5312606764605398,
+      "exact_recall": 0.5298940895114451
+    },
+    "4": {
+      "tp": 2306,
+      "fp": 38,
+      "ground": 3112,
+      "exact": 2285,
+      "merged": 129,
+      "iou_sum": 2298.623465749936,
+      "precision": 0.9837883959044369,
+      "recall": 0.7410025706940874,
+      "exact_recall": 0.734254498714653
+    },
+    "7": {
+      "tp": 467,
+      "fp": 7,
+      "ground": 601,
+      "exact": 466,
+      "merged": 12,
+      "iou_sum": 466.66666666666663,
+      "precision": 0.9852320675105485,
+      "recall": 0.7770382695507487,
+      "exact_recall": 0.7753743760399334
+    }
+  },
+  "no_merge": {
+    "1": {
+      "tp": 2513,
+      "fp": 368,
+      "ground": 3106,
+      "exact": 2509,
+      "merged": 0,
+      "iou_sum": 2511.6666666666665,
+      "precision": 0.8722665741062131,
+      "recall": 0.809079201545396,
+      "exact_recall": 0.8077913715389569
+    },
+    "2": {
+      "tp": 1508,
+      "fp": 162,
+      "ground": 2927,
+      "exact": 1502,
+      "merged": 0,
+      "iou_sum": 1505.6357142857144,
+      "precision": 0.9029940119760479,
+      "recall": 0.5152032798086779,
+      "exact_recall": 0.5131533993850359
+    },
+    "4": {
+      "tp": 2182,
+      "fp": 345,
+      "ground": 3112,
+      "exact": 2158,
+      "merged": 0,
+      "iou_sum": 2173.443703845174,
+      "precision": 0.8634744756628413,
+      "recall": 0.7011568123393316,
+      "exact_recall": 0.6934447300771208
+    },
+    "7": {
+      "tp": 455,
+      "fp": 40,
+      "ground": 601,
+      "exact": 454,
+      "merged": 0,
+      "iou_sum": 454.66666666666663,
+      "precision": 0.9191919191919192,
+      "recall": 0.757071547420965,
+      "exact_recall": 0.7554076539101497
+    }
+  },
+  "notes": "Four classes are disabled in existing runtime; no-merge is a counterfactual with new display thresholds, not the old runtime.",
+  "by_scope": {
+    "planar": {
+      "1": {
+        "tp": 0,
+        "fp": 0,
+        "ground": 0,
+        "exact": 0,
+        "merged": 0,
+        "iou_sum": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "exact_recall": 0.0
+      },
+      "2": {
+        "tp": 201,
+        "fp": 0,
+        "ground": 303,
+        "exact": 201,
+        "merged": 10,
+        "iou_sum": 201.0,
+        "precision": 1.0,
+        "recall": 0.6633663366336634,
+        "exact_recall": 0.6633663366336634
+      },
+      "4": {
+        "tp": 301,
+        "fp": 1,
+        "ground": 395,
+        "exact": 300,
+        "merged": 14,
+        "iou_sum": 300.8333333333333,
+        "precision": 0.9966887417218543,
+        "recall": 0.7620253164556962,
+        "exact_recall": 0.759493670886076
+      },
+      "7": {
+        "tp": 0,
+        "fp": 0,
+        "ground": 0,
+        "exact": 0,
+        "merged": 0,
+        "iou_sum": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "exact_recall": 0.0
+      }
+    },
+    "curved": {
+      "1": {
+        "tp": 2659,
+        "fp": 36,
+        "ground": 3106,
+        "exact": 2655,
+        "merged": 149,
+        "iou_sum": 2657.666666666666,
+        "precision": 0.9866419294990724,
+        "recall": 0.8560849967804249,
+        "exact_recall": 0.8547971667739859
+      },
+      "2": {
+        "tp": 1354,
+        "fp": 18,
+        "ground": 2624,
+        "exact": 1350,
+        "merged": 39,
+        "iou_sum": 1352.492857142857,
+        "precision": 0.9868804664723032,
+        "recall": 0.5160060975609756,
+        "exact_recall": 0.5144817073170732
+      },
+      "4": {
+        "tp": 2005,
+        "fp": 37,
+        "ground": 2717,
+        "exact": 1985,
+        "merged": 115,
+        "iou_sum": 1997.7901324166028,
+        "precision": 0.9818805093046034,
+        "recall": 0.7379462642620538,
+        "exact_recall": 0.7305852042694148
+      },
+      "7": {
+        "tp": 467,
+        "fp": 7,
+        "ground": 601,
+        "exact": 466,
+        "merged": 12,
+        "iou_sum": 466.66666666666663,
+        "precision": 0.9852320675105485,
+        "recall": 0.7770382695507487,
+        "exact_recall": 0.7753743760399334
+      }
+    }
+  }
+}

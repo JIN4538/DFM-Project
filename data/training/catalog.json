@@ -1,0 +1,60 @@
+{
+  "schema": "dfm-external-training-catalog-1",
+  "date": "2026-09-30",
+  "db_root": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\external-training-2026-09-30",
+  "raw_total": 87981,
+  "datasets": [
+    {
+      "id": "MFCAD",
+      "raw": 15488,
+      "verified_graphs": 15488,
+      "training": "trained",
+      "database": "training.sqlite",
+      "source": "https://github.com/hducg/MFCAD"
+    },
+    {
+      "id": "Thingi10K",
+      "raw": 9998,
+      "eligible_meshes": 1051,
+      "training": "trained geometric targets",
+      "database": "thingi.sqlite",
+      "source": "https://github.com/Thingi10K/Thingi10K"
+    },
+    {
+      "id": "MFInstSeg",
+      "raw": 62495,
+      "training": "quarantined; ordinal mapping unverified",
+      "database": "mfinstseg-complete.sqlite",
+      "source": "https://github.com/whjdark/AAGNet"
+    },
+    {
+      "id": "MFCAD++",
+      "raw": 0,
+      "training": "blocked HTTP403",
+      "source": "https://pure.qub.ac.uk/en/datasets/mfcad-dataset-dataset-for-paper-hierarchical-cadnet-learning-from/"
+    },
+    {
+      "id": "CADSynth",
+      "raw": 0,
+      "training": "public download unavailable; API403",
+      "source": "https://www.scidb.cn/en/detail?dataSetId=931c088fd44f4d3e82891a5180f10d90"
+    }
+  ],
+  "models": [
+    {
+      "file": "data/models/external_feature_gnn_v2.json",
+      "sha256": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+      "bytes": 386711
+    },
+    {
+      "file": "data/models/neural_orientation_external_v2.json",
+      "sha256": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+      "bytes": 442899
+    },
+    {
+      "file": "data/models/plan_ranker_external_v2.json",
+      "sha256": "59d4ca236b7b11b7a5ced54987ba3e069564d54c734586a177260516d724aa53",
+      "bytes": 619058
+    }
+  ]
+}

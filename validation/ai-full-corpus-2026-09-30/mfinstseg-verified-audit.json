@@ -1,0 +1,35 @@
+{
+  "audited": 62453,
+  "accepted": 62395,
+  "counts": [
+    [
+      null,
+      58
+    ],
+    [
+      "test",
+      9241
+    ],
+    [
+      "train",
+      43730
+    ],
+    [
+      "val",
+      9424
+    ]
+  ],
+  "skipped_source_quarantine_or_missing": 42,
+  "complete_stream": true,
+  "failures": [
+    [
+      "Surface type order differs",
+      58
+    ]
+  ],
+  "ordinal_policy": "Every admitted CAD matches ordered analytic surface types, centroids, areas and all directed adjacency edges",
+  "targets": "Author semantic, instance membership and bottom-face labels; no optimal design or manufacturing success labels",
+  "split_policy": "SHA256 non-stock semantic label multiset; all members of a feature-multiset family share one split",
+  "graph_source_sha256": "444855e373c96b53e22b44bfe6a9c1664764f02009851a61cc0ebcb2f7850e91",
+  "seconds": 1386.4850000000006
+}

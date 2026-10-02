@@ -1,0 +1,132 @@
+{
+  "id": "platonic_solids_with_inscriptions_0008491",
+  "dataset": "PBF-orientation",
+  "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"|o|o|o|o|\", \"embossing_distance\": -8, \"num_faces\": 20, \"unit_circle_radius\": 96}",
+  "split": "test",
+  "process": "PBF_METAL",
+  "priority": "balanced",
+  "candidate_oracle": {
+    "legacy": 0.13654931368264206,
+    "blind": 0.13654931368264206,
+    "geometric": 0.13654931368264206,
+    "height_neural": 0.13654931368264206,
+    "uncertainty05": 0.13654931368264206
+  },
+  "actual_product": {
+    "legacy": 0.13654931368264206,
+    "blind": 0.13654931368264206,
+    "geometric": 0.13654931368264206,
+    "height_neural": 0.13654931368264206,
+    "uncertainty05": 0.13654931368264206
+  },
+  "common_reference_product": {
+    "legacy": 0.13654931368264206,
+    "blind": 0.13654931368264206,
+    "geometric": 0.13654931368264206,
+    "height_neural": 0.13654931368264206,
+    "uncertainty05": 0.13654931368264206
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "selected_name": "+X-Y",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.13654931368264206,
+      "fixed_selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "own_reference_score": 0.13654931368264206,
+      "fixed_reference_score": 0.13654931368264206,
+      "oracle_score": 0.13654931368264206,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "selected_name": "+X-Y",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.13654931368264206,
+      "fixed_selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "own_reference_score": 0.13654931368264206,
+      "fixed_reference_score": 0.13654931368264206,
+      "oracle_score": 0.13654931368264206,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "selected_name": "+X-Y",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.13654931368264206,
+      "fixed_selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "own_reference_score": 0.13654931368264206,
+      "fixed_reference_score": 0.13654931368264206,
+      "oracle_score": 0.13654931368264206,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "selected_name": "+X-Y",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.13654931368264206,
+      "fixed_selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "own_reference_score": 0.13654931368264206,
+      "fixed_reference_score": 0.13654931368264206,
+      "oracle_score": 0.13654931368264206,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "selected_name": "+X-Y",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.13654931368264206,
+      "fixed_selected_direction": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "own_reference_score": 0.13654931368264206,
+      "fixed_reference_score": 0.13654931368264206,
+      "oracle_score": 0.13654931368264206,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "4ae73373b95ad191593cff3619f425a036ff6d48590e1d2c21889e790c139d95"
+}

@@ -1,0 +1,57 @@
+{
+  "files": 26,
+  "file_status": {
+    "reviewed": 21,
+    "input_rejected": 5
+  },
+  "cases": 200,
+  "review_status": {
+    "geometry_review": 172,
+    "partial_geometry": 28
+  },
+  "case_status": {
+    "reviewed": 200
+  },
+  "wall_status": {
+    "measured": 148,
+    "unknown": 48,
+    "partial": 4
+  },
+  "MEX_layer_status": {
+    "complete": 32,
+    "unknown": 9,
+    "unavailable": 8,
+    "partial": 1
+  },
+  "nonMEX_layer_status": {
+    "not_applicable": 150
+  },
+  "independent_errors": 0,
+  "original_unchanged": true,
+  "max_CAD_mesh_volume_relative_error": 0.0009322414720532294,
+  "failed_files": [
+    {
+      "file": "12.1 Bracket.stp",
+      "error": "STEP 입력 검토: 닫힌 솔리드가 없는 STEP입니다. 곡면/선만 있는 파일은 지원하지 않습니다."
+    },
+    {
+      "file": "3.1 Gear_Set_2D.stp",
+      "error": "STEP 입력 검토: 닫힌 솔리드가 없는 STEP입니다. 곡면/선만 있는 파일은 지원하지 않습니다."
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "error": "STEP 입력 검토: CAD 면 124의 메시가 없습니다. 누락된 면을 제외하지 않습니다."
+    },
+    {
+      "file": "Raspberry Pi 4 Model B.step",
+      "error": "STEP 입력 검토: CAD 솔리드 100개 / 면 20,000개 한도를 초과했습니다."
+    },
+    {
+      "file": "the-over-engineered-backpack-wall-mount-v2.3mf",
+      "error": "STEP(.step/.stp) 또는 STL(.stl) 파일을 선택하세요."
+    }
+  ],
+  "baseline_commit": "7c5444a81b277e7b8af9bf9cba2408eab9024edc",
+  "baseline_code_sha256": "da5022ec34e2560243a3dcec65a56a1d74f8aa82056519dfdcdc7e105e1310d9",
+  "scope": "Historical baseline before 3MF/surface-only STEP/cross-section enhancements; source corpus is local and not redistributed."
+}

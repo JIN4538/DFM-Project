@@ -1,0 +1,404 @@
+{
+  "schema": "cad-audit-interpretation/1",
+  "source_run": "am-run-003",
+  "case_count": 188,
+  "comparison_counts": {
+    "equal": 107,
+    "better": 17,
+    "unavailable": 64
+  },
+  "lower_cost_selection_source": {
+    "existing_baseline_direction": 15,
+    "deep_neural_surrogate": 2
+  },
+  "new_deep_selection_unique_parts": 1,
+  "raw_queried_candidates": 1860,
+  "retained_candidates": 1858,
+  "screened_candidates": 2,
+  "incremental_extension_latency_all": {
+    "count": 188,
+    "mean_s": 0.12085028351064833,
+    "median_s": 0.12627645000020493,
+    "p95_s": 0.2562246700000742,
+    "max_s": 0.37076470000010886
+  },
+  "incremental_extension_latency_completed_searches": {
+    "count": 155,
+    "mean_s": 0.14231461677420099,
+    "median_s": 0.13655680000010761,
+    "p95_s": 0.2607151899998826,
+    "max_s": 0.37076470000010886
+  },
+  "input_roles": {
+    "single_solid": 33,
+    "assembly": 12,
+    "surface": 2
+  },
+  "skips": {
+    "neural_face_budget": 24,
+    "unreliable_normal_direction": 9
+  },
+  "lower_cost_cases": [
+    {
+      "id": "cad_04_horizontal_hole",
+      "process": "MEX",
+      "path": "examples\\cad\\04_horizontal_hole.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4299192892937567,
+        "enhanced_cost": 0.13537524256846215,
+        "delta": -0.29454404672529455,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -10.0,
+          "overhang_projected_area_sum_mm2": 122.43109279876528,
+          "contact_triangle_area_mm2": 228.24797537566837
+        }
+      }
+    },
+    {
+      "id": "cad_04_horizontal_hole",
+      "process": "VPP",
+      "path": "examples\\cad\\04_horizontal_hole.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4163703325685086,
+        "enhanced_cost": 0.14383619522899105,
+        "delta": -0.27253413733951753,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -10.0,
+          "overhang_projected_area_sum_mm2": 122.43109279876528,
+          "contact_triangle_area_mm2": 228.24797537566837
+        }
+      }
+    },
+    {
+      "id": "cad_04_horizontal_hole",
+      "process": "PBF_METAL",
+      "path": "examples\\cad\\04_horizontal_hole.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4163703325685086,
+        "enhanced_cost": 0.14383619522899105,
+        "delta": -0.27253413733951753,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -10.0,
+          "overhang_projected_area_sum_mm2": 122.43109279876528,
+          "contact_triangle_area_mm2": 228.24797537566837
+        }
+      }
+    },
+    {
+      "id": "cad_05_sealed_cavity",
+      "process": "VPP",
+      "path": "examples\\cad\\05_sealed_cavity.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4809523114746429,
+        "enhanced_cost": 0.39929658230751586,
+        "delta": -0.08165572916712704,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -8.284271247461898,
+          "overhang_projected_area_sum_mm2": 256.0,
+          "contact_triangle_area_mm2": 400.0
+        }
+      }
+    },
+    {
+      "id": "cad_05_sealed_cavity",
+      "process": "PBF_METAL",
+      "path": "examples\\cad\\05_sealed_cavity.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4809523114746429,
+        "enhanced_cost": 0.39929658230751586,
+        "delta": -0.08165572916712704,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -8.284271247461898,
+          "overhang_projected_area_sum_mm2": 256.0,
+          "contact_triangle_area_mm2": 400.0
+        }
+      }
+    },
+    {
+      "id": "cad_12_sphere",
+      "process": "MEX",
+      "path": "examples\\cad\\12_sphere.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4281173409306196,
+        "enhanced_cost": 0.3864934161764244,
+        "delta": -0.041623924754195185,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -0.01370465245426189,
+          "overhang_projected_area_sum_mm2": 0.8377257237101219,
+          "contact_triangle_area_mm2": 0.0
+        }
+      }
+    },
+    {
+      "id": "cad_12_sphere",
+      "process": "VPP",
+      "path": "examples\\cad\\12_sphere.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.46717601139588405,
+        "enhanced_cost": 0.4106492546874566,
+        "delta": -0.05652675670842744,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -0.01370465245426189,
+          "overhang_projected_area_sum_mm2": 0.8377257237101219,
+          "contact_triangle_area_mm2": 0.0
+        }
+      }
+    },
+    {
+      "id": "cad_12_sphere",
+      "process": "PBF_METAL",
+      "path": "examples\\cad\\12_sphere.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.46717601139588405,
+        "enhanced_cost": 0.4106492546874566,
+        "delta": -0.05652675670842744,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -0.01370465245426189,
+          "overhang_projected_area_sum_mm2": 0.8377257237101219,
+          "contact_triangle_area_mm2": 0.0
+        }
+      }
+    },
+    {
+      "id": "machining_05_side_hole",
+      "process": "MEX",
+      "path": "examples\\machining\\05_side_hole.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.6385330641815407,
+        "enhanced_cost": 0.07177350707259257,
+        "delta": -0.5667595571089481,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -25.0,
+          "overhang_projected_area_sum_mm2": 108.82763804334694,
+          "contact_triangle_area_mm2": 762.5546557225193
+        }
+      }
+    },
+    {
+      "id": "machining_05_side_hole",
+      "process": "VPP",
+      "path": "examples\\machining\\05_side_hole.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.5838198488387348,
+        "enhanced_cost": 0.07625935126462961,
+        "delta": -0.5075604975741053,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -23.890872965260108,
+          "overhang_projected_area_sum_mm2": 108.82763804334694,
+          "contact_triangle_area_mm2": 1200.0
+        }
+      }
+    },
+    {
+      "id": "machining_05_side_hole",
+      "process": "PBF_METAL",
+      "path": "examples\\machining\\05_side_hole.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.5838198488387348,
+        "enhanced_cost": 0.07625935126462961,
+        "delta": -0.5075604975741053,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -23.890872965260108,
+          "overhang_projected_area_sum_mm2": 108.82763804334694,
+          "contact_triangle_area_mm2": 1200.0
+        }
+      }
+    },
+    {
+      "id": "machining_07_sealed_cavity",
+      "process": "MEX",
+      "path": "examples\\machining\\07_sealed_cavity.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.47259359884611796,
+        "enhanced_cost": 0.35363502756921805,
+        "delta": -0.1189585712768999,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -15.0,
+          "overhang_projected_area_sum_mm2": 80.0,
+          "contact_triangle_area_mm2": 600.0
+        }
+      }
+    },
+    {
+      "id": "machining_07_sealed_cavity",
+      "process": "VPP",
+      "path": "examples\\machining\\07_sealed_cavity.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4110245831716062,
+        "enhanced_cost": 0.37573721679229416,
+        "delta": -0.03528736637931201,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -16.81980515339464,
+          "overhang_projected_area_sum_mm2": 240.0,
+          "contact_triangle_area_mm2": 1200.0
+        }
+      }
+    },
+    {
+      "id": "machining_07_sealed_cavity",
+      "process": "PBF_METAL",
+      "path": "examples\\machining\\07_sealed_cavity.step",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.4110245831716062,
+        "enhanced_cost": 0.37573721679229416,
+        "delta": -0.03528736637931201,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -16.81980515339464,
+          "overhang_projected_area_sum_mm2": 240.0,
+          "contact_triangle_area_mm2": 1200.0
+        }
+      }
+    },
+    {
+      "id": "corpus_09",
+      "process": "VPP",
+      "path": "examples\\corpus\\191223275-19-e_00300_010_a\\E_00300_010_A.stp",
+      "selection_source": "deep_neural_surrogate",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.7698857809657372,
+        "enhanced_cost": 0.7341056121559097,
+        "delta": -0.035780168809827484,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -2.1465713485925875,
+          "overhang_projected_area_sum_mm2": 185.46049414114032,
+          "contact_triangle_area_mm2": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_09",
+      "process": "PBF_METAL",
+      "path": "examples\\corpus\\191223275-19-e_00300_010_a\\E_00300_010_A.stp",
+      "selection_source": "deep_neural_surrogate",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.7698857809657372,
+        "enhanced_cost": 0.7341056121559097,
+        "delta": -0.035780168809827484,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -2.1465713485925875,
+          "overhang_projected_area_sum_mm2": 185.46049414114032,
+          "contact_triangle_area_mm2": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_11",
+      "process": "MEX",
+      "path": "examples\\corpus\\191223310-19-900-602\\900-602.stp",
+      "selection_source": "existing_baseline_direction",
+      "comparison": {
+        "state": "better",
+        "base_cost": 0.8339685830039423,
+        "enhanced_cost": 0.6038329032017501,
+        "delta": -0.23013567980219218,
+        "basis": "Actual selected plans; balanced .7 worst + .3 mean normalized geometric regret on shared measured union",
+        "metric_deltas": {
+          "height_mm": -10.351842583269367,
+          "overhang_projected_area_sum_mm2": 152142.10816626332,
+          "contact_triangle_area_mm2": 92478.26417171024
+        }
+      }
+    }
+  ],
+  "sphere_resolution_example": {
+    "id": "cad_12_sphere",
+    "exact_primitive": "BRepPrimAPI_MakeSphere(10); exact height20mm in any orientation",
+    "generator": "scripts/generate_cad_examples.py",
+    "tessellation": {
+      "requested_linear_deflection_mm": 0.05,
+      "requested_angular_deflection_rad": 0.15,
+      "relative": false,
+      "triangle_count": 3536,
+      "unmeshed_exactly_zero_area_faces": [],
+      "body_attempts": [
+        {
+          "body_id": 1,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 3536,
+            "zero_area_cells": 2,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        }
+      ],
+      "volume_relative_difference": 0.004157634649936449,
+      "limitation": "Requested deflection is not a certified Hausdorff error bound; volume agreement is not local accuracy.",
+      "exact_zero_area_cells_removed": 2,
+      "analysis_triangle_count": 3534
+    },
+    "baseline_height_mm": 19.97259069509148,
+    "final_height_mm": 19.97259069509148,
+    "screening": {
+      "omitted_names": [
+        "AI 탐색 6"
+      ],
+      "threshold_mm": 0.019972590695091476,
+      "basis": "min(2 * CAD linear deflection, 0.001 * baseline height); proposal-screening policy, not certified error bound",
+      "baseline_minimum_height_mm": 19.972590695091476
+    },
+    "prior_run_apparent_deep_height_gain_mm": 0.0013947979199464555
+  },
+  "interpretation": [
+    "Lower disclosed balanced geometric policy cost is not model generalization accuracy or dominance in every measured objective.",
+    "Fifteen lower-cost selections use an existing baseline direction after the candidate-pool normalization changed.",
+    "Two new deep direction selections are two process conditions on the same real STEP; height decreases2.146571mm while downward projection sum increases185.460494mm2.",
+    "Three remaining sphere cases in MEX/VPP/PBF_METAL reselect existing faceted-mesh directions; exact sphere is isotropic, so those are not CAD design gains.",
+    "Two height-only tiny gains were screened, including the sphere case; all raw measurements remain available and were independently remeasured.",
+    "Remeasurement uses the same geometry engine through a separate direct call; it does not independently validate every geometry formula."
+  ]
+}

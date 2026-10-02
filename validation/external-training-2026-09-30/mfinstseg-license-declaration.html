@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>MFInstSeg_数据集-飞桨AI Studio星河社区</title>
+    <meta name="keywords" content="数据集, 数据分享平台, 飞桨开放数据集, 飞桨星河社区, 计算机视觉, CC0">
+    <meta name="description" content="MFInstSeg: 62,495 solid models in STEP format with instance labels in JSON format">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" charset="UTF-8">
+    <link rel="icon" href="https://paddlepaddle-org-cn.cdn.bcebos.com/paddle-site-front/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="https://paddlepaddle-org-cn.cdn.bcebos.com/paddle-site-front/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="https://paddlepaddle-org-cn.cdn.bcebos.com/paddle-site-front/favicon-128.png" sizes="128x128">
+    <script src="https://passport.baidu.com/passApi/js/uni_wrapper.js" defer></script>
+    <script src="https://passport.baidu.com/passApi/js/passOverseasLoginSdk.js" defer></script>
+    <link rel="shortcut icon" href="//aistudio-fe-online.cdn.bcebos.com/aistudio/dist/1778662467484/favicon-32.ico">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .paddle-logo {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .main {
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes initialDotFlashing {
+            0% {
+                background-color: #4861ff;
+            }
+            50%, 100% {
+                background-color: #7d8cfa;
+            }
+        }
+        .initial-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .initial-loading-inner {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #4861ff;
+            color: #4861ff;
+            animation: initialDotFlashing 1s infinite linear alternate;
+            animation-delay: .5s;
+        }
+        .initial-loading-inner::before, .initial-loading-inner::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+        }
+        .initial-loading-inner::before {
+            left: -15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #4861ff;
+            color: #4861ff;
+            animation: initialDotFlashing 1s infinite alternate;
+            animation-delay: 0;
+        }
+        .initial-loading-inner::after {
+            left: 15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #4861ff;
+            color: #4861ff;
+            animation: initialDotFlashing 1s infinite alternate;
+            animation-delay: 1s;
+        }
+    </style>
+        <script>
+            window.aiStudio = {
+                siteId: 0,
+                pageTitle: "MFInstSeg_\u6570\u636E\u96C6-\u98DE\u6868AI Studio\u661F\u6CB3\u793E\u533A",
+                userInfo: "{}",
+                logoutUrl: null,
+                bdToken: null,
+                oldVersion: false,
+                newVersionDisabled: false,
+                publicPath: '//aistudio-fe-online.cdn.bcebos.com',
+                passport: null
+            };
+        </script>
+    <script>
+window.aiStudio.feVersionOld = '1778662467484'
+window.aiStudio.feVersion = '1789723006249'
+window.aiStudio.langVersion = '1781158868'
+    </script>
+</head>
+<body>
+    <div class="paddle-logo"><img src="https://paddlepaddle-org-cn.cdn.bcebos.com/paddle-site-front/static/media/paddlelogo.0b483fa7.png"></div>
+    <div id="main" class="main">
+        <div class="initial-loading">
+            <div class="initial-loading-inner">
+            </div>
+        </div>
+    </div>
+    <div style="display:none;"></div>
+<script>
+    try {
+        var asUserInfo = window.aiStudio.userInfo || '';
+        var asUid = typeof userInfo === 'string' ? JSON.parse(asUserInfo).id : asUserInfo.id;
+        if (!asUid) {
+            window.aiStudio.oldVersion = false;
+        }
+        if (asUserInfo.id) {
+            window.aiStudio.userInfo.agentAppUser = 1;
+        }
+        const storageOldVersion = localStorage.getItem('as_old_version');
+        if (!asUid && storageOldVersion !== null) {
+            window.aiStudio.oldVersion = !!localStorage.getItem('as_old_version');
+        }
+        localStorage.setItem('as_old_version', window.aiStudio.oldVersion ? '1' : '');
+
+        if (localStorage.getItem('as_new_version_open')) {
+            window.aiStudio.newVersionDisabled = false;
+        }
+    }
+    catch (e) {}
+</script>
+<script>
+    if(window.aiStudio.oldVersion) {
+        document.body.setAttribute('data-old', 1);
+    }
+</script>
+    <script>
+        ((w) => {
+            //【PC库】一级路由
+            var l = [
+                'index',
+                'overview',
+                'community',
+                'membership',
+                'intro',
+                'experthub',
+                'ernieimage',
+                'tool',
+                'blog',
+                'project',
+                'projectdetail',
+                'projectdetailforpaddle',
+                'bgtasklog',
+                'dataset',
+                'app',
+                'pipeline',
+                'practical',
+                'appCourse',
+                'learn',
+                'ai-learning',
+                'aistudio-agent',
+                'certification',
+                'course',
+                'library',
+                'education',
+                'competition',
+                'activityoverview',
+                'deploy',
+                'datasetoverview',
+                'modelsoverview',
+                'modelsdetail',
+                'modelcreate',
+                'modelcontribute',
+                'zeroCodeDev',
+                'playground',
+                'projectoverview',
+                'paddleocr',
+                'arena-cms',
+                'pointszone',
+                'pointsoverview',
+                'account',
+                'messagelist',
+                'messagedetail',
+                'loginmid',
+                'setting',
+                'honorleaderboard',
+                'topic',
+                'cooperate',
+                'datasetdetail',
+                'technology',
+                'medical',
+                'paddlesignup',
+                'questionnaire',
+                'identification',
+                'projectrepo',
+                'activitydetail',
+                '404',
+                'applog',
+                'log',
+                'service',
+                'explain',
+                'learnmap',
+                'edu',
+                'lhycourse',
+                'nlp',
+                'enterprisedeveloper'
+            ];
+
+            // 需要完整匹配的url
+            var complete = [];
+
+            // 匹配到二级路由
+            var secondPath = [
+                '/paddlex/commercialization',
+                '/my/project',
+                '/my/models',
+                '/my/learn',
+                '/my/teaching',
+                '/my/dataset',
+                '/my/orders',
+                '/my/activities',
+                '/global/search',
+                '/explore/topics',
+                '/application/center',
+                '/application/detail',
+                '/personalcenter/thirdview',
+                '/points/manage',
+                '/coupon/manage',
+                '/acurrency/manage',
+                '/token/manage',
+            ];
+
+            var notLoadNewScripts = [
+                '/project/graphical',
+            ]
+
+            // 精确匹配返回 false 的路由（不影响其子路由）
+            var exactExclude = [
+            ];
+
+            function checkPathMatched (path) {
+                const pathReg = new RegExp('^' + path);
+                return (
+                    !!path
+                    && pathReg.test(location.pathname)
+                    && [undefined, '/'].includes(location.pathname.replace(pathReg, '')[0])
+                );
+            };
+            
+            window.checkIsPCLink = function (path) {
+                var pathnameArr = location.pathname.split('/');
+                var currentModule = (path || location.pathname).replace('/aistudio/', '/').split('/')[1];
+                var currentCompleteUrl = (path || location.pathname).replace('/aistudio/', '/');
+                var currentSecondPath = pathnameArr[2] ? ('/' + pathnameArr[1] + '/' + pathnameArr[2]) : '';
+
+                // 一级路由和PC库一级路由冲突，不需要走新脚本的 url
+                if (notLoadNewScripts.some(function (url) { return location.pathname.includes(url) })) {
+                    return false;
+                }
+
+                // 精确匹配返回 false 的路由（不影响其子路由）
+                if (exactExclude.some(function (url) { return location.pathname === url })) {
+                    return false;
+                }
+
+                // 完整匹配
+                if (complete.some(function (item) { return checkPathMatched(item) })) {
+                    return true;
+                }
+
+                // 只需要匹配到二级路由
+                if (secondPath.some(function (item) { return item === currentSecondPath })) {
+                    return true;
+                }
+                
+                return l.includes(currentModule);
+            };
+            
+            var scriptsOld = [
+                w.aiStudio.publicPath + '/aistudio/lang/' + w.aiStudio.langVersion + '/all.js',
+                w.aiStudio.publicPath + '/aistudio/dist/' + w.aiStudio.feVersionOld + '/js/vendor.js',
+                w.aiStudio.publicPath + '/aistudio/dist/' + w.aiStudio.feVersionOld + '/js/main.js'
+            ];
+
+            var scriptsNew = [
+                w.aiStudio.publicPath + '/aistudio/lang/' + w.aiStudio.langVersion + '/all.js',
+                w.aiStudio.publicPath + '/aistudio/dist/' + w.aiStudio.feVersion + '/base/vendor.js',
+                w.aiStudio.publicPath + '/aistudio/dist/' + w.aiStudio.feVersion + '/base/main.js'
+            ];
+
+            // 异步加载单个脚本
+            function loadScriptAsync(src) {
+                return new Promise(function(resolve, reject) {
+                    var script = document.createElement('script');
+                    script.src = src;
+                    script.defer = false; // 确保顺序执行
+                    script.onload = function() { resolve(src); };
+                    script.onerror = function() { reject(src); };
+                    document.head.appendChild(script);
+                });
+            }
+
+            // 预加载资源，不执行
+            function preloadScript(src) {
+                var link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'script';
+                link.href = src;
+                document.head.appendChild(link);
+            }
+
+            // 高性能顺序加载：all.js 与 vendor.js 并行下载
+            function loadScriptsHighPerf(scripts) {
+                if (!scripts || !scripts.length) return;
+
+                // 预加载 main.js
+                preloadScript(scripts[2]);
+
+                // 并行加载 all.js 和 vendor.js
+                var allPromise = loadScriptAsync(scripts[0]);
+                var vendorPromise = loadScriptAsync(scripts[1]);
+
+                // 等 all.js 和 vendor.js 都加载完成后，顺序执行 main.js
+                Promise.all([allPromise, vendorPromise])
+                    .then(function() { return loadScriptAsync(scripts[2]); })
+                    .catch(function(err) { console.error('脚本加载失败:', err); });
+            }
+
+            var loadMainStyle = function() {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = w.aiStudio.publicPath + "/aistudio/dist/"+ w.aiStudio.feVersionOld + "/css/main.css";
+                document.head.appendChild(link);
+            };
+
+            // 保留原有判断逻辑
+            if (window.checkIsPCLink()) {
+                loadScriptsHighPerf(scriptsNew);
+                return;
+            }
+
+            loadMainStyle();
+            loadScriptsHighPerf(scriptsOld);
+        })(window)
+    </script>
+    <script src="https://hm.baidu.com/hm.js?be6b0f3e9ab579df8f47db4641a0a406" async></script>
+    <script type="text/javascript"
+            charset="utf-8"
+            crossorigin="anonymous"
+            src="https://jsdk.baidu.com/jshunter/monitor" async></script>
+    <script>
+        /* eslint-disable */
+        var _hmt = _hmt || [];
+        _hmt.push(['_setUserProperty', {'user_reg_date': null}]);
+        _hmt.push(["_setUserProperty", {'user_course_rt': null}]);
+        // _hmt.push(["_setUserProperty", {'user_course_total': null}]);
+        _hmt.push(["_setUserProperty", {'user_center_type': null}]);
+        if (asUid) {
+            _hmt.push(['_setUserId', asUid]);
+            _hmt.push([
+                "_setPageviewProperty",
+                {
+                    "user_id": asUid,
+                    "origin": document.referrer
+                }
+            ]);
+        }
+        /* eslint-enable */
+    </script>
+</body>
+</html>

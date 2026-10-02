@@ -1,0 +1,6249 @@
+{
+  "schema_version": "dfm-review-1",
+  "process_family": "machining",
+  "process": "MILLING_3AXIS",
+  "created_utc": "2026-09-29T02:21:44.310938+00:00",
+  "model_fingerprint": "708e3f5ab1a8b2f21f08db35f265edf4483fe3cc629ffc0eddecdcf3d5c45a42",
+  "input": {
+    "filename": "05_side_hole.step",
+    "source_sha256": "cc2d3e4fddab9b422587cca773441602d2eabcf632b51fe2e583f89e401033fc",
+    "source_bytes": 19032,
+    "source_format": "step",
+    "coordinate_unit": "mm",
+    "cad_kernel": "Open CASCADE via cadquery-ocp-novtk 7.9.3.1.1",
+    "cad_valid": true,
+    "declared_step_units": [
+      "millimetre"
+    ],
+    "transferred_roots": 1,
+    "solid_count": 1,
+    "cad_geometry_kind": "solid",
+    "cad_face_count": 7,
+    "bodies": [
+      {
+        "body_id": 1,
+        "valid": true,
+        "volume_mm3": 17497.34517542563,
+        "area_mm2": 4977.52208334565,
+        "integration": {
+          "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+          "requested_relative_tolerance": 1e-09,
+          "exactly_zero_parameter_area_faces_excluded": 0,
+          "volume_relative_error_estimate": 3.789561257387202e-16,
+          "area_relative_error_estimate": 4.873032304978682e-16,
+          "limitation": "Numerical quadrature estimates; not certified geometric or manufacturing error bounds."
+        },
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            40.0,
+            30.0,
+            15.0
+          ]
+        ],
+        "cavity_shell_count": 0
+      }
+    ],
+    "exact_volume_mm3": 17497.34517542563,
+    "exact_area_mm2": 4977.52208334565,
+    "constituent_volume_sum_mm3": 17497.34517542563,
+    "cavity_shell_count": 0,
+    "property_integration": {
+      "requested_relative_tolerance": 1e-09,
+      "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+      "per_body": [
+        {
+          "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+          "requested_relative_tolerance": 1e-09,
+          "exactly_zero_parameter_area_faces_excluded": 0,
+          "volume_relative_error_estimate": 3.789561257387202e-16,
+          "area_relative_error_estimate": 4.873032304978682e-16,
+          "limitation": "Numerical quadrature estimates; not certified geometric or manufacturing error bounds."
+        }
+      ]
+    },
+    "tessellation": {
+      "requested_linear_deflection_mm": 0.05,
+      "requested_angular_deflection_rad": 0.15,
+      "relative": false,
+      "triangle_count": 352,
+      "unmeshed_exactly_zero_area_faces": [],
+      "body_attempts": [
+        {
+          "body_id": 1,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 352,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        }
+      ],
+      "volume_relative_difference": 2.678095841955646e-05,
+      "limitation": "Requested deflection is not a certified Hausdorff error bound; volume agreement is not local accuracy.",
+      "exact_zero_area_cells_removed": 0,
+      "analysis_triangle_count": 352
+    },
+    "assembly_overlap": "not_applicable",
+    "analytic_boundary_geometry": {
+      "version": 1,
+      "maximum_model_edges": 50000,
+      "processed_edges": 26,
+      "limitation": "Trimmed face boundaries and adjacency; no automatic pocket/hole count or tool-access certification."
+    },
+    "surface_scope": null,
+    "cad_translation_policy": "OCCT default STEP transfer and built-in shape processing; no separate healing requested. Validity is checked after translation.",
+    "pmi": "not_imported",
+    "external_references": "No external reference resolution; all transfer roots must succeed.",
+    "cad_translation_messages": "",
+    "unit_status": "declared_in_step",
+    "dimensions_confirmed": true,
+    "unit_note": "STEP 선언 단위를 OCCT가 mm로 변환. 설계 공차·PMI는 해석하지 않음.",
+    "scale_factor": 1.0
+  },
+  "profile": {
+    "machine": "미확정",
+    "material": "미확정",
+    "tool_diameter_mm": null,
+    "flute_length_mm": null,
+    "reach_mm": null,
+    "hole_depth_ratio_limit": null,
+    "basis": "Held-out geometry integration audit; developer-supplied comparison values",
+    "condition_evidence": {}
+  },
+  "direction": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "current_orientation": {
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "findings": [
+    {
+      "id": "cnc_input",
+      "title": "절삭 검토 입력",
+      "status": "observed",
+      "reason": "단일 STEP 솔리드의 해석 곡면을 읽었습니다.",
+      "action": "공구 조건을 입력하고 위치별 결과를 확인하세요.",
+      "method": "STEP transfer metadata: validity, solid count and availability of B-rep face records",
+      "evidence": [],
+      "measurements": {
+        "cad_feature_dimensions_available": true
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "공차·표면 거칠기·PMI·소재·고정 방법은 자동 추출하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_coverage",
+      "title": "CAD 면 정보와 특징 인식 범위",
+      "status": "observed",
+      "reason": "경계 미확정 평면 0개, 내·외부 미확정 원통면 0개, 미지원 곡면 0개입니다.",
+      "action": "아래 검토는 명시된 평면·원통면·직사각 바닥 범위입니다. 복잡한 특징은 별도 확인하세요.",
+      "method": "Inventory of unsupported surfaces, unresolved cylinder material sides and incomplete planar boundary extraction",
+      "evidence": [],
+      "measurements": {
+        "incomplete_boundary_face_ids": [],
+        "unresolved_cylinder_face_ids": [],
+        "unsupported_face_ids": [],
+        "cad_features_available": true
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "경계 추출 완료와 전체 포켓·구멍 인식 완료는 다릅니다. 분할·교차·섬·곡선 경계 특징은 전수 인식하지 않습니다.",
+        "4변 외 평면 바닥(예: 챔퍼 때문에 8변이 된 포켓)은 폭·깊이 비교에서 제외됩니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_holes",
+      "title": "원통형 내부 특징과 공구",
+      "status": "attention",
+      "reason": "내부 원통면 1개 중 1개에 방향·공구 조건 확인이 필요합니다.",
+      "action": "축이 다른 면은 접근 방향이나 재고정 방향을 검토하세요. 해당 면의 공구 치수 비교는 보류했습니다. 비교에 필요한 공구 지름·돌출 길이를 입력하세요.",
+      "method": "Analytic cylindrical face diameter and UV axial bounds; fixed-axis and user tool-condition comparisons",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_FACE_RECOGNITION",
+        "CNC_TOOL_DIMENSIONS",
+        "CNC_MRSEV"
+      ],
+      "measurements": {
+        "cylindrical_faces": [
+          {
+            "face_id": 6,
+            "diameter_mm": 4.0,
+            "cylindrical_length_mm": 40.0,
+            "length_diameter_ratio": 10.0,
+            "axis_aligned": false,
+            "axis_angle_deg": 90.0,
+            "tool_too_large": null,
+            "segment_exceeds_reach": null,
+            "exceeds_ratio": null
+          }
+        ],
+        "face_count": 1,
+        "unresolved_cylinder_face_ids": []
+      },
+      "face_indices": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263
+      ],
+      "cad_face_ids": [
+        6
+      ],
+      "limitations": [
+        "원통면 구간은 홀 전체 깊이나 홀 개수가 아닙니다. 분할·교차 홀을 병합하지 않습니다.",
+        "축 정렬은 양쪽에서의 기하 방향 일치만 뜻합니다. 입구·막힘·홀더 충돌을 확인한 결과가 아닙니다.",
+        "선택 축과 평행하지 않은 원통면은 지름·돌출 길이 비교를 보류합니다. 다른 공구·경로까지 가공 불가로 판정한 결과가 아닙니다.",
+        "원주 방향 범위 360°는 모든 높이에 원통 벽이 있다는 뜻이 아닙니다. 교차·트림 구간이 포함될 수 있습니다.",
+        "수치 경계의 비교는 초과로 확정하지 않습니다. 같은 치수는 실제 가공 여유가 확보되었다는 뜻이 아닙니다."
+      ],
+      "severity": "review"
+    },
+    {
+      "id": "cnc_curved_corners",
+      "title": "공구축과 나란한 오목 원통면",
+      "status": "not_detected",
+      "reason": "오목한 부분 원통면 0개를 찾았습니다. 공구 지름을 입력하면 반경과 비교합니다.",
+      "action": "선택한 축과 나란한 오목 원통면은 확인되지 않았습니다. 다른 축이나 분할·복잡한 면은 CAD/CAM에서 확인하세요.",
+      "method": "Concave analytic cylindrical face radius versus radius of the user-specified cylindrical end mill",
+      "evidence": [
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "cylindrical_faces": [],
+        "unresolved_cylinder_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "부분 원통면을 포켓 코너로 확정하지 않습니다. 선택 축에서 원통형 엔드밀 옆날이 접근하는 조건의 기하 비교입니다.",
+        "공구 반경과 형상 반경이 같은 수치 경계는 여유·안정성·표면 품질을 보장하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_rectangular_pockets",
+      "title": "직사각 포켓 바닥과 내부 직각",
+      "status": "not_detected",
+      "reason": "현재 인식 범위의 직사각 포켓 바닥을 찾지 못했습니다.",
+      "action": "곡선·분할 면·섬이 있는 포켓은 별도 CAD/CAM 검토가 필요합니다.",
+      "method": "Restricted B-rep adjacency recognition of four-sided floors; local width and wall-height comparisons",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER",
+        "CNC_TOOL_DIMENSIONS",
+        "CNC_MRSEV"
+      ],
+      "measurements": {
+        "pockets": [],
+        "count": 0,
+        "incomplete_boundary_face_ids": [],
+        "unresolved_floor_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "직선 4변 바닥·평면 수직벽·동일 벽높이만 인식합니다. 전체 포켓 목록이 아닙니다.",
+        "벽 높이는 공구 경로 길이 또는 전체 진입 깊이를 보장하지 않습니다. 홀더·고정구·소재 제거 순서는 미검토입니다.",
+        "내부 바닥 후보는 채널·밀폐 공동·섬·곡선 경계나 수치 불일치일 수도 있습니다. 열린 포켓으로 확정한 수가 아닙니다.",
+        "벽 높이가 날 길이보다 커도 여러 깊이의 절입이나 목부 공구를 사용할 수 있으므로 그 자체를 가공 불가로 판정하지 않습니다.",
+        "수치 경계의 비교는 초과로 확정하지 않습니다. 같은 치수는 실제 가공 여유가 확보되었다는 뜻이 아닙니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_visibility",
+      "title": "선택 방향의 표면 가림",
+      "status": "attention",
+      "reason": "표본 352개 중 352개의 상태를 계산했습니다. 가려짐 84개, 반대쪽을 향함 86개, 축과 평행한 면 180개입니다. 선택한 표본의 방향·직선 차폐 검사를 완료했습니다. 실제 공구 접근·가공 가능 판정은 아닙니다.",
+      "action": "가려진 위치와 반대쪽 표면에 다른 접근 방향이 필요한지 확인하세요. 실제 공구·홀더 충돌은 CAM에서 확인하세요.",
+      "method": "point_visibility; deterministic sampled mesh points and straight rays; finite cutter and holder not modeled",
+      "evidence": [
+        "CNC_ACCESS_SCOPE",
+        "CNC_SPATIAL_PLANNING"
+      ],
+      "measurements": {
+        "requested_samples": 352,
+        "selected_samples": 352,
+        "evaluated_samples": 352,
+        "ray_triangle_tests": 30272,
+        "sampled_face_area_fraction": 1.0,
+        "area_weighted_sample_fractions": {
+          "visible": 0.24108835288415162,
+          "occluded": 0.050481656066523696,
+          "back_facing": 0.29157000895067536,
+          "tangent": 0.41685998209864905,
+          "unknown": 0.0
+        },
+        "omitted_face_count": 0,
+        "omitted_face_area_mm2": 0.0,
+        "selected_face_area_mm2": 4977.428339628779,
+        "total_surface_area_mm2": 4977.428339628779,
+        "sample_state_counts": {
+          "visible": 2,
+          "occluded": 84,
+          "back_facing": 86,
+          "tangent": 180,
+          "unknown": 0
+        }
+      },
+      "face_indices": [
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221
+      ],
+      "cad_face_ids": [],
+      "limitations": [
+        "표면에서 지정 방향으로 뻗은 점·직선의 차폐 검사입니다. 실제 공구의 지름·날·홀더 충돌은 계산하지 않습니다.",
+        "선택한 삼각형 내부의 한 점만 검사합니다. 표본 밖 영역과 같은 면 내부의 다른 위치를 보장하지 않습니다.",
+        "면적 가중 비율은 선택한 표본에 한정되며, 전체 가공 가능 면적률이나 제조 성공 확률이 아닙니다.",
+        "축과 평행한 면은 접선 상태로 분리합니다. 이 결과만으로 측면 밀링 가능 여부를 결정하지 않습니다.",
+        "소재·고정구·공정 순서·공구 강성·공차·표면 품질과 모든 자기교차를 검사하지 않습니다."
+      ],
+      "severity": "review"
+    }
+  ],
+  "visibility": {
+    "status": "complete",
+    "method": "point_visibility",
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "direction_convention": "surface_toward_incoming_tool",
+    "coordinate_frame": "model_mm",
+    "reason": "선택한 표본의 방향·직선 차폐 검사를 완료했습니다. 실제 공구 접근·가공 가능 판정은 아닙니다.",
+    "reasons": [],
+    "diagnostics": {
+      "geometry_available": true,
+      "topology_ready": true,
+      "face_count": 352,
+      "vertex_count": 176,
+      "issues": [],
+      "problem_face_indices": [],
+      "highlight_truncated": false,
+      "self_intersections": "not_exhaustively_checked",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "duplicate_faces": 0,
+      "winding_consistent": true,
+      "raw_signed_volume_integral": 17497.813771099227,
+      "triangle_area_sum": 4977.428339628779,
+      "extents": [
+        40.0,
+        30.0,
+        15.0
+      ],
+      "problem_face_count": 0,
+      "surface_component_count": 1
+    },
+    "samples": [
+      {
+        "source_face": 0,
+        "point_mm": [
+          0.0,
+          20.94214973973383,
+          4.057850260266167
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525642,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 1,
+        "point_mm": [
+          0.0,
+          21.00992223619857,
+          4.130891640246895
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0666309312964728,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 2,
+        "point_mm": [
+          0.0,
+          20.8691083597531,
+          3.990077763801427
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0073559917415917,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 3,
+        "point_mm": [
+          0.0,
+          21.072046837856014,
+          4.208793426718427
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0861406586135587,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 4,
+        "point_mm": [
+          0.0,
+          20.79120657328157,
+          3.927953162143982
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9679222690099535,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 5,
+        "point_mm": [
+          0.0,
+          21.12817611873362,
+          4.291119961290916
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0987404047948246,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 6,
+        "point_mm": [
+          0.0,
+          20.708880038709076,
+          3.8718238812663763
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309773,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 7,
+        "point_mm": [
+          0.0,
+          21.177996181124573,
+          4.3774108405882926
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1043597069486424,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 8,
+        "point_mm": [
+          0.0,
+          20.622589159411703,
+          3.8220038188754275
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151631,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 9,
+        "point_mm": [
+          0.0,
+          21.22122841103108,
+          4.467183491010696
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1029671396579914,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 10,
+        "point_mm": [
+          0.0,
+          20.5328165089893,
+          3.778771588968917
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876493,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 11,
+        "point_mm": [
+          0.0,
+          21.257631036286895,
+          4.559935867481799
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0945704907240312,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 12,
+        "point_mm": [
+          0.0,
+          20.4400641325182,
+          3.742368963713103
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223829,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 13,
+        "point_mm": [
+          0.0,
+          21.287000478645307,
+          4.6551492610885195
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.079216717613619,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 14,
+        "point_mm": [
+          0.0,
+          20.344850738911475,
+          3.71299952135469
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.682623212171811,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 15,
+        "point_mm": [
+          0.0,
+          21.3091724922713,
+          4.7522911999116735
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0569916848540544,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 16,
+        "point_mm": [
+          0.0,
+          20.247708800088322,
+          3.690827507728698
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277762,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 17,
+        "point_mm": [
+          0.0,
+          21.324023082270873,
+          4.850818426824934
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437945,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 18,
+        "point_mm": [
+          0.0,
+          20.149181573175063,
+          3.675976917729127
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.5334756715910484,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 19,
+        "point_mm": [
+          0.0,
+          25.666666666666668,
+          7.5
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 97.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 20,
+        "point_mm": [
+          0.0,
+          21.33146919812079,
+          4.95017993760905
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9924627377646686,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 21,
+        "point_mm": [
+          0.0,
+          20.049820062390946,
+          3.6685308018792133
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.4529585570076282,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 22,
+        "point_mm": [
+          0.0,
+          21.331469198120786,
+          10.049820062390948
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9924627377646686,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 23,
+        "point_mm": [
+          0.0,
+          21.324023082270873,
+          10.149181573175065
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437945,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 24,
+        "point_mm": [
+          0.0,
+          21.3091724922713,
+          10.24770880008833
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0569916848540544,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 25,
+        "point_mm": [
+          0.0,
+          21.287000478645307,
+          10.344850738911482
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.079216717613619,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 26,
+        "point_mm": [
+          0.0,
+          21.257631036286895,
+          10.4400641325182
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0945704907240241,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 27,
+        "point_mm": [
+          0.0,
+          21.221228411031085,
+          10.532816508989304
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1029671396579985,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 28,
+        "point_mm": [
+          0.0,
+          21.17799618112457,
+          10.622589159411708
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1043597069486424,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 29,
+        "point_mm": [
+          0.0,
+          21.12817611873362,
+          10.708880038709083
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0987404047948104,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 30,
+        "point_mm": [
+          0.0,
+          21.072046837856018,
+          10.79120657328157
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0861406586135587,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 31,
+        "point_mm": [
+          0.0,
+          21.00992223619857,
+          10.869108359753106
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0666309312964728,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 32,
+        "point_mm": [
+          0.0,
+          20.94214973973383,
+          10.942149739733832
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525642,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 33,
+        "point_mm": [
+          0.0,
+          20.8691083597531,
+          11.009922236198573
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0073559917415977,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 34,
+        "point_mm": [
+          0.0,
+          20.791206573281563,
+          11.07204683785602
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9679222690099678,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 35,
+        "point_mm": [
+          0.0,
+          20.708880038709076,
+          11.128176118733625
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309757,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 36,
+        "point_mm": [
+          0.0,
+          20.6225891594117,
+          11.177996181124573
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151637,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 37,
+        "point_mm": [
+          0.0,
+          20.5328165089893,
+          11.221228411031083
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876599,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 38,
+        "point_mm": [
+          0.0,
+          20.440064132518195,
+          11.257631036286899
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223676,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 39,
+        "point_mm": [
+          0.0,
+          20.34485073891147,
+          11.28700047864531
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6826232121718121,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 40,
+        "point_mm": [
+          0.0,
+          20.24770880008832,
+          11.309172492271301
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277832,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 41,
+        "point_mm": [
+          0.0,
+          20.14918157317506,
+          11.324023082270873
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.5334756715910487,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 42,
+        "point_mm": [
+          0.0,
+          20.049820062390946,
+          11.331469198120788
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.4529585570075909,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 43,
+        "point_mm": [
+          0.0,
+          15.0,
+          1.8333333333333335
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 82.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 44,
+        "point_mm": [
+          0.0,
+          8.668530801879214,
+          4.950179937609049
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9924627377646602,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 45,
+        "point_mm": [
+          0.0,
+          8.675976917729127,
+          4.850818426824934
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437976,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 46,
+        "point_mm": [
+          0.0,
+          8.690827507728699,
+          4.7522911999116735
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0569916848540353,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 47,
+        "point_mm": [
+          0.0,
+          8.712999521354691,
+          4.65514926108852
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0792167176136254,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 48,
+        "point_mm": [
+          0.0,
+          8.742368963713103,
+          4.5599358674818
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.094570490724037,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 49,
+        "point_mm": [
+          0.0,
+          8.778771588968919,
+          4.467183491010697
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1029671396579874,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 50,
+        "point_mm": [
+          0.0,
+          8.822003818875428,
+          4.377410840588293
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1043597069486293,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 51,
+        "point_mm": [
+          0.0,
+          8.871823881266378,
+          4.291119961290918
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0987404047948102,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 52,
+        "point_mm": [
+          0.0,
+          8.927953162143984,
+          4.2087934267184295
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0861406586135605,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 53,
+        "point_mm": [
+          0.0,
+          8.99007776380143,
+          4.130891640246898
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.066630931296467,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 54,
+        "point_mm": [
+          0.0,
+          9.057850260266168,
+          4.05785026026617
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525471,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 55,
+        "point_mm": [
+          0.0,
+          9.130891640246897,
+          3.9900777638014295
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0073559917415973,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 56,
+        "point_mm": [
+          0.0,
+          9.20879342671843,
+          3.927953162143984
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9679222690099596,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 57,
+        "point_mm": [
+          0.0,
+          9.291119961290919,
+          3.871823881266378
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309773,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 58,
+        "point_mm": [
+          0.0,
+          9.377410840588295,
+          3.8220038188754284
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151706,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 59,
+        "point_mm": [
+          0.0,
+          9.467183491010697,
+          3.778771588968917
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876493,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 60,
+        "point_mm": [
+          0.0,
+          9.5599358674818,
+          3.742368963713103
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223829,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 61,
+        "point_mm": [
+          0.0,
+          9.655149261088521,
+          3.71299952135469
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6826232121718173,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 62,
+        "point_mm": [
+          0.0,
+          9.752291199911673,
+          3.6908275077286996
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277712,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 63,
+        "point_mm": [
+          0.0,
+          9.850818426824933,
+          3.6759769177291286
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.5334756715910534,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 64,
+        "point_mm": [
+          0.0,
+          9.950179937609049,
+          3.6685308018792133
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.45295855700763,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 65,
+        "point_mm": [
+          0.0,
+          4.333333333333334,
+          7.5
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 97.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 66,
+        "point_mm": [
+          0.0,
+          9.95017993760905,
+          11.331469198120788
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.4529585570076282,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 67,
+        "point_mm": [
+          0.0,
+          9.850818426824933,
+          11.324023082270873
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.5334756715910549,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 68,
+        "point_mm": [
+          0.0,
+          9.752291199911674,
+          11.3091724922713
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277762,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 69,
+        "point_mm": [
+          0.0,
+          9.655149261088521,
+          11.28700047864531
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.682623212171811,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 70,
+        "point_mm": [
+          0.0,
+          9.559935867481801,
+          11.257631036286897
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223829,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 71,
+        "point_mm": [
+          0.0,
+          9.4671834910107,
+          11.221228411031083
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876556,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 72,
+        "point_mm": [
+          0.0,
+          9.377410840588295,
+          11.177996181124572
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151757,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 73,
+        "point_mm": [
+          0.0,
+          9.291119961290919,
+          11.128176118733622
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309774,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 74,
+        "point_mm": [
+          0.0,
+          9.20879342671843,
+          11.072046837856016
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9679222690099597,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 75,
+        "point_mm": [
+          0.0,
+          9.130891640246897,
+          11.00992223619857
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.007355991741591,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 76,
+        "point_mm": [
+          0.0,
+          9.057850260266168,
+          10.94214973973383
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525531,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 77,
+        "point_mm": [
+          0.0,
+          15.0,
+          13.166666666666666
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 82.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 78,
+        "point_mm": [
+          0.0,
+          8.99007776380143,
+          10.8691083597531
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0666309312964728,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 79,
+        "point_mm": [
+          0.0,
+          8.927953162143984,
+          10.79120657328157
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0861406586135545,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 80,
+        "point_mm": [
+          0.0,
+          8.871823881266378,
+          10.708880038709083
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0987404047948162,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 81,
+        "point_mm": [
+          0.0,
+          8.822003818875428,
+          10.622589159411707
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1043597069486353,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 82,
+        "point_mm": [
+          0.0,
+          8.778771588968919,
+          10.532816508989303
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1029671396579874,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 83,
+        "point_mm": [
+          0.0,
+          8.742368963713103,
+          10.440064132518199
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.094570490724043,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 84,
+        "point_mm": [
+          0.0,
+          8.712999521354691,
+          10.344850738911477
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0792167176136134,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 85,
+        "point_mm": [
+          0.0,
+          8.690827507728699,
+          10.247708800088324
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0569916848540413,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 86,
+        "point_mm": [
+          0.0,
+          8.675976917729127,
+          10.149181573175065
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437918,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 87,
+        "point_mm": [
+          0.0,
+          8.668530801879214,
+          10.049820062390948
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.992462737764666,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 88,
+        "point_mm": [
+          13.333333333333332,
+          0.0,
+          5.0
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 300.0,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 89,
+        "point_mm": [
+          26.666666666666664,
+          0.0,
+          10.0
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 300.0,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 90,
+        "point_mm": [
+          13.333333333333332,
+          20.0,
+          15.0
+        ],
+        "normal_dot_direction": 1.0,
+        "area_weight_mm2": 600.0,
+        "state": "visible",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 91,
+        "point_mm": [
+          26.666666666666664,
+          10.0,
+          15.0
+        ],
+        "normal_dot_direction": 1.0,
+        "area_weight_mm2": 600.0,
+        "state": "visible",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 92,
+        "point_mm": [
+          13.333333333333332,
+          20.0,
+          0.0
+        ],
+        "normal_dot_direction": -1.0,
+        "area_weight_mm2": 600.0,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 93,
+        "point_mm": [
+          26.666666666666664,
+          10.0,
+          0.0
+        ],
+        "normal_dot_direction": -1.0,
+        "area_weight_mm2": 600.0,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 94,
+        "point_mm": [
+          13.333333333333332,
+          30.0,
+          5.0
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 300.0,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 95,
+        "point_mm": [
+          26.666666666666664,
+          30.0,
+          10.0
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 300.0,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 96,
+        "point_mm": [
+          26.666666666666664,
+          14.950179937609052,
+          9.498135864787454
+        ],
+        "normal_dot_direction": -0.9993007047883988,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 97,
+        "point_mm": [
+          13.333333333333332,
+          14.9003598752181,
+          9.496271729574907
+        ],
+        "normal_dot_direction": -0.9993007047883988,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 98,
+        "point_mm": [
+          13.333333333333332,
+          14.800998364433983,
+          9.488825613724993
+        ],
+        "normal_dot_direction": -0.9937122098932417,
+        "area_weight_mm2": 2.9912955421060254,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 99,
+        "point_mm": [
+          26.666666666666664,
+          14.75145691604082,
+          9.483243633087625
+        ],
+        "normal_dot_direction": -0.9937122098932417,
+        "area_weight_mm2": 2.9912955421060254,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 100,
+        "point_mm": [
+          13.333333333333332,
+          14.65292968912756,
+          9.468393043088053
+        ],
+        "normal_dot_direction": -0.9825664732332882,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 101,
+        "point_mm": [
+          26.666666666666664,
+          14.603943910607466,
+          9.45912443372585
+        ],
+        "normal_dot_direction": -0.9825664732332882,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 102,
+        "point_mm": [
+          26.666666666666664,
+          14.506801971784313,
+          9.436952420099859
+        ],
+        "normal_dot_direction": -0.9659258262890708,
+        "area_weight_mm2": 2.9912955421060325,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 103,
+        "point_mm": [
+          13.333333333333332,
+          14.458645811481254,
+          9.42404901583607
+        ],
+        "normal_dot_direction": -0.9659258262890708,
+        "area_weight_mm2": 2.9912955421060325,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 104,
+        "point_mm": [
+          13.333333333333332,
+          14.363432417874531,
+          9.394679573477656
+        ],
+        "normal_dot_direction": -0.9438833303083661,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 105,
+        "point_mm": [
+          26.666666666666664,
+          14.316375184570873,
+          9.378213535383034
+        ],
+        "normal_dot_direction": -0.9438833303083661,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 106,
+        "point_mm": [
+          13.333333333333332,
+          14.177927664932326,
+          9.321874322966028
+        ],
+        "normal_dot_direction": -0.9165622558699762,
+        "area_weight_mm2": 2.9912955421060516,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 107,
+        "point_mm": [
+          26.666666666666664,
+          14.223622808099769,
+          9.341810910127219
+        ],
+        "normal_dot_direction": -0.9165622558699762,
+        "area_weight_mm2": 2.9912955421060516,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 108,
+        "point_mm": [
+          13.333333333333332,
+          14.044077507254961,
+          9.255346450314196
+        ],
+        "normal_dot_direction": -0.8841153935046109,
+        "area_weight_mm2": 2.991295542106055,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 109,
+        "point_mm": [
+          13.333333333333332,
+          13.957786627957585,
+          9.205526387923248
+        ],
+        "normal_dot_direction": -0.8467241992282816,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 110,
+        "point_mm": [
+          26.666666666666664,
+          14.088155014509923,
+          9.278642093059517
+        ],
+        "normal_dot_direction": -0.8841153935046109,
+        "area_weight_mm2": 2.991295542106055,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 111,
+        "point_mm": [
+          26.666666666666664,
+          13.91557325591517,
+          9.17900196827762
+        ],
+        "normal_dot_direction": -0.8467241992282816,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 112,
+        "point_mm": [
+          26.666666666666664,
+          13.833246721342682,
+          9.122872687400013
+        ],
+        "normal_dot_direction": -0.8045977797666669,
+        "area_weight_mm2": 2.9912955421060308,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 113,
+        "point_mm": [
+          13.333333333333332,
+          13.79313355881261,
+          9.093267826168036
+        ],
+        "normal_dot_direction": -0.8045977797666669,
+        "area_weight_mm2": 2.9912955421060308,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 114,
+        "point_mm": [
+          26.666666666666664,
+          13.715231772341074,
+          9.03114322451059
+        ],
+        "normal_dot_direction": -0.7579717231454633,
+        "area_weight_mm2": 2.991295542106046,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 115,
+        "point_mm": [
+          13.333333333333332,
+          13.67744314839962,
+          8.99862348408512
+        ],
+        "normal_dot_direction": -0.7579717231454633,
+        "area_weight_mm2": 2.991295542106046,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 116,
+        "point_mm": [
+          26.666666666666664,
+          13.60440176841889,
+          8.930850987620381
+        ],
+        "normal_dot_direction": -0.7071067811865438,
+        "area_weight_mm2": 2.991295542106027,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 117,
+        "point_mm": [
+          13.333333333333332,
+          13.56914901237962,
+          8.895598231581111
+        ],
+        "normal_dot_direction": -0.7071067811865438,
+        "area_weight_mm2": 2.991295542106027,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 118,
+        "point_mm": [
+          26.666666666666664,
+          13.501376515914878,
+          8.822556851600382
+        ],
+        "normal_dot_direction": -0.6522874112781133,
+        "area_weight_mm2": 2.991295542106069,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 119,
+        "point_mm": [
+          13.333333333333332,
+          13.46885677548941,
+          8.784768227658924
+        ],
+        "normal_dot_direction": -0.6522874112781133,
+        "area_weight_mm2": 2.991295542106069,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 120,
+        "point_mm": [
+          26.666666666666664,
+          13.406732173831966,
+          8.706866441187392
+        ],
+        "normal_dot_direction": -0.5938201855735082,
+        "area_weight_mm2": 2.9912955421060308,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 121,
+        "point_mm": [
+          13.333333333333332,
+          13.377127312599988,
+          8.666753278657318
+        ],
+        "normal_dot_direction": -0.5938201855735082,
+        "area_weight_mm2": 2.9912955421060308,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 122,
+        "point_mm": [
+          26.666666666666664,
+          13.320998031722382,
+          8.58442674408483
+        ],
+        "normal_dot_direction": -0.532032076515332,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 123,
+        "point_mm": [
+          13.333333333333332,
+          13.294473612076752,
+          8.542213372042415
+        ],
+        "normal_dot_direction": -0.532032076515332,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 124,
+        "point_mm": [
+          26.666666666666664,
+          13.244653549685804,
+          8.455922492745039
+        ],
+        "normal_dot_direction": -0.46726862827306015,
+        "area_weight_mm2": 2.991295542106055,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 125,
+        "point_mm": [
+          13.333333333333332,
+          13.221357906940483,
+          8.411844985490077
+        ],
+        "normal_dot_direction": -0.46726862827306015,
+        "area_weight_mm2": 2.991295542106055,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 126,
+        "point_mm": [
+          13.333333333333332,
+          13.158189089872783,
+          8.276377191900233
+        ],
+        "normal_dot_direction": -0.39989202431974724,
+        "area_weight_mm2": 2.9912955421060516,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 127,
+        "point_mm": [
+          13.333333333333332,
+          13.121786464616967,
+          8.18362481542913
+        ],
+        "normal_dot_direction": -0.3302790619551714,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 128,
+        "point_mm": [
+          26.666666666666664,
+          13.178125677033973,
+          8.322072335067675
+        ],
+        "normal_dot_direction": -0.39989202431974724,
+        "area_weight_mm2": 2.9912955421060516,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 129,
+        "point_mm": [
+          26.666666666666664,
+          13.105320426522342,
+          8.136567582125469
+        ],
+        "normal_dot_direction": -0.3302790619551714,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 130,
+        "point_mm": [
+          13.333333333333332,
+          13.06304757990014,
+          7.993198028215689
+        ],
+        "normal_dot_direction": -0.25881904510251164,
+        "area_weight_mm2": 2.9912955421060325,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 131,
+        "point_mm": [
+          26.666666666666664,
+          13.075950984163931,
+          8.04135418851875
+        ],
+        "normal_dot_direction": -0.25881904510251164,
+        "area_weight_mm2": 2.9912955421060325,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 132,
+        "point_mm": [
+          13.333333333333332,
+          13.031606956911945,
+          7.847070310872443
+        ],
+        "normal_dot_direction": -0.18591160716292207,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 133,
+        "point_mm": [
+          13.333333333333332,
+          13.016756366912375,
+          7.748543083959182
+        ],
+        "normal_dot_direction": -0.11196447610331409,
+        "area_weight_mm2": 2.9912955421060436,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 134,
+        "point_mm": [
+          26.666666666666664,
+          13.040875566274151,
+          7.896056089392536
+        ],
+        "normal_dot_direction": -0.18591160716292207,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 135,
+        "point_mm": [
+          26.666666666666664,
+          13.011174386275005,
+          7.699001635566015
+        ],
+        "normal_dot_direction": -0.11196447610331409,
+        "area_weight_mm2": 2.9912955421060436,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 136,
+        "point_mm": [
+          13.333333333333332,
+          13.001864135212546,
+          7.54982006239095
+        ],
+        "normal_dot_direction": -0.03739119427631226,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 137,
+        "point_mm": [
+          26.666666666666664,
+          13.003728270425093,
+          7.599640124781898
+        ],
+        "normal_dot_direction": -0.03739119427631226,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 138,
+        "point_mm": [
+          13.333333333333332,
+          13.003728270425093,
+          7.4003598752181
+        ],
+        "normal_dot_direction": 0.03739119427631254,
+        "area_weight_mm2": 2.991295542106044,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 7.599640124781899,
+        "reason": null
+      },
+      {
+        "source_face": 139,
+        "point_mm": [
+          26.666666666666664,
+          13.001864135212546,
+          7.450179937609049
+        ],
+        "normal_dot_direction": 0.03739119427631254,
+        "area_weight_mm2": 2.991295542106044,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 7.549820062390951,
+        "reason": null
+      },
+      {
+        "source_face": 140,
+        "point_mm": [
+          13.333333333333332,
+          13.016756366912375,
+          7.251456916040816
+        ],
+        "normal_dot_direction": 0.11196447610331409,
+        "area_weight_mm2": 2.991295542106061,
+        "state": "occluded",
+        "obstruction_face": 133,
+        "obstruction_distance_mm": 0.49708616791836585,
+        "reason": null
+      },
+      {
+        "source_face": 141,
+        "point_mm": [
+          13.333333333333332,
+          13.031606956911947,
+          7.152929689127557
+        ],
+        "normal_dot_direction": 0.18591160716292207,
+        "area_weight_mm2": 2.9912955421060428,
+        "state": "occluded",
+        "obstruction_face": 132,
+        "obstruction_distance_mm": 0.6941406217448924,
+        "reason": null
+      },
+      {
+        "source_face": 142,
+        "point_mm": [
+          26.666666666666664,
+          13.011174386275005,
+          7.300998364433985
+        ],
+        "normal_dot_direction": 0.11196447610331409,
+        "area_weight_mm2": 2.991295542106061,
+        "state": "occluded",
+        "obstruction_face": 135,
+        "obstruction_distance_mm": 0.39800327113203027,
+        "reason": null
+      },
+      {
+        "source_face": 143,
+        "point_mm": [
+          26.666666666666664,
+          13.040875566274151,
+          7.103943910607464
+        ],
+        "normal_dot_direction": 0.18591160716292207,
+        "area_weight_mm2": 2.9912955421060428,
+        "state": "occluded",
+        "obstruction_face": 134,
+        "obstruction_distance_mm": 0.7921121787850751,
+        "reason": null
+      },
+      {
+        "source_face": 144,
+        "point_mm": [
+          13.333333333333332,
+          13.075950984163931,
+          6.958645811481251
+        ],
+        "normal_dot_direction": 0.25881904510252546,
+        "area_weight_mm2": 2.991295542106059,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.041354188518747,
+        "reason": null
+      },
+      {
+        "source_face": 145,
+        "point_mm": [
+          26.666666666666664,
+          13.06304757990014,
+          7.006801971784311
+        ],
+        "normal_dot_direction": 0.25881904510252546,
+        "area_weight_mm2": 2.991295542106059,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 7.993198028215689,
+        "reason": null
+      },
+      {
+        "source_face": 146,
+        "point_mm": [
+          13.333333333333332,
+          13.121786464616967,
+          6.8163751845708695
+        ],
+        "normal_dot_direction": 0.33027906195515816,
+        "area_weight_mm2": 2.9912955421060548,
+        "state": "occluded",
+        "obstruction_face": 127,
+        "obstruction_distance_mm": 1.3672496308582596,
+        "reason": null
+      },
+      {
+        "source_face": 147,
+        "point_mm": [
+          26.666666666666664,
+          13.105320426522342,
+          6.863432417874531
+        ],
+        "normal_dot_direction": 0.33027906195515816,
+        "area_weight_mm2": 2.9912955421060548,
+        "state": "occluded",
+        "obstruction_face": 129,
+        "obstruction_distance_mm": 1.2731351642509379,
+        "reason": null
+      },
+      {
+        "source_face": 148,
+        "point_mm": [
+          13.333333333333332,
+          13.178125677033972,
+          6.677927664932325
+        ],
+        "normal_dot_direction": 0.39989202431974724,
+        "area_weight_mm2": 2.9912955421060516,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.322072335067674,
+        "reason": null
+      },
+      {
+        "source_face": 149,
+        "point_mm": [
+          13.333333333333332,
+          13.221357906940483,
+          6.588155014509921
+        ],
+        "normal_dot_direction": 0.46726862827306015,
+        "area_weight_mm2": 2.991295542106039,
+        "state": "occluded",
+        "obstruction_face": 125,
+        "obstruction_distance_mm": 1.8236899709801566,
+        "reason": null
+      },
+      {
+        "source_face": 150,
+        "point_mm": [
+          26.666666666666664,
+          13.158189089872783,
+          6.723622808099767
+        ],
+        "normal_dot_direction": 0.39989202431974724,
+        "area_weight_mm2": 2.9912955421060516,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.276377191900233,
+        "reason": null
+      },
+      {
+        "source_face": 151,
+        "point_mm": [
+          26.666666666666664,
+          13.244653549685804,
+          6.54407750725496
+        ],
+        "normal_dot_direction": 0.46726862827306015,
+        "area_weight_mm2": 2.991295542106039,
+        "state": "occluded",
+        "obstruction_face": 124,
+        "obstruction_distance_mm": 1.9118449854900783,
+        "reason": null
+      },
+      {
+        "source_face": 152,
+        "point_mm": [
+          13.333333333333332,
+          13.320998031722382,
+          6.41557325591517
+        ],
+        "normal_dot_direction": 0.5320320765153355,
+        "area_weight_mm2": 2.9912955421060503,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.58442674408483,
+        "reason": null
+      },
+      {
+        "source_face": 153,
+        "point_mm": [
+          13.333333333333332,
+          13.377127312599988,
+          6.3332467213426815
+        ],
+        "normal_dot_direction": 0.5938201855735047,
+        "area_weight_mm2": 2.9912955421060454,
+        "state": "occluded",
+        "obstruction_face": 121,
+        "obstruction_distance_mm": 2.3335065573146383,
+        "reason": null
+      },
+      {
+        "source_face": 154,
+        "point_mm": [
+          26.666666666666664,
+          13.294473612076752,
+          6.457786627957585
+        ],
+        "normal_dot_direction": 0.5320320765153355,
+        "area_weight_mm2": 2.9912955421060503,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.542213372042415,
+        "reason": null
+      },
+      {
+        "source_face": 155,
+        "point_mm": [
+          26.666666666666664,
+          13.406732173831966,
+          6.293133558812607
+        ],
+        "normal_dot_direction": 0.5938201855735047,
+        "area_weight_mm2": 2.9912955421060454,
+        "state": "occluded",
+        "obstruction_face": 120,
+        "obstruction_distance_mm": 2.413732882374787,
+        "reason": null
+      },
+      {
+        "source_face": 156,
+        "point_mm": [
+          13.333333333333332,
+          13.501376515914878,
+          6.177443148399617
+        ],
+        "normal_dot_direction": 0.6522874112781171,
+        "area_weight_mm2": 2.991295542106055,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.822556851600382,
+        "reason": null
+      },
+      {
+        "source_face": 157,
+        "point_mm": [
+          26.666666666666664,
+          13.46885677548941,
+          6.215231772341076
+        ],
+        "normal_dot_direction": 0.6522874112781171,
+        "area_weight_mm2": 2.991295542106055,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.784768227658924,
+        "reason": null
+      },
+      {
+        "source_face": 158,
+        "point_mm": [
+          26.666666666666664,
+          13.569149012379615,
+          6.104401768418889
+        ],
+        "normal_dot_direction": 0.7071067811865476,
+        "area_weight_mm2": 2.991295542106015,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.89559823158111,
+        "reason": null
+      },
+      {
+        "source_face": 159,
+        "point_mm": [
+          13.333333333333332,
+          13.60440176841889,
+          6.069149012379619
+        ],
+        "normal_dot_direction": 0.7071067811865476,
+        "area_weight_mm2": 2.991295542106015,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.93085098762038,
+        "reason": null
+      },
+      {
+        "source_face": 160,
+        "point_mm": [
+          26.666666666666664,
+          13.67744314839962,
+          6.001376515914879
+        ],
+        "normal_dot_direction": 0.7579717231454597,
+        "area_weight_mm2": 2.9912955421060574,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.99862348408512,
+        "reason": null
+      },
+      {
+        "source_face": 161,
+        "point_mm": [
+          13.333333333333332,
+          13.715231772341074,
+          5.968856775489409
+        ],
+        "normal_dot_direction": 0.7579717231454597,
+        "area_weight_mm2": 2.9912955421060574,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.03114322451059,
+        "reason": null
+      },
+      {
+        "source_face": 162,
+        "point_mm": [
+          13.333333333333332,
+          13.79313355881261,
+          5.906732173831965
+        ],
+        "normal_dot_direction": 0.8045977797666669,
+        "area_weight_mm2": 2.9912955421060308,
+        "state": "occluded",
+        "obstruction_face": 113,
+        "obstruction_distance_mm": 3.1865356523360724,
+        "reason": null
+      },
+      {
+        "source_face": 163,
+        "point_mm": [
+          26.666666666666664,
+          13.833246721342682,
+          5.877127312599988
+        ],
+        "normal_dot_direction": 0.8045977797666669,
+        "area_weight_mm2": 2.9912955421060308,
+        "state": "occluded",
+        "obstruction_face": 112,
+        "obstruction_distance_mm": 3.2457453748000247,
+        "reason": null
+      },
+      {
+        "source_face": 164,
+        "point_mm": [
+          26.666666666666664,
+          13.91557325591517,
+          5.820998031722381
+        ],
+        "normal_dot_direction": 0.8467241992282816,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "occluded",
+        "obstruction_face": 111,
+        "obstruction_distance_mm": 3.3580039365552365,
+        "reason": null
+      },
+      {
+        "source_face": 165,
+        "point_mm": [
+          13.333333333333332,
+          13.957786627957585,
+          5.794473612076753
+        ],
+        "normal_dot_direction": 0.8467241992282816,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "occluded",
+        "obstruction_face": 109,
+        "obstruction_distance_mm": 3.4110527758464944,
+        "reason": null
+      },
+      {
+        "source_face": 166,
+        "point_mm": [
+          26.666666666666664,
+          14.044077507254961,
+          5.744653549685803
+        ],
+        "normal_dot_direction": 0.8841153935046077,
+        "area_weight_mm2": 2.9912955421060237,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.255346450314196,
+        "reason": null
+      },
+      {
+        "source_face": 167,
+        "point_mm": [
+          13.333333333333332,
+          14.088155014509923,
+          5.721357906940482
+        ],
+        "normal_dot_direction": 0.8841153935046077,
+        "area_weight_mm2": 2.9912955421060237,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.278642093059519,
+        "reason": null
+      },
+      {
+        "source_face": 168,
+        "point_mm": [
+          13.333333333333332,
+          14.223622808099767,
+          5.658189089872781
+        ],
+        "normal_dot_direction": 0.9165622558699762,
+        "area_weight_mm2": 2.9912955421060445,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.341810910127217,
+        "reason": null
+      },
+      {
+        "source_face": 169,
+        "point_mm": [
+          26.666666666666664,
+          14.177927664932326,
+          5.678125677033972
+        ],
+        "normal_dot_direction": 0.9165622558699762,
+        "area_weight_mm2": 2.9912955421060445,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.321874322966028,
+        "reason": null
+      },
+      {
+        "source_face": 170,
+        "point_mm": [
+          13.333333333333332,
+          14.363432417874531,
+          5.6053204265223435
+        ],
+        "normal_dot_direction": 0.9438833303083684,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "occluded",
+        "obstruction_face": 104,
+        "obstruction_distance_mm": 3.7893591469553134,
+        "reason": null
+      },
+      {
+        "source_face": 171,
+        "point_mm": [
+          26.666666666666664,
+          14.316375184570871,
+          5.621786464616967
+        ],
+        "normal_dot_direction": 0.9438833303083684,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "occluded",
+        "obstruction_face": 105,
+        "obstruction_distance_mm": 3.756427070766066,
+        "reason": null
+      },
+      {
+        "source_face": 172,
+        "point_mm": [
+          13.333333333333332,
+          14.506801971784311,
+          5.563047579900142
+        ],
+        "normal_dot_direction": 0.9659258262890688,
+        "area_weight_mm2": 2.9912955421060374,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.436952420099857,
+        "reason": null
+      },
+      {
+        "source_face": 173,
+        "point_mm": [
+          26.666666666666664,
+          14.458645811481253,
+          5.57595098416393
+        ],
+        "normal_dot_direction": 0.9659258262890688,
+        "area_weight_mm2": 2.9912955421060374,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.424049015836069,
+        "reason": null
+      },
+      {
+        "source_face": 174,
+        "point_mm": [
+          13.333333333333332,
+          14.652929689127554,
+          5.531606956911946
+        ],
+        "normal_dot_direction": 0.9825664732332877,
+        "area_weight_mm2": 2.9912955421060254,
+        "state": "occluded",
+        "obstruction_face": 100,
+        "obstruction_distance_mm": 3.936786086176106,
+        "reason": null
+      },
+      {
+        "source_face": 175,
+        "point_mm": [
+          13.333333333333332,
+          14.751456916040812,
+          5.516756366912375
+        ],
+        "normal_dot_direction": 0.9937122098932427,
+        "area_weight_mm2": 2.9912955421060587,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.483243633087623,
+        "reason": null
+      },
+      {
+        "source_face": 176,
+        "point_mm": [
+          26.666666666666664,
+          14.603943910607462,
+          5.540875566274151
+        ],
+        "normal_dot_direction": 0.9825664732332877,
+        "area_weight_mm2": 2.9912955421060254,
+        "state": "occluded",
+        "obstruction_face": 101,
+        "obstruction_distance_mm": 3.9182488674516986,
+        "reason": null
+      },
+      {
+        "source_face": 177,
+        "point_mm": [
+          26.666666666666664,
+          14.800998364433982,
+          5.511174386275007
+        ],
+        "normal_dot_direction": 0.9937122098932427,
+        "area_weight_mm2": 2.9912955421060587,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.488825613724991,
+        "reason": null
+      },
+      {
+        "source_face": 178,
+        "point_mm": [
+          13.333333333333332,
+          14.950179937609047,
+          5.501864135212547
+        ],
+        "normal_dot_direction": 0.9993007047883985,
+        "area_weight_mm2": 2.991295542106027,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.498135864787452,
+        "reason": null
+      },
+      {
+        "source_face": 179,
+        "point_mm": [
+          26.666666666666664,
+          14.900359875218097,
+          5.503728270425094
+        ],
+        "normal_dot_direction": 0.9993007047883985,
+        "area_weight_mm2": 2.991295542106027,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.496271729574907,
+        "reason": null
+      },
+      {
+        "source_face": 180,
+        "point_mm": [
+          13.333333333333332,
+          15.099640124781894,
+          5.503728270425094
+        ],
+        "normal_dot_direction": 0.9993007047883988,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.496271729574907,
+        "reason": null
+      },
+      {
+        "source_face": 181,
+        "point_mm": [
+          26.666666666666664,
+          15.049820062390946,
+          5.501864135212547
+        ],
+        "normal_dot_direction": 0.9993007047883988,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.498135864787452,
+        "reason": null
+      },
+      {
+        "source_face": 182,
+        "point_mm": [
+          13.333333333333332,
+          15.248543083959179,
+          5.516756366912374
+        ],
+        "normal_dot_direction": 0.9937122098932427,
+        "area_weight_mm2": 2.9912955421060237,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.483243633087625,
+        "reason": null
+      },
+      {
+        "source_face": 183,
+        "point_mm": [
+          13.333333333333332,
+          15.34707031087244,
+          5.531606956911945
+        ],
+        "normal_dot_direction": 0.9825664732332882,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "occluded",
+        "obstruction_face": 258,
+        "obstruction_distance_mm": 3.936786086176109,
+        "reason": null
+      },
+      {
+        "source_face": 184,
+        "point_mm": [
+          26.666666666666664,
+          15.199001635566011,
+          5.511174386275006
+        ],
+        "normal_dot_direction": 0.9937122098932427,
+        "area_weight_mm2": 2.9912955421060237,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.488825613724995,
+        "reason": null
+      },
+      {
+        "source_face": 185,
+        "point_mm": [
+          26.666666666666664,
+          15.396056089392534,
+          5.540875566274149
+        ],
+        "normal_dot_direction": 0.9825664732332882,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "occluded",
+        "obstruction_face": 259,
+        "obstruction_distance_mm": 3.9182488674517013,
+        "reason": null
+      },
+      {
+        "source_face": 186,
+        "point_mm": [
+          13.333333333333332,
+          15.541354188518746,
+          5.575950984163929
+        ],
+        "normal_dot_direction": 0.9659258262890688,
+        "area_weight_mm2": 2.9912955421060325,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.424049015836072,
+        "reason": null
+      },
+      {
+        "source_face": 187,
+        "point_mm": [
+          13.333333333333332,
+          15.636567582125467,
+          5.605320426522342
+        ],
+        "normal_dot_direction": 0.9438833303083684,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.394679573477656,
+        "reason": null
+      },
+      {
+        "source_face": 188,
+        "point_mm": [
+          26.666666666666664,
+          15.493198028215687,
+          5.563047579900141
+        ],
+        "normal_dot_direction": 0.9659258262890688,
+        "area_weight_mm2": 2.9912955421060325,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.436952420099859,
+        "reason": null
+      },
+      {
+        "source_face": 189,
+        "point_mm": [
+          13.333333333333332,
+          15.776377191900231,
+          5.6581890898727805
+        ],
+        "normal_dot_direction": 0.9165622558699762,
+        "area_weight_mm2": 2.9912955421060445,
+        "state": "occluded",
+        "obstruction_face": 252,
+        "obstruction_distance_mm": 3.6836218202544386,
+        "reason": null
+      },
+      {
+        "source_face": 190,
+        "point_mm": [
+          26.666666666666664,
+          15.683624815429127,
+          5.6217864646169655
+        ],
+        "normal_dot_direction": 0.9438833303083684,
+        "area_weight_mm2": 2.9912955421060667,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.378213535383033,
+        "reason": null
+      },
+      {
+        "source_face": 191,
+        "point_mm": [
+          26.666666666666664,
+          15.822072335067672,
+          5.678125677033971
+        ],
+        "normal_dot_direction": 0.9165622558699762,
+        "area_weight_mm2": 2.9912955421060445,
+        "state": "occluded",
+        "obstruction_face": 254,
+        "obstruction_distance_mm": 3.6437486459320585,
+        "reason": null
+      },
+      {
+        "source_face": 192,
+        "point_mm": [
+          13.333333333333332,
+          15.955922492745033,
+          5.7446535496857996
+        ],
+        "normal_dot_direction": 0.8841153935046138,
+        "area_weight_mm2": 2.9912955421060383,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 9.2553464503142,
+        "reason": null
+      },
+      {
+        "source_face": 193,
+        "point_mm": [
+          13.333333333333332,
+          16.04221337204241,
+          5.794473612076749
+        ],
+        "normal_dot_direction": 0.8467241992282857,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "occluded",
+        "obstruction_face": 248,
+        "obstruction_distance_mm": 3.411052775846501,
+        "reason": null
+      },
+      {
+        "source_face": 194,
+        "point_mm": [
+          26.666666666666664,
+          15.911844985490074,
+          5.721357906940481
+        ],
+        "normal_dot_direction": 0.8841153935046138,
+        "area_weight_mm2": 2.9912955421060383,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.278642093059519,
+        "reason": null
+      },
+      {
+        "source_face": 195,
+        "point_mm": [
+          26.666666666666664,
+          16.084426744084826,
+          5.820998031722379
+        ],
+        "normal_dot_direction": 0.8467241992282857,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "occluded",
+        "obstruction_face": 249,
+        "obstruction_distance_mm": 3.3580039365552423,
+        "reason": null
+      },
+      {
+        "source_face": 196,
+        "point_mm": [
+          13.333333333333332,
+          16.20686644118739,
+          5.90673217383196
+        ],
+        "normal_dot_direction": 0.8045977797666706,
+        "area_weight_mm2": 2.99129554210602,
+        "state": "occluded",
+        "obstruction_face": 245,
+        "obstruction_distance_mm": 3.1865356523360795,
+        "reason": null
+      },
+      {
+        "source_face": 197,
+        "point_mm": [
+          26.666666666666664,
+          16.166753278657318,
+          5.877127312599985
+        ],
+        "normal_dot_direction": 0.8045977797666706,
+        "area_weight_mm2": 2.99129554210602,
+        "state": "occluded",
+        "obstruction_face": 247,
+        "obstruction_distance_mm": 3.2457453748000304,
+        "reason": null
+      },
+      {
+        "source_face": 198,
+        "point_mm": [
+          13.333333333333332,
+          16.32255685160038,
+          6.001376515914875
+        ],
+        "normal_dot_direction": 0.757971723145447,
+        "area_weight_mm2": 2.9912955421060303,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.998623484085126,
+        "reason": null
+      },
+      {
+        "source_face": 199,
+        "point_mm": [
+          26.666666666666664,
+          16.28476822765892,
+          5.968856775489405
+        ],
+        "normal_dot_direction": 0.757971723145447,
+        "area_weight_mm2": 2.9912955421060303,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 9.031143224510593,
+        "reason": null
+      },
+      {
+        "source_face": 200,
+        "point_mm": [
+          13.333333333333332,
+          16.430850987620378,
+          6.104401768418885
+        ],
+        "normal_dot_direction": 0.7071067811865512,
+        "area_weight_mm2": 2.9912955421060525,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.895598231581113,
+        "reason": null
+      },
+      {
+        "source_face": 201,
+        "point_mm": [
+          13.333333333333332,
+          16.49862348408512,
+          6.177443148399614
+        ],
+        "normal_dot_direction": 0.6522874112781255,
+        "area_weight_mm2": 2.9912955421060787,
+        "state": "occluded",
+        "obstruction_face": 240,
+        "obstruction_distance_mm": 2.645113703200772,
+        "reason": null
+      },
+      {
+        "source_face": 202,
+        "point_mm": [
+          26.666666666666664,
+          16.395598231581104,
+          6.069149012379614
+        ],
+        "normal_dot_direction": 0.7071067811865512,
+        "area_weight_mm2": 2.9912955421060525,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.930850987620385,
+        "reason": null
+      },
+      {
+        "source_face": 203,
+        "point_mm": [
+          13.333333333333332,
+          16.593267826168034,
+          6.293133558812603
+        ],
+        "normal_dot_direction": 0.5938201855734986,
+        "area_weight_mm2": 2.991295542106024,
+        "state": "occluded",
+        "obstruction_face": 238,
+        "obstruction_distance_mm": 2.4137328823747928,
+        "reason": null
+      },
+      {
+        "source_face": 204,
+        "point_mm": [
+          26.666666666666664,
+          16.53114322451059,
+          6.215231772341072
+        ],
+        "normal_dot_direction": 0.6522874112781255,
+        "area_weight_mm2": 2.9912955421060787,
+        "state": "occluded",
+        "obstruction_face": 241,
+        "obstruction_distance_mm": 2.5695364553178535,
+        "reason": null
+      },
+      {
+        "source_face": 205,
+        "point_mm": [
+          26.666666666666664,
+          16.62287268740001,
+          6.333246721342677
+        ],
+        "normal_dot_direction": 0.5938201855734986,
+        "area_weight_mm2": 2.991295542106024,
+        "state": "occluded",
+        "obstruction_face": 239,
+        "obstruction_distance_mm": 2.333506557314649,
+        "reason": null
+      },
+      {
+        "source_face": 206,
+        "point_mm": [
+          13.333333333333332,
+          16.705526387923246,
+          6.4577866279575815
+        ],
+        "normal_dot_direction": 0.5320320765153393,
+        "area_weight_mm2": 2.991295542106084,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.542213372042418,
+        "reason": null
+      },
+      {
+        "source_face": 207,
+        "point_mm": [
+          13.333333333333332,
+          16.755346450314196,
+          6.544077507254959
+        ],
+        "normal_dot_direction": 0.46726862827307175,
+        "area_weight_mm2": 2.9912955421060716,
+        "state": "occluded",
+        "obstruction_face": 235,
+        "obstruction_distance_mm": 1.9118449854900852,
+        "reason": null
+      },
+      {
+        "source_face": 208,
+        "point_mm": [
+          26.666666666666664,
+          16.679001968277618,
+          6.415573255915167
+        ],
+        "normal_dot_direction": 0.5320320765153393,
+        "area_weight_mm2": 2.991295542106084,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.584426744084832,
+        "reason": null
+      },
+      {
+        "source_face": 209,
+        "point_mm": [
+          13.333333333333332,
+          16.82187432296603,
+          6.677927664932323
+        ],
+        "normal_dot_direction": 0.3998920243197445,
+        "area_weight_mm2": 2.9912955421060676,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.322072335067677,
+        "reason": null
+      },
+      {
+        "source_face": 210,
+        "point_mm": [
+          26.666666666666664,
+          16.778642093059517,
+          6.588155014509919
+        ],
+        "normal_dot_direction": 0.46726862827307175,
+        "area_weight_mm2": 2.9912955421060716,
+        "state": "occluded",
+        "obstruction_face": 234,
+        "obstruction_distance_mm": 1.8236899709801606,
+        "reason": null
+      },
+      {
+        "source_face": 211,
+        "point_mm": [
+          26.666666666666664,
+          16.84181091012722,
+          6.723622808099764
+        ],
+        "normal_dot_direction": 0.3998920243197445,
+        "area_weight_mm2": 2.9912955421060676,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.276377191900234,
+        "reason": null
+      },
+      {
+        "source_face": 212,
+        "point_mm": [
+          26.666666666666664,
+          16.878213535383033,
+          6.816375184570868
+        ],
+        "normal_dot_direction": 0.3302790619551605,
+        "area_weight_mm2": 2.9912955421060383,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 8.183624815429132,
+        "reason": null
+      },
+      {
+        "source_face": 213,
+        "point_mm": [
+          13.333333333333332,
+          16.894679573477656,
+          6.863432417874527
+        ],
+        "normal_dot_direction": 0.3302790619551605,
+        "area_weight_mm2": 2.9912955421060383,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 8.13656758212547,
+        "reason": null
+      },
+      {
+        "source_face": 214,
+        "point_mm": [
+          26.666666666666664,
+          16.92404901583607,
+          6.958645811481249
+        ],
+        "normal_dot_direction": 0.2588190451025079,
+        "area_weight_mm2": 2.991295542106067,
+        "state": "occluded",
+        "obstruction_face": 229,
+        "obstruction_distance_mm": 1.0827083770374992,
+        "reason": null
+      },
+      {
+        "source_face": 215,
+        "point_mm": [
+          13.333333333333332,
+          16.936952420099857,
+          7.00680197178431
+        ],
+        "normal_dot_direction": 0.2588190451025079,
+        "area_weight_mm2": 2.991295542106067,
+        "state": "occluded",
+        "obstruction_face": 228,
+        "obstruction_distance_mm": 0.9863960564313834,
+        "reason": null
+      },
+      {
+        "source_face": 216,
+        "point_mm": [
+          26.666666666666664,
+          16.959124433725847,
+          7.103943910607464
+        ],
+        "normal_dot_direction": 0.18591160716293642,
+        "area_weight_mm2": 2.991295542106073,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 7.896056089392536,
+        "reason": null
+      },
+      {
+        "source_face": 217,
+        "point_mm": [
+          13.333333333333332,
+          16.968393043088053,
+          7.152929689127557
+        ],
+        "normal_dot_direction": 0.18591160716293642,
+        "area_weight_mm2": 2.991295542106073,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 7.847070310872441,
+        "reason": null
+      },
+      {
+        "source_face": 218,
+        "point_mm": [
+          26.666666666666664,
+          16.98324363308763,
+          7.251456916040816
+        ],
+        "normal_dot_direction": 0.11196447610331409,
+        "area_weight_mm2": 2.991295542106057,
+        "state": "occluded",
+        "obstruction_face": 91,
+        "obstruction_distance_mm": 7.7485430839591825,
+        "reason": null
+      },
+      {
+        "source_face": 219,
+        "point_mm": [
+          13.333333333333332,
+          16.98882561372499,
+          7.300998364433985
+        ],
+        "normal_dot_direction": 0.11196447610331409,
+        "area_weight_mm2": 2.991295542106057,
+        "state": "occluded",
+        "obstruction_face": 90,
+        "obstruction_distance_mm": 7.699001635566015,
+        "reason": null
+      },
+      {
+        "source_face": 220,
+        "point_mm": [
+          13.333333333333332,
+          16.996271729574907,
+          7.4003598752181
+        ],
+        "normal_dot_direction": 0.03739119427631226,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "occluded",
+        "obstruction_face": 223,
+        "obstruction_distance_mm": 0.19928024956379986,
+        "reason": null
+      },
+      {
+        "source_face": 221,
+        "point_mm": [
+          26.666666666666664,
+          16.998135864787454,
+          7.45017993760905
+        ],
+        "normal_dot_direction": 0.03739119427631226,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "occluded",
+        "obstruction_face": 222,
+        "obstruction_distance_mm": 0.09964012478189933,
+        "reason": null
+      },
+      {
+        "source_face": 222,
+        "point_mm": [
+          26.666666666666664,
+          16.998135864787454,
+          7.54982006239095
+        ],
+        "normal_dot_direction": -0.03739119427631226,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 223,
+        "point_mm": [
+          13.333333333333332,
+          16.996271729574907,
+          7.5996401247819
+        ],
+        "normal_dot_direction": -0.03739119427631226,
+        "area_weight_mm2": 2.991295542106062,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 224,
+        "point_mm": [
+          26.666666666666664,
+          16.98882561372499,
+          7.699001635566015
+        ],
+        "normal_dot_direction": -0.11196447610331409,
+        "area_weight_mm2": 2.991295542106057,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 225,
+        "point_mm": [
+          13.333333333333332,
+          16.98324363308763,
+          7.748543083959184
+        ],
+        "normal_dot_direction": -0.11196447610331409,
+        "area_weight_mm2": 2.991295542106057,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 226,
+        "point_mm": [
+          26.666666666666664,
+          16.968393043088053,
+          7.847070310872443
+        ],
+        "normal_dot_direction": -0.18591160716293642,
+        "area_weight_mm2": 2.991295542106073,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 227,
+        "point_mm": [
+          13.333333333333332,
+          16.959124433725847,
+          7.896056089392536
+        ],
+        "normal_dot_direction": -0.18591160716293642,
+        "area_weight_mm2": 2.991295542106073,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 228,
+        "point_mm": [
+          13.333333333333332,
+          16.936952420099857,
+          7.99319802821569
+        ],
+        "normal_dot_direction": -0.2588190451025079,
+        "area_weight_mm2": 2.991295542106067,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 229,
+        "point_mm": [
+          26.666666666666664,
+          16.92404901583607,
+          8.041354188518751
+        ],
+        "normal_dot_direction": -0.2588190451025079,
+        "area_weight_mm2": 2.991295542106067,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 230,
+        "point_mm": [
+          26.666666666666664,
+          16.894679573477656,
+          8.136567582125473
+        ],
+        "normal_dot_direction": -0.3302790619551628,
+        "area_weight_mm2": 2.991295542106021,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 231,
+        "point_mm": [
+          13.333333333333332,
+          16.878213535383033,
+          8.18362481542913
+        ],
+        "normal_dot_direction": -0.3302790619551628,
+        "area_weight_mm2": 2.991295542106021,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 232,
+        "point_mm": [
+          13.333333333333332,
+          16.84181091012722,
+          8.276377191900234
+        ],
+        "normal_dot_direction": -0.39989202431974186,
+        "area_weight_mm2": 2.991295542106084,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 233,
+        "point_mm": [
+          26.666666666666664,
+          16.82187432296603,
+          8.322072335067677
+        ],
+        "normal_dot_direction": -0.39989202431974186,
+        "area_weight_mm2": 2.991295542106084,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 234,
+        "point_mm": [
+          26.666666666666664,
+          16.778642093059517,
+          8.411844985490081
+        ],
+        "normal_dot_direction": -0.46726862827307175,
+        "area_weight_mm2": 2.9912955421060716,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 235,
+        "point_mm": [
+          13.333333333333332,
+          16.755346450314196,
+          8.455922492745042
+        ],
+        "normal_dot_direction": -0.46726862827307175,
+        "area_weight_mm2": 2.9912955421060716,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 236,
+        "point_mm": [
+          26.666666666666664,
+          16.705526387923246,
+          8.542213372042418
+        ],
+        "normal_dot_direction": -0.532032076515318,
+        "area_weight_mm2": 2.9912955421060463,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 237,
+        "point_mm": [
+          13.333333333333332,
+          16.679001968277618,
+          8.584426744084833
+        ],
+        "normal_dot_direction": -0.532032076515318,
+        "area_weight_mm2": 2.9912955421060463,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 238,
+        "point_mm": [
+          13.333333333333332,
+          16.593267826168034,
+          8.706866441187397
+        ],
+        "normal_dot_direction": -0.5938201855735178,
+        "area_weight_mm2": 2.991295542106052,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 239,
+        "point_mm": [
+          26.666666666666664,
+          16.62287268740001,
+          8.666753278657323
+        ],
+        "normal_dot_direction": -0.5938201855735178,
+        "area_weight_mm2": 2.991295542106052,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 240,
+        "point_mm": [
+          13.333333333333332,
+          16.49862348408512,
+          8.822556851600385
+        ],
+        "normal_dot_direction": -0.6522874112781255,
+        "area_weight_mm2": 2.991295542106092,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 241,
+        "point_mm": [
+          26.666666666666664,
+          16.53114322451059,
+          8.784768227658928
+        ],
+        "normal_dot_direction": -0.6522874112781255,
+        "area_weight_mm2": 2.991295542106092,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 242,
+        "point_mm": [
+          13.333333333333332,
+          16.395598231581104,
+          8.930850987620385
+        ],
+        "normal_dot_direction": -0.7071067811865512,
+        "area_weight_mm2": 2.9912955421060525,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 243,
+        "point_mm": [
+          26.666666666666664,
+          16.430850987620378,
+          8.895598231581113
+        ],
+        "normal_dot_direction": -0.7071067811865512,
+        "area_weight_mm2": 2.9912955421060525,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 244,
+        "point_mm": [
+          13.333333333333332,
+          16.28476822765892,
+          9.031143224510595
+        ],
+        "normal_dot_direction": -0.7579717231454434,
+        "area_weight_mm2": 2.991295542106042,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 245,
+        "point_mm": [
+          13.333333333333332,
+          16.206866441187387,
+          9.09326782616804
+        ],
+        "normal_dot_direction": -0.8045977797666775,
+        "area_weight_mm2": 2.991295542106088,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 246,
+        "point_mm": [
+          26.666666666666664,
+          16.32255685160038,
+          8.998623484085126
+        ],
+        "normal_dot_direction": -0.7579717231454434,
+        "area_weight_mm2": 2.991295542106042,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 247,
+        "point_mm": [
+          26.666666666666664,
+          16.16675327865731,
+          9.122872687400017
+        ],
+        "normal_dot_direction": -0.8045977797666775,
+        "area_weight_mm2": 2.991295542106088,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 248,
+        "point_mm": [
+          13.333333333333332,
+          16.042213372042408,
+          9.205526387923252
+        ],
+        "normal_dot_direction": -0.8467241992282857,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 249,
+        "point_mm": [
+          26.666666666666664,
+          16.084426744084823,
+          9.179001968277623
+        ],
+        "normal_dot_direction": -0.8467241992282857,
+        "area_weight_mm2": 2.991295542106065,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 250,
+        "point_mm": [
+          13.333333333333332,
+          15.911844985490069,
+          9.27864209305952
+        ],
+        "normal_dot_direction": -0.8841153935046138,
+        "area_weight_mm2": 2.9912955421060383,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 251,
+        "point_mm": [
+          26.666666666666664,
+          15.955922492745032,
+          9.255346450314201
+        ],
+        "normal_dot_direction": -0.8841153935046138,
+        "area_weight_mm2": 2.9912955421060383,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 252,
+        "point_mm": [
+          13.333333333333332,
+          15.776377191900224,
+          9.341810910127222
+        ],
+        "normal_dot_direction": -0.9165622558699759,
+        "area_weight_mm2": 2.991295542106084,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 253,
+        "point_mm": [
+          13.333333333333332,
+          15.68362481542912,
+          9.378213535383036
+        ],
+        "normal_dot_direction": -0.943883330308373,
+        "area_weight_mm2": 2.9912955421060548,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 254,
+        "point_mm": [
+          26.666666666666664,
+          15.822072335067665,
+          9.321874322966032
+        ],
+        "normal_dot_direction": -0.9165622558699759,
+        "area_weight_mm2": 2.991295542106084,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 255,
+        "point_mm": [
+          26.666666666666664,
+          15.636567582125458,
+          9.39467957347766
+        ],
+        "normal_dot_direction": -0.943883330308373,
+        "area_weight_mm2": 2.9912955421060548,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 256,
+        "point_mm": [
+          13.333333333333332,
+          15.49319802821568,
+          9.43695242009986
+        ],
+        "normal_dot_direction": -0.9659258262890688,
+        "area_weight_mm2": 2.991295542106067,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 257,
+        "point_mm": [
+          26.666666666666664,
+          15.541354188518739,
+          9.424049015836072
+        ],
+        "normal_dot_direction": -0.9659258262890688,
+        "area_weight_mm2": 2.991295542106067,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 258,
+        "point_mm": [
+          13.333333333333332,
+          15.347070310872432,
+          9.468393043088055
+        ],
+        "normal_dot_direction": -0.9825664732332882,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 259,
+        "point_mm": [
+          26.666666666666664,
+          15.396056089392527,
+          9.45912443372585
+        ],
+        "normal_dot_direction": -0.9825664732332882,
+        "area_weight_mm2": 2.99129554210606,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 260,
+        "point_mm": [
+          26.666666666666664,
+          15.24854308395917,
+          9.483243633087625
+        ],
+        "normal_dot_direction": -0.9937122098932436,
+        "area_weight_mm2": 2.991295542106057,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 261,
+        "point_mm": [
+          13.333333333333332,
+          15.199001635566002,
+          9.488825613724995
+        ],
+        "normal_dot_direction": -0.9937122098932436,
+        "area_weight_mm2": 2.991295542106057,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 262,
+        "point_mm": [
+          26.666666666666664,
+          15.099640124781892,
+          9.496271729574907
+        ],
+        "normal_dot_direction": -0.9993007047883986,
+        "area_weight_mm2": 2.991295542105813,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 263,
+        "point_mm": [
+          13.333333333333332,
+          15.049820062390946,
+          9.498135864787454
+        ],
+        "normal_dot_direction": -0.9993007047883986,
+        "area_weight_mm2": 2.991295542105813,
+        "state": "back_facing",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 264,
+        "point_mm": [
+          40.0,
+          20.94214973973383,
+          4.057850260266167
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525585,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 265,
+        "point_mm": [
+          40.0,
+          21.00992223619857,
+          4.130891640246895
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0666309312964724,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 266,
+        "point_mm": [
+          40.0,
+          20.8691083597531,
+          3.990077763801427
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0073559917415906,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 267,
+        "point_mm": [
+          40.0,
+          21.072046837856014,
+          4.208793426718427
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.086140658613555,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 268,
+        "point_mm": [
+          40.0,
+          20.791206573281563,
+          3.927953162143982
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9679222690099536,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 269,
+        "point_mm": [
+          40.0,
+          21.12817611873362,
+          4.291119961290916
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.098740404794822,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 270,
+        "point_mm": [
+          40.0,
+          20.708880038709076,
+          3.8718238812663763
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309757,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 271,
+        "point_mm": [
+          40.0,
+          21.17799618112457,
+          4.3774108405882926
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.104359706948641,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 272,
+        "point_mm": [
+          40.0,
+          20.622589159411703,
+          3.8220038188754275
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151637,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 273,
+        "point_mm": [
+          40.0,
+          21.22122841103108,
+          4.467183491010696
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1029671396579932,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 274,
+        "point_mm": [
+          40.0,
+          20.5328165089893,
+          3.778771588968917
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876528,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 275,
+        "point_mm": [
+          40.0,
+          21.257631036286895,
+          4.559935867481799
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.094570490724031,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 276,
+        "point_mm": [
+          40.0,
+          20.440064132518195,
+          3.742368963713103
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223889,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 277,
+        "point_mm": [
+          40.0,
+          21.287000478645307,
+          4.6551492610885195
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.079216717613625,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 278,
+        "point_mm": [
+          40.0,
+          20.344850738911475,
+          3.71299952135469
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.682623212171805,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 279,
+        "point_mm": [
+          40.0,
+          21.3091724922713,
+          4.7522911999116735
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.056991684854054,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 280,
+        "point_mm": [
+          40.0,
+          20.247708800088322,
+          3.690827507728698
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277761,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 281,
+        "point_mm": [
+          40.0,
+          21.324023082270873,
+          4.850818426824934
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437912,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 282,
+        "point_mm": [
+          40.0,
+          20.149181573175063,
+          3.675976917729127
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.5334756715910416,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 283,
+        "point_mm": [
+          40.0,
+          25.666666666666668,
+          7.5
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 97.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 284,
+        "point_mm": [
+          40.0,
+          21.331469198120786,
+          4.95017993760905
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.992462737764666,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 285,
+        "point_mm": [
+          40.0,
+          20.04982006239095,
+          3.6685308018792133
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.45295855700763354,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 286,
+        "point_mm": [
+          40.0,
+          21.331469198120786,
+          10.049820062390948
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.992462737764666,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 287,
+        "point_mm": [
+          40.0,
+          21.324023082270873,
+          10.149181573175065
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437912,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 288,
+        "point_mm": [
+          40.0,
+          21.3091724922713,
+          10.247708800088326
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.056991684854054,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 289,
+        "point_mm": [
+          40.0,
+          21.287000478645307,
+          10.344850738911482
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.079216717613625,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 290,
+        "point_mm": [
+          40.0,
+          21.257631036286895,
+          10.4400641325182
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0945704907240252,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 291,
+        "point_mm": [
+          40.0,
+          21.22122841103108,
+          10.532816508989304
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.102967139657999,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 292,
+        "point_mm": [
+          40.0,
+          21.17799618112457,
+          10.622589159411708
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.104359706948641,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 293,
+        "point_mm": [
+          40.0,
+          21.12817611873362,
+          10.708880038709083
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0987404047948102,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 294,
+        "point_mm": [
+          40.0,
+          21.072046837856014,
+          10.791206573281574
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.08614065861356,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 295,
+        "point_mm": [
+          40.0,
+          21.00992223619857,
+          10.869108359753106
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0666309312964783,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 296,
+        "point_mm": [
+          40.0,
+          20.94214973973383,
+          10.942149739733832
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525585,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 297,
+        "point_mm": [
+          40.0,
+          20.8691083597531,
+          11.009922236198573
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0073559917415977,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 298,
+        "point_mm": [
+          40.0,
+          20.791206573281563,
+          11.07204683785602
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.96792226900997,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 299,
+        "point_mm": [
+          40.0,
+          20.708880038709076,
+          11.128176118733625
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309773,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 300,
+        "point_mm": [
+          40.0,
+          20.6225891594117,
+          11.177996181124573
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151631,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 301,
+        "point_mm": [
+          40.0,
+          20.532816508989296,
+          11.221228411031083
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876606,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 302,
+        "point_mm": [
+          40.0,
+          20.440064132518195,
+          11.257631036286899
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223703,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 303,
+        "point_mm": [
+          40.0,
+          20.34485073891147,
+          11.28700047864531
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6826232121718159,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 304,
+        "point_mm": [
+          40.0,
+          20.24770880008832,
+          11.309172492271301
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277763,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 305,
+        "point_mm": [
+          40.0,
+          20.14918157317506,
+          11.324023082270873
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.5334756715910467,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 306,
+        "point_mm": [
+          40.0,
+          20.049820062390946,
+          11.331469198120788
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.452958557007594,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 307,
+        "point_mm": [
+          40.0,
+          15.0,
+          1.8333333333333335
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 82.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 308,
+        "point_mm": [
+          40.0,
+          8.668530801879214,
+          4.950179937609049
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9924627377646602,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 309,
+        "point_mm": [
+          40.0,
+          8.675976917729127,
+          4.850818426824934
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437976,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 310,
+        "point_mm": [
+          40.0,
+          8.690827507728699,
+          4.7522911999116735
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0569916848540353,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 311,
+        "point_mm": [
+          40.0,
+          8.712999521354691,
+          4.65514926108852
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0792167176136254,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 312,
+        "point_mm": [
+          40.0,
+          8.742368963713103,
+          4.5599358674818
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.094570490724037,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 313,
+        "point_mm": [
+          40.0,
+          8.778771588968919,
+          4.467183491010697
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1029671396579874,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 314,
+        "point_mm": [
+          40.0,
+          8.822003818875428,
+          4.377410840588293
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1043597069486293,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 315,
+        "point_mm": [
+          40.0,
+          8.871823881266378,
+          4.291119961290918
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0987404047948102,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 316,
+        "point_mm": [
+          40.0,
+          8.927953162143984,
+          4.2087934267184295
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0861406586135605,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 317,
+        "point_mm": [
+          40.0,
+          8.99007776380143,
+          4.130891640246898
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.066630931296467,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 318,
+        "point_mm": [
+          40.0,
+          9.057850260266168,
+          4.05785026026617
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525471,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 319,
+        "point_mm": [
+          40.0,
+          9.130891640246897,
+          3.9900777638014295
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.007355991741597,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 320,
+        "point_mm": [
+          40.0,
+          9.20879342671843,
+          3.927953162143984
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9679222690099597,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 321,
+        "point_mm": [
+          40.0,
+          9.291119961290919,
+          3.871823881266378
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309774,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 322,
+        "point_mm": [
+          40.0,
+          9.377410840588295,
+          3.8220038188754284
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151706,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 323,
+        "point_mm": [
+          40.0,
+          9.467183491010697,
+          3.778771588968917
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876493,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 324,
+        "point_mm": [
+          40.0,
+          9.5599358674818,
+          3.742368963713103
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223829,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 325,
+        "point_mm": [
+          40.0,
+          9.655149261088521,
+          3.71299952135469
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6826232121718174,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 326,
+        "point_mm": [
+          40.0,
+          9.752291199911673,
+          3.6908275077286996
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277713,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 327,
+        "point_mm": [
+          40.0,
+          9.850818426824933,
+          3.6759769177291286
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.5334756715910534,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 328,
+        "point_mm": [
+          40.0,
+          9.950179937609049,
+          3.6685308018792133
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.45295855700763,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 329,
+        "point_mm": [
+          40.0,
+          4.333333333333334,
+          7.5
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 97.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 330,
+        "point_mm": [
+          40.0,
+          9.95017993760905,
+          11.331469198120788
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.4529585570076282,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 331,
+        "point_mm": [
+          40.0,
+          9.850818426824933,
+          11.324023082270873
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.533475671591055,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 332,
+        "point_mm": [
+          40.0,
+          9.752291199911674,
+          11.309172492271301
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6101735318277762,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 333,
+        "point_mm": [
+          40.0,
+          9.655149261088521,
+          11.28700047864531
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.6826232121718109,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 334,
+        "point_mm": [
+          40.0,
+          9.559935867481801,
+          11.257631036286897
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.7504195446223829,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 335,
+        "point_mm": [
+          40.0,
+          9.4671834910107,
+          11.221228411031081
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8131833845876555,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 336,
+        "point_mm": [
+          40.0,
+          9.377410840588295,
+          11.177996181124572
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.8705637312151757,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 337,
+        "point_mm": [
+          40.0,
+          9.291119961290919,
+          11.128176118733622
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9222396903309773,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 338,
+        "point_mm": [
+          40.0,
+          9.20879342671843,
+          11.072046837856016
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.9679222690099596,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 339,
+        "point_mm": [
+          40.0,
+          9.130891640246897,
+          11.00992223619857
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.007355991741591,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 340,
+        "point_mm": [
+          40.0,
+          9.057850260266168,
+          10.94214973973383
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0403203291525531,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 341,
+        "point_mm": [
+          40.0,
+          15.0,
+          13.166666666666666
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 82.5,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 342,
+        "point_mm": [
+          40.0,
+          8.99007776380143,
+          10.8691083597531
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0666309312964728,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 343,
+        "point_mm": [
+          40.0,
+          8.927953162143984,
+          10.79120657328157
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0861406586135545,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 344,
+        "point_mm": [
+          40.0,
+          8.871823881266378,
+          10.708880038709081
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0987404047948162,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 345,
+        "point_mm": [
+          40.0,
+          8.822003818875428,
+          10.622589159411707
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1043597069486353,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 346,
+        "point_mm": [
+          40.0,
+          8.778771588968919,
+          10.532816508989303
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.1029671396579874,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 347,
+        "point_mm": [
+          40.0,
+          8.742368963713103,
+          10.440064132518199
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.094570490724043,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 348,
+        "point_mm": [
+          40.0,
+          8.712999521354691,
+          10.344850738911477
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0792167176136132,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 349,
+        "point_mm": [
+          40.0,
+          8.690827507728699,
+          10.247708800088324
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0569916848540413,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 350,
+        "point_mm": [
+          40.0,
+          8.675976917729127,
+          10.149181573175065
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 1.0280196838437918,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      },
+      {
+        "source_face": 351,
+        "point_mm": [
+          40.0,
+          8.668530801879214,
+          10.049820062390948
+        ],
+        "normal_dot_direction": 0.0,
+        "area_weight_mm2": 0.992462737764666,
+        "state": "tangent",
+        "obstruction_face": null,
+        "obstruction_distance_mm": null,
+        "reason": null
+      }
+    ],
+    "scope": "deterministic_triangle_interior_samples_and_straight_rays_only",
+    "limitations": [
+      "표면에서 지정 방향으로 뻗은 점·직선의 차폐 검사입니다. 실제 공구의 지름·날·홀더 충돌은 계산하지 않습니다.",
+      "선택한 삼각형 내부의 한 점만 검사합니다. 표본 밖 영역과 같은 면 내부의 다른 위치를 보장하지 않습니다.",
+      "면적 가중 비율은 선택한 표본에 한정되며, 전체 가공 가능 면적률이나 제조 성공 확률이 아닙니다.",
+      "축과 평행한 면은 접선 상태로 분리합니다. 이 결과만으로 측면 밀링 가능 여부를 결정하지 않습니다.",
+      "소재·고정구·공정 순서·공구 강성·공차·표면 품질과 모든 자기교차를 검사하지 않습니다."
+    ],
+    "budget": {
+      "max_samples": 512,
+      "max_faces": 200000,
+      "max_ray_triangle_tests": 20000000,
+      "timeout_s": 10.0
+    },
+    "measurements": {
+      "requested_samples": 352,
+      "selected_samples": 352,
+      "evaluated_samples": 352,
+      "ray_triangle_tests": 30272,
+      "sampled_face_area_fraction": 1.0,
+      "area_weighted_sample_fractions": {
+        "visible": 0.24108835288415162,
+        "occluded": 0.050481656066523696,
+        "back_facing": 0.29157000895067536,
+        "tangent": 0.41685998209864905,
+        "unknown": 0.0
+      },
+      "omitted_face_count": 0,
+      "omitted_face_area_mm2": 0.0,
+      "selected_face_area_mm2": 4977.428339628779,
+      "total_surface_area_mm2": 4977.428339628779,
+      "sample_state_counts": {
+        "visible": 2,
+        "occluded": 84,
+        "back_facing": 86,
+        "tangent": 180,
+        "unknown": 0
+      }
+    },
+    "visible_face_indices": [
+      90,
+      91
+    ],
+    "occluded_face_indices": [
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221
+    ],
+    "back_facing_face_indices": [
+      92,
+      93,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263
+    ],
+    "tangent_face_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      94,
+      95,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351
+    ],
+    "unknown_face_indices": [],
+    "numerical_policy": {
+      "length_tolerance_mm": 4e-09,
+      "angular_dot_tolerance": 1e-10,
+      "source_offset_mm": 0.0,
+      "obstruction_distance": "witnessed_intersection_not_guaranteed_nearest"
+    },
+    "elapsed_seconds": 0.019353900000169233
+  },
+  "sources": [
+    {
+      "id": "CNC_GEOMETRY",
+      "title": "Protolabs — Design for Machining Toolkit",
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/",
+      "scope": "Internal corners, deep features and access motivate checks. Service-specific limits are not universal limits."
+    },
+    {
+      "id": "CNC_CORNER",
+      "title": "Protolabs Network — Sharp corners in CNC machining",
+      "url": "https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/",
+      "scope": "Geometric cutter radius constraint; not a prediction of stability, surface quality or time."
+    },
+    {
+      "id": "CNC_TOOL_DIMENSIONS",
+      "title": "Harvey Performance — The Anatomy of an End Mill",
+      "url": "https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/",
+      "scope": "Cutting length, overall length and length below shank are distinct. The entered tip-to-holder reach is an explicit user condition, not an inferred catalog value."
+    },
+    {
+      "id": "CNC_FACE_RECOGNITION",
+      "title": "Yeo et al. — Machining feature recognition based on deep neural networks to support tight integration with 3D CAD systems (2021)",
+      "url": "https://www.nature.com/articles/s41598-021-01313-3",
+      "scope": "원통 특징이 여러 B-rep 면으로 표현될 수 있다는 배경 근거입니다. 현재 코드는 면 구간을 측정하며 이 논문의 DNN·17종 특징 분류기를 구현하지 않습니다. 논문의 인식률은 가공 성공률이 아닙니다.",
+      "locator": "제공 PDF 5–9쪽의 면 표현; 13–17쪽의 분류 평가",
+      "access": "2026-09-21 제공 전문 20쪽 검토; 핵심 혼동행렬·표 원페이지 대조",
+      "local_path": "references/machining/Machining Feature Recognition Based on Deep Neural Networks to Support Tight Integration with 3D CAD Systems.pdf"
+    },
+    {
+      "id": "CNC_ACCESS_SCOPE",
+      "title": "Autodesk Fusion — Shaft and Holder",
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm",
+      "scope": "Actual shaft/holder collision checks involve toolpath and clearance conditions. This source does not validate the implementation's sampled point-ray algorithm."
+    },
+    {
+      "id": "CNC_SPATIAL_PLANNING",
+      "title": "Nelaturi et al. (2015) — Automatic Spatial Planning for Machining Operations",
+      "url": null,
+      "scope": "점의 직선 가시성과 두께가 있는 공구의 접근은 다릅니다. 현재 표본 ray 검사는 초기 차폐 관측이며, 논문의 유한 공구 제거 체적·공정 순서·고정구 계획을 구현하지 않습니다.",
+      "locator": "제공 PDF 2–3쪽, Fig. 1–2: 무한히 가는 공구와 유한 공구의 차이",
+      "access": "2026-09-21 제공 전문 6쪽 검토·핵심 도해 대조",
+      "local_path": "references/machining/Automatic Spatial Planning for Machining Operations.pdf"
+    },
+    {
+      "id": "CNC_MRSEV",
+      "title": "Gupta et al. — Building MRSEV Models for CAM Applications",
+      "url": null,
+      "scope": "가공 특징은 면 하나와 같지 않으며 소재·제거 체적·접근 체적이 필요합니다. 현재 제한 포켓과 원통면 검출은 이 보고서의 일반 특징 인식·공정 계획 구현이 아닙니다.",
+      "locator": "제공 보고서 PDF 11–21쪽; 30–31쪽 구현 한계",
+      "access": "2026-09-21 제공 스캔 36쪽 OCR 검토·정의/알고리즘/도해 원페이지 대조",
+      "local_path": "references/machining/Building MRSEV Models for CAM Applications.pdf"
+    },
+    {
+      "id": "CNC_CUTTING_PHYSICS",
+      "title": "Budak (2006) — Analytical Models for High Performance Milling. Part I",
+      "url": "https://doi.org/10.1016/j.ijmachtools.2005.09.009",
+      "scope": "절삭력·변형·공차 예측에는 절삭 계수, 이송·절입, 공구/홀더/공작물 강성이 필요합니다. 현재 치수 비교에는 이 물리 모델이 포함되어 있지 않습니다.",
+      "locator": "제공 PDF 2–4쪽 힘·보정, 5–8쪽 강성·변형",
+      "access": "2026-09-21 제공 전문 11쪽 검토·수식/단위 대조",
+      "local_path": "references/machining/Analytical Models for High Performance Milling. Part I - Cutting Forces, Structural Deformations and Tolerance Integrity.pdf"
+    },
+    {
+      "id": "CNC_GPS_REQUIREMENTS",
+      "title": "KS A ISO 8015:2011 — GPS 기본사항·개념·원칙·규칙",
+      "url": null,
+      "scope": "도면의 명세와 실제 검증을 구분하는 근거입니다. 공차·PMI·데이텀·실측 없이 CAD 명목 치수로 공차 적합이나 가공 성공률을 계산하지 않습니다. 표준의 100% 가정은 실물 성공률이 아닙니다.",
+      "locator": "제공 PDF §4.4, §§5.3, 5.5, 5.10, 5.13; 국내 2023 개정판",
+      "access": "2026-09-21 제공 전페이지 캡처 21쪽 검토; 워터마크/OCR 한계 있음",
+      "local_path": "references/machining/KS A ISO 8015 전문 캡쳐본.pdf"
+    }
+  ],
+  "numerical_policy": {
+    "length_absolute_comparison_mm": 1e-09,
+    "comparison_relative_tolerance": 1e-10,
+    "axis_sine_tolerance": 1e-08,
+    "axis_angle_tolerance_deg": 5.729577951308232e-07,
+    "boundary_scope": "Floating-point comparison policy only; boundary cases do not establish design tolerance, machining clearance or feasibility."
+  },
+  "scope": "Fixed-axis geometric review; not machining certification or success probability.",
+  "unassessed": [
+    "공구·홀더·고정구의 실제 경로 충돌",
+    "소재와 고정·가공 순서",
+    "절삭력·처짐·진동·표면 품질",
+    "공차와 PMI",
+    "분할·자유곡면 포켓 및 교차 홀",
+    "가공 시간·비용·성공 확률"
+  ],
+  "code_revision": "0695355499010b702c894ce30bf5b238951f070094fee2f9e60c0880d84b4847",
+  "learned_review": {
+    "schema_version": "dfm-learned-review-1",
+    "status": "partial",
+    "model": {
+      "id": "local-rule-actions-2026-09-29-v1",
+      "algorithm": "validation-selected decision trees / random forests",
+      "sha256": "b4460a2e4cfd9c32585bfcc9b88a93c5f8d63951eb20057a1e368a6882684482",
+      "teacher_sha256": {
+        "amdfm/analysis.py": "be11350875703db1e160f9d1e822defac402b66bf1906de6774a7af910ee6740",
+        "amdfm/detail_summary.py": "e826adaade8dfe3fdeed68a5fd5ce781204359944a9447378c18fb675c072ae1",
+        "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+        "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+        "dfm/accessibility.py": "79ef902e175da946e0accf251910e61f5b12bc4263139dfd766b9d316516bb7e",
+        "dfm/learned_review.py": "d6c7dab34e731e3f258237acc5311ab890a176e99f8d3826dd61725bfd6f4123"
+      },
+      "training_rows": 55000,
+      "validation": {
+        "scope": "teacher rule/action fidelity on synthetic primitive measurements; not CAD recognition accuracy",
+        "splits": {
+          "test": {
+            "rows": 16500,
+            "exact_action_matches": 16500,
+            "issue_positive_rows": 10700,
+            "issue_clear_rows": 5800,
+            "missed_issue_rows": 0,
+            "false_positive_rows": 0,
+            "missing_any_action_rows": 0,
+            "in_domain_rows": 16488,
+            "out_of_domain_rows": 12,
+            "json_export_mismatch_rows": 0,
+            "exact_action_accuracy": 1.0
+          },
+          "boundary": {
+            "rows": 5500,
+            "exact_action_matches": 5500,
+            "issue_positive_rows": 3019,
+            "issue_clear_rows": 2481,
+            "missed_issue_rows": 0,
+            "false_positive_rows": 0,
+            "missing_any_action_rows": 0,
+            "in_domain_rows": 5500,
+            "out_of_domain_rows": 0,
+            "json_export_mismatch_rows": 0,
+            "exact_action_accuracy": 1.0
+          },
+          "scale_holdout": {
+            "rows": 5500,
+            "exact_action_matches": 5500,
+            "issue_positive_rows": 3650,
+            "issue_clear_rows": 1850,
+            "missed_issue_rows": 0,
+            "false_positive_rows": 0,
+            "missing_any_action_rows": 0,
+            "in_domain_rows": 4696,
+            "out_of_domain_rows": 804,
+            "json_export_mismatch_rows": 0,
+            "exact_action_accuracy": 1.0
+          }
+        }
+      }
+    },
+    "items": [
+      {
+        "finding_id": "cnc_holes",
+        "label": "구멍과 공구",
+        "state": "confirmed",
+        "origin": "learned_verified",
+        "predicted_issue": true,
+        "action_id": "change_setup",
+        "action_ids": [
+          "change_setup"
+        ],
+        "model_action_ids": [
+          "change_setup"
+        ],
+        "title": "다른 접근 방향 필요",
+        "action": "강조된 위치를 향하는 방향 또는 재고정 방향을 비교하세요.",
+        "evidence": [
+          "선택 축과 최대 90° 차이",
+          "최소 지름 4 mm / 공구 미입력",
+          "최장 원통 구간 40 mm / 돌출 미입력"
+        ],
+        "agreement": true,
+        "scope": "일부 측정 범위",
+        "reason": "공구 조건 또는 원통면 미확인",
+        "evaluated_rows": 1,
+        "learned_rows": 1,
+        "fallback_rows": 0,
+        "recommendations": [
+          {
+            "id": "change_setup",
+            "title": "다른 접근 방향 필요",
+            "action": "강조된 위치를 향하는 방향 또는 재고정 방향을 비교하세요."
+          }
+        ],
+        "disagreement_rows": 0,
+        "complete": false,
+        "prediction_complete": true
+      },
+      {
+        "finding_id": "cnc_curved_corners",
+        "label": "내부 반경",
+        "state": "clear",
+        "origin": "rule_fallback",
+        "predicted_issue": false,
+        "action_id": null,
+        "action_ids": [],
+        "model_action_ids": [],
+        "title": "내부 반경 · 인식 범위의 수정 후보 없음",
+        "action": "다른 검토 항목을 확인하세요",
+        "evidence": [
+          "오목 원통면 0개"
+        ],
+        "agreement": null,
+        "scope": "특징 인식 범위",
+        "reason": "인식 범위에 해당 특징이 없습니다",
+        "evaluated_rows": 0,
+        "learned_rows": 0,
+        "fallback_rows": 0,
+        "recommendations": []
+      },
+      {
+        "finding_id": "cnc_rectangular_pockets",
+        "label": "포켓",
+        "state": "clear",
+        "origin": "rule_fallback",
+        "predicted_issue": false,
+        "action_id": null,
+        "action_ids": [],
+        "model_action_ids": [],
+        "title": "포켓 · 인식 범위의 수정 후보 없음",
+        "action": "다른 검토 항목을 확인하세요",
+        "evidence": [
+          "직사각 포켓 0개"
+        ],
+        "agreement": null,
+        "scope": "특징 인식 범위",
+        "reason": "인식 범위에 해당 특징이 없습니다",
+        "evaluated_rows": 0,
+        "learned_rows": 0,
+        "fallback_rows": 0,
+        "recommendations": []
+      },
+      {
+        "finding_id": "cnc_visibility",
+        "label": "접근 방향",
+        "state": "confirmed",
+        "origin": "learned_verified",
+        "predicted_issue": true,
+        "action_id": "change_setup",
+        "action_ids": [
+          "change_setup"
+        ],
+        "model_action_ids": [
+          "change_setup"
+        ],
+        "title": "다른 접근 방향 필요",
+        "action": "강조된 위치를 향하는 방향 또는 재고정 방향을 비교하세요.",
+        "evidence": [
+          "가려진 표본 84 / 확인한 표본 352개"
+        ],
+        "agreement": true,
+        "scope": "측정 범위",
+        "reason": "",
+        "evaluated_rows": 352,
+        "learned_rows": 352,
+        "fallback_rows": 0,
+        "recommendations": [
+          {
+            "id": "change_setup",
+            "title": "다른 접근 방향 필요",
+            "action": "강조된 위치를 향하는 방향 또는 재고정 방향을 비교하세요."
+          }
+        ],
+        "disagreement_rows": 0,
+        "complete": true,
+        "prediction_complete": true
+      }
+    ],
+    "summary": {
+      "confirmed": 2,
+      "clear": 2,
+      "review": 0,
+      "unavailable": 0,
+      "learned_verified": 2,
+      "rule_fallback": 2
+    },
+    "note": "내장 지도학습 모델의 개선 후보를 현재 측정값·입력 기준으로 재확인합니다."
+  }
+}

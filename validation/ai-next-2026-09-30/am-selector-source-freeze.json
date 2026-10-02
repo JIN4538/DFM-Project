@@ -1,0 +1,20 @@
+{
+  "existing_model_sha256": {
+    "data/models/neural_orientation_external_v2.json": "4f7093193a5210033bd9b107441c99cb06f5560e00903c51de100ca3d00e436a",
+    "data/models/neural_orientation_external_v3.json": "cbd330f75a6711930bb53ac124c2cb03e6ee7eb6ea8f4c1e19abc41218707da7",
+    "data/models/neural_orientation_external_v4.json": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64"
+  },
+  "source_sha256": {
+    "amdfm/proposal_selector.py": "09e282082f0d95eec5681f0db3c1688fbe7dca6f81dbc8b4d1f4acc6eb351f54",
+    "amdfm/geometry_guided_search.py": "634d8b110f3f93e96d537197ad5109576c14f06076ac78dd0b03af7eab642920",
+    "scripts/prepare_am_selector.py": "ef214ad097ad99e4f1f3cef2f3b7fd1200ed23d198bf9f385a51bb9e37924603",
+    "scripts/train_am_selector.py": "e28637a9560494b8bcae266f9cc2595269d004397635c0ad4e76b007edbcc902",
+    "scripts/benchmark_am_selector.py": "dae70c4cd85dab6d378750059c2d63cdd09995b10ffec32c62b0aa596a5c123f",
+    "scripts/summarize_am_selector.py": "73e59c1b92c53a018c891325e9546c23f1b9f0098c48fe18fdb8b51cc89e7055",
+    "tests_v3/test_am_proposal_selector.py": "03c30786b98b7a252db876597c56af64716c9885f429acb97bde524ec4e01532",
+    "tests_v3/test_geometry_guided_search.py": "87b1a241c72c25afaf6c0c754b3f199cdb78bf47222fd59770b4f21dda653253"
+  },
+  "feature_contract": "71f73d7feb58efe059810eba11714b30556a73a710d881ca88a20b4396bbfd04",
+  "policy_freeze_sha256": "70901d94c19f449206f23754ad6e065934f470453ac7ca614a57083d61b3bc83",
+  "product_integration": false
+}

@@ -1,0 +1,80 @@
+{
+  "evaluation": "held-out grouped generated geometry; objectives disclosed, not human expert labels",
+  "shapes": 120,
+  "scenarios": 960,
+  "added_measurement_budget": 12,
+  "normalized_surrogate_mae": {
+    "height": 0.03252784464158083,
+    "overhang": 0.05235671040060443
+  },
+  "methods": {
+    "baseline_26": {
+      "mean_regret": 0.21372407408306734,
+      "mean_improvement": 0.0,
+      "improving_scenarios": 0
+    },
+    "facet_seed_only": {
+      "mean_regret": 0.01042766689214138,
+      "mean_improvement": 0.20329640719092595,
+      "improving_scenarios": 597
+    },
+    "neural": {
+      "mean_regret": 0.004065300265577677,
+      "mean_improvement": 0.20965877381748968,
+      "improving_scenarios": 682
+    },
+    "random": {
+      "mean_regret": 0.008905224481632567,
+      "mean_improvement": 0.20481884960143482,
+      "improving_scenarios": 635
+    },
+    "uniform": {
+      "mean_regret": 0.00942521851810279,
+      "mean_improvement": 0.20429885556496458,
+      "improving_scenarios": 634
+    },
+    "interpolation": {
+      "mean_regret": 0.005339379863929368,
+      "mean_improvement": 0.20838469421913797,
+      "improving_scenarios": 705
+    },
+    "neural_sphere_only": {
+      "mean_regret": 0.19193139597354023,
+      "mean_improvement": 0.02179267810952714,
+      "improving_scenarios": 410
+    }
+  },
+  "neural_vs": {
+    "random": {
+      "better": 89,
+      "equal": 851,
+      "worse": 20,
+      "mean_score_delta": -0.004839924216054892
+    },
+    "uniform": {
+      "better": 89,
+      "equal": 841,
+      "worse": 30,
+      "mean_score_delta": -0.005359918252525115
+    },
+    "interpolation": {
+      "better": 65,
+      "equal": 825,
+      "worse": 70,
+      "mean_score_delta": -0.0012740795983516918
+    }
+  },
+  "elapsed_s": 101.21899999999982,
+  "model_sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+  "training_samples": 20922,
+  "validation_samples": 5204,
+  "training_groups": 192,
+  "validation_groups": 48,
+  "export_max_abs_error": {
+    "height": 0.0,
+    "overhang": 0.0
+  },
+  "source_frozen_during_run": true,
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5"
+}

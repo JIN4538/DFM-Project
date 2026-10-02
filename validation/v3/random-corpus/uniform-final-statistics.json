@@ -1,0 +1,1328 @@
+{
+  "source_audit": "study/random-shape-audit/final-01",
+  "source_summary_sha256": "232487c2e83066b3075c8816849174a2fae8540cfc7a4818fb8cbd57cb512776",
+  "source_manifest_sha256": "01e652fe1e78ccb96073bd047a227fd5eb9bfd3863c52971495c15284ab1cb54",
+  "source_code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+  "inventory_count": 31,
+  "shape_count": 26,
+  "format_counts": {
+    ".stp": 19,
+    ".txt": 5,
+    ".stl": 4,
+    ".step": 2,
+    ".3mf": 1
+  },
+  "all_original_files_unchanged": true,
+  "settings": {
+    "jobs": 2,
+    "file_timeout": 7200.0,
+    "cad_timeout": 180.0,
+    "detail_timeout": 90.0,
+    "section_samples": 64,
+    "deflection": 0.05,
+    "detail_processes": [
+      "MEX",
+      "VPP",
+      "PBF_POLYMER",
+      "PBF_METAL"
+    ],
+    "build_volume_mm": null,
+    "orientation_base_candidates": 26,
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "layer_limit": 1500
+  },
+  "geometric_target_count": 186,
+  "process_case_count": 744,
+  "statuses": {
+    "file_status": {
+      "reviewed": 26
+    },
+    "case_status": {
+      "reviewed": 744
+    },
+    "section_status": {
+      "unknown": 72,
+      "complete": 664,
+      "partial": 8
+    },
+    "wall_status": {
+      "unknown": 72,
+      "measured": 308,
+      "partial": 364
+    },
+    "layer_status": {
+      "unknown": 13,
+      "not_applicable": 558,
+      "complete": 164,
+      "unavailable": 8,
+      "partial": 1
+    },
+    "independent_arithmetic_failures": 2
+  },
+  "independent_checks": {
+    "numerical_arithmetic_failure_count": 0,
+    "process_scope_failure_count": 2,
+    "scope_failures": [
+      {
+        "file_id": "file_002",
+        "case": "whole_PBF_POLYMER",
+        "check": "polymer_PBF_overhang_scope"
+      },
+      {
+        "file_id": "file_015",
+        "case": "whole_PBF_POLYMER",
+        "check": "polymer_PBF_overhang_scope"
+      }
+    ],
+    "max_height_error_mm": 9.094947017729282e-13,
+    "max_projection_error_mm2": 1.1641532182693481e-10,
+    "max_tetra_vs_report_volume_absolute_difference_mm3": 1.9848812371492386e-08
+  },
+  "process_statuses": {
+    "MEX": {
+      "review": {
+        "geometry_review": 173,
+        "partial_geometry": 13
+      },
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "layer": {
+        "complete": 164,
+        "unknown": 13,
+        "unavailable": 8,
+        "partial": 1
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      }
+    },
+    "PBF_METAL": {
+      "review": {
+        "geometry_review": 173,
+        "partial_geometry": 13
+      },
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "layer": {
+        "not_applicable": 186
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      }
+    },
+    "PBF_POLYMER": {
+      "review": {
+        "geometry_review": 173,
+        "partial_geometry": 13
+      },
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "layer": {
+        "not_applicable": 186
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      }
+    },
+    "VPP": {
+      "review": {
+        "geometry_review": 173,
+        "partial_geometry": 13
+      },
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "layer": {
+        "not_applicable": 186
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      }
+    }
+  },
+  "files": [
+    {
+      "id": "file_001",
+      "relative_path": "11.1 Mesh_Arm_2.stp",
+      "sha256": "0958a7ed349b7d757c3687b3d2d7c7c5f556a2f572dcd24535d8b56afa125665",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        137.99702507375892,
+        372.97533291401174,
+        52.38750011279599
+      ],
+      "triangle_count": 111764,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 85.40863760000047,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_002",
+      "relative_path": "12.1 Bracket.stp",
+      "sha256": "ee9ee6319d5c9153960a15fc2f719bb2567797e37f2bc0e0b656dbb94b783110",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        55.0,
+        55.0,
+        40.0
+      ],
+      "triangle_count": 220,
+      "solid_count": 0,
+      "cad_geometry_kind": "surface",
+      "case_count": 4,
+      "elapsed_seconds": 4.587864000000081,
+      "statuses": {
+        "review": {
+          "partial_geometry": 4
+        },
+        "wall": {
+          "unknown": 4
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "unknown": 4
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "곡면 전용 STEP은 재료 내부가 정의되지 않습니다. 두께·재료 단면·층간 판정에는 유효한 솔리드가 필요합니다.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_002/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_003",
+      "relative_path": "13.1 Submodelv150.stp",
+      "sha256": "98365b9ff66f6bac8ade7853981697bef6abac878d8d6631a136194d9a12da4f",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        84.99997523283514,
+        84.99998473126155,
+        30.024042738219073
+      ],
+      "triangle_count": 8930,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 25.55927040000006,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_004",
+      "relative_path": "191222362-19-flange_h204-6_3-uf31-225-ga65/flange_h204-6_3-uf31-225-ga65.stp",
+      "sha256": "1586d238b7ab3f5581d09d2275a67b1a9ed4b7d60cb5292bf718ca18a3cb0745",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        450.0,
+        450.0,
+        338.5
+      ],
+      "triangle_count": 34918,
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "case_count": 12,
+      "elapsed_seconds": 70.78157939999983,
+      "statuses": {
+        "review": {
+          "geometry_review": 12
+        },
+        "wall": {
+          "unknown": 4,
+          "measured": 8
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 9,
+          "unavailable": 1,
+          "complete": 1
+        },
+        "section": {
+          "unknown": 4,
+          "complete": 8
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_004/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": [
+        {
+          "body": 1,
+          "expected_layers": 1693,
+          "reason": "요청된 1,693개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_004/body_001_MEX_layers.json"
+        }
+      ]
+    },
+    {
+      "id": "file_006",
+      "relative_path": "191222516-19-cooling_fan_uf21-h204-6_3/cooling_fan_uf21-h204-6_3.stp",
+      "sha256": "a7e5a80f3be0af7faa60fc99f5ff5c9938582324c7a57be22a87af9aefdabe97",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        310.0,
+        390.0,
+        365.0
+      ],
+      "triangle_count": 2580,
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "case_count": 12,
+      "elapsed_seconds": 45.34630039999956,
+      "statuses": {
+        "review": {
+          "geometry_review": 12
+        },
+        "wall": {
+          "unknown": 4,
+          "measured": 8
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 9,
+          "complete": 1,
+          "unavailable": 1
+        },
+        "section": {
+          "unknown": 4,
+          "complete": 8
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_006/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": [
+        {
+          "body": 2,
+          "expected_layers": 1825,
+          "reason": "요청된 1,825개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_006/body_002_MEX_layers.json"
+        }
+      ]
+    },
+    {
+      "id": "file_008",
+      "relative_path": "191222528-19-gearbox_b204hs_a-6_3/gearbox_b204hs_a-6_3.stp",
+      "sha256": "0b79c26cb290d35c84fba0d8e0a1a58973ce2adc552e4bcb2c61aa4d5ce06759",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        787.0,
+        400.0,
+        452.0
+      ],
+      "triangle_count": 223054,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 62.63750100000016,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "partial": 4
+        },
+        "layer": {
+          "unavailable": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": [
+        {
+          "body": null,
+          "expected_layers": 2260,
+          "reason": "요청된 2,260개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_008/whole_MEX_layers.json"
+        }
+      ]
+    },
+    {
+      "id": "file_010",
+      "relative_path": "191223275-19-e_00300_010_a/E_00300_010_A.stp",
+      "sha256": "72e9d5de49d4a22cf09e98216dd3a5e7b2f54ee8c2dc570dad81658129fe2d99",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        32.0,
+        32.0,
+        50.00000000000001
+      ],
+      "triangle_count": 16046,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 27.853184599999622,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_012",
+      "relative_path": "191223310-19-900-602/900-602.stp",
+      "sha256": "a82f75d019b5e4b2f30a2f856413c10d4a0b260bae2329e43d56518c330e5797",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        30.0,
+        30.0,
+        6000.0
+      ],
+      "triangle_count": 4824,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 33.13068789999943,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "unavailable": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": [
+        {
+          "body": null,
+          "expected_layers": 30000,
+          "reason": "요청된 30,000개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_012/whole_MEX_layers.json"
+        }
+      ]
+    },
+    {
+      "id": "file_014",
+      "relative_path": "2.1 Cap_fillets.stp",
+      "sha256": "4b98de09f4ff958974ebf92e298dde2210b6e2a5bbdddb82a22634ac1e8883c8",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "triangle_count": 38460,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 26.976222399999642,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_015",
+      "relative_path": "3.1 Gear_Set_2D.stp",
+      "sha256": "798e0310104322b54261ae3ffe028a24502f21e0a46a0bb65e161cbbd2283a0f",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        107.51532523473489,
+        127.76532523473651,
+        0.0
+      ],
+      "triangle_count": 1572,
+      "solid_count": 0,
+      "cad_geometry_kind": "surface",
+      "case_count": 4,
+      "elapsed_seconds": 2.6572126000000935,
+      "statuses": {
+        "review": {
+          "partial_geometry": 4
+        },
+        "wall": {
+          "unknown": 4
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "unknown": 4
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "곡면 전용 STEP은 재료 내부가 정의되지 않습니다. 두께·재료 단면·층간 판정에는 유효한 솔리드가 필요합니다.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_015/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_016",
+      "relative_path": "3.3 Bolt_Plates.stp",
+      "sha256": "28c5321582fb4441da4976d88d700b2bfb8d7aa2632ec6d97b163f0432b3b391",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        160.0,
+        60.0,
+        55.00000000000001
+      ],
+      "triangle_count": 8840,
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "case_count": 12,
+      "elapsed_seconds": 69.74014330000045,
+      "statuses": {
+        "review": {
+          "geometry_review": 12
+        },
+        "wall": {
+          "unknown": 4,
+          "measured": 8
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 9,
+          "complete": 2
+        },
+        "section": {
+          "unknown": 4,
+          "complete": 8
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_016/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_017",
+      "relative_path": "3.4 Valve_RM_20130113.stp",
+      "sha256": "dff5b66f1ffd4dee39e9c3e1658763a0e4df2f14e105897d6e347fc2a6334a1d",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        119.98753964279678,
+        220.0,
+        183.303278030101
+      ],
+      "triangle_count": 135794,
+      "solid_count": 22,
+      "cad_geometry_kind": "solid",
+      "case_count": 92,
+      "elapsed_seconds": 367.40203910000037,
+      "statuses": {
+        "review": {
+          "partial_geometry": 8,
+          "geometry_review": 84
+        },
+        "wall": {
+          "unknown": 8,
+          "measured": 84
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 69,
+          "complete": 22
+        },
+        "section": {
+          "unknown": 8,
+          "complete": 84
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_017/whole_MEX_sections.json"
+        },
+        {
+          "body": 1,
+          "status": "unknown",
+          "reason": "입력 폐곡면·면 방향이 확정되지 않아 재료 단면 집계를 보류했습니다.",
+          "complete_samples": 0,
+          "requested_samples": 64,
+          "source_result": "file_017/body_001_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_018",
+      "relative_path": "4.2 assembly_solid.stp",
+      "sha256": "5ce198fa86371feec5ecdfbfd860c94d58b788b19227d9795a6bc177e9379709",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        200.0,
+        140.0,
+        190.0
+      ],
+      "triangle_count": 134450,
+      "solid_count": 3,
+      "cad_geometry_kind": "solid",
+      "case_count": 16,
+      "elapsed_seconds": 110.35164350000014,
+      "statuses": {
+        "review": {
+          "partial_geometry": 4,
+          "geometry_review": 12
+        },
+        "wall": {
+          "unknown": 4,
+          "partial": 4,
+          "measured": 8
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 12,
+          "partial": 1,
+          "complete": 2
+        },
+        "section": {
+          "unknown": 4,
+          "complete": 12
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_018/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_019",
+      "relative_path": "7.1 Pump_assy_3.stp",
+      "sha256": "d073299876db256ed5db8a00904efa0184ed789007630157bebd3c5df5df755e",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        229.9621738118068,
+        199.99356117916403,
+        87.01
+      ],
+      "triangle_count": 134912,
+      "solid_count": 5,
+      "cad_geometry_kind": "solid",
+      "case_count": 24,
+      "elapsed_seconds": 164.8852440999999,
+      "statuses": {
+        "review": {
+          "partial_geometry": 8,
+          "geometry_review": 16
+        },
+        "wall": {
+          "unknown": 8,
+          "measured": 16
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 18,
+          "complete": 5
+        },
+        "section": {
+          "unknown": 8,
+          "complete": 16
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_019/whole_MEX_sections.json"
+        },
+        {
+          "body": 2,
+          "status": "unknown",
+          "reason": "입력 폐곡면·면 방향이 확정되지 않아 재료 단면 집계를 보류했습니다.",
+          "complete_samples": 0,
+          "requested_samples": 64,
+          "source_result": "file_019/body_002_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_020",
+      "relative_path": "7.2 Flange Mount.stp",
+      "sha256": "89a01cd65d0dc6a1b2014ea1a03eed2297f588cdabe0a385249d3fd4ef663b52",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        100.0,
+        100.0,
+        70.0
+      ],
+      "triangle_count": 29740,
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "case_count": 12,
+      "elapsed_seconds": 58.85427830000026,
+      "statuses": {
+        "review": {
+          "partial_geometry": 4,
+          "geometry_review": 8
+        },
+        "wall": {
+          "unknown": 4,
+          "measured": 8
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 9,
+          "complete": 2
+        },
+        "section": {
+          "unknown": 4,
+          "complete": 8
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_020/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_021",
+      "relative_path": "8.1 Machine_Frame.stp",
+      "sha256": "b46ed073767f89fa261db11bb395e1a7abfeaf2c945664f0ddd896e5b124fdaf",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        1500.0,
+        115.0,
+        2010.0
+      ],
+      "triangle_count": 2928,
+      "solid_count": 8,
+      "cad_geometry_kind": "solid",
+      "case_count": 36,
+      "elapsed_seconds": 142.32216530000005,
+      "statuses": {
+        "review": {
+          "geometry_review": 36
+        },
+        "wall": {
+          "unknown": 4,
+          "measured": 32
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 27,
+          "unavailable": 4,
+          "complete": 4
+        },
+        "section": {
+          "unknown": 4,
+          "complete": 32
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_021/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": [
+        {
+          "body": 1,
+          "expected_layers": 10000,
+          "reason": "요청된 10,000개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_021/body_001_MEX_layers.json"
+        },
+        {
+          "body": 2,
+          "expected_layers": 10000,
+          "reason": "요청된 10,000개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_021/body_002_MEX_layers.json"
+        },
+        {
+          "body": 7,
+          "expected_layers": 2300,
+          "reason": "요청된 2,300개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_021/body_007_MEX_layers.json"
+        },
+        {
+          "body": 8,
+          "expected_layers": 2300,
+          "reason": "요청된 2,300개 층이 한도 1,500개를 벗어납니다. 층 간격을 몰래 늘리지 않았습니다.",
+          "source_result": "file_021/body_008_MEX_layers.json"
+        }
+      ]
+    },
+    {
+      "id": "file_022",
+      "relative_path": "9.1 Pump_housing.stp",
+      "sha256": "3f6c7c9714a7728ed67d4f76fe22d189b8a98fa281af22e767df0571a266d37c",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        229.9621738118068,
+        199.99356117916403,
+        75.0
+      ],
+      "triangle_count": 46770,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 55.94525490000069,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_023",
+      "relative_path": "Arduino-UNO.stl",
+      "sha256": "cf329252fc31d3fdbf3bebd06323a950b652cb4c04b7fd4ab1dba83a0a2425cd",
+      "format": ".stl",
+      "status": "reviewed",
+      "extents_mm": [
+        53.5,
+        14.899341821670532,
+        75.0
+      ],
+      "triangle_count": 53106,
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "case_count": 4,
+      "elapsed_seconds": 31.791557599999578,
+      "statuses": {
+        "review": {
+          "partial_geometry": 4
+        },
+        "wall": {
+          "unknown": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "unknown": 4
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "입력 폐곡면·면 방향이 확정되지 않아 재료 단면 집계를 보류했습니다.",
+          "complete_samples": 0,
+          "requested_samples": 64,
+          "source_result": "file_023/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_024",
+      "relative_path": "Arduino-UNO.stp",
+      "sha256": "3d66712210e5119ab955b9018ce41b578ef4c0ccf8933ad84d5a8ac1a9f57a69",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        53.5,
+        14.899999999999999,
+        75.0
+      ],
+      "triangle_count": 81718,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 55.220110100000056,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_025",
+      "relative_path": "build_tray_v3.step",
+      "sha256": "bb0656d93eb3edd4f188579a32f21f567689193d17f703482b2800b69fb5af12",
+      "format": ".step",
+      "status": "reviewed",
+      "extents_mm": [
+        388.5,
+        420.0,
+        30.0
+      ],
+      "triangle_count": 25162,
+      "solid_count": 5,
+      "cad_geometry_kind": "solid",
+      "case_count": 24,
+      "elapsed_seconds": 153.08891889999995,
+      "statuses": {
+        "review": {
+          "geometry_review": 24
+        },
+        "wall": {
+          "unknown": 4,
+          "measured": 20
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 18,
+          "complete": 5
+        },
+        "section": {
+          "unknown": 4,
+          "complete": 20
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_025/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_026",
+      "relative_path": "Raspberry Pi 4 Model B.step",
+      "sha256": "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2",
+      "format": ".step",
+      "status": "reviewed",
+      "extents_mm": [
+        88.99,
+        19.9,
+        58.4
+      ],
+      "triangle_count": 241326,
+      "solid_count": 109,
+      "cad_geometry_kind": "solid",
+      "case_count": 440,
+      "elapsed_seconds": 1622.1722691000004,
+      "statuses": {
+        "review": {
+          "partial_geometry": 12,
+          "geometry_review": 428
+        },
+        "wall": {
+          "unknown": 12,
+          "measured": 72,
+          "partial": 356
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 330,
+          "complete": 109
+        },
+        "section": {
+          "unknown": 12,
+          "complete": 420,
+          "partial": 8
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_026/whole_MEX_sections.json"
+        },
+        {
+          "body": 67,
+          "status": "partial",
+          "reason": "닫힘·수치 정밀도 조건을 만족하지 않은 단면이 있습니다. 부분 최대값은 확정 표본에 한정됩니다.",
+          "complete_samples": 63,
+          "requested_samples": 64,
+          "source_result": "file_026/body_067_MEX_sections.json"
+        },
+        {
+          "body": 90,
+          "status": "unknown",
+          "reason": "입력 폐곡면·면 방향이 확정되지 않아 재료 단면 집계를 보류했습니다.",
+          "complete_samples": 0,
+          "requested_samples": 64,
+          "source_result": "file_026/body_090_MEX_sections.json"
+        },
+        {
+          "body": 91,
+          "status": "unknown",
+          "reason": "입력 폐곡면·면 방향이 확정되지 않아 재료 단면 집계를 보류했습니다.",
+          "complete_samples": 0,
+          "requested_samples": 64,
+          "source_result": "file_026/body_091_MEX_sections.json"
+        },
+        {
+          "body": 108,
+          "status": "partial",
+          "reason": "닫힘·수치 정밀도 조건을 만족하지 않은 단면이 있습니다. 부분 최대값은 확정 표본에 한정됩니다.",
+          "complete_samples": 63,
+          "requested_samples": 64,
+          "source_result": "file_026/body_108_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_027",
+      "relative_path": "Raspberry Pi 4 Model B.stl",
+      "sha256": "892b290d90841e9c9c55eadddc7f7007d277f2fe16a0cff3a5d6194294a73dd7",
+      "format": ".stl",
+      "status": "reviewed",
+      "extents_mm": [
+        88.98999786376953,
+        19.899999856948853,
+        58.39999961853027
+      ],
+      "triangle_count": 62072,
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "case_count": 4,
+      "elapsed_seconds": 20.02728500000012,
+      "statuses": {
+        "review": {
+          "partial_geometry": 4
+        },
+        "wall": {
+          "unknown": 4
+        },
+        "layer": {
+          "unknown": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "unknown": 4
+        }
+      },
+      "noncomplete_section_targets": [
+        {
+          "body": null,
+          "status": "unknown",
+          "reason": "재료의 겹침·공동 관계가 미확정입니다. 단일 CAD 솔리드를 선택해 단면을 검토하세요.",
+          "complete_samples": null,
+          "requested_samples": 64,
+          "source_result": "file_027/whole_MEX_sections.json"
+        }
+      ],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_028",
+      "relative_path": "SG90-Servo.stl",
+      "sha256": "0782db5ca9499c9cc7474d9c454199582ba2fbdbffe72fa2a8c95bb4564da59f",
+      "format": ".stl",
+      "status": "reviewed",
+      "extents_mm": [
+        32.25,
+        29.75,
+        12.5
+      ],
+      "triangle_count": 4654,
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "case_count": 4,
+      "elapsed_seconds": 21.80779799999982,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_029",
+      "relative_path": "SG90-Servo.stp",
+      "sha256": "e2bb320f91ece91deaff236bc0b12565e93ab54a3e619d6c5f2fba884c62aeea",
+      "format": ".stp",
+      "status": "reviewed",
+      "extents_mm": [
+        32.25,
+        29.75,
+        12.5
+      ],
+      "triangle_count": 7362,
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "case_count": 4,
+      "elapsed_seconds": 25.7083776999998,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_030",
+      "relative_path": "the-over-engineered-backpack-wall-mount-v2.3mf",
+      "sha256": "c7a60163a61148adf32a55c49fec4b7d6909efc758f8843fad3241c754c5e44c",
+      "format": ".3mf",
+      "status": "reviewed",
+      "extents_mm": [
+        38.099998400000004,
+        82.550003,
+        42.07017520000002
+      ],
+      "triangle_count": 143890,
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "case_count": 4,
+      "elapsed_seconds": 66.5058626,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    },
+    {
+      "id": "file_031",
+      "relative_path": "the-over-engineered-backpack-wall-mount-v2.stl",
+      "sha256": "390bc9ddefd6125998794924251e9895be8cff85a544ba34c1670f49c9388395",
+      "format": ".stl",
+      "status": "reviewed",
+      "extents_mm": [
+        38.09999942779541,
+        42.070133447647095,
+        82.55000305175781
+      ],
+      "triangle_count": 15906,
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "case_count": 4,
+      "elapsed_seconds": 19.684579799999483,
+      "statuses": {
+        "review": {
+          "geometry_review": 4
+        },
+        "wall": {
+          "measured": 4
+        },
+        "layer": {
+          "complete": 1,
+          "not_applicable": 3
+        },
+        "section": {
+          "complete": 4
+        }
+      },
+      "noncomplete_section_targets": [],
+      "unavailable_layer_targets": []
+    }
+  ],
+  "limitations": [
+    "These are geometric reviews and finite samples, not physical print-success validation.",
+    "The frozen audit retains two surface-STEP polymer-PBF scope failures; a separate current-code quick-report refresh records their correction.",
+    "MEX layer unavailable means requested layers exceeded the explicit 1500-layer execution limit; all eight such cases preserve zero examined layers and null whole-volume/score.",
+    "Midpoint section volume discrepancy ranks resampling need; complete finite sampling is not a continuous-height accuracy certificate.",
+    "Wall partial results preserve missed normal-ray samples and do not establish global minimum wall thickness."
+  ]
+}

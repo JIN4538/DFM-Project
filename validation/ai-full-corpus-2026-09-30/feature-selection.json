@@ -1,0 +1,65 @@
+{
+  "criterion": "Validation instance precision >=.97, then highest validation panoptic quality; held-out test excluded from model selection",
+  "candidates": [
+    {
+      "folder": "feature-models",
+      "width": 64,
+      "validation": {
+        "pq": 0.8268667942004949,
+        "instance_precision": 0.9747713156408808,
+        "instance_recall": 0.7233143948916486,
+        "exact_instance_recall": 0.7125211590996698,
+        "tp": 43158,
+        "fp": 1117,
+        "fn": 16509,
+        "ground_truth_instances": 59667
+      },
+      "admissible": true
+    },
+    {
+      "folder": "feature-geometric/feature-models",
+      "width": 128,
+      "validation": {
+        "pq": 0.8198289591710104,
+        "instance_precision": 0.9750194980960682,
+        "instance_recall": 0.7123703219535087,
+        "exact_instance_recall": 0.7019625588683862,
+        "tp": 42505,
+        "fp": 1089,
+        "fn": 17162,
+        "ground_truth_instances": 59667
+      },
+      "admissible": true
+    },
+    {
+      "folder": "feature-geometric64/feature-models",
+      "width": 64,
+      "validation": {
+        "pq": 0.8236836467557413,
+        "instance_precision": 0.9745577736346688,
+        "instance_recall": 0.7183702884341429,
+        "exact_instance_recall": 0.7080295640806475,
+        "tp": 42863,
+        "fp": 1119,
+        "fn": 16804,
+        "ground_truth_instances": 59667
+      },
+      "admissible": true
+    }
+  ],
+  "selected": {
+    "folder": "feature-models",
+    "width": 64,
+    "validation": {
+      "pq": 0.8268667942004949,
+      "instance_precision": 0.9747713156408808,
+      "instance_recall": 0.7233143948916486,
+      "exact_instance_recall": 0.7125211590996698,
+      "tp": 43158,
+      "fp": 1117,
+      "fn": 16509,
+      "ground_truth_instances": 59667
+    },
+    "admissible": true
+  }
+}

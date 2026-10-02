@@ -1,0 +1,24 @@
+.....................F.................................................. [ 66%]
+.....................................                                    [100%]
+================================== FAILURES ===================================
+_______ test_custom_direction_comparison_application_and_stale_exports ________
+tests_v3\test_app.py:108: in test_custom_direction_comparison_application_and_stale_exports
+    app.button(key="apply_orientation").click().run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:456: in click
+    return self.set_value(True)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:452: in set_value
+    return super().set_value(v)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:252: in set_value
+    self._assert_can_interact()
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:245: in _assert_can_interact
+    raise AppTestError(
+E   streamlit.testing.v1.errors.AppTestError: Cannot update a disabled button widget (key='apply_orientation'). A browser user cannot interact with a disabled widget.
+---------------------------- Captured stderr call -----------------------------
+2026-09-28 17:21:04.115 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\decision-ux-2026-09-28\focused.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_app.py::test_custom_direction_comparison_application_and_stale_exports
+1 failed, 108 passed in 245.71s (0:04:05)

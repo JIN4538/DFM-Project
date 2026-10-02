@@ -1,0 +1,1586 @@
+
+																																				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-page-template="article"
+	
+ data-page-id="ci_ac225f36fde1414b3bade83b2648499e339e83f7396a03661a38d8fcb1d81f8b" data-confluence-content-id="3776447107"
+		data-color-scheme="light"
+>
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="color-scheme" content="light">
+
+						<link id="pageTreeSource" rel="preload" href="/770mx/__pagetree.json" as="fetch" type="application/json" crossorigin="anonymous">
+
+		<meta name="site-path" content="/">
+
+					<link rel="x-site-path" href="/">
+	<link rel="x-root-path" href="/">
+
+	<meta name="site-default-language" content="en">
+		<meta name="site-languages" content="en">
+		<meta name="confluence-content-type" content="page">
+		<meta name="confluence-base-url" content="https://tormach.atlassian.net/wiki">
+		<meta name="confluence-space-key" content="770MX">
+
+
+
+
+	<link rel="icon" href="/__site/f80d44e8-06a3-404c-982f-5bd2316e95a3/Logo-Tormach-Solid-Icon-Vertical-Blue.svg" type="image/svg+xml">
+
+
+
+
+
+
+
+
+
+
+
+		<title>Machine Specifications | Tormach Knowledge Base</title>
+		<meta property="og:title" content="Machine Specifications | Tormach Knowledge Base">
+		<meta property="twitter:title" content="Machine Specifications | Tormach Knowledge Base">
+
+		<link rel="canonical" href="https://knowledgebase.tormach.com/770mx/machine-specifications">
+		<meta property="og:url" content="https://knowledgebase.tormach.com/770mx/machine-specifications">
+
+		<meta name="description" content="T-Slot Spacing on Tormach Mills Machine Kinematics (Max Feed, Travel Limits, Accelerations) 770M/MX Torque Curves (MX - MF/MH Serials) Performance Expectations…">
+		<meta property="og:description" content="T-Slot Spacing on Tormach Mills Machine Kinematics (Max Feed, Travel Limits, Accelerations) 770M/MX Torque Curves (MX - MF/MH Serials) Performance Expectations…">
+		<meta property="twitter:description" content="T-Slot Spacing on Tormach Mills Machine Kinematics (Max Feed, Travel Limits, Accelerations) 770M/MX Torque Curves (MX - MF/MH Serials) Performance Expectations…">
+
+		<meta property="og:image" content="https://knowledgebase.tormach.com/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png">
+		<meta property="twitter:image" content="https://knowledgebase.tormach.com/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png">
+
+	<meta property="og:type" content="website">
+	<meta property="twitter:card" content="summary_large_image">
+
+		<meta name="page-last-modified" content="2025-12-18T18:52:01.631Z">
+
+		<script>
+		(function () {
+			const defaultLanguageMeta = /** @type {string|undefined} */(document.querySelector('meta[name="site-default-language"]')?.content);
+			const availableLanguagesMeta = /** @type {string|undefined} */(document.querySelector('meta[name="site-languages"]')?.content);
+			const fallbackLanguage = defaultLanguageMeta ?? 'en';
+			const supportedLanguagesFromMeta = availableLanguagesMeta?.split(',') ?? [];
+			const supportedLanguages = [...new Set([fallbackLanguage, ...supportedLanguagesFromMeta])].filter(Boolean);
+			const detectedLanguage = new URLSearchParams(self.location.search).get('l') || document.documentElement.lang;
+			const resolvedLanguage = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : fallbackLanguage;
+			document.documentElement.lang = resolvedLanguage;
+			const sheet = new CSSStyleSheet();
+			document.adoptedStyleSheets.push(sheet);
+			// Hide any element with a `data-lang` attribute that does NOT match the detected language
+			sheet.replaceSync('[data-lang]:not([data-lang="' + resolvedLanguage + '"]) { display: none; }');
+		})();
+	</script>
+
+		<script>
+		(function() {
+			/** @typedef {'light'|'dark'} ColorScheme */
+			/** @type {ColorScheme[]} */
+			const availableColorSchemes = document.documentElement.querySelector('meta[name="color-scheme"]').content.split(' ').filter(Boolean);
+			/** @type {ColorScheme|'system'} */
+			const userPreference = localStorage?.getItem('color-scheme-preference') ?? 'system';
+			// Clean-up user preference in case there's nothing to choose from
+			// Fall back to the HTML document's default color theme
+			if (availableColorSchemes.length <= 1 || ![...availableColorSchemes, 'system'].includes(userPreference)) {
+				localStorage?.removeItem('color-scheme-preference');
+				return;
+			}
+			// Override default HTML document with client-side user preference
+			if (userPreference === 'system') {
+				updateThemeAttribute(self.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+			} else {
+				updateThemeAttribute(userPreference)
+			}
+			/** @param {ColorScheme} colorScheme */
+			function updateThemeAttribute(colorScheme) {
+				document.documentElement.setAttribute('data-color-scheme', colorScheme);
+			}
+		})();
+	</script>
+
+		<script>
+		
+		function sortContentSources(a, b) {
+			let result = a.precedence - b.precedence;
+
+			if (result === 0) {
+				result = a.value.localeCompare(b.value);
+			}
+
+			return result;
+		}
+
+		
+		function applyContentSourceOrderToElements({ parent, children }) {
+			const contentSourceElements = [...children];
+
+			contentSourceElements
+				.sort((a, b) => (
+					sortContentSources(
+						{ value: a.dataset.orderValue, precedence: a.dataset.orderPrecedence },
+						{ value: b.dataset.orderValue, precedence: b.dataset.orderPrecedence }
+					)
+				))
+				.forEach((element) => {
+					delete element.dataset.orderValue;
+					delete element.dataset.orderPrecedence;
+				});
+
+			parent.replaceChildren(...contentSourceElements);
+		}
+	</script>
+
+<script>
+	(() => {
+		if (isInAppHelpEnabled()) {
+			document.documentElement.dataset.inAppHelp = 'true';
+
+			if (isTitleHidden()) {
+				document.documentElement.dataset.hideTitle = 'true';
+			}
+		}
+
+		function isInAppHelpEnabled() {
+			return new URLSearchParams(location.search).get('inAppHelp') === 'true';
+		}
+
+		function isTitleHidden() {
+			return new URLSearchParams(location.search).get('title') === 'false';
+		}
+	})();
+</script>
+
+<link rel="stylesheet" href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/in-app-help.css"/>
+<script type="module" src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/in-app-help.js"></script>
+
+	<link rel="stylesheet" href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/styles.css">
+	<link rel="stylesheet" href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/fonts.css">
+	<link rel="stylesheet" href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/search-styles-bundle.css">
+
+
+	<style>
+		@layer overrides {
+			:root {
+				--theme-headline-font: "Roboto";
+				--theme-text-font: "Roboto";
+				--theme-headline-scale: calc(100 / 100);
+				--theme-text-scale: calc(100 / 100);
+			}
+		}
+	</style>
+
+	<style>
+		@layer overrides {
+			:root, :host {
+					--theme-header-logo-size: 40px;
+					--theme-footer-logo-size: 40px;
+			}
+
+			:root[data-color-scheme='light'],
+			:host([data-color-scheme='light']) {
+					--theme-header-text-color: #FFFFFF;
+					--theme-header-background-color: #263745;
+					--theme-footer-text-color: #FFFFFF;
+					--theme-footer-background-color: #263745;
+			}
+
+			:root[data-color-scheme='dark'],
+			:host([data-color-scheme='dark']) {
+					--theme-header-text-color: #FFFFFF;
+					--theme-header-background-color: #0a0b0c;
+					--theme-footer-text-color: #FFFFFF;
+					--theme-footer-background-color: #0a0b0c;
+			}
+		}
+	</style>
+
+	 
+
+
+
+
+
+<script data-site-data="content-sources" type="application/json">
+{
+	"collection": {
+		"members": [
+
+
+	{
+	"name": "1500MX Knowledge Base",
+	"id": "821e6233-9087-478f-a7b2-31425bf92bde",
+	"key": "1500",
+	"path": "/1500mx",
+		"prefix": "/1500mx",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "1100MX Knowledge Base",
+	"id": "e3a22d97-5691-44b0-8bcd-538c81ae33aa",
+	"key": "1100MX",
+	"path": "/1100mx",
+		"prefix": "/1100mx",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "xsTECH Knowledge Base",
+	"id": "b2aff86c-b106-4816-953a-c354af4e07d0",
+	"key": "XKB",
+	"path": "/xstech",
+		"prefix": "/xstech",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "PCNC 440 Knowledge Base",
+	"id": "94067850-d305-4a17-84d3-963a336256cc",
+	"key": "PCNC440",
+	"path": "/pcnc-440",
+		"prefix": "/pcnc-440",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "1100M Knowledge Base",
+	"id": "42eb3c63-4be2-4c7e-95c9-8c35908f74c3",
+	"key": "1100M",
+	"path": "/1100m",
+		"prefix": "/1100m",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "8L Knowledge Base",
+	"id": "ffa0d1da-340b-4cc3-90d0-7691a920be04",
+	"key": "8L",
+	"path": "/8l",
+		"prefix": "/8l",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "770MX (MF/MH Serials) Knowledge Base ",
+	"id": "5ff9ac1d-f533-49ba-91c3-b2b5395fc29e",
+	"key": "770MX",
+	"path": "/770mx",
+		"prefix": "/770mx",
+		"current": true,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "770M Knowledge Base",
+	"id": "68c397cb-4f6a-4977-aef8-289888a0e6ff",
+	"key": "770M",
+	"path": "/770m",
+		"prefix": "/770m",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "15L Knowledge Base",
+	"id": "6d3a4c36-b36b-41ea-936b-694ac56d6288",
+	"key": "15L",
+	"path": "/15l",
+		"prefix": "/15l",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "PCNC 1100 Knowledge Base",
+	"id": "e3474928-72ae-4059-a8f3-ec517b971a6e",
+	"key": "PCNC1100",
+	"path": "/pcnc-1100",
+		"prefix": "/pcnc-1100",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "PCNC 770 Knowledge Base",
+	"id": "29cbf3a7-7ad5-4fad-a601-54fd05fb1350",
+	"key": "PCNC770",
+	"path": "/pcnc-770",
+		"prefix": "/pcnc-770",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "24R Knowledge Base",
+	"id": "bd14b26c-2b94-451c-81f3-90e8db95c589",
+	"key": "24R",
+	"path": "/24r",
+		"prefix": "/24r",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "1300PL Knowledge Base",
+	"id": "47062081-395a-4729-84d5-91e7753ffe7a",
+	"key": "1300PL",
+	"path": "/1300pl",
+		"prefix": "/1300pl",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "AF50 Knowledge Base",
+	"id": "33b2f738-139c-472c-ac9f-3c717726f0e5",
+	"key": "af50",
+	"path": "/af50",
+		"prefix": "/af50",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "AF50+ Knowledge Base",
+	"id": "463edb9b-fb5e-47cf-846d-db4162220b1f",
+	"key": "af50plus",
+	"path": "/af50plus",
+		"prefix": "/af50plus",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "15LX Knowledge Base - Coming Soon!",
+	"id": "5fba8722-70a0-4add-97f0-43b7e0db1908",
+	"key": "15LX",
+	"path": "/15lx",
+		"prefix": "/15lx",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "770MX (ML Serials) Knowledge Base - Coming Soon!",
+	"id": "2057564b-06d8-4ac4-a891-122080c64a09",
+	"key": "770MXML",
+	"path": "/770mx-ml",
+		"prefix": "/770mx-ml",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+,
+
+
+	{
+	"name": "xsTECH Pro Knowledge Base - Coming Soon!",
+	"id": "8af3b202-4069-4636-a678-a21793b73d66",
+	"key": "xsTECHPro",
+	"path": "/xstech-pro",
+		"prefix": "/xstech-pro",
+		"current": false,
+	"versions": {
+		"available": [
+		]
+	},
+	"variants": {
+		"available": [
+		]
+	},
+	"languages": {
+		"available": [
+		]
+	}
+}
+
+		]
+	}
+}
+</script>
+
+
+<script data-theme-placeholder="site" type="application/json">
+	{
+		"id": "6fc887ff-1b1c-45ac-8c36-19de7f3fa410",
+		"path": "/",
+		"url": "/",
+		"domain": "knowledgebase.tormach.com",
+		"aiSearchEnabled": true,
+		"visibleToSearchEngines": true
+	}
+</script>
+ 
+<script data-config="cookieconsent" type="application/json">
+{
+	"enabled": false,
+	"mode": "opt-in",
+	"heading": "",
+	"description": "",
+	"links": [
+	]
+}
+</script>
+
+	<script type="module" src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/main.js"></script>
+	<script type="module" src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/page-tree.js" fetchpriority="high"></script>
+	<script type="module" src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/search-bundle.js"></script>
+
+							<script type="module" src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/article.js"></script>
+
+		<link rel="stylesheet" href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/ai-actions.css">
+		<script type="module" src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/ai-actions.js"></script>
+
+
+
+
+
+
+
+
+<script>
+	(() => {
+		if (new URLSearchParams(location.search).has('disable-custom-overrides')) {
+			return;
+		}
+
+		document.querySelectorAll('[data-custom-overrides]').forEach(template => {
+			const type = template.getAttribute('data-type');
+
+			if (type === 'code-asset') {
+				const assetElement = template.content.cloneNode(true).firstElementChild;
+				const appendAsset = () => document.head.appendChild(assetElement);
+
+				if (assetElement.tagName === 'SCRIPT') {
+															if (document.readyState === 'complete') {
+						appendAsset();
+					} else {
+												document.addEventListener('DOMContentLoaded', appendAsset, { once: true });
+					}
+				} else {
+					appendAsset();
+				}
+			}
+		});
+	})();
+</script>
+
+
+			
+
+
+
+
+		<script data-config="integration:gtm" type="application/json">
+			{
+				"enabled": true
+			}
+		</script>
+		<script
+			type="text/plain"
+			data-category="marketing"
+			data-service="gtm"
+			data-src="https://www.googletagmanager.com/gtm.js?id=GTM-TXVRMVG"
+			async
+		></script>
+
+
+
+
+
+		<script data-config="integration:jsm" type="application/json">
+			{
+				"enabled": true
+			}
+		</script>
+												<script
+			type="text/plain"
+			data-category="functional"
+			data-service="jsm"
+			data-jsd-embedded
+			data-key="ba92e704-3ffb-494b-9194-789357ecc023"
+			data-base-url="https://jsd-widget.atlassian.com"
+			data-src="https://jsd-widget.atlassian.com/assets/embed.js"
+		></script>
+		<script
+			type="text/plain"
+			data-category="functional"
+			data-service="jsm"
+			data-src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/jsm-widget-init.js"
+		></script>
+
+
+
+			</head>
+<body>
+	<a href="#content" class="skip-link">
+		<i18n-message i18nkey="navigation.skip.to.main.label">Skip to main content</i18n-message>
+	</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+<header data-component="header" class="header">
+
+	<div class="header-site-branding">
+		<i18n-message id="8ff81fe4c4bc35e0-2" class="sr-only" i18nkey="header.home.label"></i18n-message>
+
+		<a href="/" aria-labelledby="8ff81fe4c4bc35e0-2">
+
+
+
+
+		<img class="header-logo header-logo--dark" src="/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png" alt="">
+
+		<img class="header-logo header-logo--light" src="/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png" alt="">
+
+		</a>
+
+			<a href="/770mx" class="header-site-name">
+				770MX (MF/MH Serials) Knowledge Base 
+			</a>
+	</div>
+	<div class="header-content">
+			<div class="header-links">
+				<ul>
+						<li><a href="https://tormach.atlassian.net/servicedesk/customer/portal/10">Open a Support Ticket</a></li>
+						<li><a href="https://forums.tormach.com/">Forums</a></li>
+						<li><a href="https://www.youtube.com/@tormachinc/videos">Tormach YouTube</a></li>
+						<li><a href="https://www.youtube.com/@TormachTechnicalSupport">Tech Support YouTube</a></li>
+						<li><a href="https://www.tormach.com/">Tormach.com</a></li>
+				</ul>
+			</div>
+
+		<div class="header-pickers">
+
+		</div>
+
+			<div class="header-search">
+				<search-bar quicksearch></search-bar>
+			</div>
+
+
+				<button type="button" aria-controls="drawer-8ff81fe4c4bc35e0-1" aria-haspopup="dialog" aria-expanded="false" class="header-nav-toggle" onclick="self['drawer-8ff81fe4c4bc35e0-1'].showModal()">
+	<svg role="img" aria-hidden="true" data-component="icon" class="icon icon-menu ">
+		<use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#menu"></use>
+	</svg>
+			<i18n-message class="sr-only" i18nkey="navigation.main.label">Main navigation</i18n-message>
+		</button>
+	</div>
+
+	
+
+<dialog id="drawer-8ff81fe4c4bc35e0-1" class="drawer">
+	<header data-component="header" class="header">
+
+	<div class="header-site-branding">
+		<i18n-message id="8ff81fe4c4bc35e0-3" class="sr-only" i18nkey="header.home.label"></i18n-message>
+
+		<a href="/" aria-labelledby="8ff81fe4c4bc35e0-3">
+
+
+
+
+		<img class="header-logo header-logo--dark" src="/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png" alt="">
+
+		<img class="header-logo header-logo--light" src="/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png" alt="">
+
+		</a>
+
+			<a href="/770mx" class="header-site-name">
+				770MX (MF/MH Serials) Knowledge Base 
+			</a>
+	</div>
+
+		<div class="header-content">
+			<button type="button" aria-controls="drawer-8ff81fe4c4bc35e0-1" aria-haspopup="dialog" aria-expanded="true" autofocus class="drawer-toggle" onclick="self['drawer-8ff81fe4c4bc35e0-1'].close()">
+	<svg role="img" aria-hidden="true" data-component="icon" class="icon icon-close ">
+		<use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#close"></use>
+	</svg>
+				<i18n-message class="sr-only" i18nkey="navigation.close.label">Close navigation</i18n-message>
+			</button>
+		</div>
+	</header>
+
+	<div class="drawer-section drawer-search">
+		<search-bar quicksearch></search-bar>
+	</div>
+
+
+	<nav id="drawer-nav" class="drawer-section drawer-nav tree" aria-labelledby="drawer-nav-label">
+		<i18n-message id="drawer-nav-label" class="sr-only" i18nkey="navigation.main.label">Main</i18n-message>
+
+						<copy-page-tree target="articleTree"></copy-page-tree>
+	</nav>
+
+			<div class="drawer-section drawer-links tree">
+<ul  >
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-4" href="https://tormach.atlassian.net/servicedesk/customer/portal/10" >Open a Support Ticket</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-5" href="https://forums.tormach.com/" >Forums</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-6" href="https://www.youtube.com/@tormachinc/videos" >Tormach YouTube</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-7" href="https://www.youtube.com/@TormachTechnicalSupport" >Tech Support YouTube</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-8" href="https://www.tormach.com/" >Tormach.com</a>
+			</div>
+
+		</li>
+</ul>
+		</div>
+</dialog>
+
+</header>
+		<section class="article-page body">
+		<theme-navigator class="navigator">
+			<button id="navigator-toggle" class="navigator-toggle" aria-controls="navigator-nav" aria-labelledby="navigator-nav-label" aria-expanded="true">
+	<svg role="img" aria-hidden="true" data-component="icon" class="icon icon-menu navigator-icon-closed">
+		<use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#menu"></use>
+	</svg>
+	<svg role="img" aria-hidden="true" data-component="icon" class="icon icon-chevron_left navigator-icon-opened">
+		<use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#chevron_left"></use>
+	</svg>
+			</button>
+						<nav id="navigator-nav" class="navigator-body tree" aria-labelledby="navigator-nav-label">
+				<i18n-message id="navigator-nav-label" class="sr-only" i18nkey="navigation.main.label">Main</i18n-message>
+				<theme-page-tree id="articleTree">
+<ul  >
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="true"
+aria-controls="8ff81fe4c4bc35e0-10"						aria-labelledby="8ff81fe4c4bc35e0-9"
+					></button>
+				<a id="8ff81fe4c4bc35e0-9" href="/770mx/about-your-machine" >About Your Machine</a>
+			</div>
+
+<ul  id="8ff81fe4c4bc35e0-10" >
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-11" href="/770mx/safety" >Safety</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="true"
+aria-controls="8ff81fe4c4bc35e0-13"						aria-labelledby="8ff81fe4c4bc35e0-12"
+					></button>
+				<a id="8ff81fe4c4bc35e0-12" href="/770mx/machine-specifications" aria-current="page">Machine Specifications</a>
+			</div>
+
+<ul  id="8ff81fe4c4bc35e0-13" >
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-14" href="/770mx/t-slot-spacing-on-tormach-mills" >T-Slot Spacing on Tormach Mills</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-15" href="/770mx/machine-kinematics-max-feed-travel-limits-accelera" >Machine Kinematics (Max Feed, Travel Limits, Accelerations)</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-16" href="/770mx/770m-mx-torque-curves" >770M/MX Torque Curves (MX - MF/MH Serials)</a>
+			</div>
+
+		</li>
+</ul>
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+				<a id="8ff81fe4c4bc35e0-17" href="/770mx/site-requirements" >Site Requirements</a>
+			</div>
+
+		</li>
+</ul>
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="false"
+						aria-labelledby="8ff81fe4c4bc35e0-18"
+aria-busy="true" aria-disabled="true"					></button>
+				<a id="8ff81fe4c4bc35e0-18" href="/770mx/installation" >Installation</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="false"
+						aria-labelledby="8ff81fe4c4bc35e0-20"
+aria-busy="true" aria-disabled="true"					></button>
+				<a id="8ff81fe4c4bc35e0-20" href="/770mx/maintenance" >Maintenance</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="false"
+						aria-labelledby="8ff81fe4c4bc35e0-22"
+aria-busy="true" aria-disabled="true"					></button>
+				<a id="8ff81fe4c4bc35e0-22" href="/770mx/operation-and-programming" >Operation and Programming</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="false"
+						aria-labelledby="8ff81fe4c4bc35e0-24"
+aria-busy="true" aria-disabled="true"					></button>
+				<a id="8ff81fe4c4bc35e0-24" href="/770mx/troubleshooting" >Troubleshooting</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="false"
+						aria-labelledby="8ff81fe4c4bc35e0-26"
+aria-busy="true" aria-disabled="true"					></button>
+				<a id="8ff81fe4c4bc35e0-26" href="/770mx/diagrams-and-parts-list" >Diagrams and Parts List</a>
+			</div>
+
+		</li>
+		<li class="tree-item">
+			<div class="tree-item-header">
+					<button
+						class="tree-action"
+						type="button"
+						aria-expanded="false"
+						aria-labelledby="8ff81fe4c4bc35e0-28"
+aria-busy="true" aria-disabled="true"					></button>
+				<a id="8ff81fe4c4bc35e0-28" href="/770mx/pneumatic-and-electrical-schematics" >Pneumatic and Electrical Schematics</a>
+			</div>
+
+		</li>
+</ul>
+				</theme-page-tree>
+			</nav>
+		</theme-navigator>
+
+		<main class="main-content">
+			<div class="topbar">
+
+
+
+
+	<theme-breadcrumbs class="breadcrumbs" itemsbeforecollapse="2" maxitems="4">
+		<i18n-message id="8ff81fe4c4bc35e0-30" class="sr-only" i18nkey="breadcrumbs.label">Breadcrumbs</i18n-message>
+		<nav aria-labelledby="8ff81fe4c4bc35e0-30">
+				<ol>
+							<li>
+								<a href="/">
+										<i18n-message key="breadcrumbs.home.label">Home</i18n-message>
+								</a>
+							</li>
+							<li>
+								<a href="/770mx">
+										770MX (MF/MH) Knowledge Base
+								</a>
+							</li>
+							<li>
+								<a href="/770mx/about-your-machine">
+										About Your Machine
+								</a>
+							</li>
+				</ol>
+		</nav>
+	</theme-breadcrumbs>
+					<script src="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/breadcrumbs.js"></script>
+					<ai-actions class="ai-actions"></ai-actions>
+			</div>
+		<nav class="toc sticky" data-component="toc" aria-labelledby="8ff81fe4c4bc35e0-31">
+			<h2 class="toc-heading" id="8ff81fe4c4bc35e0-31">
+				<i18n-message i18nkey="page.article.toc.label">On this Page</i18n-message>
+			</h2>
+			<theme-toc for="content"></theme-toc>
+		</nav>
+			<article id="content" tabindex="-1" class="fb-layout-container">
+				<header>
+					<h1>Machine Specifications</h1>
+				</header>
+				<section class="article-body fb-layout-body" data-searchable-content>
+		
+
+	
+
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+		
+		
+	
+	
+	
+
+						
+		
+
+
+				
+
+
+						
+		
+
+
+				
+
+
+						
+		
+
+
+				
+
+
+						
+		
+
+
+				
+
+
+	
+	
+	
+	<div data-component="child-pages" class="child-pages" data-levels="1">
+ <ul>
+  <li>
+   <article>
+    <a href="/770mx/t-slot-spacing-on-tormach-mills" data-scope="internal">T-Slot Spacing on Tormach Mills</a>
+   </article>
+  </li>
+  <li>
+   <article>
+    <a href="/770mx/machine-kinematics-max-feed-travel-limits-accelera" data-scope="internal">Machine Kinematics (Max Feed, Travel Limits, Accelerations)</a>
+   </article>
+  </li>
+  <li>
+   <article>
+    <a href="/770mx/770m-mx-torque-curves" data-scope="internal">770M/MX Torque Curves (MX - MF/MH Serials)</a>
+   </article>
+  </li>
+ </ul>
+</div>
+<h2 id="Performance-Expectations"><span id="MachineSpecifications-PerformanceExpectations"></span>Performance Expectations
+ <i18n-message i18nkey="clipboard.copyLink.label" attribute="description">
+  <copy-clipboard class="anchor-copy-button" value="https://knowledgebase.tormach.com/770mx/machine-specifications#Performance-Expectations">
+   <svg role="img" aria-hidden="true" data-component="icon" class="icon icon-link copy-headline-link-icon">
+    <use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#link"></use>
+   </svg>
+  </copy-clipboard>
+ </i18n-message></h2>
+<p>Each machine ships with a Certificate of Inspection, which details quality assurance measurements performed by members of our quality assurance team prior to shipping.</p>
+<h3 id="Cutting-Performance"><span id="MachineSpecifications-CuttingPerformance"></span>Cutting Performance
+ <i18n-message i18nkey="clipboard.copyLink.label" attribute="description">
+  <copy-clipboard class="anchor-copy-button" value="https://knowledgebase.tormach.com/770mx/machine-specifications#Cutting-Performance">
+   <svg role="img" aria-hidden="true" data-component="icon" class="icon icon-link copy-headline-link-icon">
+    <use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#link"></use>
+   </svg>
+  </copy-clipboard>
+ </i18n-message></h3>
+<p>This machine is capable of cutting a wide variety of materials (for information, see Intended Use) at or near their recommended feeds and speeds. Make sure that your workpiece is held as rigidly as possible and use the most rigid tooling available for roughing cuts. Verify that the programmed operations do not exceed the available spindle power.</p>
+<p><strong>Spindle Speed Range&nbsp;</strong></p>
+<p>Two speed ranges are available:&nbsp;</p>
+<ul>
+ <li>
+  <p><strong>Low</strong>&nbsp;175 rpm&nbsp;to 3250 rpm</p>
+ </li>
+ <li>
+  <p><strong>High&nbsp;</strong>525 rpm to 10,000 rpm</p>
+ </li>
+</ul>
+<ul>
+ <li>
+  <p><strong>Spindle Power Rating</strong>&nbsp;1.5 hp (1.1 kW)</p>
+ </li>
+ <li>
+  <p><strong>Maximum Feed Rate&nbsp;</strong></p>
+  <ul>
+   <li>
+    <p><strong>X- and Y-Axis</strong>&nbsp;300 IPM (7.6 m/min)</p>
+   </li>
+   <li>
+    <p><strong>Z-Axis</strong>&nbsp;230 IPM (5.8 m/min)</p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h3 id="Resolution-and-Accuracy"><span id="MachineSpecifications-ResolutionandAccuracy"></span>Resolution and Accuracy
+ <i18n-message i18nkey="clipboard.copyLink.label" attribute="description">
+  <copy-clipboard class="anchor-copy-button" value="https://knowledgebase.tormach.com/770mx/machine-specifications#Resolution-and-Accuracy">
+   <svg role="img" aria-hidden="true" data-component="icon" class="icon icon-link copy-headline-link-icon">
+    <use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#link"></use>
+   </svg>
+  </copy-clipboard>
+ </i18n-message></h3>
+<p>Accuracy is heavily influenced by the techniques that the machinist uses. A skilled machinist can deliver accuracy that exceeds the specified accuracy from the manufacturer; an inexperienced machinist may have difficulty delivering the specified accuracy. We can't predict operator accuracy, but the specified accuracy is an important reference point.</p>
+<ul>
+ <li>
+  <p><strong>Resolution&nbsp;</strong>0.0001"</p>
+ </li>
+</ul>
+<p><strong>NOTE:&nbsp;The resolution of motion is the minimum discrete positional move.</strong></p>
+<ul>
+ <li>
+  <p><strong>Ball Screw Positional Accuracy</strong>&nbsp;≤ 0.0006 in./ft</p>
+ </li>
+ <li>
+  <p><strong>Positional Accuracy</strong>&nbsp;≤ 0.0013 in./ft</p>
+ </li>
+</ul>
+<p><strong>NOTE:&nbsp;The positional accuracy includes additional contributing factors (like compressibility of bearings, ball screw windup, and friction).</strong></p>
+<h2 id="Machine-Specifications"><span id="MachineSpecifications-MachineSpecifications"></span>Machine Specifications
+ <i18n-message i18nkey="clipboard.copyLink.label" attribute="description">
+  <copy-clipboard class="anchor-copy-button" value="https://knowledgebase.tormach.com/770mx/machine-specifications#Machine-Specifications">
+   <svg role="img" aria-hidden="true" data-component="icon" class="icon icon-link copy-headline-link-icon">
+    <use href="/__theme/b_8ca5a7d7-80f3-41c8-bea7-75cce14ad14f/scroll-sites-help-center-theme/41/icons.svg#link"></use>
+   </svg>
+  </copy-clipboard>
+ </i18n-message></h2>
+<div class="theme-table" style="--width: 760px;">
+ <table-expand>
+  <scroll-shadow>
+   <table-sort>
+    <div data-component="table" data-align="unset" data-number-column="false">
+     <table>
+      <colgroup>
+       <col style="width: 340px">
+       <col style="width: 340px">
+      </colgroup>
+      <tbody>
+       <tr>
+        <td colspan="2" style="--bg-color: var(--gray, #f4f5f7);">
+         <p style="--text-align: center"><strong>Travels</strong></p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>X-Axis</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>14" (356 mm)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Y-Axis</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>7.5" (191 mm)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Z-Axis</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>13.25" (337 mm)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Spindle-to-Table Maximum&nbsp;Clearance</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>13.75" (349 mm)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Spindle Centerline to Machine Column</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>8.6"&nbsp;(218 mm)</p>
+        </td>
+       </tr>
+       <tr>
+        <td colspan="2" style="--bg-color: var(--gray, #f4f5f7);">
+         <p style="--text-align: center"><strong>Spindle</strong></p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Spindle Power</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>1.5 hp (1.1 kW)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Spindle Maximum Speed</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>10,000 rpm</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Transmission</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>Poly-V&nbsp;Belt</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Spindle Taper</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>BT30</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Thread Machining</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>Rigid Tapping, Tension/Compression, Thread Mill</p>
+        </td>
+       </tr>
+       <tr>
+        <td colspan="2" style="--bg-color: var(--gray, #f4f5f7);">
+         <p style="--text-align: center"><strong>Maximum Feed Rate</strong></p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>X- and Y-Axis</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>300 IPM (7.6 m/min)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Z-Axis</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>230 IPM (5.8 m/min)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Axis Motor</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>Servo Driven</p>
+        </td>
+       </tr>
+       <tr>
+        <td colspan="2" style="--bg-color: var(--gray, #f4f5f7);">
+         <p style="--text-align: center"><strong>Power</strong></p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Primary Power Required</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>Single-Phase 115 Vac, 50/60 Hz</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Recommended Circuit Amperage</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>Dedicated 15 A breaker</p>
+        </td>
+       </tr>
+       <tr>
+        <td colspan="2" style="--bg-color: var(--gray, #f4f5f7);">
+         <p style="--text-align: center"><strong>Table</strong></p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Table Size</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>26" × 8"&nbsp;(660 mm × 203 mm)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>T-Slot Size</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>5/8" (15.9 mm) (three slots)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Maximum Weight on Table</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>400 lb (181 kg)</p>
+        </td>
+       </tr>
+       <tr>
+        <td colspan="2" style="--bg-color: var(--gray, #f4f5f7);">
+         <p style="--text-align: center"><strong>Overall Dimensions</strong></p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Machine Size</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>56" × 49"&nbsp;(1.4 m × 1.2 m)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Overall System Height</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>88" (2.2 m)</p>
+        </td>
+       </tr>
+       <tr>
+        <td style="--bg-color: var(--gray, #f4f5f7);">
+         <p><strong>Typical System Weight</strong></p>
+        </td>
+        <td style="--bg-color: var(--white, #fff);">
+         <p>950 lb (431 kg)</p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </table-sort>
+  </scroll-shadow>
+ </table-expand>
+</div>
+<p><em>Looking for more information?</em></p>
+<p><em>This is a section of the 770MX operator's manual. To view the whole manual, go to </em><a href="https://tormach.com/docs/download/assetlink/asset_id/537" data-scope="external" rel="external noreferrer"><span style="--color: #424143"><u><em>Tormach document UM10587</em></u></span></a><em>.</em></p>
+<p><em>If you have additional questions, we can help. Create a support ticket with Tormach Technical Support at </em><a href="https://tormach.com/how-to-submit-a-support-ticket" data-scope="external" rel="external noreferrer"><span style="--color: #424143"><em>tormach.com/how-to-submit-a-support-ticket</em></span></a><em> for guidance on how to proceed.</em></p>
+
+																				<script>
+						// Mark block images on the first level as breakout so they can grow wider than the article content.
+						document.querySelectorAll('.article-body > .theme-block-image [data-component="image"]').forEach((element) => {
+							const propertyValue = element.style.getPropertyValue('--width');
+							if (!propertyValue) {
+								return;
+							}
+							if (parseInt(propertyValue) >= 760) {
+								element.closest('.theme-block-image').classList.add('theme-block-image--breakout');
+							}
+						});
+
+						// Remove the inline size on page layouts as this would lead to layouts breaking out of the article content.
+						document.querySelectorAll('.article-body [data-component="layout-section"]').forEach((element) => {
+							const propertyValue = element.style.getPropertyValue('--inline-size');
+							if (!propertyValue) {
+								return;
+							}
+							// ONLY for this very specific width (Confluence default)
+							if (parseInt(propertyValue) === 760) {
+								element.style.removeProperty('--inline-size');
+							}
+						})
+
+						// Set the initial state of the navigation toggle to prevent shifting in the UI
+						try {
+							const navigationToggle = document.querySelector('#navigator-toggle');
+							const navigationState = localStorage.getItem('theme-navigation-state');
+
+							if (navigationState === 'collapsed' && navigationToggle) {
+								navigationToggle.setAttribute('aria-expanded', 'false');
+							}
+						} catch (error) {
+							console.error(error);
+						}
+					</script>
+																			</section>
+				<footer>
+
+				</footer>
+			</article>
+		</main>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer data-component="footer" class="footer">
+
+
+
+
+
+		<img class="footer-logo footer-logo--dark" src="/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png" alt="">
+
+		<img class="footer-logo footer-logo--light" src="/__site/a2fffd96-9306-4398-8e36-897fa19d9b35/logo_Tormach_KnowledgeBase_reverse_0622.png" alt="">
+		<ul class="footer-links">
+				<li><a href="https://www.tormach.com/">Tormach.com</a></li>
+		</ul>
+	<ul class="footer-content">
+		<li><i18n-message i18nkey="footer.copyright.label">Copyright</i18n-message> <current-year></current-year> Tormach Inc. All Rights Reserved.</li>		<li><i18n-message i18nkey="footer.poweredBy.label">Powered by</i18n-message> <a href="https://www.k15t.com/products/scroll-sites-for-confluence" rel="external nofollow">Scroll&nbsp;Sites</a> & <a href="https://www.atlassian.com/software/confluence" rel="external nofollow">Atlassian&nbsp;Confluence</a></li>
+	</ul>
+
+</footer>
+
+
+</body>
+</html>

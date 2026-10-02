@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="13" time="13.758" timestamp="2026-09-29T13:39:54.897961+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_cnc_conclusion_ui" name="test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions" time="4.633"><failure message="AttributeError: uncheck">tests_v3\test_cnc_conclusion_ui.py:67: in test_first_screen_hides_geometry_until_location_requested_and_keeps_real_dimensions
+    app.toggle(key="cnc_location_details").uncheck().run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:183: in __getattr__
+    return getattr(self.proto, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: uncheck</failure></testcase><testcase classname="tests_v3.test_cnc_conclusion_ui" name="test_changed_conditions_clear_old_result_and_restart_at_conclusion" time="0.248"><failure message="AttributeError: check">tests_v3\test_cnc_conclusion_ui.py:75: in test_changed_conditions_clear_old_result_and_restart_at_conclusion
+    app.toggle(key="cnc_location_details").check().run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:183: in __getattr__
+    return getattr(self.proto, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: check</failure></testcase><testcase classname="tests_v3.test_cnc_conclusion_ui" name="test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence" time="2.554"><failure message="AttributeError: check">tests_v3\test_cnc_conclusion_ui.py:98: in test_omitted_measurement_and_missing_tool_remain_unknown_in_optional_evidence
+    app.toggle(key="cnc_location_details").check().run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:183: in __getattr__
+    return getattr(self.proto, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: check</failure></testcase><testcase classname="tests_v3.test_machining_decisions_ui" name="test_problem_and_missing_information_are_separate_without_mutating_report" time="0.001" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_first_card_targets_an_offending_face_not_the_first_measured_face" time="0.000" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_axis_mismatch_does_not_fabricate_size_comparison" time="0.000" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_unmeasured_visibility_is_pending_not_a_zero_problem_count" time="0.000" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_deep_narrow_pocket_actions_address_each_observed_tool_conflict" time="0.001" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[None-False]" time="0.001" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[False-False]" time="0.001" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_unmeasured_or_nonexceeding_pocket_does_not_suggest_tool_changes[False-True]" time="0.001" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_first_review_computes_visibility_and_location_button_selects_measured_floor" time="1.629" /><testcase classname="tests_v3.test_machining_decisions_ui" name="test_missing_tool_input_is_visible_and_user_can_opt_out_of_visibility" time="2.578" /></testsuite></testsuites>

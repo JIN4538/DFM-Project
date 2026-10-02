@@ -1,0 +1,501 @@
+.FFF.FFFFFFF.............................                                [100%]
+================================== FAILURES ===================================
+_______________ test_complete_design_workflow_and_stale_results _______________
+
+    def test_complete_design_workflow_and_stale_results():
+        app=AppTest.from_file(str(APP),default_timeout=45).run()
+        assert not app.exception
+        app.button[0].click().run()
+        assert not app.exception
+        assert app.metric
+        app.segmented_control(key="result_tab").set_value("방향 비교").run()
+        assert not app.exception
+        app.selectbox(key="orientation_choice").select("+Y").run()
+        app.button(key="apply_orientation").click().run()
+>       assert not app.exception
+E       assert not ElementList(_list=[Exception(message='There are multiple `plotly_chart` elements with the same auto-generated ID. When...\\elements\\lib\\utils.py", line 158, in _register_element_id\n    raise StreamlitDuplicateElementId(element_type)'])])
+E        +  where ElementList(_list=[Exception(message='There are multiple `plotly_chart` elements with the same auto-generated ID. When...\\elements\\lib\\utils.py", line 158, in _register_element_id\n    raise StreamlitDuplicateElementId(element_type)'])]) = AppTest(\n    _script_path='C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\app.py',\n    default_timeout=45,\n    ...             11: Caption()\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception
+
+tests_v3\test_app.py:43: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:24.534 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-15 14:18:28.055 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 827, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\app.py", line 394, in <module>
+    st.plotly_chart(figure,width='stretch')
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 725, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\plotly_chart.py", line 751, in plotly_chart
+    plotly_chart_proto.id = compute_and_register_element_id(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 273, in compute_and_register_element_id
+    _register_element_id(ctx, element_type, element_id)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 158, in _register_element_id
+    raise StreamlitDuplicateElementId(element_type)
+streamlit.errors.StreamlitDuplicateElementId: There are multiple `plotly_chart` elements with the same auto-generated ID. When this element is created, it is assigned an internal ID based on the element type and provided parameters. Multiple elements with the same type and parameters will cause this error.
+
+To fix this error, please pass a unique `key` argument to the `plotly_chart` element.
+_______________ test_wall_review_stays_attached_and_exportable ________________
+
+    def test_wall_review_stays_attached_and_exportable():
+        app=AppTest.from_file(str(APP),default_timeout=60).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+>       app.button(key="run_wall").click().run()
+
+tests_v3\test_app.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 4 mm · 메시 면 5', '표본 2...· 메시 면 1', '표본 21 · 40 mm · 메시 면 12', '표본 22 · 40 mm · 메시 면 13', '표본 23 · 40 mm · 메시 면 18', '표본 24 · 40 mm · 메시 면 19'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 4 mm · 메시 면 23' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:28.102 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______________ test_design_comparison_and_cura_example_workflow _______________
+
+    def test_design_comparison_and_cura_example_workflow():
+        manifest=json.loads((APP.parent/"examples/cad/manifest.json").read_text(encoding="utf-8"))
+        names={c["id"]:c["title"] for c in manifest}
+        app=AppTest.from_file(str(APP),default_timeout=60).run()
+        app.selectbox(key="cad_example").select(names["02_thin_plate"]).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("수정 전후").run()
+        app.button(key="save_baseline").click().run()
+        app.selectbox(key="cad_example").select(names["14_thin_plate_improved"]).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("수정 전후").run()
+        assert not app.exception
+        assert app.session_state["comparison_baseline"]["model_fingerprint"]!=app.session_state["report"]["model_fingerprint"]
+        table=app.dataframe[0].value
+        assert table.loc[table["항목"]=="CAD 체적 (mm³)","차이"].iloc[0]==pytest.approx(540,abs=1e-8)
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+>       app.checkbox(key='show_gcode_practice').check().run()
+
+tests_v3\test_app.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 1.2 mm · 메시 면 8', '표본...0 mm · 메시 면 7', '표본 9 · 30 mm · 메시 면 0', '표본 10 · 30 mm · 메시 면 1', '표본 11 · 30 mm · 메시 면 2', '표본 12 · 30 mm · 메시 면 3'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 30 mm · 메시 면 3' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:28.669 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_non_fdm_sections_work_and_exports_preserve_measurements[VPP] ______
+
+process = 'VPP'
+
+    @pytest.mark.parametrize("process",["VPP","PBF_POLYMER","PBF_METAL"])
+    def test_non_fdm_sections_work_and_exports_preserve_measurements(process):
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key="process").select(process).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+>       app.segmented_control(key="detail_focus").set_value("층간").run()
+
+tests_v3\test_app.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 4 mm · 메시 면 5', '표본 2...· 메시 면 1', '표본 21 · 40 mm · 메시 면 12', '표본 22 · 40 mm · 메시 면 13', '표본 23 · 40 mm · 메시 면 18', '표본 24 · 40 mm · 메시 면 19'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 4 mm · 메시 면 23' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:43.539 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__ test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_POLYMER] __
+
+process = 'PBF_POLYMER'
+
+    @pytest.mark.parametrize("process",["VPP","PBF_POLYMER","PBF_METAL"])
+    def test_non_fdm_sections_work_and_exports_preserve_measurements(process):
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key="process").select(process).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+>       app.segmented_control(key="detail_focus").set_value("층간").run()
+
+tests_v3\test_app.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 4 mm · 메시 면 5', '표본 2...· 메시 면 1', '표본 21 · 40 mm · 메시 면 12', '표본 22 · 40 mm · 메시 면 13', '표본 23 · 40 mm · 메시 면 18', '표본 24 · 40 mm · 메시 면 19'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 4 mm · 메시 면 23' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:45.736 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+___ test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_METAL] ___
+
+process = 'PBF_METAL'
+
+    @pytest.mark.parametrize("process",["VPP","PBF_POLYMER","PBF_METAL"])
+    def test_non_fdm_sections_work_and_exports_preserve_measurements(process):
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key="process").select(process).run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+>       app.segmented_control(key="detail_focus").set_value("층간").run()
+
+tests_v3\test_app.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 4 mm · 메시 면 5', '표본 2...· 메시 면 1', '표본 21 · 40 mm · 메시 면 12', '표본 22 · 40 mm · 메시 면 13', '표본 23 · 40 mm · 메시 면 18', '표본 24 · 40 mm · 메시 면 19'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 4 mm · 메시 면 23' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:47.743 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_event_section_default_and_switch_keep_result_method_visible _______
+
+    def test_event_section_default_and_switch_keep_result_method_visible():
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key="process").select("VPP").run()
+        app.button[0].click().run()
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+>       app.segmented_control(key="detail_focus").set_value("단면").run()
+
+tests_v3\test_app.py:156: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 4 mm · 메시 면 5', '표본 2...· 메시 면 1', '표본 21 · 40 mm · 메시 면 12', '표본 22 · 40 mm · 메시 면 13', '표본 23 · 40 mm · 메시 면 18', '표본 24 · 40 mm · 메시 면 19'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 4 mm · 메시 면 23' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:49.744 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+____ test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile _____
+
+    def test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile():
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.button(key='start_from_model').click().run()
+        app.segmented_control(key='result_tab').set_value('정밀 검토').run()
+>       app.button(key='run_wall').click().run()
+
+tests_v3\test_app.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 4 mm · 메시 면 5', '표본 2...· 메시 면 1', '표본 21 · 40 mm · 메시 면 12', '표본 22 · 40 mm · 메시 면 13', '표본 23 · 40 mm · 메시 면 18', '표본 24 · 40 mm · 메시 면 19'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 4 mm · 메시 면 23' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:50.346 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart _______
+
+    def test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart():
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+        app.button[0].click().run()
+        app.button(key='next_review_action').click().run()
+        assert not app.exception
+        assert app.segmented_control(key='result_tab').value=='정밀 검토'
+        assert app.segmented_control(key='detail_focus').value=='벽'
+>       app.segmented_control(key='detail_focus').set_value('층간').run()
+
+tests_v3\test_app.py:208: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:194: in run
+    return self.root.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2655: in run
+    widget_states = self.get_widget_states()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2638: in get_widget_states
+    w = get_widget_state(node)
+        ^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2581: in get_widget_state
+    return node._widget_state
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1623: in _widget_state
+    if self.index is not None and len(self.options) > 0:
+       ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Selectbox(key='wall_sample', _value=InitialValue(), label='확인할 측정 위치 · 짧은 거리순', options=['표본 1 · 10 mm · 메시 면 0', '표본 ...mm · 메시 면 7', '표본 9 · 30 mm · 메시 면 8', '표본 10 · 30 mm · 메시 면 9', '표본 11 · 30 mm · 메시 면 10', '표본 12 · 30 mm · 메시 면 11'])
+
+    @property
+    def index(self) -> int | None:
+        """The index of the current selection. (int)"""  # noqa: D400
+        if self.value is None:
+            return None
+    
+        if len(self.options) == 0:
+            return 0
+        formatted_value = _format_value_for_widget(self.format_func, self.value)
+>       return self.options.index(formatted_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: '표본 1 · 10 mm · 메시 면 3' is not in list
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:1584: ValueError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:52.307 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-15 14:18:56.685 The widget with key "result_tab" was created with a default value but also had its value set via the Session State API.
+Stack (most recent call last):
+  File "C:\Users\JIN\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\JIN\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\JIN\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 399, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 852, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 827, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\app.py", line 279, in <module>
+    tab=st.segmented_control("결과 보기",["설계 조치","방향 비교","정밀 검토","수정 전후","근거·내보내기"],
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 725, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\widgets\button_group.py", line 1111, in segmented_control
+    return self._internal_button_group(
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 725, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\widgets\button_group.py", line 1269, in _internal_button_group
+    result: RegisterWidgetResult[Any] = self._button_group(
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\widgets\button_group.py", line 1365, in _button_group
+    check_widget_policies(self.dg, key, on_change, default_value=_default)
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\lib\policies.py", line 146, in check_widget_policies
+    check_session_state_rules(
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\streamlit\elements\lib\policies.py", line 90, in check_session_state_rules
+    _LOGGER.warning(
+_ test_change_pair_selected_without_fake_slope_or_mutating_original_measurements _
+
+    def test_change_pair_selected_without_fake_slope_or_mutating_original_measurements():
+        detail = sections()
+        original = copy.deepcopy(detail)
+        app = render(detail)
+        assert not app.exception
+        assert app.selectbox(key="section_index").value == 2
+        assert "높이" in app.selectbox(key="section_index").options[0]
+        assert app.session_state["original_detail"] == original
+        assert not app.metric, "Tiny numerical cross-check must not be a giant primary verdict"
+        text = "\n".join(element.value for element in app.markdown)
+        assert "다음에 할 일" in text and "제작" in text
+        assert "0.0001% 미만" in text
+        plot = json.loads(app.get("plotly_chart")[0].proto.spec)
+        assert len(plot["data"]) == 2
+        assert {trace["line"]["dash"] for trace in plot["data"]} == {"dash", "solid"}
+        charts = app.get("vega_lite_chart")
+>       assert charts
+E       assert []
+
+tests_v3\test_section_view.py:52: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-15 14:18:56.819 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED tests_v3/test_app.py::test_complete_design_workflow_and_stale_results
+FAILED tests_v3/test_app.py::test_wall_review_stays_attached_and_exportable
+FAILED tests_v3/test_app.py::test_design_comparison_and_cura_example_workflow
+FAILED tests_v3/test_app.py::test_non_fdm_sections_work_and_exports_preserve_measurements[VPP]
+FAILED tests_v3/test_app.py::test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_POLYMER]
+FAILED tests_v3/test_app.py::test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_METAL]
+FAILED tests_v3/test_app.py::test_event_section_default_and_switch_keep_result_method_visible
+FAILED tests_v3/test_app.py::test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile
+FAILED tests_v3/test_app.py::test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart
+FAILED tests_v3/test_section_view.py::test_change_pair_selected_without_fake_slope_or_mutating_original_measurements
+10 failed, 31 passed in 40.71s

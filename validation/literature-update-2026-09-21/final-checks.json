@@ -1,0 +1,556 @@
+{
+  "date": "2026-09-21T07:35:18.272568+00:00",
+  "parent_commit": "0aa8fa5987b87a631363c1fc19da85e74ee9b3d3",
+  "code_sha256": "c8e1fe81ef2df9c6a56ca05a9fe5594dfa6316400f7c3ee3b0660def27e8da9e",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "trimesh": "5.1.0",
+    "shapely": "2.1.2",
+    "streamlit": "1.63.0",
+    "cadquery-ocp-novtk": "7.9.3.1.1",
+    "pytest": "8.4.2"
+  },
+  "source_files": [
+    {
+      "path": "amdfm/__init__.py",
+      "sha256": "9af88baf9a2caee9d946772d042ebf268d98c97180bb5387c91527ba025263a5"
+    },
+    {
+      "path": "amdfm/analysis.py",
+      "sha256": "93a16fd83cbb6a51ade6c452a1067e9cd33b343c286a128e76c397b1e1ebff90"
+    },
+    {
+      "path": "amdfm/cad_features.py",
+      "sha256": "2f1fbada2effa6ff922a1457129add958b9d009b9cdbd784a3b6024aee87edb2"
+    },
+    {
+      "path": "amdfm/cad_worker.py",
+      "sha256": "48b187d6fa1303c5b8fc04f5220c5a4a66b83a4a899d1d0c5a629d7786b71eca"
+    },
+    {
+      "path": "amdfm/comparison.py",
+      "sha256": "524dc4901dfbeba12a2a18a313d09fd555a5f81733d5fe174c25ebeefc2abd92"
+    },
+    {
+      "path": "amdfm/cross_sections.py",
+      "sha256": "94a67fd0aae1a11e0929ff6012ade20651cb6a54a980f839d1239724776c7640"
+    },
+    {
+      "path": "amdfm/detail.py",
+      "sha256": "47af7454a7e04995692e8ff644f683164a71033ab09fa1abd02c742b35a29b65"
+    },
+    {
+      "path": "amdfm/detail_summary.py",
+      "sha256": "1b90a2778e81c52fcae803eb32593c085940bf3176a0e897a0885542e9abc17e"
+    },
+    {
+      "path": "amdfm/detail_view.py",
+      "sha256": "1f6634274e527707c993e1be0966b4fc8fb1c884e2f5feb7478223b4a832948c"
+    },
+    {
+      "path": "amdfm/detail_worker.py",
+      "sha256": "f5baacbf14f039f3fe46007e02000c7937a418b23c44a2898610079660214909"
+    },
+    {
+      "path": "amdfm/event_sections.py",
+      "sha256": "2659923cf94a271a63eb1bba06209c5d846f9bc15e1bc9fd046a103a74c50abc"
+    },
+    {
+      "path": "amdfm/evidence.py",
+      "sha256": "c9c0f90510f4e8267a7a98a18cbf4d3a9e21c0121780855aa8e948481e3c22b8"
+    },
+    {
+      "path": "amdfm/gcode.py",
+      "sha256": "a298088bc0e63184bf0936baa22ea06840387629b37bde931057153ce7eefd4c"
+    },
+    {
+      "path": "amdfm/io.py",
+      "sha256": "2b673fa45cc914020ed35f67847526f3dae2f5b3b7ec7393cc3d697d4ca72c84"
+    },
+    {
+      "path": "amdfm/models.py",
+      "sha256": "bf2f4af6b68c18ead77550a0e1923ed62d116b143d255b6e9be4654f9aad0c99"
+    },
+    {
+      "path": "amdfm/orientation.py",
+      "sha256": "f33f9b8aef19381e6145d70b85fb6068f5bffc5b49b932bf19a72275529b9fde"
+    },
+    {
+      "path": "amdfm/presentation.py",
+      "sha256": "c36cd1fc4772c02b7c7bcd445aefb88e8eabf4c5abd17b05322e4b6b9415c6b9"
+    },
+    {
+      "path": "amdfm/processes.py",
+      "sha256": "49974870ff83ca05b01d09ca6b55b8593a38ce4c55ab7ca8017083a5fc38180f"
+    },
+    {
+      "path": "amdfm/profiles.py",
+      "sha256": "b69c55c9b37667708e7c81c987d3694ebd43e9f2525496ddec5c682d3c022e20"
+    },
+    {
+      "path": "amdfm/section_summary.py",
+      "sha256": "b6b9a5f821dadcbecd791e8ab026a49aeb3da139dd3ac90cce849639c4599af2"
+    },
+    {
+      "path": "amdfm/section_view.py",
+      "sha256": "501e209164646fd9a6d7addfc4bc54e2b866787603b853a12735d424c46dec96"
+    },
+    {
+      "path": "amdfm/three_mf.py",
+      "sha256": "23fb289383aafc326fa9d451a6d24d877fd8e3ba49e4c431e5713f569f1761f7"
+    },
+    {
+      "path": "amdfm/visuals.py",
+      "sha256": "9587ca05e707e8d9aebec7d6f06f2760de48bda91588644f11dec5897659be1d"
+    },
+    {
+      "path": "amdfm/workflow.py",
+      "sha256": "819d3fd08fd6cd3d5d0a03dca71cd9bfedc0bbf4698b9464261b0088c0c7c243"
+    },
+    {
+      "path": "dfm/__init__.py",
+      "sha256": "e6f7f88a2da2ec4e5df249acaa85172485959bd8441ec098024d3a9486df6719"
+    },
+    {
+      "path": "dfm/accessibility.py",
+      "sha256": "79ef902e175da946e0accf251910e61f5b12bc4263139dfd766b9d316516bb7e"
+    },
+    {
+      "path": "dfm/machining.py",
+      "sha256": "96d53ae8c2c5470979e12ee942247ed6fd07105a6a632a862b46b3186802c757"
+    },
+    {
+      "path": "dfm/machining_view.py",
+      "sha256": "36d7d7d60bae73fcfd252bd32a5bab68a4de1e59166c1f83e6c9ae03c4725b38"
+    },
+    {
+      "path": "src/core/__init__.py",
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf"
+    },
+    {
+      "path": "src/core/cura_records.py",
+      "sha256": "9a07abd3a7ec42cad0655bca5a0fe73f7096ce84342efe1cf18bf33f0d77b2ac"
+    },
+    {
+      "path": "src/core/geometry_analyzer.py",
+      "sha256": "f8ef08187670174376f123855129f05920ae349e4a6cf4de5ed8ba6451f98d3c"
+    },
+    {
+      "path": "src/core/layer_regions.py",
+      "sha256": "45d2c37f46a0f1007d6690bfd710f260bb221d1be6b0e75774c8670af6a3975b"
+    },
+    {
+      "path": "src/core/layer_review.py",
+      "sha256": "c0a5a9539c7433022730edcada62b00d589d223c032d7bfe65002bc96cf9def4"
+    },
+    {
+      "path": "src/core/mesh_diagnostics.py",
+      "sha256": "33fe8c8537560c3171a990724d7a31a8edfca2f7bda73f8bfbb10bb49763d15a"
+    },
+    {
+      "path": "src/core/model_loader.py",
+      "sha256": "4b5729367e180ba8b0fea18a777ed67c698e8bbc5cbf2d3e1a40f5510ba2ea6a"
+    },
+    {
+      "path": "src/core/reproducibility.py",
+      "sha256": "f324eefa6d89e3838fe0d558cca27a59654e55bf6f888b65f64e89072ccd6e2a"
+    },
+    {
+      "path": "src/core/scoring.py",
+      "sha256": "4fb1897de761c10675e8b58e84703df4f7bfb7f60aa03564625ccc15bed22ed1"
+    },
+    {
+      "path": "src/core/section_components.py",
+      "sha256": "63fede150f61ed47d3e66c31df30f6327715d80cfb64ea9897873d6d1ac7969c"
+    },
+    {
+      "path": "src/core/section_index.py",
+      "sha256": "4a818a47cdca83db55754adc1399b2992eaec95cb5895f8b0e4d40c55ab8dbf7"
+    },
+    {
+      "path": "src/core/sections.py",
+      "sha256": "127722271c308979cfa20734779941882749a58f7b0355a481c0df403bb96fc9"
+    },
+    {
+      "path": "src/core/validation_metrics.py",
+      "sha256": "7c829c266d1161312998563f1c9febcedb70a26164972d7eeadfb5374be1458f"
+    },
+    {
+      "path": "src/core/weights.py",
+      "sha256": "c021dc02ede648150f49cb16799565cc37ac26b91a7eb9807b9c641d39ea29f3"
+    },
+    {
+      "path": "app.py",
+      "sha256": "9bf16858006abb2422d81a6a578dddb3755bb7fd214e34786e90a0db81bad6d1"
+    },
+    {
+      "path": "tests_v3/test_analysis_evidence.py",
+      "sha256": "46149bbb478e853b225f7533bc1b5c1a81ebeab95375b5f964b3c316514d7ca0"
+    },
+    {
+      "path": "tests_v3/test_app.py",
+      "sha256": "83d857d361359aa3bde51616e2def521f361e42cf140dd96a7cb8774dcdaad30"
+    },
+    {
+      "path": "tests_v3/test_cad_and_geometry.py",
+      "sha256": "1c452ee9c03a5ec11c524234d4c2602142783d178c4b7e499cc8138c4aa34417"
+    },
+    {
+      "path": "tests_v3/test_cad_precision.py",
+      "sha256": "727db814dccb778887affa39c087a50d53fc9ae6f6d687ec2cf8036765c5788f"
+    },
+    {
+      "path": "tests_v3/test_cnc_cad_features.py",
+      "sha256": "f95276081b9a51f154496bc3e1b8a347fc68f1d4d171d67a41834e4458755b5f"
+    },
+    {
+      "path": "tests_v3/test_contracts.py",
+      "sha256": "04b1a9c215e435f3194868c18c89eefbf839e5eac3a862a20d0e922c6ffea437"
+    },
+    {
+      "path": "tests_v3/test_corpus_audit.py",
+      "sha256": "c9d76997ebf76e65aa395d7e87a232469e5c0df72b7c93b69495af639825f7e0"
+    },
+    {
+      "path": "tests_v3/test_corpus_followups.py",
+      "sha256": "374b1ae591cec76f8e462bd3e62eb06173f2db60b46d2ed2333b8f1321eb13bf"
+    },
+    {
+      "path": "tests_v3/test_cross_sections.py",
+      "sha256": "cc295e28f33b32d413c1d6760e10866d4891a2f333b799085b2ca8775e049ed9"
+    },
+    {
+      "path": "tests_v3/test_detail_summary.py",
+      "sha256": "b74373960a536b4cf19215cc41c72527d3e96df929ac14a5e64c7df9a511694f"
+    },
+    {
+      "path": "tests_v3/test_detail_view.py",
+      "sha256": "6fbfd464e88f75fcb098a24d6575a6d1e40494f18d795611f80cf52846fe0b23"
+    },
+    {
+      "path": "tests_v3/test_event_omission_contract.py",
+      "sha256": "043c7025cff2213f03827e0af6f510db783993050176a3bca3a9f8d1bfb70287"
+    },
+    {
+      "path": "tests_v3/test_event_sections.py",
+      "sha256": "6f3ac2135c7051eb74cde48b58b554d96650130b001df20b37fb5962fa19e534"
+    },
+    {
+      "path": "tests_v3/test_gcode_and_comparison.py",
+      "sha256": "d2d510a483068058e1a2edf2275e9db1f4afbae49bd18644ba5b7dff88648c6d"
+    },
+    {
+      "path": "tests_v3/test_installer.py",
+      "sha256": "e793958358ba29e0667aa10087896bdd11218a33ce8eca344f793fd99a05e817"
+    },
+    {
+      "path": "tests_v3/test_machining_accessibility.py",
+      "sha256": "ec3a28d13550e177eab0a8c66532c3dd82caa0fc7f3ed26b6da16e4de75da887"
+    },
+    {
+      "path": "tests_v3/test_machining_contracts.py",
+      "sha256": "222be74d60f4d9791a882214a252e88ba43274dfe63641f8e1fe391f9626b39c"
+    },
+    {
+      "path": "tests_v3/test_machining_reaudit.py",
+      "sha256": "a81b9cc8a9e03d79dfe8b7afbbe59ea9a048eaa694dadc919da988228b6a3466"
+    },
+    {
+      "path": "tests_v3/test_machining_review.py",
+      "sha256": "602d242643e451d01b74bbea6acda0b188cba019fd8f3dd52f521cfafc51e121"
+    },
+    {
+      "path": "tests_v3/test_machining_ui.py",
+      "sha256": "57a15f0c66ef8ebcc2db5d3800fbab5ebb2f08aa2f1113fc2fa2f2566cd86e22"
+    },
+    {
+      "path": "tests_v3/test_machining_ux_reaudit.py",
+      "sha256": "485d9475418172c331576acb6d5e42277b7977d3ae4c4313390d7afa0e343902"
+    },
+    {
+      "path": "tests_v3/test_navigation_ux.py",
+      "sha256": "ec18366aeab7029e27a168ff67869cd0db587c2cbc5dd9dd4a3f3028ca4d98e5"
+    },
+    {
+      "path": "tests_v3/test_orientation_extended.py",
+      "sha256": "54b54f374ea576f6df6d37d35fa680474712e422e2b07825c624ad56bd315d0e"
+    },
+    {
+      "path": "tests_v3/test_orientation_layers.py",
+      "sha256": "d9df9edb2433265f2c7fc67ae1d972cf7cfc1fded7ac19d2afd295268756adec"
+    },
+    {
+      "path": "tests_v3/test_orientation_metric_contract.py",
+      "sha256": "96918d64ca4230a877b9f5594bf0ef572cfcd1e314ec2c22942b2562e5cc0100"
+    },
+    {
+      "path": "tests_v3/test_packaged_geometry.py",
+      "sha256": "3eea6ac34279c42133ed82da80af2997c7389962011bdf97b1fe52ff5fce0a39"
+    },
+    {
+      "path": "tests_v3/test_process_evidence.py",
+      "sha256": "67602e6ed9780de48a882b0a997c5570defba4f1dba9c754f03abd2926ddafe2"
+    },
+    {
+      "path": "tests_v3/test_process_ui.py",
+      "sha256": "2d5be701b115199ffc88d218aace3806ac933d3593ec46196978a20dea1e1ab7"
+    },
+    {
+      "path": "tests_v3/test_processes.py",
+      "sha256": "4b249e4c69189e651ffc23f4a12da5d68d983dc77852570ff12842e93508fceb"
+    },
+    {
+      "path": "tests_v3/test_reference_scope.py",
+      "sha256": "ad4264e5704622cb51d4983f8e2da784bfa77d936f5870c2de441a7707be6ae0"
+    },
+    {
+      "path": "tests_v3/test_report_ux.py",
+      "sha256": "c0e0ad0c2ea8158eaf28f4d347774f9c2179be3e89ca1fe1223e661101acb8c7"
+    },
+    {
+      "path": "tests_v3/test_section_strategy.py",
+      "sha256": "191391ed8d0120b5009a6c197fa0008adf28d041cbe4effca43d4f77392fb871"
+    },
+    {
+      "path": "tests_v3/test_section_summary.py",
+      "sha256": "267f4414f6386322cf1dbb38a9026562b7e0d98df3c43434e3b0824306d0d3e5"
+    },
+    {
+      "path": "tests_v3/test_section_view.py",
+      "sha256": "b2b71e96169fc2720ebc92b684fcd33c0eaf0a6a9e539f46484b9af3d85505b0"
+    },
+    {
+      "path": "tests_v3/test_start_review.py",
+      "sha256": "aedd8e4ae36524804c9c12e757186537fab16cbfd0590b1938adc14614f3b7b5"
+    },
+    {
+      "path": "tests_v3/test_three_mf.py",
+      "sha256": "961513ab472a80822af2d00ffbd9f5f6f7f253cdbaf9f4a0c501f4787940daf0"
+    },
+    {
+      "path": "tests_v3/test_visual_accessibility.py",
+      "sha256": "c937b6b4a754c4465da1e18eb0f930b2ac4459c3eb40135c5a831925f9ad797e"
+    },
+    {
+      "path": "tests_v3/test_workflow_ux.py",
+      "sha256": "64e1c1a062af649e10511f0cad815eb0b226555a43ca5f87d6145cafd59c720a"
+    },
+    {
+      "path": "tests/test_cura_records.py",
+      "sha256": "2a20f7aa2595b65c393ae2cbf58c4bfe1c4ce29e444cedcca37aca1bf502970a"
+    },
+    {
+      "path": "tests/test_evaluation_22.py",
+      "sha256": "f1898cae3a30d4339f626cef12b2bdabf85c5fc96d1085d1a0792a8398c7c39b"
+    },
+    {
+      "path": "tests/test_layers_24.py",
+      "sha256": "5fdf7d7e9866661a9b8c246b956a20b1107657bfd97f6d2c493d1c52de78b36e"
+    },
+    {
+      "path": "tests/test_layers_25.py",
+      "sha256": "b63e7d3174280e5f57fd000171ca14b44736c0ba64ccaca6ea0ea0e2180675fd"
+    },
+    {
+      "path": "tests/test_layers_26.py",
+      "sha256": "ce8571d0fa9707e01e0a2bee4f8333912eb4bf52a628255502b3a8e135e87f3a"
+    },
+    {
+      "path": "tests/test_mesh_review_23.py",
+      "sha256": "b75a6c9d49ffde744076981f12cf66d875806347a7307cfd3afb6261796446ec"
+    },
+    {
+      "path": "tests/test_review.py",
+      "sha256": "a7ad9d5e40e582353b071bd4e4cdb21d7a4cd201b13c44b3a45c9ed8e5ca0810"
+    },
+    {
+      "path": "tests/test_ui_review.py",
+      "sha256": "ee62e0eebe27f010e801cddc6cadab1d2b6c164cf7d139d68ebc4aed8d6f0d02"
+    }
+  ],
+  "junit_totals": {
+    "tests": 823,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "local_reference_documents_checked": 6,
+  "broken_links": [],
+  "desktop_source_matches": [
+    {
+      "id": "AM01",
+      "matches": true
+    },
+    {
+      "id": "AM02",
+      "matches": true
+    },
+    {
+      "id": "AM03",
+      "matches": true
+    },
+    {
+      "id": "AM04",
+      "matches": true
+    },
+    {
+      "id": "AM05",
+      "matches": true
+    },
+    {
+      "id": "AM06",
+      "matches": true
+    },
+    {
+      "id": "AM07",
+      "matches": true
+    },
+    {
+      "id": "AM08",
+      "matches": true
+    },
+    {
+      "id": "AM09",
+      "matches": true
+    },
+    {
+      "id": "AM10",
+      "matches": true
+    },
+    {
+      "id": "AM11",
+      "matches": true
+    },
+    {
+      "id": "AM12",
+      "matches": true
+    },
+    {
+      "id": "AM13",
+      "matches": true
+    },
+    {
+      "id": "AM14",
+      "matches": true
+    },
+    {
+      "id": "AM15",
+      "matches": true
+    },
+    {
+      "id": "CNC01",
+      "matches": true
+    },
+    {
+      "id": "CNC02",
+      "matches": true
+    },
+    {
+      "id": "CNC03",
+      "matches": true
+    },
+    {
+      "id": "CNC04",
+      "matches": true
+    },
+    {
+      "id": "CNC05",
+      "matches": true
+    },
+    {
+      "id": "CNC06",
+      "matches": true
+    },
+    {
+      "id": "CNC07",
+      "matches": true
+    },
+    {
+      "id": "CNC08",
+      "matches": true
+    },
+    {
+      "id": "CNC09",
+      "matches": true
+    },
+    {
+      "id": "CNC10",
+      "matches": true
+    },
+    {
+      "id": "CNC11",
+      "matches": true
+    },
+    {
+      "id": "CNC12",
+      "matches": true
+    },
+    {
+      "id": "CNC13",
+      "matches": true
+    },
+    {
+      "id": "CNC14",
+      "matches": true
+    },
+    {
+      "id": "CNC15",
+      "matches": true
+    },
+    {
+      "id": "CNC16",
+      "matches": true
+    },
+    {
+      "id": "CNC17",
+      "matches": true
+    },
+    {
+      "id": "CNC18",
+      "matches": true
+    },
+    {
+      "id": "CNC19",
+      "matches": true
+    },
+    {
+      "id": "CNC20",
+      "matches": true
+    },
+    {
+      "id": "CNC21",
+      "matches": true
+    },
+    {
+      "id": "CNC22",
+      "matches": true
+    },
+    {
+      "id": "CNC23",
+      "matches": true
+    },
+    {
+      "id": "CNC24",
+      "matches": true
+    },
+    {
+      "id": "CNC25",
+      "matches": true
+    },
+    {
+      "id": "CNC26",
+      "matches": true
+    },
+    {
+      "id": "CNC27",
+      "matches": true
+    },
+    {
+      "id": "CNC28",
+      "matches": true
+    }
+  ],
+  "physical_manufacturing_tested": false
+}

@@ -1,0 +1,10 @@
+.............F...........................                                [100%]
+================================== FAILURES ===================================
+___________ test_cad_against_independent_analytic_oracle[12_sphere] ___________
+tests_v3\test_cad_and_geometry.py:51: in test_cad_against_independent_analytic_oracle
+    assert inspect_mesh(model.mesh)["topology_ready"]
+E   assert False
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\v3\pytest-first.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_cad_and_geometry.py::test_cad_against_independent_analytic_oracle[12_sphere]
+1 failed, 40 passed in 40.93s

@@ -1,0 +1,132 @@
+{
+  "status": "source_frozen_for_root_product_integration",
+  "new_selector_model_adopted": false,
+  "preferred_acquisition": "height_neural",
+  "product_integration_owner": "root",
+  "source_sha256": {
+    "amdfm/proposal_selector.py": "09e282082f0d95eec5681f0db3c1688fbe7dca6f81dbc8b4d1f4acc6eb351f54",
+    "amdfm/geometry_guided_search.py": "c94baa8e62c138baae3b972d0edbd1da927b3df509d0a0bf0a8378f88ce67d41",
+    "scripts/prepare_am_selector.py": "ef214ad097ad99e4f1f3cef2f3b7fd1200ed23d198bf9f385a51bb9e37924603",
+    "scripts/train_am_selector.py": "e28637a9560494b8bcae266f9cc2595269d004397635c0ad4e76b007edbcc902",
+    "scripts/benchmark_am_selector.py": "dae70c4cd85dab6d378750059c2d63cdd09995b10ffec32c62b0aa596a5c123f",
+    "scripts/summarize_am_selector.py": "73e59c1b92c53a018c891325e9546c23f1b9f0098c48fe18fdb8b51cc89e7055",
+    "scripts/audit_am_selector_decisions.py": "995aaec2338285454cbeedf384982fd2b236bf7eaa6f06d1b7a72b29cea1ee0a",
+    "scripts/audit_am_guided_pool.py": "f7bdc544f6e2786614e5859c15b45dcd9b5d19b0e2cc12e3887708a8fe48c442",
+    "tests_v3/test_am_proposal_selector.py": "03c30786b98b7a252db876597c56af64716c9885f429acb97bde524ec4e01532",
+    "tests_v3/test_geometry_guided_search.py": "b3bb4215aaa29660e4463bf2592876279f20ca0cf4cd9ef12a0008809483dbac",
+    "docs/research/AM_QUERY_SELECTOR_2026-09-30.md": "2263dc3c820851527015d5ff7199b9e497bd1016445bfec0c07df157526c2a7d"
+  },
+  "research_model_sha256": "20e02474872a7511cd40f6b19edd407d41b9d8173e81cd0ee41bed22202abf4a",
+  "frozen_v4_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+  "training_original_groups": 300,
+  "training_candidate_condition_rows": 601855,
+  "validation_original_groups": 45,
+  "test_original_groups": 58,
+  "test_conditions": 290,
+  "actual_recommendation_test": {
+    "height_neural": {
+      "legacy": {
+        "cases": 290,
+        "better": 48,
+        "same": 240,
+        "worse": 2,
+        "mean_difference": -0.005391799256603175,
+        "group_mean_difference": -0.005391799256603176,
+        "grouped_bootstrap95": [
+          -0.010893601555773255,
+          -0.001439510400197264
+        ]
+      },
+      "blind": {
+        "cases": 290,
+        "better": 58,
+        "same": 227,
+        "worse": 5,
+        "mean_difference": -0.005706330105213577,
+        "group_mean_difference": -0.005706330105213578,
+        "grouped_bootstrap95": [
+          -0.011217908676324228,
+          -0.0018867856314299198
+        ]
+      },
+      "geometric": {
+        "cases": 290,
+        "better": 38,
+        "same": 240,
+        "worse": 12,
+        "mean_difference": -0.000655824945542082,
+        "group_mean_difference": -0.0006558249455420819,
+        "grouped_bootstrap95": [
+          -0.001979936269980336,
+          0.000548738744067617
+        ]
+      }
+    },
+    "uncertainty05": {
+      "legacy": {
+        "cases": 290,
+        "better": 44,
+        "same": 236,
+        "worse": 10,
+        "mean_difference": -0.0030633197095459096,
+        "group_mean_difference": -0.0030633197095459096,
+        "grouped_bootstrap95": [
+          -0.0061971906440998,
+          -0.0005956936380992957
+        ]
+      },
+      "blind": {
+        "cases": 290,
+        "better": 54,
+        "same": 231,
+        "worse": 5,
+        "mean_difference": -0.0033778505581563106,
+        "group_mean_difference": -0.00337785055815631,
+        "grouped_bootstrap95": [
+          -0.00618908299782183,
+          -0.0011038875205195593
+        ]
+      },
+      "geometric": {
+        "cases": 290,
+        "better": 35,
+        "same": 236,
+        "worse": 19,
+        "mean_difference": 0.0016726546015151846,
+        "group_mean_difference": 0.0016726546015151846,
+        "grouped_bootstrap95": [
+          -0.0007826179274746073,
+          0.005606260483222563
+        ]
+      },
+      "height_neural": {
+        "cases": 290,
+        "better": 11,
+        "same": 255,
+        "worse": 24,
+        "mean_difference": 0.002328479547057267,
+        "group_mean_difference": 0.002328479547057266,
+        "grouped_bootstrap95": [
+          3.970200116908243e-05,
+          0.0062014533947060396
+        ]
+      }
+    }
+  },
+  "independent_measurement_max_error": 3.3306690738754696e-16,
+  "source_record_sha_and_group_audit": "403 passed",
+  "shape_guard_eligibility": "403 passed; maximum faces 96042",
+  "pool_equivalence": "30 cases passed including current_only",
+  "pytest": {
+    "unique_relevant_tests": 33,
+    "related_xml": "am-selector-related.xml",
+    "api_latest_xml": "am-guided-api-scope.xml",
+    "note": "30 related includes 5 new selector tests; 3 API tests are separate; reruns are not added to unique count"
+  },
+  "caveats": [
+    "Actual product advantage over geometry-only control has bootstrap interval including zero.",
+    "Only 45deg and five frozen process/priority conditions; build_volume must be None.",
+    "Saved-measurement replay is not full CAD/UI integration.",
+    "No policy was retuned on test; new global selector weights remain research-only."
+  ]
+}

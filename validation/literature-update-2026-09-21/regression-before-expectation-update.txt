@@ -1,0 +1,52 @@
+........................................................................ [  8%]
+........................................................................ [ 17%]
+........................................................................ [ 26%]
+........................................................................ [ 34%]
+.............................F.......................................... [ 43%]
+........................................................................ [ 52%]
+........................................................................ [ 61%]
+........................................................................ [ 69%]
+........................................................................ [ 78%]
+........................................................................ [ 87%]
+........................................................................ [ 96%]
+...............................                                          [100%]
+================================== FAILURES ===================================
+_ test_finding_evidence_matches_calculation_and_does_not_claim_cad_for_mesh_rays _
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-69/test_finding_evidence_matches_0')
+
+    def test_finding_evidence_matches_calculation_and_does_not_claim_cad_for_mesh_rays(tmp_path):
+        model = _model(_pocket(), tmp_path, "provenance")
+        report = review_machining(model, MachiningProfile())
+        assert _finding(report, "cnc_input")["evidence"] == []
+        assert _finding(report, "cnc_coverage")["evidence"] == []
+        assert "CNC_FACE_RECOGNITION" in _finding(report, "cnc_holes")["evidence"]
+        visibility = _finding(report, "cnc_visibility")
+        assert "sampled mesh" in visibility["method"]
+>       assert visibility["evidence"] == ["CNC_ACCESS_SCOPE"]
+E       AssertionError: assert ['CNC_ACCESS_...IAL_PLANNING'] == ['CNC_ACCESS_SCOPE']
+E         
+E         Left contains one more item: 'CNC_SPATIAL_PLANNING'
+E         Use -v to get more diff
+
+tests_v3\test_machining_reaudit.py:205: AssertionError
+---------------------------- Captured stdout call -----------------------------
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\JIN\AppData\Local\Temp\pytest-of-JIN\pytest-69\test_finding_evidence_matches_0\provenance.step(664 ents)  Write  Done
+============================== warnings summary ===============================
+tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap
+  C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\trimesh\triangles.py:302: RuntimeWarning: invalid value encountered in divide
+    center_mass = integrated[1:4] / volume
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\literature-update-2026-09-21\regression-final.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_machining_reaudit.py::test_finding_evidence_matches_calculation_and_does_not_claim_cad_for_mesh_rays
+1 failed, 822 passed, 1 warning in 284.79s (0:04:44)

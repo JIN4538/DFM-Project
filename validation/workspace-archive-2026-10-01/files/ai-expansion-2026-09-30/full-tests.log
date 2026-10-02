@@ -1,0 +1,170 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+........................................................................ [ 21%]
+........................................................................ [ 26%]
+........................................................................ [ 31%]
+........................................................................ [ 37%]
+...................................................F.................... [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 53%]
+........................................................................ [ 58%]
+........................................................................ [ 63%]
+.............F.......................................................... [ 69%]
+........................................................................ [ 74%]
+..................................F..................................... [ 79%]
+........................................................................ [ 85%]
+........F............................................................... [ 90%]
+........................................................................ [ 95%]
+...........................................................              [100%]
+================================== FAILURES ===================================
+_________ test_disabled_and_repeat_search_strip_both_proposal_sources _________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000192B39C5280>
+
+    def test_disabled_and_repeat_search_strip_both_proposal_sources(monkeypatch):
+        from amdfm import ai_search
+        from amdfm.profiles import Profile
+        from types import SimpleNamespace
+        base = {'name': '+Z', 'height_mm': 3.}
+        original = dict(orientations=[base, {'name': '面', 'proposal_source': 'geometric_facet_seed'},
+                                     {'name': 'AI', 'proposal_source': 'deep_neural_surrogate'}],
+                        neural_search={'proposals': [{'name': '面'}, {'name': 'AI'}]},
+                        summary={'review_status': 'geometry_review'})
+        def enrich(mesh, profile, rows, **kwargs):
+            assert [row['name'] for row in rows] == ['+Z']
+            return {'rows': rows + [{'name': 'new'}], 'metadata': {'added_count': 1}}
+        monkeypatch.setattr(ai_search, 'enrich_ensemble', enrich)
+        model = SimpleNamespace(mesh=None)
+        disabled = ai_search.extend_review_orientations(model, Profile(), original, enabled=False)
+        assert [row['name'] for row in disabled['orientations']] == ['+Z']
+        assert disabled['orientation_search']['neural_added_count'] == 0
+>       repeated = ai_search.extend_review_orientations(model, Profile(), original)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_enhanced_planning.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+amdfm\ai_search.py:23: in extend_review_orientations
+    extra = enrich_ensemble(model.mesh, profile, baseline, priority=priority,
+amdfm\ensemble_search.py:13: in enrich_ensemble
+    result=enrich_orientations(mesh,profile,baseline_rows,priority=priority,max_proposals=max_proposals,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+mesh = None
+profile = Profile(process='MEX', name='장비 미정 · 탐색용 조건', machine='미확정', material='미확정', slicer='미확정', layer_height_mm=0.2, line_w...olume_mm=None, clearance_mm=0.0, threshold_basis='사용자 탐색 조건; 실물 시편으로 보정하지 않음', process_notes='', condition_evidence={})
+baseline_rows = [{'height_mm': 3.0, 'name': '+Z', 'objectives': ['overhang_projected_area_sum_mm2', 'height_mm', 'contact_triangle_area_mm2'], 'pareto': False}]
+
+    def enrich_orientations(mesh, profile, baseline_rows, *, priority="balanced", max_proposals=MAX_PROPOSALS,
+                            reliable_normals=True, model_path=MODEL_PATH, timeout_s=8., pool_size=DEFAULT_POOL):
+        """Return original rows plus exact measured neural proposals and provenance.
+    
+        Errors/missing models leave original rows intact. The bounded per-direction
+        measurement is not preempted mid-calculation; timeout is checked between
+        measurements. Build-fit remains the geometry engine's True/False/None.
+        """
+        started = time.monotonic()
+        rows = deepcopy(baseline_rows)
+        metadata = dict(status="unavailable", method="deep-surrogate-proposal/exact-geometry-verification",
+                        added_count=0, predicted_values_used_as_measurements=False, proposals=[],
+                        targets=["height_mm", "overhang_projected_area_sum_mm2"],
+                        contact_modelled=False, selection_priority=priority)
+        result = dict(rows=rows, metadata=metadata)
+        try:
+            profile.validate()
+            if type(max_proposals) is not int or not 0 <= max_proposals <= MAX_PROPOSALS:
+                raise ValueError("proposal budget must be between 0 and 12")
+            if not math.isfinite(timeout_s) or timeout_s < 0:
+                raise ValueError("timeout must be finite and nonnegative")
+            if max_proposals == 0 or timeout_s == 0:
+                metadata.update(status="skipped", reason="탐색 예산이 0입니다")
+                return result
+>           if len(mesh.faces) > MAX_FACES:
+                   ^^^^^^^^^^
+E           AttributeError: 'NoneType' object has no attribute 'faces'
+
+amdfm\neural_orientation.py:256: AttributeError
+_ test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting _
+
+    def test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting():
+        app = AppTest.from_file(str(APP), default_timeout=60).run()
+        app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+        app.checkbox(key='use_build_MEX').set_value(True).run()
+        for axis in 'XYZ':
+            app.number_input(key=f'build_{axis}_MEX').set_value(1.)
+        next(b for b in app.sidebar.button if b.label == "설계 검토").click().run()
+        assert not app.exception
+        report = app.session_state['report']
+        assert len(report['orientations']) >= 26
+        assert all(row['build_fit'] is False for row in report['orientations'])
+    
+>       app.segmented_control(key='result_tab').set_value('방향 비교').run()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_navigation_ux.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(), key = 'result_tab'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'result_tab'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-30 14:07:40.977 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+____________ test_all_shipped_geometry_matches_published_inventory ____________
+
+    def test_all_shipped_geometry_matches_published_inventory():
+        result=verify(ROOT)
+>       assert result['verified'],result['errors']
+E       AssertionError: ['Unlisted geometry: examples/learning_validation/hexagonal_pocket.step', 'Unlisted geometry: examples/learning_valida...arry_compound_compound_462.step', 'Unlisted geometry: examples/public_demo/cadquarry_enclosure_enclosure_46.step', ...]
+E       assert False
+
+tests_v3\test_packaged_geometry.py:14: AssertionError
+_ test_wall_decisions_explain_the_same_4mm_measurement[5.0-False-\uc785\ub825\ud55c \ubcbd \uae30\uc900\ubcf4\ub2e4 \uc791\uc740 \uad6c\uac04\uc774 \uc788\uc2b5\ub2c8\ub2e4] _
+
+report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+limit = 5.0, partial = False, expected = '입력한 벽 기준보다 작은 구간이 있습니다'
+
+    @pytest.mark.parametrize('limit,partial,expected', [
+        (None, False, '벽은 측정됐지만 비교 기준이 없습니다'),
+        (1., False, '검사한 표본에서 입력한 벽 기준 미만이 없습니다'),
+        (5., False, '입력한 벽 기준보다 작은 구간이 있습니다'),
+        (1., True, '벽의 일부 표본을 확인하지 못했습니다'),
+    ])
+    def test_wall_decisions_explain_the_same_4mm_measurement(report, limit, partial, expected):
+        result = with_wall(report, limit=limit, partial=partial)
+        document = ReportText(html_report(result).decode())
+        first_page = ''.join(document.visible)
+        detail = document.section_text('check-wall')
+        assert document.section_depths['check-wall'] > 0
+        assert expected in detail
+        assert '가장 짧게 측정한 거리 4 mm' in detail
+        criterion = '미입력' if limit is None else f'{limit:g} mm'
+        assert f'입력한 최소 벽 기준 {criterion}' in detail
+        assert 'p05' not in first_page
+        assert '전체 최소 벽두께' in detail
+        # The concise conclusion must still expose a missing criterion or partial
+        # measurement; collapsing detail cannot turn either into a clear result.
+        pending = first_page.split('추가 확인: ', 1)[1].split('\n', 1)[0]
+        assert ('벽' in pending) == (limit is None or partial)
+        if limit and limit > 4:
+>           assert '얇은 벽을 보강하세요' in first_page
+E           AssertionError: assert '얇은 벽을 보강하세요' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론벽 보강..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:139: AssertionError
+=========================== short test summary info ===========================
+FAILED tests_v3/test_enhanced_planning.py::test_disabled_and_repeat_search_strip_both_proposal_sources
+FAILED tests_v3/test_navigation_ux.py::test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting
+FAILED tests_v3/test_packaged_geometry.py::test_all_shipped_geometry_matches_published_inventory
+FAILED tests_v3/test_report_ux.py::test_wall_decisions_explain_the_same_4mm_measurement[5.0-False-\uc785\ub825\ud55c \ubcbd \uae30\uc900\ubcf4\ub2e4 \uc791\uc740 \uad6c\uac04\uc774 \uc788\uc2b5\ub2c8\ub2e4]
+4 failed, 1351 passed in 787.72s (0:13:07)

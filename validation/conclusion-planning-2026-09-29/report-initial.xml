@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="16" time="2.045" timestamp="2026-09-29T14:11:54.989676+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_report_ux" name="test_first_page_contains_decision_action_without_raw_technical_records" time="0.104"><failure message="AssertionError: assert '다음에 할 일' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+
+    def test_first_page_contains_decision_action_without_raw_technical_records(report):
+        rendered = html_report(report).decode()
+        document = ReportText(rendered)
+        text = ''.join(document.visible)
+&gt;       assert '다음에 할 일' in text
+E       AssertionError: assert '다음에 할 일' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:85: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[None-False-\ubcbd\uc740 \uce21\uc815\ub410\uc9c0\ub9cc \ube44\uad50 \uae30\uc900\uc774 \uc5c6\uc2b5\ub2c8\ub2e4]" time="0.041"><failure message="AssertionError: assert '벽은 측정됐지만 비교 기준이 없습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+limit = None, partial = False, expected = '벽은 측정됐지만 비교 기준이 없습니다'
+
+    @pytest.mark.parametrize('limit,partial,expected', [
+        (None, False, '벽은 측정됐지만 비교 기준이 없습니다'),
+        (1., False, '검사한 표본에서 입력한 벽 기준 미만이 없습니다'),
+        (5., False, '입력한 벽 기준보다 작은 구간이 있습니다'),
+        (1., True, '벽의 일부 표본을 확인하지 못했습니다'),
+    ])
+    def test_wall_decisions_explain_the_same_4mm_measurement(report, limit, partial, expected):
+        text = visible(with_wall(report, limit=limit, partial=partial))
+&gt;       assert expected in text
+E       AssertionError: assert '벽은 측정됐지만 비교 기준이 없습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:103: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[1.0-False-\uac80\uc0ac\ud55c \ud45c\ubcf8\uc5d0\uc11c \uc785\ub825\ud55c \ubcbd \uae30\uc900 \ubbf8\ub9cc\uc774 \uc5c6\uc2b5\ub2c8\ub2e4]" time="0.042"><failure message="AssertionError: assert '검사한 표본에서 입력한 벽 기준 미만이 없습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+limit = 1.0, partial = False, expected = '검사한 표본에서 입력한 벽 기준 미만이 없습니다'
+
+    @pytest.mark.parametrize('limit,partial,expected', [
+        (None, False, '벽은 측정됐지만 비교 기준이 없습니다'),
+        (1., False, '검사한 표본에서 입력한 벽 기준 미만이 없습니다'),
+        (5., False, '입력한 벽 기준보다 작은 구간이 있습니다'),
+        (1., True, '벽의 일부 표본을 확인하지 못했습니다'),
+    ])
+    def test_wall_decisions_explain_the_same_4mm_measurement(report, limit, partial, expected):
+        text = visible(with_wall(report, limit=limit, partial=partial))
+&gt;       assert expected in text
+E       AssertionError: assert '검사한 표본에서 입력한 벽 기준 미만이 없습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:103: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[5.0-False-\uc785\ub825\ud55c \ubcbd \uae30\uc900\ubcf4\ub2e4 \uc791\uc740 \uad6c\uac04\uc774 \uc788\uc2b5\ub2c8\ub2e4]" time="0.048"><failure message="AssertionError: assert '입력한 벽 기준보다 작은 구간이 있습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론얇은 벽..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+limit = 5.0, partial = False, expected = '입력한 벽 기준보다 작은 구간이 있습니다'
+
+    @pytest.mark.parametrize('limit,partial,expected', [
+        (None, False, '벽은 측정됐지만 비교 기준이 없습니다'),
+        (1., False, '검사한 표본에서 입력한 벽 기준 미만이 없습니다'),
+        (5., False, '입력한 벽 기준보다 작은 구간이 있습니다'),
+        (1., True, '벽의 일부 표본을 확인하지 못했습니다'),
+    ])
+    def test_wall_decisions_explain_the_same_4mm_measurement(report, limit, partial, expected):
+        text = visible(with_wall(report, limit=limit, partial=partial))
+&gt;       assert expected in text
+E       AssertionError: assert '입력한 벽 기준보다 작은 구간이 있습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론얇은 벽..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:103: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[1.0-True-\ubcbd\uc758 \uc77c\ubd80 \ud45c\ubcf8\uc744 \ud655\uc778\ud558\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4]" time="0.039"><failure message="AssertionError: assert '벽의 일부 표본을 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+limit = 1.0, partial = True, expected = '벽의 일부 표본을 확인하지 못했습니다'
+
+    @pytest.mark.parametrize('limit,partial,expected', [
+        (None, False, '벽은 측정됐지만 비교 기준이 없습니다'),
+        (1., False, '검사한 표본에서 입력한 벽 기준 미만이 없습니다'),
+        (5., False, '입력한 벽 기준보다 작은 구간이 있습니다'),
+        (1., True, '벽의 일부 표본을 확인하지 못했습니다'),
+    ])
+    def test_wall_decisions_explain_the_same_4mm_measurement(report, limit, partial, expected):
+        text = visible(with_wall(report, limit=limit, partial=partial))
+&gt;       assert expected in text
+E       AssertionError: assert '벽의 일부 표본을 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:103: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_complete_zero_layers_are_explained_without_two_hundred_visible_rows" time="0.044"><failure message="AssertionError: assert '검사한 200개 층에서 세 종류의 후보가 발견되지 않았습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+
+    def test_complete_zero_layers_are_explained_without_two_hundred_visible_rows(report):
+        result = with_zero_layers(report)
+        document = ReportText(html_report(result).decode())
+        text = ''.join(document.visible)
+&gt;       assert '검사한 200개 층에서 세 종류의 후보가 발견되지 않았습니다' in text
+E       AssertionError: assert '검사한 200개 층에서 세 종류의 후보가 발견되지 않았습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:114: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_unknown_layer_scope_never_appears_as_zero_candidate_success[missing_value]" time="0.048"><failure message="AssertionError: assert '일부 층간 검토를 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+breakage = 'missing_value'
+
+    @pytest.mark.parametrize('breakage', ['missing_value', 'missing_row', 'partial_scope'])
+    def test_unknown_layer_scope_never_appears_as_zero_candidate_success(report, breakage):
+        result = with_zero_layers(report)
+        layers = result['details']['layers']
+        if breakage == 'missing_value':
+            layers['layers'][0]['thin_candidate_area_mm2'] = None
+        elif breakage == 'missing_row':
+            layers['layers'].pop()
+        else:
+            layers['layers'][0]['unsupported_full_scope'] = False
+        text = visible(result)
+&gt;       assert '일부 층간 검토를 확인하지 못했습니다' in text
+E       AssertionError: assert '일부 층간 검토를 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:131: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_unknown_layer_scope_never_appears_as_zero_candidate_success[missing_row]" time="0.046"><failure message="AssertionError: assert '일부 층간 검토를 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+breakage = 'missing_row'
+
+    @pytest.mark.parametrize('breakage', ['missing_value', 'missing_row', 'partial_scope'])
+    def test_unknown_layer_scope_never_appears_as_zero_candidate_success(report, breakage):
+        result = with_zero_layers(report)
+        layers = result['details']['layers']
+        if breakage == 'missing_value':
+            layers['layers'][0]['thin_candidate_area_mm2'] = None
+        elif breakage == 'missing_row':
+            layers['layers'].pop()
+        else:
+            layers['layers'][0]['unsupported_full_scope'] = False
+        text = visible(result)
+&gt;       assert '일부 층간 검토를 확인하지 못했습니다' in text
+E       AssertionError: assert '일부 층간 검토를 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:131: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_unknown_layer_scope_never_appears_as_zero_candidate_success[partial_scope]" time="0.047"><failure message="AssertionError: assert '일부 층간 검토를 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+breakage = 'partial_scope'
+
+    @pytest.mark.parametrize('breakage', ['missing_value', 'missing_row', 'partial_scope'])
+    def test_unknown_layer_scope_never_appears_as_zero_candidate_success(report, breakage):
+        result = with_zero_layers(report)
+        layers = result['details']['layers']
+        if breakage == 'missing_value':
+            layers['layers'][0]['thin_candidate_area_mm2'] = None
+        elif breakage == 'missing_row':
+            layers['layers'].pop()
+        else:
+            layers['layers'][0]['unsupported_full_scope'] = False
+        text = visible(result)
+&gt;       assert '일부 층간 검토를 확인하지 못했습니다' in text
+E       AssertionError: assert '일부 층간 검토를 확인하지 못했습니다' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론+X 방..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:131: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_tiny_candidate_keeps_location_and_next_action_in_shared_report" time="0.044"><failure message="AssertionError: assert '확인할 후보가 있는 1개 층' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론가는 단..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'">report = {'app_version': '3.0.0', 'current_orientation': {'azimuth_deg': 0.0, 'build_fit': None, 'contact_nonplanar_bottom_face...제거 경로도 설계하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'OCCT', 'JIANG2018'], 'face_indices': [], ...}, ...], ...}
+
+    def test_tiny_candidate_keeps_location_and_next_action_in_shared_report(report):
+        result = with_zero_layers(report)
+        result['details']['layers']['layers'][24]['thin_candidate_area_mm2'] = 1e-18
+        text = visible(result)
+&gt;       assert '확인할 후보가 있는 1개 층' in text
+E       AssertionError: assert '확인할 후보가 있는 1개 층' in '\n\n\n적층제조 설계 검토known-box.stl · 재료 압출 · FFF/FDM · AM-DFM 3.0.0\n장비 미확정 · 재료 미확정 · 중점: 종합 균형 · 요청 입력: 직접 입력\n종합 결론가는 단..._review.json에 보존됩니다. 재현할 때는 프로그램에서 「전체 결과 JSON」도 함께 내려받아 이 보고서와 보관하세요. 이 HTML은 그림과 판단을 읽는 용도입니다.\n\n\n검토 근거와 재현 기록\n\n'
+
+tests_v3\test_report_ux.py:139: AssertionError</failure></testcase><testcase classname="tests_v3.test_report_ux" name="test_section_volume_check_is_subordinate_and_partial_stale_value_is_not_promoted[False]" time="0.039" /><testcase classname="tests_v3.test_report_ux" name="test_section_volume_check_is_subordinate_and_partial_stale_value_is_not_promoted[True]" time="0.042" /><testcase classname="tests_v3.test_report_ux" name="test_other_process_report_does_not_offer_mex_layer_review[VPP]" time="0.046" /><testcase classname="tests_v3.test_report_ux" name="test_other_process_report_does_not_offer_mex_layer_review[PBF_POLYMER]" time="0.037" /><testcase classname="tests_v3.test_report_ux" name="test_other_process_report_does_not_offer_mex_layer_review[PBF_METAL]" time="0.039" /><testcase classname="tests_v3.test_report_ux" name="test_user_text_is_escaped_and_report_remains_unchanged" time="0.059" /></testsuite></testsuites>

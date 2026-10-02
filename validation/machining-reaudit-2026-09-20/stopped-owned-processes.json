@@ -1,0 +1,38 @@
+[
+  {
+    "ProcessId": 15408,
+    "ParentProcessId": 1796,
+    "ExecutablePath": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe",
+    "CommandLine": "\"C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe\" -m streamlit run app.py --server.port 8511 --server.address 127.0.0.1 --server.headless true --browser.gatherUsageStats false"
+  },
+  {
+    "ProcessId": 15612,
+    "ParentProcessId": 15408,
+    "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+    "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+  },
+  {
+    "ProcessId": 13496,
+    "ParentProcessId": 15408,
+    "ExecutablePath": "C:\\Users\\JIN\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "CommandLine": "\"C:\\Users\\JIN\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -m streamlit run app.py --server.port 8511 --server.address 127.0.0.1 --server.headless true --browser.gatherUsageStats false"
+  },
+  {
+    "ProcessId": 13548,
+    "ParentProcessId": 6372,
+    "ExecutablePath": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe",
+    "CommandLine": "\"C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe\" -X utf8 -m pytest tests_v3 tests -q --junitxml=validation/forming-2026-09-20/regression.xml"
+  },
+  {
+    "ProcessId": 18884,
+    "ParentProcessId": 13548,
+    "ExecutablePath": "C:\\Users\\JIN\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "CommandLine": "\"C:\\Users\\JIN\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 -m pytest tests_v3 tests -q --junitxml=validation/forming-2026-09-20/regression.xml"
+  },
+  {
+    "ProcessId": 14432,
+    "ParentProcessId": 18884,
+    "ExecutablePath": null,
+    "CommandLine": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe -m amdfm.cad_worker C:\\Users\\JIN\\AppData\\Local\\Temp\\amdfm-step-jy89_8yf\\input.step C:\\Users\\JIN\\AppData\\Local\\Temp\\amdfm-step-jy89_8yf\\result 0.05"
+  }
+]

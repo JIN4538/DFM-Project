@@ -1,0 +1,5627 @@
+[
+  {
+    "id": "polygon3-holes0-aspect2.6-0",
+    "family": "polygon3-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": {
+      "id": "cnc:4757479de2df0e3c",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 4.177357534362012,
+          "unit": "mm",
+          "cad_face_id": 10
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 0.56 \u2192 0.56"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 8.354715068724024,
+        "flute_length_mm": 4.682802568950999,
+        "reach_mm": 4.682802568951,
+        "tool_reach_diameter_ratio": 0.560498177428112
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.28571428571428575,
+        "tool_change": 0.0,
+        "slenderness": 0.35917900163900235,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.4000000000000001,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.28571428571428575,
+        0.0,
+        0.35917900163900235,
+        0.125
+      ],
+      "_baseline": 0.4000000000000001,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.28571428571428575,
+        0.0,
+        0.35917900163900235,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.28638681823864726,
+      "prior_score": -0.3069135192352792,
+      "planning_cost": 0.28638681823864726,
+      "conflict_details": [],
+      "exact_score": -0.28638681823864726,
+      "learned_score": -0.3069135192352792,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 4.177357534362,
+            "unit": "mm",
+            "cad_face_id": 10
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 10,
+            "floor_face_id_after": 12,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 4.177357534362,
+            "depth_before_mm": 3.6828025689509993,
+            "depth_after_mm": 3.6828025689509998,
+            "floor_area_before_mm2": 190.75823905760916,
+            "floor_area_after_mm2": 123.49475051456045
+          }
+        ],
+        "protected_cylinder_faces": 0,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 21265.719942102965,
+        "after_volume_mm3": 21513.43809050589,
+        "material_change_percent": 1.1648707359889525
+      },
+      "after_sha256": "ed0383790c534aa45a44ab5493d4071fea0804f7ff0c93ae7aed31b99d326624"
+    },
+    "seconds": 2.918598699994618
+  },
+  {
+    "id": "polygon3-holes0-aspect2.6-1",
+    "family": "polygon3-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": {
+      "id": "cnc:e2ffb8b0864c95ed",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 3.9224726137508896,
+          "unit": "mm",
+          "cad_face_id": 10
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 0.856 \u2192 0.856"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 7.844945227501779,
+        "flute_length_mm": 6.716125126728405,
+        "reach_mm": 6.716125126733111,
+        "tool_reach_diameter_ratio": 0.8561086064933381
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.28571428571428575,
+        "tool_change": 0.0,
+        "slenderness": 0.46123842295561857,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.4,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.28571428571428575,
+        0.0,
+        0.46123842295561857,
+        0.125
+      ],
+      "_baseline": 0.4,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.28571428571428575,
+        0.0,
+        0.46123842295561857,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.3546208313474707,
+      "prior_score": -0.3700304257967596,
+      "planning_cost": 0.3546208313474707,
+      "conflict_details": [],
+      "exact_score": -0.3546208313474707,
+      "learned_score": -0.3700304257967596,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 3.922472613751,
+            "unit": "mm",
+            "cad_face_id": 10
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 10,
+            "floor_face_id_after": 12,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 3.922472613751,
+            "depth_before_mm": 5.716125126728405,
+            "depth_after_mm": 5.716125126729101,
+            "floor_area_before_mm2": 168.18987576536935,
+            "floor_area_after_mm2": 108.88424452512015
+          }
+        ],
+        "protected_cylinder_faces": 0,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 21919.101125927886,
+        "after_volume_mm3": 22258.099534817167,
+        "material_change_percent": 1.5465890090186396
+      },
+      "after_sha256": "332db335abd46ce992e84183917c4b79cedd0085e94e02f67d5fe65f71e9e188"
+    },
+    "seconds": 2.233610499999486
+  },
+  {
+    "id": "polygon3-holes0-aspect2.6-2",
+    "family": "polygon3-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": {
+      "id": "cnc:da6406fd3ffa46b8",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 3.0812560249874035,
+          "unit": "mm",
+          "cad_face_id": 10
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 1.27 \u2192 1.27"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 6.162512049974807,
+        "flute_length_mm": 7.809447716662831,
+        "reach_mm": 7.809447716666356,
+        "tool_reach_diameter_ratio": 1.2672507012295873
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.28571428571428575,
+        "tool_change": 0.0,
+        "slenderness": 0.5589371746769448,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.4,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.28571428571428575,
+        0.0,
+        0.5589371746769448,
+        0.125
+      ],
+      "_baseline": 0.4,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.28571428571428575,
+        0.0,
+        0.5589371746769448,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.4199394253554431,
+      "prior_score": -0.4347948553446876,
+      "planning_cost": 0.4199394253554431,
+      "conflict_details": [],
+      "exact_score": -0.4199394253554431,
+      "learned_score": -0.4347948553446876,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 3.081256024987,
+            "unit": "mm",
+            "cad_face_id": 10
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 10,
+            "floor_face_id_after": 12,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 3.081256024987,
+            "depth_before_mm": 6.809447716662831,
+            "depth_after_mm": 6.809447716660224,
+            "floor_area_before_mm2": 103.78523697144459,
+            "floor_area_after_mm2": 67.18940167514991
+          }
+        ],
+        "protected_cylinder_faces": 0,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 13358.684654331102,
+        "after_volume_mm3": 13607.882081428983,
+        "material_change_percent": 1.865433862285887
+      },
+      "after_sha256": "fc3e87c269f172aa8ec4a488967315f7ad7e43a8a998334f3b4591b27c111a22"
+    },
+    "seconds": 2.1287072999984957
+  },
+  {
+    "id": "polygon3-holes0-aspect2.6-3",
+    "family": "polygon3-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": {
+      "id": "cnc:b6dc960fe240f914",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 4.925225105637241,
+          "unit": "mm",
+          "cad_face_id": 10
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 0.493 \u2192 0.493"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 9.850450211274483,
+        "flute_length_mm": 4.859040080691601,
+        "reach_mm": 4.859040080692209,
+        "tool_reach_diameter_ratio": 0.49328101523021967
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.28571428571428575,
+        "tool_change": 0.0,
+        "slenderness": 0.3303336814699746,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.4,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.28571428571428575,
+        0.0,
+        0.3303336814699746,
+        0.125
+      ],
+      "_baseline": 0.4,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.28571428571428575,
+        0.0,
+        0.3303336814699746,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.26710166132564017,
+      "prior_score": -0.3003972672132259,
+      "planning_cost": 0.26710166132564017,
+      "conflict_details": [],
+      "exact_score": -0.26710166132564017,
+      "learned_score": -0.3003972672132259,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 4.925225105637,
+            "unit": "mm",
+            "cad_face_id": 10
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 10,
+            "floor_face_id_after": 12,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 4.925225105637,
+            "depth_before_mm": 3.8590400806916008,
+            "depth_after_mm": 3.8590400806935232,
+            "floor_area_before_mm2": 265.17475651041104,
+            "floor_area_after_mm2": 171.67117163473898
+          }
+        ],
+        "protected_cylinder_faces": 0,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 33399.12578639582,
+        "after_volume_mm3": 33759.959868120146,
+        "material_change_percent": 1.0803698397138821
+      },
+      "after_sha256": "2a5b406a9ade834e99553c0d625d7ce904c2f53cb343b596b6dbba7b08bf2781"
+    },
+    "seconds": 2.2673277000139933
+  },
+  {
+    "id": "polygon3-holes0-aspect2.6-4",
+    "family": "polygon3-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": {
+      "id": "cnc:52258778e2167b96",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 4.375201030886372,
+          "unit": "mm",
+          "cad_face_id": 10
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 0.911 \u2192 0.911"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 8.750402061772744,
+        "flute_length_mm": 7.973894777482683,
+        "reach_mm": 7.973894777483915,
+        "tool_reach_diameter_ratio": 0.9112603879447893
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.2857142857142857,
+        "tool_change": 0.0,
+        "slenderness": 0.476785054350801,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.39999999999999997,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.2857142857142857,
+        0.0,
+        0.476785054350801,
+        0.125
+      ],
+      "_baseline": 0.39999999999999997,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2857142857142857,
+        0.0,
+        0.476785054350801,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.3650148649088212,
+      "prior_score": -0.3772481279252541,
+      "planning_cost": 0.3650148649088212,
+      "conflict_details": [],
+      "exact_score": -0.3650148649088212,
+      "learned_score": -0.3772481279252541,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 4.375201030886,
+            "unit": "mm",
+            "cad_face_id": 10
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 10,
+            "floor_face_id_after": 12,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 4.375201030886,
+            "depth_before_mm": 6.973894777482683,
+            "depth_after_mm": 6.97389477748186,
+            "floor_area_before_mm2": 209.2550920609723,
+            "floor_area_after_mm2": 135.46940627920898
+          }
+        ],
+        "protected_cylinder_faces": 0,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 31839.709393700046,
+        "after_volume_mm3": 32354.283002428034,
+        "material_change_percent": 1.6161378936134492
+      },
+      "after_sha256": "a175e49fcc01103b23717fead97918038adec225cad152c94979d8d6c7bc7c52"
+    },
+    "seconds": 2.261112200008938
+  },
+  {
+    "id": "polygon3-holes1-aspect2.6-0",
+    "family": "polygon3-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:17ad0d41c4a6ffe0",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.8254811090384001,
+          "unit": "mm",
+          "cad_face_id": 11
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.47 \u2192 8.47"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.6509622180768002,
+        "flute_length_mm": 13.98024834256,
+        "reach_mm": 13.98024834256,
+        "tool_reach_diameter_ratio": 8.467939598790782
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.060826222261765185,
+        "tool_change": 0.0,
+        "slenderness": 0.8943803992869033,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351385164,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.060826222261765185,
+        0.0,
+        0.8943803992869033,
+        0.125
+      ],
+      "_baseline": 0.06476567351385164,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.060826222261765185,
+        0.0,
+        0.8943803992869033,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5926093047556243,
+      "prior_score": -0.6262945747404379,
+      "planning_cost": 0.5926093047556243,
+      "conflict_details": [],
+      "exact_score": -0.5926093047556243,
+      "learned_score": -0.6262945747404379,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.825481109038,
+            "unit": "mm",
+            "cad_face_id": 11
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 11,
+            "floor_face_id_after": 13,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.825481109038,
+            "depth_before_mm": 6.101239100571999,
+            "depth_after_mm": 6.101239100571999,
+            "floor_area_before_mm2": 284.13484559668893,
+            "floor_area_after_mm2": 281.5082671834907
+          }
+        ],
+        "protected_cylinder_faces": 1,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 43799.26855324416,
+        "after_volume_mm3": 43815.293936159374,
+        "material_change_percent": 0.03658824323911325
+      },
+      "after_sha256": "21c6c704c4ef575429c204779e79ff18df8024d87ea6b52e523ace671ba93b89"
+    },
+    "seconds": 2.1311424000014085
+  },
+  {
+    "id": "polygon3-holes1-aspect2.6-1",
+    "family": "polygon3-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:f074a9cd7fd759d9",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 1.1133818591512001,
+          "unit": "mm",
+          "cad_face_id": 11
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 13 \u2192 13"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.2267637183024003,
+        "flute_length_mm": 28.996505069509002,
+        "reach_mm": 28.996505069509002,
+        "tool_reach_diameter_ratio": 13.021814946587522
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226174158,
+        "tool_change": 0.0,
+        "slenderness": 0.9286825561591533,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351382488,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226174158,
+        0.0,
+        0.9286825561591533,
+        0.125
+      ],
+      "_baseline": 0.06476567351382488,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226174158,
+        0.0,
+        0.9286825561591533,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.6147713322156558,
+      "prior_score": -0.6533512687245446,
+      "planning_cost": 0.6147713322156558,
+      "conflict_details": [],
+      "exact_score": -0.6147713322156558,
+      "learned_score": -0.6533512687245446,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 1.113381859151,
+            "unit": "mm",
+            "cad_face_id": 11
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 11,
+            "floor_face_id_after": 13,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 1.113381859151,
+            "depth_before_mm": 18.718322909909773,
+            "depth_after_mm": 18.718322909906405,
+            "floor_area_before_mm2": 516.8904420289941,
+            "floor_area_after_mm2": 512.1122414733167
+          }
+        ],
+        "protected_cylinder_faces": 1,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 168981.494514262,
+        "after_volume_mm3": 169070.93441519164,
+        "material_change_percent": 0.052928814002224024
+      },
+      "after_sha256": "0a62ca2b79b4270de0adfcdb500e2f268750a2e482bf437cf6f839d12bf3e94a"
+    },
+    "seconds": 2.1947555000078864
+  },
+  {
+    "id": "polygon3-holes1-aspect2.6-2",
+    "family": "polygon3-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:6bc72b7510ae697c",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.8537411776280002,
+          "unit": "mm",
+          "cad_face_id": 11
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 13.6 \u2192 13.6"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.7074823552560003,
+        "flute_length_mm": 23.30544404510585,
+        "reach_mm": 23.30544404510585,
+        "tool_reach_diameter_ratio": 13.6490101776845
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226177299,
+        "tool_change": 0.0,
+        "slenderness": 0.931736002100446,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351386049,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226177299,
+        0.0,
+        0.931736002100446,
+        0.125
+      ],
+      "_baseline": 0.06476567351386049,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226177299,
+        0.0,
+        0.931736002100446,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.6167441105762393,
+      "prior_score": -0.6541545441425799,
+      "planning_cost": 0.6167441105762393,
+      "conflict_details": [],
+      "exact_score": -0.6167441105762393,
+      "learned_score": -0.6541545441425799,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.853741177628,
+            "unit": "mm",
+            "cad_face_id": 11
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 11,
+            "floor_face_id_after": 13,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.853741177628,
+            "depth_before_mm": 15.190934231535387,
+            "depth_after_mm": 15.190934231535278,
+            "floor_area_before_mm2": 303.9223771771912,
+            "floor_area_after_mm2": 301.1128803220012
+          }
+        ],
+        "protected_cylinder_faces": 1,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 79076.45996098379,
+        "after_volume_mm3": 79119.13884293333,
+        "material_change_percent": 0.05397166485525413
+      },
+      "after_sha256": "f224524a9fd63153e6ddeb14172cb40808ccb0205367a767dda778692a52ae8d"
+    },
+    "seconds": 2.2789336999994703
+  },
+  {
+    "id": "polygon3-holes1-aspect2.6-3",
+    "family": "polygon3-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:eb906a83aef215af",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 1.2263726309584,
+          "unit": "mm",
+          "cad_face_id": 11
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.26 \u2192 7.26"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.4527452619168,
+        "flute_length_mm": 17.803734558942462,
+        "reach_mm": 17.803734558942462,
+        "tool_reach_diameter_ratio": 7.258696952911039
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.060826222261798533,
+        "tool_change": 0.0,
+        "slenderness": 0.8789155231507172,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351388945,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.060826222261798533,
+        0.0,
+        0.8789155231507172,
+        0.125
+      ],
+      "_baseline": 0.06476567351388945,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.060826222261798533,
+        0.0,
+        0.8789155231507172,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5826177170291619,
+      "prior_score": -0.6163562859969196,
+      "planning_cost": 0.5826177170291619,
+      "conflict_details": [],
+      "exact_score": -0.5826177170291619,
+      "learned_score": -0.6163562859969196,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 1.226372630958,
+            "unit": "mm",
+            "cad_face_id": 11
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 11,
+            "floor_face_id_after": 13,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 1.226372630958,
+            "depth_before_mm": 6.583962634291875,
+            "depth_after_mm": 6.5839626342933535,
+            "floor_area_before_mm2": 627.1264517467259,
+            "floor_area_after_mm2": 621.32921558985
+          }
+        ],
+        "protected_cylinder_faces": 1,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 125971.29415095571,
+        "after_volume_mm3": 126009.46293719496,
+        "material_change_percent": 0.030299590471384537
+      },
+      "after_sha256": "ebe0895760b8b3b277581e8eae4a4875c3e7c7df19ee76b58c9248dc48dba29e"
+    },
+    "seconds": 2.2412366999778897
+  },
+  {
+    "id": "polygon3-holes1-aspect2.6-4",
+    "family": "polygon3-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:26ec554c223f1900",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 1.0744192060175999,
+          "unit": "mm",
+          "cad_face_id": 11
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.47 \u2192 7.47"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.1488384120351998,
+        "flute_length_mm": 16.05732364187171,
+        "reach_mm": 16.05732364187171,
+        "tool_reach_diameter_ratio": 7.4725598499812556
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226174217,
+        "tool_change": 0.0,
+        "slenderness": 0.8819719166690557,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351382555,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226174217,
+        0.0,
+        0.8819719166690557,
+        0.125
+      ],
+      "_baseline": 0.06476567351382555,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226174217,
+        0.0,
+        0.8819719166690557,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5845923997680322,
+      "prior_score": -0.6179689656582422,
+      "planning_cost": 0.5845923997680322,
+      "conflict_details": [],
+      "exact_score": -0.5845923997680322,
+      "learned_score": -0.6179689656582422,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 1.074419206018,
+            "unit": "mm",
+            "cad_face_id": 11
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 11,
+            "floor_face_id_after": 13,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 1.074419206018,
+            "depth_before_mm": 6.103830258388894,
+            "depth_after_mm": 6.103830258389221,
+            "floor_area_before_mm2": 481.3464198303973,
+            "floor_area_after_mm2": 476.896792706892
+          }
+        ],
+        "protected_cylinder_faces": 1,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 86541.2891875675,
+        "after_volume_mm3": 86568.44895624206,
+        "material_change_percent": 0.03138359611872764
+      },
+      "after_sha256": "7fc9584918bee81e72a4cc273e0d8b294bc8320a7713b72dd24ed607e2b34818"
+    },
+    "seconds": 2.1622090000018943
+  },
+  {
+    "id": "polygon3-holes2-aspect2.6-0",
+    "family": "polygon3-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:cf19e89844555d75",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.839510719432,
+          "unit": "mm",
+          "cad_face_id": 12
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 10.8 \u2192 10.8"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.679021438864,
+        "flute_length_mm": 18.195290625671,
+        "reach_mm": 18.195290625671,
+        "tool_reach_diameter_ratio": 10.836842344301246
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226176832,
+        "tool_change": 0.0,
+        "slenderness": 0.9155180097096214,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351385519,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226176832,
+        0.0,
+        0.9155180097096214,
+        0.125
+      ],
+      "_baseline": 0.06476567351385519,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226176832,
+        0.0,
+        0.9155180097096214,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.6062659475251301,
+      "prior_score": -0.643440250745813,
+      "planning_cost": 0.6062659475251301,
+      "conflict_details": [],
+      "exact_score": -0.6062659475251301,
+      "learned_score": -0.643440250745813,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.839510719432,
+            "unit": "mm",
+            "cad_face_id": 12
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 12,
+            "floor_face_id_after": 14,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.839510719432,
+            "depth_before_mm": 10.199367963737,
+            "depth_after_mm": 10.199367963737,
+            "floor_area_before_mm2": 293.87504699639476,
+            "floor_area_after_mm2": 291.15842893082663
+          }
+        ],
+        "protected_cylinder_faces": 2,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 59329.51111147846,
+        "after_volume_mm3": 59357.21889874601,
+        "material_change_percent": 0.046701526354209696
+      },
+      "after_sha256": "98a7e242f3c7ee69076c1930d6956913ac65d2d1fa3e414dc71da090d0cf6441"
+    },
+    "seconds": 2.263643000012962
+  },
+  {
+    "id": "polygon3-holes2-aspect2.6-1",
+    "family": "polygon3-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:e5a957563bebdf4c",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.6958319593736001,
+          "unit": "mm",
+          "cad_face_id": 12
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.85 \u2192 8.85"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.3916639187472002,
+        "flute_length_mm": 12.317689675517528,
+        "reach_mm": 12.317689675517528,
+        "tool_reach_diameter_ratio": 8.851051974248296
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226174527,
+        "tool_change": 0.0,
+        "slenderness": 0.8984879987828602,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351382907,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226174527,
+        0.0,
+        0.8984879987828602,
+        0.125
+      ],
+      "_baseline": 0.06476567351382907,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226174527,
+        0.0,
+        0.8984879987828602,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5952631534090226,
+      "prior_score": -0.6287517469069852,
+      "planning_cost": 0.5952631534090226,
+      "conflict_details": [],
+      "exact_score": -0.5952631534090226,
+      "learned_score": -0.6287517469069852,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.695831959374,
+            "unit": "mm",
+            "cad_face_id": 12
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 12,
+            "floor_face_id_after": 14,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.695831959374,
+            "depth_before_mm": 5.519090014062051,
+            "depth_after_mm": 5.519090014059209,
+            "floor_area_before_mm2": 201.89193182023743,
+            "floor_area_after_mm2": 200.02561729324674
+          }
+        ],
+        "protected_cylinder_faces": 2,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 27068.25204830829,
+        "after_volume_mm3": 27078.552406177143,
+        "material_change_percent": 0.038053280464761405
+      },
+      "after_sha256": "ca9f650fe042499457e558804f3e93765c58b71ebe12b49c6c9a0f9a80d0c505"
+    },
+    "seconds": 2.3384067000006326
+  },
+  {
+    "id": "polygon3-holes2-aspect2.6-2",
+    "family": "polygon3-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:8be5c5eb1d9b8fee",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 1.1868657424832,
+          "unit": "mm",
+          "cad_face_id": 12
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 13.2 \u2192 13.2"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.3737314849664,
+        "flute_length_mm": 31.372804732313853,
+        "reach_mm": 31.372804732313853,
+        "tool_reach_diameter_ratio": 13.216661164503167
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226177221,
+        "tool_change": 0.0,
+        "slenderness": 0.9296599962235262,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.0647656735138596,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226177221,
+        0.0,
+        0.9296599962235262,
+        0.125
+      ],
+      "_baseline": 0.0647656735138596,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226177221,
+        0.0,
+        0.9296599962235262,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.615402839255522,
+      "prior_score": -0.6533512687245446,
+      "planning_cost": 0.615402839255522,
+      "conflict_details": [],
+      "exact_score": -0.615402839255522,
+      "learned_score": -0.6533512687245446,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 1.186865742483,
+            "unit": "mm",
+            "cad_face_id": 12
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 12,
+            "floor_face_id_after": 14,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 1.186865742483,
+            "depth_before_mm": 20.48225687828343,
+            "depth_after_mm": 20.482256878282453,
+            "floor_area_before_mm2": 587.3722288184533,
+            "floor_area_after_mm2": 581.942485720843
+          }
+        ],
+        "protected_cylinder_faces": 2,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 208009.10009209413,
+        "after_volume_mm3": 208120.31348500337,
+        "material_change_percent": 0.05346563821486616
+      },
+      "after_sha256": "c500687426520400a914b4be02ac1aff18f319db681f30fc988bd53d119e103e"
+    },
+    "seconds": 2.151095000008354
+  },
+  {
+    "id": "polygon3-holes2-aspect2.6-3",
+    "family": "polygon3-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:8f11b975a2c592a3",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.5295922379192,
+          "unit": "mm",
+          "cad_face_id": 12
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 10.3 \u2192 10.3"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.0591844758384,
+        "flute_length_mm": 10.860316703637588,
+        "reach_mm": 10.860316703637588,
+        "tool_reach_diameter_ratio": 10.253470430673637
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226178747,
+        "tool_change": 0.0,
+        "slenderness": 0.9111385233417155,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351387691,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226178747,
+        0.0,
+        0.9111385233417155,
+        0.125
+      ],
+      "_baseline": 0.06476567351387691,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226178747,
+        0.0,
+        0.9111385233417155,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.6034364374885541,
+      "prior_score": -0.638094756388581,
+      "planning_cost": 0.6034364374885541,
+      "conflict_details": [],
+      "exact_score": -0.6034364374885541,
+      "learned_score": -0.638094756388581,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.529592237919,
+            "unit": "mm",
+            "cad_face_id": 12
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 12,
+            "floor_face_id_after": 14,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.529592237919,
+            "depth_before_mm": 5.44704805430791,
+            "depth_after_mm": 5.447048054309793,
+            "floor_area_before_mm2": 116.9481731682398,
+            "floor_area_after_mm2": 115.86708947915561
+          }
+        ],
+        "protected_cylinder_faces": 2,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 13585.848270716111,
+        "after_volume_mm3": 13591.736985521693,
+        "material_change_percent": 0.04334447645992677
+      },
+      "after_sha256": "a70fb81bd3fad57a38b49fd86b7faf6e3df18718f3f14d71a147f71ef2cd153a"
+    },
+    "seconds": 2.259874999988824
+  },
+  {
+    "id": "polygon3-holes2-aspect2.6-4",
+    "family": "polygon3-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:4769ede8b5c656bf",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.43368962017839996,
+          "unit": "mm",
+          "cad_face_id": 12
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 14.8 \u2192 14.8"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 0.8673792403567999,
+        "flute_length_mm": 12.840735761792935,
+        "reach_mm": 12.840735761792935,
+        "tool_reach_diameter_ratio": 14.804061665703282
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226178004,
+        "tool_change": 0.0,
+        "slenderness": 0.9367251266698028,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351386849,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226178004,
+        0.0,
+        0.9367251266698028,
+        0.125
+      ],
+      "_baseline": 0.06476567351386849,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226178004,
+        0.0,
+        0.9367251266698028,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.6199674972606242,
+      "prior_score": -0.6590594882702118,
+      "planning_cost": 0.6199674972606242,
+      "conflict_details": [],
+      "exact_score": -0.6199674972606242,
+      "learned_score": -0.6590594882702118,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.433689620178,
+            "unit": "mm",
+            "cad_face_id": 12
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 12,
+            "floor_face_id_after": 14,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.433689620178,
+            "depth_before_mm": 8.226655593637709,
+            "depth_after_mm": 8.226655593637608,
+            "floor_area_before_mm2": 78.42748273280394,
+            "floor_area_after_mm2": 77.70248917303596
+          }
+        ],
+        "protected_cylinder_faces": 2,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 10808.612601783372,
+        "after_volume_mm3": 10814.576874107413,
+        "material_change_percent": 0.05518073913628124
+      },
+      "after_sha256": "470e1689ef8cbb23d24df25c9ed4f1900d5eab37ece9c9331a711bbfd3a419e2"
+    },
+    "seconds": 2.3142285000067204
+  },
+  {
+    "id": "polygon3-holes3-aspect2.6-0",
+    "family": "polygon3-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:55111bf08bf077b5",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.703956573436,
+          "unit": "mm",
+          "cad_face_id": 13
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.31 \u2192 8.31"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.407913146872,
+        "flute_length_mm": 11.699623573407,
+        "reach_mm": 11.699623573407,
+        "tool_reach_diameter_ratio": 8.30990434275039
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226179716,
+        "tool_change": 0.0,
+        "slenderness": 0.8925875107644152,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.0647656735138879,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226179716,
+        0.0,
+        0.8925875107644152,
+        0.125
+      ],
+      "_baseline": 0.0647656735138879,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226179716,
+        0.0,
+        0.8925875107644152,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5914509506376634,
+      "prior_score": -0.6245879798436271,
+      "planning_cost": 0.5914509506376634,
+      "conflict_details": [],
+      "exact_score": -0.5914509506376634,
+      "learned_score": -0.6245879798436271,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.703956573436,
+            "unit": "mm",
+            "cad_face_id": 13
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 13,
+            "floor_face_id_after": 15,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.703956573436,
+            "depth_before_mm": 4.833318794776001,
+            "depth_after_mm": 4.833318794776001,
+            "floor_area_before_mm2": 206.63408295893652,
+            "floor_area_after_mm2": 204.72393138783167
+          }
+        ],
+        "protected_cylinder_faces": 3,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 26244.50772323054,
+        "after_volume_mm3": 26253.74009472001,
+        "material_change_percent": 0.03517829934869759
+      },
+      "after_sha256": "26ac998c18dcbdcf91e9a21e1c9a6cf6e84c1946727d566d57125b07a9ab0d46"
+    },
+    "seconds": 2.1782374000176787
+  },
+  {
+    "id": "polygon3-holes3-aspect2.6-1",
+    "family": "polygon3-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:117be42506dfb9d3",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.9237199079192,
+          "unit": "mm",
+          "cad_face_id": 13
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.04 \u2192 7.04"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.8474398158384,
+        "flute_length_mm": 12.999059802049672,
+        "reach_mm": 12.999059802049672,
+        "tool_reach_diameter_ratio": 7.036256169541564
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226177332,
+        "tool_change": 0.0,
+        "slenderness": 0.8755639468301014,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351386087,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226177332,
+        0.0,
+        0.8755639468301014,
+        0.125
+      ],
+      "_baseline": 0.06476567351386087,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226177332,
+        0.0,
+        0.8755639468301014,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5804523218113414,
+      "prior_score": -0.6129880681485251,
+      "planning_cost": 0.5804523218113414,
+      "conflict_details": [],
+      "exact_score": -0.5804523218113414,
+      "learned_score": -0.6129880681485251,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.923719907919,
+            "unit": "mm",
+            "cad_face_id": 13
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 13,
+            "floor_face_id_after": 15,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.923719907919,
+            "depth_before_mm": 4.301393902719213,
+            "depth_after_mm": 4.301393902717398,
+            "floor_area_before_mm2": 355.7876156994418,
+            "floor_area_after_mm2": 352.49867002579504
+          }
+        ],
+        "protected_cylinder_faces": 3,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 51074.527481854304,
+        "after_volume_mm3": 51088.6745327213,
+        "material_change_percent": 0.02769883847094143
+      },
+      "after_sha256": "3129cf5a6f3cebed1d97b7de7eb0c284f1d2d0dcb4c82747735bdf700ced956b"
+    },
+    "seconds": 2.256021300010616
+  },
+  {
+    "id": "polygon3-holes3-aspect2.6-2",
+    "family": "polygon3-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:3174c1f3d717ccfa",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.4851880182320001,
+          "unit": "mm",
+          "cad_face_id": 13
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.78 \u2192 7.78"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 0.9703760364640002,
+        "flute_length_mm": 7.552344758136769,
+        "reach_mm": 7.552344758136769,
+        "tool_reach_diameter_ratio": 7.782905259755919
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226180574,
+        "tool_change": 0.0,
+        "slenderness": 0.8861424585117532,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351389763,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226180574,
+        0.0,
+        0.8861424585117532,
+        0.125
+      ],
+      "_baseline": 0.06476567351389763,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226180574,
+        0.0,
+        0.8861424585117532,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5872869143778808,
+      "prior_score": -0.6206655621627798,
+      "planning_cost": 0.5872869143778808,
+      "conflict_details": [],
+      "exact_score": -0.5872869143778808,
+      "learned_score": -0.6206655621627798,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.485188018232,
+            "unit": "mm",
+            "cad_face_id": 13
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 13,
+            "floor_face_id_after": 15,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.485188018232,
+            "depth_before_mm": 2.5091112728695295,
+            "depth_after_mm": 2.50911127286897,
+            "floor_area_before_mm2": 98.15905181716525,
+            "floor_area_after_mm2": 97.25165713972754
+          }
+        ],
+        "protected_cylinder_faces": 3,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 7679.001126874145,
+        "after_volume_mm3": 7681.277881088423,
+        "material_change_percent": 0.029649093373750896
+      },
+      "after_sha256": "b4877449aaa2c55de5403ef12c8b039d73399b6c669db78b0afbb88c8cf65c16"
+    },
+    "seconds": 2.276557400007732
+  },
+  {
+    "id": "polygon3-holes3-aspect2.6-3",
+    "family": "polygon3-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:e4badb3acb9f9464",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 0.7248440714336,
+          "unit": "mm",
+          "cad_face_id": 13
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.5 \u2192 8.5"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.4496881428672,
+        "flute_length_mm": 12.325287810127888,
+        "reach_mm": 12.325287810127888,
+        "tool_reach_diameter_ratio": 8.502027053729554
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226180233,
+        "tool_change": 0.0,
+        "slenderness": 0.8947592977429485,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.06476567351389376,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226180233,
+        0.0,
+        0.8947592977429485,
+        0.125
+      ],
+      "_baseline": 0.06476567351389376,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226180233,
+        0.0,
+        0.8947592977429485,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.592854104463672,
+      "prior_score": -0.6262945747404379,
+      "planning_cost": 0.592854104463672,
+      "conflict_details": [],
+      "exact_score": -0.592854104463672,
+      "learned_score": -0.6262945747404379,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 0.724844071434,
+            "unit": "mm",
+            "cad_face_id": 13
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 13,
+            "floor_face_id_after": 15,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 0.724844071434,
+            "depth_before_mm": 5.284920548181559,
+            "depth_after_mm": 5.284920548181854,
+            "floor_area_before_mm2": 219.07832010313518,
+            "floor_area_after_mm2": 217.05313243170627
+          }
+        ],
+        "protected_cylinder_faces": 3,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 29415.10624445252,
+        "after_volume_mm3": 29425.809200391755,
+        "material_change_percent": 0.0363859163053485
+      },
+      "after_sha256": "1c54d9528ef85b3c641c9d390ed5f3962dea5ab653c53af349fb6f9d0c2f3643"
+    },
+    "seconds": 2.243315400002757
+  },
+  {
+    "id": "polygon3-holes3-aspect2.6-4",
+    "family": "polygon3-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": true,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:8bae1cbb9256cab9",
+      "family": "CNC",
+      "title": "\ud615\uc0c1 \uce58\uc218 \uc870\uc815",
+      "changes": [
+        {
+          "field": "pocket.0.corner_radius",
+          "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+          "before": 0.0,
+          "after": 1.0001980537632,
+          "unit": "mm",
+          "cad_face_id": 13
+        }
+      ],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 12 \u2192 12"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.0003961075264,
+        "flute_length_mm": 24.06269407695492,
+        "reach_mm": 24.06269407695492,
+        "tool_reach_diameter_ratio": 12.028964656759788
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": false,
+      "covered_finding_ids": [
+        "cnc_holes",
+        "cnc_learned_pockets"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.06082622226178288,
+        "tool_change": 0.0,
+        "slenderness": 0.9232479305651372,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 1,
+        "raw_geometry_change": 0.0647656735138717,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.06082622226178288,
+        0.0,
+        0.9232479305651372,
+        0.125
+      ],
+      "_baseline": 0.0647656735138717,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06082622226178288,
+        0.0,
+        0.9232479305651372,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.6112601150610659,
+      "prior_score": -0.6489154219348255,
+      "planning_cost": 0.6112601150610659,
+      "conflict_details": [],
+      "exact_score": -0.6112601150610659,
+      "learned_score": -0.6489154219348255,
+      "preference_score": 0.0
+    },
+    "edit": {
+      "status": "verified",
+      "comparison": {
+        "before_conflicts": 1,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [
+          "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+        ],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "\ud3ec\ucf13 \ub0b4\ubd80 \ubc18\uacbd",
+            "before": 0.0,
+            "after": 1.000198053763,
+            "unit": "mm",
+            "cad_face_id": 13
+          }
+        ]
+      },
+      "remeasurement": {
+        "status": "verified",
+        "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+        "pockets": [
+          {
+            "floor_face_id_before": 13,
+            "floor_face_id_after": 15,
+            "radius_before_mm": 0.0,
+            "radius_after_mm": 1.000198053763,
+            "depth_before_mm": 14.727710295596909,
+            "depth_after_mm": 14.727710295595898,
+            "floor_area_before_mm2": 417.1403777829505,
+            "floor_area_after_mm2": 413.2842794245517
+          }
+        ],
+        "protected_cylinder_faces": 3,
+        "protected_outer_bounds_unchanged": true,
+        "before_volume_mm3": 112400.73101923997,
+        "after_volume_mm3": 112457.5225187334,
+        "material_change_percent": 0.05052591649399877
+      },
+      "after_sha256": "d05900f6479e747e6596944fe560112f0dc9345d5cd66388ccbe4a64bca48a40"
+    },
+    "seconds": 2.305626299988944
+  },
+  {
+    "id": "polygon4-holes0-aspect2.6-0",
+    "family": "polygon4-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.21763969998573884
+  },
+  {
+    "id": "polygon4-holes0-aspect2.6-1",
+    "family": "polygon4-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.2718082999926992
+  },
+  {
+    "id": "polygon4-holes0-aspect2.6-2",
+    "family": "polygon4-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.24022390000754967
+  },
+  {
+    "id": "polygon4-holes0-aspect2.6-3",
+    "family": "polygon4-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.2646836999920197
+  },
+  {
+    "id": "polygon4-holes0-aspect2.6-4",
+    "family": "polygon4-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 1,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.1860924999928102
+  },
+  {
+    "id": "polygon4-holes1-aspect2.6-0",
+    "family": "polygon4-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 10.5 \u2192 10.5"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.1049151079408002,
+        "flute_length_mm": 11.590487378379,
+        "reach_mm": 11.590487378379,
+        "tool_reach_diameter_ratio": 10.48993474257029
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.912967303783285,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.912967303783285,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.912967303783285,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5842990744213024,
+      "prior_score": -0.6351878253659311,
+      "planning_cost": 0.5842990744213024,
+      "conflict_details": [],
+      "exact_score": -0.5842990744213024,
+      "learned_score": -0.6351878253659311,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.23609470002702437
+  },
+  {
+    "id": "polygon4-holes1-aspect2.6-1",
+    "family": "polygon4-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11.1 \u2192 11.1"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.2070747984895998,
+        "flute_length_mm": 24.489940874593003,
+        "reach_mm": 24.489940874593003,
+        "tool_reach_diameter_ratio": 11.096108247601109
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9173287821561683,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9173287821561683,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9173287821561683,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5870904205799476,
+      "prior_score": -0.6383735425273654,
+      "planning_cost": 0.5870904205799476,
+      "conflict_details": [],
+      "exact_score": -0.5870904205799476,
+      "learned_score": -0.6383735425273654,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.2805473000044003
+  },
+  {
+    "id": "polygon4-holes1-aspect2.6-2",
+    "family": "polygon4-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11 \u2192 11"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.3020791109696,
+        "flute_length_mm": 25.262712613920005,
+        "reach_mm": 25.262712613920005,
+        "tool_reach_diameter_ratio": 10.973868140995268
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9164847993793859,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9164847993793859,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9164847993793859,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5865502716028069,
+      "prior_score": -0.6378826156178011,
+      "planning_cost": 0.5865502716028069,
+      "conflict_details": [],
+      "exact_score": -0.5865502716028069,
+      "learned_score": -0.6378826156178011,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.230191200011177
+  },
+  {
+    "id": "polygon4-holes1-aspect2.6-3",
+    "family": "polygon4-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11.7 \u2192 11.7"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 0.9059444887504,
+        "flute_length_mm": 10.566096655717887,
+        "reach_mm": 10.566096655717887,
+        "tool_reach_diameter_ratio": 11.663072944228695
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9210302266752907,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9210302266752907,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9210302266752907,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.589459345072186,
+      "prior_score": -0.6414487725577216,
+      "planning_cost": 0.589459345072186,
+      "conflict_details": [],
+      "exact_score": -0.589459345072186,
+      "learned_score": -0.6414487725577216,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.27398420000099577
+  },
+  {
+    "id": "polygon4-holes1-aspect2.6-4",
+    "family": "polygon4-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 2,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.27 \u2192 8.27"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.4894900055312004,
+        "flute_length_mm": 20.592241022683,
+        "reach_mm": 20.592241022683,
+        "tool_reach_diameter_ratio": 8.271670493527083
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8921445708518072,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8921445708518072,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8921445708518072,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5709725253451566,
+      "prior_score": -0.6190303447156152,
+      "planning_cost": 0.5709725253451566,
+      "conflict_details": [],
+      "exact_score": -0.5709725253451566,
+      "learned_score": -0.6190303447156152,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.2082310999976471
+  },
+  {
+    "id": "polygon4-holes2-aspect2.6-0",
+    "family": "polygon4-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.38 \u2192 7.38"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 0.9852370595264001,
+        "flute_length_mm": 7.270764875893,
+        "reach_mm": 7.270764875893,
+        "tool_reach_diameter_ratio": 7.379711111748101
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8806641438273415,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8806641438273415,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8806641438273415,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5636250520494985,
+      "prior_score": -0.6107986508689077,
+      "planning_cost": 0.5636250520494985,
+      "conflict_details": [],
+      "exact_score": -0.5636250520494985,
+      "learned_score": -0.6107986508689077,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.24055449999286793
+  },
+  {
+    "id": "polygon4-holes2-aspect2.6-1",
+    "family": "polygon4-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11.4 \u2192 11.4"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.0835665571312,
+        "flute_length_mm": 23.853171156362098,
+        "reach_mm": 23.853171156362098,
+        "tool_reach_diameter_ratio": 11.448240554026174
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9196673621738,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9196673621738,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9196673621738,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.588587111791232,
+      "prior_score": -0.6414487725577216,
+      "planning_cost": 0.588587111791232,
+      "conflict_details": [],
+      "exact_score": -0.588587111791232,
+      "learned_score": -0.6414487725577216,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.2894218000001274
+  },
+  {
+    "id": "polygon4-holes2-aspect2.6-2",
+    "family": "polygon4-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11.4 \u2192 11.4"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.9674337163280002,
+        "flute_length_mm": 22.524003795934227,
+        "reach_mm": 22.524003795934227,
+        "tool_reach_diameter_ratio": 11.448418113913803
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.919668508010485,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.919668508010485,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.919668508010485,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5885878451267104,
+      "prior_score": -0.6414487725577216,
+      "planning_cost": 0.5885878451267104,
+      "conflict_details": [],
+      "exact_score": -0.5885878451267104,
+      "learned_score": -0.6414487725577216,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3124887000012677
+  },
+  {
+    "id": "polygon4-holes2-aspect2.6-3",
+    "family": "polygon4-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 10.8 \u2192 10.8"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.3106245456768002,
+        "flute_length_mm": 14.13058633786989,
+        "reach_mm": 14.13058633786989,
+        "tool_reach_diameter_ratio": 10.781566989936788
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9151216471582984,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9151216471582984,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9151216471582984,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5856778541813109,
+      "prior_score": -0.6378826156178011,
+      "planning_cost": 0.5856778541813109,
+      "conflict_details": [],
+      "exact_score": -0.5856778541813109,
+      "learned_score": -0.6378826156178011,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.29696330000297166
+  },
+  {
+    "id": "polygon4-holes2-aspect2.6-4",
+    "family": "polygon4-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 3,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.28 \u2192 8.28"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.9242076808880002,
+        "flute_length_mm": 15.93650849212731,
+        "reach_mm": 15.93650849212731,
+        "tool_reach_diameter_ratio": 8.282114581713337
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8922659280709487,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8922659280709487,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8922659280709487,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5710501939654071,
+      "prior_score": -0.6190303447156152,
+      "planning_cost": 0.5710501939654071,
+      "conflict_details": [],
+      "exact_score": -0.5710501939654071,
+      "learned_score": -0.6190303447156152,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.2353409999923315
+  },
+  {
+    "id": "polygon4-holes3-aspect2.6-0",
+    "family": "polygon4-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 9.68 \u2192 9.68"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.5651182194880002,
+        "flute_length_mm": 24.817962372494,
+        "reach_mm": 24.817962372494,
+        "tool_reach_diameter_ratio": 9.675172935089007
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9063247025523093,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9063247025523093,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9063247025523093,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.580047809633478,
+      "prior_score": -0.6272156920377847,
+      "planning_cost": 0.580047809633478,
+      "conflict_details": [],
+      "exact_score": -0.580047809633478,
+      "learned_score": -0.6272156920377847,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.2861789000162389
+  },
+  {
+    "id": "polygon4-holes3-aspect2.6-1",
+    "family": "polygon4-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 10.1 \u2192 10.1"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.1403996124512001,
+        "flute_length_mm": 11.480001009154,
+        "reach_mm": 11.480001009154,
+        "tool_reach_diameter_ratio": 10.066647588978597
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9096383984436343,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9096383984436343,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9096383984436343,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5821685750039259,
+      "prior_score": -0.6290953601903503,
+      "planning_cost": 0.5821685750039259,
+      "conflict_details": [],
+      "exact_score": -0.5821685750039259,
+      "learned_score": -0.6290953601903503,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.33035319999908097
+  },
+  {
+    "id": "polygon4-holes3-aspect2.6-2",
+    "family": "polygon4-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 9.51 \u2192 9.51"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.4614221620592005,
+        "flute_length_mm": 23.396628943277065,
+        "reach_mm": 23.396628943277065,
+        "tool_reach_diameter_ratio": 9.505329603315054
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9048102213104822,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9048102213104822,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9048102213104822,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5790785416387085,
+      "prior_score": -0.6255492514000254,
+      "planning_cost": 0.5790785416387085,
+      "conflict_details": [],
+      "exact_score": -0.5790785416387085,
+      "learned_score": -0.6255492514000254,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3367969999962952
+  },
+  {
+    "id": "polygon4-holes3-aspect2.6-3",
+    "family": "polygon4-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.3 \u2192 7.3"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 0.9779538822528,
+        "flute_length_mm": 7.139071249032646,
+        "reach_mm": 7.139071249032646,
+        "tool_reach_diameter_ratio": 7.300008086871323
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8795181896772165,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8795181896772165,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8795181896772165,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5628916413934185,
+      "prior_score": -0.6107986508689077,
+      "planning_cost": 0.5628916413934185,
+      "conflict_details": [],
+      "exact_score": -0.5628916413934185,
+      "learned_score": -0.6107986508689077,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.32249699998646975
+  },
+  {
+    "id": "polygon4-holes3-aspect2.6-4",
+    "family": "polygon4-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.73 \u2192 8.73"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.4918323568464,
+        "flute_length_mm": 13.02654780375715,
+        "reach_mm": 13.02654780375715,
+        "tool_reach_diameter_ratio": 8.731911292830587
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8972452615000004,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8972452615000004,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8972452615000004,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5742369673600003,
+      "prior_score": -0.6231941117789733,
+      "planning_cost": 0.5742369673600003,
+      "conflict_details": [],
+      "exact_score": -0.5742369673600003,
+      "learned_score": -0.6231941117789733,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.30123910002293997
+  },
+  {
+    "id": "polygon6-holes0-aspect2.6-0",
+    "family": "polygon6-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 3,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.21634450001874939
+  },
+  {
+    "id": "polygon6-holes0-aspect2.6-1",
+    "family": "polygon6-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 3,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.2303171000094153
+  },
+  {
+    "id": "polygon6-holes0-aspect2.6-2",
+    "family": "polygon6-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 3,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.2549587999819778
+  },
+  {
+    "id": "polygon6-holes0-aspect2.6-3",
+    "family": "polygon6-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 3,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.27635910001117736
+  },
+  {
+    "id": "polygon6-holes0-aspect2.6-4",
+    "family": "polygon6-holes0-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 0,
+    "verified_holes": 0,
+    "raw_neural_candidates": 3,
+    "plan": null,
+    "edit": null,
+    "seconds": 0.27873920000274666
+  },
+  {
+    "id": "polygon6-holes1-aspect2.6-0",
+    "family": "polygon6-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.11 \u2192 8.11"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.0157774481424,
+        "flute_length_mm": 8.236588775768,
+        "reach_mm": 8.236588775768,
+        "tool_reach_diameter_ratio": 8.108654893678372
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8902143058802212,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8902143058802212,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8902143058802212,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5697371557633416,
+      "prior_score": -0.6161244295411182,
+      "planning_cost": 0.5697371557633416,
+      "conflict_details": [],
+      "exact_score": -0.5697371557633416,
+      "learned_score": -0.6161244295411182,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.21205070000723936
+  },
+  {
+    "id": "polygon6-holes1-aspect2.6-1",
+    "family": "polygon6-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 9.31 \u2192 9.31"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.3897714373456,
+        "flute_length_mm": 12.932538352966269,
+        "reach_mm": 12.932538352966269,
+        "tool_reach_diameter_ratio": 9.305514565522246
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9029645736132804,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9029645736132804,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9029645736132804,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5778973271124994,
+      "prior_score": -0.6255255271736629,
+      "planning_cost": 0.5778973271124994,
+      "conflict_details": [],
+      "exact_score": -0.5778973271124994,
+      "learned_score": -0.6255255271736629,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.23868219999712892
+  },
+  {
+    "id": "polygon6-holes1-aspect2.6-2",
+    "family": "polygon6-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 13 \u2192 13"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.4520658444896,
+        "flute_length_mm": 31.93726515453885,
+        "reach_mm": 31.93726515453885,
+        "tool_reach_diameter_ratio": 13.024636033453099
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9286969018222868,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9286969018222868,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9286969018222868,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5943660171662636,
+      "prior_score": -0.6477936335965327,
+      "planning_cost": 0.5943660171662636,
+      "conflict_details": [],
+      "exact_score": -0.5943660171662636,
+      "learned_score": -0.6477936335965327,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.25258850000682287
+  },
+  {
+    "id": "polygon6-holes1-aspect2.6-3",
+    "family": "polygon6-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11.2 \u2192 11.2"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.332847431976,
+        "flute_length_mm": 14.96797711447254,
+        "reach_mm": 14.96797711447254,
+        "tool_reach_diameter_ratio": 11.230075367502424
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9182343550672479,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9182343550672479,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9182343550672479,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5876699872430386,
+      "prior_score": -0.6383735425273654,
+      "planning_cost": 0.5876699872430386,
+      "conflict_details": [],
+      "exact_score": -0.5876699872430386,
+      "learned_score": -0.6383735425273654,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3729466000222601
+  },
+  {
+    "id": "polygon6-holes1-aspect2.6-4",
+    "family": "polygon6-holes1-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 1,
+    "verified_holes": 1,
+    "raw_neural_candidates": 4,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11.4 \u2192 11.4"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.582812252,
+        "flute_length_mm": 18.013629278633537,
+        "reach_mm": 18.013629278633537,
+        "tool_reach_diameter_ratio": 11.380774476487648
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9192296086243149,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9192296086243149,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9192296086243149,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5883069495195615,
+      "prior_score": -0.6383735425273654,
+      "planning_cost": 0.5883069495195615,
+      "conflict_details": [],
+      "exact_score": -0.5883069495195615,
+      "learned_score": -0.6383735425273654,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3540165000013076
+  },
+  {
+    "id": "polygon6-holes2-aspect2.6-0",
+    "family": "polygon6-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 5,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 8.44 \u2192 8.44"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.9762678330144,
+        "flute_length_mm": 16.683063532827,
+        "reach_mm": 16.683063532827,
+        "tool_reach_diameter_ratio": 8.441701703650327
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8940868890601169,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8940868890601169,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8940868890601169,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5722156089984748,
+      "prior_score": -0.620736939612426,
+      "planning_cost": 0.5722156089984748,
+      "conflict_details": [],
+      "exact_score": -0.5722156089984748,
+      "learned_score": -0.620736939612426,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3102073000045493
+  },
+  {
+    "id": "polygon6-holes2-aspect2.6-1",
+    "family": "polygon6-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 5,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 12.4 \u2192 12.4"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.3901309523328003,
+        "flute_length_mm": 17.207346921407115,
+        "reach_mm": 17.207346921407115,
+        "tool_reach_diameter_ratio": 12.378220118422082
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9252516410144142,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9252516410144142,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9252516410144142,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.592161050249225,
+      "prior_score": -0.6433577868068137,
+      "planning_cost": 0.592161050249225,
+      "conflict_details": [],
+      "exact_score": -0.592161050249225,
+      "learned_score": -0.6433577868068137,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3141413000121247
+  },
+  {
+    "id": "polygon6-holes2-aspect2.6-2",
+    "family": "polygon6-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 5,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.06 \u2192 7.06"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.6347928824784,
+        "flute_length_mm": 11.5495598931041,
+        "reach_mm": 11.5495598931041,
+        "tool_reach_diameter_ratio": 7.064845961156
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.8760050712913231,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.8760050712913231,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8760050712913231,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5606432456264467,
+      "prior_score": -0.6074304330205132,
+      "planning_cost": 0.5606432456264467,
+      "conflict_details": [],
+      "exact_score": -0.5606432456264467,
+      "learned_score": -0.6074304330205132,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3439672999957111
+  },
+  {
+    "id": "polygon6-holes2-aspect2.6-3",
+    "family": "polygon6-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 5,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 14.3 \u2192 14.3"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.2639278941584,
+        "flute_length_mm": 32.33465379582635,
+        "reach_mm": 32.33465379582635,
+        "tool_reach_diameter_ratio": 14.282545782159966
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9345658757216126,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9345658757216126,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9345658757216126,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5981221604618321,
+      "prior_score": -0.6505403497427819,
+      "planning_cost": 0.5981221604618321,
+      "conflict_details": [],
+      "exact_score": -0.5981221604618321,
+      "learned_score": -0.6505403497427819,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.37489320000167936
+  },
+  {
+    "id": "polygon6-holes2-aspect2.6-4",
+    "family": "polygon6-holes2-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 2,
+    "verified_holes": 2,
+    "raw_neural_candidates": 5,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 9.52 \u2192 9.52"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.8503182256608,
+        "flute_length_mm": 17.618378549541315,
+        "reach_mm": 17.618378549541315,
+        "tool_reach_diameter_ratio": 9.521809981225962
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9049593176664189,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9049593176664189,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9049593176664189,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.579173963306508,
+      "prior_score": -0.6255492514000254,
+      "planning_cost": 0.579173963306508,
+      "conflict_details": [],
+      "exact_score": -0.579173963306508,
+      "learned_score": -0.6255492514000254,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3292641000007279
+  },
+  {
+    "id": "polygon6-holes3-aspect2.6-0",
+    "family": "polygon6-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 6,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 10.6 \u2192 10.6"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.3974380153072001,
+        "flute_length_mm": 14.879946855146,
+        "reach_mm": 14.879946855146,
+        "tool_reach_diameter_ratio": 10.648019226723934
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9141484933587927,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9141484933587927,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9141484933587927,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5850550357496274,
+      "prior_score": -0.6351878253659311,
+      "planning_cost": 0.5850550357496274,
+      "conflict_details": [],
+      "exact_score": -0.5850550357496274,
+      "learned_score": -0.6351878253659311,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3475042000063695
+  },
+  {
+    "id": "polygon6-holes3-aspect2.6-1",
+    "family": "polygon6-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 6,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 11.7 \u2192 11.7"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 2.2112624256528,
+        "flute_length_mm": 25.895880966079115,
+        "reach_mm": 25.895880966079115,
+        "tool_reach_diameter_ratio": 11.710903538929458
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9213273866065211,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9213273866065211,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9213273866065211,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5896495274281736,
+      "prior_score": -0.6414487725577216,
+      "planning_cost": 0.5896495274281736,
+      "conflict_details": [],
+      "exact_score": -0.5896495274281736,
+      "learned_score": -0.6414487725577216,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.35316769999917597
+  },
+  {
+    "id": "polygon6-holes3-aspect2.6-2",
+    "family": "polygon6-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 6,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 12.6 \u2192 12.6"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 1.7840612233744002,
+        "flute_length_mm": 22.465933498806848,
+        "reach_mm": 22.465933498806848,
+        "tool_reach_diameter_ratio": 12.59257989830329
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9264304490036637,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9264304490036637,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9264304490036637,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5929154873623448,
+      "prior_score": -0.647966211272477,
+      "planning_cost": 0.5929154873623448,
+      "conflict_details": [],
+      "exact_score": -0.5929154873623448,
+      "learned_score": -0.647966211272477,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.3331268999900203
+  },
+  {
+    "id": "polygon6-holes3-aspect2.6-3",
+    "family": "polygon6-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 6,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 7.6 \u2192 7.6"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 0.8401334250992001,
+        "flute_length_mm": 6.385625988916926,
+        "reach_mm": 6.385625988916926,
+        "tool_reach_diameter_ratio": 7.600728405923063
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.883730778045342,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.883730778045342,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.883730778045342,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5655876979490189,
+      "prior_score": -0.6136308374674089,
+      "planning_cost": 0.5655876979490189,
+      "conflict_details": [],
+      "exact_score": -0.5655876979490189,
+      "learned_score": -0.6136308374674089,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.26833270001225173
+  },
+  {
+    "id": "polygon6-holes3-aspect2.6-4",
+    "family": "polygon6-holes3-aspect2.6",
+    "hole_dimensions_correct": true,
+    "pocket_recognized_and_measured": false,
+    "expected_holes": 3,
+    "verified_holes": 3,
+    "raw_neural_candidates": 6,
+    "plan": {
+      "id": "cnc:4f53cda18c2baa0c",
+      "family": "CNC",
+      "title": "\ud604\uc7ac \uacf5\uad6c\u00b7\uce58\uc218 \uc720\uc9c0",
+      "changes": [],
+      "evidence": [
+        "\uce58\uc218 \uc870\uac74 \ucda9\ub3cc 0\uac1c",
+        "\uacf5\uad6c \ub3cc\ucd9c/\uc9c0\ub984 10.9 \u2192 10.9"
+      ],
+      "remaining": [
+        "\uc77c\ubd80 \ud2b9\uc9d5\u00b7\uc811\uadfc \ubc94\uc704\ub294 \ubbf8\ud655\uc778\uc785\ub2c8\ub2e4"
+      ],
+      "outcomes": {
+        "remaining_numeric_conflicts": 0,
+        "tool_diameter_mm": 0.9541221799776001,
+        "flute_length_mm": 10.391998207840999,
+        "reach_mm": 10.391998207840999,
+        "tool_reach_diameter_ratio": 10.891684970665887
+      },
+      "verification_scope": "\uc81c\uc548 \uce58\uc218\u00b7\uacf5\uad6c \uc870\uac74\uc758 \uc218\uce58 \uad00\uacc4 \uc7ac\uacc4\uc0b0; \uc218\uc815 CAD\u00b7\uacbd\ub85c\ub294 \uc7ac\uac80\ud1a0 \ud544\uc694",
+      "verified": true,
+      "availability": "\ud544\uc694 \uacf5\uad6c \uc870\uac74 \uc81c\uc548 \u00b7 \uc2e4\uc81c \ubcf4\uc720 \uacf5\uad6c \uc544\ub2d8",
+      "orientation": null,
+      "keep_current": true,
+      "covered_finding_ids": [
+        "cnc_holes"
+      ],
+      "remaining_finding_ids": [
+        "cnc_rectangular_pockets",
+        "cnc_visibility"
+      ],
+      "_metrics": {
+        "geometry_change": 0.0,
+        "tool_change": 0.0,
+        "slenderness": 0.9159076276854983,
+        "regrets": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "edit_count": 0,
+        "raw_geometry_change": 0.0,
+        "raw_tool_change": 0.0
+      },
+      "_dominance": [
+        0.0,
+        0.0,
+        0.9159076276854983,
+        0.0
+      ],
+      "_baseline": 0.0,
+      "_features": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9159076276854983,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score": -0.5861808817187188,
+      "prior_score": -0.6378826156178011,
+      "planning_cost": 0.5861808817187188,
+      "conflict_details": [],
+      "exact_score": -0.5861808817187188,
+      "learned_score": -0.6378826156178011,
+      "preference_score": 0.0
+    },
+    "edit": null,
+    "seconds": 0.31305470000370406
+  }
+]

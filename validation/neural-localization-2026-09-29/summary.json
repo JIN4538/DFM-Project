@@ -1,0 +1,442 @@
+{
+  "timestamp_utc": "2026-09-29T07:08:47.523478+00:00",
+  "source": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project",
+  "desktop": "C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0",
+  "source_runtime_sha256": "224ba56b883fd5eb2b6042670b4ab53354650c0b66423112634e3ed5f63f5657",
+  "verified_equal_files": [
+    {
+      "path": "app.py",
+      "sha256": "58408c78c050d1a384e0b439918951d0245a5fb4571fd45cbd7c094ca5ce9460",
+      "bytes": 41136
+    },
+    {
+      "path": "amdfm/__init__.py",
+      "sha256": "9af88baf9a2caee9d946772d042ebf268d98c97180bb5387c91527ba025263a5",
+      "bytes": 83
+    },
+    {
+      "path": "amdfm/action_view.py",
+      "sha256": "7a2f0da1e3bc93726ffc8cc8eb8296aa58cc9158b45aca7e48335334e2e561ef",
+      "bytes": 6137
+    },
+    {
+      "path": "amdfm/ai_search.py",
+      "sha256": "61b6d1664856ac5decfdc48391e18ef587d5be439c7540d5bd3dd04848a60be5",
+      "bytes": 4406
+    },
+    {
+      "path": "amdfm/analysis.py",
+      "sha256": "be11350875703db1e160f9d1e822defac402b66bf1906de6774a7af910ee6740",
+      "bytes": 21103
+    },
+    {
+      "path": "amdfm/assessment.py",
+      "sha256": "5d9ab74643ec12940b204d94260980862baa228aef5f11b9613a78f7bc24b037",
+      "bytes": 9592
+    },
+    {
+      "path": "amdfm/cad_features.py",
+      "sha256": "2f1fbada2effa6ff922a1457129add958b9d009b9cdbd784a3b6024aee87edb2",
+      "bytes": 9405
+    },
+    {
+      "path": "amdfm/cad_worker.py",
+      "sha256": "48b187d6fa1303c5b8fc04f5220c5a4a66b83a4a899d1d0c5a629d7786b71eca",
+      "bytes": 18995
+    },
+    {
+      "path": "amdfm/comparison.py",
+      "sha256": "524dc4901dfbeba12a2a18a313d09fd555a5f81733d5fe174c25ebeefc2abd92",
+      "bytes": 1969
+    },
+    {
+      "path": "amdfm/cross_sections.py",
+      "sha256": "94a67fd0aae1a11e0929ff6012ade20651cb6a54a980f839d1239724776c7640",
+      "bytes": 4997
+    },
+    {
+      "path": "amdfm/decision_view.py",
+      "sha256": "f201fd3223ae01f783140501aaf4bdb5dc0b0cb34cf1e32b611d0be21adc3d05",
+      "bytes": 3504
+    },
+    {
+      "path": "amdfm/detail.py",
+      "sha256": "47af7454a7e04995692e8ff644f683164a71033ab09fa1abd02c742b35a29b65",
+      "bytes": 7647
+    },
+    {
+      "path": "amdfm/detail_summary.py",
+      "sha256": "e826adaade8dfe3fdeed68a5fd5ce781204359944a9447378c18fb675c072ae1",
+      "bytes": 15097
+    },
+    {
+      "path": "amdfm/detail_view.py",
+      "sha256": "a8bfd520f5752d6be796c3f7a650092504c47f53f9ce499b24d82aa763e9f54a",
+      "bytes": 11103
+    },
+    {
+      "path": "amdfm/detail_worker.py",
+      "sha256": "f5baacbf14f039f3fe46007e02000c7937a418b23c44a2898610079660214909",
+      "bytes": 9020
+    },
+    {
+      "path": "amdfm/event_sections.py",
+      "sha256": "2659923cf94a271a63eb1bba06209c5d846f9bc15e1bc9fd046a103a74c50abc",
+      "bytes": 13123
+    },
+    {
+      "path": "amdfm/evidence.py",
+      "sha256": "c9c0f90510f4e8267a7a98a18cbf4d3a9e21c0121780855aa8e948481e3c22b8",
+      "bytes": 22373
+    },
+    {
+      "path": "amdfm/gcode.py",
+      "sha256": "a298088bc0e63184bf0936baa22ea06840387629b37bde931057153ce7eefd4c",
+      "bytes": 5604
+    },
+    {
+      "path": "amdfm/io.py",
+      "sha256": "2b673fa45cc914020ed35f67847526f3dae2f5b3b7ec7393cc3d697d4ca72c84",
+      "bytes": 7175
+    },
+    {
+      "path": "amdfm/models.py",
+      "sha256": "bf2f4af6b68c18ead77550a0e1923ed62d116b143d255b6e9be4654f9aad0c99",
+      "bytes": 2821
+    },
+    {
+      "path": "amdfm/neural_orientation.py",
+      "sha256": "1919e374ae85153797db68440a0b00b2669dc364392cd9d12c9091b16de61c96",
+      "bytes": 16457
+    },
+    {
+      "path": "amdfm/orientation.py",
+      "sha256": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+      "bytes": 10320
+    },
+    {
+      "path": "amdfm/presentation.py",
+      "sha256": "aa7ac11b43bec6341455dd1030a11def94972261729774a15ca8025f32789a49",
+      "bytes": 17720
+    },
+    {
+      "path": "amdfm/processes.py",
+      "sha256": "49974870ff83ca05b01d09ca6b55b8593a38ce4c55ab7ca8017083a5fc38180f",
+      "bytes": 10440
+    },
+    {
+      "path": "amdfm/profiles.py",
+      "sha256": "1edf267ce9a12977080bf66e1cd36ab25ed85735fa2158530a8ee98f4985272b",
+      "bytes": 3259
+    },
+    {
+      "path": "amdfm/recommendation.py",
+      "sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+      "bytes": 17614
+    },
+    {
+      "path": "amdfm/section_summary.py",
+      "sha256": "b6b9a5f821dadcbecd791e8ab026a49aeb3da139dd3ac90cce849639c4599af2",
+      "bytes": 13072
+    },
+    {
+      "path": "amdfm/section_view.py",
+      "sha256": "40f545f7951535a01ecccef079661f090050567769048bc6392faec02a8791d0",
+      "bytes": 7951
+    },
+    {
+      "path": "amdfm/three_mf.py",
+      "sha256": "23fb289383aafc326fa9d451a6d24d877fd8e3ba49e4c431e5713f569f1761f7",
+      "bytes": 9175
+    },
+    {
+      "path": "amdfm/visuals.py",
+      "sha256": "9587ca05e707e8d9aebec7d6f06f2760de48bda91588644f11dec5897659be1d",
+      "bytes": 10532
+    },
+    {
+      "path": "amdfm/wall_visual.py",
+      "sha256": "bd843e04ecabef531a34c1843eaf5260909f4f0c5d4c0b3a4b90c37edfd7edf8",
+      "bytes": 18789
+    },
+    {
+      "path": "amdfm/workflow.py",
+      "sha256": "f15e775c16ab44e811829e5c346e267114feb65a605b18f16337241025e483e9",
+      "bytes": 9550
+    },
+    {
+      "path": "dfm/__init__.py",
+      "sha256": "e6f7f88a2da2ec4e5df249acaa85172485959bd8441ec098024d3a9486df6719",
+      "bytes": 312
+    },
+    {
+      "path": "dfm/accessibility.py",
+      "sha256": "79ef902e175da946e0accf251910e61f5b12bc4263139dfd766b9d316516bb7e",
+      "bytes": 18039
+    },
+    {
+      "path": "dfm/advisor.py",
+      "sha256": "2dfad9933bbb14bf9d28d610df1f772ce9e2d9de173204e522bd65fa8382655a",
+      "bytes": 15161
+    },
+    {
+      "path": "dfm/advisor_view.py",
+      "sha256": "1658d6aaf3af181ed5d85535708dc2c16943b1286251fc80dec0e6b97f760d78",
+      "bytes": 13361
+    },
+    {
+      "path": "dfm/ai_client.py",
+      "sha256": "08bfd779915814245038a236159078b200bf83aebafb65396cf2f8e2cd0b51c4",
+      "bytes": 13130
+    },
+    {
+      "path": "dfm/conclusion.py",
+      "sha256": "23699766ce4733160ca8fde6a860aae8bad22be377abda84cc67beed9a0e578d",
+      "bytes": 10535
+    },
+    {
+      "path": "dfm/conclusion_view.py",
+      "sha256": "5cc5f49a88a7fda99ce7b80da404fb9ff309f05fbae4a935048a45cefc9e900b",
+      "bytes": 9724
+    },
+    {
+      "path": "dfm/conditions.py",
+      "sha256": "9ca4af3d82389e0e7844aa3977c2944c9ce0d8a136f7312f736c4959e6fee9b1",
+      "bytes": 20412
+    },
+    {
+      "path": "dfm/conditions_view.py",
+      "sha256": "7fbfd74ea7b08fbb0fa77324a81512a7dd400f39f1ebec9fed77789d8d4a7e5d",
+      "bytes": 16887
+    },
+    {
+      "path": "dfm/defaults.py",
+      "sha256": "7081f857b6791bbd61b06eeed8bca33e43a24400c0dc55324ac0408d9ff1e02d",
+      "bytes": 3306
+    },
+    {
+      "path": "dfm/enhanced_planning.py",
+      "sha256": "944c380045f39ddd6d7d5a3bdc96edd135ef15ffda8d52493555efb7c76eb42f",
+      "bytes": 7783
+    },
+    {
+      "path": "dfm/learned_output.py",
+      "sha256": "0ad506cae81416bd131107cf109d94b6d34c322fd681738104db88a07afd72f9",
+      "bytes": 1750
+    },
+    {
+      "path": "dfm/learned_review.py",
+      "sha256": "036e88937e2538979b477132c0342fff35461aa9854e8b4a92cf83775bca70f7",
+      "bytes": 33818
+    },
+    {
+      "path": "dfm/learned_view.py",
+      "sha256": "e765c506f4ed710cc6355df092e71996c23b92abcac61e013e63f56804c785bb",
+      "bytes": 5018
+    },
+    {
+      "path": "dfm/location_navigation.py",
+      "sha256": "1d071717c219f7291be2acfc8624a57e300b387430eaff0f588fb896b4ff45c5",
+      "bytes": 1988
+    },
+    {
+      "path": "dfm/machining.py",
+      "sha256": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+      "bytes": 33553
+    },
+    {
+      "path": "dfm/machining_view.py",
+      "sha256": "ab48acda76b56b2aaa7a283cae6728e2bd846f3770e24d1ed5afc8f14a7fefb2",
+      "bytes": 36708
+    },
+    {
+      "path": "dfm/plan_learning.py",
+      "sha256": "39cc9cf68655bf95864fbdc290d685db128e9dbdf219e2f4762e5cdd35914b8e",
+      "bytes": 33447
+    },
+    {
+      "path": "dfm/rl_planner.py",
+      "sha256": "8b270337e0910d4ac64b8c524b4fdf0526395df7ef40ec2c293c426d63350661",
+      "bytes": 22832
+    },
+    {
+      "path": "src/core/__init__.py",
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "bytes": 10
+    },
+    {
+      "path": "src/core/cura_records.py",
+      "sha256": "9a07abd3a7ec42cad0655bca5a0fe73f7096ce84342efe1cf18bf33f0d77b2ac",
+      "bytes": 17912
+    },
+    {
+      "path": "src/core/geometry_analyzer.py",
+      "sha256": "f8ef08187670174376f123855129f05920ae349e4a6cf4de5ed8ba6451f98d3c",
+      "bytes": 54407
+    },
+    {
+      "path": "src/core/layer_regions.py",
+      "sha256": "45d2c37f46a0f1007d6690bfd710f260bb221d1be6b0e75774c8670af6a3975b",
+      "bytes": 4888
+    },
+    {
+      "path": "src/core/layer_review.py",
+      "sha256": "c0a5a9539c7433022730edcada62b00d589d223c032d7bfe65002bc96cf9def4",
+      "bytes": 14865
+    },
+    {
+      "path": "src/core/mesh_diagnostics.py",
+      "sha256": "33fe8c8537560c3171a990724d7a31a8edfca2f7bda73f8bfbb10bb49763d15a",
+      "bytes": 6043
+    },
+    {
+      "path": "src/core/model_loader.py",
+      "sha256": "4b5729367e180ba8b0fea18a777ed67c698e8bbc5cbf2d3e1a40f5510ba2ea6a",
+      "bytes": 6921
+    },
+    {
+      "path": "src/core/reproducibility.py",
+      "sha256": "f324eefa6d89e3838fe0d558cca27a59654e55bf6f888b65f64e89072ccd6e2a",
+      "bytes": 2566
+    },
+    {
+      "path": "src/core/scoring.py",
+      "sha256": "4fb1897de761c10675e8b58e84703df4f7bfb7f60aa03564625ccc15bed22ed1",
+      "bytes": 10125
+    },
+    {
+      "path": "src/core/section_components.py",
+      "sha256": "63fede150f61ed47d3e66c31df30f6327715d80cfb64ea9897873d6d1ac7969c",
+      "bytes": 4773
+    },
+    {
+      "path": "src/core/section_index.py",
+      "sha256": "4a818a47cdca83db55754adc1399b2992eaec95cb5895f8b0e4d40c55ab8dbf7",
+      "bytes": 3132
+    },
+    {
+      "path": "src/core/sections.py",
+      "sha256": "127722271c308979cfa20734779941882749a58f7b0355a481c0df403bb96fc9",
+      "bytes": 12945
+    },
+    {
+      "path": "src/core/validation_metrics.py",
+      "sha256": "7c829c266d1161312998563f1c9febcedb70a26164972d7eeadfb5374be1458f",
+      "bytes": 7545
+    },
+    {
+      "path": "src/core/weights.py",
+      "sha256": "c021dc02ede648150f49cb16799565cc37ac26b91a7eb9807b9c641d39ea29f3",
+      "bytes": 9579
+    },
+    {
+      "path": "data/conditions/am.json",
+      "sha256": "52d3fc31f0847ccd6bb527352ee0ea9eda767e70be507723d0f09d2d577bc805",
+      "bytes": 85910
+    },
+    {
+      "path": "data/conditions/literature.json",
+      "sha256": "3ee984c88136e057d34b5cac073c716d335bfbd10a240a18863b57c409f92860",
+      "bytes": 52999
+    },
+    {
+      "path": "data/conditions/machining.json",
+      "sha256": "ce7b4065d4b6aa7535a848dc8d80a9c7ab73480b14344f56ee0e1aab912f2382",
+      "bytes": 114984
+    },
+    {
+      "path": "data/models/neural_orientation_v1.json",
+      "sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+      "bytes": 745754
+    },
+    {
+      "path": "data/models/neural_orientation_v1.manifest.json",
+      "sha256": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd",
+      "bytes": 250
+    },
+    {
+      "path": "data/models/plan_ranker_v1.json",
+      "sha256": "1410bf301e9228873aa1bbac6e2a1ea3f54b9807b2d37471a890636bff9c15d2",
+      "bytes": 226585
+    },
+    {
+      "path": "data/models/plan_ranker_v1.manifest.json",
+      "sha256": "973138d781e48ade688e28c31eccec2aa6617a7f52167114922070e84c2b3b0e",
+      "bytes": 140
+    },
+    {
+      "path": "data/models/rl_planner_v1.json",
+      "sha256": "6d384fd061924fc11b91308d7208bc76bd7b362b2cf73db2c4f9b4777b0fad87",
+      "bytes": 129745
+    },
+    {
+      "path": "data/models/rl_planner_v1.manifest.json",
+      "sha256": "c282a1b54e008ebb76b0f7ba023ac94333eb1cdcd627ad6d1dfafbd40c2d1ca7",
+      "bytes": 2477
+    },
+    {
+      "path": "data/models/rule_review_v1.json",
+      "sha256": "07cc7514fe4276a9f967a77bcc9970c13a922f3695853b8f63eb8e84250693a7",
+      "bytes": 7998
+    },
+    {
+      "path": "data/models/rule_review_v1.manifest.json",
+      "sha256": "8bae6ce525c155c21c214ccd688932a76574e51522e440b10fddf92b336f1429",
+      "bytes": 188
+    }
+  ],
+  "tests": [
+    {
+      "tests": 1405,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "full-final.xml",
+      "seconds": 573.095,
+      "sha256": "50496b4803673557a73a3cb28b6ea4ebea5fada11ee48d2222e3c10329fe6a64"
+    },
+    {
+      "tests": 108,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "desktop-final.xml",
+      "seconds": 114.667,
+      "sha256": "ccfd95ac4adf53583ff26e3d49e6232c948ca030805a376d1c7b309e9b0a3f9d"
+    },
+    {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "wall-framing-final.xml",
+      "seconds": 6.313,
+      "sha256": "2c6e80e9b7fdbb51abbf8fe8bcb9b90c07c1014ba5ccd1da5e05440179609f84"
+    },
+    {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "desktop-wall-final.xml",
+      "seconds": 5.947,
+      "sha256": "c50dc2e4d67128baa286601a25f8ce9714481cef3c7442390aa10139001b603b"
+    }
+  ],
+  "plan_model_sha256": "1410bf301e9228873aa1bbac6e2a1ea3f54b9807b2d37471a890636bff9c15d2",
+  "neural_model_sha256": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+  "rl_model_sha256": "6d384fd061924fc11b91308d7208bc76bd7b362b2cf73db2c4f9b4777b0fad87",
+  "python": {
+    "source": "Python 3.12.14",
+    "desktop": "Python 3.13.15"
+  },
+  "validation_sequence": {
+    "full_and_desktop_108_code_digest": "04ba33c513121166a9527a47e00d052e6bc15e5334e56ef467ae52d37304f95c",
+    "final_code_digest": "a9148fdddce5c474a6a051198a9ca463be6133511801b25335447ef2045cf56a",
+    "final_change": "wall_visual.py display-axis framing only, equal millimetre scale preserved; measured geometry and both learned model runtimes unchanged",
+    "final_change_checks": [
+      "wall-framing-final.xml",
+      "desktop-wall-final.xml"
+    ]
+  }
+}

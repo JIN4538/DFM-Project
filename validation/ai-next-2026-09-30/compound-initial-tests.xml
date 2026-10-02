@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="9" time="2.854" timestamp="2026-09-30T20:45:48.103842+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_compound_planning" name="test_compound_targets_improve_over_uniform_geometry_modes" time="2.041"><failure message="assert 0.5077183131385796 &lt; (0.5077183131385796 - 0.01)">def test_compound_targets_improve_over_uniform_geometry_modes():
+        report=mixed()
+        original=deepcopy(report)
+        problem=env.make_problem(report)
+        states=[]
+        plans,_,_=prior._cnc_candidates(report, prior._preferences(report))
+        for plan in plans:
+            checked=env.evaluate_changes(report,plan['changes'])
+            states.append((checked['conflicts'],checked['cost']))
+        state,audit=cp.search(problem,policy='all')
+        checked=env.evaluate_changes(report,env.edits(problem,state))
+        assert checked['conflicts']==0
+&gt;       assert checked['cost'] &lt; min(states)[1]-.01
+E       assert 0.5077183131385796 &lt; (0.5077183131385796 - 0.01)
+
+tests_v3\test_compound_planning.py:39: AssertionError</failure></testcase><testcase classname="tests_v3.test_compound_planning" name="test_feature_dynamic_programming_matches_independent_cartesian_enumeration" time="0.024" /><testcase classname="tests_v3.test_compound_planning" name="test_locks_and_missing_measurements_are_retained[prefs0]" time="0.016" /><testcase classname="tests_v3.test_compound_planning" name="test_locks_and_missing_measurements_are_retained[prefs1]" time="0.002" /><testcase classname="tests_v3.test_compound_planning" name="test_locks_and_missing_measurements_are_retained[prefs2]" time="0.002" /><testcase classname="tests_v3.test_compound_planning" name="test_prediction_budget_and_source_input_are_preserved" time="0.022" /><testcase classname="tests_v3.test_compound_planning" name="test_missing_or_tampered_model_does_not_fabricate_a_plan" time="0.010" /><testcase classname="tests_v3.test_compound_planning" name="test_invalid_dimensions_and_configuration_limits_fail_closed" time="0.007" /><testcase classname="tests_v3.test_compound_planning" name="test_portable_tree_threshold_and_malformed_cycle" time="0.010" /></testsuite></testsuites>

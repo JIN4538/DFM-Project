@@ -1,0 +1,29 @@
+{
+  "schema": "neural-cad-integration/1",
+  "mode": "cnc",
+  "started_utc": "2026-09-29T06:34:06.920831+00:00",
+  "python": "3.12.14",
+  "source_hashes": {
+    "amdfm/analysis.py": "be11350875703db1e160f9d1e822defac402b66bf1906de6774a7af910ee6740",
+    "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+    "amdfm/recommendation.py": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+    "amdfm/profiles.py": "1edf267ce9a12977080bf66e1cd36ab25ed85735fa2158530a8ee98f4985272b",
+    "amdfm/models.py": "bf2f4af6b68c18ead77550a0e1923ed62d116b143d255b6e9be4654f9aad0c99",
+    "amdfm/io.py": "2b673fa45cc914020ed35f67847526f3dae2f5b3b7ec7393cc3d697d4ca72c84",
+    "dfm/plan_learning.py": "39cc9cf68655bf95864fbdc290d685db128e9dbdf219e2f4762e5cdd35914b8e",
+    "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+    "data/models/plan_ranker_v1.json": "1410bf301e9228873aa1bbac6e2a1ea3f54b9807b2d37471a890636bff9c15d2",
+    "data/models/plan_ranker_v1.manifest.json": "973138d781e48ade688e28c31eccec2aa6617a7f52167114922070e84c2b3b0e",
+    "dfm/rl_planner.py": "8b270337e0910d4ac64b8c524b4fdf0526395df7ef40ec2c293c426d63350661",
+    "dfm/enhanced_planning.py": "fe43bc75a2d06e54cb1684fea2e8d894917b3444fe607e2404572bcda192a60e",
+    "data/models/rl_planner_v1.json": "6d384fd061924fc11b91308d7208bc76bd7b362b2cf73db2c4f9b4777b0fad87",
+    "data/models/rl_planner_v1.manifest.json": "c282a1b54e008ebb76b0f7ba023ac94333eb1cdcd627ad6d1dfafbd40c2d1ca7"
+  },
+  "script_sha256": "2da85fbe9e1d098e9222b01bd77e092c7975a434799775bd55f777b0053a363a",
+  "model_count": 12,
+  "personal_preferences": "disabled; isolated nonexistent audit path",
+  "geometry_scope": "STEP files imported through production loader; no training or modification",
+  "exact_scope": "Separate geometry recomputation; not independent validation of all geometry formulas",
+  "build_volume": "unlimited",
+  "cnc_visibility": "not run; unknown coverage must remain unresolved"
+}

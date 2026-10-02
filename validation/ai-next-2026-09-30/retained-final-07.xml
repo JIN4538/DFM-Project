@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="48" time="61.438" timestamp="2026-09-30T21:59:01.840886+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_guided_full_search" name="test_product_guided_queries_still_use_geometry_engine_and_retain_old_rows" time="1.618" /><testcase classname="tests_v3.test_guided_full_search" name="test_reference_rows_preserve_old_exact_choice_and_allow_real_improvements" time="0.045" /><testcase classname="tests_v3.test_guided_full_search" name="test_pure_height_queries_are_not_counted_as_neural_proposals" time="1.015" /><testcase classname="tests_v3.test_guided_full_search" name="test_html_direction_uses_same_final_decision_as_screen" time="0.184"><failure message="KeyError: 'source_sha256'">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000023DE17DEF60&gt;
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-184/test_html_direction_uses_same_0')
+
+    def test_html_direction_uses_same_final_decision_as_screen(monkeypatch,tmp_path):
+        from amdfm.analysis import review
+        from amdfm.models import Model
+        from amdfm.presentation import html_report
+        from dfm import enhanced_planning
+        from tests_v3.test_verified_selection import row
+        mesh=trimesh.creation.box((37.,11.,3.))
+        model=Model(mesh,{'filename':'test.stl','unit_status':'declared','source_format':'stl'})
+        report=review(model,Profile(process='VPP'),dense=True)
+        rows=[row('A',[0,0,1],0.,20.),row('B',[1,0,0],10.,10.),row('C',[0,1,0],4.,14.)]
+        report['orientations']=deepcopy(rows)+[row('worse',[0,.6,.8],1000.,14.)]
+        report['current_orientation']=deepcopy(rows[0])
+        report['neural_search']={'selection_reference_rows':deepcopy(rows)}
+        final=enhanced_planning.recommend_plan(report,feedback_path=tmp_path/'empty.json')
+        expected=enhanced_planning.orientation_recommendation(report,final)
+        real=enhanced_planning.orientation_recommendation
+        calls=[]
+        def capture(*args,**kwargs):
+            result=real(*args,**kwargs)
+            calls.append(result)
+            return result
+        monkeypatch.setattr(enhanced_planning,'orientation_recommendation',capture)
+&gt;       document=html_report(report).decode('utf8')
+                 ^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_guided_full_search.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+report = {'app_version': '3.0.0', 'current_orientation': {'build_fit': None, 'candidate_role': 'search', 'direction': [0, 0, 1]...제 장비·재료 조건의 허용 두께를 입력하세요.', 'cad_face_ids': [], 'evidence': ['ISO52910', 'FORM4'], 'face_indices': [], ...}, ...], ...}
+model = None
+
+    def html_report(report, model=None):
+        """Portable illustrated decisions; full unmodified data is exported as JSON."""
+        from .detail_summary import summarize_wall, summarize_layers
+        from .section_summary import summarize_sections
+        from .workflow import summarize_review, action_plan
+        from dfm.enhanced_planning import orientation_recommendation as recommend_orientation
+        from dfm.conclusion import conclusion_html
+        from dfm.advisor import context_summary
+    
+        esc=lambda x: html.escape(str(x))
+        def value(x):
+            if x is None:return "미확정"
+            if isinstance(x,float):return f"{x:.5g}"
+            if isinstance(x,(dict,list)):return esc(json.dumps(x,ensure_ascii=False))
+            return esc(x)
+    
+        def table(rows):
+            if not rows:return ""
+            keys=list(rows[0])
+            header="".join(f"&lt;th scope='col'&gt;{esc(k)}&lt;/th&gt;" for k in keys)
+            body="".join("&lt;tr&gt;"+"".join(f"&lt;td&gt;{value(row.get(k))}&lt;/td&gt;" for k in keys)+"&lt;/tr&gt;" for row in rows)
+            return f"&lt;div class='table-scroll'&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;{header}&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;{body}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;"
+    
+        def raw(label, data):
+            return f"&lt;details&gt;&lt;summary&gt;{esc(label)}&lt;/summary&gt;&lt;pre&gt;{esc(json.dumps(data,ensure_ascii=False,indent=2))}&lt;/pre&gt;&lt;/details&gt;"
+    
+        def decision(level,title,observation,action):
+            level=level if level in ('success','warning','info') else 'info'
+            return (f"&lt;div class='decision {level}'&gt;&lt;h3&gt;{esc(title)}&lt;/h3&gt;&lt;p&gt;{esc(observation)}&lt;/p&gt;"
+                    f"&lt;p&gt;&lt;b&gt;다음에 할 일&lt;/b&gt; · {esc(action)}&lt;/p&gt;&lt;/div&gt;")
+    
+        overview=summarize_review(report)
+        plan=action_plan(report)
+        recommendation=recommend_orientation(report)
+        direction_summary=decision('info',recommendation['title'],recommendation['observation'],recommendation['next_action'])
+        if recommendation.get('recommended'):
+            direction_summary+=table([{'항목':d['label'],'현재':f"{d['current']:.4g} {d['unit']}",
+                '추천 후보':f"{d['recommended']:.4g} {d['unit']}",
+                '변화':{'same':'같음','improvement':'유리','tradeoff':'불리'}[d['change']]}
+                for d in recommendation['current_comparison'].get('differences',[])])
+        direction_summary+=table([{'비교 지표':c['label'],
+            '우선 방향':'작을수록 유리' if c['direction']=='min' else '클수록 유리'}
+            for c in recommendation['criteria']])
+        plan_html=table([{'순서':i,'항목':x['label'],'구분':x['category'],'확인 내용':x['observation'],
+                         '개선·확인 방법':x['next_action']} for i,x in enumerate(plan['actions'],1)])
+        profile=report['profile']
+        details=report.get('details',{})
+        findings={f['id']:f for f in report['findings']}
+        cards=[]
+        for item in overview['checklist']:
+            key=item['id']
+            card=(f"&lt;section id='check-{esc(key)}'&gt;&lt;h2&gt;{esc(item['label'])}&lt;/h2&gt;"
+                  +decision(item['level'],item['state'],item['observation'],item['next_action']))
+            if key=='wall':
+                from .wall_visual import wall_report_svg
+                wall=summarize_wall(details.get('wall'),profile.get('minimum_wall_mm'))
+                if wall['minimum_mm'] is not None:
+                    criterion=value(wall['minimum_wall_mm'])+' mm' if wall['criterion_available'] else '미입력'
+                    card+=(f"&lt;p&gt;&lt;b&gt;가장 짧게 측정한 거리&lt;/b&gt; {value(wall['minimum_mm'])} mm · "
+                           f"&lt;b&gt;입력한 최소 벽 기준&lt;/b&gt; {criterion}&lt;/p&gt;")
+                    card+=f"&lt;p&gt;&lt;b&gt;기준 근거&lt;/b&gt; · {esc(profile.get('threshold_basis','미입력'))}&lt;/p&gt;"
+                    if model is not None and wall_samples(report):
+                        card+='&lt;h3&gt;가장 얇게 측정한 위치와 확대 단면&lt;/h3&gt;'+wall_report_svg(model,report)
+                card+=f"&lt;p class='scope'&gt;{esc(wall['scope'])}&lt;/p&gt;"
+            elif key=='layers':
+                layers=summarize_layers(details.get('layers'))
+                if details.get('layers'):
+                    card+=table([{'검토 항목':c['label'],'후보가 관측된 층 수':c['candidate_layers'],
+                                  '전체 비교 범위를 계산한 층 수':c['fully_measured_layers']}
+                                 for c in layers['checks']])
+                    if layers['affected_rows']:
+                        card+="&lt;h3&gt;먼저 확인할 층&lt;/h3&gt;"+table([
+                            {'층':r['display_layer'],'높이 (mm)':r.get('z_mm'),
+                             '확인할 내용':' · '.join(r['types']),'다음 행동':r['action']}
+                            for r in layers['affected_rows']])
+                    if layers['reason']:card+=f"&lt;p&gt;{esc(layers['reason'])}&lt;/p&gt;"
+                card+=f"&lt;p class='scope'&gt;{esc(layers['scope'])}&lt;/p&gt;"
+            elif key=='sections' and details.get('sections'):
+                sections=details['sections']
+                section=summarize_sections(sections,profile['process'],report['geometry'].get('mesh_signed_volume_mm3'))
+                card+=f"&lt;p&gt;{esc(section['completion_text'])}&lt;/p&gt;&lt;p&gt;{esc(section['interpretation'])}&lt;/p&gt;"
+                if section['reason']:card+=f"&lt;p&gt;{esc(section['reason'])}&lt;/p&gt;"
+                if section['selection_note']:card+=f"&lt;p&gt;&lt;b&gt;계산 방법 안내&lt;/b&gt; · {esc(section['selection_note'])}&lt;/p&gt;"
+                if sections.get('rows'):
+                    index=section['default_row_index'] or 0
+                    card+=section_svg(sections['rows'],index)
+                    card+="&lt;p class='scope'&gt;기록된 단면 윤곽입니다. 비교 가능한 이전 단면이 있으면 파란 점선으로 함께 표시하고, 현재 단면은 주황 실선으로 표시합니다. 위험 등급이 아니며, 미확정 단면이나 표본 사이 형상을 추정해 채우지 않습니다.&lt;/p&gt;"
+                partial=section['partial_volume']
+                if partial['available']:
+                    card+=(f"&lt;p&gt;&lt;b&gt;확인한 구간의 부피 합&lt;/b&gt; {value(partial['known_mm3'])} mm³ · "
+                           f"&lt;b&gt;빠진 높이 구간의 부피 기여 상한&lt;/b&gt; {value(partial['omitted_envelope_mm3'])} mm³&lt;/p&gt;"
+                           f"&lt;p&gt;{esc(partial['explanation'])}&lt;/p&gt;")
+                volume=section['volume']
+                volume_html=f"&lt;p&gt;{esc(volume['explanation'])}&lt;/p&gt;"
+                if volume['available']:
+                    display=volume['display']
+                    if display.startswith('&lt;'):display=display[1:]+' 미만'
+                    volume_html=(f"&lt;p&gt;두 계산 방법의 부피 차이: &lt;b&gt;{esc(display)}&lt;/b&gt;&lt;/p&gt;"
+                        f"&lt;p&gt;단면 체적 {value(volume['section_volume_mm3'])} mm³ · 메시 체적 {value(volume['mesh_volume_mm3'])} mm³&lt;/p&gt;"
+                        f"&lt;p&gt;원본 상대차: {esc(format(volume['relative_difference_percent'],'.16g'))}%&lt;/p&gt;"+volume_html)
+                card+=f"&lt;details&gt;&lt;summary&gt;계산 확인 · 부피 검산&lt;/summary&gt;{volume_html}&lt;/details&gt;"
+            if key in findings:
+                f=findings[key]
+                if f['face_indices']:
+                    card+=(f"&lt;p&gt;&lt;b&gt;위치 확인&lt;/b&gt; · 프로그램의 설계 조치에서 「{esc(f['title'])}」 항목을 선택하면 "
+                           "해당 표본 또는 검토 위치를 형상에서 확인할 수 있습니다.&lt;/p&gt;")
+                refs=' · '.join(f"&lt;a href='#source-{esc(k)}'&gt;{esc(k)}&lt;/a&gt;" for k in f['evidence'])
+                card+=("&lt;details&gt;&lt;summary&gt;측정값·방법·위치 번호와 적용 범위&lt;/summary&gt;"
+                       f"&lt;p&gt;&lt;b&gt;원래 측정 설명&lt;/b&gt; · {esc(f['reason'])}&lt;/p&gt;&lt;p&gt;방법: {esc(f['method'])}&lt;/p&gt;"
+                       f"&lt;p&gt;CAD 면 번호(최대 50개 표시): {value(f['cad_face_ids'][:50])}&lt;/p&gt;"
+                       f"&lt;p&gt;{' '.join(esc(x) for x in f['limitations'])}&lt;/p&gt;&lt;p&gt;근거: {refs}&lt;/p&gt;"
+                       +table([{'측정 키':k,'값':v} for k,v in f['measurements'].items() if not isinstance(v,(dict,list))])+'&lt;/details&gt;')
+            cards.append(card+'&lt;/section&gt;')
+    
+        sources=[]
+        for key,s in report["sources"].items():
+            title=f"&lt;a href='{esc(s['url'])}'&gt;{esc(s['title'])}&lt;/a&gt;" if s["url"] else esc(s["title"])
+            sources.append(f"&lt;li id='source-{esc(key)}'&gt;&lt;b&gt;{esc(key)}&lt;/b&gt; {title}. {esc(s['locator'])}. {esc(s['access'])}. {esc(s['use'])}&lt;/li&gt;")
+        navigation=''.join(f"&lt;li&gt;&lt;a href='#check-{esc(i['id'])}'&gt;{esc(i['label'])}&lt;/a&gt; · {esc(i['state'])}&lt;/li&gt;"
+                           for i in overview['checklist'])
+        from dfm.conditions import condition_html
+        conditions=condition_html(profile.get('condition_evidence')) + table([{'조건':'장비','설정':profile.get('machine')},
+                          {'조건':'재료','설정':profile.get('material')},
+                          {'조건':'슬라이서','설정':profile.get('slicer')},
+                          {'조건':'빌드 공간','설정':'크기 제한 미적용' if profile.get('build_volume_mm') is None else profile['build_volume_mm']},
+                          {'조건':'검토 기준의 근거','설정':profile.get('threshold_basis')}])
+        goals=['높이']
+        if report['current_orientation'].get('overhang_projected_area_sum_mm2') is not None:
+            goals.append('하향면 후보')
+        if profile['process']=='MEX' and report['current_orientation'].get('contact_triangle_area_mm2') is not None:
+            goals.append('바닥 접촉면')
+        goals_text='·'.join(goals)
+&gt;       provenance=dict(timestamp_utc=report['timestamp_utc'],source_sha256=report['model']['source_sha256'],
+                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        model_fingerprint=report['model_fingerprint'],profile=profile,
+                        placement_transform=report['current_orientation']['transform'],**report['provenance'])
+E       KeyError: 'source_sha256'
+
+amdfm\presentation.py:217: KeyError</failure></testcase><testcase classname="tests_v3.test_guided_full_search" name="test_current_only_direction_is_excluded_from_acquisition_pool" time="1.100" /><testcase classname="tests_v3.test_guided_full_search" name="test_outside_scope_and_failed_new_selector_keep_legacy_queries" time="1.081" /><testcase classname="tests_v3.test_guided_full_search" name="test_partial_native_query_failure_keeps_reference_for_successful_extra_query" time="1.128" /><testcase classname="tests_v3.test_full_search" name="test_new_model_retains_previous_queries_and_measures_all_added_values" time="1.402" /><testcase classname="tests_v3.test_full_search" name="test_missing_model_preserves_previous_measured_candidates" time="0.698" /><testcase classname="tests_v3.test_full_search" name="test_explicit_small_budget_and_zero_budget_do_not_expand" time="0.181" /><testcase classname="tests_v3.test_full_search" name="test_outside_angle_domain_does_not_propose_untrained_area_queries" time="0.046" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_small_height_change_is_not_promoted_but_raw_values_remain" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_use_effective_deflection_and_preserve_substantial_gain" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_build_space_rescue_is_kept_even_if_height_gain_is_tiny" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_current_only_direction_does_not_change_proposal_screening" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_small_planar_part_retains_large_relative_improvement" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_unknown_fit_does_not_suppress_confirmed_fit_with_space_constraint" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_other_body_precision_does_not_suppress_selected_body_improvement" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_without_cad_precision_or_with_other_objectives_no_height_only_filter" time="0.001" /><testcase classname="tests_v3.test_ai_search_resolution" name="test_real_sphere_does_not_gain_height_from_new_mesh_orientations" time="5.316" /><testcase classname="tests_v3.test_verified_selection" name="test_policy_is_exact_frozen_training_target" time="0.007" /><testcase classname="tests_v3.test_verified_selection" name="test_bad_ranker_cannot_override_measured_final_choice" time="0.011" /><testcase classname="tests_v3.test_verified_selection" name="test_custom_tradeoff_direction_can_be_best_without_dominating" time="0.008" /><testcase classname="tests_v3.test_verified_selection" name="test_dominated_current_cannot_rescale_fixed_winner" time="0.010" /><testcase classname="tests_v3.test_verified_selection" name="test_policy_tie_keeps_current_tradeoff" time="0.006" /><testcase classname="tests_v3.test_verified_selection" name="test_model_absence_does_not_change_exact_choice" time="0.008" /><testcase classname="tests_v3.test_verified_selection" name="test_actual_preference_can_change_tradeoff_but_not_conflict_gate" time="0.096" /><testcase classname="tests_v3.test_verified_selection" name="test_failed_build_space_current_stays_excluded" time="0.006" /><testcase classname="tests_v3.test_report_ux" name="test_first_page_contains_decision_action_without_raw_technical_records" time="0.075" /><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[None-False-\ubcbd\uc740 \uce21\uc815\ub410\uc9c0\ub9cc \ube44\uad50 \uae30\uc900\uc774 \uc5c6\uc2b5\ub2c8\ub2e4]" time="0.091" /><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[1.0-False-\uac80\uc0ac\ud55c \ud45c\ubcf8\uc5d0\uc11c \uc785\ub825\ud55c \ubcbd \uae30\uc900 \ubbf8\ub9cc\uc774 \uc5c6\uc2b5\ub2c8\ub2e4]" time="0.088" /><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[5.0-False-\uc785\ub825\ud55c \ubcbd \uae30\uc900\ubcf4\ub2e4 \uc791\uc740 \uad6c\uac04\uc774 \uc788\uc2b5\ub2c8\ub2e4]" time="0.066" /><testcase classname="tests_v3.test_report_ux" name="test_wall_decisions_explain_the_same_4mm_measurement[1.0-True-\ubcbd\uc758 \uc77c\ubd80 \ud45c\ubcf8\uc744 \ud655\uc778\ud558\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4]" time="0.076" /><testcase classname="tests_v3.test_report_ux" name="test_complete_zero_layers_are_explained_without_two_hundred_visible_rows" time="0.092" /><testcase classname="tests_v3.test_report_ux" name="test_unknown_layer_scope_never_appears_as_zero_candidate_success[missing_value]" time="0.071" /><testcase classname="tests_v3.test_report_ux" name="test_unknown_layer_scope_never_appears_as_zero_candidate_success[missing_row]" time="0.070" /><testcase classname="tests_v3.test_report_ux" name="test_unknown_layer_scope_never_appears_as_zero_candidate_success[partial_scope]" time="0.084" /><testcase classname="tests_v3.test_report_ux" name="test_tiny_candidate_keeps_location_and_next_action_in_shared_report" time="0.089" /><testcase classname="tests_v3.test_report_ux" name="test_section_volume_check_is_subordinate_and_partial_stale_value_is_not_promoted[False]" time="0.082" /><testcase classname="tests_v3.test_report_ux" name="test_section_volume_check_is_subordinate_and_partial_stale_value_is_not_promoted[True]" time="0.069" /><testcase classname="tests_v3.test_report_ux" name="test_other_process_report_does_not_offer_mex_layer_review[VPP]" time="0.081" /><testcase classname="tests_v3.test_report_ux" name="test_other_process_report_does_not_offer_mex_layer_review[PBF_POLYMER]" time="0.086" /><testcase classname="tests_v3.test_report_ux" name="test_other_process_report_does_not_offer_mex_layer_review[PBF_METAL]" time="0.085" /><testcase classname="tests_v3.test_report_ux" name="test_user_text_is_escaped_and_report_remains_unchanged" time="0.083" /><testcase classname="tests_v3.test_compact_am" name="test_optional_external_helper_is_closed_and_local_wall_card_is_actionable" time="20.417" /><testcase classname="tests_v3.test_compact_am" name="test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis" time="16.205" /><testcase classname="tests_v3.test_compact_am" name="test_worker_timeout_stays_unknown_and_refreshes_export_without_returning_to_actions" time="3.992" /><testcase classname="tests_v3.test_compact_am" name="test_input_defect_is_visible_before_learned_missing_condition_cards" time="0.436" /></testsuite></testsuites>

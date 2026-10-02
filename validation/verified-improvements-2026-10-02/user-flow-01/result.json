@@ -1,0 +1,94 @@
+{
+  "scope": "automated visible app task paths; zero recruited users, no human completion-time claim",
+  "users": 0,
+  "cases": [
+    {
+      "family": "적층제조",
+      "shape": "얇은 판 · 두께 0.3 mm",
+      "actions": [
+        "형상 선택",
+        "검토 시작",
+        "문제 위치 보기"
+      ],
+      "manual_numeric_entries": 0,
+      "conclusion": true,
+      "direct_problem_location": true,
+      "seconds": 16.04192369998782
+    },
+    {
+      "family": "절삭가공",
+      "shape": "3개 포켓 · 수정 전",
+      "actions": [
+        "시연 목적 선택",
+        "형상 선택",
+        "검토 시작",
+        "문제 위치 보기",
+        "추천 수정 적용·재검토"
+      ],
+      "manual_numeric_entries": 0,
+      "conclusion": true,
+      "direct_problem_location": true,
+      "automatic_tool": {
+        "tool_diameter_mm": 7.200000000000026,
+        "flute_length_mm": 8.0,
+        "reach_mm": 8.0
+      },
+      "actual_step_reinspection": {
+        "before_conflicts": 3,
+        "after_conflicts": 0,
+        "new_conflicts": 0,
+        "scope": "entered tool and supported hole/pocket/corner dimensional comparisons",
+        "remaining": [],
+        "changes": [
+          {
+            "field": "pocket.0.corner_radius",
+            "label": "포켓 내부 반경",
+            "before": 0.0,
+            "after": 3.6,
+            "unit": "mm",
+            "cad_face_id": 21
+          },
+          {
+            "field": "pocket.1.corner_radius",
+            "label": "포켓 내부 반경",
+            "before": 0.0,
+            "after": 3.6,
+            "unit": "mm",
+            "cad_face_id": 20
+          },
+          {
+            "field": "pocket.2.corner_radius",
+            "label": "포켓 내부 반경",
+            "before": 0.0,
+            "after": 3.6,
+            "unit": "mm",
+            "cad_face_id": 22
+          }
+        ]
+      },
+      "edited_pockets": 3,
+      "seconds": 15.847882799978834
+    },
+    {
+      "family": "절삭가공",
+      "shape": "관통 구멍 3개 · 지름 6 mm",
+      "actions": [
+        "시연 목적 선택",
+        "형상 선택",
+        "검토 시작",
+        "문제 위치 보기"
+      ],
+      "manual_numeric_entries": 0,
+      "conclusion": true,
+      "direct_problem_location": true,
+      "automatic_tool": {
+        "tool_diameter_mm": 4.800000000000001,
+        "flute_length_mm": 13.0,
+        "reach_mm": 13.0
+      },
+      "seconds": 6.707982099993387
+    }
+  ],
+  "all_completed": true,
+  "source_script": "scripts/run_user_flow_audit.py"
+}

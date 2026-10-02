@@ -1,0 +1,45 @@
+{
+  "count": 5529,
+  "mean_conflicts": 0.5029842647856755,
+  "mean_cost": 0.5495667937928582,
+  "zero_conflict": 3747,
+  "mean_steps": 3.0587809730511846,
+  "elapsed_seconds": 57.48506520000228,
+  "greedy": {
+    "count": 5529,
+    "rl_better": 505,
+    "rl_worse": 632,
+    "equal": 4392,
+    "baseline_mean_conflicts": 0.5029842647856755,
+    "baseline_mean_cost": 0.5501212899205764
+  },
+  "random": {
+    "count": 5529,
+    "rl_better": 3973,
+    "rl_worse": 90,
+    "equal": 1466,
+    "baseline_mean_conflicts": 2.1334780249593055,
+    "baseline_mean_cost": 0.4948592531152273
+  },
+  "legacy": {
+    "count": 5529,
+    "rl_better": 7,
+    "rl_worse": 814,
+    "equal": 4708,
+    "baseline_mean_conflicts": 0.5029842647856755,
+    "baseline_mean_cost": 0.5425289762472872
+  },
+  "untrained": {
+    "count": 5529,
+    "rl_better": 3762,
+    "rl_worse": 25,
+    "equal": 1742,
+    "baseline_mean_conflicts": 1.6011937059142702,
+    "baseline_mean_cost": 0.497031039816524
+  },
+  "theoretical_exact_min_guard": {
+    "worse": 0,
+    "selected_rl": 7,
+    "scope": "pointwise minimum of stored raw qualities; not a runtime arbitration test"
+  }
+}

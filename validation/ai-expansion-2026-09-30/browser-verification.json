@@ -1,0 +1,33 @@
+{
+  "url": "http://127.0.0.1:8507/",
+  "installation": "C:/Users/JIN/Desktop/AM-DFM_v3_0",
+  "AM": {
+    "public_STEP": "cadquarry_bracket_bracket_462c.step",
+    "equipment": "Bambu Lab A1 mini",
+    "build_dimensions_mm": [
+      180,
+      180,
+      180
+    ],
+    "limit_enabled": false,
+    "numeric_plan": "0.3 → 1.2 mm; wall reinforcement + keep current placement",
+    "direct_location": "Selected wall sample and actual magnified section appeared after conclusion button"
+  },
+  "CNC": {
+    "public_STEP": "cadquarry_block_block_462c9d.step",
+    "equipment": "Tormach 1100M",
+    "tool_inputs": "left empty",
+    "automatic_tool_mm": {
+      "diameter": 3.44,
+      "flute": 27.4,
+      "reach": 27.4
+    },
+    "feature_count_displayed": 4,
+    "pending": "tool recommendation conditions retained"
+  },
+  "screenshots": [
+    "..\\study\\ai-expansion-2026-09-30\\browser-am-conclusion.png",
+    "..\\study\\ai-expansion-2026-09-30\\browser-am-location.png",
+    "..\\study\\ai-expansion-2026-09-30\\browser-cnc-conclusion.png"
+  ]
+}

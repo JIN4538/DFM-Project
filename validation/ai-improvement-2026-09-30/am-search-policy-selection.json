@@ -1,0 +1,80 @@
+{
+  "selected_policy": "retained4_residual20",
+  "parameters": {
+    "width_deg": 20.0,
+    "ridge": 0.03,
+    "strength": 1.0,
+    "retain_legacy": 4
+  },
+  "validation": {
+    "retained2_residual20": {
+      "legacy": {
+        "cases": 120,
+        "better": 8,
+        "same": 110,
+        "worse": 2,
+        "mean_difference": -0.000526646840935466
+      },
+      "blind": {
+        "cases": 120,
+        "better": 13,
+        "same": 106,
+        "worse": 1,
+        "mean_difference": -0.00298871503859318
+      }
+    },
+    "retained3_residual20": {
+      "legacy": {
+        "cases": 120,
+        "better": 6,
+        "same": 114,
+        "worse": 0,
+        "mean_difference": -0.0014039412387966028
+      },
+      "blind": {
+        "cases": 120,
+        "better": 11,
+        "same": 108,
+        "worse": 1,
+        "mean_difference": -0.003866009436454317
+      }
+    },
+    "retained4_residual20": {
+      "legacy": {
+        "cases": 120,
+        "better": 6,
+        "same": 114,
+        "worse": 0,
+        "mean_difference": -0.0014039412387966028
+      },
+      "blind": {
+        "cases": 120,
+        "better": 11,
+        "same": 108,
+        "worse": 1,
+        "mean_difference": -0.003866009436454317
+      }
+    },
+    "retained3_half20": {
+      "legacy": {
+        "cases": 120,
+        "better": 6,
+        "same": 114,
+        "worse": 0,
+        "mean_difference": -0.0014039412387966028
+      },
+      "blind": {
+        "cases": 120,
+        "better": 11,
+        "same": 108,
+        "worse": 1,
+        "mean_difference": -0.003866009436454317
+      }
+    }
+  },
+  "validation_groups": 24,
+  "selection_rule": "Minimum validation mean objective loss, then fewer regressions; ties retain more previous queries. Test remains unused.",
+  "validation_summary_sha256": "17d0c8be1db444bb309928c4220e0f734f7968ad2f167392a40e471b2c958283",
+  "algorithm_sha256": "7258ad92622c9d54e5b3128738d816942d4480e8a796bea22ddd906837fa9aa5",
+  "model_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64"
+}

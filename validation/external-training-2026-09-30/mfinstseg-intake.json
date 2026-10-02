@@ -1,0 +1,167 @@
+{
+  "imported": 62495,
+  "face_labels": 1697766,
+  "splits": {
+    "test": 9370,
+    "train": 43714,
+    "val": 9370,
+    "unassigned": 18,
+    "quarantine": 23
+  },
+  "training_ready": 0,
+  "published_overlap_ids": [
+    "20221225_205134_10",
+    "20221225_205134_32",
+    "20221225_205134_40",
+    "20221225_205134_44",
+    "20221225_205134_52"
+  ],
+  "duplicate_partition_rows": 13,
+  "duplicate_step_groups": 4,
+  "label_identifier_mismatches": [
+    {
+      "id": "20221225_205134_14",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_30",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_31",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_32",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_33",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_34",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_35",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_36",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_37",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_38",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_39",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_40",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_41",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_42",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_43",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_44",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_45",
+      "label_ids": [
+        "20221225_205134_15"
+      ]
+    },
+    {
+      "id": "20221225_205134_50",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_51",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_52",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_53",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    },
+    {
+      "id": "20221225_205134_54",
+      "label_ids": [
+        "20221225_205134_10"
+      ]
+    }
+  ],
+  "seconds": 104.53099999999995,
+  "source": {
+    "dataset": "MFInstSeg",
+    "author_record": "https://aistudio.baidu.com/datasetdetail/211864?lang=en",
+    "author_mirror": "https://github.com/whjdark/AAGNet",
+    "declared_license": "CC0 in author dataset page metadata",
+    "license_scope": "archive contains no license text; record declaration preserved, redistribution not enabled",
+    "archive_sha256": "5b3bbb5c9242eb6199a5dafe1d758aa12eef9d08ef51a3f80b378b912f10c735",
+    "label_mapping": "pythonocc/occwl TopologyExplorer ordinal; correspondence to OCP 7.9 unverified",
+    "training_ready": false
+  },
+  "db": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\external-training-2026-09-30\\mfinstseg-complete.sqlite"
+}

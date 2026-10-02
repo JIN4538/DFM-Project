@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="35" time="183.314" timestamp="2026-09-30T18:54:08.590599+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_review_inputs" name="test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result" time="11.647"><failure message="KeyError: 'details'">def test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result():
+        app = open_app()
+        app.selectbox(key='cad_example').select('얇은 판 · 두께 0.3 mm').run()
+        widget = app.number_input(key='wall_limit_MEX')
+        assert widget.proto.form_id == ''
+        widget.set_value(1.).run()
+        assert not app.segmented_control
+        app.button(key='start_from_model').click().run()
+        assert not app.exception
+        report = app.session_state['report']
+        assert report['profile']['minimum_wall_mm'] == 1.
+&gt;       assert report['details']['wall']['profile'] == report['profile']
+               ^^^^^^^^^^^^^^^^^
+E       KeyError: 'details'
+
+tests_v3\test_review_inputs.py:40: KeyError</failure></testcase><testcase classname="tests_v3.test_review_inputs" name="test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result" time="13.223" /><testcase classname="tests_v3.test_process_ui" name="test_process_calibrations_are_independent_and_survive_round_trips" time="29.104" /><testcase classname="tests_v3.test_process_ui" name="test_non_mex_review_does_not_offer_filament_gcode_analysis[VPP]" time="10.648" /><testcase classname="tests_v3.test_process_ui" name="test_non_mex_review_does_not_offer_filament_gcode_analysis[PBF_POLYMER]" time="5.406" /><testcase classname="tests_v3.test_process_ui" name="test_non_mex_review_does_not_offer_filament_gcode_analysis[PBF_METAL]" time="5.544" /><testcase classname="tests_v3.test_unified_am_settings" name="test_equipment_choice_fills_one_settings_state_and_unknown_resets" time="0.001" /><testcase classname="tests_v3.test_unified_am_settings" name="test_custom_layer_override_survives_unrecognized_material" time="0.001" /><testcase classname="tests_v3.test_conclusion" name="test_complete_measurement_and_partial_measurement_have_different_conclusions" time="0.004" /><testcase classname="tests_v3.test_conclusion" name="test_observed_partial_issue_keeps_both_issue_and_missing_scope" time="0.003" /><testcase classname="tests_v3.test_conclusion" name="test_input_defect_wins_over_learned_candidate_and_raw_data_unchanged" time="0.003" /><testcase classname="tests_v3.test_conclusion" name="test_unlearned_partial_finding_and_missing_report_never_pass" time="0.004" /><testcase classname="tests_v3.test_conclusion" name="test_unknown_process_does_not_hide_raw_numeric_warning" time="0.002" /><testcase classname="tests_v3.test_conclusion" name="test_plan_suppresses_only_resolved_generic_action_and_keeps_remaining_issue" time="0.002" /><testcase classname="tests_v3.test_conclusion" name="test_html_escapes_user_content_and_uses_one_conclusion_heading" time="0.003" /><testcase classname="tests_v3.test_conclusion" name="test_plan_change_keeps_verified_cad_face_identity" time="0.001" /><testcase classname="tests_v3.test_conclusion" name="test_residual_plan_keeps_issue_but_does_not_repeat_conflicting_generic_action" time="0.003" /><testcase classname="tests_v3.test_compact_am" name="test_optional_external_helper_is_closed_and_local_wall_card_is_actionable" time="9.047" /><testcase classname="tests_v3.test_compact_am" name="test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis" time="8.736" /><testcase classname="tests_v3.test_compact_am" name="test_worker_timeout_stays_unknown_and_refreshes_export_without_returning_to_actions" time="1.857" /><testcase classname="tests_v3.test_compact_am" name="test_input_defect_is_visible_before_learned_missing_condition_cards" time="0.355" /><testcase classname="tests_v3.test_conditions_ui" name="test_preview_is_not_application_and_reference_material_cannot_apply" time="6.096" /><testcase classname="tests_v3.test_conditions_ui" name="test_am_apply_changes_real_review_and_tracks_override_and_disabled_build" time="0.518"><failure message="KeyError: 'build_X_MEX'">library = &lt;dfm.conditions.ConditionLibrary object at 0x00000259C5A59490&gt;
+
+    def test_am_apply_changes_real_review_and_tracks_override_and_disabled_build(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        _apply(app, "am-wall")
+        assert app.number_input(key="wall_limit_MEX").value == 5.
+        assert not app.checkbox(key="use_build_MEX").value
+&gt;       assert [app.number_input(key=f"build_{axis}_MEX").value for axis in "XYZ"] == [120., 130., 140.]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_conditions_ui.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[NumberInput(key='wall_limit_MEX', _value=InitialValue(), label='이보다 얇은 벽 찾기 (mm)', min=0.001, step=0...lue(), label='받침 검토에 사용할 경사각 (°)', min=1.0, max=90.0, step=5.0, help='수평면에서 잰 각도입니다. 아래로 향한 면 중 이 각도보다 완만한 곳을 찾습니다.')])
+key = 'build_X_MEX'
+
+    def __call__(self, key: str) -&gt; El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+&gt;       raise KeyError(key)
+E       KeyError: 'build_X_MEX'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError</failure></testcase><testcase classname="tests_v3.test_conditions_ui" name="test_condition_switches_are_separate_and_clear_resets_baseline" time="1.504" /><testcase classname="tests_v3.test_conditions_ui" name="test_stale_database_blocks_review_until_reapply_or_clear" time="0.677" /><testcase classname="tests_v3.test_conditions_ui" name="test_cnc_application_keeps_mount_reach_unknown_and_changes_feature_comparison" time="8.592" /><testcase classname="tests_v3.test_conditions_ui" name="test_published_library_can_be_applied_in_all_supported_process_views" time="24.225" /><testcase classname="tests_v3.test_advisor_ui" name="test_no_key_disables_ai_and_ordinary_reruns_never_make_requests" time="1.474" /><testcase classname="tests_v3.test_advisor_ui" name="test_ai_draft_requires_acceptance_and_changes_context_without_inventing_limits" time="14.018" /><testcase classname="tests_v3.test_advisor_ui" name="test_changed_request_invalidates_draft_and_cannot_apply_stale_text" time="0.780" /><testcase classname="tests_v3.test_advisor_ui" name="test_failed_ai_removes_old_draft_without_echoing_provider_body_or_key" time="0.995" /><testcase classname="tests_v3.test_advisor_ui" name="test_priority_change_invalidates_result_and_recommendation_apply_preserves_it" time="6.871" /><testcase classname="tests_v3.test_advisor_ui" name="test_ai_can_select_cnc_context_while_tool_dimensions_remain_user_inputs" time="4.822" /><testcase classname="tests_v3.test_advisor_ui" name="test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them[ai]" time="12.366" /><testcase classname="tests_v3.test_advisor_ui" name="test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them[manual]" time="2.215" /></testsuite></testsuites>

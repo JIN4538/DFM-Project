@@ -1,0 +1,116 @@
+{
+  "file_id": "file_012",
+  "filename": "900-602.stp",
+  "selected_body": 1,
+  "source_sha256": "a82f75d019b5e4b2f30a2f856413c10d4a0b260bae2329e43d56518c330e5797",
+  "selected_model_fingerprint": "919a667912fe8c459998ed845aa10ed52101a4fc5291cade05b8456ea45da3e0",
+  "source_npz_sha256": "783d73a078b0cdcc00c29e9d77ba1fbf1a0d99304cd69ffc8a111a1288016ba6",
+  "source_metadata_sha256": "c5e5382ddf86b307bab7334a7b344a4b7e19d922daca42f016d47b5c564962fb",
+  "placed_mesh_sha256": "6581015b8708841beb54e1789480de628c52225ab0a2d78e23390504fbd886c6",
+  "placement_transform": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      -0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      -0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "triangles": 4824,
+  "elapsed_seconds": 0.10072389999913867,
+  "reference_tetra_mm3": 1808759.0090075245,
+  "cad_quadrature_mm3": 1807116.2615360715,
+  "known_relative_difference_from_tetra": 2.538280030606188e-09,
+  "result": {
+    "status": "complete",
+    "method": "vertex_event_intervals_gauss2/1",
+    "sampling_method": "vertex_events_gauss2",
+    "requested_samples": 2,
+    "examined_samples": 2,
+    "complete_samples": 2,
+    "sample_spacing_mm": null,
+    "sampled_max_area_mm2": 301.45983560162387,
+    "sampled_max_perimeter_mm": 332.21323679494526,
+    "sampled_max_area_per_perimeter_mm": 0.9074287301432747,
+    "sampled_max_symmetric_change_mm2": 1.2478646900951797e-07,
+    "volume_quadrature_estimate_mm3": 1808759.0135986614,
+    "volume_midpoint_estimate_mm3": null,
+    "known_interval_volume_mm3": 1808759.0135986614,
+    "unresolved_height_mm": 0.0,
+    "omitted_interval_volume_envelope_mm3": 0.0,
+    "total_segments": 4808,
+    "known_plus_omitted_envelope_mm3": 1808759.0135986614,
+    "omitted_interval_volume_envelope_relative_to_known": 0.0,
+    "representation_limit_only": false,
+    "complete_event_intervals": 1,
+    "unexamined_event_intervals": 0,
+    "unresolved_interval_counts": {
+      "representation_limit": 0,
+      "section_failure": 0,
+      "runtime_budget": 0
+    },
+    "budget_exceeded": false,
+    "budget_reasons": [],
+    "failure_code": null,
+    "max_samples": 8192,
+    "max_total_segments": 1500000,
+    "scope": "Two Gauss nodes per exact vertex-height interval of a placed mesh; sampled maxima are not global extrema. No manufacturing-layer, peel-force, thermal or self-intersection certification.",
+    "integration_assumption": "Piecewise quadratic section area for a valid oriented non-self-intersecting polyhedral material boundary; numerical section errors are not eliminated by quadrature.",
+    "envelope_scope": "AABB XY area times unresolved height bounds only the omitted-height contribution; it is not a bound on total error, section reconstruction error or manufacturing uncertainty. Envelope arithmetic is rounded upward from exact rational values of the input float coordinates. The known sum and known-plus-envelope are estimates, not certified total-volume lower and upper bounds.",
+    "input_diagnostics": {
+      "geometry_available": true,
+      "topology_ready": true,
+      "face_count": 4824,
+      "vertex_count": 2404,
+      "issues": [],
+      "problem_face_indices": [],
+      "highlight_truncated": false,
+      "self_intersections": "not_exhaustively_checked",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "duplicate_faces": 0,
+      "winding_consistent": true,
+      "raw_signed_volume_integral": 1808759.009007524,
+      "triangle_area_sum": 1993882.3404684546,
+      "extents": [
+        30.0,
+        30.0,
+        6000.0
+      ],
+      "problem_face_count": 0
+    },
+    "event_count": 2,
+    "event_interval_count": 1,
+    "planned_triangle_intersections": 4808,
+    "covered_height_mm": [
+      0.0,
+      6000.0
+    ],
+    "minimum_event_interval_mm": 6000.0,
+    "sample_policy": "Exact unique referenced vertex heights; no tolerance merging; two Gauss-Legendre interior nodes per interval, independent of physical layer height.",
+    "sampling": "events",
+    "max_event_samples": 8192,
+    "requested_sampling": "auto",
+    "fallback_performed": false,
+    "incomplete_intervals": [],
+    "recorded_interval_count": 1
+  }
+}

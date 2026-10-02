@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-09-30T11:51:56.748947+00:00",
+  "scope": "Optional recovery of classes 1,2,4,7 only. Existing v1 candidates and teacher contracts preserved.",
+  "weight_selection": "Minimum pair BCE on reused validation split across 60 fixed epochs; no test tuning.",
+  "threshold_selection": {
+    "merge": [
+      0.9,
+      0.95,
+      0.98,
+      0.99,
+      0.995,
+      0.999
+    ],
+    "display": [
+      0.5,
+      0.7,
+      0.9,
+      0.95,
+      0.99,
+      0.995,
+      0.999,
+      0.9999
+    ],
+    "minimum_validation_precision": 0.985,
+    "minimum_validation_tp": 100
+  },
+  "release_checks": {
+    "reused_test": "Class precision >= .97 for each enabled class; global runtime precision and recall must not decrease.",
+    "independent_60_cad": "Each enabled covered class precision >= .97; total exact recall greater than no-merge at the same validation display thresholds; old candidates unchanged."
+  },
+  "independent_generator_sha256": "6b94fc6e2c8a6ffaa59a0488a3f7c86f088b1aa70e77c982c05d187e180eae3d",
+  "test_caveat": "Source test already used in earlier routing evaluation; now a regression test, not a new unseen test. Independent 60 CAD generated before affinity weight training/evaluation. Circular-through-slot not covered by that independent generator."
+}

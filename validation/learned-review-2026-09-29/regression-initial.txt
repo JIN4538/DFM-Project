@@ -1,0 +1,443 @@
+........................................................................ [  6%]
+........................................................................ [ 13%]
+...........F.F.......................................................... [ 19%]
+........................................................................ [ 26%]
+...................................................................F.... [ 32%]
+........................................................................ [ 39%]
+...........................FF...F....................................... [ 45%]
+........................................................................ [ 52%]
+........................................................................ [ 58%]
+.F...................................................................... [ 65%]
+.............F.FF...............FF...................................... [ 71%]
+........................................................................ [ 78%]
+........................................................................ [ 85%]
+..........F............................................................. [ 91%]
+...........................F............................................ [ 98%]
+.....................                                                    [100%]
+================================== FAILURES ===================================
+______ test_event_section_default_and_switch_keep_result_method_visible _______
+
+    def test_event_section_default_and_switch_keep_result_method_visible():
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key="process").select("VPP").run()
+        next(b for b in app.button if b.label == "설계 검토").click().run()
+        app.segmented_control(key="result_tab").set_value("정밀 검토").run()
+        app.segmented_control(key="detail_focus").set_value("단면").run()
+        assert app.selectbox(key="section_method").value.startswith("자동")
+        app.button(key="run_sections").click().run()
+        assert not app.exception
+        result=app.session_state["report"]["details"]["sections"]
+        assert result["sampling"]=="events"
+        assert result['requested_sampling']=='auto' and result['fallback_performed'] is False
+        assert result["status"] in ("complete","partial")
+        app.selectbox(key="section_method").select("균등 간격 · 높이별 비교").run()
+        assert app.session_state["report"]["details"]["sections"]["sampling"]=="events"
+>       assert any("형상 변화 기준 결과" in element.value for element in app.caption)
+E       assert False
+E        +  where False = any(<generator object test_event_section_default_and_switch_keep_result_method_visible.<locals>.<genexpr> at 0x0000023903B528E0>)
+
+tests_v3\test_app.py:170: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:21:52.226 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart _______
+
+    def test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart():
+        app=AppTest.from_file(str(APP),default_timeout=90).run()
+        app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+        next(b for b in app.button if b.label == "설계 검토").click().run()
+>       app.button(key='next_review_action').click().run()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests_v3\test_app.py:209: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(_list=[Button(key='advisor_forget_key', label='입력한 키 지우기'), Button(key='advisor_interpret', disabled=True, ... label='이 기준으로 벽 다시 검토'), Button(key='FormSubmitter:review_settings-설계 검토', label='설계 검토', form_id='review_settings')])
+key = 'next_review_action'
+
+    def __call__(self, key: str) -> El_co:
+        """Return the first element in this collection with the given user key.
+    
+        The same key can appear on different element types, so this returns the
+        first match in this collection. Use ``get_by_key`` when an ambiguous
+        key should raise.
+        """
+        for e in self._list:
+            if getattr(e, "key", None) == key:
+                return e
+>       raise KeyError(key)
+E       KeyError: 'next_review_action'
+
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:22:14.268 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__ test_am_apply_changes_real_review_and_tracks_override_and_disabled_build ___
+
+library = <dfm.conditions.ConditionLibrary object at 0x000002390C5A8EC0>
+
+    def test_am_apply_changes_real_review_and_tracks_override_and_disabled_build(library):
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        _apply(app, "am-wall")
+        assert app.number_input(key="wall_limit_MEX").value == 5.
+        assert not app.checkbox(key="use_build_MEX").value
+        assert [app.number_input(key=f"build_{axis}_MEX").value for axis in "XYZ"] == [120., 130., 140.]
+        report = _submit(app)
+        evidence = report["profile"]["condition_evidence"]
+        assert evidence["profile_id"] == "am-wall"
+        assert evidence["fields"]["build_volume_mm"]["status"] == "disabled"
+        assert evidence["fields"]["minimum_wall_mm"]["status"] == "source_value"
+        wall = report["details"]["wall"]["measurements"]
+        assert wall["minimum_mm"] == pytest.approx(4.)
+        assert wall["minimum_wall_mm"] == 5.
+        assert wall["below_limit_face_indices"]
+        app.number_input(key="wall_limit_MEX").set_value(3.)
+        report = _submit(app)
+        field = report["profile"]["condition_evidence"]["fields"]["minimum_wall_mm"]
+        assert field == dict(expected=5., effective=3., overridden=True, status="user_override")
+        assert not report["details"]["wall"]["measurements"]["below_limit_face_indices"]
+        _apply(app, "am-machine")
+        assert app.number_input(key="wall_limit_MEX").value is None
+        assert app.number_input(key="hole_limit_MEX").value is None
+        assert not app.checkbox(key="use_build_MEX").value
+        app.number_input(key="wall_limit_MEX").set_value(1.)
+        report = _submit(app)
+        evidence = report["profile"]["condition_evidence"]
+        assert "minimum_wall_mm" not in evidence["fields"]
+        assert evidence["user_inputs"]["minimum_wall_mm"]["effective"] == 1.
+        assert evidence["user_inputs"]["minimum_wall_mm"]["status"] == "user_input_or_exploration_default"
+>       assert any("자료에 없는 직접 입력" in item.value for item in app.markdown)
+E       assert False
+E        +  where False = any(<generator object test_am_apply_changes_real_review_and_tracks_override_and_disabled_build.<locals>.<genexpr> at 0x000002390B476B50>)
+
+tests_v3\test_conditions_ui.py:107: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:23:33.247 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_zero_layers_show_a_clear_scoped_result_and_hide_blank_graph _______
+
+    def test_zero_layers_show_a_clear_scoped_result_and_hide_blank_graph():
+        detail = layers()
+        app = render(detail)
+        assert not app.exception
+        assert any("3개 층" in message.value and "발견되지" in message.value for message in app.success)
+        assert not app.get("plotly_chart")
+        assert not app.get("vega_lite_chart")
+        assert not app.selectbox
+>       assert "다음에 할 일" in text(app)
+E       AssertionError: assert '다음에 할 일' in '선폭보다 가는 단면·아래층 지지 부족·한 층만의 형상 후보가 모두 0입니다.\n이 세 항목에서 우선 수정할 후보는 없습니다. 벽과 다른 검토 항목을 확인한 뒤 실제 슬라이서에서 경로·첫 층·서포트를 최종 확인하...측정 단면에 없는 영역입니다.\n층 번호는 1부터 표시합니다. 높이는 층 중간의 검사 평면이며 슬라이서 노즐 Z와 다를 수 있습니다. 빈 값은 미확정입니다. 0은 해당 검사 범위에서 후보 면적이 없다는 뜻입니다.'
+E        +  where '선폭보다 가는 단면·아래층 지지 부족·한 층만의 형상 후보가 모두 0입니다.\n이 세 항목에서 우선 수정할 후보는 없습니다. 벽과 다른 검토 항목을 확인한 뒤 실제 슬라이서에서 경로·첫 층·서포트를 최종 확인하...측정 단면에 없는 영역입니다.\n층 번호는 1부터 표시합니다. 높이는 층 중간의 검사 평면이며 슬라이서 노즐 Z와 다를 수 있습니다. 빈 값은 미확정입니다. 0은 해당 검사 범위에서 후보 면적이 없다는 뜻입니다.' = text(AppTest(\n    _script_path='C:\\Users\\JIN\\AppData\\Local\\Temp\\tmp3s2j3jr4\\2d07ddeeb64c0143cceec98490c1812c',\n    d...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n))
+
+tests_v3\test_detail_view.py:49: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:25:06.167 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_affected_rows_precede_full_table_and_coordinates_are_recorded_build_frame _
+
+    def test_affected_rows_precede_full_table_and_coordinates_are_recorded_build_frame():
+        detail = layers()
+        detail["layers"][1].update(thin_candidate_area_mm2=1e-12,
+            thin_details=[dict(bounds_mm=[1., 2., 3., 4.], area_mm2=1e-12)])
+        translation = [[1.,0.,0.,10.], [0.,1.,0.,20.], [0.,0.,1.,30.], [0.,0.,0.,1.]]
+        app = render(detail, transform=translation)
+        assert not app.exception
+        assert app.dataframe[0].value["층"].tolist() == [2]
+        assert app.dataframe[1].value["층"].tolist() == [1, 2, 3]
+        assert "2층" in app.selectbox(key="layer_location").options[0]
+        assert float(app.dataframe[0].value.iloc[0]["선폭보다 좁을 수 있는 영역 (mm²)"]) == 1e-12
+        plot = json.loads(app.get("plotly_chart")[0].proto.spec)
+        marker = next(trace for trace in plot["data"] if trace.get("name")=="선폭 후보 위치")
+        assert marker["x"] == [1., 3., 3., 1., 1.]
+        assert marker["y"] == [2., 2., 4., 4., 2.]
+        assert marker["z"] == [detail["layers"][1]["z_mm"]]*5
+>       assert any("경계 상자" in caption.value for caption in app.caption)
+E       assert False
+E        +  where False = any(<generator object test_affected_rows_precede_full_table_and_coordinates_are_recorded_build_frame.<locals>.<genexpr> at 0x00000239040A20C0>)
+
+tests_v3\test_detail_view.py:74: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:25:06.352 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_wall_measurement_without_criterion_explains_what_color_and_distance_mean _
+
+    def test_wall_measurement_without_criterion_explains_what_color_and_distance_mean():
+        app = render(wall(), mode="wall")
+        assert not app.exception
+        assert not app.success
+        assert any("비교 기준이 없습니다" in message.value for message in app.info)
+        assert [metric.value for metric in app.metric] == ["4 mm", "미입력"]
+>       assert "색 자체가 기준 미달을 뜻하지 않습니다" in text(app)
+E       AssertionError: assert '색 자체가 기준 미달을 뜻하지 않습니다' in '**할 일** · 아래에서 최소 벽 기준을 입력하면 기준 미만 위치를 표시합니다.\n유효 표본 1개에서 가장 짧은 거리는 4 mm입니다.\n사용할 장비·재료의 최소 벽 기준(mm)과 근거를 입력하세요. 현재 측...에서는 다른 의미의 짧은 거리일 수 있습니다.\n기준 출처: 장비 자료에서 가져온 사용자 입력\n유효 표본을 면적 대표 가중치로 정렬한 하위 5% 거리: 4 mm. 전체 부품 두께의 하위 5%라는 뜻은 아닙니다.'
+E        +  where '**할 일** · 아래에서 최소 벽 기준을 입력하면 기준 미만 위치를 표시합니다.\n유효 표본 1개에서 가장 짧은 거리는 4 mm입니다.\n사용할 장비·재료의 최소 벽 기준(mm)과 근거를 입력하세요. 현재 측...에서는 다른 의미의 짧은 거리일 수 있습니다.\n기준 출처: 장비 자료에서 가져온 사용자 입력\n유효 표본을 면적 대표 가중치로 정렬한 하위 5% 거리: 4 mm. 전체 부품 두께의 하위 5%라는 뜻은 아닙니다.' = text(AppTest(\n    _script_path='C:\\Users\\JIN\\AppData\\Local\\Temp\\tmp3s2j3jr4\\ad13f09973c5d5b96b1c15f061e51f77',\n    d...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n))
+
+tests_v3\test_detail_view.py:120: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:25:07.088 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_every_sample_state_is_summarized_in_korean_including_unknown ______
+
+    def test_every_sample_state_is_summarized_in_korean_including_unknown():
+        _, report = _visibility_report()
+        rows = feature_rows(_finding(report, "cnc_visibility"))
+        by_label = {row["표본 분류"]: row for row in rows}
+        counts = report["visibility"]["measurements"]["sample_state_counts"]
+        assert set(by_label) == set(_KOREAN_LABELS.values())
+        for state, label in _KOREAN_LABELS.items():
+            assert by_label[label]["표본 수"] == counts[state]
+            assert by_label[label]["해석·다음 행동"]
+        assert "미확인" in by_label[_KOREAN_LABELS["visible"]]["해석·다음 행동"]
+        assert "별도 확인" in by_label[_KOREAN_LABELS["tangent"]]["해석·다음 행동"]
+        html = machining_html(report)
+        assert all(label in html for label in _KOREAN_LABELS.values())
+>       assert "기하 검토이며 실제 가공 성공 판정이 아닙니다" in html
+E       assert '기하 검토이며 실제 가공 성공 판정이 아닙니다' in '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial...</strong> references/machining/KS A ISO 8015 전문 캡쳐본.pdf</p></li></ul><p>입력 SHA: None<br>코드 SHA: None</p></body></html>'
+
+tests_v3\test_machining_contracts.py:154: AssertionError
+__________ test_cnc_measure_without_tool_and_stale_condition_results __________
+
+    def test_cnc_measure_without_tool_and_stale_condition_results():
+        app = open_machining()
+        assert not app.get("download_button")
+        report = submit(app)
+        pocket = next(f for f in report["findings"] if f["id"] == "cnc_rectangular_pockets")
+        assert pocket["status"] == "attention"
+        assert pocket["measurements"]["pockets"][0]["width_mm"] == pytest.approx(12)
+        assert report["profile"]["tool_diameter_mm"] is None
+        assert len(app.get("download_button")) == 3
+>       assert "미입력·미비교" in app.dataframe[0].value.to_string()
+E       AssertionError: assert '미입력·미비교' in '       항목     결과     확인 방식               범위·사유\n0  구멍과 공구  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n1   내부 반경  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n2      포켓  수정 후보  AI·규칙 일치  공구 조건 또는 일부 포켓 미확인\n3   접근 방향  후보 없음  AI·규칙 일치               측정 범위'
+E        +  where '       항목     결과     확인 방식               범위·사유\n0  구멍과 공구  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n1   내부 반경  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n2      포켓  수정 후보  AI·규칙 일치  공구 조건 또는 일부 포켓 미확인\n3   접근 방향  후보 없음  AI·규칙 일치               측정 범위' = to_string()
+E        +    where to_string =        항목     결과     확인 방식               범위·사유\n0  구멍과 공구  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n1   내부 반경  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n2      포켓  수정 후보  AI·규칙 일치  공구 조건 또는 일부 포켓 미확인\n3   접근 방향  후보 없음  AI·규칙 일치               측정 범위.to_string
+E        +      where        항목     결과     확인 방식               범위·사유\n0  구멍과 공구  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n1   내부 반경  후보 없음     규칙 확인  인식 범위에 해당 특징이 없습니다\n2      포켓  수정 후보  AI·규칙 일치  공구 조건 또는 일부 포켓 미확인\n3   접근 방향  후보 없음  AI·규칙 일치               측정 범위 = Dataframe().value
+
+tests_v3\test_machining_ui.py:36: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:25:47.277 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+___ test_changed_geometry_keeps_option_order_and_selected_result_consistent ___
+
+    def test_changed_geometry_keeps_option_order_and_selected_result_consistent():
+        app = open_machining()
+        app.number_input(key="cnc_diameter").set_value(8.)
+        app.number_input(key="cnc_flute").set_value(10.)
+        app.number_input(key="cnc_reach").set_value(15.)
+        submit(app)
+        assert app.selectbox(key="cnc_finding").value == "cnc_rectangular_pockets"
+        original_options = list(app.selectbox(key="cnc_finding").options)
+        app.selectbox(key="cnc_example").select(CASES["03_rounded_pocket"]).run()
+        submit(app)
+        assert app.selectbox(key="cnc_finding").options == original_options
+        assert app.selectbox(key="cnc_finding").value == "cnc_curved_corners"
+        assert any("작은 반경은 4개" in x.value for x in app.markdown)
+        app.number_input(key="cnc_diameter").set_value(4.)
+        submit(app)
+        assert app.selectbox(key="cnc_finding").options == original_options
+>       assert app.selectbox(key="cnc_finding").value == "cnc_curved_corners"
+E       AssertionError: assert 'cnc_rectangular_pockets' == 'cnc_curved_corners'
+E         
+E         - cnc_curved_corners
+E         + cnc_rectangular_pockets
+
+tests_v3\test_machining_ui.py:88: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:25:55.463 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+____ test_visibility_shows_back_facing_and_tangent_samples_without_am_axis ____
+
+self = Index(['항목', '결과', '확인 방식', '범위·사유'], dtype='object'), key = '표본 분류'
+
+    def get_loc(self, key):
+        """
+        Get integer location, slice or boolean mask for requested label.
+    
+        Parameters
+        ----------
+        key : label
+    
+        Returns
+        -------
+        int if unique index, slice if monotonic index, else mask
+    
+        Examples
+        --------
+        >>> unique_index = pd.Index(list('abc'))
+        >>> unique_index.get_loc('b')
+        1
+    
+        >>> monotonic_index = pd.Index(list('abbc'))
+        >>> monotonic_index.get_loc('b')
+        slice(1, 3, None)
+    
+        >>> non_monotonic_index = pd.Index(list('abcb'))
+        >>> non_monotonic_index.get_loc('b')
+        array([False,  True, False,  True])
+        """
+        casted_key = self._maybe_cast_indexer(key)
+        try:
+>           return self._engine.get_loc(casted_key)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pandas\core\indexes\base.py:3805: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+    ???
+index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+    ???
+pandas\\_libs\\hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   KeyError: '표본 분류'
+
+pandas\\_libs\\hashtable_class_helper.pxi:7089: KeyError
+
+The above exception was the direct cause of the following exception:
+
+    def test_visibility_shows_back_facing_and_tangent_samples_without_am_axis():
+        app = open_machining("10_plain_block")
+        app.checkbox(key="cnc_visibility").check()
+        report = submit(app)
+        assert report["visibility"]["status"] == "complete"
+        counts = report["visibility"]["measurements"]["sample_state_counts"]
+        assert counts["back_facing"] and counts["tangent"]
+        app.selectbox(key="cnc_finding").set_value("cnc_visibility").run()
+        assert not app.exception
+        table = app.dataframe[0].value
+>       assert set(table["표본 분류"]) >= {"공구 반대쪽을 향한 표본", "공구축과 평행한 면의 표본"}
+                   ^^^^^^^^^^^^^^
+
+tests_v3\test_machining_ui.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pandas\core\frame.py:4102: in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Index(['항목', '결과', '확인 방식', '범위·사유'], dtype='object'), key = '표본 분류'
+
+    def get_loc(self, key):
+        """
+        Get integer location, slice or boolean mask for requested label.
+    
+        Parameters
+        ----------
+        key : label
+    
+        Returns
+        -------
+        int if unique index, slice if monotonic index, else mask
+    
+        Examples
+        --------
+        >>> unique_index = pd.Index(list('abc'))
+        >>> unique_index.get_loc('b')
+        1
+    
+        >>> monotonic_index = pd.Index(list('abbc'))
+        >>> monotonic_index.get_loc('b')
+        slice(1, 3, None)
+    
+        >>> non_monotonic_index = pd.Index(list('abcb'))
+        >>> non_monotonic_index.get_loc('b')
+        array([False,  True, False,  True])
+        """
+        casted_key = self._maybe_cast_indexer(key)
+        try:
+            return self._engine.get_loc(casted_key)
+        except KeyError as err:
+            if isinstance(casted_key, slice) or (
+                isinstance(casted_key, abc.Iterable)
+                and any(isinstance(x, slice) for x in casted_key)
+            ):
+                raise InvalidIndexError(key)
+>           raise KeyError(key) from err
+E           KeyError: '표본 분류'
+
+.venv\Lib\site-packages\pandas\core\indexes\base.py:3812: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:26:02.462 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_user_can_follow_resolved_corner_condition_and_locate_each_measurement __
+
+    def test_user_can_follow_resolved_corner_condition_and_locate_each_measurement():
+        app = _open_rounded()
+        for key, value in (("cnc_diameter", 8.), ("cnc_flute", 10.), ("cnc_reach", 15.)):
+            app.number_input(key=key).set_value(value)
+        report = _submit(app)
+        corner = next(row for row in report["findings"] if row["id"] == "cnc_curved_corners")
+        assert corner["status"] == "attention"
+>       assert any("공구축과 나란한 오목 원통면" in row.value for row in app.warning)
+E       assert False
+E        +  where False = any(<generator object test_user_can_follow_resolved_corner_condition_and_locate_each_measurement.<locals>.<genexpr> at 0x000002390D0F75E0>)
+
+tests_v3\test_machining_ux_reaudit.py:204: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:26:13.338 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+___ test_allowed_small_tool_value_has_nonzero_display_and_applied_condition ___
+
+    def test_allowed_small_tool_value_has_nonzero_display_and_applied_condition():
+        app = _open_rounded()
+        widget = app.number_input(key="cnc_diameter")
+        assert float(widget.proto.format % .001) == .001
+        widget.set_value(.001)
+        report = _submit(app)
+        assert report["profile"]["tool_diameter_mm"] == .001
+        assert {row.label: row.value for row in app.metric}["엔드밀 지름"] == "0.001 mm"
+>       assert any("실행 버튼을 누르면 결과에 적용" in row.value for row in app.caption)
+E       assert False
+E        +  where False = any(<generator object test_allowed_small_tool_value_has_nonzero_display_and_applied_condition.<locals>.<genexpr> at 0x000002390D0F75E0>)
+
+tests_v3\test_machining_ux_reaudit.py:252: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:26:16.554 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+______ test_process_calibrations_are_independent_and_survive_round_trips ______
+
+    def test_process_calibrations_are_independent_and_survive_round_trips():
+        app = AppTest.from_file(str(APP), default_timeout=90).run()
+        assert not app.exception
+        for index, (process, values) in enumerate(SETTINGS.items()):
+            if app.selectbox(key="process").value != process:
+                app.selectbox(key="process").select(process).run()
+            assert not app.exception
+            # Opening a new process must not inherit the previous process's calibration.
+            assert app.text_input(key=f"machine_{process}").value == "미확정"
+            assert app.text_input(key=f"material_{process}").value == "미확정"
+            assert app.text_input(key=f"slicer_{process}").value == "미확정"
+            assert app.number_input(key=f"wall_limit_{process}").value is None
+            assert app.number_input(key=f"hole_limit_{process}").value is None
+>           assert app.text_input(key=f"basis_{process}").value == "사용자 탐색 조건; 실물 시편으로 보정하지 않음"
+E           AssertionError: assert '사용자 지정 검토 조건' == '사용자 탐색 조건; 실물 시편으로 보정하지 않음'
+E             
+E             - 사용자 탐색 조건; 실물 시편으로 보정하지 않음
+E             + 사용자 지정 검토 조건
+
+tests_v3\test_process_ui.py:52: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:26:57.355 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+_ test_change_pair_selected_without_fake_slope_or_mutating_original_measurements _
+
+    def test_change_pair_selected_without_fake_slope_or_mutating_original_measurements():
+        detail = sections()
+        original = copy.deepcopy(detail)
+        app = render(detail)
+        assert not app.exception
+        assert app.selectbox(key="section_index").value == 2
+        assert "높이" in app.selectbox(key="section_index").options[0]
+        assert app.session_state["original_detail"] == original
+        assert not app.metric, "Tiny numerical cross-check must not be a giant primary verdict"
+        text = "\n".join(element.value for element in app.markdown)
+>       assert "다음에 할 일" in text and "제작" in text
+E       AssertionError: assert ('다음에 할 일' in '**표본 간 최대 변화** · 높이 3.155 → 11.4 mm · 달라진 면적 1,080 mm²\n높이 3.155 mm와 11.4 mm를 비교합니다. 재료 면적은 1,200 → 120 mm²입니다.\n**선택...은 단면 수가 적어도 전체 계산 구간을 다룰 수 있습니다. 균등 간격은 일정 간격의 표본이며 얇은 높이 구간을 놓칠 수 있습니다. 어느 방법이든 관측한 최대 면적을 부품 전체의 최대 면적이라고 보장하지 않습니다.')
+
+tests_v3\test_section_view.py:46: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-09-29 11:27:58.731 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\learned-review-2026-09-29\regression-initial.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_app.py::test_event_section_default_and_switch_keep_result_method_visible
+FAILED tests_v3/test_app.py::test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart
+FAILED tests_v3/test_conditions_ui.py::test_am_apply_changes_real_review_and_tracks_override_and_disabled_build
+FAILED tests_v3/test_detail_view.py::test_zero_layers_show_a_clear_scoped_result_and_hide_blank_graph
+FAILED tests_v3/test_detail_view.py::test_affected_rows_precede_full_table_and_coordinates_are_recorded_build_frame
+FAILED tests_v3/test_detail_view.py::test_wall_measurement_without_criterion_explains_what_color_and_distance_mean
+FAILED tests_v3/test_machining_contracts.py::test_every_sample_state_is_summarized_in_korean_including_unknown
+FAILED tests_v3/test_machining_ui.py::test_cnc_measure_without_tool_and_stale_condition_results
+FAILED tests_v3/test_machining_ui.py::test_changed_geometry_keeps_option_order_and_selected_result_consistent
+FAILED tests_v3/test_machining_ui.py::test_visibility_shows_back_facing_and_tangent_samples_without_am_axis
+FAILED tests_v3/test_machining_ux_reaudit.py::test_user_can_follow_resolved_corner_condition_and_locate_each_measurement
+FAILED tests_v3/test_machining_ux_reaudit.py::test_allowed_small_tool_value_has_nonzero_display_and_applied_condition
+FAILED tests_v3/test_process_ui.py::test_process_calibrations_are_independent_and_survive_round_trips
+FAILED tests_v3/test_section_view.py::test_change_pair_selected_without_fake_slope_or_mutating_original_measurements
+14 failed, 1087 passed in 496.28s (0:08:16)

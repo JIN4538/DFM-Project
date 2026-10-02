@@ -1,0 +1,1142 @@
+{
+  "schema": "amdfm-review/3.0",
+  "app_version": "3.0.0",
+  "timestamp_utc": "2026-09-14T13:02:53.247146+00:00",
+  "model": {
+    "filename": "02_thin_plate.step",
+    "source_sha256": "e401d096d93a59a8a0cec73c151046587aca50c57737c9fd3916102a1150d4b1",
+    "source_bytes": 15416,
+    "source_format": "step",
+    "coordinate_unit": "mm",
+    "cad_kernel": "Open CASCADE via cadquery-ocp-novtk 7.9.3.1.1",
+    "cad_valid": true,
+    "declared_step_units": [
+      "millimetre"
+    ],
+    "transferred_roots": 1,
+    "solid_count": 1,
+    "cad_face_count": 6,
+    "bodies": [
+      {
+        "body_id": 1,
+        "valid": true,
+        "volume_mm3": 180.0,
+        "area_mm2": 1230.0,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            20.0,
+            0.3
+          ]
+        ],
+        "cavity_shell_count": 0
+      }
+    ],
+    "exact_volume_mm3": 180.0,
+    "exact_area_mm2": 1230.0,
+    "constituent_volume_sum_mm3": 180.0,
+    "cavity_shell_count": 0,
+    "tessellation": {
+      "requested_linear_deflection_mm": 0.05,
+      "requested_angular_deflection_rad": 0.15,
+      "relative": false,
+      "triangle_count": 12,
+      "volume_relative_difference": 0.0,
+      "limitation": "Requested deflection is not a certified Hausdorff error bound; volume agreement is not local accuracy.",
+      "exact_zero_area_cells_removed": 0,
+      "analysis_triangle_count": 12
+    },
+    "assembly_overlap": "not_applicable",
+    "cad_translation_policy": "OCCT default STEP transfer and built-in shape processing; no separate healing requested. Validity is checked after translation.",
+    "pmi": "not_imported",
+    "external_references": "No external reference resolution; all transfer roots must succeed.",
+    "cad_translation_messages": "",
+    "unit_status": "declared_in_step",
+    "dimensions_confirmed": true,
+    "unit_note": "STEP 선언 단위를 OCCT가 mm로 변환. 설계 공차·PMI는 해석하지 않음.",
+    "scale_factor": 1.0
+  },
+  "model_fingerprint": "6efa9a7652891ac804b16a5b52ffe70c4b8a544053a37aad3cf256cb397e7297",
+  "profile": {
+    "process": "MEX",
+    "name": "장비 미정 · 탐색용 조건",
+    "machine": "미확정",
+    "material": "미확정",
+    "slicer": "미확정",
+    "layer_height_mm": 0.2,
+    "line_width_mm": 0.4,
+    "overhang_angle_deg": 45.0,
+    "minimum_wall_mm": 1.0,
+    "minimum_hole_mm": null,
+    "build_volume_mm": null,
+    "clearance_mm": 0.0,
+    "threshold_basis": "Developer comparison scenario: 1 mm; not a universal process limit",
+    "process_notes": ""
+  },
+  "process_label": "재료 압출 · FFF/FDM",
+  "summary": {
+    "review_status": "geometry_review",
+    "attention_items": 1,
+    "decision": "설계 검토 결과; 출력 성공·강도·표준 적합 판정 아님"
+  },
+  "geometry": {
+    "extents_mm": [
+      30.0,
+      20.0,
+      0.3
+    ],
+    "mesh_triangle_area_mm2": 1230.0,
+    "mesh_signed_volume_mm3": 180.0,
+    "exact_cad_volume_mm3": 180.0,
+    "face_count": 12
+  },
+  "current_orientation": {
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "height_mm": 0.3,
+    "extents_mm": [
+      30.0,
+      20.0,
+      0.3
+    ],
+    "placed_extents_mm": [
+      30.0,
+      20.0,
+      0.3
+    ],
+    "xy_yaw_deg": 0,
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -15.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -10.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "build_fit": null,
+    "max_axis_utilization": null,
+    "contact_triangle_area_mm2": 600.0,
+    "overhang_surface_area_mm2": 0.0,
+    "overhang_projected_area_sum_mm2": 0.0,
+    "overhang_face_indices": [],
+    "overhang_angle_deg": 45.0,
+    "overhang_scope": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation"
+  },
+  "orientations": [
+    {
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "height_mm": 0.3,
+      "extents_mm": [
+        30.0,
+        20.0,
+        0.3
+      ],
+      "placed_extents_mm": [
+        30.0,
+        20.0,
+        0.3
+      ],
+      "xy_yaw_deg": 0,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -15.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "build_fit": null,
+      "max_axis_utilization": null,
+      "contact_triangle_area_mm2": 600.0,
+      "overhang_surface_area_mm2": 0.0,
+      "overhang_projected_area_sum_mm2": 0.0,
+      "overhang_angle_deg": 45.0,
+      "overhang_scope": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation",
+      "name": "+Z",
+      "pareto": true,
+      "objectives": [
+        "overhang_projected_area_sum_mm2",
+        "height_mm",
+        "contact_triangle_area_mm2"
+      ]
+    },
+    {
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "height_mm": 0.3,
+      "extents_mm": [
+        30.0,
+        20.0,
+        0.3
+      ],
+      "placed_extents_mm": [
+        30.0,
+        20.0,
+        0.3
+      ],
+      "xy_yaw_deg": 0,
+      "transform": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          15.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          0.3
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "build_fit": null,
+      "max_axis_utilization": null,
+      "contact_triangle_area_mm2": 600.0,
+      "overhang_surface_area_mm2": 0.0,
+      "overhang_projected_area_sum_mm2": 0.0,
+      "overhang_angle_deg": 45.0,
+      "overhang_scope": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation",
+      "name": "-Z",
+      "pareto": true,
+      "objectives": [
+        "overhang_projected_area_sum_mm2",
+        "height_mm",
+        "contact_triangle_area_mm2"
+      ]
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "height_mm": 30.0,
+      "extents_mm": [
+        0.3,
+        20.0,
+        30.0
+      ],
+      "placed_extents_mm": [
+        0.3,
+        20.0,
+        30.0
+      ],
+      "xy_yaw_deg": 0,
+      "transform": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          0.15
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "build_fit": null,
+      "max_axis_utilization": null,
+      "contact_triangle_area_mm2": 6.0,
+      "overhang_surface_area_mm2": 0.0,
+      "overhang_projected_area_sum_mm2": 0.0,
+      "overhang_angle_deg": 45.0,
+      "overhang_scope": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation",
+      "name": "+X",
+      "pareto": false,
+      "objectives": [
+        "overhang_projected_area_sum_mm2",
+        "height_mm",
+        "contact_triangle_area_mm2"
+      ]
+    },
+    {
+      "direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "height_mm": 30.0,
+      "extents_mm": [
+        0.3,
+        20.0,
+        30.0
+      ],
+      "placed_extents_mm": [
+        0.3,
+        20.0,
+        30.0
+      ],
+      "xy_yaw_deg": 0,
+      "transform": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.15
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          30.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "build_fit": null,
+      "max_axis_utilization": null,
+      "contact_triangle_area_mm2": 6.0,
+      "overhang_surface_area_mm2": 0.0,
+      "overhang_projected_area_sum_mm2": 0.0,
+      "overhang_angle_deg": 45.0,
+      "overhang_scope": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation",
+      "name": "-X",
+      "pareto": false,
+      "objectives": [
+        "overhang_projected_area_sum_mm2",
+        "height_mm",
+        "contact_triangle_area_mm2"
+      ]
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "height_mm": 20.0,
+      "extents_mm": [
+        0.3,
+        30.0,
+        20.0
+      ],
+      "placed_extents_mm": [
+        0.3,
+        30.0,
+        20.0
+      ],
+      "xy_yaw_deg": 0,
+      "transform": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          0.15
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          15.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "build_fit": null,
+      "max_axis_utilization": null,
+      "contact_triangle_area_mm2": 9.0,
+      "overhang_surface_area_mm2": 0.0,
+      "overhang_projected_area_sum_mm2": 0.0,
+      "overhang_angle_deg": 45.0,
+      "overhang_scope": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation",
+      "name": "+Y",
+      "pareto": false,
+      "objectives": [
+        "overhang_projected_area_sum_mm2",
+        "height_mm",
+        "contact_triangle_area_mm2"
+      ]
+    },
+    {
+      "direction": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "height_mm": 20.0,
+      "extents_mm": [
+        0.3,
+        30.0,
+        20.0
+      ],
+      "placed_extents_mm": [
+        0.3,
+        30.0,
+        20.0
+      ],
+      "xy_yaw_deg": 0,
+      "transform": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          0.15
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -15.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          20.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "build_fit": null,
+      "max_axis_utilization": null,
+      "contact_triangle_area_mm2": 9.0,
+      "overhang_surface_area_mm2": 0.0,
+      "overhang_projected_area_sum_mm2": 0.0,
+      "overhang_angle_deg": 45.0,
+      "overhang_scope": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation",
+      "name": "-Y",
+      "pareto": false,
+      "objectives": [
+        "overhang_projected_area_sum_mm2",
+        "height_mm",
+        "contact_triangle_area_mm2"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "input",
+      "title": "입력 형상",
+      "status": "observed",
+      "reason": "폐곡면·방향·중복면 조건을 확인했습니다.",
+      "action": "다음 설계 검토 항목을 확인하세요.",
+      "method": "edge incidence, winding, duplicate/degenerate facets",
+      "evidence": [
+        "ISO52910",
+        "OCCT"
+      ],
+      "measurements": {
+        "geometry_available": true,
+        "topology_ready": true,
+        "face_count": 12,
+        "vertex_count": 8,
+        "issues": [],
+        "problem_face_indices": [],
+        "highlight_truncated": false,
+        "self_intersections": "not_exhaustively_checked",
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "duplicate_faces": 0,
+        "winding_consistent": true,
+        "raw_signed_volume_integral": 180.0,
+        "triangle_area_sum": 1230.0,
+        "extents": [
+          30.0,
+          20.0,
+          0.3
+        ],
+        "problem_face_count": 0
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [],
+      "severity": "info"
+    },
+    {
+      "id": "build",
+      "title": "빌드 공간과 배치",
+      "status": "unknown",
+      "reason": "장비가 미확정이므로 필요한 공간을 먼저 제시합니다.",
+      "action": "장비 공간을 입력하거나 방향 비교에서 수용 가능한 배치를 선택하세요.",
+      "method": "build-frame AABB; additional XY yaw 0/90 degrees",
+      "evidence": [
+        "ISO52910"
+      ],
+      "measurements": {
+        "placed_extents_mm": [
+          30.0,
+          20.0,
+          0.3
+        ],
+        "build_fit": null,
+        "xy_yaw_deg": 0,
+        "max_axis_utilization": null
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "연속 회전 최적화·서포트·래프트·장비 금지 영역은 포함하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "overhang",
+      "title": "하향면과 지지 검토",
+      "status": "not_detected",
+      "reason": "설정 각도 미만의 하향면 후보가 검출되지 않았습니다.",
+      "action": "방향 변경을 비교하고, 표시된 수평 천장을 경사·아치·물방울 단면으로 바꾸거나 제거 가능한 지지를 설계하세요.",
+      "method": "down-facing facets below horizontal angle; plate excluded; no occlusion union, bridge exemption or support generation",
+      "evidence": [
+        "ISO52910",
+        "JIANG2018",
+        "ISO52911P",
+        "ISO52911M",
+        "KIM2019"
+      ],
+      "measurements": {
+        "projected_area_sum_mm2": 0.0,
+        "surface_area_mm2": 0.0,
+        "angle_from_horizontal_deg": 45.0,
+        "threshold_basis": "Developer comparison scenario: 1 mm; not a universal process limit"
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "면 투영 합은 겹친 투영의 합집합 또는 실제 서포트량이 아닙니다.",
+        "각도만으로 브리지 성공·열변형·서포트 제거성을 결정하지 않습니다."
+      ],
+      "severity": "review"
+    },
+    {
+      "id": "contact",
+      "title": "바닥 접촉",
+      "status": "observed",
+      "reason": "바닥의 평평한 하향 삼각형 면적을 측정했습니다. 점·선 접촉은 접착 면적으로 세지 않습니다.",
+      "action": "접촉이 작거나 없으면 평면을 아래로 놓고, 브림·접착 설정과 무게중심을 확인하세요.",
+      "method": "coplanar bottom triangle area sum",
+      "evidence": [
+        "ISO52910"
+      ],
+      "measurements": {
+        "area_mm2": 600.0
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "첫 압출 경로의 면적·실제 접착력·전도 안정성 계산은 아닙니다."
+      ],
+      "severity": "review"
+    },
+    {
+      "id": "cad_holes",
+      "title": "CAD 원통면·구멍 후보",
+      "status": "observed",
+      "reason": "CAD 원통의 지름과 축을 읽어 작은 내측 원통면과 적층축에서 기울어진 구멍 후보를 표시합니다.",
+      "action": "수평 구멍 후보는 축을 적층 방향으로 돌리거나 천장 단면을 변경하세요. 끼워맞춤 홀은 후가공 여유·핀 게이지 검사를 계획하세요.",
+      "method": "OCCT analytic cylinders; reversed cylindrical face; axis inclination >45 degrees is a review grouping",
+      "evidence": [
+        "STAV2022",
+        "ISO52910",
+        "KIM2019"
+      ],
+      "measurements": {
+        "cylindrical_faces": [],
+        "inner_face_count": 0,
+        "transverse_inner_face_count": 0,
+        "minimum_hole_mm": null,
+        "threshold_basis": "Developer comparison scenario: 1 mm; not a universal process limit"
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "원통면 수는 구멍 개수와 다릅니다. 부분 원통·필렛·블라인드/관통·배출 통로는 구분하지 않습니다.",
+        "축 기울기 45° 분류는 표시 정책이며 공정 합격 기준이 아닙니다."
+      ],
+      "severity": "review"
+    },
+    {
+      "id": "cavities",
+      "title": "밀폐 공동·재료 제거",
+      "status": "not_detected",
+      "reason": "CAD 솔리드의 외곽 외 추가 껍질은 내부 밀폐 경계를 나타냅니다.",
+      "action": "밀폐 기능을 보존하면서 내부 천장의 브리징·자립 형상·분할 제작을 비교하세요. 내부 서포트가 필요하다면 제거 경로도 설계하세요.",
+      "method": "valid CAD solid shell count minus one; no flow/connectivity simulation",
+      "evidence": [
+        "ISO52910",
+        "FORM4",
+        "ASTMF3530"
+      ],
+      "measurements": {
+        "internal_shell_count": 0
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "열린 채널의 좁은 목·막힌 분말·수지 흡착 컵은 이 검사로 배제하지 못합니다."
+      ],
+      "severity": "review"
+    },
+    {
+      "id": "wall",
+      "title": "얇은 벽·세부 특징",
+      "status": "attention",
+      "reason": "법선 방향 거리 표본 12개에서 최소 0.3 mm를 관측했습니다.",
+      "action": "표시된 구간을 1 mm 검토 기준과 대조하고, 벽 보강·형상 수정·다른 공정 조건을 비교하세요.",
+      "method": "deterministic area/detection face samples; inward first-hit normal chords",
+      "evidence": [
+        "ISO52910",
+        "KUIPERS2020",
+        "PRUSA_ARACHNE"
+      ],
+      "measurements": {
+        "minimum_mm": 0.3,
+        "area_weighted_p05_mm": 0.3,
+        "requested_samples": 12,
+        "valid_samples": 12,
+        "missing_samples": 0,
+        "discarded_near_hits": 0,
+        "sampled_face_area_fraction": 1.0,
+        "minimum_resolvable_distance_mm": 3.03e-07,
+        "minimum_wall_mm": 1.0,
+        "below_limit_face_indices": [
+          11,
+          9,
+          10,
+          8
+        ],
+        "thinnest_face_indices": [
+          11,
+          9,
+          10,
+          8,
+          7,
+          5,
+          6,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "samples": [
+          {
+            "point_mm": [
+              30.0,
+              13.333333333333334,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 3,
+            "target_face": 1
+          },
+          {
+            "point_mm": [
+              30.0,
+              6.666666666666667,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 2,
+            "target_face": 0
+          },
+          {
+            "point_mm": [
+              0.0,
+              13.333333333333334,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 1,
+            "target_face": 3
+          },
+          {
+            "point_mm": [
+              0.0,
+              6.666666666666667,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 0,
+            "target_face": 2
+          },
+          {
+            "point_mm": [
+              20.0,
+              20.0,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 6,
+            "target_face": 4
+          },
+          {
+            "point_mm": [
+              20.0,
+              0.0,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 4,
+            "target_face": 6
+          },
+          {
+            "point_mm": [
+              20.0,
+              6.666666666666667,
+              0.3
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 11,
+            "target_face": 9
+          },
+          {
+            "point_mm": [
+              20.0,
+              6.666666666666667,
+              0.0
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 9,
+            "target_face": 11
+          },
+          {
+            "point_mm": [
+              10.0,
+              20.0,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 7,
+            "target_face": 5
+          },
+          {
+            "point_mm": [
+              10.0,
+              0.0,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 5,
+            "target_face": 7
+          },
+          {
+            "point_mm": [
+              10.0,
+              13.333333333333334,
+              0.3
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 10,
+            "target_face": 8
+          },
+          {
+            "point_mm": [
+              10.0,
+              13.333333333333334,
+              0.0
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 8,
+            "target_face": 10
+          }
+        ]
+      },
+      "face_indices": [
+        11,
+        9,
+        10,
+        8
+      ],
+      "cad_face_ids": [],
+      "limitations": [
+        "관측 최소는 모델 전체의 최소 두께가 아닙니다. 비평행면에서는 법선 관통거리입니다.",
+        "면적 대표 백분위는 유효 표본에 한정됩니다. 작은 특징·자기교차·표본 밖 구간을 놓칠 수 있습니다."
+      ],
+      "severity": "review"
+    }
+  ],
+  "unassessed": [
+    "하중·층간 접합강도",
+    "열변형·수축",
+    "가변 선폭의 실제 압출경로",
+    "브리지 처짐",
+    "접착·서포트 제거 접근성"
+  ],
+  "sources": {
+    "ISO52910": {
+      "title": "ISO/ASTM 52910:2018 — Design requirements, guidelines and recommendations",
+      "url": "https://www.iso.org/standard/67289.html",
+      "kind": "standard_scope",
+      "locator": "Scope; local R11 §§6.6, 6.9, 7",
+      "use": "검토 항목과 설계 정보 전달의 근거. 공통 수치 임계값의 근거가 아님.",
+      "access": "공식 범위·판 정보 및 저장소의 불완전 KS 캡처"
+    },
+    "OCCT": {
+      "title": "Open CASCADE Technology — STEP translator",
+      "url": "https://dev.opencascade.org/doc/overview/html/occt_user_guides__step.html",
+      "kind": "software_documentation",
+      "locator": "STEP reader; units; shape transfer",
+      "use": "STEP 단위 변환·솔리드·곡면 입력 처리. CAD가 원래 설계 의도를 모두 복원하지는 않음.",
+      "access": "공식 API 문서 및 설치된 7.9.3 API"
+    },
+    "JIANG2018": {
+      "title": "Jiang, Xu & Stringer (2018), A new support strategy for reducing waste in AM",
+      "url": null,
+      "kind": "original_research",
+      "locator": "저장소 PDF p.5; LITERATURE.md R06",
+      "use": "오버행/브리지 임계값은 장비·재료·냉각·처짐 허용 조건과 함께 정함. 2 mm를 기본 한계로 차용하지 않음.",
+      "access": "저장소 원문"
+    },
+    "ISO52911P": {
+      "title": "ISO/ASTM 52911-2:2019 — Laser-based powder bed fusion of polymers",
+      "url": "https://www.iso.org/standard/72952.html",
+      "kind": "standard_scope",
+      "locator": "Scope",
+      "use": "고분자 PBF와 금속 PBF의 설계 조건 분리.",
+      "access": "공식 공개 범위; 전문 미확보"
+    },
+    "ISO52911M": {
+      "title": "ISO/ASTM 52911-1:2019 — Laser-based powder bed fusion of metals",
+      "url": "https://www.iso.org/standard/72951.html",
+      "kind": "standard_scope",
+      "locator": "Scope",
+      "use": "금속 PBF 공정 고유의 설계 검토 필요성.",
+      "access": "공식 공개 범위; 전문 미확보"
+    },
+    "KIM2019": {
+      "title": "Kim et al. (2019), A Design for Additive Manufacturing Ontology to Support Manufacturability Analysis",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=925693",
+      "kind": "original_research",
+      "locator": "Design features and design/process/material parameters",
+      "use": "특징·재료·공정·설계 규칙의 근거를 구조화.",
+      "access": "NIST 공개 저널 원고; 2018 학회판과 구분"
+    },
+    "STAV2022": {
+      "title": "Stavropoulos et al. (2022), Knowledge-based manufacturability assessment for optimization of AM",
+      "url": "https://doi.org/10.1007/s00170-022-09948-w",
+      "kind": "original_research",
+      "locator": "저장소 R07; STEP B-rep method; Table 2",
+      "use": "CAD 특징·공정 지식 연결. 원통면 탐지가 관통홀/제조 성공 보증은 아님.",
+      "access": "저장소 원문"
+    },
+    "FORM4": {
+      "title": "Formlabs — Design specifications for 3D models (Form 4 generation)",
+      "url": "https://formlabs.com/support/Design-specifications-for-3D-models-Form-4-generation/",
+      "kind": "vendor_experiment",
+      "locator": "Grey Resin V5, Form 4, 50 µm; drain holes",
+      "use": "장비·수지·층 높이별 가이드. 보편 VPP 임계값으로 쓰지 않음.",
+      "access": "공개 제조사 문서"
+    },
+    "ASTMF3530": {
+      "title": "ASTM F3530-22 — Design; post-processing for metal PBF-LB",
+      "url": "https://store.astm.org/f3530-22.html",
+      "kind": "standard_scope",
+      "locator": "Scope §1.1.1",
+      "use": "분말 제거 등 후처리 검토의 필요성. 형상만으로 제거 성공을 판정하지 않음.",
+      "access": "공개 범위; 전문 미확보"
+    },
+    "KUIPERS2020": {
+      "title": "Kuipers et al. (2020), Adaptive width control of dense contour-parallel toolpaths",
+      "url": "https://arxiv.org/abs/2004.13497",
+      "kind": "original_research",
+      "locator": "Abstract; adaptive bead width framework",
+      "use": "고정 선폭 형태학 검토를 실제 슬라이서 출력 누락 판정과 구분.",
+      "access": "공개 저자 원고"
+    },
+    "PRUSA_ARACHNE": {
+      "title": "PrusaSlicer — Arachne perimeter generator",
+      "url": "https://help.prusa3d.com/article/arachne-perimeter-generator_352769",
+      "kind": "vendor_documentation",
+      "locator": "Minimum feature size; minimum perimeter width",
+      "use": "얇은 특징의 생략·확대는 가변 선폭과 슬라이서 설정에 의존.",
+      "access": "공식 문서"
+    }
+  },
+  "provenance": {
+    "code_sha256": "2ebbabd7902eb5880fe25f7ed1cfa9509cf88b8432922abb005a4f0eec81d10a",
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "trimesh": "5.1.0",
+      "shapely": "2.1.2",
+      "streamlit": "1.63.0",
+      "cadquery-ocp-novtk": "7.9.3.1.1"
+    }
+  },
+  "elapsed_seconds": 0.01429900000221096,
+  "details": {
+    "wall": {
+      "status": "measured",
+      "measurements": {
+        "minimum_mm": 0.3,
+        "area_weighted_p05_mm": 0.3,
+        "requested_samples": 12,
+        "valid_samples": 12,
+        "missing_samples": 0,
+        "discarded_near_hits": 0,
+        "sampled_face_area_fraction": 1.0,
+        "minimum_resolvable_distance_mm": 3.03e-07,
+        "minimum_wall_mm": 1.0,
+        "below_limit_face_indices": [
+          11,
+          9,
+          10,
+          8
+        ],
+        "thinnest_face_indices": [
+          11,
+          9,
+          10,
+          8,
+          7,
+          5,
+          6,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "samples": [
+          {
+            "point_mm": [
+              30.0,
+              13.333333333333334,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 3,
+            "target_face": 1
+          },
+          {
+            "point_mm": [
+              30.0,
+              6.666666666666667,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 2,
+            "target_face": 0
+          },
+          {
+            "point_mm": [
+              0.0,
+              13.333333333333334,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 1,
+            "target_face": 3
+          },
+          {
+            "point_mm": [
+              0.0,
+              6.666666666666667,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 30.0,
+            "source_face": 0,
+            "target_face": 2
+          },
+          {
+            "point_mm": [
+              20.0,
+              20.0,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 6,
+            "target_face": 4
+          },
+          {
+            "point_mm": [
+              20.0,
+              0.0,
+              0.09999999999999999
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 4,
+            "target_face": 6
+          },
+          {
+            "point_mm": [
+              20.0,
+              6.666666666666667,
+              0.3
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 11,
+            "target_face": 9
+          },
+          {
+            "point_mm": [
+              20.0,
+              6.666666666666667,
+              0.0
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 9,
+            "target_face": 11
+          },
+          {
+            "point_mm": [
+              10.0,
+              20.0,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 7,
+            "target_face": 5
+          },
+          {
+            "point_mm": [
+              10.0,
+              0.0,
+              0.19999999999999998
+            ],
+            "normal_chord_mm": 20.0,
+            "source_face": 5,
+            "target_face": 7
+          },
+          {
+            "point_mm": [
+              10.0,
+              13.333333333333334,
+              0.3
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 10,
+            "target_face": 8
+          },
+          {
+            "point_mm": [
+              10.0,
+              13.333333333333334,
+              0.0
+            ],
+            "normal_chord_mm": 0.3,
+            "source_face": 8,
+            "target_face": 10
+          }
+        ]
+      },
+      "mode": "wall",
+      "fingerprint": "6efa9a7652891ac804b16a5b52ffe70c4b8a544053a37aad3cf256cb397e7297",
+      "profile": {
+        "process": "MEX",
+        "name": "장비 미정 · 탐색용 조건",
+        "machine": "미확정",
+        "material": "미확정",
+        "slicer": "미확정",
+        "layer_height_mm": 0.2,
+        "line_width_mm": 0.4,
+        "overhang_angle_deg": 45.0,
+        "minimum_wall_mm": 1.0,
+        "minimum_hole_mm": null,
+        "build_volume_mm": null,
+        "clearance_mm": 0.0,
+        "threshold_basis": "Developer comparison scenario: 1 mm; not a universal process limit",
+        "process_notes": ""
+      },
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "elapsed_seconds": 0.003642099996795878
+    }
+  }
+}

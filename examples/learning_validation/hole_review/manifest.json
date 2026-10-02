@@ -1,0 +1,74 @@
+[
+  {
+    "file": "through-3-0.step",
+    "title": "관통 구멍 3개 · 지름 6 mm",
+    "sha256": "ea57f787832b98c569acce9873593d82709171781d825ffef5a992ea90acc9be",
+    "expected": [
+      {
+        "diameter_mm": 6.0,
+        "depth_mm": 12.0,
+        "hole_kind": "through"
+      },
+      {
+        "diameter_mm": 6.0,
+        "depth_mm": 12.0,
+        "hole_kind": "through"
+      },
+      {
+        "diameter_mm": 6.0,
+        "depth_mm": 12.0,
+        "hole_kind": "through"
+      }
+    ],
+    "source": "Independent OCCT Boolean cutters; no external/private model",
+    "usage": "구멍 위치와 입구 방향 재검토 시연"
+  },
+  {
+    "file": "blind-3-0.step",
+    "title": "막힌 구멍 3개 · 깊이 7.2 mm",
+    "sha256": "ddb8a18cb86b511f16d50cc48ffa27bacc1f2538bfde71b2411c7acf926706ee",
+    "expected": [
+      {
+        "diameter_mm": 6.0,
+        "depth_mm": 7.199999999999999,
+        "hole_kind": "blind"
+      },
+      {
+        "diameter_mm": 6.0,
+        "depth_mm": 7.199999999999999,
+        "hole_kind": "blind"
+      },
+      {
+        "diameter_mm": 6.0,
+        "depth_mm": 7.199999999999999,
+        "hole_kind": "blind"
+      }
+    ],
+    "source": "Independent OCCT Boolean cutters; no external/private model",
+    "usage": "구멍 위치와 입구 방향 재검토 시연"
+  },
+  {
+    "file": "split-3-1.step",
+    "title": "분할된 구멍 3개 · 기울어진 형상",
+    "sha256": "bbbab7d447e0f134a656cee68a7f81bfcb2ac3a6f8ea890e01840b7d40f5650a",
+    "expected": [
+      {
+        "diameter_mm": 5.4,
+        "depth_mm": 17.3,
+        "hole_kind": "through"
+      },
+      {
+        "diameter_mm": 5.4,
+        "depth_mm": 17.3,
+        "hole_kind": "through"
+      },
+      {
+        "diameter_mm": 5.4,
+        "depth_mm": 17.3,
+        "hole_kind": "through"
+      }
+    ],
+    "source": "Independent OCCT Boolean cutters; no external/private model",
+    "usage": "구멍 위치와 입구 방향 재검토 시연"
+  }
+]

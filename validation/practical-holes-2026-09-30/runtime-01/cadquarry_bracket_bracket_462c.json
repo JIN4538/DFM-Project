@@ -1,0 +1,1929 @@
+{
+  "schema_version": "dfm-review-1",
+  "process_family": "machining",
+  "process": "MILLING_3AXIS",
+  "created_utc": "2026-09-30T14:31:16.806877+00:00",
+  "model_fingerprint": "3a09c934fa34df909dc8082d7f1d11363a3b73540a9d46ee233d5a2520290bb4",
+  "input": {
+    "filename": "cadquarry_bracket_bracket_462c.step",
+    "source_sha256": "59cdb4f3e826163fe5bfbeb14147bc01cd33b338be659fcfd844df93a75af2cc",
+    "source_bytes": 27183,
+    "source_format": "step",
+    "coordinate_unit": "mm",
+    "cad_kernel": "Open CASCADE via cadquery-ocp-novtk 7.9.3.1.1",
+    "cad_valid": true,
+    "declared_step_units": [
+      "millimetre"
+    ],
+    "transferred_roots": 1,
+    "solid_count": 1,
+    "cad_geometry_kind": "solid",
+    "cad_face_count": 9,
+    "bodies": [
+      {
+        "body_id": 1,
+        "valid": true,
+        "volume_mm3": 10904.60950367025,
+        "area_mm2": 4041.1031632010504,
+        "integration": {
+          "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+          "requested_relative_tolerance": 1e-09,
+          "exactly_zero_parameter_area_faces_excluded": 0,
+          "volume_relative_error_estimate": 1.8348251272189022e-16,
+          "area_relative_error_estimate": 2.6299160156804275e-16,
+          "limitation": "Numerical quadrature estimates; not certified geometric or manufacturing error bounds."
+        },
+        "bounds_mm": [
+          [
+            0.0,
+            -15.51,
+            0.0
+          ],
+          [
+            27.41,
+            15.51,
+            25.0
+          ]
+        ],
+        "cavity_shell_count": 0
+      }
+    ],
+    "exact_volume_mm3": 10904.60950367025,
+    "exact_area_mm2": 4041.1031632010504,
+    "constituent_volume_sum_mm3": 10904.60950367025,
+    "cavity_shell_count": 0,
+    "property_integration": {
+      "requested_relative_tolerance": 1e-09,
+      "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+      "per_body": [
+        {
+          "method": "OCCT adaptive 2D Gauss over analytic B-rep surfaces",
+          "requested_relative_tolerance": 1e-09,
+          "exactly_zero_parameter_area_faces_excluded": 0,
+          "volume_relative_error_estimate": 1.8348251272189022e-16,
+          "area_relative_error_estimate": 2.6299160156804275e-16,
+          "limitation": "Numerical quadrature estimates; not certified geometric or manufacturing error bounds."
+        }
+      ]
+    },
+    "tessellation": {
+      "requested_linear_deflection_mm": 0.05,
+      "requested_angular_deflection_rad": 0.15,
+      "relative": false,
+      "triangle_count": 360,
+      "unmeshed_exactly_zero_area_faces": [],
+      "body_attempts": [
+        {
+          "body_id": 1,
+          "requested_deflection_mm": 0.05,
+          "effective_deflection_mm": 0.05,
+          "original_topology": {
+            "ready": true,
+            "triangle_count": 360,
+            "zero_area_cells": 0,
+            "missing_nonzero_faces": 0,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "duplicate_triangles": 0,
+            "winding_consistent": true,
+            "watertight": true
+          },
+          "retry": null,
+          "adopted_refinement": false
+        }
+      ],
+      "volume_relative_difference": 9.93196271929724e-06,
+      "limitation": "Requested deflection is not a certified Hausdorff error bound; volume agreement is not local accuracy.",
+      "exact_zero_area_cells_removed": 0,
+      "analysis_triangle_count": 360
+    },
+    "external_feature_recognition": [
+      {
+        "body_id": 1,
+        "status": "measured",
+        "model_id": "mfinstseg-full-corpus-multitask-v2-2026-09-30",
+        "localization_model_id": "full-corpus-instance-bottom-2026-09-30",
+        "routing_policy": "cad-feature-agreement-v1+disconnected-affinity-v1",
+        "candidates": [
+          {
+            "feature": "rectangular_through_step",
+            "label": "관통 단차",
+            "face_ids": [
+              7,
+              8
+            ],
+            "confidence": 0.999999915548397,
+            "confidence_source": "joint",
+            "area_mm2": 1114.9161879587814,
+            "measured_faces": [
+              {
+                "face_id": 7,
+                "area_mm2": 587.5761879587812,
+                "perimeter_mm": 114.36884841043612,
+                "centroid_mm": [
+                  17.705,
+                  -3.6528836412098616e-16,
+                  8.0
+                ],
+                "radius_mm": null,
+                "normal": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "surface_kind": 0,
+                "vertex_points_mm": [
+                  [
+                    8.0,
+                    15.51,
+                    8.0
+                  ],
+                  [
+                    27.41,
+                    15.51,
+                    8.0
+                  ],
+                  [
+                    8.0,
+                    -15.51,
+                    8.0
+                  ],
+                  [
+                    27.41,
+                    -15.51,
+                    8.0
+                  ],
+                  [
+                    15.555,
+                    -5.265981236334e-16,
+                    8.0
+                  ]
+                ]
+              },
+              {
+                "face_id": 8,
+                "area_mm2": 527.34,
+                "perimeter_mm": 96.03999999999999,
+                "centroid_mm": [
+                  8.0,
+                  -5.485807886383127e-16,
+                  16.5
+                ],
+                "radius_mm": null,
+                "normal": [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                "surface_kind": 0,
+                "vertex_points_mm": [
+                  [
+                    8.0,
+                    -15.51,
+                    8.0
+                  ],
+                  [
+                    8.0,
+                    -15.51,
+                    25.0
+                  ],
+                  [
+                    8.0,
+                    15.51,
+                    8.0
+                  ],
+                  [
+                    8.0,
+                    15.51,
+                    25.0
+                  ]
+                ]
+              }
+            ],
+            "bottom_face_ids": [
+              7
+            ],
+            "localization_model_id": "full-corpus-instance-bottom-2026-09-30",
+            "measurement_method": "Learned instance boundary/bottom proposals; OCCT B-rep integration"
+          },
+          {
+            "feature": "through_hole",
+            "label": "관통 구멍",
+            "face_ids": [
+              9
+            ],
+            "confidence": 0.9999999941660058,
+            "confidence_source": "joint_with_learned_fragment_affinity",
+            "area_mm2": 108.07078728349597,
+            "measured_faces": [
+              {
+                "face_id": 9,
+                "area_mm2": 108.07078728349597,
+                "perimeter_mm": 35.01769682087222,
+                "centroid_mm": [
+                  17.704999999999856,
+                  -2.6553996081480652e-17,
+                  4.0
+                ],
+                "radius_mm": 2.15,
+                "normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "surface_kind": 1,
+                "vertex_points_mm": [
+                  [
+                    15.555,
+                    -5.265981236334e-16,
+                    0.0
+                  ],
+                  [
+                    15.555,
+                    -5.265981236334e-16,
+                    8.0
+                  ]
+                ]
+              }
+            ],
+            "bottom_face_ids": [],
+            "localization_model_id": "full-corpus-instance-bottom-2026-09-30",
+            "refinement_model_id": "mfinstseg-disconnected-affinity-v1",
+            "fragments": 1,
+            "measurement_method": "Learned disconnected-instance affinity; original OCCT B-rep face integration"
+          }
+        ],
+        "evaluated_faces": 9,
+        "threshold": 0.7,
+        "unconfirmed_classes": [],
+        "refinement_model_id": "mfinstseg-disconnected-affinity-v1",
+        "refinement_candidates": 1
+      }
+    ],
+    "assembly_overlap": "not_applicable",
+    "analytic_boundary_geometry": {
+      "version": 1,
+      "maximum_model_edges": 50000,
+      "processed_edges": 38,
+      "limitation": "Trimmed face boundaries and adjacency; no automatic pocket/hole count or tool-access certification."
+    },
+    "surface_scope": null,
+    "cad_translation_policy": "OCCT default STEP transfer and built-in shape processing; no separate healing requested. Validity is checked after translation.",
+    "pmi": "not_imported",
+    "external_references": "No external reference resolution; all transfer roots must succeed.",
+    "cad_translation_messages": "",
+    "unit_status": "declared_in_step",
+    "dimensions_confirmed": true,
+    "unit_note": "STEP 선언 단위를 OCCT가 mm로 변환. 설계 공차·PMI는 해석하지 않음.",
+    "scale_factor": 1.0
+  },
+  "profile": {
+    "machine": "미확정",
+    "material": "미확정",
+    "tool_diameter_mm": 3.44,
+    "flute_length_mm": 9.0,
+    "reach_mm": 9.0,
+    "hole_depth_ratio_limit": null,
+    "basis": "사용자 지정 공구·탐색 조건; 실제 가공 검증 전",
+    "condition_evidence": {}
+  },
+  "direction": [
+    -0.0,
+    -0.0,
+    1.0
+  ],
+  "current_orientation": {
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "findings": [
+    {
+      "id": "cnc_input",
+      "title": "절삭 검토 입력",
+      "status": "observed",
+      "reason": "단일 STEP 솔리드의 해석 곡면을 읽었습니다.",
+      "action": "공구 조건을 입력하고 위치별 결과를 확인하세요.",
+      "method": "STEP transfer metadata: validity, solid count and availability of B-rep face records",
+      "evidence": [],
+      "measurements": {
+        "cad_feature_dimensions_available": true
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "공차·표면 거칠기·PMI·소재·고정 방법은 자동 추출하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_coverage",
+      "title": "CAD 면 정보와 특징 인식 범위",
+      "status": "observed",
+      "reason": "경계 미확정 평면 0개, 내·외부 미확정 원통면 0개, 미지원 곡면 0개입니다.",
+      "action": "아래 검토는 명시된 평면·원통면·직사각 바닥 범위입니다. 복잡한 특징은 별도 확인하세요.",
+      "method": "Inventory of unsupported surfaces, unresolved cylinder material sides and incomplete planar boundary extraction",
+      "evidence": [],
+      "measurements": {
+        "incomplete_boundary_face_ids": [],
+        "unresolved_cylinder_face_ids": [],
+        "unsupported_face_ids": [],
+        "cad_features_available": true
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "경계 추출 완료와 전체 포켓·구멍 인식 완료는 다릅니다. 분할·교차·섬·곡선 경계 특징은 전수 인식하지 않습니다.",
+        "4변 외 평면 바닥(예: 챔퍼 때문에 8변이 된 포켓)은 폭·깊이 비교에서 제외됩니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_holes",
+      "title": "구멍 치수와 공구",
+      "status": "observed",
+      "reason": "구멍 1개 · 방향·공구를 조정할 위치 0곳",
+      "action": "측정한 구멍 치수와 공구 조건을 유지하세요.",
+      "method": "Analytic cylindrical face diameter and UV axial bounds; fixed-axis and user tool-condition comparisons; Native cylinder area + closed incident circular rim wires",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_FACE_RECOGNITION",
+        "CNC_TOOL_DIMENSIONS",
+        "CNC_MRSEV"
+      ],
+      "measurements": {
+        "cylindrical_faces": [
+          {
+            "face_id": 9,
+            "face_ids": [
+              9
+            ],
+            "body_id": 1,
+            "hole_kind": "through",
+            "diameter_mm": 4.3,
+            "depth_mm": 8.0,
+            "cylindrical_length_mm": 8.0,
+            "axis": [
+              -0.0,
+              -0.0,
+              1.0
+            ],
+            "axis_endpoints_mm": [
+              [
+                17.705,
+                0.0,
+                0.0
+              ],
+              [
+                17.705,
+                0.0,
+                8.0
+              ]
+            ],
+            "entry_directions": [
+              [
+                0.0,
+                0.0,
+                -1.0
+              ],
+              [
+                -0.0,
+                -0.0,
+                1.0
+              ]
+            ],
+            "entry_centers_mm": [
+              [
+                17.705,
+                0.0,
+                0.0
+              ],
+              [
+                17.705,
+                0.0,
+                8.0
+              ]
+            ],
+            "rim_face_ids": [
+              4,
+              7
+            ],
+            "rim_edge_ids": [
+              [
+                16
+              ],
+              [
+                20
+              ]
+            ],
+            "area_mm2": 108.07078728348888,
+            "measurement_source": "native-circular-rims-1",
+            "axis_aligned": true,
+            "axis_angle_deg": 0.0,
+            "entry_blocked": false,
+            "entry_matches_direction": true,
+            "length_diameter_ratio": 1.8604651162790697,
+            "tool_too_large": false,
+            "segment_exceeds_reach": false,
+            "exceeds_ratio": null
+          }
+        ],
+        "face_count": 1,
+        "unresolved_cylinder_face_ids": [],
+        "verified_hole_count": 1,
+        "review_location_count": 1,
+        "verified_cylinder_face_count": 1,
+        "unverified_cylindrical_face_count": 0
+      },
+      "face_indices": [
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359
+      ],
+      "cad_face_ids": [
+        9
+      ],
+      "limitations": [
+        "원형 입구와 전체 원통 벽을 확인한 일정 지름의 관통 구멍·평평한 바닥 구멍만 개수와 깊이를 확정합니다.",
+        "단차·교차·축 방향 분할·불완전 경계는 개별 원통 구간으로 보존합니다.",
+        "입구 방향 일치는 구멍의 국소 기하입니다. 다른 형상·공구 몸통·홀더와의 경로 간섭은 별도 항목입니다.",
+        "CAD 기하 검산이며 학습 모델의 검출률을 변경하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_curved_corners",
+      "title": "공구축과 나란한 오목 원통면",
+      "status": "not_detected",
+      "reason": "오목한 부분 원통면 0개의 반경을 확인했습니다. 선택한 공구보다 작은 반경은 0개입니다.",
+      "action": "선택한 축과 나란한 오목 원통면은 확인되지 않았습니다. 다른 축이나 분할·복잡한 면은 CAD/CAM에서 확인하세요.",
+      "method": "Concave analytic cylindrical face radius versus radius of the user-specified cylindrical end mill",
+      "evidence": [
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "cylindrical_faces": [],
+        "unresolved_cylinder_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "부분 원통면을 포켓 코너로 확정하지 않습니다. 선택 축에서 원통형 엔드밀 옆날이 접근하는 조건의 기하 비교입니다.",
+        "공구 반경과 형상 반경이 같은 수치 경계는 여유·안정성·표면 품질을 보장하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_rectangular_pockets",
+      "title": "직사각 포켓 바닥과 내부 직각",
+      "status": "unknown",
+      "reason": "내부 바닥 후보 1개가 있지만 직사각 포켓 조건을 확정하지 못했습니다. 이 위치의 폭·벽 높이는 미측정입니다.",
+      "action": "곡선·분할 면·섬이 있는 포켓은 별도 CAD/CAM 검토가 필요합니다.",
+      "method": "Restricted B-rep adjacency recognition of four-sided floors; local width and wall-height comparisons",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER",
+        "CNC_TOOL_DIMENSIONS",
+        "CNC_MRSEV"
+      ],
+      "measurements": {
+        "pockets": [],
+        "count": 0,
+        "incomplete_boundary_face_ids": [],
+        "unresolved_floor_face_ids": [
+          7
+        ]
+      },
+      "face_indices": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ],
+      "cad_face_ids": [
+        7
+      ],
+      "limitations": [
+        "직선 4변 바닥·평면 수직벽·동일 벽높이만 인식합니다. 전체 포켓 목록이 아닙니다.",
+        "벽 높이는 공구 경로 길이 또는 전체 진입 깊이를 보장하지 않습니다. 홀더·고정구·소재 제거 순서는 미검토입니다.",
+        "내부 바닥 후보는 채널·밀폐 공동·섬·곡선 경계나 수치 불일치일 수도 있습니다. 열린 포켓으로 확정한 수가 아닙니다.",
+        "벽 높이가 날 길이보다 커도 여러 깊이의 절입이나 목부 공구를 사용할 수 있으므로 그 자체를 가공 불가로 판정하지 않습니다.",
+        "수치 경계의 비교는 초과로 확정하지 않습니다. 같은 치수는 실제 가공 여유가 확보되었다는 뜻이 아닙니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_visibility",
+      "title": "선택 방향의 표면 가림",
+      "status": "unknown",
+      "reason": "표면 표본의 직선 접근 검사를 아직 실행하지 않았습니다.",
+      "action": "표면 가림 검사를 실행해 선택 방향에서 가려진 위치를 확인하세요.",
+      "method": "point_visibility; deterministic sampled mesh points and straight rays; finite cutter and holder not modeled",
+      "evidence": [
+        "CNC_ACCESS_SCOPE",
+        "CNC_SPATIAL_PLANNING"
+      ],
+      "measurements": {},
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_tool_recommendation",
+      "title": "자동 공구 치수 제안",
+      "status": "unknown",
+      "reason": "측정 특징에서 공구 치수를 채웠습니다. 실제 진입면·공구 목부·홀더 조건은 확인이 필요합니다.",
+      "action": "원호 밀링의 진입면과 공구 목부·홀더 조건을 확인하세요.",
+      "method": "Measured feature constraints, disclosed diameter/length allowances and recomputed candidate dimensions",
+      "evidence": [
+        "CNC_TOOL_DIMENSIONS",
+        "CNC_GEOMETRY",
+        "CNC_ACCESS_SCOPE"
+      ],
+      "measurements": {
+        "values": {
+          "tool_diameter_mm": 3.44,
+          "flute_length_mm": 9.0,
+          "reach_mm": 9.0
+        },
+        "automatic_fields": [
+          "tool_diameter_mm",
+          "flute_length_mm",
+          "reach_mm"
+        ],
+        "fixed_fields": [],
+        "constraints": [
+          {
+            "kind": "hole_milling",
+            "cad_face_id": 9,
+            "diameter_max_mm": 4.3,
+            "flute_min_mm": 8.0,
+            "reach_min_mm": 8.0,
+            "length_basis": "verified_hole_depth",
+            "hole_kind": "through",
+            "cad_face_ids": [
+              9
+            ],
+            "entry_centers_mm": [
+              [
+                17.705,
+                0.0,
+                0.0
+              ],
+              [
+                17.705,
+                0.0,
+                8.0
+              ]
+            ],
+            "reach_candidate_mm": 8.0,
+            "reach_basis": "verified_circular_mouth_to_end"
+          }
+        ],
+        "comparisons": [
+          {
+            "kind": "hole_milling",
+            "cad_face_id": 9,
+            "field": "tool_diameter_mm",
+            "value_mm": 3.44,
+            "limit_mm": 4.3,
+            "relation": "at_most",
+            "conflict": false,
+            "numerical_boundary": false,
+            "assumption_only": false,
+            "assumption_shortfall": false
+          },
+          {
+            "kind": "hole_milling",
+            "cad_face_id": 9,
+            "field": "flute_length_mm",
+            "value_mm": 9.0,
+            "limit_mm": 8.0,
+            "relation": "at_least",
+            "conflict": false,
+            "numerical_boundary": false,
+            "assumption_only": true,
+            "assumption_shortfall": false
+          },
+          {
+            "kind": "hole_milling",
+            "cad_face_id": 9,
+            "field": "reach_mm",
+            "value_mm": 9.0,
+            "limit_mm": 8.0,
+            "relation": "at_least",
+            "conflict": false,
+            "numerical_boundary": false,
+            "assumption_only": false,
+            "assumption_shortfall": false
+          }
+        ],
+        "conflicts": [],
+        "unresolved": [
+          {
+            "code": "access_unresolved",
+            "reason": "표면 접근 검토가 미완료입니다."
+          },
+          {
+            "code": "unresolved_floor_face_ids",
+            "reason": "치수를 확정하지 못한 특징은 자동 공구 조건에서 제외했습니다.",
+            "cad_face_id": 7
+          },
+          {
+            "code": "holder_path_unverified",
+            "reason": "공구 몸통·홀더와 진입 경로는 별도 확인이 필요합니다."
+          }
+        ],
+        "assumptions": {
+          "diameter_fraction": 0.8,
+          "length_allowance_mm": 1.0,
+          "policy": "측정 개구·내부 반경의 지름 상한에 비율 적용; 축 구간·벽 높이에 길이 여유 추가",
+          "provenance": "앱의 편집 가능한 초기 제안 정책; 제조사 표준값·학습 예측·실재 제품 선택이 아님",
+          "hole_strategy": "원통 특징은 원호 밀링을 가정한 엔드밀 치수 제안; 드릴 명목지름 요구는 별도",
+          "length_scope": "검산된 일정 지름 구멍은 CAD 입구~끝 깊이; 나머지는 벽 높이·원통 구간과 메시 상단 투영 거리",
+          "entry_reference": "verified_circular_mouth_to_end는 CAD 원형 입구 기준; 다른 특징은 전체 형상 상단 기준",
+          "unmeasured": "단차·교차 홀 전체 깊이, 공구 몸통·홀더·고정구·경로 및 표본 밖의 곡면 여유"
+        },
+        "drill_requirements": [
+          {
+            "cad_face_id": 9,
+            "nominal_diameter_mm": 4.3,
+            "measured_cylindrical_interval_mm": 8.0,
+            "status": "dimension_requirement",
+            "scope": "CAD 원형 입구·바닥으로 확인한 명목지름과 깊이; 드릴 끝 형상은 공구별 선택",
+            "hole_kind": "through",
+            "depth_mm": 8.0
+          }
+        ]
+      },
+      "cad_face_ids": [
+        7,
+        9
+      ],
+      "face_indices": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359
+      ],
+      "severity": "info",
+      "limitations": [
+        "측정한 구간 전체를 날 길이로 덮는 초기 가정입니다. 여러 깊이의 절입·목부 공구·다른 경로는 별도 비교합니다.",
+        "형상 전체 상단 기준 돌출 후보는 떨어진 돌출부 때문에 길어질 수 있으며 실제 최소 길이를 뜻하지 않습니다."
+      ]
+    }
+  ],
+  "visibility": null,
+  "sources": [
+    {
+      "id": "CNC_GEOMETRY",
+      "title": "Protolabs — Design for Machining Toolkit",
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/",
+      "scope": "Internal corners, deep features and access motivate checks. Service-specific limits are not universal limits."
+    },
+    {
+      "id": "CNC_CORNER",
+      "title": "Protolabs Network — Sharp corners in CNC machining",
+      "url": "https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/",
+      "scope": "Geometric cutter radius constraint; not a prediction of stability, surface quality or time."
+    },
+    {
+      "id": "CNC_TOOL_DIMENSIONS",
+      "title": "Harvey Performance — The Anatomy of an End Mill",
+      "url": "https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/",
+      "scope": "Cutting length, overall length and length below shank are distinct. The entered tip-to-holder reach is an explicit user condition, not an inferred catalog value."
+    },
+    {
+      "id": "CNC_FACE_RECOGNITION",
+      "title": "Yeo et al. — Machining feature recognition based on deep neural networks to support tight integration with 3D CAD systems (2021)",
+      "url": "https://www.nature.com/articles/s41598-021-01313-3",
+      "scope": "원통 특징이 여러 B-rep 면으로 표현될 수 있다는 배경 근거입니다. 현재 코드는 면 구간을 측정하며 이 논문의 DNN·17종 특징 분류기를 구현하지 않습니다. 논문의 인식률은 가공 성공률이 아닙니다.",
+      "locator": "제공 PDF 5–9쪽의 면 표현; 13–17쪽의 분류 평가",
+      "access": "2026-09-21 제공 전문 20쪽 검토; 핵심 혼동행렬·표 원페이지 대조",
+      "local_path": "references/machining/Machining Feature Recognition Based on Deep Neural Networks to Support Tight Integration with 3D CAD Systems.pdf"
+    },
+    {
+      "id": "CNC_ACCESS_SCOPE",
+      "title": "Autodesk Fusion — Shaft and Holder",
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm",
+      "scope": "Actual shaft/holder collision checks involve toolpath and clearance conditions. This source does not validate the implementation's sampled point-ray algorithm."
+    },
+    {
+      "id": "CNC_SPATIAL_PLANNING",
+      "title": "Nelaturi et al. (2015) — Automatic Spatial Planning for Machining Operations",
+      "url": null,
+      "scope": "점의 직선 가시성과 두께가 있는 공구의 접근은 다릅니다. 현재 표본 ray 검사는 초기 차폐 관측이며, 논문의 유한 공구 제거 체적·공정 순서·고정구 계획을 구현하지 않습니다.",
+      "locator": "제공 PDF 2–3쪽, Fig. 1–2: 무한히 가는 공구와 유한 공구의 차이",
+      "access": "2026-09-21 제공 전문 6쪽 검토·핵심 도해 대조",
+      "local_path": "references/machining/Automatic Spatial Planning for Machining Operations.pdf"
+    },
+    {
+      "id": "CNC_MRSEV",
+      "title": "Gupta et al. — Building MRSEV Models for CAM Applications",
+      "url": null,
+      "scope": "가공 특징은 면 하나와 같지 않으며 소재·제거 체적·접근 체적이 필요합니다. 현재 제한 포켓과 원통면 검출은 이 보고서의 일반 특징 인식·공정 계획 구현이 아닙니다.",
+      "locator": "제공 보고서 PDF 11–21쪽; 30–31쪽 구현 한계",
+      "access": "2026-09-21 제공 스캔 36쪽 OCR 검토·정의/알고리즘/도해 원페이지 대조",
+      "local_path": "references/machining/Building MRSEV Models for CAM Applications.pdf"
+    },
+    {
+      "id": "CNC_CUTTING_PHYSICS",
+      "title": "Budak (2006) — Analytical Models for High Performance Milling. Part I",
+      "url": "https://doi.org/10.1016/j.ijmachtools.2005.09.009",
+      "scope": "절삭력·변형·공차 예측에는 절삭 계수, 이송·절입, 공구/홀더/공작물 강성이 필요합니다. 현재 치수 비교에는 이 물리 모델이 포함되어 있지 않습니다.",
+      "locator": "제공 PDF 2–4쪽 힘·보정, 5–8쪽 강성·변형",
+      "access": "2026-09-21 제공 전문 11쪽 검토·수식/단위 대조",
+      "local_path": "references/machining/Analytical Models for High Performance Milling. Part I - Cutting Forces, Structural Deformations and Tolerance Integrity.pdf"
+    },
+    {
+      "id": "CNC_GPS_REQUIREMENTS",
+      "title": "KS A ISO 8015:2011 — GPS 기본사항·개념·원칙·규칙",
+      "url": null,
+      "scope": "도면의 명세와 실제 검증을 구분하는 근거입니다. 공차·PMI·데이텀·실측 없이 CAD 명목 치수로 공차 적합이나 가공 성공률을 계산하지 않습니다. 표준의 100% 가정은 실물 성공률이 아닙니다.",
+      "locator": "제공 PDF §4.4, §§5.3, 5.5, 5.10, 5.13; 국내 2023 개정판",
+      "access": "2026-09-21 제공 전페이지 캡처 21쪽 검토; 워터마크/OCR 한계 있음",
+      "local_path": "references/machining/KS A ISO 8015 전문 캡쳐본.pdf"
+    },
+    {
+      "id": "MFINSTSEG_EXTERNAL",
+      "title": "MFInstSeg · 25-class machining feature dataset",
+      "url": "https://github.com/whjdark/AAGNet",
+      "scope": "외부 면 라벨로 곡면 포함 특징 후보를 인식; 치수는 CAD에서 재측정",
+      "locator": "62,395 per-record face geometry/adjacency certified graphs; disjoint family-group evaluation",
+      "access": "전체 STEP와 저자 AAG의 면 종류·면적·중심·인접 관계 대조; 학습·검증·시험 분리"
+    },
+    {
+      "id": "CNC_HOLE_METHODS",
+      "title": "Sandvik Coromant — Milling holes and cavities/pockets",
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/milling/milling-holes-cavities-pockets",
+      "scope": "드릴과 원호 밀링을 구분하고 구멍 치수·입구·바닥 형상을 제시하는 이유. 인식 알고리즘 정확도나 앱의 80%·1 mm 정책 근거가 아님.",
+      "locator": "Creating an opening; circular ramping applications; updated hole geometry audit 2026-09-30",
+      "access": "공식 공개 자료 해당 항목 확인"
+    }
+  ],
+  "numerical_policy": {
+    "length_absolute_comparison_mm": 1e-09,
+    "comparison_relative_tolerance": 1e-10,
+    "axis_sine_tolerance": 1e-08,
+    "axis_angle_tolerance_deg": 5.729577951308232e-07,
+    "boundary_scope": "Floating-point comparison policy only; boundary cases do not establish design tolerance, machining clearance or feasibility."
+  },
+  "scope": "Fixed-axis geometric review; not machining certification or success probability.",
+  "unassessed": [
+    "공구·홀더·고정구의 실제 경로 충돌",
+    "소재와 고정·가공 순서",
+    "절삭력·처짐·진동·표면 품질",
+    "공차와 PMI",
+    "분할·자유곡면 포켓 및 교차 홀",
+    "가공 시간·비용·성공 확률"
+  ],
+  "external_feature_recognition": {
+    "records": [
+      {
+        "body_id": 1,
+        "status": "measured",
+        "model_id": "mfinstseg-full-corpus-multitask-v2-2026-09-30",
+        "localization_model_id": "full-corpus-instance-bottom-2026-09-30",
+        "routing_policy": "cad-feature-agreement-v1+disconnected-affinity-v1",
+        "candidates": [
+          {
+            "feature": "rectangular_through_step",
+            "label": "관통 단차",
+            "face_ids": [
+              7,
+              8
+            ],
+            "confidence": 0.999999915548397,
+            "confidence_source": "joint",
+            "area_mm2": 1114.9161879587814,
+            "measured_faces": [
+              {
+                "face_id": 7,
+                "area_mm2": 587.5761879587812,
+                "perimeter_mm": 114.36884841043612,
+                "centroid_mm": [
+                  17.705,
+                  -3.6528836412098616e-16,
+                  8.0
+                ],
+                "radius_mm": null,
+                "normal": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "surface_kind": 0,
+                "vertex_points_mm": [
+                  [
+                    8.0,
+                    15.51,
+                    8.0
+                  ],
+                  [
+                    27.41,
+                    15.51,
+                    8.0
+                  ],
+                  [
+                    8.0,
+                    -15.51,
+                    8.0
+                  ],
+                  [
+                    27.41,
+                    -15.51,
+                    8.0
+                  ],
+                  [
+                    15.555,
+                    -5.265981236334e-16,
+                    8.0
+                  ]
+                ]
+              },
+              {
+                "face_id": 8,
+                "area_mm2": 527.34,
+                "perimeter_mm": 96.03999999999999,
+                "centroid_mm": [
+                  8.0,
+                  -5.485807886383127e-16,
+                  16.5
+                ],
+                "radius_mm": null,
+                "normal": [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                "surface_kind": 0,
+                "vertex_points_mm": [
+                  [
+                    8.0,
+                    -15.51,
+                    8.0
+                  ],
+                  [
+                    8.0,
+                    -15.51,
+                    25.0
+                  ],
+                  [
+                    8.0,
+                    15.51,
+                    8.0
+                  ],
+                  [
+                    8.0,
+                    15.51,
+                    25.0
+                  ]
+                ]
+              }
+            ],
+            "bottom_face_ids": [
+              7
+            ],
+            "localization_model_id": "full-corpus-instance-bottom-2026-09-30",
+            "measurement_method": "Learned instance boundary/bottom proposals; OCCT B-rep integration"
+          },
+          {
+            "feature": "through_hole",
+            "label": "관통 구멍",
+            "face_ids": [
+              9
+            ],
+            "confidence": 0.9999999941660058,
+            "confidence_source": "joint_with_learned_fragment_affinity",
+            "area_mm2": 108.07078728349597,
+            "measured_faces": [
+              {
+                "face_id": 9,
+                "area_mm2": 108.07078728349597,
+                "perimeter_mm": 35.01769682087222,
+                "centroid_mm": [
+                  17.704999999999856,
+                  -2.6553996081480652e-17,
+                  4.0
+                ],
+                "radius_mm": 2.15,
+                "normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "surface_kind": 1,
+                "vertex_points_mm": [
+                  [
+                    15.555,
+                    -5.265981236334e-16,
+                    0.0
+                  ],
+                  [
+                    15.555,
+                    -5.265981236334e-16,
+                    8.0
+                  ]
+                ]
+              }
+            ],
+            "bottom_face_ids": [],
+            "localization_model_id": "full-corpus-instance-bottom-2026-09-30",
+            "refinement_model_id": "mfinstseg-disconnected-affinity-v1",
+            "fragments": 1,
+            "measurement_method": "Learned disconnected-instance affinity; original OCCT B-rep face integration"
+          }
+        ],
+        "evaluated_faces": 9,
+        "threshold": 0.7,
+        "unconfirmed_classes": [],
+        "refinement_model_id": "mfinstseg-disconnected-affinity-v1",
+        "refinement_candidates": 1
+      }
+    ],
+    "candidates": [
+      {
+        "feature": "rectangular_through_step",
+        "label": "관통 단차",
+        "face_ids": [
+          7,
+          8
+        ],
+        "confidence": 0.999999915548397,
+        "confidence_source": "joint",
+        "area_mm2": 1114.9161879587814,
+        "measured_faces": [
+          {
+            "face_id": 7,
+            "area_mm2": 587.5761879587812,
+            "perimeter_mm": 114.36884841043612,
+            "centroid_mm": [
+              17.705,
+              -3.6528836412098616e-16,
+              8.0
+            ],
+            "radius_mm": null,
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "surface_kind": 0,
+            "vertex_points_mm": [
+              [
+                8.0,
+                15.51,
+                8.0
+              ],
+              [
+                27.41,
+                15.51,
+                8.0
+              ],
+              [
+                8.0,
+                -15.51,
+                8.0
+              ],
+              [
+                27.41,
+                -15.51,
+                8.0
+              ],
+              [
+                15.555,
+                -5.265981236334e-16,
+                8.0
+              ]
+            ]
+          },
+          {
+            "face_id": 8,
+            "area_mm2": 527.34,
+            "perimeter_mm": 96.03999999999999,
+            "centroid_mm": [
+              8.0,
+              -5.485807886383127e-16,
+              16.5
+            ],
+            "radius_mm": null,
+            "normal": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "surface_kind": 0,
+            "vertex_points_mm": [
+              [
+                8.0,
+                -15.51,
+                8.0
+              ],
+              [
+                8.0,
+                -15.51,
+                25.0
+              ],
+              [
+                8.0,
+                15.51,
+                8.0
+              ],
+              [
+                8.0,
+                15.51,
+                25.0
+              ]
+            ]
+          }
+        ],
+        "bottom_face_ids": [
+          7
+        ],
+        "localization_model_id": "full-corpus-instance-bottom-2026-09-30",
+        "measurement_method": "Learned instance boundary/bottom proposals; OCCT B-rep integration",
+        "body_id": 1,
+        "recognition_model_id": "mfinstseg-full-corpus-multitask-v2-2026-09-30"
+      },
+      {
+        "feature": "through_hole",
+        "label": "관통 구멍",
+        "face_ids": [
+          9
+        ],
+        "body_id": 1,
+        "area_mm2": 108.07078728348888,
+        "confidence": null,
+        "recognition_source": "cad_verified_geometry",
+        "recognition_model_id": null,
+        "measurement_source": "native-circular-rims-1"
+      }
+    ],
+    "verified_pockets": [],
+    "verified_holes": [
+      {
+        "face_id": 9,
+        "face_ids": [
+          9
+        ],
+        "body_id": 1,
+        "hole_kind": "through",
+        "diameter_mm": 4.3,
+        "depth_mm": 8.0,
+        "cylindrical_length_mm": 8.0,
+        "axis": [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        "axis_endpoints_mm": [
+          [
+            17.705,
+            0.0,
+            0.0
+          ],
+          [
+            17.705,
+            0.0,
+            8.0
+          ]
+        ],
+        "entry_directions": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            -0.0,
+            -0.0,
+            1.0
+          ]
+        ],
+        "entry_centers_mm": [
+          [
+            17.705,
+            0.0,
+            0.0
+          ],
+          [
+            17.705,
+            0.0,
+            8.0
+          ]
+        ],
+        "rim_face_ids": [
+          4,
+          7
+        ],
+        "rim_edge_ids": [
+          [
+            16
+          ],
+          [
+            20
+          ]
+        ],
+        "area_mm2": 108.07078728348888,
+        "measurement_source": "native-circular-rims-1",
+        "axis_aligned": true,
+        "axis_angle_deg": 0.0,
+        "entry_blocked": false,
+        "entry_matches_direction": true
+      }
+    ]
+  },
+  "verified_hole_inventory": {
+    "version": "native-circular-rims-1",
+    "method": "Native cylinder area + closed incident circular rim wires",
+    "holes": [
+      {
+        "face_id": 9,
+        "face_ids": [
+          9
+        ],
+        "body_id": 1,
+        "hole_kind": "through",
+        "diameter_mm": 4.3,
+        "depth_mm": 8.0,
+        "cylindrical_length_mm": 8.0,
+        "axis": [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        "axis_endpoints_mm": [
+          [
+            17.705,
+            0.0,
+            0.0
+          ],
+          [
+            17.705,
+            0.0,
+            8.0
+          ]
+        ],
+        "entry_directions": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            -0.0,
+            -0.0,
+            1.0
+          ]
+        ],
+        "entry_centers_mm": [
+          [
+            17.705,
+            0.0,
+            0.0
+          ],
+          [
+            17.705,
+            0.0,
+            8.0
+          ]
+        ],
+        "rim_face_ids": [
+          4,
+          7
+        ],
+        "rim_edge_ids": [
+          [
+            16
+          ],
+          [
+            20
+          ]
+        ],
+        "area_mm2": 108.07078728348888,
+        "measurement_source": "native-circular-rims-1",
+        "axis_aligned": true,
+        "axis_angle_deg": 0.0,
+        "entry_blocked": false,
+        "entry_matches_direction": true
+      }
+    ],
+    "excluded": [],
+    "status": "complete"
+  },
+  "native_hole_face_review": {
+    "id": "cnc_holes",
+    "title": "원통형 내부 특징과 공구",
+    "status": "observed",
+    "reason": "원주 방향 범위가 360°인 내부 원통면 1개의 지름과 축 구간을 측정했습니다.",
+    "action": "현재 측정·입력 범위에서 추가 공구 변경 조건은 관측되지 않았습니다. 홀 입구와 막힘, 드릴 끝 형상, 실제 경로는 별도로 확인하세요.",
+    "method": "Analytic cylindrical face diameter and UV axial bounds; fixed-axis and user tool-condition comparisons",
+    "evidence": [
+      "CNC_GEOMETRY",
+      "CNC_FACE_RECOGNITION",
+      "CNC_TOOL_DIMENSIONS",
+      "CNC_MRSEV"
+    ],
+    "measurements": {
+      "cylindrical_faces": [
+        {
+          "face_id": 9,
+          "diameter_mm": 4.3,
+          "cylindrical_length_mm": 8.0,
+          "length_diameter_ratio": 1.8604651162790697,
+          "axis_aligned": true,
+          "axis_angle_deg": 0.0,
+          "tool_too_large": false,
+          "segment_exceeds_reach": false,
+          "exceeds_ratio": null
+        }
+      ],
+      "face_count": 1,
+      "unresolved_cylinder_face_ids": []
+    },
+    "face_indices": [],
+    "cad_face_ids": [],
+    "limitations": [
+      "원통면 구간은 홀 전체 깊이나 홀 개수가 아닙니다. 분할·교차 홀을 병합하지 않습니다.",
+      "축 정렬은 양쪽에서의 기하 방향 일치만 뜻합니다. 입구·막힘·홀더 충돌을 확인한 결과가 아닙니다.",
+      "선택 축과 평행하지 않은 원통면은 지름·돌출 길이 비교를 보류합니다. 다른 공구·경로까지 가공 불가로 판정한 결과가 아닙니다.",
+      "원주 방향 범위 360°는 모든 높이에 원통 벽이 있다는 뜻이 아닙니다. 교차·트림 구간이 포함될 수 있습니다.",
+      "수치 경계의 비교는 초과로 확정하지 않습니다. 같은 치수는 실제 가공 여유가 확보되었다는 뜻이 아닙니다."
+    ],
+    "severity": "info"
+  },
+  "tool_recommendation": {
+    "schema_version": "measured-tool-proposal-1",
+    "status": "conditional",
+    "complete": true,
+    "values": {
+      "tool_diameter_mm": 3.44,
+      "flute_length_mm": 9.0,
+      "reach_mm": 9.0
+    },
+    "proposed_profile": {
+      "machine": "미확정",
+      "material": "미확정",
+      "tool_diameter_mm": 3.44,
+      "flute_length_mm": 9.0,
+      "reach_mm": 9.0,
+      "hole_depth_ratio_limit": null,
+      "basis": "사용자 지정 공구·탐색 조건; 실제 가공 검증 전",
+      "condition_evidence": {}
+    },
+    "original_profile": {
+      "machine": "미확정",
+      "material": "미확정",
+      "tool_diameter_mm": null,
+      "flute_length_mm": null,
+      "reach_mm": null,
+      "hole_depth_ratio_limit": null,
+      "basis": "사용자 지정 공구·탐색 조건; 실제 가공 검증 전",
+      "condition_evidence": {}
+    },
+    "automatic_fields": [
+      "tool_diameter_mm",
+      "flute_length_mm",
+      "reach_mm"
+    ],
+    "fixed_fields": [],
+    "direction": [
+      -0.0,
+      -0.0,
+      1.0
+    ],
+    "constraints": [
+      {
+        "kind": "hole_milling",
+        "cad_face_id": 9,
+        "diameter_max_mm": 4.3,
+        "flute_min_mm": 8.0,
+        "reach_min_mm": 8.0,
+        "length_basis": "verified_hole_depth",
+        "hole_kind": "through",
+        "cad_face_ids": [
+          9
+        ],
+        "entry_centers_mm": [
+          [
+            17.705,
+            0.0,
+            0.0
+          ],
+          [
+            17.705,
+            0.0,
+            8.0
+          ]
+        ],
+        "reach_candidate_mm": 8.0,
+        "reach_basis": "verified_circular_mouth_to_end"
+      }
+    ],
+    "comparisons": [
+      {
+        "kind": "hole_milling",
+        "cad_face_id": 9,
+        "field": "tool_diameter_mm",
+        "value_mm": 3.44,
+        "limit_mm": 4.3,
+        "relation": "at_most",
+        "conflict": false,
+        "numerical_boundary": false,
+        "assumption_only": false,
+        "assumption_shortfall": false
+      },
+      {
+        "kind": "hole_milling",
+        "cad_face_id": 9,
+        "field": "flute_length_mm",
+        "value_mm": 9.0,
+        "limit_mm": 8.0,
+        "relation": "at_least",
+        "conflict": false,
+        "numerical_boundary": false,
+        "assumption_only": true,
+        "assumption_shortfall": false
+      },
+      {
+        "kind": "hole_milling",
+        "cad_face_id": 9,
+        "field": "reach_mm",
+        "value_mm": 9.0,
+        "limit_mm": 8.0,
+        "relation": "at_least",
+        "conflict": false,
+        "numerical_boundary": false,
+        "assumption_only": false,
+        "assumption_shortfall": false
+      }
+    ],
+    "conflicts": [],
+    "geometry_changes": [],
+    "unresolved": [
+      {
+        "code": "access_unresolved",
+        "reason": "표면 접근 검토가 미완료입니다."
+      },
+      {
+        "code": "unresolved_floor_face_ids",
+        "reason": "치수를 확정하지 못한 특징은 자동 공구 조건에서 제외했습니다.",
+        "cad_face_id": 7
+      },
+      {
+        "code": "holder_path_unverified",
+        "reason": "공구 몸통·홀더와 진입 경로는 별도 확인이 필요합니다."
+      }
+    ],
+    "drill_requirements": [
+      {
+        "cad_face_id": 9,
+        "nominal_diameter_mm": 4.3,
+        "measured_cylindrical_interval_mm": 8.0,
+        "status": "dimension_requirement",
+        "scope": "CAD 원형 입구·바닥으로 확인한 명목지름과 깊이; 드릴 끝 형상은 공구별 선택",
+        "hole_kind": "through",
+        "depth_mm": 8.0
+      }
+    ],
+    "dimension_coverage_complete": false,
+    "measured_constraints_satisfied": true,
+    "single_tool_dimension_match": null,
+    "assumptions": {
+      "diameter_fraction": 0.8,
+      "length_allowance_mm": 1.0,
+      "policy": "측정 개구·내부 반경의 지름 상한에 비율 적용; 축 구간·벽 높이에 길이 여유 추가",
+      "provenance": "앱의 편집 가능한 초기 제안 정책; 제조사 표준값·학습 예측·실재 제품 선택이 아님",
+      "hole_strategy": "원통 특징은 원호 밀링을 가정한 엔드밀 치수 제안; 드릴 명목지름 요구는 별도",
+      "length_scope": "검산된 일정 지름 구멍은 CAD 입구~끝 깊이; 나머지는 벽 높이·원통 구간과 메시 상단 투영 거리",
+      "entry_reference": "verified_circular_mouth_to_end는 CAD 원형 입구 기준; 다른 특징은 전체 형상 상단 기준",
+      "unmeasured": "단차·교차 홀 전체 깊이, 공구 몸통·홀더·고정구·경로 및 표본 밖의 곡면 여유"
+    },
+    "recomputed": true
+  }
+}

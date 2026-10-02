@@ -1,0 +1,201 @@
+{
+  "id": "168074",
+  "dataset": "Thingi10K",
+  "group": "thing:69899",
+  "split": "validation",
+  "process": "PBF_POLYMER",
+  "priority": "height",
+  "candidate_oracle": {
+    "legacy": 0.0015881293879668977,
+    "blind": 0.001679316382819256,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "learned": 0.0016793023105124115,
+    "uncertainty05": 0.0016793023105124115,
+    "uncertainty1": 0.0016793023105124115,
+    "retain2_learned": 0.0016793023105124115
+  },
+  "actual_product": {
+    "legacy": 0.0015881293879668977,
+    "blind": 0.001679316382819256,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "learned": 0.0016793023105124115,
+    "uncertainty05": 0.0016793023105124115,
+    "uncertainty1": 0.0016793023105124115,
+    "retain2_learned": 0.0016793023105124115
+  },
+  "common_reference_product": {
+    "legacy": 0.0015881293879668977,
+    "blind": 0.001679316382819256,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "learned": 0.0016793023105124115,
+    "uncertainty05": 0.0016793023105124115,
+    "uncertainty1": 0.0016793023105124115,
+    "retain2_learned": 0.0016793023105124115
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        0.03832104689900441,
+        0.10900958483784116,
+        -0.9933017707514901
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.03832104689900441,
+        0.10900958483784116,
+        -0.9933017707514901
+      ],
+      "own_reference_score": 0.0015881293879668977,
+      "fixed_reference_score": 0.0015881293879668977,
+      "oracle_score": 0.0015881293879668977,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.08474485805641857,
+        -0.05506844824242431,
+        0.9948797791900129
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.08474485805641857,
+        -0.05506844824242431,
+        0.9948797791900129
+      ],
+      "own_reference_score": 0.001679316382819256,
+      "fixed_reference_score": 0.001679316382819256,
+      "oracle_score": 0.001679316382819256,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        -0.07907791996703274,
+        -0.0722343633645835,
+        0.994247896313088
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.07907791996703274,
+        -0.0722343633645835,
+        0.994247896313088
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -0.07907791996703274,
+        -0.0722343633645835,
+        0.994247896313088
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.07907791996703274,
+        -0.0722343633645835,
+        0.994247896313088
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "learned": {
+      "selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "own_reference_score": 0.0016793023105124115,
+      "fixed_reference_score": 0.0016793023105124115,
+      "oracle_score": 0.0016793023105124115,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "own_reference_score": 0.0016793023105124115,
+      "fixed_reference_score": 0.0016793023105124115,
+      "oracle_score": 0.0016793023105124115,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty1": {
+      "selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "own_reference_score": 0.0016793023105124115,
+      "fixed_reference_score": 0.0016793023105124115,
+      "oracle_score": 0.0016793023105124115,
+      "actual_winner_gap": 0.0
+    },
+    "retain2_learned": {
+      "selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 4",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.04586159252918349,
+        0.1708529518373208,
+        -0.9842286234301263
+      ],
+      "own_reference_score": 0.0016793023105124115,
+      "fixed_reference_score": 0.0016793023105124115,
+      "oracle_score": 0.0016793023105124115,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "d6579d79fc5902f9bb1e4755fbaded42b496241c3233b64f48c1a75dd87311d8"
+}

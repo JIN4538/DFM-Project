@@ -1,0 +1,201 @@
+{
+  "id": "bracket_462c9c97_0227",
+  "dataset": "CadQuarry",
+  "group": "cq:bracket:{\"version\": 2, \"volume\": 12300.0, \"surface_area\": 4330.0, \"principal_moments\": [1340000.0, 1580000.0, 2270000.0], \"n_faces\": 8, \"n_edges\": 18, \"n_vertices\": 12}",
+  "split": "validation",
+  "process": "MEX",
+  "priority": "support",
+  "candidate_oracle": {
+    "legacy": 0.005821725655184811,
+    "blind": 0.005821725655184811,
+    "geometric": 0.005821725655184811,
+    "height_neural": 0.005821725655184811,
+    "learned": 0.005821725655184811,
+    "uncertainty05": 0.005821725655184811,
+    "uncertainty1": 0.005821725655184811,
+    "retain2_learned": 0.005821725655184811
+  },
+  "actual_product": {
+    "legacy": 0.005821725655184811,
+    "blind": 0.005821725655184811,
+    "geometric": 0.005821725655184811,
+    "height_neural": 0.005821725655184811,
+    "learned": 0.005821725655184811,
+    "uncertainty05": 0.005821725655184811,
+    "uncertainty1": 0.005821725655184811,
+    "retain2_learned": 0.005821725655184811
+  },
+  "common_reference_product": {
+    "legacy": 0.005821725655184811,
+    "blind": 0.005821725655184811,
+    "geometric": 0.005821725655184811,
+    "height_neural": 0.005821725655184811,
+    "learned": 0.005821725655184811,
+    "uncertainty05": 0.005821725655184811,
+    "uncertainty1": 0.005821725655184811,
+    "retain2_learned": 0.005821725655184811
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.006012578213171582,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    },
+    "learned": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty1": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    },
+    "retain2_learned": {
+      "selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.23436699878661543,
+        0.40885005352033055,
+        -0.8819941857042923
+      ],
+      "own_reference_score": 0.005821725655184811,
+      "fixed_reference_score": 0.005821725655184811,
+      "oracle_score": 0.005821725655184811,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "4a1c0f1c1e9db8f065eb7a7ef72a5710fc3ae75a45a5a3948ee4aaf586bbdc00"
+}

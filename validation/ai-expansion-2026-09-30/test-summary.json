@@ -1,0 +1,32 @@
+{
+  "full_initial": {
+    "passed": 1351,
+    "failed": 4,
+    "seconds": 787.72,
+    "log": "..\\study\\ai-expansion-2026-09-30\\full-tests.log"
+  },
+  "focused_corrected": {
+    "passed": 30,
+    "failed": 0,
+    "record": "regression-corrected.xml"
+  },
+  "desktop_initial": {
+    "passed": 71,
+    "failed": 1,
+    "record": "desktop-final.xml",
+    "reason": "Previously deployed validation geometry missing; copied SHA-verified inventory originals"
+  },
+  "desktop_geometry_corrected": {
+    "passed": 4,
+    "failed": 0,
+    "record": "desktop-geometry-corrected.xml"
+  },
+  "navigation_initial_failure": "Result tab absent during one full-suite run; isolated reproduction and related focused suite passed; cause not established",
+  "full_final": {
+    "passed": 1357,
+    "failed": 0,
+    "seconds": 724.47,
+    "record": "full-final.xml",
+    "log": "full-tests-final.log"
+  }
+}

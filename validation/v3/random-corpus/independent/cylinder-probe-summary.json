@@ -1,0 +1,156 @@
+{
+  "counts": [
+    {
+      "midpoint": "inner",
+      "radial_probe": "inner",
+      "count": 1551
+    },
+    {
+      "midpoint": "outer",
+      "radial_probe": "outer",
+      "count": 1639
+    },
+    {
+      "midpoint": "unknown",
+      "radial_probe": "outer",
+      "count": 15
+    },
+    {
+      "midpoint": "inner",
+      "radial_probe": "unknown",
+      "count": 1
+    }
+  ],
+  "differences": [
+    {
+      "file": "05_cooling_fan_uf21-h204-6_3.json",
+      "body": 1,
+      "face": 1,
+      "diameter": 63.0,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "06_gearbox_b204hs_a-6_3.json",
+      "body": 1,
+      "face": 213,
+      "diameter": 80.0,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "06_gearbox_b204hs_a-6_3.json",
+      "body": 1,
+      "face": 228,
+      "diameter": 50.0,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "19_Arduino-UNO.json",
+      "body": 1,
+      "face": 1125,
+      "diameter": 0.5,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "19_Arduino-UNO.json",
+      "body": 1,
+      "face": 1127,
+      "diameter": 0.5,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "19_Arduino-UNO.json",
+      "body": 1,
+      "face": 1131,
+      "diameter": 0.5,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "19_Arduino-UNO.json",
+      "body": 1,
+      "face": 1135,
+      "diameter": 0.5,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "19_Arduino-UNO.json",
+      "body": 1,
+      "face": 1143,
+      "diameter": 0.5,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "19_Arduino-UNO.json",
+      "body": 1,
+      "face": 1145,
+      "diameter": 0.5,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "21_Raspberry Pi 4 Model B.json",
+      "body": 90,
+      "face": 727,
+      "diameter": 0.4,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "21_Raspberry Pi 4 Model B.json",
+      "body": 90,
+      "face": 752,
+      "diameter": 0.4,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "21_Raspberry Pi 4 Model B.json",
+      "body": 91,
+      "face": 727,
+      "diameter": 0.4,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "21_Raspberry Pi 4 Model B.json",
+      "body": 91,
+      "face": 752,
+      "diameter": 0.4,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "21_Raspberry Pi 4 Model B.json",
+      "body": 107,
+      "face": 476,
+      "diameter": 0.2,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "21_Raspberry Pi 4 Model B.json",
+      "body": 107,
+      "face": 478,
+      "diameter": 0.2,
+      "midpoint": "unknown",
+      "probe": "outer"
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 1,
+      "face": 124,
+      "diameter": 55,
+      "midpoint": "inner",
+      "probe": "unknown",
+      "reason": "Exactly zero parameter-area face; production classifies as zero_area_trim, not a hole"
+    }
+  ],
+  "scope": "3,206 analytic cylindrical faces; no inner/outer disagreement on nonzero-area faces; 15 midpoint unknowns independently probed outer; one zero-area trim remained unknown. Sampled radial occupancy is not through-hole certification."
+}

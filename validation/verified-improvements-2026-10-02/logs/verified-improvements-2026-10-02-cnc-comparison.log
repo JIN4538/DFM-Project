@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\run_verified_edit_study.py", line 243, in <module>
+    else:compare(a.folder,a.model)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\run_verified_edit_study.py", line 220, in compare
+    results.append(dict(case_id=case['id'],family=case['family'],feasible_candidates=len(truth),oracle=optimum,methods=outputs))
+                                                  ~~~~^^^^^^^^^^
+KeyError: 'family'

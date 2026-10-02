@@ -1,0 +1,80 @@
+{
+  "pbf": {
+    "status": 200,
+    "url": "https://huggingface.co/api/datasets/sebius/pbflbm-part-orientation",
+    "body": {
+      "_id": "66fa49d70d2109c10e3213c8",
+      "id": "sebius/pbflbm-part-orientation",
+      "author": "sebius",
+      "sha": "24d4f3f5f05cad5488fcf9a4cbc95e28ff528a8a",
+      "lastModified": "2025-02-11T10:46:25.000Z",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "tags": [
+        "license:apache-2.0",
+        "modality:3d",
+        "doi:10.57967/hf/4458",
+        "region:us"
+      ],
+      "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Structure\n\t\n\nThe following directory structure is consistent across all datasets. Each geometry is assigned an unique identifier: {dataset_name}_00000000 where {dataset_name} is the name of the dataset and 00000000 is an 8-digit number starting from zero.\nEach dataset has two main folders: info and stl. The info folder contains metadata about each geometry in JSON format, including geometric parameters, random rotation applied to the geometry, reverse transformation (label)\u2026 See the full description on the dataset page: https://huggingface.co/datasets/sebius/pbflbm-part-orientation.",
+      "downloads": 28,
+      "likes": 0,
+      "cardData": {
+        "license": "apache-2.0"
+      },
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "combined_40000.zip"
+        },
+        {
+          "rfilename": "plates_with_bores_10000.zip"
+        },
+        {
+          "rfilename": "platonic_solids_with_inscriptions_10000.zip"
+        },
+        {
+          "rfilename": "primitives_with_two_bores_10000.zip"
+        },
+        {
+          "rfilename": "pyramids_10000.zip"
+        }
+      ],
+      "createdAt": "2024-09-30T06:48:55.000Z",
+      "usedStorage": 4292804108
+    }
+  },
+  "slice": {
+    "status": 200,
+    "url": "https://api.github.com/repos/idealab-isu/Slice-100K/contents/README.md",
+    "body": {
+      "name": "README.md",
+      "path": "README.md",
+      "sha": "767a5a528a7dc870e769bd2c7dce94d93b176b6b",
+      "size": 669,
+      "url": "https://api.github.com/repos/idealab-isu/Slice-100K/contents/README.md?ref=main",
+      "html_url": "https://github.com/idealab-isu/Slice-100K/blob/main/README.md",
+      "git_url": "https://api.github.com/repos/idealab-isu/Slice-100K/git/blobs/767a5a528a7dc870e769bd2c7dce94d93b176b6b",
+      "download_url": "https://raw.githubusercontent.com/idealab-isu/Slice-100K/main/README.md",
+      "type": "file",
+      "content": "IyBTbGljZS0xMDBLCgpXZSBwcmVzZW50IFNsaWNlLTEwMEssIGEgZmlyc3Qg\nb2YgaXRzIGtpbmQgbXVsdGltb2RhbCBkYXRhc2V0IG9mIG92ZXIgMTAwLDAw\nMCBHLWNvZGUgZmlsZXMsIHRlc3NlbGxhdGVkIENBRCBtb2RlbHMsIExWSVMg\nY2F0ZWdvcmllcywgYW5kIFNUTCByZW5kZXJpbmdzLgoKKjMvNC8yMDI2OiBU\naGUgZGF0YXNldCBhY2Nlc3MgbGluayBpcyBicm9rZW4uIFdvcmtpbmcgb24g\nZml4aW5nIGl0LioKRGF0YXNldCBhY2Nlc3MgbGluayAtIAoKRGF0YXNldCBl\neHBsb3JlciAtIGh0dHBzOi8vc2xpY2UtMTAway5naXRodWIuaW8vCgoKCiFb\nXSgvbWFpbl9maWd1cmVfb3J0aG9ncmFwaGljLnBuZykKCgpUaGlzIHJlcG9z\naXRvcnkgY29udGFpbnMgc2NyaXB0IHRvIHNsaWNlIGdjb2RlIGZpbGVzLCBn\nZW5lcmF0ZSBTVEwgcmVuZGVyaW5ncywgZ2VuZXJhdGUgY2FwdGlvbnMgZm9y\nIFNUTCByZW5kZXJpbmdzLCBhbmQgdmlzdWFsaXplIEctY29kZS4KCgojIyBE\nYXRhc2V0IExpY2Vuc2U6CgpXZSB1dGlsaXplIHRoZSBDQy1CWS00LjAgbGlj\nZW5zZSBmb3IgdGhlIFNsaWNlLTEwMEsgZGF0YXNldC4gVXNlcnMgYXJlIGFk\ndmlzZWQgdG8gY2hlY2sgaW5kaXZpZHVhbCBtb2RlbCBsaWNlbnNlcyBiZWZv\ncmUgdXNpbmcgdGhlbSBmb3IgZG93bnN0cmVhbSB0YXNrcy4KCgoK\n",
+      "encoding": "base64",
+      "_links": {
+        "self": "https://api.github.com/repos/idealab-isu/Slice-100K/contents/README.md?ref=main",
+        "git": "https://api.github.com/repos/idealab-isu/Slice-100K/git/blobs/767a5a528a7dc870e769bd2c7dce94d93b176b6b",
+        "html": "https://github.com/idealab-isu/Slice-100K/blob/main/README.md"
+      }
+    }
+  },
+  "abc": {
+    "status": 404,
+    "url": "https://raw.githubusercontent.com/a1b2c3d4e5f6/ABC-dataset/master/README.md",
+    "body": "404: Not Found"
+  }
+}

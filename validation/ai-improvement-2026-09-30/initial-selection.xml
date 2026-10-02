@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="32" time="9.162" timestamp="2026-09-30T20:01:46.160780+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_enhanced_planning" name="test_duplicate_final_effects_are_independent_of_edit_order" time="1.885"><failure message="AssertionError: assert {'_baseline':....0, ...}, ...} == {'_baseline':...e': 0.0}, ...}&#10;  &#10;  Omitting 16 identical items, use -vv to show&#10;  Differing items:&#10;  {'score': -0.6060027472527473} != {'score': -0.6227483565208104}&#10;  {'_baseline': 1.6} != {'_baseline': 1.5999999999999999}&#10;  {'_metrics': {'edit_count': 3, 'geometry_change': 0.6153846153846154, 'raw_geometry_change': 1.6, 'raw_tool_change': 0.0, ...}} != {'_metrics': {'geometry_change': 0.6153846153846154, 'regrets': [0.0, 0.0, 0.0], 'slenderness': 0.7142857142857143, 'tool_change': 0.0}}&#10;  {'title': '특징별 형상 개선안'} != {'title': '형상 치수 조정'}...&#10;  &#10;  ...Full output truncated (7 lines hidden), use '-vv' to show">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002444578C440&gt;
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-158/test_duplicate_final_effects_a0')
+
+    def test_duplicate_final_effects_are_independent_of_edit_order(monkeypatch, tmp_path):
+        original = report()
+        expected = prior.recommend_plan(original, feedback_path=tmp_path/'prefs.json')
+        candidate = deepcopy(expected['selected'])
+        candidate['changes'].reverse()
+        monkeypatch.setattr(enhanced, 'propose_rl_plan', lambda *a, **kw: {'proposal': candidate, 'status': 'proposed'})
+        got = enhanced.recommend_plan(original, feedback_path=tmp_path/'prefs.json', model_path=prior.MODEL_PATH)
+&gt;       assert got['selected'] == expected['selected']
+E       AssertionError: assert {'_baseline':....0, ...}, ...} == {'_baseline':...e': 0.0}, ...}
+E         
+E         Omitting 16 identical items, use -vv to show
+E         Differing items:
+E         {'score': -0.6060027472527473} != {'score': -0.6227483565208104}
+E         {'_baseline': 1.6} != {'_baseline': 1.5999999999999999}
+E         {'_metrics': {'edit_count': 3, 'geometry_change': 0.6153846153846154, 'raw_geometry_change': 1.6, 'raw_tool_change': 0.0, ...}} != {'_metrics': {'geometry_change': 0.6153846153846154, 'regrets': [0.0, 0.0, 0.0], 'slenderness': 0.7142857142857143, 'tool_change': 0.0}}
+E         {'title': '특징별 형상 개선안'} != {'title': '형상 치수 조정'}...
+E         
+E         ...Full output truncated (7 lines hidden), use '-vv' to show
+
+tests_v3\test_enhanced_planning.py:25: AssertionError</failure></testcase><testcase classname="tests_v3.test_enhanced_planning" name="test_network_cannot_exchange_added_conflicts_for_lower_edit_cost" time="0.058" /><testcase classname="tests_v3.test_enhanced_planning" name="test_changed_before_value_or_face_is_rejected" time="0.014" /><testcase classname="tests_v3.test_enhanced_planning" name="test_missing_model_retains_old_recommendation_and_preferences" time="0.014"><failure message="AssertionError: assert {'_baseline':....0, ...}, ...} == {'_baseline':...e': 0.0}, ...}&#10;  &#10;  Omitting 16 identical items, use -vv to show&#10;  Differing items:&#10;  {'score': -0.6060027472527473} != {'score': -0.6227483565208104}&#10;  {'_baseline': 1.6} != {'_baseline': 1.5999999999999999}&#10;  {'_metrics': {'edit_count': 3, 'geometry_change': 0.6153846153846154, 'raw_geometry_change': 1.6, 'raw_tool_change': 0.0, ...}} != {'_metrics': {'geometry_change': 0.6153846153846154, 'regrets': [0.0, 0.0, 0.0], 'slenderness': 0.7142857142857143, 'tool_change': 0.0}}&#10;  {'title': '특징별 형상 개선안'} != {'title': '형상 치수 조정'}...&#10;  &#10;  ...Full output truncated (7 lines hidden), use '-vv' to show">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002447AC72B10&gt;
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-158/test_missing_model_retains_old0')
+
+    def test_missing_model_retains_old_recommendation_and_preferences(monkeypatch, tmp_path):
+        original = report()
+        path = tmp_path/'prefs.json'
+        monkeypatch.setattr(enhanced, 'propose_rl_plan', lambda *a, **kw: {'proposal': None, 'status': 'unavailable'})
+        expected = prior.recommend_plan(original, feedback_path=path)
+        got = enhanced.recommend_plan(original, feedback_path=path, model_path=prior.MODEL_PATH)
+&gt;       assert got['selected'] == expected['selected']
+E       AssertionError: assert {'_baseline':....0, ...}, ...} == {'_baseline':...e': 0.0}, ...}
+E         
+E         Omitting 16 identical items, use -vv to show
+E         Differing items:
+E         {'score': -0.6060027472527473} != {'score': -0.6227483565208104}
+E         {'_baseline': 1.6} != {'_baseline': 1.5999999999999999}
+E         {'_metrics': {'edit_count': 3, 'geometry_change': 0.6153846153846154, 'raw_geometry_change': 1.6, 'raw_tool_change': 0.0, ...}} != {'_metrics': {'geometry_change': 0.6153846153846154, 'regrets': [0.0, 0.0, 0.0], 'slenderness': 0.7142857142857143, 'tool_change': 0.0}}
+E         {'title': '특징별 형상 개선안'} != {'title': '형상 치수 조정'}...
+E         
+E         ...Full output truncated (7 lines hidden), use '-vv' to show
+
+tests_v3\test_enhanced_planning.py:62: AssertionError</failure></testcase><testcase classname="tests_v3.test_enhanced_planning" name="test_fewer_conflicts_rebuilds_semantics_and_removes_inadmissible_preferences" time="0.011" /><testcase classname="tests_v3.test_enhanced_planning" name="test_disabled_and_repeat_search_strip_both_proposal_sources" time="0.018" /><testcase classname="tests_v3.test_enhanced_planning" name="test_disabling_search_restores_baseline_pareto_flags" time="1.108" /><testcase classname="tests_v3.test_am_joint_planning" name="test_measured_edits_are_one_plan_not_duplicate_actions" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_partial_and_transverse_scope_survives_numeric_edits" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_invalid_criteria_do_not_create_numeric_edits[None]" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_invalid_criteria_do_not_create_numeric_edits[0]" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_invalid_criteria_do_not_create_numeric_edits[nan]" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_invalid_criteria_do_not_create_numeric_edits[inf]" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_invalid_criteria_do_not_create_numeric_edits[True]" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_invalid_criteria_do_not_create_numeric_edits[-1]" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_unknown_material_side_not_assumed_to_be_a_hole" time="0.001" /><testcase classname="tests_v3.test_am_joint_planning" name="test_no_measurements_do_not_create_a_wall_edit" time="0.001" /><testcase classname="tests_v3.test_conclusion" name="test_complete_measurement_and_partial_measurement_have_different_conclusions" time="0.009" /><testcase classname="tests_v3.test_conclusion" name="test_observed_partial_issue_keeps_both_issue_and_missing_scope" time="0.003" /><testcase classname="tests_v3.test_conclusion" name="test_input_defect_wins_over_learned_candidate_and_raw_data_unchanged" time="0.003" /><testcase classname="tests_v3.test_conclusion" name="test_unlearned_partial_finding_and_missing_report_never_pass" time="0.005" /><testcase classname="tests_v3.test_conclusion" name="test_unknown_process_does_not_hide_raw_numeric_warning" time="0.003" /><testcase classname="tests_v3.test_conclusion" name="test_plan_suppresses_only_resolved_generic_action_and_keeps_remaining_issue" time="0.004" /><testcase classname="tests_v3.test_conclusion" name="test_html_escapes_user_content_and_uses_one_conclusion_heading" time="0.005" /><testcase classname="tests_v3.test_conclusion" name="test_plan_change_keeps_verified_cad_face_identity" time="0.001" /><testcase classname="tests_v3.test_conclusion" name="test_residual_plan_keeps_issue_but_does_not_repeat_conflicting_generic_action" time="0.003" /><testcase classname="tests_v3.test_plan_preferences_ui" name="test_explicit_am_preference_rescores_recommends_and_reset_restores" time="0.482"><failure message="AssertionError: assert 'verified_policy' == 'learned'&#10;  &#10;  - learned&#10;  + verified_policy">preference_backend = (WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-158/test_explicit_am_preference_re0/preferences.jso...ck_path': None, 'model_path': None, 'preferences': None}], 'record_plan_preference': [], 'reset_plan_preferences': []})
+
+    def test_explicit_am_preference_rescores_recommends_and_reset_restores(preference_backend):
+        path, calls = preference_backend
+        app = open_app(am_report(), "MEX", "am")
+        before = result(app)
+        original_measurements = measurements(app)
+&gt;       assert before["selection_source"] == "learned"
+E       AssertionError: assert 'verified_policy' == 'learned'
+E         
+E         - learned
+E         + verified_policy
+
+tests_v3\test_plan_preferences_ui.py:134: AssertionError</failure></testcase><testcase classname="tests_v3.test_plan_preferences_ui" name="test_cnc_allowance_reaches_recommendation_and_limits_edits[\ud615\uc0c1\xb7\uacf5\uad6c \ubaa8\ub450]" time="0.397"><failure message="AssertionError: assert 'verified_policy' == 'learned'&#10;  &#10;  - learned&#10;  + verified_policy">allowance = '형상·공구 모두'
+preference_backend = (WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-158/test_cnc_allowance_reaches_rec0/preferences.jso...{'allow_tool_change': True, 'preserve_geometry': False}}], 'record_plan_preference': [], 'reset_plan_preferences': []})
+
+    @pytest.mark.parametrize("allowance", list(ALLOWANCES))
+    def test_cnc_allowance_reaches_recommendation_and_limits_edits(allowance, preference_backend):
+        path, calls = preference_backend
+        app = open_app(cnc_report(), "CNC", "cnc")
+        original_measurements = measurements(app)
+        app.selectbox(key="cnc_plan_allowance").select(allowance).run()
+        plan = result(app)
+        prefs = ALLOWANCES[allowance]
+        assert app.session_state["test_report"]["review_context"]["plan_preferences"] == prefs
+        assert calls["recommend_plan"][-1]["preferences"] == prefs
+&gt;       assert plan["selection_source"] == "learned"
+E       AssertionError: assert 'verified_policy' == 'learned'
+E         
+E         - learned
+E         + verified_policy
+
+tests_v3\test_plan_preferences_ui.py:181: AssertionError</failure></testcase><testcase classname="tests_v3.test_plan_preferences_ui" name="test_cnc_allowance_reaches_recommendation_and_limits_edits[\uacf5\uad6c\ub9cc \xb7 \uc6d0\ub798 \ud615\uc0c1 \uc720\uc9c0]" time="0.397"><failure message="AssertionError: assert 'verified_policy' == 'learned'&#10;  &#10;  - learned&#10;  + verified_policy">allowance = '공구만 · 원래 형상 유지'
+preference_backend = (WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-158/test_cnc_allowance_reaches_rec1/preferences.jso... {'allow_tool_change': True, 'preserve_geometry': True}}], 'record_plan_preference': [], 'reset_plan_preferences': []})
+
+    @pytest.mark.parametrize("allowance", list(ALLOWANCES))
+    def test_cnc_allowance_reaches_recommendation_and_limits_edits(allowance, preference_backend):
+        path, calls = preference_backend
+        app = open_app(cnc_report(), "CNC", "cnc")
+        original_measurements = measurements(app)
+        app.selectbox(key="cnc_plan_allowance").select(allowance).run()
+        plan = result(app)
+        prefs = ALLOWANCES[allowance]
+        assert app.session_state["test_report"]["review_context"]["plan_preferences"] == prefs
+        assert calls["recommend_plan"][-1]["preferences"] == prefs
+&gt;       assert plan["selection_source"] == "learned"
+E       AssertionError: assert 'verified_policy' == 'learned'
+E         
+E         - learned
+E         + verified_policy
+
+tests_v3\test_plan_preferences_ui.py:181: AssertionError</failure></testcase><testcase classname="tests_v3.test_plan_preferences_ui" name="test_cnc_allowance_reaches_recommendation_and_limits_edits[\ud615\uc0c1\ub9cc \xb7 \ud604\uc7ac \uacf5\uad6c \uc720\uc9c0]" time="0.392"><failure message="AssertionError: assert 'verified_policy' == 'learned'&#10;  &#10;  - learned&#10;  + verified_policy">allowance = '형상만 · 현재 공구 유지'
+preference_backend = (WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-158/test_cnc_allowance_reaches_rec2/preferences.jso...'allow_tool_change': False, 'preserve_geometry': False}}], 'record_plan_preference': [], 'reset_plan_preferences': []})
+
+    @pytest.mark.parametrize("allowance", list(ALLOWANCES))
+    def test_cnc_allowance_reaches_recommendation_and_limits_edits(allowance, preference_backend):
+        path, calls = preference_backend
+        app = open_app(cnc_report(), "CNC", "cnc")
+        original_measurements = measurements(app)
+        app.selectbox(key="cnc_plan_allowance").select(allowance).run()
+        plan = result(app)
+        prefs = ALLOWANCES[allowance]
+        assert app.session_state["test_report"]["review_context"]["plan_preferences"] == prefs
+        assert calls["recommend_plan"][-1]["preferences"] == prefs
+&gt;       assert plan["selection_source"] == "learned"
+E       AssertionError: assert 'verified_policy' == 'learned'
+E         
+E         - learned
+E         + verified_policy
+
+tests_v3\test_plan_preferences_ui.py:181: AssertionError</failure></testcase><testcase classname="tests_v3.test_plan_preferences_ui" name="test_cnc_preference_is_scoped_to_allowed_changes_and_reset_to_current_context" time="0.521"><failure message="AssertionError: assert 'verified_policy+preference' == 'learned+preference'&#10;  &#10;  - learned+preference&#10;  + verified_policy+preference">preference_backend = (WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-158/test_cnc_preference_is_scoped_0/preferences.jso...preference': [{'preferences': {'allow_tool_change': True, 'preserve_geometry': False}}], 'reset_plan_preferences': []})
+
+    def test_cnc_preference_is_scoped_to_allowed_changes_and_reset_to_current_context(preference_backend):
+        path, calls = preference_backend
+        app = open_app(cnc_report(), "CNC", "cnc")
+        before = result(app)
+        original_measurements = measurements(app)
+        prefs = ALLOWANCES["형상·공구 모두"]
+        alternative = before["alternatives"][0]
+        app.button(key="cnc_prefer_" + alternative["id"]).click().run()
+        after = result(app)
+        assert after["learning"]["choices"] == 1
+&gt;       assert after["selection_source"] == "learned+preference"
+E       AssertionError: assert 'verified_policy+preference' == 'learned+preference'
+E         
+E         - learned+preference
+E         + verified_policy+preference
+
+tests_v3\test_plan_preferences_ui.py:232: AssertionError</failure></testcase><testcase classname="tests_v3.test_plan_preferences_ui" name="test_preference_reset_remains_available_when_new_part_has_only_one_candidate" time="0.504" /></testsuite></testsuites>

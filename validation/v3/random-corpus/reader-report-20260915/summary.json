@@ -1,0 +1,616 @@
+{
+  "created_utc": "2026-09-14T15:37:59.963897+00:00",
+  "geometry_files": 26,
+  "case_count": 744,
+  "process_totals": {
+    "MEX": {
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      },
+      "layer": {
+        "complete": 164,
+        "unknown": 13,
+        "unavailable": 8,
+        "partial": 1
+      }
+    },
+    "VPP": {
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      },
+      "layer": {
+        "not_applicable": 186
+      }
+    },
+    "PBF_POLYMER": {
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      },
+      "layer": {
+        "not_applicable": 186
+      }
+    },
+    "PBF_METAL": {
+      "wall": {
+        "measured": 77,
+        "unknown": 18,
+        "partial": 91
+      },
+      "section": {
+        "complete": 166,
+        "unknown": 18,
+        "partial": 2
+      },
+      "layer": {
+        "not_applicable": 186
+      }
+    }
+  },
+  "files": [
+    {
+      "id": "file_001",
+      "file": "11.1 Mesh_Arm_2.stp",
+      "format": ".stp",
+      "source_sha256": "0958a7ed349b7d757c3687b3d2d7c7c5f556a2f572dcd24535d8b56afa125665",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        137.99702507375892,
+        372.97533291401174,
+        52.38750011279599
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_002",
+      "file": "12.1 Bracket.stp",
+      "format": ".stp",
+      "source_sha256": "ee9ee6319d5c9153960a15fc2f719bb2567797e37f2bc0e0b656dbb94b783110",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        55.0,
+        55.0,
+        40.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 0,
+      "cad_geometry_kind": "surface",
+      "cases": 4,
+      "section_statuses": {
+        "unknown": 4
+      }
+    },
+    {
+      "id": "file_003",
+      "file": "13.1 Submodelv150.stp",
+      "format": ".stp",
+      "source_sha256": "98365b9ff66f6bac8ade7853981697bef6abac878d8d6631a136194d9a12da4f",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        84.99997523283514,
+        84.99998473126155,
+        30.024042738219073
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_004",
+      "file": "191222362-19-flange_h204-6_3-uf31-225-ga65/flange_h204-6_3-uf31-225-ga65.stp",
+      "format": ".stp",
+      "source_sha256": "1586d238b7ab3f5581d09d2275a67b1a9ed4b7d60cb5292bf718ca18a3cb0745",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        450.0,
+        450.0,
+        338.5
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "cases": 12,
+      "section_statuses": {
+        "unknown": 4,
+        "complete": 8
+      }
+    },
+    {
+      "id": "file_006",
+      "file": "191222516-19-cooling_fan_uf21-h204-6_3/cooling_fan_uf21-h204-6_3.stp",
+      "format": ".stp",
+      "source_sha256": "a7e5a80f3be0af7faa60fc99f5ff5c9938582324c7a57be22a87af9aefdabe97",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        310.0,
+        390.0,
+        365.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "cases": 12,
+      "section_statuses": {
+        "unknown": 4,
+        "complete": 8
+      }
+    },
+    {
+      "id": "file_008",
+      "file": "191222528-19-gearbox_b204hs_a-6_3/gearbox_b204hs_a-6_3.stp",
+      "format": ".stp",
+      "source_sha256": "0b79c26cb290d35c84fba0d8e0a1a58973ce2adc552e4bcb2c61aa4d5ce06759",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        787.0,
+        400.0,
+        452.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_010",
+      "file": "191223275-19-e_00300_010_a/E_00300_010_A.stp",
+      "format": ".stp",
+      "source_sha256": "72e9d5de49d4a22cf09e98216dd3a5e7b2f54ee8c2dc570dad81658129fe2d99",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        32.0,
+        32.0,
+        50.00000000000001
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_012",
+      "file": "191223310-19-900-602/900-602.stp",
+      "format": ".stp",
+      "source_sha256": "a82f75d019b5e4b2f30a2f856413c10d4a0b260bae2329e43d56518c330e5797",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        30.0,
+        30.0,
+        6000.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_014",
+      "file": "2.1 Cap_fillets.stp",
+      "format": ".stp",
+      "source_sha256": "4b98de09f4ff958974ebf92e298dde2210b6e2a5bbdddb82a22634ac1e8883c8",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_015",
+      "file": "3.1 Gear_Set_2D.stp",
+      "format": ".stp",
+      "source_sha256": "798e0310104322b54261ae3ffe028a24502f21e0a46a0bb65e161cbbd2283a0f",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        107.51532523473489,
+        127.76532523473651,
+        0.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 0,
+      "cad_geometry_kind": "surface",
+      "cases": 4,
+      "section_statuses": {
+        "unknown": 4
+      }
+    },
+    {
+      "id": "file_016",
+      "file": "3.3 Bolt_Plates.stp",
+      "format": ".stp",
+      "source_sha256": "28c5321582fb4441da4976d88d700b2bfb8d7aa2632ec6d97b163f0432b3b391",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        160.0,
+        60.0,
+        55.00000000000001
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "cases": 12,
+      "section_statuses": {
+        "unknown": 4,
+        "complete": 8
+      }
+    },
+    {
+      "id": "file_017",
+      "file": "3.4 Valve_RM_20130113.stp",
+      "format": ".stp",
+      "source_sha256": "dff5b66f1ffd4dee39e9c3e1658763a0e4df2f14e105897d6e347fc2a6334a1d",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        119.98753964279678,
+        220.0,
+        183.303278030101
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 22,
+      "cad_geometry_kind": "solid",
+      "cases": 92,
+      "section_statuses": {
+        "unknown": 8,
+        "complete": 84
+      }
+    },
+    {
+      "id": "file_018",
+      "file": "4.2 assembly_solid.stp",
+      "format": ".stp",
+      "source_sha256": "5ce198fa86371feec5ecdfbfd860c94d58b788b19227d9795a6bc177e9379709",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        200.0,
+        140.0,
+        190.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 3,
+      "cad_geometry_kind": "solid",
+      "cases": 16,
+      "section_statuses": {
+        "unknown": 4,
+        "complete": 12
+      }
+    },
+    {
+      "id": "file_019",
+      "file": "7.1 Pump_assy_3.stp",
+      "format": ".stp",
+      "source_sha256": "d073299876db256ed5db8a00904efa0184ed789007630157bebd3c5df5df755e",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        229.9621738118068,
+        199.99356117916403,
+        87.01
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 5,
+      "cad_geometry_kind": "solid",
+      "cases": 24,
+      "section_statuses": {
+        "unknown": 8,
+        "complete": 16
+      }
+    },
+    {
+      "id": "file_020",
+      "file": "7.2 Flange Mount.stp",
+      "format": ".stp",
+      "source_sha256": "89a01cd65d0dc6a1b2014ea1a03eed2297f588cdabe0a385249d3fd4ef663b52",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        100.0,
+        100.0,
+        70.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 2,
+      "cad_geometry_kind": "solid",
+      "cases": 12,
+      "section_statuses": {
+        "unknown": 4,
+        "complete": 8
+      }
+    },
+    {
+      "id": "file_021",
+      "file": "8.1 Machine_Frame.stp",
+      "format": ".stp",
+      "source_sha256": "b46ed073767f89fa261db11bb395e1a7abfeaf2c945664f0ddd896e5b124fdaf",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        1500.0,
+        115.0,
+        2010.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 8,
+      "cad_geometry_kind": "solid",
+      "cases": 36,
+      "section_statuses": {
+        "unknown": 4,
+        "complete": 32
+      }
+    },
+    {
+      "id": "file_022",
+      "file": "9.1 Pump_housing.stp",
+      "format": ".stp",
+      "source_sha256": "3f6c7c9714a7728ed67d4f76fe22d189b8a98fa281af22e767df0571a266d37c",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        229.9621738118068,
+        199.99356117916403,
+        75.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_023",
+      "file": "Arduino-UNO.stl",
+      "format": ".stl",
+      "source_sha256": "cf329252fc31d3fdbf3bebd06323a950b652cb4c04b7fd4ab1dba83a0a2425cd",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        53.5,
+        14.899341821670532,
+        75.0
+      ],
+      "unit_status": "assumed",
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "cases": 4,
+      "section_statuses": {
+        "unknown": 4
+      }
+    },
+    {
+      "id": "file_024",
+      "file": "Arduino-UNO.stp",
+      "format": ".stp",
+      "source_sha256": "3d66712210e5119ab955b9018ce41b578ef4c0ccf8933ad84d5a8ac1a9f57a69",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        53.5,
+        14.899999999999999,
+        75.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_025",
+      "file": "build_tray_v3.step",
+      "format": ".step",
+      "source_sha256": "bb0656d93eb3edd4f188579a32f21f567689193d17f703482b2800b69fb5af12",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        388.5,
+        420.0,
+        30.0
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 5,
+      "cad_geometry_kind": "solid",
+      "cases": 24,
+      "section_statuses": {
+        "unknown": 4,
+        "complete": 20
+      }
+    },
+    {
+      "id": "file_026",
+      "file": "Raspberry Pi 4 Model B.step",
+      "format": ".step",
+      "source_sha256": "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        88.99,
+        19.9,
+        58.4
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 109,
+      "cad_geometry_kind": "solid",
+      "cases": 440,
+      "section_statuses": {
+        "unknown": 12,
+        "complete": 420,
+        "partial": 8
+      }
+    },
+    {
+      "id": "file_027",
+      "file": "Raspberry Pi 4 Model B.stl",
+      "format": ".stl",
+      "source_sha256": "892b290d90841e9c9c55eadddc7f7007d277f2fe16a0cff3a5d6194294a73dd7",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        88.98999786376953,
+        19.899999856948853,
+        58.39999961853027
+      ],
+      "unit_status": "assumed",
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "cases": 4,
+      "section_statuses": {
+        "unknown": 4
+      }
+    },
+    {
+      "id": "file_028",
+      "file": "SG90-Servo.stl",
+      "format": ".stl",
+      "source_sha256": "0782db5ca9499c9cc7474d9c454199582ba2fbdbffe72fa2a8c95bb4564da59f",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        32.25,
+        29.75,
+        12.5
+      ],
+      "unit_status": "assumed",
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_029",
+      "file": "SG90-Servo.stp",
+      "format": ".stp",
+      "source_sha256": "e2bb320f91ece91deaff236bc0b12565e93ab54a3e619d6c5f2fba884c62aeea",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        32.25,
+        29.75,
+        12.5
+      ],
+      "unit_status": "declared_in_step",
+      "solid_count": 1,
+      "cad_geometry_kind": "solid",
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_030",
+      "file": "the-over-engineered-backpack-wall-mount-v2.3mf",
+      "format": ".3mf",
+      "source_sha256": "c7a60163a61148adf32a55c49fec4b7d6909efc758f8843fad3241c754c5e44c",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        38.099998400000004,
+        82.550003,
+        42.07017520000002
+      ],
+      "unit_status": "declared_in_3mf",
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    },
+    {
+      "id": "file_031",
+      "file": "the-over-engineered-backpack-wall-mount-v2.stl",
+      "format": ".stl",
+      "source_sha256": "390bc9ddefd6125998794924251e9895be8cff85a544ba34c1670f49c9388395",
+      "original_unchanged": true,
+      "input_status": "reviewed",
+      "extents_mm": [
+        38.09999942779541,
+        42.070133447647095,
+        82.55000305175781
+      ],
+      "unit_status": "assumed",
+      "solid_count": null,
+      "cad_geometry_kind": null,
+      "cases": 4,
+      "section_statuses": {
+        "complete": 4
+      }
+    }
+  ],
+  "raw_code_sha256": "933adc53cea91a16c7a957d70682fa007e44020ec1873a90f19289c616571a51",
+  "current_code_sha256": "dfa1f3f44c96a19ee5ffd3dd11fc8b882034b5dfdf51783bf0bc29fc01ea45fa",
+  "scope": "Every listed geometry and selected CAD solid across four processes; numerical geometry audit, no physical print qualification.",
+  "event_sections": {
+    "target_count": 195,
+    "unique_geometry_count": 186,
+    "whole_single_body_duplicates": 9,
+    "status_counts": {
+      "complete": 124,
+      "partial": 32,
+      "unknown": 39
+    }
+  }
+}

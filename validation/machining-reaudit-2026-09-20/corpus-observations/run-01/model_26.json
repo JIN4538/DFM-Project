@@ -1,0 +1,253 @@
+{
+  "schema_version": "dfm-review-1",
+  "process_family": "machining",
+  "process": "MILLING_3AXIS",
+  "created_utc": "2026-09-19T16:10:53.473732+00:00",
+  "model_fingerprint": "78b6c37f7d1b6639f767948a563468837ca9a2e85284e42415e1364642e3eb91",
+  "input": {
+    "filename": "the-over-engineered-backpack-wall-mount-v2.stl",
+    "source_sha256": "390bc9ddefd6125998794924251e9895be8cff85a544ba34c1670f49c9388395",
+    "source_bytes": 795384,
+    "source_format": "stl",
+    "coordinate_unit": "mm",
+    "unit_status": "assumed",
+    "dimensions_confirmed": false,
+    "selected_unit": "mm",
+    "scale_factor": 1.0,
+    "target_longest_mm": null,
+    "unit_note": "STL에는 단위가 없습니다. 표시 치수는 선택 단위·배율에 따른 값입니다.",
+    "coordinate_welding": "exact coordinate triples; no repair",
+    "solid_count": null,
+    "surface_component_count": 1,
+    "exact_volume_mm3": null,
+    "exact_area_mm2": null
+  },
+  "profile": {
+    "machine": "미확정",
+    "material": "미확정",
+    "tool_diameter_mm": 4.0,
+    "flute_length_mm": 10.0,
+    "reach_mm": 15.0,
+    "hole_depth_ratio_limit": null,
+    "basis": "감사 시연 조건: 지름4/날길이10/끝날-홀더 돌출길이15mm. 실제 공구·재료·장비의 검증된 가공 조건이 아님."
+  },
+  "direction": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "current_orientation": {
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "findings": [
+    {
+      "id": "cnc_input",
+      "title": "절삭 검토 입력",
+      "status": "unknown",
+      "reason": "현재 입력에서는 CAD 특징 치수를 확정하지 않습니다.",
+      "action": "단위가 선언된 단일 솔리드 STEP을 선택하세요.",
+      "method": "STEP transfer metadata: validity, solid count and availability of B-rep face records",
+      "evidence": [],
+      "measurements": {
+        "cad_feature_dimensions_available": false
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "공차·표면 거칠기·PMI·소재·고정 방법은 자동 추출하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_coverage",
+      "title": "CAD 면 정보와 특징 인식 범위",
+      "status": "unknown",
+      "reason": "CAD 특징 인식에 필요한 입력을 확인할 수 없습니다.",
+      "action": "미확정 면은 CAD/CAM에서 별도로 확인하세요. 검출되지 않은 특징을 없는 것으로 판단하지 않습니다.",
+      "method": "Inventory of unsupported surfaces, unresolved cylinder material sides and incomplete planar boundary extraction",
+      "evidence": [],
+      "measurements": {
+        "incomplete_boundary_face_ids": [],
+        "unresolved_cylinder_face_ids": [],
+        "unsupported_face_ids": [],
+        "cad_features_available": false
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "경계 추출 완료와 전체 포켓·구멍 인식 완료는 다릅니다. 분할·교차·섬·곡선 경계 특징은 전수 인식하지 않습니다.",
+        "4변 외 평면 바닥(예: 챔퍼 때문에 8변이 된 포켓)은 폭·깊이 비교에서 제외됩니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_holes",
+      "title": "원통형 내부 특징과 공구",
+      "status": "unknown",
+      "reason": "단일 STEP 솔리드가 없어 원통형 특징 검토를 보류합니다.",
+      "action": "단위가 선언된 단일 솔리드 STEP을 선택하세요.",
+      "method": "Analytic cylindrical face diameter and UV axial bounds; fixed-axis and user tool-condition comparisons",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_FACE_RECOGNITION",
+        "CNC_TOOL_DIMENSIONS"
+      ],
+      "measurements": {
+        "cylindrical_faces": [],
+        "face_count": null,
+        "unresolved_cylinder_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "원통면 구간은 홀 전체 깊이나 홀 개수가 아닙니다. 분할·교차 홀을 병합하지 않습니다.",
+        "축 정렬은 양쪽에서의 기하 방향 일치만 뜻합니다. 입구·막힘·홀더 충돌을 확인한 결과가 아닙니다.",
+        "선택 축과 평행하지 않은 원통면은 지름·돌출 길이 비교를 보류합니다. 다른 공구·경로까지 가공 불가로 판정한 결과가 아닙니다.",
+        "원주 방향 범위 360°는 모든 높이에 원통 벽이 있다는 뜻이 아닙니다. 교차·트림 구간이 포함될 수 있습니다.",
+        "수치 경계의 비교는 초과로 확정하지 않습니다. 같은 치수는 실제 가공 여유가 확보되었다는 뜻이 아닙니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_curved_corners",
+      "title": "공구축과 나란한 오목 원통면",
+      "status": "unknown",
+      "reason": "단일 STEP 솔리드가 없어 오목 원통면 반경 검토를 보류합니다.",
+      "action": "단위가 선언된 단일 솔리드 STEP을 선택하세요.",
+      "method": "Concave analytic cylindrical face radius versus radius of the user-specified cylindrical end mill",
+      "evidence": [
+        "CNC_CORNER"
+      ],
+      "measurements": {
+        "cylindrical_faces": [],
+        "unresolved_cylinder_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "부분 원통면을 포켓 코너로 확정하지 않습니다. 선택 축에서 원통형 엔드밀 옆날이 접근하는 조건의 기하 비교입니다.",
+        "공구 반경과 형상 반경이 같은 수치 경계는 여유·안정성·표면 품질을 보장하지 않습니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_rectangular_pockets",
+      "title": "직사각 포켓 바닥과 내부 직각",
+      "status": "unknown",
+      "reason": "단일 STEP 솔리드가 없어 포켓 검토를 보류합니다.",
+      "action": "곡선·분할 면·섬이 있는 포켓은 별도 CAD/CAM 검토가 필요합니다.",
+      "method": "Restricted B-rep adjacency recognition of four-sided floors; local width and wall-height comparisons",
+      "evidence": [
+        "CNC_GEOMETRY",
+        "CNC_CORNER",
+        "CNC_TOOL_DIMENSIONS"
+      ],
+      "measurements": {
+        "pockets": [],
+        "count": null,
+        "incomplete_boundary_face_ids": [],
+        "unresolved_floor_face_ids": []
+      },
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [
+        "직선 4변 바닥·평면 수직벽·동일 벽높이만 인식합니다. 전체 포켓 목록이 아닙니다.",
+        "벽 높이는 공구 경로 길이 또는 전체 진입 깊이를 보장하지 않습니다. 홀더·고정구·소재 제거 순서는 미검토입니다.",
+        "내부 바닥 후보는 채널·밀폐 공동·섬·곡선 경계나 수치 불일치일 수도 있습니다. 열린 포켓으로 확정한 수가 아닙니다.",
+        "벽 높이가 날 길이보다 커도 여러 깊이의 절입이나 목부 공구를 사용할 수 있으므로 그 자체를 가공 불가로 판정하지 않습니다.",
+        "수치 경계의 비교는 초과로 확정하지 않습니다. 같은 치수는 실제 가공 여유가 확보되었다는 뜻이 아닙니다."
+      ],
+      "severity": "info"
+    },
+    {
+      "id": "cnc_visibility",
+      "title": "선택 방향의 표면 가림",
+      "status": "unknown",
+      "reason": "표면 표본의 직선 접근 검사를 아직 실행하지 않았습니다.",
+      "action": "표면 가림 검사를 실행해 선택 방향에서 가려진 위치를 확인하세요.",
+      "method": "point_visibility; deterministic sampled mesh points and straight rays; finite cutter and holder not modeled",
+      "evidence": [
+        "CNC_ACCESS_SCOPE"
+      ],
+      "measurements": {},
+      "face_indices": [],
+      "cad_face_ids": [],
+      "limitations": [],
+      "severity": "info"
+    }
+  ],
+  "visibility": null,
+  "sources": [
+    {
+      "id": "CNC_GEOMETRY",
+      "title": "Protolabs — Design for Machining Toolkit",
+      "url": "https://www.protolabs.com/en-gb/resources/design-for-machining-toolkit/",
+      "scope": "Internal corners, deep features and access motivate checks. Service-specific limits are not universal limits."
+    },
+    {
+      "id": "CNC_CORNER",
+      "title": "Protolabs Network — Sharp corners in CNC machining",
+      "url": "https://www.hubs.com/knowledge-base/sharp-corners-in-cnc-machining/",
+      "scope": "Geometric cutter radius constraint; not a prediction of stability, surface quality or time."
+    },
+    {
+      "id": "CNC_TOOL_DIMENSIONS",
+      "title": "Harvey Performance — The Anatomy of an End Mill",
+      "url": "https://www.harveyperformance.com/in-the-loupe/end-mill-anatomy/",
+      "scope": "Cutting length, overall length and length below shank are distinct. The entered tip-to-holder reach is an explicit user condition, not an inferred catalog value."
+    },
+    {
+      "id": "CNC_FACE_RECOGNITION",
+      "title": "Yeo et al. — Machining feature recognition based on deep neural networks to support tight integration with 3D CAD systems (2021)",
+      "url": "https://www.nature.com/articles/s41598-021-01313-3",
+      "scope": "A cylindrical feature can use one or multiple B-rep faces. This implementation measures face segments and does not implement complete machining-feature reconstruction."
+    },
+    {
+      "id": "CNC_ACCESS_SCOPE",
+      "title": "Autodesk Fusion — Shaft and Holder",
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-CAM/files/GUIDD505C759-C325-4C99-BBDD-35FE39B3761F.htm",
+      "scope": "Actual shaft/holder collision checks involve toolpath and clearance conditions. This source does not validate the implementation's sampled point-ray algorithm."
+    }
+  ],
+  "numerical_policy": {
+    "length_absolute_comparison_mm": 1e-09,
+    "comparison_relative_tolerance": 1e-10,
+    "axis_sine_tolerance": 1e-08,
+    "axis_angle_tolerance_deg": 5.729577951308232e-07,
+    "boundary_scope": "Floating-point comparison policy only; boundary cases do not establish design tolerance, machining clearance or feasibility."
+  },
+  "scope": "Fixed-axis geometric review; not machining certification or success probability.",
+  "unassessed": [
+    "공구·홀더·고정구의 실제 경로 충돌",
+    "소재와 고정·가공 순서",
+    "절삭력·처짐·진동·표면 품질",
+    "공차와 PMI",
+    "분할·자유곡면 포켓 및 교차 홀",
+    "가공 시간·비용·성공 확률"
+  ]
+}

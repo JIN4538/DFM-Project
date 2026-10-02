@@ -1,0 +1,49 @@
+{
+  "raw": {
+    "CadQuarry": 1000,
+    "PBF-orientation": 40000
+  },
+  "splits": [
+    [
+      "CadQuarry",
+      "test",
+      145,
+      145
+    ],
+    [
+      "CadQuarry",
+      "train",
+      688,
+      688
+    ],
+    [
+      "CadQuarry",
+      "validation",
+      167,
+      167
+    ],
+    [
+      "PBF-orientation",
+      "test",
+      5936,
+      5725
+    ],
+    [
+      "PBF-orientation",
+      "train",
+      28272,
+      27400
+    ],
+    [
+      "PBF-orientation",
+      "validation",
+      5792,
+      5624
+    ]
+  ],
+  "cad_missing_mesh": 0,
+  "cross_split_raw_duplicate_groups": 0,
+  "quick_check": "ok",
+  "group_policy": "Canonical dimension parameters exclude published rotation; CadQuarry quantized geometry signature; author split retained in metadata",
+  "scope": "Raw original data; source programs stored but never executed; derived measurements/targets require separate audit"
+}

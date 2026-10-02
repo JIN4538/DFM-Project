@@ -1,0 +1,175 @@
+- log
+- log
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 적층제조
+- button "Open":
+- heading "검토할 형상" [level=3]
+- list:
+  - listitem: 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토
+- paragraph: 입력
+- combobox "입력": CAD 기준형상
+- button "Open":
+- paragraph: 형상 선택
+- combobox "형상 선택": 직육면체 · 10×20×30 mm
+- button "Open":
+- paragraph: 치수를 정의한 자체 CAD 예제입니다. 원본 STEP을 내려받아 수정할 수 있습니다.
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- separator
+- paragraph: 적층제조 공정
+- combobox "적층제조 공정": 재료 압출 · FFF/FDM
+- button "Open":
+- generic "keyboard_arrow_right 장비·재료·공구 조건 라이브러리":
+  - generic: keyboard_arrow_right
+  - paragraph: 장비·재료·공구 조건 라이브러리
+- paragraph: 위로 향할 모델 방향
+- button "Help for 위로 향할 모델 방향":
+- combobox "위로 향할 모델 방향": +Z
+- button "Open":
+- paragraph: "적층축 (모델 좌표): 0, 0, 1"
+- paragraph: 아래 탐색 조건·장비 기준·층 설정을 함께 적용합니다.
+- button "play_arrow 설계 검토" [active]:
+  - generic: play_arrow
+  - paragraph: 설계 검토
+- paragraph: 하향면 탐색 각도 · 수평면 기준 (°)
+- spinbutton "하향면 탐색 각도 · 수평면 기준 (°)": "45.00"
+- button "Decrement":
+- button "Increment":
+- paragraph: 각도는 사용자 탐색 조건이며 이 공정의 보편적 출력 한계가 아닙니다.
+- checkbox "대각선 포함 26방향 비교" [checked]
+- paragraph: 대각선 포함 26방향 비교
+- checkbox "주요 면 방향까지 비교"
+- paragraph: 주요 면 방향까지 비교
+- checkbox "벽·층간·단면까지 한 번에 검토" [checked]
+- paragraph: 벽·층간·단면까지 한 번에 검토
+- paragraph: 현재 방향의 상세 검사를 총 45초 예산으로 함께 실행합니다. 층간 검사는 FDM 전용이며, 계산하지 못한 범위는 결과에 남깁니다.
+- generic "keyboard_arrow_down 장비·재료와 검토 기준":
+  - generic: keyboard_arrow_down
+  - paragraph: 장비·재료와 검토 기준
+- paragraph: 장비·재료·수치 기준은 공정별로 따로 보관합니다.
+- paragraph: 벽·홀의 적합 여부를 비교하려면 제조사 가이드나 시편에서 정한 기준을 입력하세요. 비워 두어도 형상 측정은 가능합니다.
+- paragraph: 장비
+- textbox "장비":
+  - /placeholder: ""
+  - text: 미확정
+- paragraph: 재료
+- textbox "재료":
+  - /placeholder: ""
+  - text: 미확정
+- paragraph: 슬라이서·버전
+- textbox "슬라이서·버전":
+  - /placeholder: ""
+  - text: 미확정
+- paragraph: 최소 벽 검토 기준 (mm, 선택)
+- spinbutton "최소 벽 검토 기준 (mm, 선택)": "1.00"
+- button "Clear value":
+- button "Decrement":
+- button "Increment":
+- paragraph: 최소 홀 검토 기준 (mm, 선택)
+- spinbutton "최소 홀 검토 기준 (mm, 선택)"
+- button "Decrement" [disabled]:
+- button "Increment" [disabled]:
+- paragraph: 기준 출처·시편 기록
+- textbox "기준 출처·시편 기록":
+  - /placeholder: ""
+  - text: "UI 동작 검증용 가정: 최소 벽 1 mm. 실제 제조 기준 아님."
+- paragraph: 공정 조건·설계 요구
+- textbox "공정 조건·설계 요구":
+  - /placeholder: 온도·속도·공차·하중·후처리 등
+- paragraph:
+  - strong: 기준을 모를 때
+  - text: · 제조사 가이드에서 같은 장비·재료·방향의 조건을 먼저 찾으세요. 시편으로 정한다면 요구 치수·형상 유지·강도 중 무엇을 만족해야 하는지 정하고 반복 출력·측정 기록을 남기세요.
+- paragraph: 자체 CAD 예제는 계산 확인용이며 ISO/ASTM 52902 표준 시험물로 인증된 형상이 아닙니다. 한 번 출력된 최소 치수를 모든 부품의 기준으로 사용하지 마세요.
+- generic "keyboard_arrow_right 빌드 공간과 층 설정":
+  - generic: keyboard_arrow_right
+  - paragraph: 빌드 공간과 층 설정
+- paragraph: 기본 각도·선폭은 탐색 조건입니다. 장비가 정해지면 제조사 조건과 시편 기록을 입력하세요.
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- paragraph:
+  - strong: DFM · 제조성 설계 검토
+- paragraph: 결과 보기
+- radiogroup "결과 보기":
+  - radio "설계 조치" [checked]:
+    - paragraph: 설계 조치
+  - radio "방향 비교":
+    - paragraph: 방향 비교
+  - radio "정밀 검토":
+    - paragraph: 정밀 검토
+  - radio "수정 전후":
+    - paragraph: 수정 전후
+  - radio "근거·내보내기":
+    - paragraph: 근거·내보내기
+- status:
+  - paragraph: 실행한 검사에서 우선 수정할 후보가 없습니다
+- paragraph: 표시된 검사 범위의 결과입니다. 실제 제작 전 장비·재료 조건과 슬라이서 설정을 확인하세요.
+- paragraph: 현재 높이
+- paragraph: 30.00 mm
+- paragraph: 검토 공정
+- paragraph: 재료 압출 · FFF/FDM
+- paragraph: CAD 재료 체적
+- paragraph: 6 cm³
+- paragraph:
+  - strong: 종합 방향 제안
+- status:
+  - paragraph: "먼저 적용할 추천 방향: +X"
+- paragraph:
+  - strong: 바뀌는 점
+  - text: · 빌드 높이 30 → 10 mm (유리) / 평평한 바닥 면적 200 → 600 mm² (유리)
+- button "추천 방향 적용·전체 다시 검토":
+  - paragraph: 추천 방향 적용·전체 다시 검토
+- paragraph:
+  - strong: 다음 행동
+  - text: · +X 방향을 적용하고 자동으로 다시 검토한 문제 위치를 확인하세요.
+- paragraph: 현재 계산 가능한 기하 지표 안에서 고른 기본안입니다. 높이·하향면·바닥 면적은 시간·서포트 양·접착력의 실측값이 아닙니다.
+- generic "keyboard_arrow_right 추천 기준·같은 수준의 대안·미검토 항목":
+  - generic: keyboard_arrow_right
+  - paragraph: 추천 기준·같은 수준의 대안·미검토 항목
+- heading "권장 개선 순서" [level=3]:
+  - text: 권장 개선 순서
+  - link "Link to heading":
+    - /url: "#8f287b7c"
+- status:
+  - paragraph: 실행한 기하 검사에서 우선 수정할 후보가 없습니다. 적용 조건을 확인하고 보고서를 저장하세요.
+- generic "keyboard_arrow_right 전체 검토 현황 · 끝난 확인과 남은 확인":
+  - generic: keyboard_arrow_right
+  - paragraph: 전체 검토 현황 · 끝난 확인과 남은 확인
+- heading "문제 위치와 측정값" [level=3]:
+  - text: 문제 위치와 측정값
+  - link "Link to heading":
+    - /url: "#415e542c"
+- paragraph: 이 화면에서 바로 확인할 항목
+- combobox "이 화면에서 바로 확인할 항목": 하향면과 지지 검토 · 후보 미검출
+- button "Open":
+- switch "내부 검토면 보기"
+- generic "내부 검토면 보기":
+  - paragraph: 내부 검토면 보기
+- toolbar:
+  - button "Download plot as a PNG":
+  - button "Zoom":
+  - button "Pan":
+  - button "Orbital rotation":
+  - button "Turntable rotation":
+  - button "Reset camera to default":
+  - button "Reset camera to last save":
+  - button "Fullscreen":
+- paragraph: "주황색 면: 선택 항목의 검토 후보 · 녹색 화살표: 실제 적층 +Z 방향. 색 자체가 제작 불가를 뜻하지 않습니다."
+- paragraph: 이 항목에는 표시할 면 위치가 없습니다. 판단과 다음 행동을 확인하세요.
+- status:
+  - paragraph: 후보 미검출
+- paragraph: 설정 각도 미만의 하향면 후보가 검출되지 않았습니다.
+- paragraph:
+  - strong: 다음에 할 일
+  - text: · 현재 각도 조건에서는 하향면 수정 후보가 없습니다. 벽·내부 형상 검토를 이어가세요.
+- button "추천 방향과 형상 비교하기":
+  - generic "추천 방향과 형상 비교하기":
+    - paragraph: 추천 방향과 형상 비교하기
+- generic "keyboard_arrow_right 측정값과 한계":
+  - generic: keyboard_arrow_right
+  - paragraph: 측정값과 한계
+- paragraph: 기하 기반 설계 검토입니다. 출력 성공·강도·표준 적합 여부는 실제 공정 검증이 필요합니다.

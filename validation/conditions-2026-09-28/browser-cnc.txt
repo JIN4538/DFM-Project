@@ -1,0 +1,181 @@
+- log
+- log
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 절삭가공
+- button "Open":
+- heading "검토할 형상" [level=3]
+- list:
+  - listitem: 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토
+- paragraph: 입력
+- combobox "입력": CAD 기준형상
+- button "Open":
+- paragraph: 형상 선택
+- combobox "형상 선택": 브래킷 · 두께 4 mm
+- button "Open":
+- paragraph: 치수를 정의한 자체 CAD 예제입니다. 원본 STEP을 내려받아 수정할 수 있습니다.
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- separator
+- paragraph:
+  - strong: 절삭 조건 · 고정축 밀링
+- generic "keyboard_arrow_down 장비·재료·공구 조건 라이브러리":
+  - generic: keyboard_arrow_down
+  - paragraph: 장비·재료·공구 조건 라이브러리
+- paragraph: 출처와 적용 조건을 확인한 뒤 가져오세요. 장비 미정이면 직접 입력이나 형상 측정부터 진행할 수 있습니다.
+- paragraph: 조건 검색
+- textbox "조건 검색":
+  - /placeholder: 장비명, 재료명, 공구 번호…
+- paragraph: 찾아볼 조건
+- combobox "찾아볼 조건": Harvey 677761 · Ø4 / 날 12 mm · 4날
+- button "Open":
+- paragraph: 현재 공정 자료 29개 · 검색 결과 29개. 선택만으로 검토 조건이 바뀌지는 않습니다.
+- paragraph:
+  - strong: Harvey 677761 · Ø4 / 날 12 mm · 4날
+- paragraph: "장비: 미확정"
+- paragraph: "재료: 미확정"
+- paragraph: • 정확한 공구 번호 677761; 무코팅 UN; 4날 Square; 초경 제품군
+- paragraph: • 고정축 엔드밀 기하 비교용 명목 치수
+- button "Show/hide columns":
+- button "Download as CSV":
+- button "Search":
+- button "Fullscreen":
+- paragraph: 값별 적용 조건·원문 위치
+- combobox "값별 적용 조건·원문 위치": 엔드밀 지름
+- button "Open":
+- paragraph: "원문 위치: TOOL DIMENSIONS; Cutter Diameter"
+- paragraph: "이 값의 조건: 정확한 공구 번호 677761; 무코팅 UN; 4날 Square; 초경 제품군"
+- paragraph: "이 값의 조건: 고정축 엔드밀 기하 비교용 명목 치수"
+- paragraph: "적용 범위: 카탈로그 Overall Reach L3는 날 끝부터 목부 끝까지 치수이며 장착된 홀더 끝까지의 길이 reach_mm가 아님."
+- paragraph: "적용 범위: 날 길이는 명목 절삭부 길이이며 허용 절입량·안정성·공구 수명이 아님."
+- paragraph: "적용 범위: 실제 장착 도달 길이, 소재 적합성, 절삭조건과 홀더/몸통 충돌은 별도 확인."
+- paragraph: 가져오면 기존 장비·재료·수치 조건을 이 자료로 교체합니다. 미제공 벽·홀·공구 기준은 비우고, 나머지는 탐색 기본값으로 돌아갑니다.
+- button "이 조건을 입력에 적용":
+  - paragraph: 이 조건을 입력에 적용
+- paragraph:
+  - strong: 근거 원문
+- paragraph:
+  - link "Harvey Tool 677761 — Square, Long Reach, Standard Flute, Metric":
+    - /url: https://www.harveytool.com/products/tool-details-677761
+- paragraph: "확인 항목: TOOL DIMENSIONS; Catalog Page 33"
+- paragraph: "판본: 웹 표에 별도 판본 없음; 2026-09-28 조회"
+- paragraph: "확인일: 2026-09-28"
+- paragraph: 출처 확인은 실물 제조 검증을 뜻하지 않습니다. 참고 물성·카탈로그 수치는 지원하지 않는 강도·변형·성공률 계산에 사용하지 않습니다.
+- button "직접 입력으로 초기화":
+  - paragraph: 직접 입력으로 초기화
+- paragraph: 초기화하면 가져온 값·출처 연결을 지우고 탐색 기본값과 미입력 기준으로 돌아갑니다.
+- paragraph: "가져온 조건: Harvey 677761 · Ø4 / 날 12 mm · 4날. 아래 값을 확인한 뒤 설계 검토를 실행하세요."
+- paragraph: 공구가 오는 방향
+- combobox "공구가 오는 방향": +Z · 위쪽에서
+- button "Open":
+- paragraph: 화살표는 부품에서 공구 쪽을 향합니다. 공구는 반대 방향으로 진입합니다.
+- paragraph: 원통형 엔드밀의 치수입니다. 비워 두면 해당 공구 비교를 보류합니다.
+- paragraph: 엔드밀 지름 (mm)
+- spinbutton "엔드밀 지름 (mm)": "4.0000"
+- button "Clear value":
+- button "Decrement":
+- button "Increment":
+- paragraph: 날 길이 (mm)
+- button "Help for 날 길이 (mm)":
+- spinbutton "날 길이 (mm)": "12.0000"
+- button "Clear value":
+- button "Decrement":
+- button "Increment":
+- paragraph: 장착 후 돌출 길이 · 끝~홀더 (mm)
+- button "Help for 장착 후 돌출 길이 · 끝~홀더 (mm)":
+- spinbutton "장착 후 돌출 길이 · 끝~홀더 (mm)"
+- button "Decrement" [disabled]:
+- button "Increment" [disabled]:
+- generic "keyboard_arrow_right 재료·장비·근거와 추가 기준":
+  - generic: keyboard_arrow_right
+  - paragraph: 재료·장비·근거와 추가 기준
+- checkbox "선택 방향에서 가려진 표면도 확인"
+- paragraph: 선택 방향에서 가려진 표면도 확인
+- button "절삭 설계 검토":
+  - paragraph: 절삭 설계 검토
+- paragraph: 입력한 새 공구 조건은 위 실행 버튼을 누르면 결과에 적용됩니다.
+- paragraph: 현재는 단일 STEP의 원통면·제한된 직사각 포켓과 표면 표본을 검토합니다.
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "절삭가공 설계 검토" [level=1]:
+  - text: 절삭가공 설계 검토
+  - link "Link to heading":
+    - /url: "#b003ed7d"
+- paragraph: 원통형 엔드밀 · 고정축 밀링의 기하 검토 · 위치와 공구 조건을 비교합니다.
+- paragraph: 포켓 치수는 직선 4변 바닥과 같은 높이의 네 수직 벽에서만 비교합니다. 다른 포켓·자유곡면은 미검토입니다.
+- status:
+  - paragraph: 아래 항목의 측정 결과를 확인하세요. 공구 조건 또는 실행하지 않은 검토가 남아 있어 가공 가능 여부는 확정하지 않습니다.
+- paragraph: "정보·검토가 더 필요한 항목: 직사각 포켓 바닥과 내부 직각 / 선택 방향의 표면 가림"
+- paragraph:
+  - strong: 이 결과에 적용된 공구 조건
+- paragraph: 엔드밀 지름
+- paragraph: 4 mm
+- paragraph: 날 길이
+- paragraph: 12 mm
+- paragraph: 장착 후 돌출 길이
+- paragraph: 미입력
+- paragraph: "공구가 오는 방향: 0, 0, 1 (모델 좌표)"
+- generic "keyboard_arrow_down 가져온 조건·실제 적용값·출처 확인" [active]:
+  - generic: keyboard_arrow_down
+  - paragraph: 가져온 조건·실제 적용값·출처 확인
+- paragraph:
+  - strong: Harvey 677761 · Ø4 / 날 12 mm · 4날
+- paragraph: 라이브러리 원래 값과 현재 입력을 함께 보관합니다. 수정한 값에는 원자료의 검증 범위를 그대로 적용할 수 없습니다.
+- button "Show/hide columns":
+- button "Download as CSV":
+- button "Search":
+- button "Fullscreen":
+- paragraph: • 정확한 공구 번호 677761; 무코팅 UN; 4날 Square; 초경 제품군
+- paragraph: • 고정축 엔드밀 기하 비교용 명목 치수
+- paragraph: "적용 범위: 카탈로그 Overall Reach L3는 날 끝부터 목부 끝까지 치수이며 장착된 홀더 끝까지의 길이 reach_mm가 아님."
+- paragraph: "적용 범위: 날 길이는 명목 절삭부 길이이며 허용 절입량·안정성·공구 수명이 아님."
+- paragraph: "적용 범위: 실제 장착 도달 길이, 소재 적합성, 절삭조건과 홀더/몸통 충돌은 별도 확인."
+- paragraph:
+  - link "Harvey Tool 677761 — Square, Long Reach, Standard Flute, Metric":
+    - /url: https://www.harveytool.com/products/tool-details-677761
+- paragraph: "확인 항목: TOOL DIMENSIONS; Catalog Page 33"
+- paragraph: "판본: 웹 표에 별도 판본 없음; 2026-09-28 조회"
+- paragraph: "확인일: 2026-09-28"
+- generic: "{"
+- generic: ...
+- generic: "}"
+- paragraph: 확인할 항목
+- combobox "확인할 항목": 직사각 포켓 바닥과 내부 직각
+- button "Open":
+- paragraph:
+  - strong: 직사각 포켓 바닥과 내부 직각
+- paragraph: 판단에 필요한 정보 부족
+- paragraph: 내부 바닥 후보 1개가 있지만 직사각 포켓 조건을 확정하지 못했습니다. 이 위치의 폭·벽 높이는 미측정입니다.
+- paragraph:
+  - strong: 다음 행동
+  - text: · 곡선·분할 면·섬이 있는 포켓은 별도 CAD/CAM 검토가 필요합니다.
+- paragraph: 확인할 위치
+- combobox "확인할 위치": 이 항목의 측정·확인 위치 모두
+- button "Open":
+- toolbar:
+  - button "Download plot as a PNG":
+  - button "Zoom":
+  - button "Pan":
+  - button "Orbital rotation":
+  - button "Turntable rotation":
+  - button "Reset camera to default":
+  - button "Reset camera to last save":
+  - button "Fullscreen":
+- paragraph: "파란색: 선택한 측정·추가 확인 위치. 주황색: 이 항목에서 조건 확인이 필요한 위치. 실제 판단은 표의 비교값과 다음 행동을 함께 확인하세요."
+- generic "keyboard_arrow_right 이 결과가 확인한 범위":
+  - generic: keyboard_arrow_right
+  - paragraph: 이 결과가 확인한 범위
+- generic "keyboard_arrow_right 모든 항목과 계산 원자료":
+  - generic: keyboard_arrow_right
+  - paragraph: 모든 항목과 계산 원자료
+- generic "keyboard_arrow_right 근거와 내보내기":
+  - generic: keyboard_arrow_right
+  - paragraph: 근거와 내보내기
+- generic "keyboard_arrow_right 표준·논문 근거 찾아보기":
+  - generic: keyboard_arrow_right
+  - paragraph: 표준·논문 근거 찾아보기
+- paragraph: 가공 경로·고정·절삭 물리 검증은 포함하지 않습니다. 계산 완료는 실제 가공 성공 판정이 아닙니다.

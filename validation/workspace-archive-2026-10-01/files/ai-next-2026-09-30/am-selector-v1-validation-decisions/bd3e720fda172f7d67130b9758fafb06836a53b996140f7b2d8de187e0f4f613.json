@@ -1,0 +1,201 @@
+{
+  "id": "primitives_with_two_bores_0003371",
+  "dataset": "PBF-orientation",
+  "group": "pbf:primitives_with_two_bores:{\"alpha1\": 49, \"alpha2\": 29, \"measure1\": 78, \"measure2\": 96, \"measure3\": 119, \"n_measure1\": 23, \"n_measure2\": 21, \"n_measure3\": 15, \"offset1\": -11, \"offset2\": 13, \"primitive\": \"cylinder\", \"r1\": 8, \"r2\": 10}",
+  "split": "validation",
+  "process": "MEX",
+  "priority": "balanced",
+  "candidate_oracle": {
+    "legacy": 0.8717878699074866,
+    "blind": 0.783074357927789,
+    "geometric": 0.6898731985902363,
+    "height_neural": 0.6898731985902363,
+    "learned": 0.8717878699074866,
+    "uncertainty05": 0.8717878699074866,
+    "uncertainty1": 0.8717878699074866,
+    "retain2_learned": 0.8717878699074866
+  },
+  "actual_product": {
+    "legacy": 0.8854919716050139,
+    "blind": 0.783074357927789,
+    "geometric": 0.6898731985902363,
+    "height_neural": 0.6898731985902363,
+    "learned": 0.8854919716050139,
+    "uncertainty05": 0.8854919716050139,
+    "uncertainty1": 0.8854919716050139,
+    "retain2_learned": 0.8854919716050139
+  },
+  "common_reference_product": {
+    "legacy": 0.8717878699074866,
+    "blind": 0.783074357927789,
+    "geometric": 0.6898731985902363,
+    "height_neural": 0.6898731985902363,
+    "learned": 0.8717878699074866,
+    "uncertainty05": 0.8717878699074866,
+    "uncertainty1": 0.8717878699074866,
+    "retain2_learned": 0.8717878699074866
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.321594603224243,
+        0.05441680366202802,
+        -0.9453125
+      ],
+      "selected_name": "AI \ud655\uc7a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3991649550384407,
+      "fixed_selected_direction": [
+        -0.5113153563220936,
+        0.16262829684557664,
+        -0.8438652993542971
+      ],
+      "own_reference_score": 0.8854919716050139,
+      "fixed_reference_score": 0.8717878699074866,
+      "oracle_score": 0.8717878699074866,
+      "actual_winner_gap": 0.013704101697527338
+    },
+    "blind": {
+      "selected_direction": [
+        0.6199061311141059,
+        -0.77692215236409,
+        -0.11003798331980914
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.7967661600027905,
+      "fixed_selected_direction": [
+        0.6199061311141059,
+        -0.77692215236409,
+        -0.11003798331980914
+      ],
+      "own_reference_score": 0.783074357927789,
+      "fixed_reference_score": 0.783074357927789,
+      "oracle_score": 0.783074357927789,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        -0.689797297644263,
+        0.690521430257995,
+        -0.21762316631536502
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.6900352380706831,
+      "fixed_selected_direction": [
+        -0.689797297644263,
+        0.690521430257995,
+        -0.21762316631536502
+      ],
+      "own_reference_score": 0.6898731985902363,
+      "fixed_reference_score": 0.6898731985902363,
+      "oracle_score": 0.6898731985902363,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -0.689797297644263,
+        0.690521430257995,
+        -0.21762316631536502
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.7018953652772422,
+      "fixed_selected_direction": [
+        -0.689797297644263,
+        0.690521430257995,
+        -0.21762316631536502
+      ],
+      "own_reference_score": 0.6898731985902363,
+      "fixed_reference_score": 0.6898731985902363,
+      "oracle_score": 0.6898731985902363,
+      "actual_winner_gap": 0.0
+    },
+    "learned": {
+      "selected_direction": [
+        -0.321594603224243,
+        0.05441680366202802,
+        -0.9453125
+      ],
+      "selected_name": "AI \ud655\uc7a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3991649550384407,
+      "fixed_selected_direction": [
+        -0.5113153563220936,
+        0.16262829684557664,
+        -0.8438652993542971
+      ],
+      "own_reference_score": 0.8854919716050139,
+      "fixed_reference_score": 0.8717878699074866,
+      "oracle_score": 0.8717878699074866,
+      "actual_winner_gap": 0.013704101697527338
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        -0.321594603224243,
+        0.05441680366202802,
+        -0.9453125
+      ],
+      "selected_name": "AI \ud655\uc7a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3991649550384407,
+      "fixed_selected_direction": [
+        -0.5113153563220936,
+        0.16262829684557664,
+        -0.8438652993542971
+      ],
+      "own_reference_score": 0.8854919716050139,
+      "fixed_reference_score": 0.8717878699074866,
+      "oracle_score": 0.8717878699074866,
+      "actual_winner_gap": 0.013704101697527338
+    },
+    "uncertainty1": {
+      "selected_direction": [
+        -0.321594603224243,
+        0.05441680366202802,
+        -0.9453125
+      ],
+      "selected_name": "AI \ud655\uc7a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3991649550384407,
+      "fixed_selected_direction": [
+        -0.5113153563220936,
+        0.16262829684557664,
+        -0.8438652993542971
+      ],
+      "own_reference_score": 0.8854919716050139,
+      "fixed_reference_score": 0.8717878699074866,
+      "oracle_score": 0.8717878699074866,
+      "actual_winner_gap": 0.013704101697527338
+    },
+    "retain2_learned": {
+      "selected_direction": [
+        -0.321594603224243,
+        0.05441680366202802,
+        -0.9453125
+      ],
+      "selected_name": "AI \ud655\uc7a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.3991649550384407,
+      "fixed_selected_direction": [
+        -0.5113153563220936,
+        0.16262829684557664,
+        -0.8438652993542971
+      ],
+      "own_reference_score": 0.8854919716050139,
+      "fixed_reference_score": 0.8717878699074866,
+      "oracle_score": 0.8717878699074866,
+      "actual_winner_gap": 0.013704101697527338
+    }
+  },
+  "original_case_sha256": "ddccf4872bcbec57956ec1e33ea39c042cd35144b712d3f324c0f452dcbd47fd"
+}

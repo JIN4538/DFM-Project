@@ -1,0 +1,141 @@
+{
+  "file_id": "file_024",
+  "filename": "Arduino-UNO.stp",
+  "selected_body": 1,
+  "source_sha256": "3d66712210e5119ab955b9018ce41b578ef4c0ccf8933ad84d5a8ac1a9f57a69",
+  "selected_model_fingerprint": "5849d5814db1912a4a6f89352a15efeca467a907d89331259ac80bbf74c82935",
+  "source_npz_sha256": "a83b49071f28ba4450f9bf87a2a97656d0a684c800b0b43189510dff0509fe3b",
+  "source_metadata_sha256": "78fe54a686d8db307e020549a526c409558dc8d63fb10b3fb8b94c42e5b6ebc9",
+  "placed_mesh_sha256": "046036fdac8bdda8b336a6e1d0bf5535c3ce054b126b63269ecd175550e08842",
+  "placement_transform": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      -5.15
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      39.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "triangles": 81718,
+  "elapsed_seconds": 0.9017456000001403,
+  "reference_tetra_mm3": 13147.858457057213,
+  "cad_quadrature_mm3": 13148.428491688095,
+  "known_relative_difference_from_tetra": null,
+  "result": {
+    "status": "complete",
+    "method": "uniform_midpoint_sections/1",
+    "requested_samples": 64,
+    "examined_samples": 64,
+    "complete_samples": 64,
+    "sampled_max_area_mm2": 304.0798922018388,
+    "sampled_max_perimeter_mm": 226.6752488699848,
+    "sampled_max_area_per_perimeter_mm": 1.905126013181339,
+    "sampled_max_symmetric_change_mm2": 138.28067284191056,
+    "volume_midpoint_estimate_mm3": 12983.551291676768,
+    "scope": "Finite midpoint samples of placed mesh; extrema between samples are not bounded; not layer toolpaths, peel force, suction certification or thermal simulation.",
+    "sample_spacing_mm": 1.171875,
+    "covered_height_mm": [
+      0.0,
+      75.0
+    ],
+    "sample_policy": "height / requested_samples, midpoint; independent of physical layer height",
+    "total_segments": 32845,
+    "sampling": "uniform",
+    "sample_count": 64,
+    "max_event_samples": 8192,
+    "event_attempt": {
+      "status": "unknown",
+      "method": "vertex_event_intervals_gauss2/1",
+      "sampling_method": "vertex_events_gauss2",
+      "requested_samples": 32084,
+      "examined_samples": 0,
+      "complete_samples": 0,
+      "sample_spacing_mm": null,
+      "sampled_max_area_mm2": null,
+      "sampled_max_perimeter_mm": null,
+      "sampled_max_area_per_perimeter_mm": null,
+      "sampled_max_symmetric_change_mm2": null,
+      "volume_quadrature_estimate_mm3": null,
+      "volume_midpoint_estimate_mm3": null,
+      "known_interval_volume_mm3": null,
+      "unresolved_height_mm": null,
+      "omitted_interval_volume_envelope_mm3": null,
+      "total_segments": 0,
+      "known_plus_omitted_envelope_mm3": null,
+      "omitted_interval_volume_envelope_relative_to_known": null,
+      "representation_limit_only": false,
+      "complete_event_intervals": 0,
+      "unexamined_event_intervals": 16042,
+      "unresolved_interval_counts": {},
+      "budget_exceeded": true,
+      "budget_reasons": [
+        "sample_budget",
+        "intersection_budget"
+      ],
+      "failure_code": "event_budget_exceeded",
+      "max_samples": 8192,
+      "max_total_segments": 1500000,
+      "scope": "Two Gauss nodes per exact vertex-height interval of a placed mesh; sampled maxima are not global extrema. No manufacturing-layer, peel-force, thermal or self-intersection certification.",
+      "integration_assumption": "Piecewise quadratic section area for a valid oriented non-self-intersecting polyhedral material boundary; numerical section errors are not eliminated by quadrature.",
+      "envelope_scope": "AABB XY area times unresolved height bounds only the omitted-height contribution; it is not a bound on total error, section reconstruction error or manufacturing uncertainty. Envelope arithmetic is rounded upward from exact rational values of the input float coordinates. The known sum and known-plus-envelope are estimates, not certified total-volume lower and upper bounds.",
+      "input_diagnostics": {
+        "geometry_available": true,
+        "topology_ready": true,
+        "face_count": 81718,
+        "vertex_count": 40807,
+        "issues": [],
+        "problem_face_indices": [],
+        "highlight_truncated": false,
+        "self_intersections": "not_exhaustively_checked",
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "duplicate_faces": 0,
+        "winding_consistent": true,
+        "raw_signed_volume_integral": 13147.858457057244,
+        "triangle_area_sum": 14419.288310461909,
+        "extents": [
+          53.5,
+          14.899999999999999,
+          75.0
+        ],
+        "problem_face_count": 0
+      },
+      "event_count": 16043,
+      "event_interval_count": 16042,
+      "planned_triangle_intersections": 16949052,
+      "covered_height_mm": [
+        0.0,
+        75.0
+      ],
+      "minimum_event_interval_mm": 3.552713678800501e-15,
+      "sample_policy": "Exact unique referenced vertex heights; no tolerance merging; two Gauss-Legendre interior nodes per interval, independent of physical layer height.",
+      "reason": "높이 사건 단면 수 또는 예상 교차 선분이 계산 예산을 초과했습니다. 표본을 자동으로 줄이지 않았습니다.",
+      "sampling": "events",
+      "max_event_samples": 8192,
+      "incomplete_intervals": [],
+      "recorded_interval_count": 0
+    },
+    "fallback_performed": true,
+    "fallback_trigger": "event_budget_exceeded",
+    "selection_reason": "형상 변화 단면의 계산 예산을 넘어 균등 단면으로 이어서 계산했습니다. 얇은 높이 구간을 놓칠 수 있으며 전체 구간의 체적 정밀 검산은 완료되지 않았습니다.",
+    "requested_sampling": "auto"
+  }
+}

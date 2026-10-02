@@ -1,0 +1,48 @@
+{
+  "validation": {
+    "plan_ranker_external_v3.json": {
+      "queries": 704,
+      "exact_objective_best": 660,
+      "mean_objective_regret": 0.0020258178549399553,
+      "maximum_objective_regret": 0.10733364039928273,
+      "baseline_mean_objective_regret": 0.009786365522462277,
+      "different_from_fixed_baseline": 119,
+      "better_than_fixed_objective": 71,
+      "worse_than_fixed_objective": 21
+    },
+    "plan_ranker_v1.json": {
+      "queries": 704,
+      "exact_objective_best": 673,
+      "mean_objective_regret": 0.0013681353048734706,
+      "maximum_objective_regret": 0.08329947814876071,
+      "baseline_mean_objective_regret": 0.009786365522462277,
+      "different_from_fixed_baseline": 92,
+      "better_than_fixed_objective": 82,
+      "worse_than_fixed_objective": 10
+    }
+  },
+  "test": {
+    "plan_ranker_external_v3.json": {
+      "queries": 1800,
+      "exact_objective_best": 1616,
+      "mean_objective_regret": 0.0023824645254905638,
+      "maximum_objective_regret": 0.07066990518767235,
+      "baseline_mean_objective_regret": 0.01810809571858379,
+      "different_from_fixed_baseline": 536,
+      "better_than_fixed_objective": 446,
+      "worse_than_fixed_objective": 63
+    },
+    "plan_ranker_v1.json": {
+      "queries": 1800,
+      "exact_objective_best": 1603,
+      "mean_objective_regret": 0.0022025893323059952,
+      "maximum_objective_regret": 0.09818044231757964,
+      "baseline_mean_objective_regret": 0.01810809571858379,
+      "different_from_fixed_baseline": 454,
+      "better_than_fixed_objective": 406,
+      "worse_than_fixed_objective": 48
+    }
+  },
+  "selected_for_am": "plan_ranker_v1.json",
+  "scope": "Generated AM geometry-family holdouts; select model by validation before testing"
+}

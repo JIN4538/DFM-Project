@@ -1,0 +1,132 @@
+{
+  "id": "threaded_462c9c3b_0135",
+  "dataset": "CadQuarry",
+  "group": "cq:threaded:{\"version\": 2, \"volume\": 275.0, \"surface_area\": 419.0, \"principal_moments\": [714.0, 7050.0, 7050.0], \"n_faces\": 220, \"n_edges\": 562, \"n_vertices\": 344}",
+  "split": "test",
+  "process": "PBF_POLYMER",
+  "priority": "height",
+  "candidate_oracle": {
+    "legacy": 0.0,
+    "blind": 0.004295853020491606,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "actual_product": {
+    "legacy": 0.0,
+    "blind": 0.004295853020491606,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "common_reference_product": {
+    "legacy": 0.0,
+    "blind": 0.004295853020491606,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "selected_name": "+X",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "own_reference_score": 0.004295853020491606,
+      "fixed_reference_score": 0.004295853020491606,
+      "oracle_score": 0.004295853020491606,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 5",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.9498654972513227,
+        0.0005373211146405291,
+        -0.3126583573447494
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "0166e4ad19ba6dec60ab0f2eb0a24a0a71b34a9aa1ff656119ef76a86fb34c37"
+}

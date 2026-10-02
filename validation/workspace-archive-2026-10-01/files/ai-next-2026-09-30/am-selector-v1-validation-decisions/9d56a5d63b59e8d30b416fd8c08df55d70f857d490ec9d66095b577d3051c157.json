@@ -1,0 +1,201 @@
+{
+  "id": "primitives_with_two_bores_0005285",
+  "dataset": "PBF-orientation",
+  "group": "pbf:primitives_with_two_bores:{\"alpha1\": 24, \"alpha2\": 87, \"measure1\": 121, \"measure2\": 99, \"measure3\": 168, \"n_measure1\": 22, \"n_measure2\": 11, \"n_measure3\": 29, \"offset1\": -16, \"offset2\": 14, \"primitive\": \"box\", \"r1\": 10, \"r2\": 9}",
+  "split": "validation",
+  "process": "MEX",
+  "priority": "balanced",
+  "candidate_oracle": {
+    "legacy": 0.5122223422456744,
+    "blind": 0.5122223422456744,
+    "geometric": 0.5122223422456744,
+    "height_neural": 0.5122223422456744,
+    "learned": 0.5122223422456744,
+    "uncertainty05": 0.5122223422456744,
+    "uncertainty1": 0.5122223422456744,
+    "retain2_learned": 0.5122223422456744
+  },
+  "actual_product": {
+    "legacy": 0.5122223422456744,
+    "blind": 0.5122223422456744,
+    "geometric": 0.5122223422456744,
+    "height_neural": 0.5122223422456744,
+    "learned": 0.5122223422456744,
+    "uncertainty05": 0.5122223422456744,
+    "uncertainty1": 0.5122223422456744,
+    "retain2_learned": 0.5122223422456744
+  },
+  "common_reference_product": {
+    "legacy": 0.5122223422456744,
+    "blind": 0.5122223422456744,
+    "geometric": 0.5122223422456744,
+    "height_neural": 0.5122223422456744,
+    "learned": 0.5122223422456744,
+    "uncertainty05": 0.5122223422456744,
+    "uncertainty1": 0.5122223422456744,
+    "retain2_learned": 0.5122223422456744
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5299871164997607,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5113906805662896,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5298368689731537,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5311327401812288,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    },
+    "learned": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5304120165519427,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5299871164997607,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty1": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5299871164997607,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    },
+    "retain2_learned": {
+      "selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "selected_name": "\uba74 \ud0d0\uc0c9 6",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.5299871164997607,
+      "fixed_selected_direction": [
+        -0.8534076584581721,
+        0.272063536745951,
+        -0.44460859242509515
+      ],
+      "own_reference_score": 0.5122223422456744,
+      "fixed_reference_score": 0.5122223422456744,
+      "oracle_score": 0.5122223422456744,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "a00eaef7c1a9144bdbed7e4bd63f3f7ebff942cdda405a11a3349ed9be3d1244"
+}

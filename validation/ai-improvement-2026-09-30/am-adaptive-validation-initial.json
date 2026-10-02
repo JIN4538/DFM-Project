@@ -1,0 +1,4685 @@
+{
+  "split": "validation",
+  "groups": 24,
+  "cases": [
+    {
+      "id": "plates_with_bores_0001187",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 45, \"bore_phi\": 53, \"bore_radius\": 20, \"box_depth\": 7, \"box_height\": 224, \"box_n_depth\": 10, \"box_n_height\": 10, \"box_n_width\": 3, \"box_width\": 83}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "ed33d1fb765c736a5285de7c986cee3e6f67811b9785677e5163cfb2f6c6df9a",
+      "scores": {
+        "legacy": 0.7795592512551536,
+        "blind": 0.7795592512551536,
+        "rerank": 0.7795592512551536,
+        "residual20": 0.7795592512551536,
+        "residual40": 0.7795592512551536,
+        "residual40_facet2": 0.7795592512551536,
+        "facet2": 0.7795592512551536
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4220000000004802,
+        "blind": 0.0,
+        "rerank": 0.4370000000017171,
+        "residual20": 0.4539999999997235,
+        "residual40": 0.43699999999989814,
+        "residual40_facet2": 0.4530000000013388,
+        "facet2": 0.43800000000010186
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0001187",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 45, \"bore_phi\": 53, \"bore_radius\": 20, \"box_depth\": 7, \"box_height\": 224, \"box_n_depth\": 10, \"box_n_height\": 10, \"box_n_width\": 3, \"box_width\": 83}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "ed33d1fb765c736a5285de7c986cee3e6f67811b9785677e5163cfb2f6c6df9a",
+      "scores": {
+        "legacy": 0.2905501587318174,
+        "blind": 0.2905501587318174,
+        "rerank": 0.2905501587318174,
+        "residual20": 0.2905501587318174,
+        "residual40": 0.2905501587318174,
+        "residual40_facet2": 0.2905501587318174,
+        "facet2": 0.2905501587318174
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5159999999996217,
+        "blind": 0.0,
+        "rerank": 0.5310000000008586,
+        "residual20": 0.5319999999992433,
+        "residual40": 0.5319999999992433,
+        "residual40_facet2": 0.5470000000004802,
+        "facet2": 0.5309999999990396
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0001187",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 45, \"bore_phi\": 53, \"bore_radius\": 20, \"box_depth\": 7, \"box_height\": 224, \"box_n_depth\": 10, \"box_n_height\": 10, \"box_n_width\": 3, \"box_width\": 83}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "ed33d1fb765c736a5285de7c986cee3e6f67811b9785677e5163cfb2f6c6df9a",
+      "scores": {
+        "legacy": 0.2277115412361188,
+        "blind": 0.28536006450670914,
+        "rerank": 0.2277115412361188,
+        "residual20": 0.28296250774893794,
+        "residual40": 0.28296250774893794,
+        "residual40_facet2": 0.28296250774893794,
+        "facet2": 0.2277115412361188
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4849999999987631,
+        "blind": 0.01599999999962165,
+        "rerank": 0.4849999999987631,
+        "residual20": 0.5009999999983847,
+        "residual40": 0.5159999999996217,
+        "residual40_facet2": 0.499999999998181,
+        "facet2": 0.5009999999983847
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0001187",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 45, \"bore_phi\": 53, \"bore_radius\": 20, \"box_depth\": 7, \"box_height\": 224, \"box_n_depth\": 10, \"box_n_height\": 10, \"box_n_width\": 3, \"box_width\": 83}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "ed33d1fb765c736a5285de7c986cee3e6f67811b9785677e5163cfb2f6c6df9a",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.34399999999914144,
+        "blind": 0.0,
+        "rerank": 0.34399999999914144,
+        "residual20": 0.3279999999995198,
+        "residual40": 0.3429999999989377,
+        "residual40_facet2": 0.3440000000009604,
+        "facet2": 0.3429999999989377
+      },
+      "common_pool_size": 383,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0001187",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 45, \"bore_phi\": 53, \"bore_radius\": 20, \"box_depth\": 7, \"box_height\": 224, \"box_n_depth\": 10, \"box_n_height\": 10, \"box_n_width\": 3, \"box_width\": 83}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "ed33d1fb765c736a5285de7c986cee3e6f67811b9785677e5163cfb2f6c6df9a",
+      "scores": {
+        "legacy": 0.2277115412361188,
+        "blind": 0.28536006450670914,
+        "rerank": 0.2277115412361188,
+        "residual20": 0.28296250774893794,
+        "residual40": 0.28296250774893794,
+        "residual40_facet2": 0.28296250774893794,
+        "facet2": 0.2277115412361188
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.40600000000085856,
+        "blind": 0.014999999999417923,
+        "rerank": 0.4220000000022992,
+        "residual20": 0.4210000000002765,
+        "residual40": 0.43800000000010186,
+        "residual40_facet2": 0.4210000000020955,
+        "facet2": 0.4220000000004802
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0008667",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 36, \"bore_phi\": 20, \"bore_radius\": 18, \"box_depth\": 19, \"box_height\": 188, \"box_n_depth\": 4, \"box_n_height\": 9, \"box_n_width\": 3, \"box_width\": 289}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "e89b82cc808f61233d858fe28ceadef59f56befd39264de9e8af73106a3fd705",
+      "scores": {
+        "legacy": 0.4254576332049538,
+        "blind": 0.4254576332049538,
+        "rerank": 0.4254576332049538,
+        "residual20": 0.4254576332049538,
+        "residual40": 0.4254576332049538,
+        "residual40_facet2": 0.4254576332049538,
+        "facet2": 0.4254576332049538
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4529999999995198,
+        "blind": 0.0,
+        "rerank": 0.4529999999995198,
+        "residual20": 0.45200000000113505,
+        "residual40": 0.4529999999995198,
+        "residual40_facet2": 0.4679999999989377,
+        "facet2": 0.4530000000013388
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0008667",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 36, \"bore_phi\": 20, \"bore_radius\": 18, \"box_depth\": 19, \"box_height\": 188, \"box_n_depth\": 4, \"box_n_height\": 9, \"box_n_width\": 3, \"box_width\": 289}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "e89b82cc808f61233d858fe28ceadef59f56befd39264de9e8af73106a3fd705",
+      "scores": {
+        "legacy": 0.17135000506590203,
+        "blind": 0.17135000506590203,
+        "rerank": 0.17135000506590203,
+        "residual20": 0.17135000506590203,
+        "residual40": 0.17135000506590203,
+        "residual40_facet2": 0.17135000506590203,
+        "facet2": 0.17135000506590203
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4529999999995198,
+        "blind": 0.0,
+        "rerank": 0.4679999999989377,
+        "residual20": 0.48400000000037835,
+        "residual40": 0.46899999999914144,
+        "residual40_facet2": 0.46899999999914144,
+        "facet2": 0.4680000000007567
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0008667",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 36, \"bore_phi\": 20, \"bore_radius\": 18, \"box_depth\": 19, \"box_height\": 188, \"box_n_depth\": 4, \"box_n_height\": 9, \"box_n_width\": 3, \"box_width\": 289}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "e89b82cc808f61233d858fe28ceadef59f56befd39264de9e8af73106a3fd705",
+      "scores": {
+        "legacy": 0.3821920473861758,
+        "blind": 0.3821920473861758,
+        "rerank": 0.3821920473861758,
+        "residual20": 0.3821920473861758,
+        "residual40": 0.3821920473861758,
+        "residual40_facet2": 0.3821920473861758,
+        "facet2": 0.3821920473861758
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4850000000005821,
+        "blind": 0.01599999999962165,
+        "rerank": 0.4850000000005821,
+        "residual20": 0.5160000000014406,
+        "residual40": 0.5010000000002037,
+        "residual40_facet2": 0.5159999999996217,
+        "facet2": 0.5010000000020227
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0008667",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 36, \"bore_phi\": 20, \"bore_radius\": 18, \"box_depth\": 19, \"box_height\": 188, \"box_n_depth\": 4, \"box_n_height\": 9, \"box_n_width\": 3, \"box_width\": 289}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "e89b82cc808f61233d858fe28ceadef59f56befd39264de9e8af73106a3fd705",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3599999999987631,
+        "blind": 0.0,
+        "rerank": 0.37599999999838474,
+        "residual20": 0.37599999999838474,
+        "residual40": 0.374999999998181,
+        "residual40_facet2": 0.3760000000002037,
+        "facet2": 0.374999999998181
+      },
+      "common_pool_size": 383,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0008667",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 45, \"bore_n_plane\": 36, \"bore_phi\": 20, \"bore_radius\": 18, \"box_depth\": 19, \"box_height\": 188, \"box_n_depth\": 4, \"box_n_height\": 9, \"box_n_width\": 3, \"box_width\": 289}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "e89b82cc808f61233d858fe28ceadef59f56befd39264de9e8af73106a3fd705",
+      "scores": {
+        "legacy": 0.3821920473861758,
+        "blind": 0.3821920473861758,
+        "rerank": 0.3821920473861758,
+        "residual20": 0.3821920473861758,
+        "residual40": 0.3821920473861758,
+        "residual40_facet2": 0.3821920473861758,
+        "facet2": 0.3821920473861758
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.46899999999914144,
+        "blind": 0.0,
+        "rerank": 0.4680000000007567,
+        "residual20": 0.46899999999914144,
+        "residual40": 0.48399999999855936,
+        "residual40_facet2": 0.4690000000009604,
+        "facet2": 0.4679999999989377
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0000707",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"TUB\", \"embossing_distance\": 9, \"num_faces\": 6, \"unit_circle_radius\": 107}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "29e9e7337b8fb7de3db8a280cb28daa52366d002987c332ba46197367497bb99",
+      "scores": {
+        "legacy": 0.40066724396475123,
+        "blind": 0.40066724396475123,
+        "rerank": 0.40066724396475123,
+        "residual20": 0.40066724396475123,
+        "residual40": 0.40066724396475123,
+        "residual40_facet2": 0.40066724396475123,
+        "facet2": 0.40066724396475123
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.31300000000010186,
+        "blind": 0.0,
+        "rerank": 0.3289999999997235,
+        "residual20": 0.3289999999997235,
+        "residual40": 0.31300000000010186,
+        "residual40_facet2": 0.3440000000009604,
+        "facet2": 0.31300000000010186
+      },
+      "common_pool_size": 385,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0000707",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"TUB\", \"embossing_distance\": 9, \"num_faces\": 6, \"unit_circle_radius\": 107}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "29e9e7337b8fb7de3db8a280cb28daa52366d002987c332ba46197367497bb99",
+      "scores": {
+        "legacy": 0.34359128370740055,
+        "blind": 0.34359128370740055,
+        "rerank": 0.34359128370740055,
+        "residual20": 0.34359128370740055,
+        "residual40": 0.34359128370740055,
+        "residual40_facet2": 0.34359128370740055,
+        "facet2": 0.34359128370740055
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.39099999999962165,
+        "blind": 0.0,
+        "rerank": 0.4070000000010623,
+        "residual20": 0.4059999999990396,
+        "residual40": 0.42299999999886495,
+        "residual40_facet2": 0.40600000000085856,
+        "facet2": 0.39099999999962165
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0000707",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"TUB\", \"embossing_distance\": 9, \"num_faces\": 6, \"unit_circle_radius\": 107}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "29e9e7337b8fb7de3db8a280cb28daa52366d002987c332ba46197367497bb99",
+      "scores": {
+        "legacy": 0.42867096272699035,
+        "blind": 0.42867096272699035,
+        "rerank": 0.42867096272699035,
+        "residual20": 0.42867096272699035,
+        "residual40": 0.42867096272699035,
+        "residual40_facet2": 0.42867096272699035,
+        "facet2": 0.42867096272699035
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.375,
+        "blind": 0.0,
+        "rerank": 0.3599999999987631,
+        "residual20": 0.37599999999838474,
+        "residual40": 0.39099999999780266,
+        "residual40_facet2": 0.3760000000002037,
+        "facet2": 0.374999999998181
+      },
+      "common_pool_size": 385,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0000707",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"TUB\", \"embossing_distance\": 9, \"num_faces\": 6, \"unit_circle_radius\": 107}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "29e9e7337b8fb7de3db8a280cb28daa52366d002987c332ba46197367497bb99",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.42300000000068394,
+        "blind": 0.0,
+        "rerank": 0.4069999999992433,
+        "residual20": 0.4379999999982829,
+        "residual40": 0.4069999999992433,
+        "residual40_facet2": 0.42299999999886495,
+        "facet2": 0.4220000000004802
+      },
+      "common_pool_size": 385,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0000707",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"TUB\", \"embossing_distance\": 9, \"num_faces\": 6, \"unit_circle_radius\": 107}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "29e9e7337b8fb7de3db8a280cb28daa52366d002987c332ba46197367497bb99",
+      "scores": {
+        "legacy": 0.42867096272699035,
+        "blind": 0.42867096272699035,
+        "rerank": 0.42867096272699035,
+        "residual20": 0.42867096272699035,
+        "residual40": 0.42867096272699035,
+        "residual40_facet2": 0.42867096272699035,
+        "facet2": 0.42867096272699035
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4529999999995198,
+        "blind": 0.015000000001236913,
+        "rerank": 0.46899999999914144,
+        "residual20": 0.46899999999914144,
+        "residual40": 0.48400000000037835,
+        "residual40_facet2": 0.4679999999989377,
+        "facet2": 0.46899999999914144
+      },
+      "common_pool_size": 385,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0009291",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"Bremen\", \"embossing_distance\": 1, \"num_faces\": 6, \"unit_circle_radius\": 56}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "02d7acd5c2833abf15f659fb4e2a4e33216e1cd3a2dac1a84c2395ec11216127",
+      "scores": {
+        "legacy": 0.40139357552763555,
+        "blind": 0.40139357552763555,
+        "rerank": 0.40139357552763555,
+        "residual20": 0.40139357552763555,
+        "residual40": 0.40139357552763555,
+        "residual40_facet2": 0.40139357552763555,
+        "facet2": 0.40139357552763555
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4069999999992433,
+        "blind": 0.0,
+        "rerank": 0.42299999999886495,
+        "residual20": 0.42299999999886495,
+        "residual40": 0.4219999999986612,
+        "residual40_facet2": 0.42300000000068394,
+        "facet2": 0.4219999999986612
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0009291",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"Bremen\", \"embossing_distance\": 1, \"num_faces\": 6, \"unit_circle_radius\": 56}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "02d7acd5c2833abf15f659fb4e2a4e33216e1cd3a2dac1a84c2395ec11216127",
+      "scores": {
+        "legacy": 0.34731436558148787,
+        "blind": 0.34731436558148787,
+        "rerank": 0.34731436558148787,
+        "residual20": 0.34731436558148787,
+        "residual40": 0.34731436558148787,
+        "residual40_facet2": 0.34731436558148787,
+        "facet2": 0.34731436558148787
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.40600000000085856,
+        "blind": 0.0,
+        "rerank": 0.4220000000004802,
+        "residual20": 0.4210000000020955,
+        "residual40": 0.43800000000010186,
+        "residual40_facet2": 0.4210000000002765,
+        "facet2": 0.4220000000022992
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0009291",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"Bremen\", \"embossing_distance\": 1, \"num_faces\": 6, \"unit_circle_radius\": 56}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "02d7acd5c2833abf15f659fb4e2a4e33216e1cd3a2dac1a84c2395ec11216127",
+      "scores": {
+        "legacy": 0.42624471783738765,
+        "blind": 0.42624471783738765,
+        "rerank": 0.42624471783738765,
+        "residual20": 0.42624471783738765,
+        "residual40": 0.42624471783738765,
+        "residual40_facet2": 0.42624471783738765,
+        "facet2": 0.42624471783738765
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4069999999992433,
+        "blind": 0.01600000000144064,
+        "rerank": 0.4069999999992433,
+        "residual20": 0.4379999999982829,
+        "residual40": 0.42299999999886495,
+        "residual40_facet2": 0.43800000000010186,
+        "facet2": 0.4069999999992433
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0009291",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"Bremen\", \"embossing_distance\": 1, \"num_faces\": 6, \"unit_circle_radius\": 56}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "02d7acd5c2833abf15f659fb4e2a4e33216e1cd3a2dac1a84c2395ec11216127",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.20300000000133878,
+        "blind": 0.0,
+        "rerank": 0.21900000000096043,
+        "residual20": 0.2180000000007567,
+        "residual40": 0.21900000000277942,
+        "residual40_facet2": 0.2180000000007567,
+        "facet2": 0.21900000000096043
+      },
+      "common_pool_size": 378,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0009291",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"Bremen\", \"embossing_distance\": 1, \"num_faces\": 6, \"unit_circle_radius\": 56}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "02d7acd5c2833abf15f659fb4e2a4e33216e1cd3a2dac1a84c2395ec11216127",
+      "scores": {
+        "legacy": 0.42624471783738765,
+        "blind": 0.42624471783738765,
+        "rerank": 0.42624471783738765,
+        "residual20": 0.42624471783738765,
+        "residual40": 0.42624471783738765,
+        "residual40_facet2": 0.42624471783738765,
+        "facet2": 0.42624471783738765
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4220000000004802,
+        "blind": 0.0,
+        "rerank": 0.4069999999992433,
+        "residual20": 0.4389999999984866,
+        "residual40": 0.4219999999986612,
+        "residual40_facet2": 0.4069999999992433,
+        "facet2": 0.42300000000068394
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0002746",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"LLLLLLLL\", \"embossing_distance\": -8, \"num_faces\": 12, \"unit_circle_radius\": 97}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "e5d1034b43c637035b823ea8a1fdbc9b55fd4c153fd0b2b429679855df67f42f",
+      "scores": {
+        "legacy": 0.005879218541425967,
+        "blind": 0.005879218541425967,
+        "rerank": 0.005879218541425967,
+        "residual20": 0.005879218541425967,
+        "residual40": 0.005879218541425967,
+        "residual40_facet2": 0.005879218541425967,
+        "facet2": 0.005879218541425967
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4379999999982829,
+        "blind": 0.0,
+        "rerank": 0.4379999999982829,
+        "residual20": 0.43699999999807915,
+        "residual40": 0.43800000000010186,
+        "residual40_facet2": 0.4529999999977008,
+        "facet2": 0.4379999999982829
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0002746",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"LLLLLLLL\", \"embossing_distance\": -8, \"num_faces\": 12, \"unit_circle_radius\": 97}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "e5d1034b43c637035b823ea8a1fdbc9b55fd4c153fd0b2b429679855df67f42f",
+      "scores": {
+        "legacy": 0.002141360818190958,
+        "blind": 0.002141360818190958,
+        "rerank": 0.002141360818190958,
+        "residual20": 0.002141360818190958,
+        "residual40": 0.002141360818190958,
+        "residual40_facet2": 0.002141360818190958,
+        "facet2": 0.002141360818190958
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.375,
+        "blind": 0.01599999999962165,
+        "rerank": 0.375,
+        "residual20": 0.40600000000085856,
+        "residual40": 0.3899999999994179,
+        "residual40_facet2": 0.39099999999962165,
+        "facet2": 0.39099999999962165
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0002746",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"LLLLLLLL\", \"embossing_distance\": -8, \"num_faces\": 12, \"unit_circle_radius\": 97}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "e5d1034b43c637035b823ea8a1fdbc9b55fd4c153fd0b2b429679855df67f42f",
+      "scores": {
+        "legacy": 0.0062466697002650905,
+        "blind": 0.0062466697002650905,
+        "rerank": 0.0062466697002650905,
+        "residual20": 0.0062466697002650905,
+        "residual40": 0.0062466697002650905,
+        "residual40_facet2": 0.0062466697002650905,
+        "facet2": 0.0062466697002650905
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.46899999999914144,
+        "blind": 0.0,
+        "rerank": 0.48400000000037835,
+        "residual20": 0.5009999999983847,
+        "residual40": 0.48399999999855936,
+        "residual40_facet2": 0.5,
+        "facet2": 0.4849999999987631
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0002746",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"LLLLLLLL\", \"embossing_distance\": -8, \"num_faces\": 12, \"unit_circle_radius\": 97}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "e5d1034b43c637035b823ea8a1fdbc9b55fd4c153fd0b2b429679855df67f42f",
+      "scores": {
+        "legacy": 0.0066535955081608485,
+        "blind": 0.0,
+        "rerank": 0.0066535955081608485,
+        "residual20": 0.0066535955081608485,
+        "residual40": 0.0066535955081608485,
+        "residual40_facet2": 0.0066535955081608485,
+        "facet2": 0.0066535955081608485
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.34399999999914144,
+        "blind": 0.0,
+        "rerank": 0.3279999999995198,
+        "residual20": 0.34399999999914144,
+        "residual40": 0.3429999999989377,
+        "residual40_facet2": 0.3279999999995198,
+        "facet2": 0.3440000000009604
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "platonic_solids_with_inscriptions_0002746",
+      "dataset": "PBF-orientation",
+      "group": "pbf:platonic_solids_with_inscriptions:{\"embossing\": \"LLLLLLLL\", \"embossing_distance\": -8, \"num_faces\": 12, \"unit_circle_radius\": 97}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "e5d1034b43c637035b823ea8a1fdbc9b55fd4c153fd0b2b429679855df67f42f",
+      "scores": {
+        "legacy": 0.0062466697002650905,
+        "blind": 0.0062466697002650905,
+        "rerank": 0.0062466697002650905,
+        "residual20": 0.0062466697002650905,
+        "residual40": 0.0062466697002650905,
+        "residual40_facet2": 0.0062466697002650905,
+        "facet2": 0.0062466697002650905
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4529999999995198,
+        "blind": 0.0,
+        "rerank": 0.4680000000007567,
+        "residual20": 0.46899999999914144,
+        "residual40": 0.48399999999855936,
+        "residual40_facet2": 0.4690000000009604,
+        "facet2": 0.4679999999989377
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0000933",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 42, \"initial_psi\": 45, \"n_latitude\": 10, \"n_longitude\": 8, \"n_plane\": 9, \"radius\": 32}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "ac56adb842a0b37bd8877489c538d0f597be53b0981d95aca0cc45398015f4a4",
+      "scores": {
+        "legacy": 0.39811312044681,
+        "blind": 0.39811312044681,
+        "rerank": 0.39811312044681,
+        "residual20": 0.39811312044681,
+        "residual40": 0.39811312044681,
+        "residual40_facet2": 0.39811312044681,
+        "facet2": 0.39811312044681
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4849999999987631,
+        "blind": 0.0,
+        "rerank": 0.4849999999987631,
+        "residual20": 0.48399999999855936,
+        "residual40": 0.4850000000005821,
+        "residual40_facet2": 0.46899999999914144,
+        "facet2": 0.48399999999855936
+      },
+      "common_pool_size": 387,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0000933",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 42, \"initial_psi\": 45, \"n_latitude\": 10, \"n_longitude\": 8, \"n_plane\": 9, \"radius\": 32}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "ac56adb842a0b37bd8877489c538d0f597be53b0981d95aca0cc45398015f4a4",
+      "scores": {
+        "legacy": 0.3036757177254219,
+        "blind": 0.3036757177254219,
+        "rerank": 0.3036757177254219,
+        "residual20": 0.29846892903966493,
+        "residual40": 0.3036757177254219,
+        "residual40_facet2": 0.3036757177254219,
+        "facet2": 0.3036757177254219
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.46899999999914144,
+        "blind": 0.0,
+        "rerank": 0.48400000000037835,
+        "residual20": 0.5009999999983847,
+        "residual40": 0.48399999999855936,
+        "residual40_facet2": 0.4850000000005821,
+        "facet2": 0.48399999999855936
+      },
+      "common_pool_size": 387,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0000933",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 42, \"initial_psi\": 45, \"n_latitude\": 10, \"n_longitude\": 8, \"n_plane\": 9, \"radius\": 32}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "ac56adb842a0b37bd8877489c538d0f597be53b0981d95aca0cc45398015f4a4",
+      "scores": {
+        "legacy": 0.1414575112479071,
+        "blind": 0.1414575112479071,
+        "rerank": 0.1414575112479071,
+        "residual20": 0.0702418861891093,
+        "residual40": 0.0702418861891093,
+        "residual40_facet2": 0.0702418861891093,
+        "facet2": 0.1414575112479071
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.43800000000010186,
+        "blind": 0.0,
+        "rerank": 0.4540000000015425,
+        "residual20": 0.4529999999995198,
+        "residual40": 0.43800000000010186,
+        "residual40_facet2": 0.4539999999997235,
+        "facet2": 0.4539999999997235
+      },
+      "common_pool_size": 387,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0000933",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 42, \"initial_psi\": 45, \"n_latitude\": 10, \"n_longitude\": 8, \"n_plane\": 9, \"radius\": 32}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "ac56adb842a0b37bd8877489c538d0f597be53b0981d95aca0cc45398015f4a4",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3430000000007567,
+        "blind": 0.01599999999962165,
+        "rerank": 0.3430000000007567,
+        "residual20": 0.3580000000001746,
+        "residual40": 0.35900000000219734,
+        "residual40_facet2": 0.3580000000001746,
+        "facet2": 0.3430000000007567
+      },
+      "common_pool_size": 387,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0000933",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 42, \"initial_psi\": 45, \"n_latitude\": 10, \"n_longitude\": 8, \"n_plane\": 9, \"radius\": 32}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "ac56adb842a0b37bd8877489c538d0f597be53b0981d95aca0cc45398015f4a4",
+      "scores": {
+        "legacy": 0.1414575112479071,
+        "blind": 0.1414575112479071,
+        "rerank": 0.1414575112479071,
+        "residual20": 0.0702418861891093,
+        "residual40": 0.0702418861891093,
+        "residual40_facet2": 0.0702418861891093,
+        "facet2": 0.1414575112479071
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.2969999999986612,
+        "blind": 0.0,
+        "rerank": 0.3129999999982829,
+        "residual20": 0.3129999999982829,
+        "residual40": 0.31199999999807915,
+        "residual40_facet2": 0.31300000000010186,
+        "facet2": 0.31199999999807915
+      },
+      "common_pool_size": 387,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0006874",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 46, \"bore_n_plane\": 34, \"bore_phi\": 5, \"bore_radius\": 20, \"box_depth\": 18, \"box_height\": 270, \"box_n_depth\": 5, \"box_n_height\": 3, \"box_n_width\": 9, \"box_width\": 250}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "cd65fcb05615e04b4c371b2df5dc7db42a65bdd0949f8e9ae555a582b23748ed",
+      "scores": {
+        "legacy": 0.42904103942431626,
+        "blind": 0.42904103942431626,
+        "rerank": 0.42904103942431626,
+        "residual20": 0.42904103942431626,
+        "residual40": 0.42904103942431626,
+        "residual40_facet2": 0.42904103942431626,
+        "facet2": 0.42904103942431626
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4680000000007567,
+        "blind": 0.0,
+        "rerank": 0.48400000000037835,
+        "residual20": 0.4830000000001746,
+        "residual40": 0.48400000000219734,
+        "residual40_facet2": 0.4830000000001746,
+        "facet2": 0.4680000000007567
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0006874",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 46, \"bore_n_plane\": 34, \"bore_phi\": 5, \"bore_radius\": 20, \"box_depth\": 18, \"box_height\": 270, \"box_n_depth\": 5, \"box_n_height\": 3, \"box_n_width\": 9, \"box_width\": 250}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "cd65fcb05615e04b4c371b2df5dc7db42a65bdd0949f8e9ae555a582b23748ed",
+      "scores": {
+        "legacy": 0.1746828772617174,
+        "blind": 0.18476379994483103,
+        "rerank": 0.1746828772617174,
+        "residual20": 0.1746828772617174,
+        "residual40": 0.1746828772617174,
+        "residual40_facet2": 0.1746828772617174,
+        "facet2": 0.1746828772617174
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4059999999990396,
+        "blind": 0.01599999999962165,
+        "rerank": 0.4059999999990396,
+        "residual20": 0.4210000000002765,
+        "residual40": 0.4219999999986612,
+        "residual40_facet2": 0.4219999999986612,
+        "facet2": 0.4209999999984575
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0006874",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 46, \"bore_n_plane\": 34, \"bore_phi\": 5, \"bore_radius\": 20, \"box_depth\": 18, \"box_height\": 270, \"box_n_depth\": 5, \"box_n_height\": 3, \"box_n_width\": 9, \"box_width\": 250}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "cd65fcb05615e04b4c371b2df5dc7db42a65bdd0949f8e9ae555a582b23748ed",
+      "scores": {
+        "legacy": 0.45585610438833607,
+        "blind": 0.45585610438833607,
+        "rerank": 0.45585610438833607,
+        "residual20": 0.45585610438833607,
+        "residual40": 0.45585610438833607,
+        "residual40_facet2": 0.45585610438833607,
+        "facet2": 0.45585610438833607
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.375,
+        "blind": 0.01600000000144064,
+        "rerank": 0.3899999999994179,
+        "residual20": 0.39099999999962165,
+        "residual40": 0.40600000000085856,
+        "residual40_facet2": 0.39099999999962165,
+        "facet2": 0.39099999999962165
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0006874",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 46, \"bore_n_plane\": 34, \"bore_phi\": 5, \"bore_radius\": 20, \"box_depth\": 18, \"box_height\": 270, \"box_n_depth\": 5, \"box_n_height\": 3, \"box_n_width\": 9, \"box_width\": 250}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "cd65fcb05615e04b4c371b2df5dc7db42a65bdd0949f8e9ae555a582b23748ed",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.42299999999886495,
+        "blind": 0.0,
+        "rerank": 0.4069999999992433,
+        "residual20": 0.42299999999886495,
+        "residual40": 0.4219999999986612,
+        "residual40_facet2": 0.42300000000068394,
+        "facet2": 0.4219999999986612
+      },
+      "common_pool_size": 383,
+      "base_added_count": 18
+    },
+    {
+      "id": "plates_with_bores_0006874",
+      "dataset": "PBF-orientation",
+      "group": "pbf:plates_with_bores:{\"bore_n_longitude\": 46, \"bore_n_plane\": 34, \"bore_phi\": 5, \"bore_radius\": 20, \"box_depth\": 18, \"box_height\": 270, \"box_n_depth\": 5, \"box_n_height\": 3, \"box_n_width\": 9, \"box_width\": 250}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "cd65fcb05615e04b4c371b2df5dc7db42a65bdd0949f8e9ae555a582b23748ed",
+      "scores": {
+        "legacy": 0.45585610438833607,
+        "blind": 0.45585610438833607,
+        "rerank": 0.45585610438833607,
+        "residual20": 0.45585610438833607,
+        "residual40": 0.45585610438833607,
+        "residual40_facet2": 0.45585610438833607,
+        "facet2": 0.45585610438833607
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.48400000000037835,
+        "blind": 0.0,
+        "rerank": 0.4850000000005821,
+        "residual20": 0.4850000000005821,
+        "residual40": 0.48400000000219734,
+        "residual40_facet2": 0.5010000000002037,
+        "facet2": 0.4690000000009604
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0005658",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 79, \"initial_psi\": 312, \"n_latitude\": 8, \"n_longitude\": 7, \"n_plane\": 6, \"radius\": 22}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "34e4263c028c3a1aa094da7df62e5a2b1577d4a148ff093c328e9a02b2522c02",
+      "scores": {
+        "legacy": 0.35796761795598,
+        "blind": 0.35796761795598,
+        "rerank": 0.35796761795598,
+        "residual20": 0.35796761795598,
+        "residual40": 0.35796761795598,
+        "residual40_facet2": 0.35796761795598,
+        "facet2": 0.35796761795598
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5310000000008586,
+        "blind": 0.0,
+        "rerank": 0.5299999999988358,
+        "residual20": 0.5309999999990396,
+        "residual40": 0.5460000000002765,
+        "residual40_facet2": 0.5309999999990396,
+        "facet2": 0.5309999999990396
+      },
+      "common_pool_size": 386,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0005658",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 79, \"initial_psi\": 312, \"n_latitude\": 8, \"n_longitude\": 7, \"n_plane\": 6, \"radius\": 22}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "34e4263c028c3a1aa094da7df62e5a2b1577d4a148ff093c328e9a02b2522c02",
+      "scores": {
+        "legacy": 0.32190946240787766,
+        "blind": 0.32190946240787766,
+        "rerank": 0.32190946240787766,
+        "residual20": 0.3171194061001137,
+        "residual40": 0.31932148533775595,
+        "residual40_facet2": 0.31932148533775595,
+        "facet2": 0.32190946240787766
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5159999999996217,
+        "blind": 0.0,
+        "rerank": 0.5159999999996217,
+        "residual20": 0.5150000000012369,
+        "residual40": 0.5319999999992433,
+        "residual40_facet2": 0.5149999999994179,
+        "facet2": 0.5160000000014406
+      },
+      "common_pool_size": 385,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0005658",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 79, \"initial_psi\": 312, \"n_latitude\": 8, \"n_longitude\": 7, \"n_plane\": 6, \"radius\": 22}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "34e4263c028c3a1aa094da7df62e5a2b1577d4a148ff093c328e9a02b2522c02",
+      "scores": {
+        "legacy": 0.27798619495718996,
+        "blind": 0.3663480999585861,
+        "rerank": 0.27798619495718996,
+        "residual20": 0.3797196853877105,
+        "residual40": 0.38034059436002987,
+        "residual40_facet2": 0.38034059436002987,
+        "facet2": 0.27798619495718996
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5779999999995198,
+        "blind": 0.0,
+        "rerank": 0.5790000000015425,
+        "residual20": 0.5779999999995198,
+        "residual40": 0.5949999999993452,
+        "residual40_facet2": 0.5780000000013388,
+        "facet2": 0.5789999999997235
+      },
+      "common_pool_size": 386,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0005658",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 79, \"initial_psi\": 312, \"n_latitude\": 8, \"n_longitude\": 7, \"n_plane\": 6, \"radius\": 22}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "34e4263c028c3a1aa094da7df62e5a2b1577d4a148ff093c328e9a02b2522c02",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.43699999999989814,
+        "blind": 0.0,
+        "rerank": 0.45200000000113505,
+        "residual20": 0.4529999999995198,
+        "residual40": 0.4529999999995198,
+        "residual40_facet2": 0.45199999999931606,
+        "facet2": 0.4530000000013388
+      },
+      "common_pool_size": 386,
+      "base_added_count": 18
+    },
+    {
+      "id": "pyramids_0005658",
+      "dataset": "PBF-orientation",
+      "group": "pbf:pyramids:{\"height\": 79, \"initial_psi\": 312, \"n_latitude\": 8, \"n_longitude\": 7, \"n_plane\": 6, \"radius\": 22}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "34e4263c028c3a1aa094da7df62e5a2b1577d4a148ff093c328e9a02b2522c02",
+      "scores": {
+        "legacy": 0.27798619495718996,
+        "blind": 0.3663480999585861,
+        "rerank": 0.27798619495718996,
+        "residual20": 0.3797196853877105,
+        "residual40": 0.38034059436002987,
+        "residual40_facet2": 0.38034059436002987,
+        "facet2": 0.27798619495718996
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.48399999999855936,
+        "blind": 0.014999999999417923,
+        "rerank": 0.48399999999855936,
+        "residual20": 0.5159999999978027,
+        "residual40": 0.4989999999997963,
+        "residual40_facet2": 0.5159999999978027,
+        "facet2": 0.48399999999855936
+      },
+      "common_pool_size": 386,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d5a_0422",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 4940.0, \"surface_area\": 2060.0, \"principal_moments\": [170000.0, 476000.0, 593000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "bc29241283e678b1640bfccc7b0b9e0a0b56cd4b038d2ab349cfb3ae2665b375",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.0,
+        "rerank": 0.5159999999996217,
+        "residual20": 0.5310000000008586,
+        "residual40": 0.5159999999996217,
+        "residual40_facet2": 0.5309999999990396,
+        "facet2": 0.5160000000014406
+      },
+      "common_pool_size": 383,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d5a_0422",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 4940.0, \"surface_area\": 2060.0, \"principal_moments\": [170000.0, 476000.0, 593000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "bc29241283e678b1640bfccc7b0b9e0a0b56cd4b038d2ab349cfb3ae2665b375",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5630000000001019,
+        "blind": 0.01600000000144064,
+        "rerank": 0.5779999999995198,
+        "residual20": 0.5789999999997235,
+        "residual40": 0.5789999999997235,
+        "residual40_facet2": 0.5940000000009604,
+        "facet2": 0.5789999999997235
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d5a_0422",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 4940.0, \"surface_area\": 2060.0, \"principal_moments\": [170000.0, 476000.0, 593000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "bc29241283e678b1640bfccc7b0b9e0a0b56cd4b038d2ab349cfb3ae2665b375",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.0,
+        "rerank": 0.5149999999994179,
+        "residual20": 0.5159999999996217,
+        "residual40": 0.5310000000008586,
+        "residual40_facet2": 0.5159999999996217,
+        "facet2": 0.5159999999996217
+      },
+      "common_pool_size": 383,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d5a_0422",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 4940.0, \"surface_area\": 2060.0, \"principal_moments\": [170000.0, 476000.0, 593000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "bc29241283e678b1640bfccc7b0b9e0a0b56cd4b038d2ab349cfb3ae2665b375",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4690000000009604,
+        "blind": 0.0,
+        "rerank": 0.4529999999995198,
+        "residual20": 0.4679999999989377,
+        "residual40": 0.46899999999914144,
+        "residual40_facet2": 0.46899999999914144,
+        "facet2": 0.4529999999995198
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d5a_0422",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 4940.0, \"surface_area\": 2060.0, \"principal_moments\": [170000.0, 476000.0, 593000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "bc29241283e678b1640bfccc7b0b9e0a0b56cd4b038d2ab349cfb3ae2665b375",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4849999999987631,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5009999999983847,
+        "residual20": 0.499999999998181,
+        "residual40": 0.5159999999996217,
+        "residual40_facet2": 0.5009999999983847,
+        "facet2": 0.5009999999983847
+      },
+      "common_pool_size": 383,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9ec1_0781",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 7810.0, \"surface_area\": 3990.0, \"principal_moments\": [634000.0, 1860000.0, 2110000.0], \"n_faces\": 15, \"n_edges\": 41, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "5d7dbabe5f38bf1f98e0b4315f5774b539cf352ed1ea3f7c3c17a0b465cd956d",
+      "scores": {
+        "legacy": 0.4090635491923505,
+        "blind": 0.4090635491923505,
+        "rerank": 0.4090635491923505,
+        "residual20": 0.4090635491923505,
+        "residual40": 0.4090635491923505,
+        "residual40_facet2": 0.4090635491923505,
+        "facet2": 0.4090635491923505
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.6090000000003783,
+        "blind": 0.015000000001236913,
+        "rerank": 0.625,
+        "residual20": 0.625,
+        "residual40": 0.6400000000012369,
+        "residual40_facet2": 0.6239999999997963,
+        "facet2": 0.625
+      },
+      "common_pool_size": 401,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9ec1_0781",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 7810.0, \"surface_area\": 3990.0, \"principal_moments\": [634000.0, 1860000.0, 2110000.0], \"n_faces\": 15, \"n_edges\": 41, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "5d7dbabe5f38bf1f98e0b4315f5774b539cf352ed1ea3f7c3c17a0b465cd956d",
+      "scores": {
+        "legacy": 0.15386998596204046,
+        "blind": 0.15386998596204046,
+        "rerank": 0.15386998596204046,
+        "residual20": 0.15386998596204046,
+        "residual40": 0.15386998596204046,
+        "residual40_facet2": 0.15386998596204046,
+        "facet2": 0.15386998596204046
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5630000000001019,
+        "blind": 0.0,
+        "rerank": 0.5789999999997235,
+        "residual20": 0.5939999999991414,
+        "residual40": 0.5790000000015425,
+        "residual40_facet2": 0.5939999999991414,
+        "facet2": 0.5789999999997235
+      },
+      "common_pool_size": 401,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9ec1_0781",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 7810.0, \"surface_area\": 3990.0, \"principal_moments\": [634000.0, 1860000.0, 2110000.0], \"n_faces\": 15, \"n_edges\": 41, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "5d7dbabe5f38bf1f98e0b4315f5774b539cf352ed1ea3f7c3c17a0b465cd956d",
+      "scores": {
+        "legacy": 0.1896242262834374,
+        "blind": 0.1896242262834374,
+        "rerank": 0.1896242262834374,
+        "residual20": 0.1896242262834374,
+        "residual40": 0.1896242262834374,
+        "residual40_facet2": 0.1896242262834374,
+        "facet2": 0.1896242262834374
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5159999999996217,
+        "residual20": 0.5150000000012369,
+        "residual40": 0.5319999999992433,
+        "residual40_facet2": 0.5149999999994179,
+        "facet2": 0.5160000000014406
+      },
+      "common_pool_size": 401,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9ec1_0781",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 7810.0, \"surface_area\": 3990.0, \"principal_moments\": [634000.0, 1860000.0, 2110000.0], \"n_faces\": 15, \"n_edges\": 41, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "5d7dbabe5f38bf1f98e0b4315f5774b539cf352ed1ea3f7c3c17a0b465cd956d",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4059999999990396,
+        "blind": 0.0,
+        "rerank": 0.4209999999984575,
+        "residual20": 0.4219999999986612,
+        "residual40": 0.4219999999986612,
+        "residual40_facet2": 0.4210000000002765,
+        "facet2": 0.4219999999986612
+      },
+      "common_pool_size": 400,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9ec1_0781",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 7810.0, \"surface_area\": 3990.0, \"principal_moments\": [634000.0, 1860000.0, 2110000.0], \"n_faces\": 15, \"n_edges\": 41, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "5d7dbabe5f38bf1f98e0b4315f5774b539cf352ed1ea3f7c3c17a0b465cd956d",
+      "scores": {
+        "legacy": 0.1896242262834374,
+        "blind": 0.1896242262834374,
+        "rerank": 0.1896242262834374,
+        "residual20": 0.1896242262834374,
+        "residual40": 0.1896242262834374,
+        "residual40_facet2": 0.1896242262834374,
+        "facet2": 0.1896242262834374
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5159999999996217,
+        "blind": 0.0,
+        "rerank": 0.5319999999992433,
+        "residual20": 0.5470000000004802,
+        "residual40": 0.5319999999992433,
+        "residual40_facet2": 0.5309999999990396,
+        "facet2": 0.5320000000010623
+      },
+      "common_pool_size": 401,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df0_0572",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2610.0, \"surface_area\": 1640.0, \"principal_moments\": [44200.0, 265000.0, 294000.0], \"n_faces\": 10, \"n_edges\": 24, \"n_vertices\": 16}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "0163ed140cc846a19d3909522eca8392bde9fea492f2269729af44bbd0f453e2",
+      "scores": {
+        "legacy": 8.881784197001252e-17,
+        "blind": 8.881784197001252e-17,
+        "rerank": 8.881784197001252e-17,
+        "residual20": 8.881784197001252e-17,
+        "residual40": 8.881784197001252e-17,
+        "residual40_facet2": 8.881784197001252e-17,
+        "facet2": 8.881784197001252e-17
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.48400000000037835,
+        "blind": 0.0,
+        "rerank": 0.4830000000019936,
+        "residual20": 0.5,
+        "residual40": 0.49900000000161526,
+        "residual40_facet2": 0.4830000000001746,
+        "facet2": 0.48400000000037835
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df0_0572",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2610.0, \"surface_area\": 1640.0, \"principal_moments\": [44200.0, 265000.0, 294000.0], \"n_faces\": 10, \"n_edges\": 24, \"n_vertices\": 16}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "0163ed140cc846a19d3909522eca8392bde9fea492f2269729af44bbd0f453e2",
+      "scores": {
+        "legacy": 3.256654205567126e-17,
+        "blind": 3.256654205567126e-17,
+        "rerank": 3.256654205567126e-17,
+        "residual20": 3.256654205567126e-17,
+        "residual40": 3.256654205567126e-17,
+        "residual40_facet2": 3.256654205567126e-17,
+        "facet2": 3.256654205567126e-17
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5310000000008586,
+        "blind": 0.014999999999417923,
+        "rerank": 0.5470000000022992,
+        "residual20": 0.5619999999998981,
+        "residual40": 0.5470000000004802,
+        "residual40_facet2": 0.5620000000017171,
+        "facet2": 0.5470000000004802
+      },
+      "common_pool_size": 401,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df0_0572",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2610.0, \"surface_area\": 1640.0, \"principal_moments\": [44200.0, 265000.0, 294000.0], \"n_faces\": 10, \"n_edges\": 24, \"n_vertices\": 16}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "0163ed140cc846a19d3909522eca8392bde9fea492f2269729af44bbd0f453e2",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4690000000009604,
+        "blind": 0.01599999999962165,
+        "rerank": 0.4850000000005821,
+        "residual20": 0.500000000001819,
+        "residual40": 0.4850000000005821,
+        "residual40_facet2": 0.500000000001819,
+        "facet2": 0.48400000000037835
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df0_0572",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2610.0, \"surface_area\": 1640.0, \"principal_moments\": [44200.0, 265000.0, 294000.0], \"n_faces\": 10, \"n_edges\": 24, \"n_vertices\": 16}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "0163ed140cc846a19d3909522eca8392bde9fea492f2269729af44bbd0f453e2",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.0,
+        "rerank": 0.5149999999994179,
+        "residual20": 0.5159999999996217,
+        "residual40": 0.5159999999996217,
+        "residual40_facet2": 0.5310000000008586,
+        "facet2": 0.5
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df0_0572",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2610.0, \"surface_area\": 1640.0, \"principal_moments\": [44200.0, 265000.0, 294000.0], \"n_faces\": 10, \"n_edges\": 24, \"n_vertices\": 16}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "0163ed140cc846a19d3909522eca8392bde9fea492f2269729af44bbd0f453e2",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5160000000014406,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5320000000010623,
+        "residual20": 0.5310000000026776,
+        "residual40": 0.5480000000006839,
+        "residual40_facet2": 0.5470000000022992,
+        "facet2": 0.5310000000008586
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d16_0354",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 114000.0, \"surface_area\": 23700.0, \"principal_moments\": [68900000.0, 122000000.0, 188000000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "90b5adf98fc13af797a5b3a23bdb99def92990918950ef3467abd1ce6e832e2f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5619999999998981,
+        "blind": 0.01599999999962165,
+        "rerank": 0.577000000001135,
+        "residual20": 0.5779999999995198,
+        "residual40": 0.5779999999995198,
+        "residual40_facet2": 0.5930000000007567,
+        "facet2": 0.5769999999993161
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d16_0354",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 114000.0, \"surface_area\": 23700.0, \"principal_moments\": [68900000.0, 122000000.0, 188000000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "90b5adf98fc13af797a5b3a23bdb99def92990918950ef3467abd1ce6e832e2f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5470000000004802,
+        "blind": 0.0,
+        "rerank": 0.5619999999998981,
+        "residual20": 0.5630000000019209,
+        "residual40": 0.5779999999995198,
+        "residual40_facet2": 0.5630000000001019,
+        "facet2": 0.5620000000017171
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d16_0354",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 114000.0, \"surface_area\": 23700.0, \"principal_moments\": [68900000.0, 122000000.0, 188000000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "90b5adf98fc13af797a5b3a23bdb99def92990918950ef3467abd1ce6e832e2f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5319999999992433,
+        "blind": 0.01600000000144064,
+        "rerank": 0.5469999999986612,
+        "residual20": 0.547999999998865,
+        "residual40": 0.5949999999993452,
+        "residual40_facet2": 0.5630000000001019,
+        "facet2": 0.5469999999986612
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d16_0354",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 114000.0, \"surface_area\": 23700.0, \"principal_moments\": [68900000.0, 122000000.0, 188000000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "90b5adf98fc13af797a5b3a23bdb99def92990918950ef3467abd1ce6e832e2f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.39099999999962165,
+        "blind": 0.0,
+        "rerank": 0.4069999999992433,
+        "residual20": 0.4069999999992433,
+        "residual40": 0.4059999999990396,
+        "residual40_facet2": 0.39099999999962165,
+        "facet2": 0.4070000000010623
+      },
+      "common_pool_size": 382,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9d16_0354",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 114000.0, \"surface_area\": 23700.0, \"principal_moments\": [68900000.0, 122000000.0, 188000000.0], \"n_faces\": 6, \"n_edges\": 12, \"n_vertices\": 8}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "90b5adf98fc13af797a5b3a23bdb99def92990918950ef3467abd1ce6e832e2f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5469999999986612,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5629999999982829,
+        "residual20": 0.5619999999980791,
+        "residual40": 0.5630000000001019,
+        "residual40_facet2": 0.5619999999980791,
+        "facet2": 0.5629999999982829
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df4_0576",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 38300.0, \"surface_area\": 12100.0, \"principal_moments\": [8670000.0, 23999999.999999996, 31999999.999999996], \"n_faces\": 16, \"n_edges\": 39, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "e9243801563aec77b6490cd42453d81a499f175656a8b0919302a1856b1286a4",
+      "scores": {
+        "legacy": 1.1782772079678935e-16,
+        "blind": 1.1782772079678935e-16,
+        "rerank": 1.1782772079678935e-16,
+        "residual20": 1.1782772079678935e-16,
+        "residual40": 1.1782772079678935e-16,
+        "residual40_facet2": 1.1782772079678935e-16,
+        "facet2": 1.1782772079678935e-16
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5460000000002765,
+        "blind": 0.0,
+        "rerank": 0.5470000000022992,
+        "residual20": 0.5619999999998981,
+        "residual40": 0.5620000000017171,
+        "residual40_facet2": 0.5470000000004802,
+        "facet2": 0.5470000000004802
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df4_0576",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 38300.0, \"surface_area\": 12100.0, \"principal_moments\": [8670000.0, 23999999.999999996, 31999999.999999996], \"n_faces\": 16, \"n_edges\": 39, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "e9243801563aec77b6490cd42453d81a499f175656a8b0919302a1856b1286a4",
+      "scores": {
+        "legacy": 4.320349762548943e-17,
+        "blind": 4.320349762548943e-17,
+        "rerank": 4.320349762548943e-17,
+        "residual20": 4.320349762548943e-17,
+        "residual40": 4.320349762548943e-17,
+        "residual40_facet2": 4.320349762548943e-17,
+        "facet2": 4.320349762548943e-17
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4059999999990396,
+        "blind": 0.015000000001236913,
+        "rerank": 0.4059999999990396,
+        "residual20": 0.4059999999990396,
+        "residual40": 0.4210000000002765,
+        "residual40_facet2": 0.4209999999984575,
+        "facet2": 0.4059999999990396
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df4_0576",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 38300.0, \"surface_area\": 12100.0, \"principal_moments\": [8670000.0, 23999999.999999996, 31999999.999999996], \"n_faces\": 16, \"n_edges\": 39, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "e9243801563aec77b6490cd42453d81a499f175656a8b0919302a1856b1286a4",
+      "scores": {
+        "legacy": 1.2519195334658867e-16,
+        "blind": 1.2519195334658867e-16,
+        "rerank": 1.2519195334658867e-16,
+        "residual20": 1.2519195334658867e-16,
+        "residual40": 1.2519195334658867e-16,
+        "residual40_facet2": 1.2519195334658867e-16,
+        "facet2": 1.2519195334658867e-16
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5159999999996217,
+        "residual20": 0.5310000000008586,
+        "residual40": 0.5149999999994179,
+        "residual40_facet2": 0.5319999999992433,
+        "facet2": 0.5150000000012369
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df4_0576",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 38300.0, \"surface_area\": 12100.0, \"principal_moments\": [8670000.0, 23999999.999999996, 31999999.999999996], \"n_faces\": 16, \"n_edges\": 39, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "e9243801563aec77b6490cd42453d81a499f175656a8b0919302a1856b1286a4",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4220000000004802,
+        "blind": 0.01599999999962165,
+        "rerank": 0.4220000000004802,
+        "residual20": 0.4530000000013388,
+        "residual40": 0.43699999999989814,
+        "residual40_facet2": 0.43800000000010186,
+        "facet2": 0.4220000000004802
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9df4_0576",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 38300.0, \"surface_area\": 12100.0, \"principal_moments\": [8670000.0, 23999999.999999996, 31999999.999999996], \"n_faces\": 16, \"n_edges\": 39, \"n_vertices\": 26}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "e9243801563aec77b6490cd42453d81a499f175656a8b0919302a1856b1286a4",
+      "scores": {
+        "legacy": 1.2519195334658867e-16,
+        "blind": 1.2519195334658867e-16,
+        "rerank": 1.2519195334658867e-16,
+        "residual20": 1.2519195334658867e-16,
+        "residual40": 1.2519195334658867e-16,
+        "residual40_facet2": 1.2519195334658867e-16,
+        "facet2": 1.2519195334658867e-16
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5460000000002765,
+        "blind": 0.0,
+        "rerank": 0.5469999999986612,
+        "residual20": 0.5619999999980791,
+        "residual40": 0.5619999999998981,
+        "residual40_facet2": 0.5469999999986612,
+        "facet2": 0.5619999999998981
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9f65_0945",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2750.0, \"surface_area\": 2170.0, \"principal_moments\": [149000.0, 207000.0, 349000.0], \"n_faces\": 18, \"n_edges\": 56, \"n_vertices\": 36}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "fcdb1f06b1b9b1c2cbb878c6215ca7822553ef8dd6c8f0a04218891a97aa2ecd",
+      "scores": {
+        "legacy": 1.2933278296978034e-15,
+        "blind": 1.2933278296978034e-15,
+        "rerank": 1.2933278296978034e-15,
+        "residual20": 1.2933278296978034e-15,
+        "residual40": 1.2933278296978034e-15,
+        "residual40_facet2": 1.2933278296978034e-15,
+        "facet2": 1.2933278296978034e-15
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5459999999984575,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5469999999986612,
+        "residual20": 0.5619999999998981,
+        "residual40": 0.5619999999980791,
+        "residual40_facet2": 0.5619999999998981,
+        "facet2": 0.5469999999986612
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9f65_0945",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2750.0, \"surface_area\": 2170.0, \"principal_moments\": [149000.0, 207000.0, 349000.0], \"n_faces\": 18, \"n_edges\": 56, \"n_vertices\": 36}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "fcdb1f06b1b9b1c2cbb878c6215ca7822553ef8dd6c8f0a04218891a97aa2ecd",
+      "scores": {
+        "legacy": 4.742202042225279e-16,
+        "blind": 4.742202042225279e-16,
+        "rerank": 4.742202042225279e-16,
+        "residual20": 4.742202042225279e-16,
+        "residual40": 4.742202042225279e-16,
+        "residual40_facet2": 4.742202042225279e-16,
+        "facet2": 4.742202042225279e-16
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5939999999991414,
+        "blind": 0.01599999999962165,
+        "rerank": 0.6099999999987631,
+        "residual20": 0.6399999999994179,
+        "residual40": 0.6259999999983847,
+        "residual40_facet2": 0.625,
+        "facet2": 0.6099999999987631
+      },
+      "common_pool_size": 401,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9f65_0945",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2750.0, \"surface_area\": 2170.0, \"principal_moments\": [149000.0, 207000.0, 349000.0], \"n_faces\": 18, \"n_edges\": 56, \"n_vertices\": 36}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "fcdb1f06b1b9b1c2cbb878c6215ca7822553ef8dd6c8f0a04218891a97aa2ecd",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5319999999992433,
+        "blind": 0.014999999999417923,
+        "rerank": 0.5320000000010623,
+        "residual20": 0.5469999999986612,
+        "residual40": 0.5470000000004802,
+        "residual40_facet2": 0.547999999998865,
+        "facet2": 0.5309999999990396
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9f65_0945",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2750.0, \"surface_area\": 2170.0, \"principal_moments\": [149000.0, 207000.0, 349000.0], \"n_faces\": 18, \"n_edges\": 56, \"n_vertices\": 36}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "fcdb1f06b1b9b1c2cbb878c6215ca7822553ef8dd6c8f0a04218891a97aa2ecd",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.25,
+        "blind": 0.015000000001236913,
+        "rerank": 0.25,
+        "residual20": 0.25,
+        "residual40": 0.24899999999979627,
+        "residual40_facet2": 0.2650000000012369,
+        "facet2": 0.25
+      },
+      "common_pool_size": 395,
+      "base_added_count": 18
+    },
+    {
+      "id": "plate_462c9f65_0945",
+      "dataset": "CadQuarry",
+      "group": "cq:plate:{\"version\": 2, \"volume\": 2750.0, \"surface_area\": 2170.0, \"principal_moments\": [149000.0, 207000.0, 349000.0], \"n_faces\": 18, \"n_edges\": 56, \"n_vertices\": 36}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "fcdb1f06b1b9b1c2cbb878c6215ca7822553ef8dd6c8f0a04218891a97aa2ecd",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5310000000008586,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5319999999992433,
+        "residual20": 0.5470000000004802,
+        "residual40": 0.5469999999986612,
+        "residual40_facet2": 0.5470000000004802,
+        "facet2": 0.5319999999992433
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9cf4_0320",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 31700.0, \"surface_area\": 13200.0, \"principal_moments\": [7980000.0, 52199999.99999999, 56999999.99999999], \"n_faces\": 18, \"n_edges\": 48, \"n_vertices\": 32}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "48936e2d342c094830be678b073a3dff37c7a83a03b9c7744ed702de345aa321",
+      "scores": {
+        "legacy": 0.33975391461957266,
+        "blind": 0.33975391461957266,
+        "rerank": 0.33975391461957266,
+        "residual20": 0.33975391461957266,
+        "residual40": 0.33975391461957266,
+        "residual40_facet2": 0.33975391461957266,
+        "facet2": 0.33975391461957266
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4530000000013388,
+        "blind": 0.01599999999962165,
+        "rerank": 0.4680000000007567,
+        "residual20": 0.4690000000027794,
+        "residual40": 0.48400000000037835,
+        "residual40_facet2": 0.4690000000009604,
+        "facet2": 0.4680000000025757
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9cf4_0320",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 31700.0, \"surface_area\": 13200.0, \"principal_moments\": [7980000.0, 52199999.99999999, 56999999.99999999], \"n_faces\": 18, \"n_edges\": 48, \"n_vertices\": 32}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "48936e2d342c094830be678b073a3dff37c7a83a03b9c7744ed702de345aa321",
+      "scores": {
+        "legacy": 0.13751559103258593,
+        "blind": 0.13751559103258593,
+        "rerank": 0.13751559103258593,
+        "residual20": 0.13751559103258593,
+        "residual40": 0.13751559103258593,
+        "residual40_facet2": 0.13751559103258593,
+        "facet2": 0.13751559103258593
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5159999999996217,
+        "blind": 0.01600000000144064,
+        "rerank": 0.5309999999990396,
+        "residual20": 0.5319999999992433,
+        "residual40": 0.5319999999992433,
+        "residual40_facet2": 0.5470000000004802,
+        "facet2": 0.5319999999992433
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9cf4_0320",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 31700.0, \"surface_area\": 13200.0, \"principal_moments\": [7980000.0, 52199999.99999999, 56999999.99999999], \"n_faces\": 18, \"n_edges\": 48, \"n_vertices\": 32}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "48936e2d342c094830be678b073a3dff37c7a83a03b9c7744ed702de345aa321",
+      "scores": {
+        "legacy": 0.07840667403565164,
+        "blind": 0.07840667403565164,
+        "rerank": 0.07840667403565164,
+        "residual20": 0.07840667403565164,
+        "residual40": 0.07840667403565164,
+        "residual40_facet2": 0.07840667403565164,
+        "facet2": 0.07840667403565164
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5309999999990396,
+        "blind": 0.015000000001236913,
+        "rerank": 0.5469999999986612,
+        "residual20": 0.5469999999986612,
+        "residual40": 0.5619999999998981,
+        "residual40_facet2": 0.5619999999980791,
+        "facet2": 0.5469999999986612
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9cf4_0320",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 31700.0, \"surface_area\": 13200.0, \"principal_moments\": [7980000.0, 52199999.99999999, 56999999.99999999], \"n_faces\": 18, \"n_edges\": 48, \"n_vertices\": 32}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "48936e2d342c094830be678b073a3dff37c7a83a03b9c7744ed702de345aa321",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.40600000000085856,
+        "blind": 0.0,
+        "rerank": 0.4220000000004802,
+        "residual20": 0.4210000000002765,
+        "residual40": 0.4220000000022992,
+        "residual40_facet2": 0.40600000000085856,
+        "facet2": 0.4210000000002765
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9cf4_0320",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 31700.0, \"surface_area\": 13200.0, \"principal_moments\": [7980000.0, 52199999.99999999, 56999999.99999999], \"n_faces\": 18, \"n_edges\": 48, \"n_vertices\": 32}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "48936e2d342c094830be678b073a3dff37c7a83a03b9c7744ed702de345aa321",
+      "scores": {
+        "legacy": 0.07840667403565164,
+        "blind": 0.07840667403565164,
+        "rerank": 0.07840667403565164,
+        "residual20": 0.07840667403565164,
+        "residual40": 0.07840667403565164,
+        "residual40_facet2": 0.07840667403565164,
+        "facet2": 0.07840667403565164
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.375,
+        "blind": 0.01599999999962165,
+        "rerank": 0.375,
+        "residual20": 0.4059999999990396,
+        "residual40": 0.39100000000144064,
+        "residual40_facet2": 0.3899999999994179,
+        "facet2": 0.39099999999962165
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9e6a_0694",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 11600.0, \"surface_area\": 4120.0, \"principal_moments\": [1170000.0, 1440000.0, 2030000.0], \"n_faces\": 8, \"n_edges\": 18, \"n_vertices\": 12}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "c39d359ad9d3057cb2309e6bc1f516b69a96b03c2035e7a5d8eece0ca1f8053f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.43800000000010186,
+        "blind": 0.0,
+        "rerank": 0.4539999999997235,
+        "residual20": 0.43800000000010186,
+        "residual40": 0.4539999999997235,
+        "residual40_facet2": 0.4529999999995198,
+        "facet2": 0.4540000000015425
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9e6a_0694",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 11600.0, \"surface_area\": 4120.0, \"principal_moments\": [1170000.0, 1440000.0, 2030000.0], \"n_faces\": 8, \"n_edges\": 18, \"n_vertices\": 12}",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "c39d359ad9d3057cb2309e6bc1f516b69a96b03c2035e7a5d8eece0ca1f8053f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.39099999999962165,
+        "blind": 0.0,
+        "rerank": 0.4070000000010623,
+        "residual20": 0.4059999999990396,
+        "residual40": 0.4069999999992433,
+        "residual40_facet2": 0.4069999999992433,
+        "facet2": 0.39099999999962165
+      },
+      "common_pool_size": 383,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9e6a_0694",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 11600.0, \"surface_area\": 4120.0, \"principal_moments\": [1170000.0, 1440000.0, 2030000.0], \"n_faces\": 8, \"n_edges\": 18, \"n_vertices\": 12}",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "c39d359ad9d3057cb2309e6bc1f516b69a96b03c2035e7a5d8eece0ca1f8053f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4529999999995198,
+        "blind": 0.014999999999417923,
+        "rerank": 0.4690000000009604,
+        "residual20": 0.4679999999989377,
+        "residual40": 0.46899999999914144,
+        "residual40_facet2": 0.48400000000037835,
+        "facet2": 0.4529999999995198
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9e6a_0694",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 11600.0, \"surface_area\": 4120.0, \"principal_moments\": [1170000.0, 1440000.0, 2030000.0], \"n_faces\": 8, \"n_edges\": 18, \"n_vertices\": 12}",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "c39d359ad9d3057cb2309e6bc1f516b69a96b03c2035e7a5d8eece0ca1f8053f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3430000000007567,
+        "blind": 0.0,
+        "rerank": 0.35900000000037835,
+        "residual20": 0.3580000000001746,
+        "residual40": 0.35900000000219734,
+        "residual40_facet2": 0.3580000000001746,
+        "facet2": 0.3430000000007567
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "bracket_462c9e6a_0694",
+      "dataset": "CadQuarry",
+      "group": "cq:bracket:{\"version\": 2, \"volume\": 11600.0, \"surface_area\": 4120.0, \"principal_moments\": [1170000.0, 1440000.0, 2030000.0], \"n_faces\": 8, \"n_edges\": 18, \"n_vertices\": 12}",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "c39d359ad9d3057cb2309e6bc1f516b69a96b03c2035e7a5d8eece0ca1f8053f",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.40600000000085856,
+        "blind": 0.014999999999417923,
+        "rerank": 0.40600000000085856,
+        "residual20": 0.4220000000004802,
+        "residual40": 0.4370000000017171,
+        "residual40_facet2": 0.4220000000004802,
+        "facet2": 0.4220000000004802
+      },
+      "common_pool_size": 384,
+      "base_added_count": 18
+    },
+    {
+      "id": "237735",
+      "dataset": "Thingi10K",
+      "group": "thing:113908",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "ede467e8fc4919782d4ba1d4733fd5714b67f08e7ecb934b8e86f71fcfdb5b3c",
+      "scores": {
+        "legacy": 0.33395695452972385,
+        "blind": 0.33395695452972385,
+        "rerank": 0.33395695452972385,
+        "residual20": 0.33395695452972385,
+        "residual40": 0.33395695452972385,
+        "residual40_facet2": 0.33395695452972385,
+        "facet2": 0.33395695452972385
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.0,
+        "rerank": 0.49900000000161526,
+        "residual20": 0.5,
+        "residual40": 0.5,
+        "residual40_facet2": 0.5150000000012369,
+        "facet2": 0.4989999999997963
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "237735",
+      "dataset": "Thingi10K",
+      "group": "thing:113908",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "ede467e8fc4919782d4ba1d4733fd5714b67f08e7ecb934b8e86f71fcfdb5b3c",
+      "scores": {
+        "legacy": 0.12545551649613595,
+        "blind": 0.12545551649613595,
+        "rerank": 0.12545551649613595,
+        "residual20": 0.12545551649613595,
+        "residual40": 0.12545551649613595,
+        "residual40_facet2": 0.12545551649613595,
+        "facet2": 0.12545551649613595
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.46899999999914144,
+        "blind": 0.014999999999417923,
+        "rerank": 0.46899999999914144,
+        "residual20": 0.5009999999983847,
+        "residual40": 0.48400000000037835,
+        "residual40_facet2": 0.5009999999983847,
+        "facet2": 0.48399999999855936
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "237735",
+      "dataset": "Thingi10K",
+      "group": "thing:113908",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "ede467e8fc4919782d4ba1d4733fd5714b67f08e7ecb934b8e86f71fcfdb5b3c",
+      "scores": {
+        "legacy": 0.10945449399792581,
+        "blind": 0.10945449399792581,
+        "rerank": 0.10945449399792581,
+        "residual20": 0.10945449399792581,
+        "residual40": 0.10945449399792581,
+        "residual40_facet2": 0.10945449399792581,
+        "facet2": 0.10945449399792581
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.46899999999914144,
+        "blind": 0.0,
+        "rerank": 0.4679999999989377,
+        "residual20": 0.4690000000009604,
+        "residual40": 0.48399999999855936,
+        "residual40_facet2": 0.46899999999914144,
+        "facet2": 0.4680000000007567
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "237735",
+      "dataset": "Thingi10K",
+      "group": "thing:113908",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "ede467e8fc4919782d4ba1d4733fd5714b67f08e7ecb934b8e86f71fcfdb5b3c",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.34399999999914144,
+        "blind": 0.0,
+        "rerank": 0.3429999999989377,
+        "residual20": 0.3279999999995198,
+        "residual40": 0.3440000000009604,
+        "residual40_facet2": 0.3429999999989377,
+        "facet2": 0.34399999999914144
+      },
+      "common_pool_size": 386,
+      "base_added_count": 18
+    },
+    {
+      "id": "237735",
+      "dataset": "Thingi10K",
+      "group": "thing:113908",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "ede467e8fc4919782d4ba1d4733fd5714b67f08e7ecb934b8e86f71fcfdb5b3c",
+      "scores": {
+        "legacy": 0.10945449399792581,
+        "blind": 0.10945449399792581,
+        "rerank": 0.10945449399792581,
+        "residual20": 0.10945449399792581,
+        "residual40": 0.10945449399792581,
+        "residual40_facet2": 0.10945449399792581,
+        "facet2": 0.10945449399792581
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4220000000004802,
+        "blind": 0.0,
+        "rerank": 0.4210000000020955,
+        "residual20": 0.4220000000004802,
+        "residual40": 0.43699999999989814,
+        "residual40_facet2": 0.4220000000022992,
+        "facet2": 0.4210000000002765
+      },
+      "common_pool_size": 390,
+      "base_added_count": 18
+    },
+    {
+      "id": "96771",
+      "dataset": "Thingi10K",
+      "group": "thing:33509",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "98ea84bcc19e0ce6e917e6f26c00f352ac5265960d078256a3b6db99bed41236",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4220000000004802,
+        "blind": 0.0,
+        "rerank": 0.4069999999992433,
+        "residual20": 0.42299999999886495,
+        "residual40": 0.42299999999886495,
+        "residual40_facet2": 0.4219999999986612,
+        "facet2": 0.42300000000068394
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "96771",
+      "dataset": "Thingi10K",
+      "group": "thing:33509",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "98ea84bcc19e0ce6e917e6f26c00f352ac5265960d078256a3b6db99bed41236",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3900000000012369,
+        "blind": 0.0,
+        "rerank": 0.40600000000085856,
+        "residual20": 0.4210000000020955,
+        "residual40": 0.40500000000065484,
+        "residual40_facet2": 0.4220000000004802,
+        "facet2": 0.4050000000024738
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "96771",
+      "dataset": "Thingi10K",
+      "group": "thing:33509",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "98ea84bcc19e0ce6e917e6f26c00f352ac5265960d078256a3b6db99bed41236",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5159999999996217,
+        "blind": 0.0,
+        "rerank": 0.5320000000010623,
+        "residual20": 0.5469999999986612,
+        "residual40": 0.5319999999992433,
+        "residual40_facet2": 0.5470000000004802,
+        "facet2": 0.5159999999996217
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "96771",
+      "dataset": "Thingi10K",
+      "group": "thing:33509",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "98ea84bcc19e0ce6e917e6f26c00f352ac5265960d078256a3b6db99bed41236",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.35900000000037835,
+        "blind": 0.0,
+        "rerank": 0.37400000000161526,
+        "residual20": 0.375,
+        "residual40": 0.375,
+        "residual40_facet2": 0.3739999999997963,
+        "facet2": 0.35900000000037835
+      },
+      "common_pool_size": 400,
+      "base_added_count": 18
+    },
+    {
+      "id": "96771",
+      "dataset": "Thingi10K",
+      "group": "thing:33509",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "98ea84bcc19e0ce6e917e6f26c00f352ac5265960d078256a3b6db99bed41236",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4690000000009604,
+        "blind": 0.0,
+        "rerank": 0.4850000000005821,
+        "residual20": 0.4850000000005821,
+        "residual40": 0.48400000000219734,
+        "residual40_facet2": 0.4850000000005821,
+        "facet2": 0.4850000000005821
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "97939",
+      "dataset": "Thingi10K",
+      "group": "thing:33983",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "3b17c6c7affd12d62ed41b46a60dd503690027cee7870f35445482b7c944536d",
+      "scores": {
+        "legacy": 0.7239455720013773,
+        "blind": 0.7239455720013773,
+        "rerank": 0.7239455720013773,
+        "residual20": 0.7239455720013773,
+        "residual40": 0.7239455720013773,
+        "residual40_facet2": 0.7239455720013773,
+        "facet2": 0.7239455720013773
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.43699999999989814,
+        "blind": 0.014999999999417923,
+        "rerank": 0.4529999999995198,
+        "residual20": 0.4529999999995198,
+        "residual40": 0.4680000000007567,
+        "residual40_facet2": 0.4529999999995198,
+        "facet2": 0.45199999999931606
+      },
+      "common_pool_size": 391,
+      "base_added_count": 18
+    },
+    {
+      "id": "97939",
+      "dataset": "Thingi10K",
+      "group": "thing:33983",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "3b17c6c7affd12d62ed41b46a60dd503690027cee7870f35445482b7c944536d",
+      "scores": {
+        "legacy": 0.26245440136104786,
+        "blind": 0.26245440136104786,
+        "rerank": 0.26245440136104786,
+        "residual20": 0.26245440136104786,
+        "residual40": 0.26245440136104786,
+        "residual40_facet2": 0.26245440136104786,
+        "facet2": 0.26245440136104786
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5310000000008586,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5460000000002765,
+        "residual20": 0.5470000000022992,
+        "residual40": 0.5619999999998981,
+        "residual40_facet2": 0.5470000000004802,
+        "facet2": 0.5460000000020955
+      },
+      "common_pool_size": 391,
+      "base_added_count": 18
+    },
+    {
+      "id": "97939",
+      "dataset": "Thingi10K",
+      "group": "thing:33983",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "3b17c6c7affd12d62ed41b46a60dd503690027cee7870f35445482b7c944536d",
+      "scores": {
+        "legacy": 0.43898603707223693,
+        "blind": 0.43898603707223693,
+        "rerank": 0.43898603707223693,
+        "residual20": 0.43898603707223693,
+        "residual40": 0.43898603707223693,
+        "residual40_facet2": 0.43898603707223693,
+        "facet2": 0.43898603707223693
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4059999999990396,
+        "blind": 0.0,
+        "rerank": 0.40500000000065484,
+        "residual20": 0.4219999999986612,
+        "residual40": 0.40499999999883585,
+        "residual40_facet2": 0.40600000000085856,
+        "facet2": 0.40499999999883585
+      },
+      "common_pool_size": 391,
+      "base_added_count": 18
+    },
+    {
+      "id": "97939",
+      "dataset": "Thingi10K",
+      "group": "thing:33983",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "3b17c6c7affd12d62ed41b46a60dd503690027cee7870f35445482b7c944536d",
+      "scores": {
+        "legacy": 0.0007069448094776113,
+        "blind": 0.0007069448094776113,
+        "rerank": 0.0007069448094776113,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0007069448094776113
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4220000000004802,
+        "blind": 0.0,
+        "rerank": 0.43800000000192085,
+        "residual20": 0.43699999999989814,
+        "residual40": 0.4220000000004802,
+        "residual40_facet2": 0.43800000000010186,
+        "facet2": 0.43800000000010186
+      },
+      "common_pool_size": 391,
+      "base_added_count": 18
+    },
+    {
+      "id": "97939",
+      "dataset": "Thingi10K",
+      "group": "thing:33983",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "3b17c6c7affd12d62ed41b46a60dd503690027cee7870f35445482b7c944536d",
+      "scores": {
+        "legacy": 0.43898603707223693,
+        "blind": 0.43898603707223693,
+        "rerank": 0.43898603707223693,
+        "residual20": 0.43898603707223693,
+        "residual40": 0.43898603707223693,
+        "residual40_facet2": 0.43898603707223693,
+        "facet2": 0.43898603707223693
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3280000000013388,
+        "blind": 0.0,
+        "rerank": 0.32699999999931606,
+        "residual20": 0.34399999999914144,
+        "residual40": 0.32700000000113505,
+        "residual40_facet2": 0.34399999999914144,
+        "facet2": 0.32699999999931606
+      },
+      "common_pool_size": 391,
+      "base_added_count": 18
+    },
+    {
+      "id": "124363",
+      "dataset": "Thingi10K",
+      "group": "thing:45347",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "5dd73981addd7d79d97bb23d17a0a2d04e44e352a9ada402088243e1d228e1d2",
+      "scores": {
+        "legacy": 0.5235726716049129,
+        "blind": 0.5235726716049129,
+        "rerank": 0.5235726716049129,
+        "residual20": 0.5235726716049129,
+        "residual40": 0.5235726716049129,
+        "residual40_facet2": 0.5235726716049129,
+        "facet2": 0.5235726716049129
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.35900000000037835,
+        "blind": 0.0,
+        "rerank": 0.3739999999997963,
+        "residual20": 0.3900000000012369,
+        "residual40": 0.375,
+        "residual40_facet2": 0.375,
+        "facet2": 0.37400000000161526
+      },
+      "common_pool_size": 395,
+      "base_added_count": 18
+    },
+    {
+      "id": "124363",
+      "dataset": "Thingi10K",
+      "group": "thing:45347",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "5dd73981addd7d79d97bb23d17a0a2d04e44e352a9ada402088243e1d228e1d2",
+      "scores": {
+        "legacy": 0.20339274411496644,
+        "blind": 0.20339274411496644,
+        "rerank": 0.20339274411496644,
+        "residual20": 0.20339274411496644,
+        "residual40": 0.20339274411496644,
+        "residual40_facet2": 0.20339274411496644,
+        "facet2": 0.20339274411496644
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3600000000005821,
+        "blind": 0.0,
+        "rerank": 0.3760000000002037,
+        "residual20": 0.3760000000002037,
+        "residual40": 0.375000000001819,
+        "residual40_facet2": 0.3600000000005821,
+        "facet2": 0.3760000000002037
+      },
+      "common_pool_size": 395,
+      "base_added_count": 18
+    },
+    {
+      "id": "124363",
+      "dataset": "Thingi10K",
+      "group": "thing:45347",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "5dd73981addd7d79d97bb23d17a0a2d04e44e352a9ada402088243e1d228e1d2",
+      "scores": {
+        "legacy": 0.4877778475061792,
+        "blind": 0.4877778475061792,
+        "rerank": 0.4877778475061792,
+        "residual20": 0.4877778475061792,
+        "residual40": 0.4877778475061792,
+        "residual40_facet2": 0.4877778475061792,
+        "facet2": 0.4877778475061792
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4059999999990396,
+        "blind": 0.0,
+        "rerank": 0.4070000000010623,
+        "residual20": 0.4059999999990396,
+        "residual40": 0.42299999999886495,
+        "residual40_facet2": 0.40600000000085856,
+        "facet2": 0.4069999999992433
+      },
+      "common_pool_size": 395,
+      "base_added_count": 18
+    },
+    {
+      "id": "124363",
+      "dataset": "Thingi10K",
+      "group": "thing:45347",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "5dd73981addd7d79d97bb23d17a0a2d04e44e352a9ada402088243e1d228e1d2",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3279999999995198,
+        "blind": 0.0,
+        "rerank": 0.3430000000007567,
+        "residual20": 0.34399999999914144,
+        "residual40": 0.34399999999914144,
+        "residual40_facet2": 0.3429999999989377,
+        "facet2": 0.3279999999995198
+      },
+      "common_pool_size": 393,
+      "base_added_count": 18
+    },
+    {
+      "id": "124363",
+      "dataset": "Thingi10K",
+      "group": "thing:45347",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "5dd73981addd7d79d97bb23d17a0a2d04e44e352a9ada402088243e1d228e1d2",
+      "scores": {
+        "legacy": 0.4877778475061792,
+        "blind": 0.4877778475061792,
+        "rerank": 0.4877778475061792,
+        "residual20": 0.4877778475061792,
+        "residual40": 0.4877778475061792,
+        "residual40_facet2": 0.4877778475061792,
+        "facet2": 0.4877778475061792
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4680000000007567,
+        "blind": 0.0,
+        "rerank": 0.46899999999914144,
+        "residual20": 0.48399999999855936,
+        "residual40": 0.4690000000009604,
+        "residual40_facet2": 0.4679999999989377,
+        "facet2": 0.46899999999914144
+      },
+      "common_pool_size": 395,
+      "base_added_count": 18
+    },
+    {
+      "id": "255495",
+      "dataset": "Thingi10K",
+      "group": "thing:121702",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "294b9f26b0a8530b1cca4ccb11dd9263dfda47244e6d5e5ffb81f64bb3259845",
+      "scores": {
+        "legacy": 0.7648490565757442,
+        "blind": 0.7648490565757442,
+        "rerank": 0.7648490565757442,
+        "residual20": 0.7648490565757442,
+        "residual40": 0.7648490565757442,
+        "residual40_facet2": 0.7648490565757442,
+        "facet2": 0.7648490565757442
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5010000000002037,
+        "blind": 0.0,
+        "rerank": 0.5160000000014406,
+        "residual20": 0.5010000000002037,
+        "residual40": 0.5159999999996217,
+        "residual40_facet2": 0.5160000000014406,
+        "facet2": 0.5010000000002037
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "255495",
+      "dataset": "Thingi10K",
+      "group": "thing:121702",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "294b9f26b0a8530b1cca4ccb11dd9263dfda47244e6d5e5ffb81f64bb3259845",
+      "scores": {
+        "legacy": 0.2804446540777729,
+        "blind": 0.2804446540777729,
+        "rerank": 0.2804446540777729,
+        "residual20": 0.2804446540777729,
+        "residual40": 0.2804446540777729,
+        "residual40_facet2": 0.2804446540777729,
+        "facet2": 0.2804446540777729
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4680000000007567,
+        "blind": 0.01599999999962165,
+        "rerank": 0.4830000000001746,
+        "residual20": 0.48400000000219734,
+        "residual40": 0.4989999999997963,
+        "residual40_facet2": 0.49900000000161526,
+        "facet2": 0.48400000000037835
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "255495",
+      "dataset": "Thingi10K",
+      "group": "thing:121702",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "294b9f26b0a8530b1cca4ccb11dd9263dfda47244e6d5e5ffb81f64bb3259845",
+      "scores": {
+        "legacy": 0.5697413243936791,
+        "blind": 0.5697413243936791,
+        "rerank": 0.5697413243936791,
+        "residual20": 0.5697413243936791,
+        "residual40": 0.5697413243936791,
+        "residual40_facet2": 0.5697413243936791,
+        "facet2": 0.5697413243936791
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3899999999994179,
+        "blind": 0.0,
+        "rerank": 0.39100000000144064,
+        "residual20": 0.3899999999994179,
+        "residual40": 0.39099999999962165,
+        "residual40_facet2": 0.39099999999962165,
+        "facet2": 0.3900000000012369
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "255495",
+      "dataset": "Thingi10K",
+      "group": "thing:121702",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "294b9f26b0a8530b1cca4ccb11dd9263dfda47244e6d5e5ffb81f64bb3259845",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.35900000000037835,
+        "blind": 0.0,
+        "rerank": 0.375,
+        "residual20": 0.3739999999997963,
+        "residual40": 0.35900000000037835,
+        "residual40_facet2": 0.375000000001819,
+        "facet2": 0.3739999999997963
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "255495",
+      "dataset": "Thingi10K",
+      "group": "thing:121702",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "294b9f26b0a8530b1cca4ccb11dd9263dfda47244e6d5e5ffb81f64bb3259845",
+      "scores": {
+        "legacy": 0.5697413243936791,
+        "blind": 0.5697413243936791,
+        "rerank": 0.5697413243936791,
+        "residual20": 0.5697413243936791,
+        "residual40": 0.5697413243936791,
+        "residual40_facet2": 0.5697413243936791,
+        "facet2": 0.5697413243936791
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4070000000010623,
+        "blind": 0.014999999999417923,
+        "rerank": 0.4069999999992433,
+        "residual20": 0.4069999999992433,
+        "residual40": 0.4220000000004802,
+        "residual40_facet2": 0.4219999999986612,
+        "facet2": 0.4070000000010623
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "84975",
+      "dataset": "Thingi10K",
+      "group": "thing:28773",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "c8eb78f81b23f831ad52e235dafa741a24f330e931d2a1abb1f39962961eff55",
+      "scores": {
+        "legacy": 0.17728718144745476,
+        "blind": 0.17728718144745476,
+        "rerank": 0.17728718144745476,
+        "residual20": 0.17728718144745476,
+        "residual40": 0.17728718144745476,
+        "residual40_facet2": 0.17728718144745476,
+        "facet2": 0.17728718144745476
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4850000000005821,
+        "blind": 0.0,
+        "rerank": 0.5010000000002037,
+        "residual20": 0.5160000000014406,
+        "residual40": 0.5010000000002037,
+        "residual40_facet2": 0.5010000000002037,
+        "facet2": 0.5
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "84975",
+      "dataset": "Thingi10K",
+      "group": "thing:28773",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "c8eb78f81b23f831ad52e235dafa741a24f330e931d2a1abb1f39962961eff55",
+      "scores": {
+        "legacy": 0.06500529986406674,
+        "blind": 0.06500529986406674,
+        "rerank": 0.06500529986406674,
+        "residual20": 0.06500529986406674,
+        "residual40": 0.06500529986406674,
+        "residual40_facet2": 0.06500529986406674,
+        "facet2": 0.06500529986406674
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.3279999999995198,
+        "blind": 0.0,
+        "rerank": 0.3429999999989377,
+        "residual20": 0.3279999999995198,
+        "residual40": 0.35900000000037835,
+        "residual40_facet2": 0.3279999999995198,
+        "facet2": 0.34399999999914144
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "84975",
+      "dataset": "Thingi10K",
+      "group": "thing:28773",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "c8eb78f81b23f831ad52e235dafa741a24f330e931d2a1abb1f39962961eff55",
+      "scores": {
+        "legacy": 0.18836763028792067,
+        "blind": 0.18836763028792067,
+        "rerank": 0.18836763028792067,
+        "residual20": 0.18836763028792067,
+        "residual40": 0.18836763028792067,
+        "residual40_facet2": 0.18836763028792067,
+        "facet2": 0.18836763028792067
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.0,
+        "rerank": 0.5159999999996217,
+        "residual20": 0.5150000000012369,
+        "residual40": 0.5159999999996217,
+        "residual40_facet2": 0.5309999999990396,
+        "facet2": 0.5
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "84975",
+      "dataset": "Thingi10K",
+      "group": "thing:28773",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "c8eb78f81b23f831ad52e235dafa741a24f330e931d2a1abb1f39962961eff55",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4070000000010623,
+        "blind": 0.0,
+        "rerank": 0.39099999999962165,
+        "residual20": 0.4059999999990396,
+        "residual40": 0.4069999999992433,
+        "residual40_facet2": 0.4069999999992433,
+        "facet2": 0.40600000000085856
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "84975",
+      "dataset": "Thingi10K",
+      "group": "thing:28773",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "c8eb78f81b23f831ad52e235dafa741a24f330e931d2a1abb1f39962961eff55",
+      "scores": {
+        "legacy": 0.18836763028792067,
+        "blind": 0.18836763028792067,
+        "rerank": 0.18836763028792067,
+        "residual20": 0.18836763028792067,
+        "residual40": 0.18836763028792067,
+        "residual40_facet2": 0.18836763028792067,
+        "facet2": 0.18836763028792067
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5319999999992433,
+        "blind": 0.0,
+        "rerank": 0.5309999999990396,
+        "residual20": 0.5320000000010623,
+        "residual40": 0.5309999999990396,
+        "residual40_facet2": 0.547999999998865,
+        "facet2": 0.5159999999996217
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "72603",
+      "dataset": "Thingi10K",
+      "group": "thing:22858",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "8ea735a9d54fba250b3eae8f23ffdcaf44467fb4781ef6cc80a79a50bfd62dfb",
+      "scores": {
+        "legacy": 0.5533595618735739,
+        "blind": 0.5533595618735739,
+        "rerank": 0.5533595618735739,
+        "residual20": 0.5455650872585565,
+        "residual40": 0.5533595618735739,
+        "residual40_facet2": 0.5533595618735739,
+        "facet2": 0.5533595618735739
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.46899999999914144,
+        "blind": 0.0,
+        "rerank": 0.47000000000116415,
+        "residual20": 0.46899999999914144,
+        "residual40": 0.46999999999934516,
+        "residual40_facet2": 0.46999999999934516,
+        "facet2": 0.4690000000009604
+      },
+      "common_pool_size": 381,
+      "base_added_count": 18
+    },
+    {
+      "id": "72603",
+      "dataset": "Thingi10K",
+      "group": "thing:22858",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "8ea735a9d54fba250b3eae8f23ffdcaf44467fb4781ef6cc80a79a50bfd62dfb",
+      "scores": {
+        "legacy": 0.24090289930009273,
+        "blind": 0.24090289930009273,
+        "rerank": 0.24090289930009273,
+        "residual20": 0.24090289930009273,
+        "residual40": 0.24090289930009273,
+        "residual40_facet2": 0.24090289930009273,
+        "facet2": 0.24090289930009273
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.0,
+        "rerank": 0.5,
+        "residual20": 0.4989999999997963,
+        "residual40": 0.5150000000012369,
+        "residual40_facet2": 0.5,
+        "facet2": 0.5
+      },
+      "common_pool_size": 381,
+      "base_added_count": 18
+    },
+    {
+      "id": "72603",
+      "dataset": "Thingi10K",
+      "group": "thing:22858",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "8ea735a9d54fba250b3eae8f23ffdcaf44467fb4781ef6cc80a79a50bfd62dfb",
+      "scores": {
+        "legacy": 0.6128489365464476,
+        "blind": 0.6128489365464476,
+        "rerank": 0.6128489365464476,
+        "residual20": 0.6061203527388399,
+        "residual40": 0.6128489365464476,
+        "residual40_facet2": 0.6128489365464476,
+        "facet2": 0.6128489365464476
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5470000000004802,
+        "blind": 0.0,
+        "rerank": 0.5470000000004802,
+        "residual20": 0.5620000000017171,
+        "residual40": 0.5470000000004802,
+        "residual40_facet2": 0.5620000000017171,
+        "facet2": 0.5460000000002765
+      },
+      "common_pool_size": 381,
+      "base_added_count": 18
+    },
+    {
+      "id": "72603",
+      "dataset": "Thingi10K",
+      "group": "thing:22858",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "8ea735a9d54fba250b3eae8f23ffdcaf44467fb4781ef6cc80a79a50bfd62dfb",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.375,
+        "blind": 0.0,
+        "rerank": 0.39099999999962165,
+        "residual20": 0.3900000000012369,
+        "residual40": 0.39099999999962165,
+        "residual40_facet2": 0.39099999999962165,
+        "facet2": 0.375
+      },
+      "common_pool_size": 381,
+      "base_added_count": 18
+    },
+    {
+      "id": "72603",
+      "dataset": "Thingi10K",
+      "group": "thing:22858",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "8ea735a9d54fba250b3eae8f23ffdcaf44467fb4781ef6cc80a79a50bfd62dfb",
+      "scores": {
+        "legacy": 0.6128489365464476,
+        "blind": 0.6128489365464476,
+        "rerank": 0.6128489365464476,
+        "residual20": 0.6061203527388399,
+        "residual40": 0.6128489365464476,
+        "residual40_facet2": 0.6128489365464476,
+        "facet2": 0.6128489365464476
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5309999999990396,
+        "blind": 0.0,
+        "rerank": 0.5300000000006548,
+        "residual20": 0.5469999999986612,
+        "residual40": 0.5299999999988358,
+        "residual40_facet2": 0.5460000000002765,
+        "facet2": 0.5309999999990396
+      },
+      "common_pool_size": 381,
+      "base_added_count": 18
+    },
+    {
+      "id": "40663",
+      "dataset": "Thingi10K",
+      "group": "thing:12572",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "balanced",
+      "source_sha256": "e87ed1f64c714ac537d98cac64be7b81bd49119cb17902183669844e1b484d14",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.0,
+        "rerank": 0.4989999999997963,
+        "residual20": 0.500000000001819,
+        "residual40": 0.5149999999994179,
+        "residual40_facet2": 0.5,
+        "facet2": 0.49900000000161526
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "40663",
+      "dataset": "Thingi10K",
+      "group": "thing:12572",
+      "split": "validation",
+      "process": "MEX",
+      "priority": "support",
+      "source_sha256": "e87ed1f64c714ac537d98cac64be7b81bd49119cb17902183669844e1b484d14",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4220000000004802,
+        "blind": 0.0,
+        "rerank": 0.4220000000004802,
+        "residual20": 0.4210000000020955,
+        "residual40": 0.43800000000010186,
+        "residual40_facet2": 0.4210000000002765,
+        "facet2": 0.40600000000085856
+      },
+      "common_pool_size": 401,
+      "base_added_count": 18
+    },
+    {
+      "id": "40663",
+      "dataset": "Thingi10K",
+      "group": "thing:12572",
+      "split": "validation",
+      "process": "VPP",
+      "priority": "balanced",
+      "source_sha256": "e87ed1f64c714ac537d98cac64be7b81bd49119cb17902183669844e1b484d14",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.5,
+        "blind": 0.01599999999962165,
+        "rerank": 0.5159999999996217,
+        "residual20": 0.5149999999994179,
+        "residual40": 0.5310000000008586,
+        "residual40_facet2": 0.5159999999996217,
+        "facet2": 0.5159999999996217
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "40663",
+      "dataset": "Thingi10K",
+      "group": "thing:12572",
+      "split": "validation",
+      "process": "PBF_POLYMER",
+      "priority": "height",
+      "source_sha256": "e87ed1f64c714ac537d98cac64be7b81bd49119cb17902183669844e1b484d14",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.375,
+        "blind": 0.0,
+        "rerank": 0.39099999999962165,
+        "residual20": 0.3899999999994179,
+        "residual40": 0.39100000000144064,
+        "residual40_facet2": 0.3899999999994179,
+        "facet2": 0.375
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    },
+    {
+      "id": "40663",
+      "dataset": "Thingi10K",
+      "group": "thing:12572",
+      "split": "validation",
+      "process": "PBF_METAL",
+      "priority": "balanced",
+      "source_sha256": "e87ed1f64c714ac537d98cac64be7b81bd49119cb17902183669844e1b484d14",
+      "scores": {
+        "legacy": 0.0,
+        "blind": 0.0,
+        "rerank": 0.0,
+        "residual20": 0.0,
+        "residual40": 0.0,
+        "residual40_facet2": 0.0,
+        "facet2": 0.0
+      },
+      "counts": {
+        "legacy": 6,
+        "blind": 6,
+        "rerank": 6,
+        "residual20": 6,
+        "residual40": 6,
+        "residual40_facet2": 6,
+        "facet2": 6
+      },
+      "seconds": {
+        "legacy": 0.4690000000009604,
+        "blind": 0.0,
+        "rerank": 0.4850000000005821,
+        "residual20": 0.4850000000005821,
+        "residual40": 0.500000000001819,
+        "residual40_facet2": 0.4850000000005821,
+        "facet2": 0.48400000000037835
+      },
+      "common_pool_size": 402,
+      "base_added_count": 18
+    }
+  ],
+  "summary": {
+    "rerank": {
+      "legacy": {
+        "cases": 120,
+        "better": 0,
+        "same": 120,
+        "worse": 0,
+        "mean_difference": 0.0
+      },
+      "blind": {
+        "cases": 120,
+        "better": 5,
+        "same": 114,
+        "worse": 1,
+        "mean_difference": -0.002462068197657714
+      }
+    },
+    "residual20": {
+      "legacy": {
+        "cases": 120,
+        "better": 8,
+        "same": 108,
+        "worse": 4,
+        "mean_difference": 0.001163185264465437
+      },
+      "blind": {
+        "cases": 120,
+        "better": 11,
+        "same": 106,
+        "worse": 3,
+        "mean_difference": -0.001298882933192277
+      }
+    },
+    "residual40": {
+      "legacy": {
+        "cases": 120,
+        "better": 4,
+        "same": 112,
+        "worse": 4,
+        "mean_difference": 0.0014123713319510267
+      },
+      "blind": {
+        "cases": 120,
+        "better": 7,
+        "same": 110,
+        "worse": 3,
+        "mean_difference": -0.0010496968657066872
+      }
+    },
+    "residual40_facet2": {
+      "legacy": {
+        "cases": 120,
+        "better": 4,
+        "same": 112,
+        "worse": 4,
+        "mean_difference": 0.0014123713319510267
+      },
+      "blind": {
+        "cases": 120,
+        "better": 7,
+        "same": 110,
+        "worse": 3,
+        "mean_difference": -0.0010496968657066872
+      }
+    },
+    "facet2": {
+      "legacy": {
+        "cases": 120,
+        "better": 0,
+        "same": 120,
+        "worse": 0,
+        "mean_difference": 0.0
+      },
+      "blind": {
+        "cases": 120,
+        "better": 5,
+        "same": 114,
+        "worse": 1,
+        "mean_difference": -0.002462068197657714
+      }
+    }
+  },
+  "policies": {
+    "rerank": {
+      "width_deg": 40.0,
+      "ridge": 0.05,
+      "strength": 0.0,
+      "facet_reserve": 0
+    },
+    "residual20": {
+      "width_deg": 20.0,
+      "ridge": 0.03,
+      "strength": 1.0,
+      "facet_reserve": 0
+    },
+    "residual40": {
+      "width_deg": 40.0,
+      "ridge": 0.05,
+      "strength": 1.0,
+      "facet_reserve": 0
+    },
+    "residual40_facet2": {
+      "width_deg": 40.0,
+      "ridge": 0.05,
+      "strength": 1.0,
+      "facet_reserve": 2
+    },
+    "facet2": {
+      "width_deg": 40.0,
+      "ridge": 0.05,
+      "strength": 0.0,
+      "facet_reserve": 2
+    }
+  },
+  "neural_model_sha256": "68ec8e2b1fd7c4ce13cc3ee669f75c2d6e91e599fdb095e0e6c93ef4e52ccd64",
+  "algorithm_sha256": "f7040f9e24999a5e4a33c901b155828b6564c764176a00e81b6ccd257a40d5d8",
+  "previous_test_groups_excluded": false,
+  "seconds": 124.32800000000134,
+  "criterion": "Exact common-union .7 max weighted regret + .3 weighted mean; six added geometry queries and same candidate pool for each policy; candidate utility, not generic accuracy"
+}

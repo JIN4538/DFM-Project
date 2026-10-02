@@ -1,0 +1,4873 @@
+{
+  "source": "mfcad",
+  "split": "test",
+  "counts": {
+    "records": 2309,
+    "planar": 2309,
+    "curved": 0,
+    "outside_face_budget": 0,
+    "other_surface": 0
+  },
+  "seconds": 28.0,
+  "methods": {
+    "current_runtime": {
+      "existing_thresholds": {
+        "all": {
+          "tp": 8201,
+          "fp": 273,
+          "fn": 2058,
+          "ground_truth": 10259,
+          "precision": 0.9677838092990323,
+          "recall": 0.799395652597719,
+          "pq": 0.8753842333754788,
+          "exact_recall": 0.7990057510478604,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 611,
+              "fp": 112,
+              "fn": 52,
+              "precision": 0.8450899031811895,
+              "recall": 0.9215686274509803,
+              "iou_sum": 611.0,
+              "exact": 611
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 338,
+              "fp": 161,
+              "fn": 293,
+              "precision": 0.6773547094188377,
+              "recall": 0.5356576862123613,
+              "iou_sum": 336.28642191142194,
+              "exact": 334
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 361,
+              "fp": 0,
+              "fn": 336,
+              "precision": 1.0,
+              "recall": 0.5179340028694405,
+              "iou_sum": 361.0,
+              "exact": 361
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 674,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.9926362297496318,
+              "iou_sum": 674.0,
+              "exact": 674
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 739,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.9986486486486487,
+              "iou_sum": 739.0,
+              "exact": 739
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 703,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.9985795454545454,
+              "iou_sum": 703.0,
+              "exact": 703
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "planar": {
+          "tp": 8201,
+          "fp": 273,
+          "fn": 2058,
+          "ground_truth": 10259,
+          "precision": 0.9677838092990323,
+          "recall": 0.799395652597719,
+          "pq": 0.8753842333754788,
+          "exact_recall": 0.7990057510478604,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 611,
+              "fp": 112,
+              "fn": 52,
+              "precision": 0.8450899031811895,
+              "recall": 0.9215686274509803,
+              "iou_sum": 611.0,
+              "exact": 611
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 338,
+              "fp": 161,
+              "fn": 293,
+              "precision": 0.6773547094188377,
+              "recall": 0.5356576862123613,
+              "iou_sum": 336.28642191142194,
+              "exact": 334
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 361,
+              "fp": 0,
+              "fn": 336,
+              "precision": 1.0,
+              "recall": 0.5179340028694405,
+              "iou_sum": 361.0,
+              "exact": 361
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 674,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.9926362297496318,
+              "iou_sum": 674.0,
+              "exact": 674
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 739,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.9986486486486487,
+              "iou_sum": 739.0,
+              "exact": 739
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 703,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.9985795454545454,
+              "iou_sum": 703.0,
+              "exact": 703
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "curved": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "ground_truth": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "pq": 0.0,
+          "exact_recall": 0.0,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        }
+      }
+    },
+    "joint": {
+      "existing_thresholds": {
+        "all": {
+          "tp": 7956,
+          "fp": 115,
+          "fn": 2303,
+          "ground_truth": 10259,
+          "precision": 0.9857514558295131,
+          "recall": 0.7755141826688761,
+          "pq": 0.8680851063829788,
+          "exact_recall": 0.7755141826688761,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 600,
+              "fp": 108,
+              "fn": 63,
+              "precision": 0.847457627118644,
+              "recall": 0.9049773755656109,
+              "iou_sum": 600.0,
+              "exact": 600
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 206,
+              "fp": 3,
+              "fn": 425,
+              "precision": 0.9856459330143541,
+              "recall": 0.3264659270998415,
+              "iou_sum": 206.0,
+              "exact": 206
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 567,
+              "fp": 0,
+              "fn": 130,
+              "precision": 1.0,
+              "recall": 0.8134863701578192,
+              "iou_sum": 567.0,
+              "exact": 567
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 373,
+              "fp": 0,
+              "fn": 306,
+              "precision": 1.0,
+              "recall": 0.5493372606774669,
+              "iou_sum": 373.0,
+              "exact": 373
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9957924263674615,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9986376021798365,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 695,
+              "fp": 0,
+              "fn": 9,
+              "precision": 1.0,
+              "recall": 0.9872159090909091,
+              "iou_sum": 695.0,
+              "exact": 695
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "planar": {
+          "tp": 7956,
+          "fp": 115,
+          "fn": 2303,
+          "ground_truth": 10259,
+          "precision": 0.9857514558295131,
+          "recall": 0.7755141826688761,
+          "pq": 0.8680851063829788,
+          "exact_recall": 0.7755141826688761,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 600,
+              "fp": 108,
+              "fn": 63,
+              "precision": 0.847457627118644,
+              "recall": 0.9049773755656109,
+              "iou_sum": 600.0,
+              "exact": 600
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 206,
+              "fp": 3,
+              "fn": 425,
+              "precision": 0.9856459330143541,
+              "recall": 0.3264659270998415,
+              "iou_sum": 206.0,
+              "exact": 206
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 567,
+              "fp": 0,
+              "fn": 130,
+              "precision": 1.0,
+              "recall": 0.8134863701578192,
+              "iou_sum": 567.0,
+              "exact": 567
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 373,
+              "fp": 0,
+              "fn": 306,
+              "precision": 1.0,
+              "recall": 0.5493372606774669,
+              "iou_sum": 373.0,
+              "exact": 373
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9957924263674615,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9986376021798365,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 695,
+              "fp": 0,
+              "fn": 9,
+              "precision": 1.0,
+              "recall": 0.9872159090909091,
+              "iou_sum": 695.0,
+              "exact": 695
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "curved": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "ground_truth": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "pq": 0.0,
+          "exact_recall": 0.0,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        }
+      }
+    },
+    "joint_semantic_gate": {
+      "existing_thresholds": {
+        "all": {
+          "tp": 7957,
+          "fp": 120,
+          "fn": 2302,
+          "ground_truth": 10259,
+          "precision": 0.9851429986381082,
+          "recall": 0.7756116580563408,
+          "pq": 0.8678737638161722,
+          "exact_recall": 0.7755141826688761,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 600,
+              "fp": 108,
+              "fn": 63,
+              "precision": 0.847457627118644,
+              "recall": 0.9049773755656109,
+              "iou_sum": 600.0,
+              "exact": 600
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 206,
+              "fp": 3,
+              "fn": 425,
+              "precision": 0.9856459330143541,
+              "recall": 0.3264659270998415,
+              "iou_sum": 206.0,
+              "exact": 206
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 567,
+              "fp": 0,
+              "fn": 130,
+              "precision": 1.0,
+              "recall": 0.8134863701578192,
+              "iou_sum": 567.0,
+              "exact": 567
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 374,
+              "fp": 0,
+              "fn": 305,
+              "precision": 1.0,
+              "recall": 0.5508100147275405,
+              "iou_sum": 373.6666666666667,
+              "exact": 373
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.9943977591036415,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9984871406959153,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9959239130434783,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 695,
+              "fp": 1,
+              "fn": 9,
+              "precision": 0.9985632183908046,
+              "recall": 0.9872159090909091,
+              "iou_sum": 695.0,
+              "exact": 695
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "planar": {
+          "tp": 7957,
+          "fp": 120,
+          "fn": 2302,
+          "ground_truth": 10259,
+          "precision": 0.9851429986381082,
+          "recall": 0.7756116580563408,
+          "pq": 0.8678737638161722,
+          "exact_recall": 0.7755141826688761,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 600,
+              "fp": 108,
+              "fn": 63,
+              "precision": 0.847457627118644,
+              "recall": 0.9049773755656109,
+              "iou_sum": 600.0,
+              "exact": 600
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 206,
+              "fp": 3,
+              "fn": 425,
+              "precision": 0.9856459330143541,
+              "recall": 0.3264659270998415,
+              "iou_sum": 206.0,
+              "exact": 206
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 567,
+              "fp": 0,
+              "fn": 130,
+              "precision": 1.0,
+              "recall": 0.8134863701578192,
+              "iou_sum": 567.0,
+              "exact": 567
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 374,
+              "fp": 0,
+              "fn": 305,
+              "precision": 1.0,
+              "recall": 0.5508100147275405,
+              "iou_sum": 373.6666666666667,
+              "exact": 373
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.9943977591036415,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9984871406959153,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9959239130434783,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 695,
+              "fp": 1,
+              "fn": 9,
+              "precision": 0.9985632183908046,
+              "recall": 0.9872159090909091,
+              "iou_sum": 695.0,
+              "exact": 695
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "curved": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "ground_truth": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "pq": 0.0,
+          "exact_recall": 0.0,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        }
+      }
+    },
+    "joint_confident_gate": {
+      "existing_thresholds": {
+        "all": {
+          "tp": 7957,
+          "fp": 116,
+          "fn": 2302,
+          "ground_truth": 10259,
+          "precision": 0.9856311160658987,
+          "recall": 0.7756116580563408,
+          "pq": 0.8680631318641356,
+          "exact_recall": 0.7755141826688761,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 600,
+              "fp": 108,
+              "fn": 63,
+              "precision": 0.847457627118644,
+              "recall": 0.9049773755656109,
+              "iou_sum": 600.0,
+              "exact": 600
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 206,
+              "fp": 3,
+              "fn": 425,
+              "precision": 0.9856459330143541,
+              "recall": 0.3264659270998415,
+              "iou_sum": 206.0,
+              "exact": 206
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 567,
+              "fp": 0,
+              "fn": 130,
+              "precision": 1.0,
+              "recall": 0.8134863701578192,
+              "iou_sum": 567.0,
+              "exact": 567
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 374,
+              "fp": 0,
+              "fn": 305,
+              "precision": 1.0,
+              "recall": 0.5508100147275405,
+              "iou_sum": 373.6666666666667,
+              "exact": 373
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9957924263674615,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9986376021798365,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 695,
+              "fp": 1,
+              "fn": 9,
+              "precision": 0.9985632183908046,
+              "recall": 0.9872159090909091,
+              "iou_sum": 695.0,
+              "exact": 695
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "planar": {
+          "tp": 7957,
+          "fp": 116,
+          "fn": 2302,
+          "ground_truth": 10259,
+          "precision": 0.9856311160658987,
+          "recall": 0.7756116580563408,
+          "pq": 0.8680631318641356,
+          "exact_recall": 0.7755141826688761,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 600,
+              "fp": 108,
+              "fn": 63,
+              "precision": 0.847457627118644,
+              "recall": 0.9049773755656109,
+              "iou_sum": 600.0,
+              "exact": 600
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 206,
+              "fp": 3,
+              "fn": 425,
+              "precision": 0.9856459330143541,
+              "recall": 0.3264659270998415,
+              "iou_sum": 206.0,
+              "exact": 206
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 567,
+              "fp": 0,
+              "fn": 130,
+              "precision": 1.0,
+              "recall": 0.8134863701578192,
+              "iou_sum": 567.0,
+              "exact": 567
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 374,
+              "fp": 0,
+              "fn": 305,
+              "precision": 1.0,
+              "recall": 0.5508100147275405,
+              "iou_sum": 373.6666666666667,
+              "exact": 373
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9957924263674615,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9986376021798365,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 695,
+              "fp": 1,
+              "fn": 9,
+              "precision": 0.9985632183908046,
+              "recall": 0.9872159090909091,
+              "iou_sum": 695.0,
+              "exact": 695
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "curved": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "ground_truth": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "pq": 0.0,
+          "exact_recall": 0.0,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        }
+      }
+    },
+    "hybrid_semantic_gate": {
+      "existing_thresholds": {
+        "all": {
+          "tp": 8203,
+          "fp": 275,
+          "fn": 2056,
+          "ground_truth": 10259,
+          "precision": 0.9675631045057796,
+          "recall": 0.7995906033726484,
+          "pq": 0.8753345931789652,
+          "exact_recall": 0.7990057510478604,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 611,
+              "fp": 113,
+              "fn": 52,
+              "precision": 0.8439226519337016,
+              "recall": 0.9215686274509803,
+              "iou_sum": 611.0,
+              "exact": 611
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 340,
+              "fp": 161,
+              "fn": 291,
+              "precision": 0.6786427145708582,
+              "recall": 0.5388272583201268,
+              "iou_sum": 338.0007076257076,
+              "exact": 335
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 361,
+              "fp": 0,
+              "fn": 336,
+              "precision": 1.0,
+              "recall": 0.5179340028694405,
+              "iou_sum": 361.0,
+              "exact": 361
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 674,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.9926362297496318,
+              "iou_sum": 674.0,
+              "exact": 674
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 709,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.9985915492957746,
+              "recall": 0.9985915492957746,
+              "iou_sum": 709.0,
+              "exact": 709
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 739.5714285714286,
+              "exact": 739
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 703,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.9985795454545454,
+              "iou_sum": 703.0,
+              "exact": 703
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "planar": {
+          "tp": 8203,
+          "fp": 275,
+          "fn": 2056,
+          "ground_truth": 10259,
+          "precision": 0.9675631045057796,
+          "recall": 0.7995906033726484,
+          "pq": 0.8753345931789652,
+          "exact_recall": 0.7990057510478604,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 611,
+              "fp": 113,
+              "fn": 52,
+              "precision": 0.8439226519337016,
+              "recall": 0.9215686274509803,
+              "iou_sum": 611.0,
+              "exact": 611
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 340,
+              "fp": 161,
+              "fn": 291,
+              "precision": 0.6786427145708582,
+              "recall": 0.5388272583201268,
+              "iou_sum": 338.0007076257076,
+              "exact": 335
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 361,
+              "fp": 0,
+              "fn": 336,
+              "precision": 1.0,
+              "recall": 0.5179340028694405,
+              "iou_sum": 361.0,
+              "exact": 361
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 674,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.9926362297496318,
+              "iou_sum": 674.0,
+              "exact": 674
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 709,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.9985915492957746,
+              "recall": 0.9985915492957746,
+              "iou_sum": 709.0,
+              "exact": 709
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 739.5714285714286,
+              "exact": 739
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 703,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.9985795454545454,
+              "iou_sum": 703.0,
+              "exact": 703
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "curved": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "ground_truth": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "pq": 0.0,
+          "exact_recall": 0.0,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        }
+      }
+    },
+    "joint_agreement": {
+      "existing_thresholds": {
+        "all": {
+          "tp": 8525,
+          "fp": 273,
+          "fn": 1734,
+          "ground_truth": 10259,
+          "precision": 0.9689702205046602,
+          "recall": 0.8309776781362705,
+          "pq": 0.8945045308192708,
+          "exact_recall": 0.8305877765864119,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 601,
+              "fp": 108,
+              "fn": 62,
+              "precision": 0.847672778561354,
+              "recall": 0.9064856711915535,
+              "iou_sum": 601.0,
+              "exact": 601
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 426,
+              "fp": 161,
+              "fn": 205,
+              "precision": 0.7257240204429302,
+              "recall": 0.6751188589540412,
+              "iou_sum": 424.28642191142194,
+              "exact": 422
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 618,
+              "fp": 0,
+              "fn": 79,
+              "precision": 1.0,
+              "recall": 0.8866571018651362,
+              "iou_sum": 618.0,
+              "exact": 618
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 664,
+              "fp": 0,
+              "fn": 15,
+              "precision": 1.0,
+              "recall": 0.9779086892488954,
+              "iou_sum": 664.0,
+              "exact": 664
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9957924263674615,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9986376021798365,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 701,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.9957386363636364,
+              "iou_sum": 701.0,
+              "exact": 701
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "planar": {
+          "tp": 8525,
+          "fp": 273,
+          "fn": 1734,
+          "ground_truth": 10259,
+          "precision": 0.9689702205046602,
+          "recall": 0.8309776781362705,
+          "pq": 0.8945045308192708,
+          "exact_recall": 0.8305877765864119,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 601,
+              "fp": 108,
+              "fn": 62,
+              "precision": 0.847672778561354,
+              "recall": 0.9064856711915535,
+              "iou_sum": 601.0,
+              "exact": 601
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 706,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 426,
+              "fp": 161,
+              "fn": 205,
+              "precision": 0.7257240204429302,
+              "recall": 0.6751188589540412,
+              "iou_sum": 424.28642191142194,
+              "exact": 422
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 618,
+              "fp": 0,
+              "fn": 79,
+              "precision": 1.0,
+              "recall": 0.8866571018651362,
+              "iou_sum": 618.0,
+              "exact": 618
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 664,
+              "fp": 0,
+              "fn": 15,
+              "precision": 1.0,
+              "recall": 0.9779086892488954,
+              "iou_sum": 664.0,
+              "exact": 664
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 710,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.9957924263674615,
+              "recall": 1.0,
+              "iou_sum": 710.0,
+              "exact": 710
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 660,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 660.0,
+              "exact": 660
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 658,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 658.0,
+              "exact": 658
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 634,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 634.0,
+              "exact": 634
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 733,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9986376021798365,
+              "recall": 1.0,
+              "iou_sum": 733.0,
+              "exact": 733
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 740,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 740.0,
+              "exact": 740
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 701,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.9957386363636364,
+              "iou_sum": 701.0,
+              "exact": 701
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 702,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 702.0,
+              "exact": 702
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 678,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "iou_sum": 678.0,
+              "exact": 678
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        },
+        "curved": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "ground_truth": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "pq": 0.0,
+          "exact_recall": 0.0,
+          "per_class": [
+            {
+              "class_name": "chamfer",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "through_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_passage",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_through_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "2sides_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "slanted_through_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "Oring",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "blind_hole",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "6sides_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_end_pocket",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "v_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "h_circular_end_blind_slot",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "triangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "circular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "rectangular_blind_step",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            },
+            {
+              "class_name": "round",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "iou_sum": 0,
+              "exact": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "models": {
+    "external_feature_gnn_v1.evaluation.json": "9b623c309c734398c553aaa17a7931bfae70b7c6b172d16fb035748f13e924fc",
+    "external_feature_gnn_v1.json": "e5abb4b0a19e51879f6fb9893b7e938a3ea71db18c7922332cf16c13e60ff275",
+    "external_feature_gnn_v1.manifest.json": "2751937e38e7231a95fbe5715d4a421ad094b59aeff73b8381b3ef2d30abebbf",
+    "external_feature_gnn_v2.evaluation.json": "35002ba9187d87510b126d9f6067c2fe892d22208e774cf09a970b99c1499f0d",
+    "external_feature_gnn_v2.json": "1c3950720977241cc4c33e3f95a6f8bf4439ed6b9b3cb4213fe3bdefe5d5041a",
+    "external_feature_gnn_v2.manifest.json": "70038eb0f99497d487b622ef13bb92bac145f2894f2a3a5e2894c1f8c644f990",
+    "external_feature_localization_v1.json": "c2ab879dfe5ddc999bca572efb9fc46ba3be7da0e8b8761b770b4ecfca7aee01",
+    "external_feature_localization_v1.manifest.json": "4511379982993b4db72c95b9ba496b1cbd6a8807183787a74e07d51c6a5082c1",
+    "external_feature_mfinstseg_v1.json": "526383f336630912cdb3a5fc55cbe6fd6418055d46cd30b942de661c3d248ee5",
+    "external_feature_mfinstseg_v1.manifest.json": "41137a468ffbe89fe5f838b26b6c5b8fe3cd883869503ea949d7eede7d91f19f",
+    "external_feature_mfinstseg_v2.json": "d12a34a146660023482c4f86ecfdd9f02a5fa6463cc9f718f8df7922a5df3ee1",
+    "external_feature_mfinstseg_v2.manifest.json": "27ce2efa2ffda7376e7fc9bc024c396ed9e6f157a85fd73024310874c3608496"
+  },
+  "runtime_parity": [
+    {
+      "id": "0-0-0-0-10-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 6
+    },
+    {
+      "id": "0-0-0-0-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-0-0-1-1-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "0-0-0-1-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-0-0-10-10-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-10-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-11-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-2-8-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-3-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-0-0-3-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "0-0-0-4-10-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-5-7-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-6-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-0-0-6-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-6-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "0-0-0-6-9-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-0-8-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-0-0-8-9-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "0-0-1-1-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 2
+    },
+    {
+      "id": "0-0-1-1-4-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 2
+    },
+    {
+      "id": "0-0-1-1-7-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "0-0-1-10-11-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-0-1-10-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-0-1-11-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "0-0-5-8-11-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-1-4-7-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "0-2-5-12-13-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-4-10-14-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "0-6-6-9-13-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "1-1-2-14-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 2
+    },
+    {
+      "id": "1-2-2-2-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "1-3-4-14-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "1-4-9-14-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "1-7-8-8-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "2-2-11-12-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "2-3-4-6-8-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "2-5-10-13-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "2-8-10-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "3-3-7-12-13-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 3
+    },
+    {
+      "id": "3-5-7-9-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "4-10-10-12-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "4-5-9-10-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    },
+    {
+      "id": "5-10-10-12-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "5-7-7-13-14-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "6-7-10-10-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "7-7-9-9-12-23",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 5
+    },
+    {
+      "id": "9-9-10-10-19",
+      "scope": "planar",
+      "passed": true,
+      "candidates": 4
+    }
+  ],
+  "label_scope": "Connected same-semantic-label CAD face regions; MFCAD does not provide instance labels; same class and face IoU > .5. Runtime 200-face/analytic-surface gates retained."
+}

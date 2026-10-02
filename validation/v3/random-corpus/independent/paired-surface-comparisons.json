@@ -1,0 +1,176 @@
+{
+  "pairs": [
+    {
+      "name": "Arduino-UNO",
+      "formats": [
+        "STL",
+        "STEP tessellation .05mm"
+      ],
+      "registration": "None; source coordinates used without fitting or scaling",
+      "source_sha256": [
+        "cf329252fc31d3fdbf3bebd06323a950b652cb4c04b7fd4ab1dba83a0a2425cd",
+        "3d66712210e5119ab955b9018ce41b578ef4c0ccf8933ad84d5a8ac1a9f57a69"
+      ],
+      "extents_difference_stl_minus_brep_mm": [
+        0.0,
+        -0.000658278329467521,
+        0.0
+      ],
+      "stl_to_cad_mesh": {
+        "samples": 4000,
+        "maximum_mm": 0.002542157025159828,
+        "p95_mm": 0.0012036710077891657,
+        "mean_mm": 0.0002780054747668437,
+        "rms_mm": 0.0005205027572501405
+      },
+      "cad_mesh_to_stl": {
+        "samples": 4000,
+        "maximum_mm": 0.003506329515267354,
+        "p95_mm": 0.0011647999171735051,
+        "mean_mm": 0.0003481127464536657,
+        "rms_mm": 0.0005845882203201139
+      },
+      "stl_signed_shell_volume_mm3": 13148.03406521691,
+      "cad_constituent_volume_mm3": 13148.428491688095,
+      "stl_components": 1,
+      "cad_solids": 1,
+      "material_region_note": "Multiple body/shell integrals are not Boolean union volume; physical material assignments not established"
+    },
+    {
+      "name": "Raspberry Pi 4 Model B",
+      "formats": [
+        "STL",
+        "STEP tessellation .05mm"
+      ],
+      "registration": "None; source coordinates used without fitting or scaling",
+      "source_sha256": [
+        "892b290d90841e9c9c55eadddc7f7007d277f2fe16a0cff3a5d6194294a73dd7",
+        "6f445b101281d18bf3a4765d2f9154a25ab54eab19f5118bc32dc855869b67f2"
+      ],
+      "extents_difference_stl_minus_brep_mm": [
+        -2.136230477844947e-06,
+        -2.430511578666028e-07,
+        -4.814697263100243e-07
+      ],
+      "stl_to_cad_mesh": {
+        "samples": 4000,
+        "maximum_mm": 0.04176485332722598,
+        "p95_mm": 0.008151688184203403,
+        "mean_mm": 0.00117409518626339,
+        "rms_mm": 0.004791394620680915
+      },
+      "cad_mesh_to_stl": {
+        "samples": 4000,
+        "maximum_mm": 0.04630206583720612,
+        "p95_mm": 0.0321370128259921,
+        "mean_mm": 0.007200388642227686,
+        "rms_mm": 0.013151388598205943
+      },
+      "stl_signed_shell_volume_mm3": 18780.42989155883,
+      "cad_constituent_volume_mm3": 18782.118847941983,
+      "stl_components": 79,
+      "cad_solids": 109,
+      "material_region_note": "Multiple body/shell integrals are not Boolean union volume; physical material assignments not established"
+    },
+    {
+      "name": "SG90-Servo",
+      "formats": [
+        "STL",
+        "STEP tessellation .05mm"
+      ],
+      "registration": "None; source coordinates used without fitting or scaling",
+      "source_sha256": [
+        "0782db5ca9499c9cc7474d9c454199582ba2fbdbffe72fa2a8c95bb4564da59f",
+        "e2bb320f91ece91deaff236bc0b12565e93ab54a3e619d6c5f2fba884c62aeea"
+      ],
+      "extents_difference_stl_minus_brep_mm": [
+        0.0,
+        -1.0000000116860974e-07,
+        0.0
+      ],
+      "stl_to_cad_mesh": {
+        "samples": 4000,
+        "maximum_mm": 0.007309929808225539,
+        "p95_mm": 0.0015298231386376788,
+        "mean_mm": 0.00034103508278376335,
+        "rms_mm": 0.0008066838941203579
+      },
+      "cad_mesh_to_stl": {
+        "samples": 4000,
+        "maximum_mm": 0.0067053780790672255,
+        "p95_mm": 0.00181047946686911,
+        "mean_mm": 0.0004323730322532951,
+        "rms_mm": 0.0008572538382752926
+      },
+      "stl_signed_shell_volume_mm3": 7211.88652331958,
+      "cad_constituent_volume_mm3": 7212.6665760374735,
+      "stl_components": 1,
+      "cad_solids": 1,
+      "material_region_note": "Multiple body/shell integrals are not Boolean union volume; physical material assignments not established"
+    },
+    {
+      "name": "the-over-engineered-backpack-wall-mount-v2",
+      "formats": [
+        "STL",
+        "3MF resource mesh"
+      ],
+      "registration": "3MF resource mesh translated to STL bounding-box center; no scaling/rotation or surface fitting",
+      "resource_to_stl_translation_mm": [
+        24.999999523162842,
+        24.67335307598114,
+        41.275001525878906
+      ],
+      "source_sha256": [
+        "390bc9ddefd6125998794924251e9895be8cff85a544ba34c1670f49c9388395",
+        "c7a60163a61148adf32a55c49fec4b7d6909efc758f8843fad3241c754c5e44c"
+      ],
+      "stl_to_3mf": {
+        "samples": 4000,
+        "maximum_mm": 0.041889173402277394,
+        "p95_mm": 0.014553778100820277,
+        "mean_mm": 0.0031337910099954744,
+        "rms_mm": 0.005942298743375621
+      },
+      "threemf_to_stl": {
+        "samples": 4000,
+        "maximum_mm": 0.0541779624322271,
+        "p95_mm": 0.021340061869862648,
+        "mean_mm": 0.007669719885283434,
+        "rms_mm": 0.010472700610399099
+      },
+      "threemf_raw_geometry": {
+        "triangles": 143890,
+        "vertices": 71943,
+        "exact_coordinate_vertices": 71943,
+        "bounds_mm": [
+          [
+            -19.0499992,
+            -21.0350876,
+            -41.2750015
+          ],
+          [
+            19.0499992,
+            21.0350876,
+            41.2750015
+          ]
+        ],
+        "extents_mm": [
+          38.0999984,
+          42.0701752,
+          82.550003
+        ],
+        "signed_volume_divergence_mm3": 27095.88980678939,
+        "area_triangle_sum_mm2": 11923.856370738145,
+        "exact_weld_watertight": true,
+        "winding_consistent": true,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_triangles": 0,
+        "vertex_component_count": 1,
+        "geometry_note": "3MF declares millimetres; raw resource mesh, with separate build placement. No Boolean union or self-intersection certificate."
+      },
+      "build_transform_note": "Separate .3mf build rotates +90deg about X and translates (128,128,21.0350876); raw resource coordinates compared here"
+    }
+  ],
+  "scope": "Geometric consistency evidence from finite samples and volume; not identity proof or a certified Hausdorff tolerance"
+}

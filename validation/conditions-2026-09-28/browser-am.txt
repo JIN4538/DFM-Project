@@ -1,0 +1,228 @@
+- log
+- log
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 적층제조
+- button "Open":
+- heading "검토할 형상" [level=3]
+- list:
+  - listitem: 형상 선택 → 2. 공정·방향 선택 → 3. 설계 검토
+- paragraph: 입력
+- combobox "입력": CAD 기준형상
+- button "Open":
+- paragraph: 형상 선택
+- combobox "형상 선택": 브래킷 · 두께 4 mm
+- button "Open":
+- paragraph: 치수를 정의한 자체 CAD 예제입니다. 원본 STEP을 내려받아 수정할 수 있습니다.
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- separator
+- paragraph: 적층제조 공정
+- combobox "적층제조 공정": 재료 압출 · FFF/FDM
+- button "Open":
+- generic "keyboard_arrow_down 장비·재료·공구 조건 라이브러리":
+  - generic: keyboard_arrow_down
+  - paragraph: 장비·재료·공구 조건 라이브러리
+- paragraph: 출처와 적용 조건을 확인한 뒤 가져오세요. 장비 미정이면 직접 입력이나 형상 측정부터 진행할 수 있습니다.
+- paragraph: 조건 검색
+- textbox "조건 검색":
+  - /placeholder: 장비명, 재료명, 공구 번호…
+  - text: MK4
+- paragraph: 찾아볼 조건
+- combobox "찾아볼 조건": MK4 · Prusament PLA · 0.15mm QUALITY @MK4 0.4
+- button "Open":
+- paragraph: 현재 공정 자료 11개 · 검색 결과 8개. 선택만으로 검토 조건이 바뀌지는 않습니다.
+- paragraph:
+  - strong: MK4 · Prusament PLA · 0.15mm QUALITY @MK4 0.4
+- paragraph: "장비: Original Prusa MK4 (non-Input Shaper)"
+- paragraph: "재료: Prusament PLA"
+- paragraph: • PrusaResearch 1.14.2의 선택된 공식 프리셋 조합
+- paragraph: • 실제 슬라이싱 시 원본 전체 프로필이 필요함
+- button "Show/hide columns":
+- button "Download as CSV":
+- button "Search":
+- button "Fullscreen":
+- paragraph: 값별 적용 조건·원문 위치
+- combobox "값별 적용 조건·원문 위치": 층 높이
+- button "Open":
+- paragraph:
+  - text: "원문 위치: print:0.15mm QUALITY @MK4 0.4 → print:"
+  - emphasis: 0.15mm
+  - text: / layer_height; L832
+- paragraph: "적용 범위: 노즐 지름을 최소 벽 두께로 사용하지 않음."
+- paragraph: "적용 범위: 열변형·접착·건조·챔버 환경은 계산하지 않음."
+- paragraph: "적용 범위: 밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+- paragraph: 가져오면 기존 장비·재료·수치 조건을 이 자료로 교체합니다. 미제공 벽·홀·공구 기준은 비우고, 나머지는 탐색 기본값으로 돌아갑니다.
+- paragraph: 장비 공간을 가져와도 크기 제한은 켜지지 않습니다. 필요한 경우 아래에서 직접 켜세요.
+- button "이 조건을 입력에 적용":
+  - paragraph: 이 조건을 입력에 적용
+- paragraph:
+  - strong: 근거 원문
+- paragraph:
+  - link "PrusaSlicer-settings / PrusaResearch 1.14.2":
+    - /url: https://github.com/prusa3d/PrusaSlicer-settings/blob/a40f669e7c3ff4dfe05a937fc08fc57993dcf0d5/live/PrusaResearch/1.14.2.ini
+- paragraph: "확인 항목: INI section/key and inherited section; 각 파라미터의 줄 번호 참조"
+- paragraph: "판본: config_version 1.14.2; commit a40f669e7c3ff4dfe05a937fc08fc57993dcf0d5"
+- paragraph: "확인일: 2026-09-28"
+- paragraph: 출처 확인은 실물 제조 검증을 뜻하지 않습니다. 참고 물성·카탈로그 수치는 지원하지 않는 강도·변형·성공률 계산에 사용하지 않습니다.
+- button "직접 입력으로 초기화":
+  - paragraph: 직접 입력으로 초기화
+- paragraph: 초기화하면 가져온 값·출처 연결을 지우고 탐색 기본값과 미입력 기준으로 돌아갑니다.
+- paragraph: "가져온 조건: MK4 · Prusament PLA · 0.15mm QUALITY @MK4 0.4. 아래 값을 확인한 뒤 설계 검토를 실행하세요."
+- paragraph: 위로 향할 모델 방향
+- button "Help for 위로 향할 모델 방향":
+- combobox "위로 향할 모델 방향": +Z
+- button "Open":
+- paragraph: "적층축 (모델 좌표): 0, 0, 1"
+- paragraph: 아래 탐색 조건·장비 기준·층 설정을 함께 적용합니다.
+- button "play_arrow 설계 검토":
+  - generic: play_arrow
+  - paragraph: 설계 검토
+- paragraph: 하향면 탐색 각도 · 수평면 기준 (°)
+- spinbutton "하향면 탐색 각도 · 수평면 기준 (°)": "45.00"
+- button "Decrement":
+- button "Increment":
+- paragraph: 각도는 사용자 탐색 조건이며 이 공정의 보편적 출력 한계가 아닙니다.
+- checkbox "대각선 포함 26방향 비교" [checked]
+- paragraph: 대각선 포함 26방향 비교
+- checkbox "주요 면 방향까지 비교"
+- paragraph: 주요 면 방향까지 비교
+- checkbox "작은 형상은 벽도 함께 확인 · 계산 한도 5초" [checked]
+- paragraph: 작은 형상은 벽도 함께 확인 · 계산 한도 5초
+- paragraph: 삼각형 10,000개 이하의 단일 형상에 적용합니다. 큰 형상은 정밀 검토에서 실행할 수 있습니다.
+- generic "keyboard_arrow_right 장비·재료와 검토 기준":
+  - generic: keyboard_arrow_right
+  - paragraph: 장비·재료와 검토 기준
+- generic "keyboard_arrow_down 빌드 공간과 층 설정":
+  - generic: keyboard_arrow_down
+  - paragraph: 빌드 공간과 층 설정
+- checkbox "장비 크기 제한 적용"
+- paragraph: 장비 크기 제한 적용
+- paragraph: 선택하지 않으면 부품 크기에 제한을 두지 않고 필요한 배치 치수만 계산합니다.
+- paragraph: X 공간 (mm)
+- spinbutton "X 공간 (mm)": "250.00"
+- button "Decrement":
+- button "Increment":
+- paragraph: Y 공간 (mm)
+- spinbutton "Y 공간 (mm)": "250.00"
+- button "Decrement":
+- button "Increment":
+- paragraph: Z 공간 (mm)
+- spinbutton "Z 공간 (mm)": "250.00"
+- button "Decrement":
+- button "Increment":
+- paragraph: 각 경계의 여유 (mm)
+- spinbutton "각 경계의 여유 (mm)": "0.00"
+- button "Decrement" [disabled]:
+- button "Increment":
+- paragraph: 층 높이 (mm)
+- spinbutton "층 높이 (mm)": "0.150"
+- button "Decrement":
+- button "Increment":
+- paragraph: MEX 명목 선폭 (mm)
+- spinbutton "MEX 명목 선폭 (mm)": "0.45"
+- button "Decrement":
+- button "Increment":
+- paragraph: 기본 각도·선폭은 탐색 조건입니다. 장비가 정해지면 제조사 조건과 시편 기록을 입력하세요.
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- paragraph:
+  - strong: DFM · 제조성 설계 검토
+- paragraph: 결과 보기
+- radiogroup "결과 보기":
+  - radio "설계 조치" [checked]:
+    - paragraph: 설계 조치
+  - radio "방향 비교":
+    - paragraph: 방향 비교
+  - radio "정밀 검토":
+    - paragraph: 정밀 검토
+  - radio "수정 전후":
+    - paragraph: 수정 전후
+  - radio "근거·내보내기":
+    - paragraph: 근거·내보내기
+- status:
+  - paragraph: 지금까지 검출된 수정 후보는 없고, 추가 확인이 남아 있습니다
+- paragraph: 측정 전인 항목이나 비교 기준이 없는 항목은 아직 괜찮다고 판단하지 않았습니다.
+- paragraph:
+  - strong: 먼저 할 일 · 얇은 벽·세부 특징
+  - text: — 사용할 장비·재료의 최소 벽 기준(mm)과 근거를 입력하세요. 현재 측정값을 그 기준과 비교해 확인할 위치를 표시합니다.
+- paragraph: 유효 표본 24개에서 가장 짧은 거리는 4 mm입니다.
+- button "얇은 벽·세부 특징 확인하기":
+  - paragraph: 얇은 벽·세부 특징 확인하기
+- paragraph: 현재 높이
+- paragraph: 40.00 mm
+- paragraph: 검토 공정
+- paragraph: 재료 압출 · FFF/FDM
+- paragraph: CAD 재료 체적
+- paragraph: 9.12 cm³
+- generic "keyboard_arrow_down 가져온 조건·실제 적용값·출처 확인" [active]:
+  - generic: keyboard_arrow_down
+  - paragraph: 가져온 조건·실제 적용값·출처 확인
+- paragraph:
+  - strong: MK4 · Prusament PLA · 0.15mm QUALITY @MK4 0.4
+- paragraph: 라이브러리 원래 값과 현재 입력을 함께 보관합니다. 수정한 값에는 원자료의 검증 범위를 그대로 적용할 수 없습니다.
+- button "Show/hide columns":
+- button "Download as CSV":
+- button "Search":
+- button "Fullscreen":
+- paragraph:
+  - strong: 자료에 없는 직접 입력·탐색 기본값
+- paragraph: 이 값들은 아래 원문에서 가져온 기준이 아닙니다. 사용자가 입력했거나 앱의 탐색 기본값을 사용한 항목입니다.
+- button "Show/hide columns":
+- button "Download as CSV":
+- button "Search":
+- button "Fullscreen":
+- paragraph: • PrusaResearch 1.14.2의 선택된 공식 프리셋 조합
+- paragraph: • 실제 슬라이싱 시 원본 전체 프로필이 필요함
+- paragraph: "적용 범위: 노즐 지름을 최소 벽 두께로 사용하지 않음."
+- paragraph: "적용 범위: 열변형·접착·건조·챔버 환경은 계산하지 않음."
+- paragraph: "적용 범위: 밀도는 슬라이서 입력값이며 해당 부품 실측 밀도가 아님."
+- paragraph:
+  - link "PrusaSlicer-settings / PrusaResearch 1.14.2":
+    - /url: https://github.com/prusa3d/PrusaSlicer-settings/blob/a40f669e7c3ff4dfe05a937fc08fc57993dcf0d5/live/PrusaResearch/1.14.2.ini
+- paragraph: "확인 항목: INI section/key and inherited section; 각 파라미터의 줄 번호 참조"
+- paragraph: "판본: config_version 1.14.2; commit a40f669e7c3ff4dfe05a937fc08fc57993dcf0d5"
+- paragraph: "확인일: 2026-09-28"
+- generic: "{"
+- generic: ...
+- generic: "}"
+- generic "keyboard_arrow_right 전체 검토 현황 · 끝난 확인과 남은 확인":
+  - generic: keyboard_arrow_right
+  - paragraph: 전체 검토 현황 · 끝난 확인과 남은 확인
+- switch "내부 검토면 보기"
+- generic "내부 검토면 보기":
+  - paragraph: 내부 검토면 보기
+- toolbar:
+  - button "Download plot as a PNG":
+  - button "Zoom":
+  - button "Pan":
+  - button "Orbital rotation":
+  - button "Turntable rotation":
+  - button "Reset camera to default":
+  - button "Reset camera to last save":
+  - button "Fullscreen":
+- paragraph: "주황색 면: 선택 항목의 검토 후보 · 녹색 화살표: 실제 적층 +Z 방향 · 드래그로 회전. 색 자체가 제작 불가를 뜻하지 않습니다."
+- paragraph: 이 항목에는 표시할 면 위치가 없습니다. 오른쪽의 판단과 다음 행동을 확인하세요.
+- paragraph: 강조할 검토 항목
+- combobox "강조할 검토 항목": 하향면과 지지 검토
+- button "Open":
+- status:
+  - paragraph: 후보 미검출
+- paragraph: 설정 각도 미만의 하향면 후보가 검출되지 않았습니다.
+- paragraph:
+  - strong: 다음에 할 일
+  - text: · 현재 각도 조건에서는 하향면 수정 후보가 없습니다. 벽·내부 형상 검토를 이어가세요.
+- button "방향 비교에서 이어서 확인":
+  - generic "방향 비교에서 이어서 확인":
+    - paragraph: 방향 비교에서 이어서 확인
+- generic "keyboard_arrow_right 측정값과 한계":
+  - generic: keyboard_arrow_right
+  - paragraph: 측정값과 한계
+- generic "keyboard_arrow_right 전체 검토 항목":
+  - generic: keyboard_arrow_right
+  - paragraph: 전체 검토 항목
+- paragraph: 기하 기반 설계 검토입니다. 출력 성공·강도·표준 적합 여부는 실제 공정 검증이 필요합니다.

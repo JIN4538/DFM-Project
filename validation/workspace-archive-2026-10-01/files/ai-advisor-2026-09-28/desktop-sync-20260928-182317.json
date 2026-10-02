@@ -1,0 +1,143 @@
+{
+  "timestamp_utc": "2026-09-28T09:23:17.805756+00:00",
+  "source": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project",
+  "destination": "C:\\Users\\JIN\\Desktop\\AM-DFM_v3_0",
+  "backup": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\ai-advisor-2026-09-28\\desktop-backup-20260928-182317",
+  "scope": "AI intent integration and novice decision UI; no credentials or deletion",
+  "files": [
+    {
+      "path": "amdfm/action_view.py",
+      "before_sha256": "37f3e78876e4153e3536afef8fa8dd02c5dbc0edb2097af7ed4d7216f3abedd1",
+      "sha256": "bdd2b12bbb7e146c2cfc6aa5a66a31834ec1ed30776345e8dcdce16462b3f1b0",
+      "bytes": 7024,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/decision_view.py",
+      "before_sha256": "c69b17b7aa6272a733f117d4c176bf2a399ee9d0a975060a189fe0e86fa497f7",
+      "sha256": "012379449e27a4fc974dfe10ae85f43f184d65ee462f57eccff5f5a0d2487a0a",
+      "bytes": 4688,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/presentation.py",
+      "before_sha256": "2f8e44776283bb41c3058583aee1511618865de25f06d3ea1eae056616467b58",
+      "sha256": "b9e3435c39133196a0e9338036e798e6b65ece7175a38ddbf9da7c89a1d8d025",
+      "bytes": 18407,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/recommendation.py",
+      "before_sha256": "d860c050a52a0a476d0670153947ccb12bab406351ea12e936f8da0080ddff81",
+      "sha256": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+      "bytes": 17614,
+      "operation": "replace"
+    },
+    {
+      "path": "amdfm/workflow.py",
+      "before_sha256": "ab3a3c3d015b03cc2aab0ff8c6055b059599a64afd46bc5df18c4be6513c385d",
+      "sha256": "f15e775c16ab44e811829e5c346e267114feb65a605b18f16337241025e483e9",
+      "bytes": 9550,
+      "operation": "replace"
+    },
+    {
+      "path": "app.py",
+      "before_sha256": "ee581528ec27c915fd01b966f8f6a6bf76562f0d2a710090ddde71f671197f89",
+      "sha256": "b59f2e67f944e7c07e6282fa2c11e4381fdbe2f9d329a36e2824fd6584f18d41",
+      "bytes": 44499,
+      "operation": "replace"
+    },
+    {
+      "path": "dfm/advisor.py",
+      "before_sha256": null,
+      "sha256": "2dfad9933bbb14bf9d28d610df1f772ce9e2d9de173204e522bd65fa8382655a",
+      "bytes": 15161,
+      "operation": "add"
+    },
+    {
+      "path": "dfm/advisor_view.py",
+      "before_sha256": null,
+      "sha256": "353ed808a2cfceebea3aac4687587c666e47cd7c6d511dd67c3d7da52bb8d476",
+      "bytes": 13168,
+      "operation": "add"
+    },
+    {
+      "path": "dfm/ai_client.py",
+      "before_sha256": null,
+      "sha256": "08bfd779915814245038a236159078b200bf83aebafb65396cf2f8e2cd0b51c4",
+      "bytes": 13130,
+      "operation": "add"
+    },
+    {
+      "path": "dfm/machining_view.py",
+      "before_sha256": "b71c2c8cb707c5f1691f27ad50431456f62c72dd8649413309dcd80b6e90e355",
+      "sha256": "7eca97d23b0fc980f1316eb6763788d6c76e106710506acd58d19247628de63d",
+      "bytes": 37701,
+      "operation": "replace"
+    },
+    {
+      "path": "docs/AI_ADVISOR_GUIDE.md",
+      "before_sha256": null,
+      "sha256": "49f1eb0ea14fcf6d4b8934ed472de4eac8d6625ac446f9c7397977c3c88d7b47",
+      "bytes": 7299,
+      "operation": "add"
+    },
+    {
+      "path": "docs/project-knowledge/AI_ADVISOR_IMPLEMENTATION_2026-09-28.md",
+      "before_sha256": null,
+      "sha256": "ecc5c1b942e0110e4d1285e1e0c4edf44eabbb0db8ee1ee4f39b501f652aaa83",
+      "bytes": 3585,
+      "operation": "add"
+    },
+    {
+      "path": "docs/project-knowledge/README.md",
+      "before_sha256": "f53889bcc2ddf4047c35176e6cdadb57de1b46b53522252ab2b3efdd1299ac3d",
+      "sha256": "3812ae0527cfc7681d8bf47842a6da452d307206fb911f0280f96fd123b7ae92",
+      "bytes": 13818,
+      "operation": "replace"
+    },
+    {
+      "path": "tests_v3/test_advisor.py",
+      "before_sha256": null,
+      "sha256": "d7bd1fdef8e8b4fdcee464bf5efcd561c4f7449827bb0b259a43311ca4f5efcf",
+      "bytes": 9577,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_advisor_ui.py",
+      "before_sha256": null,
+      "sha256": "35b7b1367ce15cfbc4424736b1996d719e32fee1fe713bf70e3eb33f6db64184",
+      "bytes": 13151,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_ai_client.py",
+      "before_sha256": null,
+      "sha256": "382e14bf6b1beab2287498c1f3542cf32626bcc7eb3e0efbdba570d588a8564e",
+      "bytes": 12001,
+      "operation": "add"
+    },
+    {
+      "path": "tests_v3/test_app.py",
+      "before_sha256": "27c45e12ccfd674e69ea01827bbe699b631b0a346cc0dcb36ac5f3d1ee400608",
+      "sha256": "bae8837e438fd780acf98feeb00127eb1079d10e724bf6dc5b1e6a3dd1f668aa",
+      "bytes": 12685,
+      "operation": "replace"
+    },
+    {
+      "path": "tests_v3/test_navigation_ux.py",
+      "before_sha256": "2e19e01b19bfc9f3d4064927476ca976176459c54c71f74fec404fe9a25ef273",
+      "sha256": "34eb35acb5157b01b6370d17da1957de2d3ebe101385568365e7726f4b616c8d",
+      "bytes": 3844,
+      "operation": "replace"
+    },
+    {
+      "path": "tests_v3/test_orientation_recommendation.py",
+      "before_sha256": "fbc10d29066e46db138f4c77489234ab28112f79e6932c1966877d965450eeef",
+      "sha256": "c8ef34889abe78a663d1c9a6a686d49e9f869f14557666aa37daa8aa0f9192ce",
+      "bytes": 18587,
+      "operation": "replace"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,93 @@
+- log
+- log
+- button "keyboard_double_arrow_left":
+  - generic: keyboard_double_arrow_left
+- paragraph: 제조 공정
+- combobox "제조 공정": 절삭가공
+- button "Open":
+- heading "검토할 형상" [level=3]
+- paragraph: 입력
+- combobox "입력": 공개 STEP 시연
+- button "Open":
+- paragraph: 시연할 형상
+- combobox "시연할 형상": 구멍·포켓 블록 · CadQuarry
+- button "Open":
+- button "STEP 다운로드":
+  - paragraph: STEP 다운로드
+- generic "keyboard_arrow_right 형상 출처":
+  - generic: keyboard_arrow_right
+  - paragraph: 형상 출처
+- generic "keyboard_arrow_right CAD 메시 정밀도":
+  - generic: keyboard_arrow_right
+  - paragraph: CAD 메시 정밀도
+- separator
+- paragraph:
+  - strong: 절삭 조건 · 고정축 밀링
+- generic "keyboard_arrow_right 저장된 조건 가져오기":
+  - generic: keyboard_arrow_right
+  - paragraph: 저장된 조건 가져오기
+- paragraph: 공구가 오는 방향
+- button "Help for 공구가 오는 방향":
+- combobox "공구가 오는 방향": +Z · 위쪽에서
+- button "Open":
+- generic "keyboard_arrow_right 보유 공구 지정 (선택)":
+  - generic: keyboard_arrow_right
+  - paragraph: 보유 공구 지정 (선택)
+- generic "keyboard_arrow_right 추가 기준·출처":
+  - generic: keyboard_arrow_right
+  - paragraph: 추가 기준·출처
+- checkbox "선택 방향에서 가려진 표면도 확인" [checked]
+- paragraph: 선택 방향에서 가려진 표면도 확인
+- button "Help for 선택 방향에서 가려진 표면도 확인":
+- button "절삭 설계 검토":
+  - paragraph: 절삭 설계 검토
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button "Main menu":
+- heading "절삭가공 설계 검토" [level=1]:
+  - text: 절삭가공 설계 검토
+  - link "Link to heading":
+    - /url: "#b003ed7d"
+- generic "keyboard_arrow_right 검토 조건":
+  - generic: keyboard_arrow_right
+  - paragraph: 검토 조건
+- paragraph: cadquarry_block_block_462c9d.step · Tormach 1100M
+- heading "종합 결론" [level=3]:
+  - text: 종합 결론
+  - link "Link to heading":
+    - /url: "#dfm-final-conclusion"
+- status:
+  - paragraph: 결론을 완성하려면 추가 확인이 필요합니다
+- paragraph: 수정 0건 · 추가 확인 1건
+- paragraph:
+  - strong: 검토에 적용한 공구
+- paragraph: 엔드밀 지름 · 자동
+- paragraph: 3.44 mm
+- paragraph: 날 길이 · 자동
+- paragraph: 27.4 mm
+- paragraph: 돌출 길이 · 자동
+- paragraph: 27.4 mm
+- button "확인할 항목 보기":
+  - paragraph: 확인할 항목 보기
+- paragraph: 추가 확인 · 공구 제안 조건
+- generic "keyboard_arrow_right 판단 근거·전체 조치":
+  - generic: keyboard_arrow_right
+  - paragraph: 판단 근거·전체 조치
+- generic "keyboard_arrow_right 추천·학습 기록":
+  - generic: keyboard_arrow_right
+  - paragraph: 추천·학습 기록
+- generic "keyboard_arrow_right 인식한 특징 · 4곳":
+  - generic: keyboard_arrow_right
+  - paragraph: 인식한 특징 · 4곳
+- switch "문제 위치·측정값 보기"
+- paragraph: 문제 위치·측정값 보기
+- generic "keyboard_arrow_right 적용 조건·전체 검토 항목":
+  - generic: keyboard_arrow_right
+  - paragraph: 적용 조건·전체 검토 항목
+- generic "keyboard_arrow_right 근거와 내보내기":
+  - generic: keyboard_arrow_right
+  - paragraph: 근거와 내보내기
+- generic "keyboard_arrow_right 표준·논문 근거 찾아보기":
+  - generic: keyboard_arrow_right
+  - paragraph: 표준·논문 근거 찾아보기

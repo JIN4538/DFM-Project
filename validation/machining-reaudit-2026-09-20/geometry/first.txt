@@ -1,0 +1,207 @@
+FFF.FFF........                                                          [100%]
+================================== FAILURES ===================================
+_ test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation[0.0-0.0] _
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-62/test_equal_tool_dimensions_do_0')
+angle = 0.0, shift = 0.0
+
+    @pytest.mark.parametrize("angle,shift", [(0., 0.), (.713, 0.), (.713, 1000.)])
+    def test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation(tmp_path, angle, shift):
+        shape, direction = _transform(_pocket(), angle, shift)
+        model = _model(shape, tmp_path, "equal_dimensions")
+        report = review_machining(model, MachiningProfile(tool_diameter_mm=12, flute_length_mm=8, reach_mm=8), direction)
+        finding = _finding(report, "cnc_rectangular_pockets")
+        rows = finding["measurements"]["pockets"]
+        assert len(rows) == 1
+        row = rows[0]
+        assert row["width_mm"] == pytest.approx(12, abs=1e-8)
+        assert row["wall_height_mm"] == pytest.approx(8, abs=1e-8)
+        assert row["width_too_small"] is False
+        assert row["exceeds_flute_length"] is False
+        assert row["exceeds_reach"] is False
+        assert set(row["numerical_boundary_comparisons"]) == {"width_too_small", "exceeds_flute_length", "exceeds_reach"}
+        assert finding["status"] == "attention"  # Independent sharp-corner issue remains.
+>       assert "manufacturing clearance" in report["numerical_policy"]["boundary_scope"]
+E       AssertionError: assert 'manufacturing clearance' in 'Floating-point comparison policy only; boundary cases do not establish design tolerance, machining clearance or feasibility.'
+
+tests_v3\test_machining_reaudit.py:99: AssertionError
+---------------------------- Captured stdout call -----------------------------
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\JIN\AppData\Local\Temp\pytest-of-JIN\pytest-62\test_equal_tool_dimensions_do_0\equal_dimensions.step(672 ents)  Write  Done
+_ test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation[0.713-0.0] _
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-62/test_equal_tool_dimensions_do_1')
+angle = 0.713, shift = 0.0
+
+    @pytest.mark.parametrize("angle,shift", [(0., 0.), (.713, 0.), (.713, 1000.)])
+    def test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation(tmp_path, angle, shift):
+        shape, direction = _transform(_pocket(), angle, shift)
+        model = _model(shape, tmp_path, "equal_dimensions")
+        report = review_machining(model, MachiningProfile(tool_diameter_mm=12, flute_length_mm=8, reach_mm=8), direction)
+        finding = _finding(report, "cnc_rectangular_pockets")
+        rows = finding["measurements"]["pockets"]
+        assert len(rows) == 1
+        row = rows[0]
+        assert row["width_mm"] == pytest.approx(12, abs=1e-8)
+        assert row["wall_height_mm"] == pytest.approx(8, abs=1e-8)
+        assert row["width_too_small"] is False
+        assert row["exceeds_flute_length"] is False
+        assert row["exceeds_reach"] is False
+        assert set(row["numerical_boundary_comparisons"]) == {"width_too_small", "exceeds_flute_length", "exceeds_reach"}
+        assert finding["status"] == "attention"  # Independent sharp-corner issue remains.
+>       assert "manufacturing clearance" in report["numerical_policy"]["boundary_scope"]
+E       AssertionError: assert 'manufacturing clearance' in 'Floating-point comparison policy only; boundary cases do not establish design tolerance, machining clearance or feasibility.'
+
+tests_v3\test_machining_reaudit.py:99: AssertionError
+---------------------------- Captured stdout call -----------------------------
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\JIN\AppData\Local\Temp\pytest-of-JIN\pytest-62\test_equal_tool_dimensions_do_1\equal_dimensions.step(672 ents)  Write  Done
+_ test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation[0.713-1000.0] _
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-62/test_equal_tool_dimensions_do_2')
+angle = 0.713, shift = 1000.0
+
+    @pytest.mark.parametrize("angle,shift", [(0., 0.), (.713, 0.), (.713, 1000.)])
+    def test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation(tmp_path, angle, shift):
+        shape, direction = _transform(_pocket(), angle, shift)
+        model = _model(shape, tmp_path, "equal_dimensions")
+        report = review_machining(model, MachiningProfile(tool_diameter_mm=12, flute_length_mm=8, reach_mm=8), direction)
+        finding = _finding(report, "cnc_rectangular_pockets")
+        rows = finding["measurements"]["pockets"]
+        assert len(rows) == 1
+        row = rows[0]
+        assert row["width_mm"] == pytest.approx(12, abs=1e-8)
+        assert row["wall_height_mm"] == pytest.approx(8, abs=1e-8)
+        assert row["width_too_small"] is False
+        assert row["exceeds_flute_length"] is False
+        assert row["exceeds_reach"] is False
+        assert set(row["numerical_boundary_comparisons"]) == {"width_too_small", "exceeds_flute_length", "exceeds_reach"}
+        assert finding["status"] == "attention"  # Independent sharp-corner issue remains.
+>       assert "manufacturing clearance" in report["numerical_policy"]["boundary_scope"]
+E       AssertionError: assert 'manufacturing clearance' in 'Floating-point comparison policy only; boundary cases do not establish design tolerance, machining clearance or feasibility.'
+
+tests_v3\test_machining_reaudit.py:99: AssertionError
+---------------------------- Captured stdout call -----------------------------
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\JIN\AppData\Local\Temp\pytest-of-JIN\pytest-62\test_equal_tool_dimensions_do_2\equal_dimensions.step(672 ents)  Write  Done
+_ test_large_coordinate_transfer_retains_unresolved_floor_location[1000000.0] _
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-62/test_large_coordinate_transfer0')
+shift = 1000000.0
+
+    @pytest.mark.parametrize("shift", [1e6, 1e8])
+    def test_large_coordinate_transfer_retains_unresolved_floor_location(tmp_path, shift):
+        shape, direction = _transform(_pocket(), .819, shift)
+        model = _model(shape, tmp_path, "large_coordinate")
+        report = review_machining(model, MachiningProfile(tool_diameter_mm=4, flute_length_mm=10, reach_mm=15), direction)
+        finding = _finding(report, "cnc_rectangular_pockets")
+        # STEP precision changes boundary agreement at these translations. The
+        # imported floor must not silently vanish into 'no feature detected'.
+        assert finding["measurements"]["count"] == 0
+>       assert len(finding["measurements"]["unresolved_floor_face_ids"]) == 1
+E       assert 2 == 1
+E        +  where 2 = len([3, 11])
+
+tests_v3\test_machining_reaudit.py:120: AssertionError
+---------------------------- Captured stdout call -----------------------------
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\JIN\AppData\Local\Temp\pytest-of-JIN\pytest-62\test_large_coordinate_transfer0\large_coordinate.step(672 ents)  Write  Done
+_ test_large_coordinate_transfer_retains_unresolved_floor_location[100000000.0] _
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-62/test_large_coordinate_transfer1')
+shift = 100000000.0
+
+    @pytest.mark.parametrize("shift", [1e6, 1e8])
+    def test_large_coordinate_transfer_retains_unresolved_floor_location(tmp_path, shift):
+        shape, direction = _transform(_pocket(), .819, shift)
+        model = _model(shape, tmp_path, "large_coordinate")
+        report = review_machining(model, MachiningProfile(tool_diameter_mm=4, flute_length_mm=10, reach_mm=15), direction)
+        finding = _finding(report, "cnc_rectangular_pockets")
+        # STEP precision changes boundary agreement at these translations. The
+        # imported floor must not silently vanish into 'no feature detected'.
+        assert finding["measurements"]["count"] == 0
+>       assert len(finding["measurements"]["unresolved_floor_face_ids"]) == 1
+E       assert 2 == 1
+E        +  where 2 = len([3, 11])
+
+tests_v3\test_machining_reaudit.py:120: AssertionError
+---------------------------- Captured stdout call -----------------------------
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\JIN\AppData\Local\Temp\pytest-of-JIN\pytest-62\test_large_coordinate_transfer1\large_coordinate.step(672 ents)  Write  Done
+_ test_unsupported_inward_floors_keep_unknown_without_becoming_pockets[island] _
+
+tmp_path = WindowsPath('C:/Users/JIN/AppData/Local/Temp/pytest-of-JIN/pytest-62/test_unsupported_inward_floors0')
+kind = 'island'
+
+    @pytest.mark.parametrize("kind", ["island", "channel", "sealed"])
+    def test_unsupported_inward_floors_keep_unknown_without_becoming_pockets(tmp_path, kind):
+        from OCP.BRepAlgoAPI import BRepAlgoAPI_Fuse
+        if kind == "island":
+            shape = BRepAlgoAPI_Fuse(_pocket(), _box(3, 3, 8, (18, 13, 7))).Shape()
+        elif kind == "channel":
+            shape = _cut(_box(40, 30, 15), _box(42, 12, 10, (-1, 9, 7)))
+        else:
+            shape = _cut(_box(40, 30, 15), _box(20, 12, 8, (10, 9, 3)))
+        model = _model(shape, tmp_path, kind)
+        result = _finding(review_machining(model, MachiningProfile()), "cnc_rectangular_pockets")
+        assert result["status"] == "unknown"
+        assert result["measurements"]["count"] == 0
+>       assert len(result["measurements"]["unresolved_floor_face_ids"]) == 1
+E       assert 2 == 1
+E        +  where 2 = len([3, 11])
+
+tests_v3\test_machining_reaudit.py:140: AssertionError
+---------------------------- Captured stdout call -----------------------------
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\JIN\AppData\Local\Temp\pytest-of-JIN\pytest-62\test_unsupported_inward_floors0\island.step(986 ents)  Write  Done
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\validation\machining-reaudit-2026-09-20\geometry\first.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_machining_reaudit.py::test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation[0.0-0.0]
+FAILED tests_v3/test_machining_reaudit.py::test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation[0.713-0.0]
+FAILED tests_v3/test_machining_reaudit.py::test_equal_tool_dimensions_do_not_become_conflicts_after_step_rotation[0.713-1000.0]
+FAILED tests_v3/test_machining_reaudit.py::test_large_coordinate_transfer_retains_unresolved_floor_location[1000000.0]
+FAILED tests_v3/test_machining_reaudit.py::test_large_coordinate_transfer_retains_unresolved_floor_location[100000000.0]
+FAILED tests_v3/test_machining_reaudit.py::test_unsupported_inward_floors_keep_unknown_without_becoming_pockets[island]
+6 failed, 9 passed in 2.99s

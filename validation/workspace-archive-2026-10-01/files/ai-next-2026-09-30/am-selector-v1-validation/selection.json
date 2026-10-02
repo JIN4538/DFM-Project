@@ -1,0 +1,14 @@
+{
+  "selected_policies": [
+    "uncertainty05"
+  ],
+  "selector_sha256": "20e02474872a7511cd40f6b19edd407d41b9d8173e81cd0ee41bed22202abf4a",
+  "validation_summary_sha256": "bee003e31e7e459d9dee0af3fd40be4c0e0a6576fad2795fab37f295c3e1ef16",
+  "by_process_best_diagnostic": {
+    "PBF_POLYMER": "geometric",
+    "VPP": "height_neural",
+    "PBF_METAL": "height_neural",
+    "MEX": "height_neural"
+  },
+  "selection_rule": "Lowest mean exact six-query candidate-union objective on validation; no test access"
+}

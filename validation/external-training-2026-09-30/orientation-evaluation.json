@@ -1,0 +1,172 @@
+{
+  "metrics": {
+    "height": {
+      "baseline_mae": 0.04782374048504636,
+      "external_mae": 0.01996816462590728,
+      "baseline_mse": 0.004273251391635017,
+      "external_mse": 0.0006990070676501139,
+      "samples": 47520
+    },
+    "overhang": {
+      "baseline_mae": 0.06250703161207817,
+      "external_mae": 0.02889087122763357,
+      "baseline_mse": 0.0067601038963866315,
+      "external_mse": 0.0016251600341677629,
+      "samples": 47520
+    }
+  },
+  "meshes": 1051,
+  "things": {
+    "train": 179,
+    "validation": 38,
+    "test": 43
+  },
+  "independent_measurement_max_error": 8.881784197001252e-16,
+  "history": {
+    "height": [
+      {
+        "epoch": 5,
+        "validation_mse": 0.0014789673446470313,
+        "training_loss": 0.0009058657366177158
+      },
+      {
+        "epoch": 10,
+        "validation_mse": 0.0011286041290347905,
+        "training_loss": 0.0005770808357198976
+      },
+      {
+        "epoch": 15,
+        "validation_mse": 0.0008934722699398373,
+        "training_loss": 0.00047476351703870076
+      },
+      {
+        "epoch": 20,
+        "validation_mse": 0.0008483973324490539,
+        "training_loss": 0.0004329366741221613
+      },
+      {
+        "epoch": 25,
+        "validation_mse": 0.000833914576828643,
+        "training_loss": 0.0004110813960045477
+      },
+      {
+        "epoch": 30,
+        "validation_mse": 0.0008420121956280988,
+        "training_loss": 0.00039704873779605743
+      },
+      {
+        "epoch": 35,
+        "validation_mse": 0.0008416824251650467,
+        "training_loss": 0.0003870559872684201
+      },
+      {
+        "epoch": 40,
+        "validation_mse": 0.0008268236040983623,
+        "training_loss": 0.00037924735472015585
+      },
+      {
+        "epoch": 45,
+        "validation_mse": 0.0008157748012368952,
+        "training_loss": 0.00037291400227111734
+      },
+      {
+        "epoch": 50,
+        "validation_mse": 0.0008041665184559559,
+        "training_loss": 0.00036797321398948077
+      },
+      {
+        "epoch": 55,
+        "validation_mse": 0.0008136275272526949,
+        "training_loss": 0.0003634645805601554
+      },
+      {
+        "epoch": 60,
+        "validation_mse": 0.0008181668677143583,
+        "training_loss": 0.0003608992053166674
+      },
+      {
+        "epoch": 65,
+        "validation_mse": 0.0008277841402112477,
+        "training_loss": 0.0003586158570087331
+      },
+      {
+        "epoch": 70,
+        "validation_mse": 0.0008153619429054754,
+        "training_loss": 0.00035639889741688143
+      }
+    ],
+    "overhang": [
+      {
+        "epoch": 5,
+        "validation_mse": 0.0028732647023040135,
+        "training_loss": 0.00132650831977751
+      },
+      {
+        "epoch": 10,
+        "validation_mse": 0.00255656115606145,
+        "training_loss": 0.0010797297060936826
+      },
+      {
+        "epoch": 15,
+        "validation_mse": 0.0024305774903457308,
+        "training_loss": 0.000994184971641144
+      },
+      {
+        "epoch": 20,
+        "validation_mse": 0.002341268310160624,
+        "training_loss": 0.0009488979374136103
+      },
+      {
+        "epoch": 25,
+        "validation_mse": 0.0022527128070024775,
+        "training_loss": 0.0009261547427633946
+      },
+      {
+        "epoch": 30,
+        "validation_mse": 0.002203170189206797,
+        "training_loss": 0.0009104828728806498
+      },
+      {
+        "epoch": 35,
+        "validation_mse": 0.002214844109577191,
+        "training_loss": 0.000898787483468782
+      },
+      {
+        "epoch": 40,
+        "validation_mse": 0.0022578046071189384,
+        "training_loss": 0.0008891343042426204
+      },
+      {
+        "epoch": 45,
+        "validation_mse": 0.00232085004768404,
+        "training_loss": 0.0008827229928964581
+      },
+      {
+        "epoch": 50,
+        "validation_mse": 0.002315841799218612,
+        "training_loss": 0.0008770102384674005
+      },
+      {
+        "epoch": 55,
+        "validation_mse": 0.002224726191643654,
+        "training_loss": 0.0008693673492664889
+      },
+      {
+        "epoch": 60,
+        "validation_mse": 0.0022923350079392508,
+        "training_loss": 0.0008669728263520198
+      },
+      {
+        "epoch": 65,
+        "validation_mse": 0.002249202289743358,
+        "training_loss": 0.000865737607293386
+      },
+      {
+        "epoch": 70,
+        "validation_mse": 0.0022486295796174684,
+        "training_loss": 0.0008627040167782652
+      }
+    ]
+  },
+  "seconds": 194.21900000000005
+}

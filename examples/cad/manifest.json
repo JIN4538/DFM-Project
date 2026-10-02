@@ -1,0 +1,190 @@
+[
+  {
+    "id": "01_box",
+    "title": "직육면체 · 10×20×30 mm",
+    "file": "01_box.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "6b4c919555a646f3b3711d5e8c9156164171772856f9f1d3299da912812bce53",
+    "expected": {
+      "volume_mm3": 6000,
+      "extents_mm": [
+        10,
+        20,
+        30
+      ],
+      "minimum_chord_mm": 10
+    }
+  },
+  {
+    "id": "02_thin_plate",
+    "title": "얇은 판 · 두께 0.3 mm",
+    "file": "02_thin_plate.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "e401d096d93a59a8a0cec73c151046587aca50c57737c9fd3916102a1150d4b1",
+    "expected": {
+      "volume_mm3": 180,
+      "extents_mm": [
+        30,
+        20,
+        0.3
+      ],
+      "minimum_chord_mm": 0.3
+    }
+  },
+  {
+    "id": "03_vertical_hole",
+    "title": "수직 관통홀 · 지름 4 mm",
+    "file": "03_vertical_hole.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "8926215700394ae70161fe84d66e30fdaef9bcd4f4878cd285906e336284b396",
+    "expected": {
+      "volume_mm3": 3874.3362938564082,
+      "hole_diameter_mm": 4,
+      "hole_axis": [
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "04_horizontal_hole",
+    "title": "수평 관통홀 · 지름 6 mm",
+    "file": "04_horizontal_hole.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "284f9968ba0dc6aef93f0e5094de8ae3b7383328404bd97b6647578029cd70f6",
+    "expected": {
+      "volume_mm3": 11151.769983530756,
+      "hole_diameter_mm": 6,
+      "hole_axis": [
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "05_sealed_cavity",
+    "title": "밀폐 공동 · 외부 20 / 내부 16 mm",
+    "file": "05_sealed_cavity.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "f6ed7931b6114f9357198e7b4b89d15d5f61df072ed65c42bbd2c9a3640f17de",
+    "expected": {
+      "volume_mm3": 3904,
+      "internal_shell_count": 1
+    }
+  },
+  {
+    "id": "06_open_cup",
+    "title": "열린 컵 · 벽과 바닥 2 mm",
+    "file": "06_open_cup.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "d25ada36cf3a24d7f5b3fc9389167b80468b14dd3f289584168c5e10dc075cb0",
+    "expected": {
+      "volume_mm3": 3392,
+      "internal_shell_count": 0
+    }
+  },
+  {
+    "id": "07_bracket",
+    "title": "브래킷 · 두께 4 mm",
+    "file": "07_bracket.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "02c439606201b8ba98e9b0d8a71560c4b003d9594e723f8a145154fe8f84eab4",
+    "expected": {
+      "volume_mm3": 9120,
+      "extents_mm": [
+        40,
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "id": "08_bridge",
+    "title": "양끝 지지 브리지 · 지간 10 mm",
+    "file": "08_bridge.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "ca9910d7b8827a296a9cccc5e35bc390977e7bdb58b1dda21398e149596a431d",
+    "expected": {
+      "volume_mm3": 1450,
+      "unsupported_horizontal_projection_mm2": 50
+    }
+  },
+  {
+    "id": "09_cantilever",
+    "title": "외팔보 · 돌출 15 mm",
+    "file": "09_cantilever.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "e6344a51424219b073ab7d6b32a165d781aecdd4a429e573679aaecbf13c0f7f",
+    "expected": {
+      "volume_mm3": 450,
+      "unsupported_horizontal_projection_mm2": 75
+    }
+  },
+  {
+    "id": "10_inch_box",
+    "title": "inch 선언 STEP · 실제 25.4 mm 정육면체",
+    "file": "10_inch_box.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "089e834b788fa9c5f37b3183bf1c3c2fa102288e80d5e4617fff55d98920db01",
+    "expected": {
+      "volume_mm3": 16387.064,
+      "extents_mm": [
+        25.4,
+        25.4,
+        25.4
+      ],
+      "export_unit": "INCH"
+    }
+  },
+  {
+    "id": "11_two_bodies",
+    "title": "분리된 2개 솔리드",
+    "file": "11_two_bodies.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "9ee64f34a6332674b326804b69e0eb7596fae2dd308b3a5fa51fcf9d0e6f0e15",
+    "expected": {
+      "solid_count": 2,
+      "constituent_volume_sum_mm3": 2000,
+      "extents_mm": [
+        30,
+        10,
+        10
+      ]
+    }
+  },
+  {
+    "id": "12_sphere",
+    "title": "구 · 반지름 10 mm",
+    "file": "12_sphere.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "e1d68e4935d744238034c1f5a2491ddd8ba8d24ddc190ccf1fde27220be6e3ec",
+    "expected": {
+      "volume_mm3": 4188.790204786391,
+      "exact_area_mm2": 1256.6370614359173
+    }
+  },
+  {
+    "id": "13_fine_pin",
+    "title": "작은 핀 · 지름 0.3 / 높이 5 mm",
+    "file": "13_fine_pin.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "50f22ec09438587c91875abafcdbf3427346e57dd2ce88f848581fe1d95ac8f0",
+    "expected": {
+      "volume_mm3": 100.35342917352885,
+      "outer_diameter_mm": 0.3
+    }
+  },
+  {
+    "id": "14_thin_plate_improved",
+    "title": "보강 판 · 두께 1.2 mm",
+    "file": "14_thin_plate_improved.step",
+    "source": "original OCCT parametric construction",
+    "sha256": "dd6d19c01200de1552da46d341da39f520942e73162a83491642f2b3bdd01222",
+    "expected": {
+      "volume_mm3": 720,
+      "minimum_chord_mm": 1.2
+    }
+  }
+]

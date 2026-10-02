@@ -1,0 +1,18 @@
+Measured 0 meshes; 0s
+Measured 100 meshes; 3s
+Measured 200 meshes; 5s
+Measured 300 meshes; 8s
+Measured 400 meshes; 10s
+Measured 500 meshes; 12s
+Measured 600 meshes; 16s
+Measured 700 meshes; 18s
+Measured 800 meshes; 21s
+Measured 900 meshes; 23s
+Measured 1000 meshes; 26s
+height: epoch 20, validation MSE 0.000848397
+height: epoch 40, validation MSE 0.000826824
+height: epoch 60, validation MSE 0.000818167
+overhang: epoch 20, validation MSE 0.00234127
+overhang: epoch 40, validation MSE 0.0022578
+overhang: epoch 60, validation MSE 0.00229234
+{"metrics": {"height": {"baseline_mae": 0.04782374048504636, "external_mae": 0.01996816462590728, "baseline_mse": 0.004273251391635017, "external_mse": 0.0006990070676501139, "samples": 47520}, "overhang": {"baseline_mae": 0.06250703161207817, "external_mae": 0.02889087122763357, "baseline_mse": 0.0067601038963866315, "external_mse": 0.0016251600341677629, "samples": 47520}}, "meshes": 1051, "things": {"train": 179, "validation": 38, "test": 43}, "independent_measurement_max_error": 8.881784197001252e-16, "seconds": 194.21900000000005}

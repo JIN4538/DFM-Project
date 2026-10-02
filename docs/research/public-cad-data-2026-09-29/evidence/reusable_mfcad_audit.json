@@ -1,0 +1,169 @@
+{
+  "kind": "mfcad",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Selected sample and/or ID partitions only; no training or whole-corpus certification",
+  "inputs": [
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfcad_sample.step",
+      "bytes": 34441,
+      "sha256": "56ceb6d91bb7d195501b2f3c72db3594b30f14bfea1780635e60e7bf71916164"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfcad_sample.face_truth",
+      "bytes": 30,
+      "sha256": "f2f64a06009adaf8da9b90bd957fec6732e9580069a7b88cc4b59169f71ffb30"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfcad_train_list",
+      "bytes": 212443,
+      "sha256": "f5edd07f6b0a1d26aea88c39d904caa77c6a00859d75aa266ba6b7a39746782c"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfcad_valid_list",
+      "bytes": 70508,
+      "sha256": "d7715d6e34b83bf46cddc9aad12ea17b7e3450bc383d22b13cfd7f6b1e6d8ff2"
+    },
+    {
+      "path": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\public-cad-data-2026-09-29\\mfcad\\mfcad_test_list",
+      "bytes": 70204,
+      "sha256": "e973387b15d3fa650829963668856402fc6b5ddb9f054401a354a17a51e6be57"
+    }
+  ],
+  "findings": [],
+  "sample": {
+    "step_face_count": 11,
+    "label_count": 11,
+    "face_name_order": [
+      0,
+      2,
+      10,
+      5,
+      6,
+      1,
+      4,
+      9,
+      8,
+      7,
+      3
+    ],
+    "names_are_index_permutation": true,
+    "file_order_equals_name_order": false,
+    "mapping": "label[STEP representation item Name()], never raw file ordinal"
+  },
+  "geometry": {
+    "ocp_version": "7.9.3.1",
+    "valid": true,
+    "solid_count": 1,
+    "face_count": 11,
+    "bounds_mm": [
+      -2.9332092310596636e-13,
+      -2.5356106103657794e-13,
+      -5.000444502911705e-13,
+      10.000000000000501,
+      10.0,
+      10.0
+    ],
+    "dimensions_mm": [
+      10.000000000000794,
+      10.000000000000254,
+      10.000000000000501
+    ],
+    "volume_mm3": 850.4647546712083,
+    "face_rows": [
+      {
+        "index": 0,
+        "step_name": "0",
+        "label": 15,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 1,
+        "step_name": "2",
+        "label": 15,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 2,
+        "step_name": "10",
+        "label": 0,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 3,
+        "step_name": "5",
+        "label": 0,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 4,
+        "step_name": "6",
+        "label": 15,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 5,
+        "step_name": "1",
+        "label": 0,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 6,
+        "step_name": "4",
+        "label": 0,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 7,
+        "step_name": "9",
+        "label": 15,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 8,
+        "step_name": "8",
+        "label": 0,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 9,
+        "step_name": "7",
+        "label": 15,
+        "surface": "GeomAbs_Plane"
+      },
+      {
+        "index": 10,
+        "step_name": "3",
+        "label": 15,
+        "surface": "GeomAbs_Plane"
+      }
+    ],
+    "ordinal_limit": "MFInstSeg upstream pythonocc traversal was not run; geometric agreement here is a sample check"
+  },
+  "splits": {
+    "counts": {
+      "train": {
+        "rows": 9292,
+        "unique": 9292,
+        "duplicate_rows": 0
+      },
+      "val": {
+        "rows": 3097,
+        "unique": 3097,
+        "duplicate_rows": 0
+      },
+      "test": {
+        "rows": 3099,
+        "unique": 3099,
+        "duplicate_rows": 0
+      }
+    },
+    "overlap_ids": {
+      "train/val": [],
+      "train/test": [],
+      "val/test": []
+    },
+    "total_rows": 15488,
+    "unique_union": 15488
+  },
+  "status": "checked_inputs_passed"
+}

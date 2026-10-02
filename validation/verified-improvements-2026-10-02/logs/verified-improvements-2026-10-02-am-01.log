@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\run_equal_budget_am_study.py", line 158, in <module>
+    a=p.parse_args();run(a.folder,a.output,a.limit)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\run_equal_budget_am_study.py", line 75, in run
+    t=time.perf_counter();mesh=mesh_from_step(path,record)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\run_equal_budget_am_study.py", line 30, in mesh_from_step
+    from amdfm.cad_edit_pairs import read_shape
+ModuleNotFoundError: No module named 'amdfm.cad_edit_pairs'

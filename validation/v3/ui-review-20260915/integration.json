@@ -1,0 +1,102 @@
+{
+  "code_commit": "bbad511b33e2b2c4e20452b3fa1cc07ba0b015a2",
+  "code_digest": "6911a43db73fb632ef0b804411c4f10a9b4ade06083b694fb062c60090b4182a",
+  "source_app_sha256": "b16ce4dfd045c867a648270cab8eb8fa84110cff321df756f188facd8f4bbf82",
+  "local_windows": {
+    "Python 3.12.14": {
+      "tests_passed": 666,
+      "legacy_checks_passed": 55,
+      "pip_check": "passed"
+    },
+    "Python 3.13.15": {
+      "tests_passed": 666,
+      "legacy_checks_passed": 55,
+      "pip_check": "passed"
+    }
+  },
+  "geometry_inventory": {
+    "paths": 106,
+    "unique_sha256": 100,
+    "verified": true
+  },
+  "original_git_blobs_preserved": 24,
+  "logs": [
+    {
+      "path": "logs/first-focused.txt",
+      "bytes": 31225,
+      "sha256": "1ddfb8899d53981c79eedb7f4c1c482d5c25e74e5fe276a442da99cb7731b235"
+    },
+    {
+      "path": "logs/focused-02.txt",
+      "bytes": 112,
+      "sha256": "77811ef360ee518756a0670546cd59445f257e9c3c0b8f33e7ee055afdef2c30"
+    },
+    {
+      "path": "logs/full-py312.txt",
+      "bytes": 5886,
+      "sha256": "e96a7dc23c69ac47af470356fb793b04cd75e9041a4cbb3381ec285e3a1129e0"
+    },
+    {
+      "path": "logs/full-py313.txt",
+      "bytes": 7774,
+      "sha256": "fbaebbcb7691460096c870ed34a0fe7d1af8e6ab6f15154f6dcde464766de188"
+    },
+    {
+      "path": "logs/navigation-fixed.txt",
+      "bytes": 1965,
+      "sha256": "d4bf0ea0a9bf059a7a5cae5d4e17bf981ab10ac127af0fb475dd851689c5bad3"
+    },
+    {
+      "path": "logs/final-py312.txt",
+      "bytes": 1286,
+      "sha256": "113186c537b573f4870cc40436d8a91852a3e50cc8529c4dce83760b927e4f0f"
+    },
+    {
+      "path": "logs/final-py313.txt",
+      "bytes": 1272,
+      "sha256": "1d824e7469ff1eda252da7b63b07aa5a2a49440b1dfcbe73c0b5b0df16f21a24"
+    },
+    {
+      "path": "logs/legacy-py312.txt",
+      "bytes": 14769,
+      "sha256": "5837452e7ff36d407a4b8d198a6481484e533f59904a12687afe2ddc2422a3fe"
+    },
+    {
+      "path": "logs/legacy-py313.txt",
+      "bytes": 14769,
+      "sha256": "5837452e7ff36d407a4b8d198a6481484e533f59904a12687afe2ddc2422a3fe"
+    }
+  ],
+  "ui": {
+    "browser": "Codex in-app Chromium",
+    "app_viewport": [
+      1366,
+      768
+    ],
+    "wall_run_button_y": 369.6,
+    "section_run_button_y": 425.2,
+    "orientation_height_mm": {
+      "current": 40,
+      "comparison": 30
+    },
+    "screenshots": [
+      "wall-after.png",
+      "orientation-after.png",
+      "sections-after.png",
+      "report-section-after.png"
+    ]
+  },
+  "artifact_code_digest": "ca4207574625418f8612c316c37b4d052e7075d2ba50acdf1b9d09c21ce839c1",
+  "artifact_scope": "Same-result report comparison was recorded before final navigation restoration and source line-ending normalization. Geometry calculations were not changed; the original artifact and SHA are preserved.",
+  "failure_notes": [
+    "First focused run: 10 failed/31 passed. Duplicate orientation Plotly IDs, wall select formatter variable reuse, and obsolete Vega assertion corrected; next focused run 48 passed.",
+    "First full runs: Python 3.12 had 2 failed/664 passed; Python 3.13 had 3 failed/663 passed. Next-action navigation and all-directions-oversize action wording restored.",
+    "Python 3.13 comparison-table failure did not reproduce in the subsequent targeted run. The first run overlapped a source edit; final full runs used frozen source.",
+    "Intermediate navigation retest: 1 failed/2 passed. Restored the omitted space-or-splitting next-action sentence before final full runs."
+  ],
+  "remaining": [
+    "Existing trimesh RuntimeWarning for zero-volume overlap counterexample; assertion passes.",
+    "No physical printing, first-time-user study or app-wide WCAG certification."
+  ],
+  "deployment_record": "Workspace study/ui-review-20260915/deployment.json records the source package, Desktop backup and byte verification after packaging."
+}

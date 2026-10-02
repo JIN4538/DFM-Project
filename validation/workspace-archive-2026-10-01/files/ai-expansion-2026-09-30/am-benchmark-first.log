@@ -1,0 +1,83 @@
+{"groups": 1, "seconds": 0.7649999999994179}
+{"groups": 2, "seconds": 1.5}
+{"groups": 3, "seconds": 2.547000000002299}
+{"groups": 4, "seconds": 3.764999999999418}
+{"groups": 5, "seconds": 5.187000000001717}
+{"groups": 6, "seconds": 6.687000000001717}
+{"groups": 7, "seconds": 7.734000000000378}
+{"groups": 8, "seconds": 8.96900000000096}
+{"groups": 9, "seconds": 10.203000000001339}
+{"groups": 10, "seconds": 11.59400000000096}
+{"groups": 11, "seconds": 12.875}
+{"groups": 12, "seconds": 14.203000000001339}
+{"groups": 13, "seconds": 15.359000000000378}
+{"groups": 14, "seconds": 16.5}
+{"groups": 15, "seconds": 17.96900000000096}
+{"groups": 16, "seconds": 19.187000000001717}
+{"groups": 17, "seconds": 20.5}
+{"groups": 18, "seconds": 21.875}
+{"groups": 19, "seconds": 23.09400000000096}
+{"groups": 20, "seconds": 24.21900000000096}
+{"groups": 21, "seconds": 25.5470000000023}
+{"groups": 22, "seconds": 27.09400000000096}
+{"groups": 23, "seconds": 28.45300000000134}
+{"groups": 24, "seconds": 29.687000000001717}
+{"groups": 25, "seconds": 30.764999999999418}
+{"groups": 26, "seconds": 32.10900000000038}
+{"groups": 27, "seconds": 33.60900000000038}
+{"groups": 28, "seconds": 34.875}
+{"groups": 29, "seconds": 36.31200000000172}
+{"groups": 30, "seconds": 37.875}
+{"groups": 31, "seconds": 39.06200000000172}
+{"groups": 32, "seconds": 40.56200000000172}
+{"groups": 33, "seconds": 41.73400000000038}
+{"groups": 34, "seconds": 43.18700000000172}
+{"groups": 35, "seconds": 44.65600000000268}
+{"groups": 36, "seconds": 45.6720000000023}
+{"groups": 37, "seconds": 46.98400000000038}
+{"groups": 38, "seconds": 48.43700000000172}
+{"groups": 39, "seconds": 49.875}
+{"groups": 40, "seconds": 51.35900000000038}
+{"groups": 41, "seconds": 52.59400000000096}
+{"groups": 42, "seconds": 54.125}
+{"groups": 43, "seconds": 55.59400000000096}
+{"groups": 44, "seconds": 57.31200000000172}
+{"groups": 45, "seconds": 58.35900000000038}
+{"groups": 46, "seconds": 59.63999999999942}
+{"groups": 47, "seconds": 61.125}
+{"groups": 48, "seconds": 62.70300000000134}
+{"groups": 49, "seconds": 64.40600000000268}
+{"groups": 50, "seconds": 65.5}
+{"groups": 51, "seconds": 66.23400000000038}
+{"groups": 52, "seconds": 66.95300000000134}
+{"groups": 53, "seconds": 67.73400000000038}
+{"groups": 54, "seconds": 68.60900000000038}
+{"groups": 55, "seconds": 69.5}
+{"groups": 56, "seconds": 70.2970000000023}
+{"groups": 57, "seconds": 71.0470000000023}
+{"groups": 58, "seconds": 71.81200000000172}
+{"groups": 59, "seconds": 72.57800000000134}
+{"groups": 60, "seconds": 73.32800000000134}
+{"groups": 61, "seconds": 74.15600000000268}
+{"groups": 62, "seconds": 74.90600000000268}
+{"groups": 63, "seconds": 75.71900000000096}
+{"groups": 64, "seconds": 76.46900000000096}
+{"groups": 65, "seconds": 77.2970000000023}
+{"groups": 66, "seconds": 78.0470000000023}
+{"groups": 67, "seconds": 78.85900000000038}
+{"groups": 68, "seconds": 79.60900000000038}
+{"groups": 69, "seconds": 80.375}
+{"groups": 70, "seconds": 81.15600000000268}
+{"groups": 71, "seconds": 81.9220000000023}
+{"groups": 72, "seconds": 82.65600000000268}
+{"groups": 73, "seconds": 83.35900000000038}
+{"groups": 74, "seconds": 84.125}
+{"groups": 75, "seconds": 84.96900000000096}
+Traceback (most recent call last):
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\benchmark_am_expansion.py", line 50, in <module>
+    with threadpool_limits(limits=2):main(p.parse_args().root)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\scripts\benchmark_am_expansion.py", line 44, in main
+    result=dict(**summary(cases),by_dataset={d:summary([r for r in cases if r['dataset']==d]) for d in set(r['dataset'] for r in cases)},cases=cases,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'cases'

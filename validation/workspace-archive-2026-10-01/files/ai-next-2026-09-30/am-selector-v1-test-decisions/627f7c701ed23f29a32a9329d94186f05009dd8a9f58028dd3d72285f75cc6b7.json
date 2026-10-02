@@ -1,0 +1,132 @@
+{
+  "id": "primitives_with_two_bores_0000686",
+  "dataset": "PBF-orientation",
+  "group": "pbf:primitives_with_two_bores:{\"alpha1\": 27, \"alpha2\": 68, \"measure1\": 192, \"measure2\": 101, \"measure3\": 171, \"n_measure1\": 28, \"n_measure2\": 24, \"n_measure3\": 19, \"offset1\": -12, \"offset2\": 11, \"primitive\": \"ellipsoid\", \"r1\": 6, \"r2\": 5}",
+  "split": "test",
+  "process": "PBF_POLYMER",
+  "priority": "height",
+  "candidate_oracle": {
+    "legacy": 0.0,
+    "blind": 0.0007800905651590556,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "actual_product": {
+    "legacy": 0.0,
+    "blind": 0.0007800905651590556,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "common_reference_product": {
+    "legacy": 0.0,
+    "blind": 0.0007800905651590556,
+    "geometric": 0.0,
+    "height_neural": 0.0,
+    "uncertainty05": 0.0
+  },
+  "selections": {
+    "legacy": {
+      "selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 2",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "blind": {
+      "selected_direction": [
+        -0.013177966153280131,
+        0.9003843375788856,
+        0.4348958333333335
+      ],
+      "selected_name": "AI \ud0d0\uc0c9 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        -0.013177966153280131,
+        0.9003843375788856,
+        0.4348958333333335
+      ],
+      "own_reference_score": 0.0007800905651590556,
+      "fixed_reference_score": 0.0007800905651590556,
+      "oracle_score": 0.0007800905651590556,
+      "actual_winner_gap": 0.0
+    },
+    "geometric": {
+      "selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "height_neural": {
+      "selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    },
+    "uncertainty05": {
+      "selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "selected_name": "AI \uc815\ubc00 \ubc29\ud5a5 1",
+      "actual_source": "verified_policy",
+      "actual_status": "recommended",
+      "actual_exact_score": -0.0,
+      "fixed_selected_direction": [
+        0.03765128261009623,
+        -0.8896334598438793,
+        -0.45512052035040534
+      ],
+      "own_reference_score": 0.0,
+      "fixed_reference_score": 0.0,
+      "oracle_score": 0.0,
+      "actual_winner_gap": 0.0
+    }
+  },
+  "original_case_sha256": "80e35e1c02ec55c356219ae1029aea790d7ab225ac968d9f2b89022b49e4e350"
+}

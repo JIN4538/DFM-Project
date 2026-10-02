@@ -1,0 +1,2703 @@
+{
+  "v1": [
+    {
+      "path": "run_app.py",
+      "lines": 13,
+      "sha256": "b45f10e7e93558b023629a6cea528b2a23e1e2be9ff0fefef48bcf58aa70a148",
+      "functions": []
+    },
+    {
+      "path": "src/__init__.py",
+      "lines": 1,
+      "sha256": "2a27353c7ad442d55bee02411a856382711219bccbaf01f621e18bcd12f8b3c2",
+      "functions": []
+    },
+    {
+      "path": "src/core/__init__.py",
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": []
+    },
+    {
+      "path": "src/core/geometry_analyzer.py",
+      "lines": 394,
+      "sha256": "d4313faf827dd426e069e74ab03fd57aef3b8fe9e4dfe8876af3352f9f6056a2",
+      "functions": [
+        {
+          "name": "compute_wall_thickness",
+          "line": 18,
+          "end": 89
+        },
+        {
+          "name": "compute_overhang_angles",
+          "line": 92,
+          "end": 167
+        },
+        {
+          "name": "compute_support_volume",
+          "line": 170,
+          "end": 230
+        },
+        {
+          "name": "compute_aspect_ratio",
+          "line": 233,
+          "end": 253
+        },
+        {
+          "name": "compute_build_volume_fit",
+          "line": 256,
+          "end": 283
+        },
+        {
+          "name": "compute_min_feature_size",
+          "line": 286,
+          "end": 311
+        },
+        {
+          "name": "compute_hole_analysis",
+          "line": 314,
+          "end": 349
+        },
+        {
+          "name": "run_full_analysis",
+          "line": 352,
+          "end": 381
+        }
+      ]
+    },
+    {
+      "path": "src/core/model_loader.py",
+      "lines": 177,
+      "sha256": "f0585e136c5da31f77980d44d500bf9e522aab6537f8c1da3abb73c4dd9a1293",
+      "functions": [
+        {
+          "name": "load_model",
+          "line": 14,
+          "end": 40
+        },
+        {
+          "name": "extract_metadata",
+          "line": 43,
+          "end": 69
+        },
+        {
+          "name": "generate_sample_models",
+          "line": 72,
+          "end": 129
+        },
+        {
+          "name": "_add_simple_fillet",
+          "line": 132,
+          "end": 140
+        },
+        {
+          "name": "save_sample_stl",
+          "line": 143,
+          "end": 165
+        }
+      ]
+    },
+    {
+      "path": "src/core/scoring.py",
+      "lines": 141,
+      "sha256": "f0c8fa2d67502f7d375fa49371d2fcdd8ece9f3bd7f43f51c3ab84ebc8ca556d",
+      "functions": [
+        {
+          "name": "evaluate_all_orientations",
+          "line": 20,
+          "end": 55
+        },
+        {
+          "name": "find_optimal_orientation",
+          "line": 58,
+          "end": 81
+        },
+        {
+          "name": "results_to_dict",
+          "line": 84,
+          "end": 87
+        },
+        {
+          "name": "results_to_table",
+          "line": 90,
+          "end": 121
+        }
+      ]
+    },
+    {
+      "path": "src/processes/__init__.py",
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": []
+    },
+    {
+      "path": "src/processes/additive.py",
+      "lines": 594,
+      "sha256": "6cf8e662d83bfb80b63e81ac8a208a9855981949dc53cc98da19a9cfa04e8fb2",
+      "functions": [
+        {
+          "name": "ProcessType",
+          "line": 35,
+          "end": 39
+        },
+        {
+          "name": "RuleResult",
+          "line": 43,
+          "end": 53
+        },
+        {
+          "name": "EvaluationResult",
+          "line": 57,
+          "end": 65
+        },
+        {
+          "name": "AMRuleBase",
+          "line": 119,
+          "end": 569
+        },
+        {
+          "name": "__init__",
+          "line": 132,
+          "end": 133
+        },
+        {
+          "name": "_define_rules",
+          "line": 135,
+          "end": 173
+        },
+        {
+          "name": "evaluate",
+          "line": 175,
+          "end": 265
+        },
+        {
+          "name": "_evaluate_wall_thickness",
+          "line": 269,
+          "end": 294
+        },
+        {
+          "name": "_evaluate_overhang",
+          "line": 296,
+          "end": 333
+        },
+        {
+          "name": "_evaluate_support_ratio",
+          "line": 335,
+          "end": 360
+        },
+        {
+          "name": "_evaluate_build_volume",
+          "line": 362,
+          "end": 386
+        },
+        {
+          "name": "_evaluate_aspect_ratio",
+          "line": 388,
+          "end": 411
+        },
+        {
+          "name": "_evaluate_min_feature",
+          "line": 413,
+          "end": 436
+        },
+        {
+          "name": "_evaluate_horizontal_hole",
+          "line": 438,
+          "end": 479
+        },
+        {
+          "name": "_compute_total_score",
+          "line": 483,
+          "end": 493
+        },
+        {
+          "name": "_compute_grade",
+          "line": 496,
+          "end": 507
+        },
+        {
+          "name": "_generate_summary",
+          "line": 509,
+          "end": 517
+        },
+        {
+          "name": "_generate_suggestions",
+          "line": 519,
+          "end": 569
+        }
+      ]
+    },
+    {
+      "path": "src/ui/__init__.py",
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": []
+    },
+    {
+      "path": "src/ui/app.py",
+      "lines": 435,
+      "sha256": "e85eb708c31498d09c190f9e3c3c81225ef33b3067fd3d743f230daeafdf0449",
+      "functions": [
+        {
+          "name": "render_3d_model",
+          "line": 50,
+          "end": 107
+        },
+        {
+          "name": "render_score_gauge",
+          "line": 110,
+          "end": 151
+        },
+        {
+          "name": "render_radar_chart",
+          "line": 154,
+          "end": 192
+        },
+        {
+          "name": "main",
+          "line": 195,
+          "end": 431
+        }
+      ]
+    }
+  ],
+  "v21zip": [
+    {
+      "path": "cura_check.py",
+      "lines": 518,
+      "sha256": "12dda137f7c9530e3b6ea45b2c24adfb008fe1a797b3cf63b964021ed9442498",
+      "functions": [
+        {
+          "name": "export",
+          "line": 53,
+          "end": 126
+        },
+        {
+          "name": "analyze",
+          "line": 129,
+          "end": 354
+        },
+        {
+          "name": "pick_files",
+          "line": 357,
+          "end": 374
+        },
+        {
+          "name": "write_sample_stls",
+          "line": 377,
+          "end": 387
+        },
+        {
+          "name": "open_folder",
+          "line": 390,
+          "end": 399
+        },
+        {
+          "name": "explain",
+          "line": 402,
+          "end": 441
+        },
+        {
+          "name": "main",
+          "line": 444,
+          "end": 514
+        },
+        {
+          "name": "corr",
+          "line": 206,
+          "end": 211
+        },
+        {
+          "name": "fit",
+          "line": 257,
+          "end": 264
+        },
+        {
+          "name": "grp",
+          "line": 310,
+          "end": 312
+        }
+      ]
+    },
+    {
+      "path": "mutation_test.py",
+      "lines": 227,
+      "sha256": "dee46a222ee74909daf4fd9910dc997a8df3056af179d079bb98bae1b1223a7e",
+      "functions": [
+        {
+          "name": "run_verify",
+          "line": 134,
+          "end": 142
+        },
+        {
+          "name": "failed_names",
+          "line": 145,
+          "end": 147
+        },
+        {
+          "name": "main",
+          "line": 150,
+          "end": 223
+        }
+      ]
+    },
+    {
+      "path": "run_app.py",
+      "lines": 13,
+      "sha256": "829083007f8919e003bf1e99c0f17846ddc4984cad596e602592ed7039991878",
+      "functions": []
+    },
+    {
+      "path": "src/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/core/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/core/geometry_analyzer.py",
+      "lines": 935,
+      "sha256": "cad49e5dcfc80b2f28c9e206e60e5f3b01900fadace945b024d281120dbb15fe",
+      "functions": [
+        {
+          "name": "unit",
+          "line": 30,
+          "end": 35
+        },
+        {
+          "name": "to_build_frame",
+          "line": 38,
+          "end": 52
+        },
+        {
+          "name": "compute_overhang",
+          "line": 58,
+          "end": 136
+        },
+        {
+          "name": "compute_support_volume",
+          "line": 142,
+          "end": 199
+        },
+        {
+          "name": "adaptive_samples",
+          "line": 205,
+          "end": 217
+        },
+        {
+          "name": "compute_wall_thickness",
+          "line": 220,
+          "end": 310
+        },
+        {
+          "name": "compute_aspect_ratio",
+          "line": 316,
+          "end": 330
+        },
+        {
+          "name": "compute_build_volume_fit",
+          "line": 333,
+          "end": 355
+        },
+        {
+          "name": "compute_min_feature_size",
+          "line": 361,
+          "end": 408
+        },
+        {
+          "name": "compute_hole_analysis",
+          "line": 411,
+          "end": 421
+        },
+        {
+          "name": "run_full_analysis",
+          "line": 427,
+          "end": 446
+        },
+        {
+          "name": "support_regions",
+          "line": 449,
+          "end": 519
+        },
+        {
+          "name": "support_terms",
+          "line": 522,
+          "end": 549
+        },
+        {
+          "name": "compute_trapped_volume",
+          "line": 555,
+          "end": 606
+        },
+        {
+          "name": "compute_staircase",
+          "line": 612,
+          "end": 661
+        },
+        {
+          "name": "compute_feature_gap",
+          "line": 667,
+          "end": 728
+        },
+        {
+          "name": "_region_span",
+          "line": 734,
+          "end": 751
+        },
+        {
+          "name": "_is_bridgeable",
+          "line": 754,
+          "end": 802
+        },
+        {
+          "name": "compute_thickness_gradient",
+          "line": 808,
+          "end": 935
+        }
+      ]
+    },
+    {
+      "path": "src/core/model_loader.py",
+      "lines": 146,
+      "sha256": "f86f4b31c558b470588cceeb8be7705aaafd7e2d678e42c658421f51ae14c6e0",
+      "functions": [
+        {
+          "name": "load_model",
+          "line": 25,
+          "end": 39
+        },
+        {
+          "name": "extract_metadata",
+          "line": 42,
+          "end": 55
+        },
+        {
+          "name": "diagnose",
+          "line": 58,
+          "end": 73
+        },
+        {
+          "name": "_union",
+          "line": 76,
+          "end": 87
+        },
+        {
+          "name": "generate_sample_models",
+          "line": 90,
+          "end": 127
+        },
+        {
+          "name": "save_sample_stl",
+          "line": 130,
+          "end": 137
+        }
+      ]
+    },
+    {
+      "path": "src/core/scoring.py",
+      "lines": 169,
+      "sha256": "ee6f7122156c71d6618f56080ccf23275e214d0a321306d83622972391f35b4d",
+      "functions": [
+        {
+          "name": "evaluate_orientations",
+          "line": 31,
+          "end": 40
+        },
+        {
+          "name": "pick_best",
+          "line": 43,
+          "end": 52
+        },
+        {
+          "name": "find_optimal_orientation",
+          "line": 55,
+          "end": 61
+        },
+        {
+          "name": "results_to_rows",
+          "line": 64,
+          "end": 86
+        },
+        {
+          "name": "sensitivity_analysis",
+          "line": 89,
+          "end": 131
+        },
+        {
+          "name": "pareto_front",
+          "line": 134,
+          "end": 169
+        },
+        {
+          "name": "dominates",
+          "line": 152,
+          "end": 153
+        }
+      ]
+    },
+    {
+      "path": "src/core/weights.py",
+      "lines": 217,
+      "sha256": "539d84d3cb75f5f0f9622f4c55dd633fea13cc4f2269ecf24d08a1c7ce1eb93b",
+      "functions": [
+        {
+          "name": "build_matrix",
+          "line": 42,
+          "end": 59
+        },
+        {
+          "name": "ahp",
+          "line": 62,
+          "end": 100
+        },
+        {
+          "name": "pair_list",
+          "line": 103,
+          "end": 107
+        },
+        {
+          "name": "aggregate_experts",
+          "line": 110,
+          "end": 124
+        },
+        {
+          "name": "regress_weights",
+          "line": 127,
+          "end": 200
+        },
+        {
+          "name": "compare_weight_sets",
+          "line": 203,
+          "end": 217
+        }
+      ]
+    },
+    {
+      "path": "src/processes/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/processes/additive.py",
+      "lines": 818,
+      "sha256": "03e791f37a96367e9e405322058b27b85cfd4e9b5ce211aca3fbf5c868d0c619",
+      "functions": [
+        {
+          "name": "ProcessType",
+          "line": 52,
+          "end": 56
+        },
+        {
+          "name": "process_label",
+          "line": 75,
+          "end": 82
+        },
+        {
+          "name": "provenance_report",
+          "line": 196,
+          "end": 207
+        },
+        {
+          "name": "score_at_least",
+          "line": 283,
+          "end": 292
+        },
+        {
+          "name": "score_bounded",
+          "line": 295,
+          "end": 309
+        },
+        {
+          "name": "score_at_most",
+          "line": 312,
+          "end": 323
+        },
+        {
+          "name": "GateResult",
+          "line": 330,
+          "end": 334
+        },
+        {
+          "name": "RuleResult",
+          "line": 338,
+          "end": 353
+        },
+        {
+          "name": "EvaluationResult",
+          "line": 357,
+          "end": 367
+        },
+        {
+          "name": "AMRuleEngine",
+          "line": 370,
+          "end": 814
+        },
+        {
+          "name": "evaluate",
+          "line": 373,
+          "end": 447
+        },
+        {
+          "name": "_mesh_gate",
+          "line": 451,
+          "end": 495
+        },
+        {
+          "name": "_bodies_overlap",
+          "line": 498,
+          "end": 527
+        },
+        {
+          "name": "_run_gates",
+          "line": 530,
+          "end": 601
+        },
+        {
+          "name": "_mesh_warnings",
+          "line": 604,
+          "end": 619
+        },
+        {
+          "name": "_run_rules",
+          "line": 622,
+          "end": 781
+        },
+        {
+          "name": "_normalize_weights",
+          "line": 784,
+          "end": 789
+        },
+        {
+          "name": "_grade",
+          "line": 792,
+          "end": 797
+        },
+        {
+          "name": "_suggestions",
+          "line": 800,
+          "end": 814
+        }
+      ]
+    },
+    {
+      "path": "src/ui/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/ui/app.py",
+      "lines": 472,
+      "sha256": "fd8039965f3f2b792601f44c71bfa40e2954611df9ca067c93a7f71cc3186d44",
+      "functions": [
+        {
+          "name": "render_3d",
+          "line": 46,
+          "end": 65
+        },
+        {
+          "name": "render_gauge",
+          "line": 68,
+          "end": 80
+        },
+        {
+          "name": "render_radar",
+          "line": 83,
+          "end": 94
+        },
+        {
+          "name": "render_ahp",
+          "line": 104,
+          "end": 165
+        },
+        {
+          "name": "_key_functions",
+          "line": 171,
+          "end": 184
+        },
+        {
+          "name": "_source_files",
+          "line": 187,
+          "end": 192
+        },
+        {
+          "name": "render_source_viewer",
+          "line": 195,
+          "end": 222
+        },
+        {
+          "name": "main",
+          "line": 226,
+          "end": 468
+        }
+      ]
+    },
+    {
+      "path": "verify.py",
+      "lines": 645,
+      "sha256": "dc7bfef57e2e3406ed8f5d0c7d4a79cb62bd677965a0b38e0d2b15528eac0f65",
+      "functions": [
+        {
+          "name": "check",
+          "line": 23,
+          "end": 27
+        },
+        {
+          "name": "rule",
+          "line": 30,
+          "end": 32
+        },
+        {
+          "name": "wedge",
+          "line": 35,
+          "end": 42
+        },
+        {
+          "name": "blocked",
+          "line": 319,
+          "end": 330
+        },
+        {
+          "name": "_bridge_part",
+          "line": 481,
+          "end": 485
+        },
+        {
+          "name": "_step_part",
+          "line": 542,
+          "end": 546
+        }
+      ]
+    }
+  ],
+  "v26": [
+    {
+      "path": "audit_models.py",
+      "lines": 60,
+      "sha256": "81d69620efc38182407d14792d83190332d46356347c0c309bf02b0ea7cd4b1d",
+      "functions": [
+        {
+          "name": "audit",
+          "line": 17,
+          "end": 42
+        },
+        {
+          "name": "main",
+          "line": 45,
+          "end": 56
+        }
+      ]
+    },
+    {
+      "path": "cura_check.py",
+      "lines": 374,
+      "sha256": "38e813780534508bb23ce32de96091bccb40ade901f40dda13a6618d03d3b14c",
+      "functions": [
+        {
+          "name": "export",
+          "line": 65,
+          "end": 179
+        },
+        {
+          "name": "analyze",
+          "line": 182,
+          "end": 188
+        },
+        {
+          "name": "pick_files",
+          "line": 191,
+          "end": 212
+        },
+        {
+          "name": "write_sample_stls",
+          "line": 215,
+          "end": 225
+        },
+        {
+          "name": "open_folder",
+          "line": 228,
+          "end": 238
+        },
+        {
+          "name": "explain",
+          "line": 241,
+          "end": 269
+        },
+        {
+          "name": "main",
+          "line": 272,
+          "end": 366
+        }
+      ]
+    },
+    {
+      "path": "mutation_test.py",
+      "lines": 240,
+      "sha256": "7e4a7cf6bfaeee6922eccaebe7b54e5c8b11785e01c3d94b8b5aaf0ac67dd770",
+      "functions": [
+        {
+          "name": "run_verify",
+          "line": 134,
+          "end": 146
+        },
+        {
+          "name": "failed_names",
+          "line": 149,
+          "end": 151
+        },
+        {
+          "name": "main",
+          "line": 154,
+          "end": 236
+        }
+      ]
+    },
+    {
+      "path": "run_app.py",
+      "lines": 13,
+      "sha256": "829083007f8919e003bf1e99c0f17846ddc4984cad596e602592ed7039991878",
+      "functions": []
+    },
+    {
+      "path": "src/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/core/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/core/cura_records.py",
+      "lines": 278,
+      "sha256": "9a07abd3a7ec42cad0655bca5a0fe73f7096ce84342efe1cf18bf33f0d77b2ac",
+      "functions": [
+        {
+          "name": "_reject_json_constant",
+          "line": 16,
+          "end": 17
+        },
+        {
+          "name": "_number",
+          "line": 20,
+          "end": 31
+        },
+        {
+          "name": "_profile",
+          "line": 34,
+          "end": 47
+        },
+        {
+          "name": "_local_stl",
+          "line": 50,
+          "end": 59
+        },
+        {
+          "name": "read_records",
+          "line": 62,
+          "end": 185
+        },
+        {
+          "name": "analyze_records",
+          "line": 188,
+          "end": 216
+        },
+        {
+          "name": "print_analysis",
+          "line": 219,
+          "end": 278
+        },
+        {
+          "name": "number",
+          "line": 220,
+          "end": 221
+        }
+      ]
+    },
+    {
+      "path": "src/core/geometry_analyzer.py",
+      "lines": 1050,
+      "sha256": "f8ef08187670174376f123855129f05920ae349e4a6cf4de5ed8ba6451f98d3c",
+      "functions": [
+        {
+          "name": "unit",
+          "line": 30,
+          "end": 37
+        },
+        {
+          "name": "to_build_frame",
+          "line": 40,
+          "end": 54
+        },
+        {
+          "name": "compute_overhang",
+          "line": 60,
+          "end": 140
+        },
+        {
+          "name": "compute_support_volume",
+          "line": 146,
+          "end": 208
+        },
+        {
+          "name": "adaptive_samples",
+          "line": 214,
+          "end": 226
+        },
+        {
+          "name": "compute_wall_thickness",
+          "line": 229,
+          "end": 341
+        },
+        {
+          "name": "verify_thin_regions",
+          "line": 344,
+          "end": 391
+        },
+        {
+          "name": "wall_evidence",
+          "line": 394,
+          "end": 417
+        },
+        {
+          "name": "compute_aspect_ratio",
+          "line": 423,
+          "end": 437
+        },
+        {
+          "name": "compute_build_volume_fit",
+          "line": 440,
+          "end": 460
+        },
+        {
+          "name": "compute_min_feature_size",
+          "line": 466,
+          "end": 513
+        },
+        {
+          "name": "compute_hole_analysis",
+          "line": 516,
+          "end": 526
+        },
+        {
+          "name": "run_full_analysis",
+          "line": 532,
+          "end": 551
+        },
+        {
+          "name": "support_regions",
+          "line": 554,
+          "end": 624
+        },
+        {
+          "name": "support_terms",
+          "line": 627,
+          "end": 655
+        },
+        {
+          "name": "compute_trapped_volume",
+          "line": 661,
+          "end": 712
+        },
+        {
+          "name": "compute_staircase",
+          "line": 718,
+          "end": 767
+        },
+        {
+          "name": "compute_feature_gap",
+          "line": 773,
+          "end": 834
+        },
+        {
+          "name": "_region_span",
+          "line": 840,
+          "end": 857
+        },
+        {
+          "name": "_is_bridgeable",
+          "line": 860,
+          "end": 917
+        },
+        {
+          "name": "compute_thickness_gradient",
+          "line": 923,
+          "end": 1050
+        },
+        {
+          "name": "area_quantile",
+          "line": 312,
+          "end": 318
+        }
+      ]
+    },
+    {
+      "path": "src/core/layer_regions.py",
+      "lines": 103,
+      "sha256": "45d2c37f46a0f1007d6690bfd710f260bb221d1be6b0e75774c8670af6a3975b",
+      "functions": [
+        {
+          "name": "meaningful_regions",
+          "line": 4,
+          "end": 8
+        },
+        {
+          "name": "classify_regions",
+          "line": 11,
+          "end": 57
+        },
+        {
+          "name": "classify_thin_regions",
+          "line": 60,
+          "end": 65
+        },
+        {
+          "name": "classify_difference_regions",
+          "line": 68,
+          "end": 82
+        },
+        {
+          "name": "comparison_scope",
+          "line": 85,
+          "end": 103
+        }
+      ]
+    },
+    {
+      "path": "src/core/layer_review.py",
+      "lines": 192,
+      "sha256": "c0a5a9539c7433022730edcada62b00d589d223c032d7bfe65002bc96cf9def4",
+      "functions": [
+        {
+          "name": "inspect_layers",
+          "line": 13,
+          "end": 192
+        },
+        {
+          "name": "check",
+          "line": 156,
+          "end": 171
+        }
+      ]
+    },
+    {
+      "path": "src/core/mesh_diagnostics.py",
+      "lines": 116,
+      "sha256": "33fe8c8537560c3171a990724d7a31a8edfca2f7bda73f8bfbb10bb49763d15a",
+      "functions": [
+        {
+          "name": "mesh_digest",
+          "line": 11,
+          "end": 17
+        },
+        {
+          "name": "inspect_mesh",
+          "line": 20,
+          "end": 76
+        },
+        {
+          "name": "cleanup_preview",
+          "line": 79,
+          "end": 116
+        }
+      ]
+    },
+    {
+      "path": "src/core/model_loader.py",
+      "lines": 150,
+      "sha256": "4b5729367e180ba8b0fea18a777ed67c698e8bbc5cbf2d3e1a40f5510ba2ea6a",
+      "functions": [
+        {
+          "name": "load_model",
+          "line": 26,
+          "end": 46
+        },
+        {
+          "name": "extract_metadata",
+          "line": 49,
+          "end": 62
+        },
+        {
+          "name": "diagnose",
+          "line": 65,
+          "end": 77
+        },
+        {
+          "name": "_union",
+          "line": 80,
+          "end": 91
+        },
+        {
+          "name": "generate_sample_models",
+          "line": 94,
+          "end": 131
+        },
+        {
+          "name": "save_sample_stl",
+          "line": 134,
+          "end": 141
+        }
+      ]
+    },
+    {
+      "path": "src/core/reproducibility.py",
+      "lines": 73,
+      "sha256": "f324eefa6d89e3838fe0d558cca27a59654e55bf6f888b65f64e89072ccd6e2a",
+      "functions": [
+        {
+          "name": "file_sha256",
+          "line": 17,
+          "end": 22
+        },
+        {
+          "name": "runtime_record",
+          "line": 25,
+          "end": 40
+        },
+        {
+          "name": "json_ready",
+          "line": 43,
+          "end": 59
+        },
+        {
+          "name": "json_text",
+          "line": 62,
+          "end": 63
+        },
+        {
+          "name": "save_new_json",
+          "line": 66,
+          "end": 73
+        }
+      ]
+    },
+    {
+      "path": "src/core/scoring.py",
+      "lines": 199,
+      "sha256": "4fb1897de761c10675e8b58e84703df4f7bfb7f60aa03564625ccc15bed22ed1",
+      "functions": [
+        {
+          "name": "evaluate_orientations",
+          "line": 31,
+          "end": 43
+        },
+        {
+          "name": "pick_best",
+          "line": 46,
+          "end": 69
+        },
+        {
+          "name": "find_optimal_orientation",
+          "line": 72,
+          "end": 79
+        },
+        {
+          "name": "results_to_rows",
+          "line": 82,
+          "end": 106
+        },
+        {
+          "name": "sensitivity_analysis",
+          "line": 109,
+          "end": 158
+        },
+        {
+          "name": "pareto_front",
+          "line": 161,
+          "end": 199
+        },
+        {
+          "name": "dominates",
+          "line": 182,
+          "end": 183
+        }
+      ]
+    },
+    {
+      "path": "src/core/section_components.py",
+      "lines": 99,
+      "sha256": "63fede150f61ed47d3e66c31df30f6327715d80cfb64ea9897873d6d1ac7969c",
+      "functions": [
+        {
+          "name": "graph_data",
+          "line": 5,
+          "end": 15
+        },
+        {
+          "name": "simple_ring",
+          "line": 18,
+          "end": 32
+        },
+        {
+          "name": "component_rings",
+          "line": 35,
+          "end": 48
+        },
+        {
+          "name": "fast_linework",
+          "line": 51,
+          "end": 64
+        },
+        {
+          "name": "isolated_material",
+          "line": 67,
+          "end": 99
+        }
+      ]
+    },
+    {
+      "path": "src/core/section_index.py",
+      "lines": 70,
+      "sha256": "4a818a47cdca83db55754adc1399b2992eaec95cb5895f8b0e4d40c55ab8dbf7",
+      "functions": [
+        {
+          "name": "WindingLimit",
+          "line": 5,
+          "end": 6
+        },
+        {
+          "name": "WindingIndex",
+          "line": 9,
+          "end": 39
+        },
+        {
+          "name": "FaceZIndex",
+          "line": 42,
+          "end": 70
+        },
+        {
+          "name": "__init__",
+          "line": 16,
+          "end": 22
+        },
+        {
+          "name": "values",
+          "line": 24,
+          "end": 39
+        },
+        {
+          "name": "__init__",
+          "line": 44,
+          "end": 52
+        },
+        {
+          "name": "query",
+          "line": 54,
+          "end": 61
+        },
+        {
+          "name": "sweep",
+          "line": 63,
+          "end": 70
+        }
+      ]
+    },
+    {
+      "path": "src/core/sections.py",
+      "lines": 236,
+      "sha256": "127722271c308979cfa20734779941882749a58f7b0355a481c0df403bb96fc9",
+      "functions": [
+        {
+          "name": "Section",
+          "line": 16,
+          "end": 21
+        },
+        {
+          "name": "plane_axes",
+          "line": 24,
+          "end": 29
+        },
+        {
+          "name": "intersect_triangles",
+          "line": 32,
+          "end": 62
+        },
+        {
+          "name": "winding_at",
+          "line": 65,
+          "end": 73
+        },
+        {
+          "name": "section_mesh",
+          "line": 76,
+          "end": 225
+        },
+        {
+          "name": "opening_residual",
+          "line": 228,
+          "end": 236
+        }
+      ]
+    },
+    {
+      "path": "src/core/validation_metrics.py",
+      "lines": 132,
+      "sha256": "7c829c266d1161312998563f1c9febcedb70a26164972d7eeadfb5374be1458f",
+      "functions": [
+        {
+          "name": "metrics",
+          "line": 11,
+          "end": 30
+        },
+        {
+          "name": "prediction_summary",
+          "line": 33,
+          "end": 63
+        },
+        {
+          "name": "fit_model",
+          "line": 66,
+          "end": 76
+        },
+        {
+          "name": "cross_validate",
+          "line": 79,
+          "end": 112
+        },
+        {
+          "name": "model_comparison",
+          "line": 115,
+          "end": 132
+        },
+        {
+          "name": "row_cohort",
+          "line": 44,
+          "end": 45
+        },
+        {
+          "name": "run",
+          "line": 84,
+          "end": 103
+        }
+      ]
+    },
+    {
+      "path": "src/core/weights.py",
+      "lines": 231,
+      "sha256": "c021dc02ede648150f49cb16799565cc37ac26b91a7eb9807b9c641d39ea29f3",
+      "functions": [
+        {
+          "name": "build_matrix",
+          "line": 42,
+          "end": 65
+        },
+        {
+          "name": "ahp",
+          "line": 68,
+          "end": 106
+        },
+        {
+          "name": "pair_list",
+          "line": 109,
+          "end": 113
+        },
+        {
+          "name": "aggregate_experts",
+          "line": 116,
+          "end": 130
+        },
+        {
+          "name": "regress_weights",
+          "line": 133,
+          "end": 214
+        },
+        {
+          "name": "compare_weight_sets",
+          "line": 217,
+          "end": 231
+        }
+      ]
+    },
+    {
+      "path": "src/processes/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/processes/additive.py",
+      "lines": 929,
+      "sha256": "73eb56016bcbe135c6867e4bb4000e418dd66d855c3a3642d3cf6bf1bbde6f60",
+      "functions": [
+        {
+          "name": "ProcessType",
+          "line": 52,
+          "end": 56
+        },
+        {
+          "name": "process_label",
+          "line": 75,
+          "end": 82
+        },
+        {
+          "name": "provenance_report",
+          "line": 206,
+          "end": 220
+        },
+        {
+          "name": "score_at_least",
+          "line": 296,
+          "end": 305
+        },
+        {
+          "name": "score_at_most",
+          "line": 308,
+          "end": 319
+        },
+        {
+          "name": "GateResult",
+          "line": 326,
+          "end": 335
+        },
+        {
+          "name": "RuleResult",
+          "line": 339,
+          "end": 354
+        },
+        {
+          "name": "EvaluationResult",
+          "line": 358,
+          "end": 379
+        },
+        {
+          "name": "AMRuleEngine",
+          "line": 382,
+          "end": 925
+        },
+        {
+          "name": "__post_init__",
+          "line": 333,
+          "end": 335
+        },
+        {
+          "name": "evaluate",
+          "line": 385,
+          "end": 417
+        },
+        {
+          "name": "_evaluate_geometry",
+          "line": 419,
+          "end": 554
+        },
+        {
+          "name": "_mesh_gate",
+          "line": 558,
+          "end": 590
+        },
+        {
+          "name": "_bodies_overlap",
+          "line": 593,
+          "end": 633
+        },
+        {
+          "name": "_run_gates",
+          "line": 636,
+          "end": 713
+        },
+        {
+          "name": "_mesh_warnings",
+          "line": 716,
+          "end": 731
+        },
+        {
+          "name": "_run_rules",
+          "line": 734,
+          "end": 892
+        },
+        {
+          "name": "_normalize_weights",
+          "line": 895,
+          "end": 900
+        },
+        {
+          "name": "_grade",
+          "line": 903,
+          "end": 908
+        },
+        {
+          "name": "_suggestions",
+          "line": 911,
+          "end": 925
+        }
+      ]
+    },
+    {
+      "path": "src/ui/__init__.py",
+      "lines": 1,
+      "sha256": "527c668d5ae4f9e34e46c8ad88ce3c5b4a41eb27ec684ace6a4f11621fc42edf",
+      "functions": []
+    },
+    {
+      "path": "src/ui/app.py",
+      "lines": 782,
+      "sha256": "0da4c6e31751bd6ff54e6b99308f4c23b82fe4391ac480e9a70d2f1acd3a417e",
+      "functions": [
+        {
+          "name": "render_3d",
+          "line": 42,
+          "end": 65
+        },
+        {
+          "name": "render_mesh_diagnostics",
+          "line": 68,
+          "end": 81
+        },
+        {
+          "name": "layer_preview_frame",
+          "line": 85,
+          "end": 89
+        },
+        {
+          "name": "layer_preview_section",
+          "line": 93,
+          "end": 98
+        },
+        {
+          "name": "render_layer_review",
+          "line": 101,
+          "end": 222
+        },
+        {
+          "name": "render_gauge",
+          "line": 225,
+          "end": 237
+        },
+        {
+          "name": "render_radar",
+          "line": 240,
+          "end": 251
+        },
+        {
+          "name": "render_ahp",
+          "line": 261,
+          "end": 323
+        },
+        {
+          "name": "_key_functions",
+          "line": 329,
+          "end": 344
+        },
+        {
+          "name": "_source_files",
+          "line": 347,
+          "end": 355
+        },
+        {
+          "name": "render_source_viewer",
+          "line": 358,
+          "end": 385
+        },
+        {
+          "name": "main",
+          "line": 389,
+          "end": 778
+        },
+        {
+          "name": "preview",
+          "line": 162,
+          "end": 163
+        },
+        {
+          "name": "known",
+          "line": 164,
+          "end": 165
+        },
+        {
+          "name": "draw",
+          "line": 170,
+          "end": 177
+        }
+      ]
+    },
+    {
+      "path": "tests/test_cura_records.py",
+      "lines": 271,
+      "sha256": "2a20f7aa2595b65c393ae2cbf58c4bfe1c4ce29e444cedcca37aca1bf502970a",
+      "functions": [
+        {
+          "name": "synthetic_rows",
+          "line": 26,
+          "end": 35
+        },
+        {
+          "name": "write_csv",
+          "line": 38,
+          "end": 44
+        },
+        {
+          "name": "CuraRecordsRegression",
+          "line": 47,
+          "end": 202
+        },
+        {
+          "name": "CuraExportRegression",
+          "line": 205,
+          "end": 267
+        },
+        {
+          "name": "analyze_rows",
+          "line": 48,
+          "end": 51
+        },
+        {
+          "name": "test_original_measurements_reproduce_r2_without_current_geometry",
+          "line": 53,
+          "end": 65
+        },
+        {
+          "name": "test_old_csv_retains_nist_measurements_and_recovers_directions",
+          "line": 67,
+          "end": 73
+        },
+        {
+          "name": "test_missing_prediction_does_not_drop_valid_measurement_from_fit",
+          "line": 75,
+          "end": 83
+        },
+        {
+          "name": "test_part_cross_validation_holds_out_all_six_directions",
+          "line": 85,
+          "end": 91
+        },
+        {
+          "name": "test_rank_deficient_training_fold_does_not_publish_full_q2",
+          "line": 93,
+          "end": 99
+        },
+        {
+          "name": "test_all_zero_target_has_no_r2_and_serializes_as_null",
+          "line": 101,
+          "end": 109
+        },
+        {
+          "name": "test_invalid_numeric_measurements_are_not_silently_ignored",
+          "line": 111,
+          "end": 115
+        },
+        {
+          "name": "test_off_greater_than_on_is_rejected",
+          "line": 117,
+          "end": 120
+        },
+        {
+          "name": "test_unfinished_rows_are_counted",
+          "line": 122,
+          "end": 127
+        },
+        {
+          "name": "test_duplicate_measurement_is_rejected",
+          "line": 129,
+          "end": 132
+        },
+        {
+          "name": "test_filename_and_orientation_conflict_is_rejected",
+          "line": 134,
+          "end": 137
+        },
+        {
+          "name": "test_parent_or_absolute_stl_paths_are_rejected",
+          "line": 139,
+          "end": 143
+        },
+        {
+          "name": "test_invalid_and_partial_terms_are_rejected",
+          "line": 145,
+          "end": 149
+        },
+        {
+          "name": "test_recorded_diameter_conflict_is_rejected",
+          "line": 151,
+          "end": 154
+        },
+        {
+          "name": "test_mixed_cura_conditions_are_fitted_separately",
+          "line": 156,
+          "end": 165
+        },
+        {
+          "name": "test_profile_term_prediction_mismatch_is_rejected",
+          "line": 167,
+          "end": 172
+        },
+        {
+          "name": "test_changed_stl_hash_is_detected_before_using_stored_numbers",
+          "line": 174,
+          "end": 180
+        },
+        {
+          "name": "test_explicit_recompute_does_not_stop_after_one_missing_stl",
+          "line": 182,
+          "end": 194
+        },
+        {
+          "name": "test_analysis_output_cannot_overwrite_measurements",
+          "line": 196,
+          "end": 202
+        },
+        {
+          "name": "export",
+          "line": 206,
+          "end": 208
+        },
+        {
+          "name": "test_export_never_overwrites_completed_measurements",
+          "line": 210,
+          "end": 216
+        },
+        {
+          "name": "test_saved_terms_and_prediction_match_reloaded_stl_and_hash",
+          "line": 218,
+          "end": 235
+        },
+        {
+          "name": "test_failed_export_does_not_publish_partial_experiment",
+          "line": 237,
+          "end": 245
+        },
+        {
+          "name": "test_same_basename_files_are_not_overwritten",
+          "line": 247,
+          "end": 257
+        },
+        {
+          "name": "test_centimeter_input_is_exported_in_mm",
+          "line": 259,
+          "end": 267
+        }
+      ]
+    },
+    {
+      "path": "tests/test_evaluation_22.py",
+      "lines": 61,
+      "sha256": "f1898cae3a30d4339f626cef12b2bdabf85c5fc96d1085d1a0792a8398c7c39b",
+      "functions": [
+        {
+          "name": "Evaluation22Regression",
+          "line": 16,
+          "end": 57
+        },
+        {
+          "name": "test_failed_region_partition_does_not_merge_all_overhangs",
+          "line": 17,
+          "end": 22
+        },
+        {
+          "name": "test_failed_boolean_generation_cannot_return_overlapping_samples",
+          "line": 24,
+          "end": 27
+        },
+        {
+          "name": "test_unknown_directions_are_not_reported_as_all_blocked",
+          "line": 29,
+          "end": 35
+        },
+        {
+          "name": "test_na_scope_difference_prevents_total_score_winner",
+          "line": 37,
+          "end": 45
+        },
+        {
+          "name": "test_find_optimal_orientation_propagates_gradient_option",
+          "line": 47,
+          "end": 51
+        },
+        {
+          "name": "test_evaluation_json_is_portable_when_gap_is_infinite",
+          "line": 53,
+          "end": 57
+        }
+      ]
+    },
+    {
+      "path": "tests/test_layers_24.py",
+      "lines": 237,
+      "sha256": "5fdf7d7e9866661a9b8c246b956a20b1107657bfd97f6d2c493d1c52de78b36e",
+      "functions": [
+        {
+          "name": "box",
+          "line": 16,
+          "end": 17
+        },
+        {
+          "name": "LayerReview24",
+          "line": 20,
+          "end": 234
+        },
+        {
+          "name": "test_box_area_volume_and_no_false_risk",
+          "line": 21,
+          "end": 27
+        },
+        {
+          "name": "test_last_partial_layer_has_correct_volume",
+          "line": 29,
+          "end": 33
+        },
+        {
+          "name": "test_cavity_is_not_filled",
+          "line": 35,
+          "end": 42
+        },
+        {
+          "name": "test_overlapping_material_is_counted_once",
+          "line": 44,
+          "end": 49
+        },
+        {
+          "name": "test_global_winding_reversal_preserves_material",
+          "line": 51,
+          "end": 54
+        },
+        {
+          "name": "test_missing_vertical_wall_stays_unresolved",
+          "line": 56,
+          "end": 61
+        },
+        {
+          "name": "test_open_cavity_wall_is_not_discarded_as_internal_seam",
+          "line": 63,
+          "end": 68
+        },
+        {
+          "name": "test_open_top_allows_sections_but_never_unblocks_solid_grade",
+          "line": 70,
+          "end": 76
+        },
+        {
+          "name": "test_vertical_thin_wall_is_detected",
+          "line": 78,
+          "end": 82
+        },
+        {
+          "name": "test_small_cylindrical_pin_is_not_removed_by_area_fraction",
+          "line": 84,
+          "end": 90
+        },
+        {
+          "name": "test_triangular_pin_is_detected_even_if_its_faces_are_adjacent",
+          "line": 92,
+          "end": 96
+        },
+        {
+          "name": "test_single_thin_horizontal_layer_is_not_called_thick",
+          "line": 98,
+          "end": 102
+        },
+        {
+          "name": "test_floating_platform_has_unsupported_regions",
+          "line": 104,
+          "end": 108
+        },
+        {
+          "name": "test_input_is_unchanged",
+          "line": 110,
+          "end": 113
+        },
+        {
+          "name": "test_isolated_contour_below_precision_is_never_silently_lost",
+          "line": 115,
+          "end": 120
+        },
+        {
+          "name": "test_one_reversed_wall_face_is_unresolved",
+          "line": 122,
+          "end": 126
+        },
+        {
+          "name": "test_curved_thin_and_thick_walls_at_two_tessellations",
+          "line": 128,
+          "end": 136
+        },
+        {
+          "name": "test_small_detached_feature_and_real_gap_are_preserved",
+          "line": 138,
+          "end": 145
+        },
+        {
+          "name": "test_rotation_and_translation_keep_section_volume",
+          "line": 147,
+          "end": 151
+        },
+        {
+          "name": "test_subdivision_does_not_change_a_box_review",
+          "line": 153,
+          "end": 158
+        },
+        {
+          "name": "test_layer_budget_does_not_silently_coarsen",
+          "line": 160,
+          "end": 164
+        },
+        {
+          "name": "test_segment_budget_does_not_report_complete_review",
+          "line": 166,
+          "end": 169
+        },
+        {
+          "name": "test_internal_seam_winding_budget_is_cumulative",
+          "line": 171,
+          "end": 187
+        },
+        {
+          "name": "test_failure_of_offsets_is_not_reported_as_clear",
+          "line": 189,
+          "end": 193
+        },
+        {
+          "name": "test_invalid_settings_are_rejected",
+          "line": 195,
+          "end": 197
+        },
+        {
+          "name": "test_non_fdm_does_not_claim_fdm_layer_review",
+          "line": 199,
+          "end": 201
+        },
+        {
+          "name": "test_legacy_score_is_unchanged_by_layer_review",
+          "line": 203,
+          "end": 207
+        },
+        {
+          "name": "test_layer_settings_change_inspection_without_changing_legacy_profile",
+          "line": 209,
+          "end": 217
+        },
+        {
+          "name": "test_invalid_layer_override_is_visible_without_destroying_legacy_score",
+          "line": 219,
+          "end": 222
+        },
+        {
+          "name": "test_layer_failure_does_not_destroy_legacy_result",
+          "line": 224,
+          "end": 228
+        },
+        {
+          "name": "test_json_contains_finite_traceable_results",
+          "line": 230,
+          "end": 234
+        }
+      ]
+    },
+    {
+      "path": "tests/test_layers_25.py",
+      "lines": 201,
+      "sha256": "b63e7d3174280e5f57fd000171ca14b44736c0ba64ccaca6ea0ea0e2180675fd",
+      "functions": [
+        {
+          "name": "box",
+          "line": 14,
+          "end": 15
+        },
+        {
+          "name": "sliced",
+          "line": 18,
+          "end": 19
+        },
+        {
+          "name": "Review25",
+          "line": 22,
+          "end": 198
+        },
+        {
+          "name": "test_index_matches_exhaustive_crossings_including_vertices",
+          "line": 23,
+          "end": 27
+        },
+        {
+          "name": "test_index_budget_is_cumulative_across_calls",
+          "line": 29,
+          "end": 34
+        },
+        {
+          "name": "test_900_pins_preserve_analytic_area_with_index",
+          "line": 36,
+          "end": 46
+        },
+        {
+          "name": "test_fast_and_noded_paths_preserve_nested_cavity",
+          "line": 48,
+          "end": 55
+        },
+        {
+          "name": "test_crossing_rings_fall_back_without_double_counting",
+          "line": 57,
+          "end": 62
+        },
+        {
+          "name": "test_touching_boxes_fall_back_and_keep_internal_seam_behavior",
+          "line": 64,
+          "end": 70
+        },
+        {
+          "name": "test_self_crossing_loop_is_not_trusted_as_simple_ring",
+          "line": 72,
+          "end": 77
+        },
+        {
+          "name": "test_z_index_matches_brute_force_at_events",
+          "line": 79,
+          "end": 86
+        },
+        {
+          "name": "test_projection_reuse_matches_general_planes_without_mutating_inputs",
+          "line": 88,
+          "end": 93
+        },
+        {
+          "name": "test_sphere_small_residuals_remain_details_not_prominent_risk",
+          "line": 95,
+          "end": 101
+        },
+        {
+          "name": "test_entire_tiny_pin_is_never_erased_by_display_cutoff",
+          "line": 103,
+          "end": 107
+        },
+        {
+          "name": "test_real_wall_survives_priority_classification",
+          "line": 109,
+          "end": 112
+        },
+        {
+          "name": "test_small_connected_tip_remains_visible_in_details",
+          "line": 114,
+          "end": 119
+        },
+        {
+          "name": "test_area_perimeter_scale_is_not_circle_diameter",
+          "line": 121,
+          "end": 124
+        },
+        {
+          "name": "test_detail_table_cap_does_not_truncate_aggregates",
+          "line": 126,
+          "end": 133
+        },
+        {
+          "name": "test_far_closed_body_is_measured_without_inventing_total_area",
+          "line": 135,
+          "end": 147
+        },
+        {
+          "name": "test_open_cavity_excludes_enclosing_ring_from_known_material",
+          "line": 149,
+          "end": 153
+        },
+        {
+          "name": "test_unknown_neighbor_cannot_create_false_support_or_one_layer_findings",
+          "line": 155,
+          "end": 164
+        },
+        {
+          "name": "test_empty_air_layers_remain_valid_and_floating_body_is_found",
+          "line": 166,
+          "end": 172
+        },
+        {
+          "name": "test_cancelled_shells_do_not_report_clear_metrics",
+          "line": 174,
+          "end": 178
+        },
+        {
+          "name": "test_direct_mixed_winding_input_is_warned_without_repair",
+          "line": 180,
+          "end": 183
+        },
+        {
+          "name": "test_preview_cache_invalidates_geometry_direction_height_and_version",
+          "line": 185,
+          "end": 198
+        }
+      ]
+    },
+    {
+      "path": "tests/test_layers_26.py",
+      "lines": 154,
+      "sha256": "ce8571d0fa9707e01e0a2bee4f8333912eb4bf52a628255502b3a8e135e87f3a",
+      "functions": [
+        {
+          "name": "box",
+          "line": 16,
+          "end": 17
+        },
+        {
+          "name": "difference",
+          "line": 20,
+          "end": 21
+        },
+        {
+          "name": "LayerReview26",
+          "line": 24,
+          "end": 151
+        },
+        {
+          "name": "test_small_partial_residuals_stay_recorded_for_both_checks",
+          "line": 25,
+          "end": 32
+        },
+        {
+          "name": "test_whole_small_component_is_prominent_for_both_checks",
+          "line": 34,
+          "end": 40
+        },
+        {
+          "name": "test_boundary_contact_is_not_positive_area_support",
+          "line": 42,
+          "end": 46
+        },
+        {
+          "name": "test_tiny_positive_contact_does_not_become_wholly_missing",
+          "line": 48,
+          "end": 53
+        },
+        {
+          "name": "test_exact_display_threshold_uses_inclusive_comparison",
+          "line": 55,
+          "end": 60
+        },
+        {
+          "name": "test_details_cap_preserves_support_and_single_layer_totals",
+          "line": 62,
+          "end": 69
+        },
+        {
+          "name": "test_tiny_floating_plate_survives_both_layer_priorities",
+          "line": 71,
+          "end": 79
+        },
+        {
+          "name": "test_unknown_neighbor_stays_unresolved_without_false_whole_promotion",
+          "line": 81,
+          "end": 91
+        },
+        {
+          "name": "test_failed_difference_measurement_is_not_zero_or_details_only",
+          "line": 93,
+          "end": 99
+        },
+        {
+          "name": "test_no_material_has_no_measured_candidate_totals",
+          "line": 101,
+          "end": 105
+        },
+        {
+          "name": "test_cached_scale_preserves_grid_and_section_geometry",
+          "line": 107,
+          "end": 113
+        },
+        {
+          "name": "test_cached_section_does_not_read_extents",
+          "line": 115,
+          "end": 119
+        },
+        {
+          "name": "test_every_layer_and_retry_receives_its_current_mesh_scale",
+          "line": 121,
+          "end": 126
+        },
+        {
+          "name": "test_invalid_cached_scale_is_rejected",
+          "line": 128,
+          "end": 130
+        },
+        {
+          "name": "test_limit_before_winding_index_has_a_safe_diagnostic",
+          "line": 132,
+          "end": 137
+        },
+        {
+          "name": "test_nist_single_layer_candidates_are_retained_as_details",
+          "line": 139,
+          "end": 151
+        }
+      ]
+    },
+    {
+      "path": "tests/test_mesh_review_23.py",
+      "lines": 216,
+      "sha256": "fa88d683daaadf3cfba4c8c1782538b34bc5d9a033ff838aaa0779a435fd907e",
+      "functions": [
+        {
+          "name": "box",
+          "line": 23,
+          "end": 24
+        },
+        {
+          "name": "open_box",
+          "line": 27,
+          "end": 30
+        },
+        {
+          "name": "MeshReview23",
+          "line": 33,
+          "end": 212
+        },
+        {
+          "name": "setUp",
+          "line": 34,
+          "end": 35
+        },
+        {
+          "name": "test_closed_looking_nonmanifold_is_distinct_from_open_boundary",
+          "line": 37,
+          "end": 47
+        },
+        {
+          "name": "test_partial_metrics_do_not_invoke_solid_analysis_or_supply_total",
+          "line": 49,
+          "end": 59
+        },
+        {
+          "name": "test_partial_does_not_mask_actual_size_failure",
+          "line": 61,
+          "end": 64
+        },
+        {
+          "name": "test_nonfinite_and_empty_have_no_partial_geometry",
+          "line": 66,
+          "end": 72
+        },
+        {
+          "name": "test_broken_face_index_is_an_input_error",
+          "line": 74,
+          "end": 79
+        },
+        {
+          "name": "test_overflowing_extents_cannot_produce_partial_measurements",
+          "line": 81,
+          "end": 87
+        },
+        {
+          "name": "test_cleanup_export_after_cm_input_remains_mm_geometry",
+          "line": 89,
+          "end": 96
+        },
+        {
+          "name": "test_cleanup_does_not_change_source_or_fill_holes",
+          "line": 98,
+          "end": 104
+        },
+        {
+          "name": "test_cleanup_of_exact_same_winding_duplicate_preserves_box",
+          "line": 106,
+          "end": 117
+        },
+        {
+          "name": "test_opposite_winding_duplicate_is_retained_for_review",
+          "line": 119,
+          "end": 125
+        },
+        {
+          "name": "test_tiny_positive_faces_are_not_deleted_by_area_threshold",
+          "line": 127,
+          "end": 132
+        },
+        {
+          "name": "test_cleanup_preserves_cavity_and_small_isolated_component",
+          "line": 134,
+          "end": 142
+        },
+        {
+          "name": "test_all_degenerate_cleanup_stays_invalid",
+          "line": 144,
+          "end": 148
+        },
+        {
+          "name": "test_analysis_never_implicitly_repairs_shells",
+          "line": 150,
+          "end": 153
+        },
+        {
+          "name": "test_true_thin_wall_keeps_profile_failure",
+          "line": 155,
+          "end": 160
+        },
+        {
+          "name": "test_small_pin_is_not_ignored_due_to_small_surface_fraction",
+          "line": 162,
+          "end": 168
+        },
+        {
+          "name": "test_duplicate_suspect_measurements_without_confirmation_do_not_prove_failure",
+          "line": 170,
+          "end": 177
+        },
+        {
+          "name": "test_lost_near_surface_hits_do_not_pass_as_thick_material",
+          "line": 179,
+          "end": 184
+        },
+        {
+          "name": "test_refinement_failure_keeps_suspect_state",
+          "line": 186,
+          "end": 191
+        },
+        {
+          "name": "test_partial_json_has_counts_scope_and_no_fake_volume_rule",
+          "line": 193,
+          "end": 198
+        },
+        {
+          "name": "test_cli_why_uses_partial_geometry_and_no_unsafe_thickness",
+          "line": 200,
+          "end": 207
+        },
+        {
+          "name": "test_partial_sensitivity_is_not_manufacturing_impossibility",
+          "line": 209,
+          "end": 212
+        }
+      ]
+    },
+    {
+      "path": "tests/test_review.py",
+      "lines": 237,
+      "sha256": "a7ad9d5e40e582353b071bd4e4cdb21d7a4cd201b13c44b3a45c9ed8e5ca0810",
+      "functions": [
+        {
+          "name": "box",
+          "line": 20,
+          "end": 21
+        },
+        {
+          "name": "sealed",
+          "line": 24,
+          "end": 25
+        },
+        {
+          "name": "ReviewRegression",
+          "line": 28,
+          "end": 234
+        },
+        {
+          "name": "setUp",
+          "line": 29,
+          "end": 30
+        },
+        {
+          "name": "test_stl_roundtrip_preserves_cavity_and_material_volume",
+          "line": 32,
+          "end": 43
+        },
+        {
+          "name": "test_single_inverted_shell_can_be_repaired_on_load",
+          "line": 45,
+          "end": 49
+        },
+        {
+          "name": "test_swapped_xy_uses_same_placement_for_gate_and_score",
+          "line": 51,
+          "end": 55
+        },
+        {
+          "name": "test_wall_distribution_is_area_weighted",
+          "line": 57,
+          "end": 60
+        },
+        {
+          "name": "test_detection_samples_do_not_bias_percentile",
+          "line": 62,
+          "end": 69
+        },
+        {
+          "name": "test_bad_input_is_rejected_before_geometry",
+          "line": 71,
+          "end": 75
+        },
+        {
+          "name": "test_nonfinite_mesh",
+          "line": 77,
+          "end": 79
+        },
+        {
+          "name": "test_invalid_dimensions_and_directions",
+          "line": 81,
+          "end": 87
+        },
+        {
+          "name": "test_invalid_weights",
+          "line": 89,
+          "end": 92
+        },
+        {
+          "name": "test_active_weight_sum_and_coverage",
+          "line": 94,
+          "end": 98
+        },
+        {
+          "name": "test_weights_only_on_unmeasured_rules_give_no_score",
+          "line": 100,
+          "end": 103
+        },
+        {
+          "name": "test_wall_measurement_failure_is_unknown",
+          "line": 105,
+          "end": 108
+        },
+        {
+          "name": "test_one_thin_sample_is_not_automatically_passed",
+          "line": 110,
+          "end": 115
+        },
+        {
+          "name": "test_support_failure_is_not_silently_plate_distance",
+          "line": 117,
+          "end": 120
+        },
+        {
+          "name": "test_aabb_overlap_is_not_solid_overlap",
+          "line": 122,
+          "end": 127
+        },
+        {
+          "name": "test_actual_overlap_is_rejected",
+          "line": 129,
+          "end": 131
+        },
+        {
+          "name": "test_negative_disjoint_shell_is_not_a_cavity",
+          "line": 133,
+          "end": 136
+        },
+        {
+          "name": "test_orientation_table_handles_missing_rules",
+          "line": 138,
+          "end": 143
+        },
+        {
+          "name": "test_pareto_empty_single_and_different_na_sets",
+          "line": 145,
+          "end": 150
+        },
+        {
+          "name": "test_sensitivity_reuses_geometry_and_propagates_options",
+          "line": 152,
+          "end": 157
+        },
+        {
+          "name": "test_sensitivity_matches_full_reweighting",
+          "line": 159,
+          "end": 166
+        },
+        {
+          "name": "test_orientation_options_propagate",
+          "line": 168,
+          "end": 171
+        },
+        {
+          "name": "test_voxel_resolution_failure_is_na",
+          "line": 173,
+          "end": 175
+        },
+        {
+          "name": "test_near_plate_overhang_is_not_contact",
+          "line": 177,
+          "end": 181
+        },
+        {
+          "name": "test_bridge_span_uses_anchored_direction",
+          "line": 183,
+          "end": 188
+        },
+        {
+          "name": "test_process_specific_provenance",
+          "line": 190,
+          "end": 192
+        },
+        {
+          "name": "test_cura_export_matches_engine_bridge_policy",
+          "line": 194,
+          "end": 202
+        },
+        {
+          "name": "test_cura_ties_and_unscaled_prediction_error",
+          "line": 204,
+          "end": 218
+        },
+        {
+          "name": "test_ahp_requires_complete_positive_pairwise_data",
+          "line": 220,
+          "end": 226
+        },
+        {
+          "name": "test_regression_preserves_predictive_parameters",
+          "line": 228,
+          "end": 234
+        }
+      ]
+    },
+    {
+      "path": "tests/test_ui_review.py",
+      "lines": 208,
+      "sha256": "20f94ef31192ecd7752d24c8cddc7343cb4d2d8ac1c2dc17b2ddca196247e598",
+      "functions": [
+        {
+          "name": "UIRegression",
+          "line": 7,
+          "end": 206
+        },
+        {
+          "name": "app",
+          "line": 8,
+          "end": 11
+        },
+        {
+          "name": "button",
+          "line": 13,
+          "end": 14
+        },
+        {
+          "name": "test_evaluate_and_changed_model_requires_reevaluation",
+          "line": 16,
+          "end": 26
+        },
+        {
+          "name": "test_blocked_current_direction_still_allows_comparison",
+          "line": 28,
+          "end": 35
+        },
+        {
+          "name": "test_toggles_propagate_to_comparison_and_sensitivity",
+          "line": 37,
+          "end": 47
+        },
+        {
+          "name": "test_failed_sample_generation_shows_error_without_traceback",
+          "line": 49,
+          "end": 53
+        },
+        {
+          "name": "test_failed_direction_comparison_does_not_keep_previous_result",
+          "line": 55,
+          "end": 64
+        },
+        {
+          "name": "test_partial_result_keeps_mesh_view_and_safe_dimensions",
+          "line": 66,
+          "end": 79
+        },
+        {
+          "name": "test_cleanup_mode_change_requires_new_evaluation_even_if_shape_identical",
+          "line": 81,
+          "end": 89
+        },
+        {
+          "name": "test_blocked_result_keeps_rules_and_geometry_visible",
+          "line": 91,
+          "end": 98
+        },
+        {
+          "name": "test_fdm_layer_results_are_visible_when_mesh_gate_fails",
+          "line": 100,
+          "end": 113
+        },
+        {
+          "name": "test_layer_display_cannot_hide_open_vertical_contours",
+          "line": 115,
+          "end": 123
+        },
+        {
+          "name": "test_non_fdm_does_not_show_fdm_layer_success",
+          "line": 125,
+          "end": 130
+        },
+        {
+          "name": "test_layer_settings_require_reevaluation_and_propagate_to_directions",
+          "line": 132,
+          "end": 142
+        },
+        {
+          "name": "test_partial_components_render_without_claiming_full_area",
+          "line": 144,
+          "end": 158
+        },
+        {
+          "name": "test_sphere_details_are_visible_without_prominent_risk",
+          "line": 160,
+          "end": 173
+        },
+        {
+          "name": "test_previous_engine_result_requires_new_evaluation",
+          "line": 175,
+          "end": 185
+        },
+        {
+          "name": "test_nist_support_and_single_layer_minor_overlays_match_records",
+          "line": 187,
+          "end": 206
+        }
+      ]
+    },
+    {
+      "path": "validation/history_v25/reproduce_review.py",
+      "lines": 34,
+      "sha256": "b19df72f13dee4e5ba35d6cf5067ed2f815162671acf723d3ea8e03fc49771ce",
+      "functions": [
+        {
+          "name": "pin_array",
+          "line": 9,
+          "end": 14
+        },
+        {
+          "name": "make_cases",
+          "line": 16,
+          "end": 26
+        }
+      ]
+    },
+    {
+      "path": "validation/reproduce_review.py",
+      "lines": 29,
+      "sha256": "24ff09dfd005f7b0fc3e0f1adf7028d87f67b5c3911d822c6826f635a273bca9",
+      "functions": []
+    },
+    {
+      "path": "verify.py",
+      "lines": 618,
+      "sha256": "5afa7fa299b4d558915c29df1bfa1b49b04e11d00fbfbf955e58914f61c25941",
+      "functions": [
+        {
+          "name": "check",
+          "line": 23,
+          "end": 27
+        },
+        {
+          "name": "rule",
+          "line": 30,
+          "end": 32
+        },
+        {
+          "name": "wedge",
+          "line": 35,
+          "end": 42
+        },
+        {
+          "name": "blocked",
+          "line": 319,
+          "end": 330
+        },
+        {
+          "name": "_bridge_part",
+          "line": 481,
+          "end": 485
+        },
+        {
+          "name": "_step_part",
+          "line": 542,
+          "end": 546
+        }
+      ]
+    }
+  ]
+}

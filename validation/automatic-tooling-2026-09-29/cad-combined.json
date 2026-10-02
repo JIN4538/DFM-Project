@@ -1,0 +1,24 @@
+{
+  "files": 33,
+  "conditions": 297,
+  "states": {
+    "passed": 297
+  },
+  "auto_proposal_conditions": 44,
+  "automatic_field_count": 110,
+  "proposal_states": {
+    "conditional": 41,
+    "unavailable": 210,
+    "conflict": 25,
+    "not_applicable": 21
+  },
+  "runs": [
+    "cad-run-001/records.jsonl",
+    "cad-run-002/records.jsonl"
+  ],
+  "initial_load_limit_seconds": 75,
+  "replay_load_limit_seconds": 180,
+  "runtime_sha256": "50a7f9974fb3b330960bcbb6cb854c04ebb93fd6b44b7a23d8c3721da3a3c591",
+  "scope": "Measured-input integration and original engine recheck. Not independent feature recognition accuracy.",
+  "initial_interruption": "The 32nd file exceeded 75s on initial load; the final two files were replayed with a 180s audit-only limit. Runtime default was not changed."
+}

@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+validation/v3/runs/
+validation/v3/external-quick/
+validation/v3/release-cases-01/*_full.json
+validation/v3/release-cases-01/*_quick.json
+*.log
+!validation/workspace-archive-2026-10-01/**/*.log
+!validation/publication-2026-10-01/*.log
+!validation/verified-improvements-2026-10-02/**/*.log
+dist/
+logs/
+!validation/verified-improvements-2026-10-02/logs/
+!validation/verified-improvements-2026-10-02/logs/**

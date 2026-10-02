@@ -1,0 +1,414 @@
+{
+  "generated_before_evaluation": true,
+  "generator_sha256": "da346bfc1fa6f656293dc2d00c50caaf462f6ed7f4b4c8c6c004129d34e42753",
+  "records": [
+    {
+      "file": "through-1-0.step",
+      "sha256": "d80246c231d92b3eb8e45be4d1f5134f5dca3801b75988fbc91c9406cfd33f3a",
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "through",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "through-3-0.step",
+      "sha256": "ea57f787832b98c569acce9873593d82709171781d825ffef5a992ea90acc9be",
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "through",
+        "count": 3,
+        "rotated": false
+      }
+    },
+    {
+      "file": "through-1-1.step",
+      "sha256": "6f7a659bbb3d335a24d4664ca20d07715552de0a9ff7fca9e695f47f0c724672",
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "through",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "through-3-1.step",
+      "sha256": "7a1e7307052ead4404c8bfa0c7a2c21aa0ff0af36e59cc922f3af5a5ca40e6d9",
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "through",
+        "count": 3,
+        "rotated": true
+      }
+    },
+    {
+      "file": "blind-1-0.step",
+      "sha256": "8caf04b943911b403adbeef2c6f73fadd61e9c6909a0be390556ef9a1005abc1",
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "blind",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "blind-3-0.step",
+      "sha256": "ddb8a18cb86b511f16d50cc48ffa27bacc1f2538bfde71b2411c7acf926706ee",
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 7.199999999999999,
+          "hole_kind": "blind"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "blind",
+        "count": 3,
+        "rotated": false
+      }
+    },
+    {
+      "file": "blind-1-1.step",
+      "sha256": "c2fe0df5b983613dae489c6681794a58e90ca18ee3153887e9b0996dd239df5d",
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "blind",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "blind-3-1.step",
+      "sha256": "b93c5ace5138e7048509d0757784decee4c588ee253581e86c9d2f7c626695e6",
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 10.38,
+          "hole_kind": "blind"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "blind",
+        "count": 3,
+        "rotated": true
+      }
+    },
+    {
+      "file": "split-1-0.step",
+      "sha256": "af1a877a738fe182361c64da9e1e62909cf704f8e46ae34f3af8d684d77b7e3b",
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "split",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "split-3-0.step",
+      "sha256": "f7aa8fb20d83c444bf58c29b54526585637326e61d66faa47ae22700c46e3f03",
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "split",
+        "count": 3,
+        "rotated": false
+      }
+    },
+    {
+      "file": "split-1-1.step",
+      "sha256": "580e8aaa5fd251640980bcf6ba97c97312eca579dd837426eabb90f517df60d4",
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "split",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "split-3-1.step",
+      "sha256": "bbbab7d447e0f134a656cee68a7f81bfcb2ac3a6f8ea890e01840b7d40f5650a",
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        },
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "split",
+        "count": 3,
+        "rotated": true
+      }
+    },
+    {
+      "file": "axial_split-1-0.step",
+      "sha256": "d85219f5388b886ea0b8c899e97fdd00f5212d146ed0bc85de6df1b2a4b1cf61",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "axial_split",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "axial_split-1-1.step",
+      "sha256": "5193bea7146386c00222ca9c07965943bf33d3643f1f77e88db50beda8f86392",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "axial_split",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "stepped-1-0.step",
+      "sha256": "9eb47049c31cc9a3fabe9c596340c9b7d19aa68c7f3accf3412ab4ce1fd8aa8a",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "stepped",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "stepped-1-1.step",
+      "sha256": "b6f34b217915657e22ae1f4e70971e85f490cb28d9ec842b466a7ce897bb344f",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "stepped",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "cross-1-0.step",
+      "sha256": "3f1fbc54e888869d426ab8ed7eb648c01cedc891743b15103d60ccd2916a706b",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "cross",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "cross-1-1.step",
+      "sha256": "7b69ceaae3ab976d71c412aad5ee946d6642f2ecc630322c1fa53553a5e8c696",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "cross",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "sealed-1-0.step",
+      "sha256": "7292e117c457cd2c2eef7fb4d8cc69c75dd2d7cddc06bf1e0dbfeb75c0b92e9c",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "sealed",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "sealed-1-1.step",
+      "sha256": "64ee17c038616421d37ed4fca6cc513bac53eb32916a9d7e8f0b172cabf0d29f",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "sealed",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "boss-1-0.step",
+      "sha256": "45c972c04ecc8c5cf5c70db5f30fc5cd276f472072e00549d642af69a88f6262",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "boss",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "boss-1-1.step",
+      "sha256": "ce4c260602c979e19f4209744afd43d006f13dfda8506312755faabdd79de718",
+      "expected": [],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "boss",
+        "count": 1,
+        "rotated": true
+      }
+    },
+    {
+      "file": "remote_boss-1-0.step",
+      "sha256": "199f7e65744a903767f8abf2266a864bbc84fdb3882a42a90668167c8ac659bb",
+      "expected": [
+        {
+          "diameter_mm": 6.0,
+          "depth_mm": 12.0,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "remote_boss",
+        "count": 1,
+        "rotated": false
+      }
+    },
+    {
+      "file": "remote_boss-1-1.step",
+      "sha256": "dba968f0d6fa437e1ffeebe837460f680f336f108601a7ff3709f06448054146",
+      "expected": [
+        {
+          "diameter_mm": 5.4,
+          "depth_mm": 17.3,
+          "hole_kind": "through"
+        }
+      ],
+      "scope": "simple complete cylinders with circular planar ends",
+      "parameters": {
+        "kind": "remote_boss",
+        "count": 1,
+        "rotated": true
+      }
+    }
+  ]
+}

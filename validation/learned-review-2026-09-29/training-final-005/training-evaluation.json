@@ -1,0 +1,930 @@
+{
+  "model": {
+    "schema": "dfm-rule-model-1",
+    "sha256": "de6ca19a5371b9ac7ea322f636e6ffdabf831b9d86a6ff8802280001d27187a3",
+    "bytes": 8015,
+    "model_id": "local-rule-actions-2026-09-29-v1"
+  },
+  "seed": 2909202605,
+  "training_rows": 55000,
+  "all_scenario_rows": 93500,
+  "uncompressed_dataset_sha256": "d78795cccee17a8ea148034a5911f808b95b50662225486d2d42dd1a5ddbe879",
+  "library_versions": {
+    "sklearn": "1.9.1",
+    "numpy": "2.3.5"
+  },
+  "elapsed_seconds": 3.015289099999791,
+  "teacher_sources": {
+    "amdfm/analysis.py": "be11350875703db1e160f9d1e822defac402b66bf1906de6774a7af910ee6740",
+    "amdfm/detail_summary.py": "e826adaade8dfe3fdeed68a5fd5ce781204359944a9447378c18fb675c072ae1",
+    "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+    "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+    "dfm/accessibility.py": "79ef902e175da946e0accf251910e61f5b12bc4263139dfd766b9d316516bb7e",
+    "dfm/learned_review.py": "e8bf5ecbd0f3452d68a45a62084bb23efc2c2bede13f4d82c2329a0c50dbd7c9"
+  },
+  "tasks": {
+    "wall": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 499,
+          "issue_clear_rows": 501,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 499,
+          "issue_clear_rows": 501,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 720,
+          "issue_clear_rows": 780,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1499,
+          "out_of_domain_rows": 1,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 205,
+          "issue_clear_rows": 295,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 240,
+          "issue_clear_rows": 260,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "overhang": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 564,
+          "issue_clear_rows": 436,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 564,
+          "issue_clear_rows": 436,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 871,
+          "issue_clear_rows": 629,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 201,
+          "issue_clear_rows": 299,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 285,
+          "issue_clear_rows": 215,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 296,
+          "out_of_domain_rows": 204,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "contact": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 448,
+          "issue_clear_rows": 552,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 448,
+          "issue_clear_rows": 552,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 663,
+          "issue_clear_rows": 837,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1499,
+          "out_of_domain_rows": 1,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 296,
+          "issue_clear_rows": 204,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 230,
+          "issue_clear_rows": 270,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 303,
+          "out_of_domain_rows": 197,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "cavities": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 736,
+          "issue_clear_rows": 264,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 736,
+          "issue_clear_rows": 264,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1139,
+          "issue_clear_rows": 361,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 369,
+          "issue_clear_rows": 131,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 374,
+          "issue_clear_rows": 126,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "build": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 861,
+          "issue_clear_rows": 139,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 861,
+          "issue_clear_rows": 139,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1330,
+          "issue_clear_rows": 170,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1499,
+          "out_of_domain_rows": 1,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 499,
+          "exact_action_accuracy": 0.998,
+          "issue_positive_rows": 269,
+          "issue_clear_rows": 231,
+          "missed_issue_rows": 1,
+          "missed_issue_fraction": 0.0037174721189591076,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 1,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 425,
+          "issue_clear_rows": 75,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "cad_holes": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 670,
+          "issue_clear_rows": 330,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 670,
+          "issue_clear_rows": 330,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1005,
+          "issue_clear_rows": 495,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 260,
+          "issue_clear_rows": 240,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 335,
+          "issue_clear_rows": 165,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "layers": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 861,
+          "issue_clear_rows": 139,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 861,
+          "issue_clear_rows": 139,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1302,
+          "issue_clear_rows": 198,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1494,
+          "out_of_domain_rows": 6,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 438,
+          "issue_clear_rows": 62,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 428,
+          "issue_clear_rows": 72,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 177,
+          "out_of_domain_rows": 323,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "cnc_holes": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 924,
+          "issue_clear_rows": 76,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 924,
+          "issue_clear_rows": 76,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1406,
+          "issue_clear_rows": 94,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 499,
+          "exact_action_accuracy": 0.998,
+          "issue_positive_rows": 331,
+          "issue_clear_rows": 169,
+          "missed_issue_rows": 1,
+          "missed_issue_fraction": 0.0030211480362537764,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 1,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 461,
+          "issue_clear_rows": 39,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "cnc_curved_corners": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 398,
+          "issue_clear_rows": 602,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 398,
+          "issue_clear_rows": 602,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 636,
+          "issue_clear_rows": 864,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1498,
+          "out_of_domain_rows": 2,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 77,
+          "issue_clear_rows": 423,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 214,
+          "issue_clear_rows": 286,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "cnc_rectangular_pockets": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1000,
+          "issue_clear_rows": 0,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": null,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1000,
+          "issue_clear_rows": 0,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": null,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 1500,
+          "issue_clear_rows": 0,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": null,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 500,
+          "issue_clear_rows": 0,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": null,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 500,
+          "issue_clear_rows": 0,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": null,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 500,
+          "out_of_domain_rows": 0,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    },
+    "cnc_visibility": {
+      "selected": "decision_tree",
+      "validation_comparison": {
+        "decision_tree": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 186,
+          "issue_clear_rows": 814,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        },
+        "random_forest": {
+          "rows": 1000,
+          "exact_action_matches": 1000,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 186,
+          "issue_clear_rows": 814,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0
+        }
+      },
+      "evaluation": {
+        "test": {
+          "rows": 1500,
+          "exact_action_matches": 1500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 309,
+          "issue_clear_rows": 1191,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 1499,
+          "out_of_domain_rows": 1,
+          "json_export_mismatch_rows": 0
+        },
+        "boundary": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 35,
+          "issue_clear_rows": 465,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 498,
+          "out_of_domain_rows": 2,
+          "json_export_mismatch_rows": 0
+        },
+        "scale_holdout": {
+          "rows": 500,
+          "exact_action_matches": 500,
+          "exact_action_accuracy": 1.0,
+          "issue_positive_rows": 103,
+          "issue_clear_rows": 397,
+          "missed_issue_rows": 0,
+          "missed_issue_fraction": 0.0,
+          "false_positive_rows": 0,
+          "false_positive_fraction": 0.0,
+          "missing_any_action_rows": 0,
+          "in_domain_rows": 397,
+          "out_of_domain_rows": 103,
+          "json_export_mismatch_rows": 0
+        }
+      },
+      "training_scenarios": 5000,
+      "evaluation_scenarios": 3500
+    }
+  },
+  "summary": {
+    "test": {
+      "rows": 16500,
+      "exact_action_matches": 16500,
+      "issue_positive_rows": 10881,
+      "issue_clear_rows": 5619,
+      "missed_issue_rows": 0,
+      "false_positive_rows": 0,
+      "missing_any_action_rows": 0,
+      "in_domain_rows": 16488,
+      "out_of_domain_rows": 12,
+      "json_export_mismatch_rows": 0,
+      "exact_action_accuracy": 1.0
+    },
+    "boundary": {
+      "rows": 5500,
+      "exact_action_matches": 5498,
+      "issue_positive_rows": 2981,
+      "issue_clear_rows": 2519,
+      "missed_issue_rows": 2,
+      "false_positive_rows": 0,
+      "missing_any_action_rows": 2,
+      "in_domain_rows": 5498,
+      "out_of_domain_rows": 2,
+      "json_export_mismatch_rows": 0,
+      "exact_action_accuracy": 0.9996363636363637
+    },
+    "scale_holdout": {
+      "rows": 5500,
+      "exact_action_matches": 5500,
+      "issue_positive_rows": 3595,
+      "issue_clear_rows": 1905,
+      "missed_issue_rows": 0,
+      "false_positive_rows": 0,
+      "missing_any_action_rows": 0,
+      "in_domain_rows": 4673,
+      "out_of_domain_rows": 827,
+      "json_export_mismatch_rows": 0,
+      "exact_action_accuracy": 1.0
+    }
+  },
+  "split_method": "Independent seeded parameter draws. Distinct IDs do not imply geometry-family separation; repeated primitive values are possible. CAD family holdout is separate, not claimed by these numeric scenarios.",
+  "selection": "Validation exact action-match rate; decision tree wins ties. Locked test/boundary/scale sets were not used for model selection.",
+  "development": "Earlier runs informed continuous numeric conditioning and boundary sampling. Only a fresh final seed after implementation freeze is a final evaluation; earlier runs are development records.",
+  "verification": "Runtime compares raw predictions to the current numeric teacher. Fallback agreement is not counted as model accuracy."
+}

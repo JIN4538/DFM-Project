@@ -1,0 +1,529 @@
+{
+  "file": "3.4 Valve_RM_20130113.stp",
+  "source_sha256": "dff5b66f1ffd4dee39e9c3e1658763a0e4df2f14e105897d6e347fc2a6334a1d",
+  "solid_count": 22,
+  "cad_face_count": 415,
+  "constituent_volume_mm3": 608303.9876894075,
+  "union_volume_mm3": null,
+  "exactly_zero_parameter_faces": [
+    {
+      "face_id_in_body": 124,
+      "uv": [
+        1.5115310203843606,
+        1.6300616332054325,
+        -4.0,
+        -4.0
+      ],
+      "area_mm2": 0
+    }
+  ],
+  "body_integrations": [
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 1,
+      "default_volume_mm3": 447753.3866845683,
+      "adaptive_volume_mm3": 447666.59982939035,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 0.00019386493254361408,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.00031826023375018
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -4.535347085447763e-05
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": 0.00017399993227682698
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 2,
+      "default_volume_mm3": 57617.08762604575,
+      "adaptive_volume_mm3": 57617.08762604889,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -5.442721701010254e-14,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0009231077130358426
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0006391864308338713
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -7.989235866198084e-05
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 3,
+      "default_volume_mm3": 17475.191082739442,
+      "adaptive_volume_mm3": 17475.191082739442,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 0.0,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0009281816529104254
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0009288596722796816
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.00022538810266281638
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 4,
+      "default_volume_mm3": 74787.93022164382,
+      "adaptive_volume_mm3": 74787.93022163288,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 1.4632094001401485e-13,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0009322414719072084
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0009322414719072084
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0004420091180847972
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 5,
+      "default_volume_mm3": 849.4957829722453,
+      "adaptive_volume_mm3": 849.4957042961717,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 9.261503407402351e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007472591001533343
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007255702143128035
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.000634474987263374
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 6,
+      "default_volume_mm3": 345.74584368548255,
+      "adaptive_volume_mm3": 345.7463984203989,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.6044560952706574e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572556337187931
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365155174616052
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0002980059103002452
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 7,
+      "default_volume_mm3": 345.74584368547744,
+      "adaptive_volume_mm3": 345.74639842039386,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.6044560954350888e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572556337035114
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365155174463232
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.00029800591028561723
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 8,
+      "default_volume_mm3": 849.4957687637433,
+      "adaptive_volume_mm3": 849.4957023784132,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 7.81467521600889e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007472568443159435
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007255679584264495
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006347269059084685
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 9,
+      "default_volume_mm3": 345.74584368548403,
+      "adaptive_volume_mm3": 345.7463984204008,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.6044560964215037e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572556337255308
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365155174681787
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0002980059103071487
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 10,
+      "default_volume_mm3": 849.4957829722384,
+      "adaptive_volume_mm3": 849.495704296165,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 9.261503394019563e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007479769114960536
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007262880256555227
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006344749872503977
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 11,
+      "default_volume_mm3": 345.7458436854779,
+      "adaptive_volume_mm3": 345.74639842039414,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.604456094941864e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572556337038397
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.000536515517446816
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0002980059102859458
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 12,
+      "default_volume_mm3": 849.4957829722467,
+      "adaptive_volume_mm3": 849.4957042961732,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 9.261503394019471e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007479769115024701
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007262880256620731
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006344749872568153
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 13,
+      "default_volume_mm3": 345.7458463429335,
+      "adaptive_volume_mm3": 345.74640141451533,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.6054298167277708e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572642887529184
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365241726750083
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.00029826370936616395
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 14,
+      "default_volume_mm3": 849.4957829722473,
+      "adaptive_volume_mm3": 849.4957042961742,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 9.261503353870876e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007472591001513246
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007255702143106601
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006344749872608294
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 15,
+      "default_volume_mm3": 345.7458436854838,
+      "adaptive_volume_mm3": 345.74639842040017,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.6044560952706517e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572556337184624
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365155174614389
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0002980059102995865
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 16,
+      "default_volume_mm3": 849.4957829722485,
+      "adaptive_volume_mm3": 849.4957042961753,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 9.261503367253725e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007479769115064832
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007262880256659524
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006344749872606947
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 17,
+      "default_volume_mm3": 345.74584368547363,
+      "adaptive_volume_mm3": 345.74639842038977,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.6044560946130685e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572556337094367
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365155174524126
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.00029800591029137505
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 18,
+      "default_volume_mm3": 849.4957687637407,
+      "adaptive_volume_mm3": 849.4957023784107,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 7.814675202626051e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007479746556574692
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.000726285769768109
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006347269058929462
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 19,
+      "default_volume_mm3": 345.74584634292745,
+      "adaptive_volume_mm3": 345.74640141450914,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.605429816234576e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0005572642887535861
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365241726761687
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0002982637093669913
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 20,
+      "default_volume_mm3": 849.4957829722418,
+      "adaptive_volume_mm3": 849.4957042961686,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 9.261503367253799e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.0007465412887861329
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007248524029456021
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006344749872513318
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 21,
+      "default_volume_mm3": 345.7458463429304,
+      "adaptive_volume_mm3": 345.74640141451295,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": -1.605429818700676e-06,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.00055726428873829
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0005365241726607086
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.00029826370935219135
+        }
+      ]
+    },
+    {
+      "file": "3.4 Valve_RM_20130113.stp",
+      "body": 22,
+      "default_volume_mm3": 849.4957829722402,
+      "adaptive_volume_mm3": 849.4957042961672,
+      "gauss_kronrod_volume_mm3": null,
+      "default_relative_difference": 9.26150334048809e-08,
+      "gauss_kronrod_relative_difference": null,
+      "mesh_volume_relative_differences": [
+        {
+          "deflection_mm": 0.1,
+          "relative_difference": -0.000747259100138617
+        },
+        {
+          "deflection_mm": 0.05,
+          "relative_difference": -0.0007255702142980861
+        },
+        {
+          "deflection_mm": 0.01,
+          "relative_difference": -0.0006344749872485224
+        }
+      ]
+    }
+  ],
+  "note": "169-solid corpus total includes all 22 Valve solids; separate Gauss-Kronrod completed for 147 other solids."
+}

@@ -1,0 +1,6138 @@
+{
+  "counts": {
+    "train": 43730,
+    "val": 9424,
+    "test": 9241
+  },
+  "mixed_counts": {
+    "train": 55770,
+    "val": 11913,
+    "test": 11550
+  },
+  "validation": {
+    "accuracy": 0.9805456276434692,
+    "macro_f1": 0.9654695462313984,
+    "mean_iou": 0.9354237629542925,
+    "parts": 9424,
+    "faces": 256292,
+    "per_class": {
+      "chamfer": {
+        "precision": 0.9762102351313969,
+        "recall": 0.9846540178571429,
+        "f1": 0.9804139463814419,
+        "faces": 3584
+      },
+      "through_hole": {
+        "precision": 0.9907030796048809,
+        "recall": 0.9852643744582491,
+        "f1": 0.9879762422135304,
+        "faces": 3461
+      },
+      "triangular_passage": {
+        "precision": 0.9870820668693009,
+        "recall": 0.9892432175154688,
+        "f1": 0.9881614605619741,
+        "faces": 10505
+      },
+      "rectangular_passage": {
+        "precision": 0.9729455283963153,
+        "recall": 0.9799108773467747,
+        "f1": 0.9764157810452758,
+        "faces": 13689
+      },
+      "6sides_passage": {
+        "precision": 0.9941824424204855,
+        "recall": 0.9929513740058103,
+        "f1": 0.993566526877621,
+        "faces": 20997
+      },
+      "triangular_through_slot": {
+        "precision": 0.943029490616622,
+        "recall": 0.9232283464566929,
+        "f1": 0.9330238726790451,
+        "faces": 1524
+      },
+      "rectangular_through_slot": {
+        "precision": 0.866954851104707,
+        "recall": 0.8640497845859263,
+        "f1": 0.8654998801246704,
+        "faces": 2089
+      },
+      "circular_through_slot": {
+        "precision": 0.9488721804511279,
+        "recall": 0.961890243902439,
+        "f1": 0.955336866010598,
+        "faces": 656
+      },
+      "rectangular_through_step": {
+        "precision": 0.8937462052216151,
+        "recall": 0.8586845559282485,
+        "f1": 0.8758646336928226,
+        "faces": 6857
+      },
+      "2sides_through_step": {
+        "precision": 0.9649925410243659,
+        "recall": 0.9669157947184853,
+        "f1": 0.9659532105525137,
+        "faces": 10035
+      },
+      "slanted_through_step": {
+        "precision": 0.8995983935742972,
+        "recall": 0.9070185962807439,
+        "f1": 0.9032932566649242,
+        "faces": 6668
+      },
+      "Oring": {
+        "precision": 0.9857785213845027,
+        "recall": 0.9873271889400922,
+        "f1": 0.9865522473967872,
+        "faces": 9548
+      },
+      "blind_hole": {
+        "precision": 0.9762466572282523,
+        "recall": 0.9756327621443169,
+        "f1": 0.9759396131467212,
+        "faces": 6361
+      },
+      "triangular_pocket": {
+        "precision": 0.9961560959304755,
+        "recall": 0.995989639903083,
+        "f1": 0.9960728609625669,
+        "faces": 11969
+      },
+      "rectangular_pocket": {
+        "precision": 0.9924648786717752,
+        "recall": 0.9881111323033887,
+        "f1": 0.9902832202363885,
+        "faces": 15729
+      },
+      "6sides_pocket": {
+        "precision": 0.9965952617392538,
+        "recall": 0.9964067892771027,
+        "f1": 0.9965010165965293,
+        "faces": 21151
+      },
+      "circular_end_pocket": {
+        "precision": 0.9919226610697705,
+        "recall": 0.990851334180432,
+        "f1": 0.9913867081969296,
+        "faces": 15740
+      },
+      "rectangular_blind_slot": {
+        "precision": 0.939142960028808,
+        "recall": 0.9435600578871202,
+        "f1": 0.9413463273777297,
+        "faces": 2764
+      },
+      "v_circular_end_blind_slot": {
+        "precision": 0.9599018003273322,
+        "recall": 0.9670239076669415,
+        "f1": 0.9634496919917864,
+        "faces": 2426
+      },
+      "h_circular_end_blind_slot": {
+        "precision": 0.9860036832412523,
+        "recall": 0.977364001460387,
+        "f1": 0.9816648331499817,
+        "faces": 2739
+      },
+      "triangular_blind_step": {
+        "precision": 0.9667114494700701,
+        "recall": 0.9691709069140976,
+        "f1": 0.9679396158732531,
+        "faces": 6682
+      },
+      "circular_blind_step": {
+        "precision": 0.9892890406705992,
+        "recall": 0.9876026654269332,
+        "f1": 0.9884451337727801,
+        "faces": 6453
+      },
+      "rectangular_blind_step": {
+        "precision": 0.9461279461279462,
+        "recall": 0.9584670947030498,
+        "f1": 0.9522575500847205,
+        "faces": 9968
+      },
+      "round": {
+        "precision": 0.980568445475638,
+        "recall": 0.9860017497812773,
+        "f1": 0.983277591973244,
+        "faces": 3429
+      },
+      "stock": {
+        "precision": 0.9958240897820697,
+        "recall": 0.9964092185153751,
+        "f1": 0.9961165682211273,
+        "faces": 61268
+      }
+    },
+    "bottom": {
+      "precision": 0.8016696028187059,
+      "recall": 0.9744020244786724,
+      "f1": 0.8796362398269064,
+      "samples": 256292
+    },
+    "edge": {
+      "precision": 0.9971778446154447,
+      "recall": 0.9972947105242597,
+      "f1": 0.9972362741459794,
+      "samples": 1285288
+    }
+  },
+  "calibration": [
+    {
+      "threshold": 0.5,
+      "pq": 0.9328625629052435,
+      "recognition": 0.9378192591125525,
+      "exact_instance_recall": 0.9356930966866107,
+      "instance_precision": 0.9237547145272467,
+      "instance_recall": 0.9523187021301557,
+      "tp": 56822,
+      "fp": 4690,
+      "fn": 2845,
+      "ground_truth_instances": 59667
+    },
+    {
+      "threshold": 0.6,
+      "pq": 0.9337826362234436,
+      "recognition": 0.9386777599151432,
+      "exact_instance_recall": 0.9328439505924548,
+      "instance_precision": 0.9283688757027883,
+      "instance_recall": 0.9492181607923978,
+      "tp": 56637,
+      "fp": 4370,
+      "fn": 3030,
+      "ground_truth_instances": 59667
+    },
+    {
+      "threshold": 0.7,
+      "pq": 0.9341027657041535,
+      "recognition": 0.9389252643576794,
+      "exact_instance_recall": 0.9296093317914426,
+      "instance_precision": 0.9322319510986288,
+      "instance_recall": 0.9457153870648767,
+      "tp": 56428,
+      "fp": 4102,
+      "fn": 3239,
+      "ground_truth_instances": 59667
+    },
+    {
+      "threshold": 0.8,
+      "pq": 0.9339739938156534,
+      "recognition": 0.9386553848983721,
+      "exact_instance_recall": 0.9251847755040474,
+      "instance_precision": 0.9365489855846236,
+      "instance_recall": 0.9407712806073709,
+      "tp": 56133,
+      "fp": 3803,
+      "fn": 3534,
+      "ground_truth_instances": 59667
+    },
+    {
+      "threshold": 0.9,
+      "pq": 0.9315161876133636,
+      "recognition": 0.9360113907307086,
+      "exact_instance_recall": 0.9160842676856554,
+      "instance_precision": 0.9410937552942771,
+      "instance_recall": 0.9309836257898001,
+      "tp": 55549,
+      "fp": 3477,
+      "fn": 4118,
+      "ground_truth_instances": 59667
+    },
+    {
+      "threshold": 0.95,
+      "pq": 0.9276115472840569,
+      "recognition": 0.9319509544188574,
+      "exact_instance_recall": 0.9054418690398378,
+      "instance_precision": 0.9445104215073751,
+      "instance_recall": 0.9197211188764308,
+      "tp": 54877,
+      "fp": 3224,
+      "fn": 4790,
+      "ground_truth_instances": 59667
+    },
+    {
+      "threshold": 0.98,
+      "pq": 0.920788394285011,
+      "recognition": 0.9249049837421391,
+      "exact_instance_recall": 0.889972681716862,
+      "instance_precision": 0.9474618575546649,
+      "instance_recall": 0.9033971877252083,
+      "tp": 53903,
+      "fp": 2989,
+      "fn": 5764,
+      "ground_truth_instances": 59667
+    },
+    {
+      "threshold": 0.99,
+      "pq": 0.9138418839109066,
+      "recognition": 0.917775603674427,
+      "exact_instance_recall": 0.8755593544170144,
+      "instance_precision": 0.9492782175735215,
+      "instance_recall": 0.888296713426182,
+      "tp": 53002,
+      "fp": 2832,
+      "fn": 6665,
+      "ground_truth_instances": 59667
+    }
+  ],
+  "chosen_threshold": 0.7,
+  "selected_epoch": 15,
+  "test": {
+    "accuracy": 0.9801569778774968,
+    "macro_f1": 0.9653174746686354,
+    "mean_iou": 0.9352130336699617,
+    "parts": 9241,
+    "faces": 251373,
+    "per_class": {
+      "chamfer": {
+        "precision": 0.9747044267253231,
+        "recall": 0.9836293007769146,
+        "f1": 0.9791465267228284,
+        "faces": 3604
+      },
+      "through_hole": {
+        "precision": 0.9903216623968119,
+        "recall": 0.9861111111111112,
+        "f1": 0.9882119017185059,
+        "faces": 3528
+      },
+      "triangular_passage": {
+        "precision": 0.9864299561269259,
+        "recall": 0.9901679639492011,
+        "f1": 0.9882954255047279,
+        "faces": 9764
+      },
+      "rectangular_passage": {
+        "precision": 0.972411214953271,
+        "recall": 0.9735758664570702,
+        "f1": 0.9729931921897209,
+        "faces": 13359
+      },
+      "6sides_passage": {
+        "precision": 0.9956941919433547,
+        "recall": 0.9931758530183727,
+        "f1": 0.9944334281004371,
+        "faces": 20955
+      },
+      "triangular_through_slot": {
+        "precision": 0.9497319034852547,
+        "recall": 0.9365499008592201,
+        "f1": 0.9430948419301164,
+        "faces": 1513
+      },
+      "rectangular_through_slot": {
+        "precision": 0.8725031874203145,
+        "recall": 0.8561301084236864,
+        "f1": 0.864239107556304,
+        "faces": 2398
+      },
+      "circular_through_slot": {
+        "precision": 0.9550724637681159,
+        "recall": 0.9536903039073806,
+        "f1": 0.9543808834178131,
+        "faces": 691
+      },
+      "rectangular_through_step": {
+        "precision": 0.8877309332070109,
+        "recall": 0.8528519417475728,
+        "f1": 0.8699419729206963,
+        "faces": 6592
+      },
+      "2sides_through_step": {
+        "precision": 0.9705361790733993,
+        "recall": 0.968720773147667,
+        "f1": 0.9696276263781984,
+        "faces": 9623
+      },
+      "slanted_through_step": {
+        "precision": 0.8906296186816435,
+        "recall": 0.9087618760367968,
+        "f1": 0.8996043890423228,
+        "faces": 6631
+      },
+      "Oring": {
+        "precision": 0.9870698867279333,
+        "recall": 0.979429540875835,
+        "f1": 0.9832348714673479,
+        "faces": 9431
+      },
+      "blind_hole": {
+        "precision": 0.9644105497299015,
+        "recall": 0.9795062126835565,
+        "f1": 0.9718997678328397,
+        "faces": 6197
+      },
+      "triangular_pocket": {
+        "precision": 0.9966985524422247,
+        "recall": 0.9969517358171042,
+        "f1": 0.9968251280531685,
+        "faces": 11810
+      },
+      "rectangular_pocket": {
+        "precision": 0.9904591150669143,
+        "recall": 0.9896353166986565,
+        "f1": 0.9900470445162737,
+        "faces": 15630
+      },
+      "6sides_pocket": {
+        "precision": 0.9971392552366175,
+        "recall": 0.9977197748884146,
+        "f1": 0.997429430594626,
+        "faces": 20612
+      },
+      "circular_end_pocket": {
+        "precision": 0.9910791558484788,
+        "recall": 0.9893666511596996,
+        "f1": 0.9902221630969802,
+        "faces": 15047
+      },
+      "rectangular_blind_slot": {
+        "precision": 0.9359472049689441,
+        "recall": 0.9447492163009404,
+        "f1": 0.9403276131045241,
+        "faces": 2552
+      },
+      "v_circular_end_blind_slot": {
+        "precision": 0.959546313799622,
+        "recall": 0.9750288129081829,
+        "f1": 0.9672256097560975,
+        "faces": 2603
+      },
+      "h_circular_end_blind_slot": {
+        "precision": 0.978698224852071,
+        "recall": 0.982185273159145,
+        "f1": 0.9804386484884411,
+        "faces": 2526
+      },
+      "triangular_blind_step": {
+        "precision": 0.9664745145631068,
+        "recall": 0.9704493526275705,
+        "f1": 0.9684578551341492,
+        "faces": 6565
+      },
+      "circular_blind_step": {
+        "precision": 0.9905338299193048,
+        "recall": 0.987010978815525,
+        "f1": 0.9887692665169237,
+        "faces": 6467
+      },
+      "rectangular_blind_step": {
+        "precision": 0.9468317552804079,
+        "recall": 0.9587020648967551,
+        "f1": 0.9527299377061195,
+        "faces": 9492
+      },
+      "round": {
+        "precision": 0.9834663625997719,
+        "recall": 0.9871244635193133,
+        "f1": 0.985292017706697,
+        "faces": 3495
+      },
+      "stock": {
+        "precision": 0.9962334904095043,
+        "recall": 0.9959029989384289,
+        "f1": 0.9960682172600286,
+        "faces": 60288
+      }
+    },
+    "bottom": {
+      "precision": 0.8045390245402546,
+      "recall": 0.976072627782614,
+      "f1": 0.8820435593715583,
+      "samples": 251373
+    },
+    "edge": {
+      "precision": 0.9972432667289263,
+      "recall": 0.9972582078967608,
+      "f1": 0.9972507372568801,
+      "samples": 1262090
+    }
+  },
+  "new_panoptic": {
+    "pq": 0.9341024668287891,
+    "recognition": 0.9389084985066521,
+    "exact_instance_recall": 0.9300941993058999,
+    "instance_precision": 0.9320283678385526,
+    "instance_recall": 0.94589096131161,
+    "tp": 55328,
+    "fp": 4035,
+    "fn": 3165,
+    "ground_truth_instances": 58493
+  },
+  "old_panoptic": {
+    "pq": 0.8017550128037814,
+    "recognition": 0.8201144867064382,
+    "exact_instance_recall": 0.7524490109927684,
+    "instance_precision": 0.827174234387771,
+    "instance_recall": 0.8131742259757578,
+    "tp": 47565,
+    "fp": 9938,
+    "fn": 10928,
+    "ground_truth_instances": 58493
+  },
+  "stock_negative_test": {
+    "accuracy": 1.0,
+    "macro_f1": 0.04,
+    "mean_iou": 0.04,
+    "parts": 150,
+    "faces": 500,
+    "per_class": {
+      "chamfer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "through_hole": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "triangular_passage": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "rectangular_passage": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "6sides_passage": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "triangular_through_slot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "rectangular_through_slot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "circular_through_slot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "rectangular_through_step": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "2sides_through_step": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "slanted_through_step": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "Oring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "blind_hole": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "triangular_pocket": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "rectangular_pocket": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "6sides_pocket": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "circular_end_pocket": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "rectangular_blind_slot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "v_circular_end_blind_slot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "h_circular_end_blind_slot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "triangular_blind_step": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "circular_blind_step": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "rectangular_blind_step": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "round": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "faces": 0
+      },
+      "stock": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "faces": 500
+      }
+    },
+    "bottom": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "samples": 500
+    },
+    "edge": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "samples": 1400
+    }
+  },
+  "mixed_test": {
+    "accuracy": 0.9835189265564634,
+    "macro_f1": 0.9730670662193185,
+    "mean_iou": 0.9487113326721125,
+    "parts": 11550,
+    "faces": 303621,
+    "per_class": {
+      "chamfer": {
+        "precision": 0.9781859931113662,
+        "recall": 0.985654789449329,
+        "f1": 0.9819061887749223,
+        "faces": 4322
+      },
+      "through_hole": {
+        "precision": 0.9903216623968119,
+        "recall": 0.9861111111111112,
+        "f1": 0.9882119017185059,
+        "faces": 3528
+      },
+      "triangular_passage": {
+        "precision": 0.9890585449497836,
+        "recall": 0.9918932197838192,
+        "f1": 0.9904738542049961,
+        "faces": 12212
+      },
+      "rectangular_passage": {
+        "precision": 0.9774880801496771,
+        "recall": 0.9784920251329144,
+        "f1": 0.9779897949941125,
+        "faces": 16552
+      },
+      "6sides_passage": {
+        "precision": 0.9965085153431353,
+        "recall": 0.9943868070610096,
+        "f1": 0.99544653064388,
+        "faces": 25832
+      },
+      "triangular_through_slot": {
+        "precision": 0.9723279142165341,
+        "recall": 0.9669762641898865,
+        "f1": 0.969644705070714,
+        "faces": 2907
+      },
+      "rectangular_through_slot": {
+        "precision": 0.9314350797266515,
+        "recall": 0.9219842164599774,
+        "f1": 0.926685552407932,
+        "faces": 4435
+      },
+      "circular_through_slot": {
+        "precision": 0.9550724637681159,
+        "recall": 0.9536903039073806,
+        "f1": 0.9543808834178131,
+        "faces": 691
+      },
+      "rectangular_through_step": {
+        "precision": 0.9082935637817618,
+        "recall": 0.8789316025961058,
+        "f1": 0.8933713923247699,
+        "faces": 8012
+      },
+      "2sides_through_step": {
+        "precision": 0.9755718601640052,
+        "recall": 0.9740584331638369,
+        "f1": 0.974814559254787,
+        "faces": 11603
+      },
+      "slanted_through_step": {
+        "precision": 0.9084385053204652,
+        "recall": 0.9238706430099408,
+        "f1": 0.9160895876224342,
+        "faces": 7947
+      },
+      "Oring": {
+        "precision": 0.9870698867279333,
+        "recall": 0.979429540875835,
+        "f1": 0.9832348714673479,
+        "faces": 9431
+      },
+      "blind_hole": {
+        "precision": 0.9644105497299015,
+        "recall": 0.9795062126835565,
+        "f1": 0.9718997678328397,
+        "faces": 6197
+      },
+      "triangular_pocket": {
+        "precision": 0.9972820405603178,
+        "recall": 0.9974905897114178,
+        "f1": 0.9973863042341872,
+        "faces": 14346
+      },
+      "rectangular_pocket": {
+        "precision": 0.9922211274179329,
+        "recall": 0.9916040424980564,
+        "f1": 0.9919124889833584,
+        "faces": 19295
+      },
+      "6sides_pocket": {
+        "precision": 0.9977135327856146,
+        "recall": 0.998177729528536,
+        "f1": 0.9979455771765253,
+        "faces": 25792
+      },
+      "circular_end_pocket": {
+        "precision": 0.9910791558484788,
+        "recall": 0.9893666511596996,
+        "f1": 0.9902221630969802,
+        "faces": 15047
+      },
+      "rectangular_blind_slot": {
+        "precision": 0.9693934335002783,
+        "recall": 0.9735469448584203,
+        "f1": 0.9714657496049819,
+        "faces": 5368
+      },
+      "v_circular_end_blind_slot": {
+        "precision": 0.959546313799622,
+        "recall": 0.9750288129081829,
+        "f1": 0.9672256097560975,
+        "faces": 2603
+      },
+      "h_circular_end_blind_slot": {
+        "precision": 0.978698224852071,
+        "recall": 0.982185273159145,
+        "f1": 0.9804386484884411,
+        "faces": 2526
+      },
+      "triangular_blind_step": {
+        "precision": 0.9723611805902952,
+        "recall": 0.9756556657046054,
+        "f1": 0.974005637331663,
+        "faces": 7969
+      },
+      "circular_blind_step": {
+        "precision": 0.9905338299193048,
+        "recall": 0.987010978815525,
+        "f1": 0.9887692665169237,
+        "faces": 6467
+      },
+      "rectangular_blind_step": {
+        "precision": 0.9561185057964792,
+        "recall": 0.9659899357973277,
+        "f1": 0.9610288722972681,
+        "faces": 11526
+      },
+      "round": {
+        "precision": 0.9834663625997719,
+        "recall": 0.9871244635193133,
+        "f1": 0.985292017706697,
+        "faces": 3495
+      },
+      "stock": {
+        "precision": 0.9969799724488715,
+        "recall": 0.9966895309727483,
+        "f1": 0.996834730554783,
+        "faces": 75518
+      }
+    },
+    "bottom": {
+      "precision": 0.8045390245402546,
+      "recall": 0.976072627782614,
+      "f1": 0.8820435593715583,
+      "samples": 251373
+    },
+    "edge": {
+      "precision": 0.9972432667289263,
+      "recall": 0.9972582078967608,
+      "f1": 0.9972507372568801,
+      "samples": 1262090
+    }
+  },
+  "portable_max_error": 2.9298752013406926e-06,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.06536389192685894,
+      "validation_score": 0.9593387552912921,
+      "validation": {
+        "accuracy": 0.9803466358684625,
+        "macro_f1": 0.9647813081836766,
+        "mean_iou": 0.9342966751362085,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9740403203534935,
+            "recall": 0.9840959821428571,
+            "f1": 0.9790423317140874,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9895531050493326,
+            "recall": 0.9852643744582491,
+            "f1": 0.9874040828145361,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.986061065806941,
+            "recall": 0.9899095668729176,
+            "f1": 0.9879815685715643,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9737090565763672,
+            "recall": 0.9793995178610563,
+            "f1": 0.9765459975234904,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9943244145562073,
+            "recall": 0.9929037481544982,
+            "f1": 0.9936135735392241,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9441453566621804,
+            "recall": 0.9206036745406824,
+            "f1": 0.9322259136212625,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8288288288288288,
+            "recall": 0.8808042125418861,
+            "f1": 0.8540264562543514,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9420505200594353,
+            "recall": 0.9664634146341463,
+            "f1": 0.9541008276899924,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.9007081280788177,
+            "recall": 0.8532886101793787,
+            "f1": 0.8763573728750093,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9558433912275537,
+            "recall": 0.9707025411061285,
+            "f1": 0.9632156630080094,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8977289594775123,
+            "recall": 0.9070185962807439,
+            "f1": 0.9023498694516972,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9889636325415178,
+            "recall": 0.9854419773774612,
+            "f1": 0.9871996642534886,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9698289269051322,
+            "recall": 0.9803490017292879,
+            "f1": 0.975060589476976,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9968216794914687,
+            "recall": 0.9957389923970257,
+            "f1": 0.9962800417972832,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9929014516851058,
+            "recall": 0.9870939029817535,
+            "f1": 0.9899891602371995,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.996549116006429,
+            "recall": 0.9966904638078578,
+            "f1": 0.9966197848954024,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9913562984619296,
+            "recall": 0.9909783989834816,
+            "f1": 0.9911673127025482,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9413680781758957,
+            "recall": 0.941027496382055,
+            "f1": 0.9411977564682468,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9655887230514096,
+            "recall": 0.9600164880461666,
+            "f1": 0.9627945431996693,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9824689554419284,
+            "recall": 0.982110259218693,
+            "f1": 0.9822895745846265,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9752730582524272,
+            "recall": 0.9621370847051781,
+            "f1": 0.9686605394003316,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.989751552795031,
+            "recall": 0.9877576321090965,
+            "f1": 0.9887535872178702,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9507541704125462,
+            "recall": 0.9548555377207063,
+            "f1": 0.9528004404624856,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9833867677062081,
+            "recall": 0.9839603382910469,
+            "f1": 0.983673469387755,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9956952778502478,
+            "recall": 0.9966703662597114,
+            "f1": 0.9961825834448106,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7971618537263074,
+          "recall": 0.977321945640801,
+          "f1": 0.8780962375112044,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9961975518083566,
+          "recall": 0.997885576998203,
+          "f1": 0.997040849932303,
+          "samples": 1285288
+        }
+      },
+      "seconds": 137.922
+    },
+    {
+      "epoch": 2,
+      "loss": 0.06507704961498123,
+      "validation_score": 0.9592638544008962,
+      "validation": {
+        "accuracy": 0.979847205531191,
+        "macro_f1": 0.9646419859163718,
+        "mean_iou": 0.9339833843166195,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9777839489030825,
+            "recall": 0.982421875,
+            "f1": 0.980097425191371,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9901162790697674,
+            "recall": 0.9841086391216411,
+            "f1": 0.9871033183596579,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9868046326181887,
+            "recall": 0.9895287958115183,
+            "f1": 0.9881648367317838,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9757076159906624,
+            "recall": 0.9770618744977719,
+            "f1": 0.9763842756506187,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9939469043420237,
+            "recall": 0.9931895032623708,
+            "f1": 0.9935680594597169,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9509536784741145,
+            "recall": 0.916010498687664,
+            "f1": 0.9331550802139038,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8770894788593904,
+            "recall": 0.8539971278123504,
+            "f1": 0.8653892796507398,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9501510574018127,
+            "recall": 0.9588414634146342,
+            "f1": 0.9544764795144158,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8634595995967161,
+            "recall": 0.8742890476884935,
+            "f1": 0.8688405797101448,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9597116618939469,
+            "recall": 0.9685102142501245,
+            "f1": 0.9640908640015872,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9078967466014969,
+            "recall": 0.8914217156568687,
+            "f1": 0.8995838062807416,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9873059169114562,
+            "recall": 0.9856514453288647,
+            "f1": 0.9864779874213837,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9712858926342073,
+            "recall": 0.9784625058952995,
+            "f1": 0.9748609914637011,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9966543994647039,
+            "recall": 0.9955718940596541,
+            "f1": 0.9961128526645768,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9894576400355646,
+            "recall": 0.9905270519422722,
+            "f1": 0.9899920571882447,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9956550486445641,
+            "recall": 0.996737742896317,
+            "f1": 0.9961961015948022,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9938094326376923,
+            "recall": 0.9893265565438374,
+            "f1": 0.9915629278232354,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9625850340136054,
+            "recall": 0.9214905933429812,
+            "f1": 0.9415896487985213,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9594262295081967,
+            "recall": 0.9649629018961253,
+            "f1": 0.9621866009042335,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9863870493009566,
+            "recall": 0.9788243884629427,
+            "f1": 0.9825911673080447,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9645305514157974,
+            "recall": 0.968572283747381,
+            "f1": 0.966547192353644,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9883738955200744,
+            "recall": 0.9880675654734232,
+            "f1": 0.9882207067575945,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9425955100433241,
+            "recall": 0.9603731942215088,
+            "f1": 0.9514013118664281,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9747126436781609,
+            "recall": 0.9892096821230679,
+            "f1": 0.9819076566796932,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.996419286800412,
+            "recall": 0.9946791147091467,
+            "f1": 0.9955484403205123,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7988680974870968,
+          "recall": 0.9754483295617685,
+          "f1": 0.8783715681763404,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.997143261760239,
+          "recall": 0.9971189155402765,
+          "f1": 0.9971310885016469,
+          "samples": 1285288
+        }
+      },
+      "seconds": 163.547
+    },
+    {
+      "epoch": 3,
+      "loss": 0.06452520230972986,
+      "validation_score": 0.959317596920655,
+      "validation": {
+        "accuracy": 0.9801242332963963,
+        "macro_f1": 0.9647109499157035,
+        "mean_iou": 0.9340528229490082,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.975407571152252,
+            "recall": 0.9849330357142857,
+            "f1": 0.9801471609051784,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9898255813953488,
+            "recall": 0.9838197052874892,
+            "f1": 0.9868135052890885,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.987085746842655,
+            "recall": 0.9895287958115183,
+            "f1": 0.9883057615516259,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9750254841997962,
+            "recall": 0.9782306961794142,
+            "f1": 0.976625460379973,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9937598247034726,
+            "recall": 0.9935705100728676,
+            "f1": 0.9936651583710409,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9413333333333334,
+            "recall": 0.926509186351706,
+            "f1": 0.9338624338624337,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8722060252672498,
+            "recall": 0.8592628051699378,
+            "f1": 0.8656860380998314,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9404761904761905,
+            "recall": 0.9634146341463414,
+            "f1": 0.9518072289156626,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.884984984984985,
+            "recall": 0.8595595741577949,
+            "f1": 0.8720870015535992,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9577104642014163,
+            "recall": 0.9704035874439462,
+            "f1": 0.9640152452606049,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8892778993435448,
+            "recall": 0.9142171565686863,
+            "f1": 0.9015750942838128,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9902892125818028,
+            "recall": 0.9826141600335149,
+            "f1": 0.986436757438755,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9659758738014228,
+            "recall": 0.9819210815909448,
+            "f1": 0.9738832150931629,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9966552387323355,
+            "recall": 0.9958225415657114,
+            "f1": 0.9962387161484454,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.992580273762313,
+            "recall": 0.9865852883209358,
+            "f1": 0.9895737014953926,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9958902168264916,
+            "recall": 0.996737742896317,
+            "f1": 0.9963137996219282,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9937416182387125,
+            "recall": 0.9886277001270648,
+            "f1": 0.9911780629956368,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9358192900681248,
+            "recall": 0.9442836468885673,
+            "f1": 0.9400324149108589,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9534789644012945,
+            "recall": 0.971558120362737,
+            "f1": 0.9624336463862802,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9845758354755784,
+            "recall": 0.9788243884629427,
+            "f1": 0.981691688026364,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9655891553701773,
+            "recall": 0.9700688416641724,
+            "f1": 0.9678238148562897,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9871576667182423,
+            "recall": 0.9886874322020766,
+            "f1": 0.9879219572623102,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.962970561083188,
+            "recall": 0.9418138041733547,
+            "f1": 0.9522746868184815,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9774305555555556,
+            "recall": 0.9851268591426072,
+            "f1": 0.9812636165577343,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9955654101995566,
+            "recall": 0.9966703662597114,
+            "f1": 0.9961175818080976,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7982136818444033,
+          "recall": 0.9763973039394603,
+          "f1": 0.8783600385255231,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9972500903611515,
+          "recall": 0.9970066020782874,
+          "f1": 0.9971283313553982,
+          "samples": 1285288
+        }
+      },
+      "seconds": 189.71900000000002
+    },
+    {
+      "epoch": 4,
+      "loss": 0.0645772007148747,
+      "validation_score": 0.9599510217896441,
+      "validation": {
+        "accuracy": 0.9803115196728731,
+        "macro_f1": 0.9652624570668331,
+        "mean_iou": 0.9351193739574556,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9794158553546592,
+            "recall": 0.982421875,
+            "f1": 0.9809165621952918,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9881365740740741,
+            "recall": 0.9867090436290089,
+            "f1": 0.9874222929015468,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9884761904761905,
+            "recall": 0.988005711565921,
+            "f1": 0.9882408950249941,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9721940622737147,
+            "recall": 0.9807874936080064,
+            "f1": 0.9764718717044256,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9931956604491816,
+            "recall": 0.9940943944373005,
+            "f1": 0.9936448242210744,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9503401360544218,
+            "recall": 0.9166666666666666,
+            "f1": 0.9331997327989312,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8484425848442585,
+            "recall": 0.8736237434179033,
+            "f1": 0.8608490566037736,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9572519083969465,
+            "recall": 0.9557926829268293,
+            "f1": 0.9565217391304347,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8748356944647291,
+            "recall": 0.8735598658305381,
+            "f1": 0.8741973146526563,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9705645971468756,
+            "recall": 0.9627304434479322,
+            "f1": 0.9666316474060734,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8966592427616926,
+            "recall": 0.9056688662267547,
+            "f1": 0.9011415354771319,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9895701643489254,
+            "recall": 0.9837662337662337,
+            "f1": 0.9866596638655462,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9674922600619195,
+            "recall": 0.9825499135356076,
+            "f1": 0.9749629514078465,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9959886344643155,
+            "recall": 0.9957389923970257,
+            "f1": 0.9958637977856696,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9908963585434174,
+            "recall": 0.9895733994532392,
+            "f1": 0.9902344371282247,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9956082357385719,
+            "recall": 0.9967850219847761,
+            "f1": 0.9961962813334279,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9925491944214482,
+            "recall": 0.9902160101651842,
+            "f1": 0.9913812295264447,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9452501812907904,
+            "recall": 0.9431982633863966,
+            "f1": 0.9442231075697212,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9652317880794702,
+            "recall": 0.9612530915086562,
+            "f1": 0.963238331268071,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9899925871015567,
+            "recall": 0.9751734209565535,
+            "f1": 0.9825271289313959,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9708270676691729,
+            "recall": 0.9661777910805148,
+            "f1": 0.9684968496849685,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9874554746786434,
+            "recall": 0.9880675654734232,
+            "f1": 0.9877614252517429,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9545683997980817,
+            "recall": 0.9485353130016051,
+            "f1": 0.9515422935641322,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9811265969802555,
+            "recall": 0.9854184893554973,
+            "f1": 0.9832678597410156,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.995952342092378,
+            "recall": 0.9959848534308285,
+            "f1": 0.9959685974962869,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8029400557527626,
+          "recall": 0.9742073630678638,
+          "f1": 0.880321020228672,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9962801718043848,
+          "recall": 0.9979002265802016,
+          "f1": 0.9970895411331029,
+          "samples": 1285288
+        }
+      },
+      "seconds": 218.047
+    },
+    {
+      "epoch": 5,
+      "loss": 0.06435160707989963,
+      "validation_score": 0.9596662080701264,
+      "validation": {
+        "accuracy": 0.9805612348415089,
+        "macro_f1": 0.9652734467585593,
+        "mean_iou": 0.9350224707855952,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9722222222222222,
+            "recall": 0.986328125,
+            "f1": 0.9792243767313019,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9909857516719977,
+            "recall": 0.9846865067899451,
+            "f1": 0.9878260869565216,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.98828125,
+            "recall": 0.987434554973822,
+            "f1": 0.9878577210609019,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9726067106312052,
+            "recall": 0.9804222368324932,
+            "f1": 0.9764988358556461,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9944672326624058,
+            "recall": 0.9929989998571225,
+            "f1": 0.9937325739341801,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9411764705882353,
+            "recall": 0.9238845144356955,
+            "f1": 0.9324503311258279,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.872444011684518,
+            "recall": 0.8578267113451412,
+            "f1": 0.8650736181510982,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9474474474474475,
+            "recall": 0.961890243902439,
+            "f1": 0.9546142208774584,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.9014019411492836,
+            "recall": 0.8532886101793787,
+            "f1": 0.8766856457896315,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9665071770334929,
+            "recall": 0.9662182361733931,
+            "f1": 0.9663626850052325,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9032258064516129,
+            "recall": 0.9070185962807439,
+            "f1": 0.9051182280754265,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9816103896103896,
+            "recall": 0.9895266024298283,
+            "f1": 0.9855526000104313,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9798508646676186,
+            "recall": 0.970916522559346,
+            "f1": 0.9753632343651295,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9951602136181575,
+            "recall": 0.9964073857465118,
+            "f1": 0.9957834091763036,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9908870762171808,
+            "recall": 0.988556170131604,
+            "f1": 0.9897202507876898,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.996548463356974,
+            "recall": 0.9965013474540211,
+            "f1": 0.9965249048485851,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9929882712901581,
+            "recall": 0.989707750952986,
+            "f1": 0.9913452971872216,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9339253996447602,
+            "recall": 0.9511577424023154,
+            "f1": 0.9424628069546513,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9571603427172583,
+            "recall": 0.9670239076669415,
+            "f1": 0.9620668443715399,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9799123447772097,
+            "recall": 0.9795545819642205,
+            "f1": 0.9797334307102429,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.964168896818317,
+            "recall": 0.9705178090392098,
+            "f1": 0.9673329355608592,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9897483690587139,
+            "recall": 0.9874476987447699,
+            "f1": 0.988596695368862,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9482467467964637,
+            "recall": 0.9576645264847512,
+            "f1": 0.9529323683553781,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.979154603358425,
+            "recall": 0.9862933799941674,
+            "f1": 0.9827110271683859,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9952761035999348,
+            "recall": 0.9972579486844683,
+            "f1": 0.9962660405354725,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7942516718284576,
+          "recall": 0.9797065479232061,
+          "f1": 0.8772851073101645,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9973038581204179,
+          "recall": 0.9970749667942808,
+          "f1": 0.9971893993226233,
+          "samples": 1285288
+        }
+      },
+      "seconds": 241.85999999999999
+    },
+    {
+      "epoch": 6,
+      "loss": 0.06418987202945106,
+      "validation_score": 0.9584873279892202,
+      "validation": {
+        "accuracy": 0.9798003839370718,
+        "macro_f1": 0.9636822851700866,
+        "mean_iou": 0.9323697204763164,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9802228412256268,
+            "recall": 0.9818638392857143,
+            "f1": 0.981042654028436,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9903874162540053,
+            "recall": 0.9823750361167293,
+            "f1": 0.9863649550333624,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9879919946631087,
+            "recall": 0.986863398381723,
+            "f1": 0.9874273740356224,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9761956918583424,
+            "recall": 0.9766235663671561,
+            "f1": 0.9764095822378029,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9937592301462531,
+            "recall": 0.9934752583702434,
+            "f1": 0.993617223968753,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9282894736842106,
+            "recall": 0.9258530183727034,
+            "f1": 0.9270696452036795,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8202296819787986,
+            "recall": 0.8889420775490665,
+            "f1": 0.8532046864231565,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.93519882179676,
+            "recall": 0.9679878048780488,
+            "f1": 0.9513108614232211,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8700334740212488,
+            "recall": 0.8718098293714452,
+            "f1": 0.870920745920746,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9677483974358975,
+            "recall": 0.9628300946686597,
+            "f1": 0.9652829811678904,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9096892698607072,
+            "recall": 0.8912717456508699,
+            "f1": 0.9003863343686085,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9828303850156087,
+            "recall": 0.9892124005027231,
+            "f1": 0.9860110658732644,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9778935733459656,
+            "recall": 0.9735890583241629,
+            "f1": 0.9757365684575389,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964043816372606,
+            "recall": 0.9955718940596541,
+            "f1": 0.995987963891675,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9941599281221922,
+            "recall": 0.9848687138406764,
+            "f1": 0.9894925106192711,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9962180305394034,
+            "recall": 0.9963122311001844,
+            "f1": 0.996265128593041,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.994118775171003,
+            "recall": 0.987992376111817,
+            "f1": 0.9910461077653506,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9286478772743489,
+            "recall": 0.9417510853835022,
+            "f1": 0.9351535836177475,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9509251810136766,
+            "recall": 0.9744435284418796,
+            "f1": 0.9625407166123778,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9782214156079855,
+            "recall": 0.9839357429718876,
+            "f1": 0.9810702584637786,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9620403321470937,
+            "recall": 0.9709667764142472,
+            "f1": 0.9664829435423804,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9876141817618826,
+            "recall": 0.9885324655199133,
+            "f1": 0.9880731102850062,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9531846493871811,
+            "recall": 0.9518459069020867,
+            "f1": 0.9525148077502259,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.979704262104958,
+            "recall": 0.9854184893554973,
+            "f1": 0.9825530677522536,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9957591870687827,
+            "recall": 0.9964255402493961,
+            "f1": 0.9960922522169737,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7979878315504831,
+          "recall": 0.9765676326739178,
+          "f1": 0.8782921731899203,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9966145185445356,
+          "recall": 0.9976316509102273,
+          "f1": 0.9971228253415882,
+          "samples": 1285288
+        }
+      },
+      "seconds": 259.40700000000004
+    },
+    {
+      "epoch": 7,
+      "loss": 0.06395885255614962,
+      "validation_score": 0.9591229731898512,
+      "validation": {
+        "accuracy": 0.980085215301297,
+        "macro_f1": 0.9646320085119102,
+        "mean_iou": 0.9339496347946418,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9767313019390582,
+            "recall": 0.9838169642857143,
+            "f1": 0.9802613288851821,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9909699970870959,
+            "recall": 0.9829529037850332,
+            "f1": 0.9869451697127938,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9877201332698715,
+            "recall": 0.9877201332698715,
+            "f1": 0.9877201332698715,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9775223312344413,
+            "recall": 0.9753086419753086,
+            "f1": 0.976414231908436,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9935253511068793,
+            "recall": 0.9939038910320522,
+            "f1": 0.993714585019761,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9380413057961359,
+            "recall": 0.9238845144356955,
+            "f1": 0.9309090909090909,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8784119106699751,
+            "recall": 0.8472953566299665,
+            "f1": 0.8625730994152047,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9459459459459459,
+            "recall": 0.9603658536585366,
+            "f1": 0.9531013615733737,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8799055768663323,
+            "recall": 0.8697681201691702,
+            "f1": 0.8748074807480748,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9587689879660682,
+            "recall": 0.968609865470852,
+            "f1": 0.963664303772369,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.889475227206098,
+            "recall": 0.9100179964007199,
+            "f1": 0.8996293550778355,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9864637985309549,
+            "recall": 0.9846041055718475,
+            "f1": 0.9855330747457804,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9690657547023162,
+            "recall": 0.9800345857569565,
+            "f1": 0.9745193059246521,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9963213778112198,
+            "recall": 0.9956554432283399,
+            "f1": 0.9959882992060175,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9927207713428261,
+            "recall": 0.9884290164663997,
+            "f1": 0.9905702453010513,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9965011820330969,
+            "recall": 0.9964540683655619,
+            "f1": 0.9964776246424434,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.994566954298498,
+            "recall": 0.98856416772554,
+            "f1": 0.9915564760235781,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9413256066642521,
+            "recall": 0.9403039073806078,
+            "f1": 0.9408144796380091,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9449101796407186,
+            "recall": 0.9756801319043693,
+            "f1": 0.9600486716690326,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9807132459970888,
+            "recall": 0.9839357429718876,
+            "f1": 0.982321851649353,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9700841852074564,
+            "recall": 0.9657288237054774,
+            "f1": 0.967901604919754,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9900590245417832,
+            "recall": 0.9877576321090965,
+            "f1": 0.9889069893724304,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9503446897791987,
+            "recall": 0.9542536115569823,
+            "f1": 0.9522951394103218,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9789017341040462,
+            "recall": 0.9877515310586177,
+            "f1": 0.983306720859341,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9963076721997125,
+            "recall": 0.9953319840699876,
+            "f1": 0.9958195891439956,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7939650921999802,
+          "recall": 0.9795848845414508,
+          "f1": 0.8770615019280625,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9969150416127693,
+          "recall": 0.9973093601062583,
+          "f1": 0.9971121618751663,
+          "samples": 1285288
+        }
+      },
+      "seconds": 276.813
+    },
+    {
+      "epoch": 8,
+      "loss": 0.06379116980205161,
+      "validation_score": 0.9588948730061299,
+      "validation": {
+        "accuracy": 0.9800383937071777,
+        "macro_f1": 0.9637992452187979,
+        "mean_iou": 0.9325458676544324,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9711379879054426,
+            "recall": 0.9857700892857143,
+            "f1": 0.9783993353641651,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.989540964555491,
+            "recall": 0.9841086391216411,
+            "f1": 0.9868173258003766,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9898787357968108,
+            "recall": 0.986863398381723,
+            "f1": 0.9883687672800077,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9724437998549673,
+            "recall": 0.9796186719263642,
+            "f1": 0.9760180501473852,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9941367146534464,
+            "recall": 0.9932371291136829,
+            "f1": 0.9936867182846932,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9259986902423052,
+            "recall": 0.9278215223097113,
+            "f1": 0.9269092100950508,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8206497552291945,
+            "recall": 0.8827190043082814,
+            "f1": 0.8505535055350554,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9421364985163204,
+            "recall": 0.9679878048780488,
+            "f1": 0.9548872180451127,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.9045617312782189,
+            "recall": 0.8473093189441446,
+            "f1": 0.8749999999999999,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9639129138085297,
+            "recall": 0.9662182361733931,
+            "f1": 0.9650641982681397,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9146416487234696,
+            "recall": 0.891871625674865,
+            "f1": 0.9031131359149582,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9885383806519453,
+            "recall": 0.9846041055718475,
+            "f1": 0.9865673208101585,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9707073854783421,
+            "recall": 0.9794057538122937,
+            "f1": 0.9750371703576179,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9963219928111677,
+            "recall": 0.9958225415657114,
+            "f1": 0.9960722045796423,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9942860811504879,
+            "recall": 0.9846144065102677,
+            "f1": 0.9894266091678645,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9966420734014377,
+            "recall": 0.9963122311001844,
+            "f1": 0.9964771249556684,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9936846134217913,
+            "recall": 0.9896442185514612,
+            "f1": 0.9916603004838299,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9203632553265805,
+            "recall": 0.953328509406657,
+            "f1": 0.9365558912386707,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9529602595296026,
+            "recall": 0.9686727122835944,
+            "f1": 0.9607522485690924,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9781738814114224,
+            "recall": 0.981745162468054,
+            "f1": 0.9799562682215743,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9540196221994436,
+            "recall": 0.9750074827895839,
+            "f1": 0.9643993782843608,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9900420102691769,
+            "recall": 0.9860529986052998,
+            "f1": 0.9880434782608696,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9455156728962721,
+            "recall": 0.9592696629213483,
+            "f1": 0.9523430108062347,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9808251016850669,
+            "recall": 0.9845435987168271,
+            "f1": 0.9826808324843546,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9954206932516337,
+            "recall": 0.9969641574720899,
+            "f1": 0.9961918275150656,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8082917326190187,
+          "recall": 0.969194831739543,
+          "f1": 0.8814605809128631,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9972013285142132,
+          "recall": 0.9969870693022892,
+          "f1": 0.9970941873980523,
+          "samples": 1285288
+        }
+      },
+      "seconds": 294.422
+    },
+    {
+      "epoch": 9,
+      "loss": 0.06349094601672724,
+      "validation_score": 0.9587235771143334,
+      "validation": {
+        "accuracy": 0.9799135361228599,
+        "macro_f1": 0.9637596949504642,
+        "mean_iou": 0.9325526905817232,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9807852965747702,
+            "recall": 0.9827008928571429,
+            "f1": 0.9817421602787456,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9878331402085747,
+            "recall": 0.9852643744582491,
+            "f1": 0.9865470852017936,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9886439545758183,
+            "recall": 0.9861970490242742,
+            "f1": 0.9874189858940144,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.976258309591643,
+            "recall": 0.976258309591643,
+            "f1": 0.976258309591643,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9925823783937996,
+            "recall": 0.9941896461399248,
+            "f1": 0.993385362139526,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9155927835051546,
+            "recall": 0.9324146981627297,
+            "f1": 0.923927178153446,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.81239092495637,
+            "recall": 0.8913355672570608,
+            "f1": 0.8500342387582744,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9369501466275659,
+            "recall": 0.9740853658536586,
+            "f1": 0.9551569506726456,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8741712096655371,
+            "recall": 0.8652471926498468,
+            "f1": 0.8696863090002932,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9680488782051282,
+            "recall": 0.963129048330842,
+            "f1": 0.9655826964383836,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9150346954510409,
+            "recall": 0.8899220155968807,
+            "f1": 0.9023036569603892,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9859832635983263,
+            "recall": 0.9872224549643904,
+            "f1": 0.9866024701695625,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9748585795097423,
+            "recall": 0.9753183461719855,
+            "f1": 0.9750884086444007,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9965721929604549,
+            "recall": 0.9959060907343972,
+            "f1": 0.9962390305056414,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9929654025708256,
+            "recall": 0.9871574798143556,
+            "f1": 0.9900529235477906,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9963125797759184,
+            "recall": 0.9964067892771027,
+            "f1": 0.9963596822995461,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9922993699484504,
+            "recall": 0.9905972045743329,
+            "f1": 0.9914475566718596,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9349767774205073,
+            "recall": 0.9468162083936325,
+            "f1": 0.9408592486068668,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9504431909750202,
+            "recall": 0.9723825226710635,
+            "f1": 0.9612876935615323,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9841678939617083,
+            "recall": 0.9759036144578314,
+            "f1": 0.9800183318056828,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9656716417910448,
+            "recall": 0.9682729721640227,
+            "f1": 0.9669705574652518,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9860853432282004,
+            "recall": 0.9883774988377498,
+            "f1": 0.987230090550267,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.954155306472786,
+            "recall": 0.9479333868378812,
+            "f1": 0.9510341703990741,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9861886570672935,
+            "recall": 0.978710994459026,
+            "f1": 0.9824355971896956,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.995179859629696,
+            "recall": 0.9974701312267416,
+            "f1": 0.9963236792552802,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.801961961961962,
+          "recall": 0.9747183492712364,
+          "f1": 0.8799411293068415,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9970369719513028,
+          "recall": 0.9973972575982498,
+          "f1": 0.9972170822327788,
+          "samples": 1285288
+        }
+      },
+      "seconds": 311.922
+    },
+    {
+      "epoch": 10,
+      "loss": 0.06166202351963575,
+      "validation_score": 0.9596496249307276,
+      "validation": {
+        "accuracy": 0.980436377257191,
+        "macro_f1": 0.9650569383888181,
+        "mean_iou": 0.9346358097365716,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.977562326869806,
+            "recall": 0.9846540178571429,
+            "f1": 0.9810953572421462,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9889791183294664,
+            "recall": 0.9852643744582491,
+            "f1": 0.9871182515559416,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9890288112955543,
+            "recall": 0.986863398381723,
+            "f1": 0.9879449182827464,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9724677582958992,
+            "recall": 0.9804952881875959,
+            "f1": 0.9764650249172456,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9932921027592769,
+            "recall": 0.9943801495451732,
+            "f1": 0.9938358283551896,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9302172481895984,
+            "recall": 0.9271653543307087,
+            "f1": 0.9286887939533355,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8729388942774006,
+            "recall": 0.861656294877932,
+            "f1": 0.8672609009877138,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9488721804511279,
+            "recall": 0.961890243902439,
+            "f1": 0.955336866010598,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8989280245022971,
+            "recall": 0.8560595012396092,
+            "f1": 0.8769701949652647,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9663672654690619,
+            "recall": 0.9649227703039363,
+            "f1": 0.9656444776863626,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.896414342629482,
+            "recall": 0.9110677864427115,
+            "f1": 0.9036816660468575,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9822097378277154,
+            "recall": 0.9887934645999162,
+            "f1": 0.985490605427975,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9763332281476806,
+            "recall": 0.9728030183933344,
+            "f1": 0.9745649263721553,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9967383122856904,
+            "recall": 0.9957389923970257,
+            "f1": 0.9962384017386944,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9930262316058861,
+            "recall": 0.9867760188187424,
+            "f1": 0.9898912592876049,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9969718476460847,
+            "recall": 0.996217672923266,
+            "f1": 0.996594617603935,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9937444146559428,
+            "recall": 0.9890724269377382,
+            "f1": 0.9914029166401324,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9320526503023835,
+            "recall": 0.9479015918958031,
+            "f1": 0.9399103139013453,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9463570856685348,
+            "recall": 0.9744435284418796,
+            "f1": 0.9601949634443543,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9838827838827838,
+            "recall": 0.9806498722161373,
+            "f1": 0.9822636679466081,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9614700652045051,
+            "recall": 0.9709667764142472,
+            "f1": 0.9661950856291884,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9886786600496278,
+            "recall": 0.9879125987912599,
+            "f1": 0.9882954809704674,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9510706423854313,
+            "recall": 0.9535513643659711,
+            "f1": 0.95230938783689,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9830755763058068,
+            "recall": 0.9825021872265967,
+            "f1": 0.9827887981330222,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9954695826475237,
+            "recall": 0.9970131226741529,
+            "f1": 0.9962407547846792,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7992985113294406,
+          "recall": 0.9759349830887899,
+          "f1": 0.8788290459704632,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9972116962262677,
+          "recall": 0.9972116962262677,
+          "f1": 0.9972116962262677,
+          "samples": 1285288
+        }
+      },
+      "seconds": 329.125
+    },
+    {
+      "epoch": 11,
+      "loss": 0.06157307405400714,
+      "validation_score": 0.9594690514165118,
+      "validation": {
+        "accuracy": 0.9802373854821844,
+        "macro_f1": 0.9645868470402408,
+        "mean_iou": 0.9338870390543639,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9770274010517576,
+            "recall": 0.9849330357142857,
+            "f1": 0.9809642906766708,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.990395809080326,
+            "recall": 0.9832418376191852,
+            "f1": 0.9868058576192548,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9893027698185292,
+            "recall": 0.9860066634935745,
+            "f1": 0.9876519666269368,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.968401353199453,
+            "recall": 0.9828329315508803,
+            "f1": 0.975563773475455,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9937577432574097,
+            "recall": 0.9932371291136829,
+            "f1": 0.9934973679822786,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9317880794701987,
+            "recall": 0.9232283464566929,
+            "f1": 0.92748846407383,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.866504854368932,
+            "recall": 0.8544758257539492,
+            "f1": 0.8604483007953724,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9402092675635276,
+            "recall": 0.9588414634146342,
+            "f1": 0.9494339622641509,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8851038398326609,
+            "recall": 0.8639346653055272,
+            "f1": 0.8743911439114391,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9695054669475374,
+            "recall": 0.963129048330842,
+            "f1": 0.9663067386522696,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9001192605843769,
+            "recall": 0.9055188962207559,
+            "f1": 0.9028110047846889,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9871015100671141,
+            "recall": 0.9858609132802681,
+            "f1": 0.9864808216306853,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9741257644660498,
+            "recall": 0.9765760100613111,
+            "f1": 0.9753493484063432,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964040809499917,
+            "recall": 0.9954883448909684,
+            "f1": 0.9959460024240399,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9912633122887571,
+            "recall": 0.9882382859685931,
+            "f1": 0.989748487742757,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9964074686835264,
+            "recall": 0.9965959056309395,
+            "f1": 0.9965016782489481,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9914176732358551,
+            "recall": 0.9907878017789072,
+            "f1": 0.9911026374324754,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9347128077060293,
+            "recall": 0.9479015918958031,
+            "f1": 0.9412610023351895,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9636963696369637,
+            "recall": 0.9629018961253092,
+            "f1": 0.9632989690721651,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9860036832412523,
+            "recall": 0.977364001460387,
+            "f1": 0.9816648331499817,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9687032045522611,
+            "recall": 0.9681233163723436,
+            "f1": 0.9684131736526945,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.98989898989899,
+            "recall": 0.9871377653804432,
+            "f1": 0.9885164494103041,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9490629984051037,
+            "recall": 0.9551565008025682,
+            "f1": 0.9521,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9783299624386016,
+            "recall": 0.9874599008457277,
+            "f1": 0.9828737300435414,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9957911908646003,
+            "recall": 0.9963112881112489,
+            "f1": 0.9960511715945435,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8057114026236125,
+          "recall": 0.9714334379638416,
+          "f1": 0.8808454775116661,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9964355025892587,
+          "recall": 0.9978660442222048,
+          "f1": 0.9971502603315262,
+          "samples": 1285288
+        }
+      },
+      "seconds": 346.735
+    },
+    {
+      "epoch": 12,
+      "loss": 0.061342750650343544,
+      "validation_score": 0.9588332324881617,
+      "validation": {
+        "accuracy": 0.9799174379223698,
+        "macro_f1": 0.9640044568131481,
+        "mean_iou": 0.9328870510633669,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9745926539629937,
+            "recall": 0.9846540178571429,
+            "f1": 0.9795975017349062,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9909778812572759,
+            "recall": 0.9838197052874892,
+            "f1": 0.9873858199217052,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9877072612921669,
+            "recall": 0.9866730128510233,
+            "f1": 0.987189866184104,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9775949460074929,
+            "recall": 0.9721674337058952,
+            "f1": 0.9748736356310893,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9948419142229439,
+            "recall": 0.9920464828308806,
+            "f1": 0.9934422320257542,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9181173436492586,
+            "recall": 0.9343832020997376,
+            "f1": 0.9261788617886179,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8272321428571429,
+            "recall": 0.8870272857826711,
+            "f1": 0.856086856086856,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9473684210526315,
+            "recall": 0.9603658536585366,
+            "f1": 0.9538228614685843,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8761555392516508,
+            "recall": 0.8707889747703077,
+            "f1": 0.8734640140433002,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9607513593672763,
+            "recall": 0.9684105630293971,
+            "f1": 0.9645657568238214,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9158155369854534,
+            "recall": 0.8875224955008998,
+            "f1": 0.9014470677837013,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9830208333333333,
+            "recall": 0.9883745286971093,
+            "f1": 0.9856904115312303,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9775671406003159,
+            "recall": 0.9728030183933344,
+            "f1": 0.9751792608935466,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9965724795184752,
+            "recall": 0.995989639903083,
+            "f1": 0.9962809744682629,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9929618017787446,
+            "recall": 0.986648865153538,
+            "f1": 0.9897952675553288,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9964066193853428,
+            "recall": 0.9963595101886435,
+            "f1": 0.9963830642301601,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9941830733827666,
+            "recall": 0.9881194409148666,
+            "f1": 0.9911419831761407,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9273564847625797,
+            "recall": 0.9468162083936325,
+            "f1": 0.9369853204439671,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.950363196125908,
+            "recall": 0.9707337180544106,
+            "f1": 0.9604404567699837,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9831316464979831,
+            "recall": 0.9788243884629427,
+            "f1": 0.9809732894255397,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.968562874251497,
+            "recall": 0.9682729721640227,
+            "f1": 0.9684179015117497,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9906614785992218,
+            "recall": 0.9863629319696265,
+            "f1": 0.9885075322255009,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9467432191645219,
+            "recall": 0.959470304975923,
+            "f1": 0.9530642750373691,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.976409666283084,
+            "recall": 0.9897929425488481,
+            "f1": 0.9830557566980449,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9957434316747394,
+            "recall": 0.9965397923875432,
+            "f1": 0.9961414528694376,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7997926138629656,
+          "recall": 0.9759349830887899,
+          "f1": 0.8791276234314209,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9967117459945749,
+          "recall": 0.9976267677162278,
+          "f1": 0.9971690469450112,
+          "samples": 1285288
+        }
+      },
+      "seconds": 364.40700000000004
+    },
+    {
+      "epoch": 13,
+      "loss": 0.061339014833536716,
+      "validation_score": 0.9594895248463691,
+      "validation": {
+        "accuracy": 0.9802764034772837,
+        "macro_f1": 0.9648441900173278,
+        "mean_iou": 0.9343625823203303,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9786348501664817,
+            "recall": 0.9840959821428571,
+            "f1": 0.981357818586533,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9912561935295832,
+            "recall": 0.9826639699508812,
+            "f1": 0.9869413813116656,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9875333079558432,
+            "recall": 0.9878153260352214,
+            "f1": 0.9876742968638463,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9730278422273781,
+            "recall": 0.9803491854773906,
+            "f1": 0.9766747934936865,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9930532426131227,
+            "recall": 0.9939991427346764,
+            "f1": 0.9935259675346313,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9386257505003336,
+            "recall": 0.9232283464566929,
+            "f1": 0.9308633807476018,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8439944776806259,
+            "recall": 0.8779320248922929,
+            "f1": 0.8606288127639606,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9447761194029851,
+            "recall": 0.9649390243902439,
+            "f1": 0.9547511312217194,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8789178001182733,
+            "recall": 0.8669972291089397,
+            "f1": 0.8729168196167683,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9680808485091055,
+            "recall": 0.9641255605381166,
+            "f1": 0.9660991562234759,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9001042131904123,
+            "recall": 0.9067186562687463,
+            "f1": 0.9033993276055285,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.98536636354134,
+            "recall": 0.9873271889400922,
+            "f1": 0.986345801726393,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9753299811439347,
+            "recall": 0.9757899701304826,
+            "f1": 0.9755599214145384,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964888814579502,
+            "recall": 0.9959060907343972,
+            "f1": 0.9961974008608081,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9926531655273749,
+            "recall": 0.9878568249729799,
+            "f1": 0.9902491874322861,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9961718417694598,
+            "recall": 0.9965486265424802,
+            "f1": 0.9963601985346253,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.993178630626036,
+            "recall": 0.9897712833545108,
+            "f1": 0.9914720295296887,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9377249820014398,
+            "recall": 0.9424746743849494,
+            "f1": 0.94009382894262,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9522653721682848,
+            "recall": 0.9703215169002474,
+            "f1": 0.9612086565945285,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9838650531719839,
+            "recall": 0.9795545819642205,
+            "f1": 0.9817050859860958,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9661244590359648,
+            "recall": 0.9688715953307393,
+            "f1": 0.967496077112755,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.98928238583411,
+            "recall": 0.9869827986982799,
+            "f1": 0.9881312543635093,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9571167883211679,
+            "recall": 0.9471308186195827,
+            "f1": 0.9520976200080677,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9800115874855156,
+            "recall": 0.9865850102070575,
+            "f1": 0.9832873128905681,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9958075040783034,
+            "recall": 0.9963276098452699,
+            "f1": 0.9960674890672931,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7990723045070871,
+          "recall": 0.9766892960556731,
+          "f1": 0.8789979086598999,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9969734542649887,
+          "recall": 0.9973142433002579,
+          "f1": 0.9971438196651677,
+          "samples": 1285288
+        }
+      },
+      "seconds": 382.438
+    },
+    {
+      "epoch": 14,
+      "loss": 0.061156932068048814,
+      "validation_score": 0.9592655900904389,
+      "validation": {
+        "accuracy": 0.9802022692865949,
+        "macro_f1": 0.9643766088845607,
+        "mean_iou": 0.9336075023109496,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9756569847856155,
+            "recall": 0.9840959821428571,
+            "f1": 0.9798583136546742,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9901105293775451,
+            "recall": 0.9835307714533372,
+            "f1": 0.9868096825626903,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9880986384842426,
+            "recall": 0.9879105188005711,
+            "f1": 0.9880045696877381,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9744541484716157,
+            "recall": 0.9780845934692088,
+            "f1": 0.976265995843815,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9935228842215554,
+            "recall": 0.9935228842215554,
+            "f1": 0.9935228842215554,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9350132625994695,
+            "recall": 0.9251968503937008,
+            "f1": 0.9300791556728232,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8215398308856253,
+            "recall": 0.8836764001914792,
+            "f1": 0.8514760147601477,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9405646359583952,
+            "recall": 0.9649390243902439,
+            "f1": 0.9525959367945823,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8857871829506229,
+            "recall": 0.8607262651305235,
+            "f1": 0.8730769230769231,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9628344895936571,
+            "recall": 0.9681116093672147,
+            "f1": 0.9654658385093167,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9066465256797583,
+            "recall": 0.9001199760047991,
+            "f1": 0.903371462974112,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.986799371398638,
+            "recall": 0.9864893171344784,
+            "f1": 0.9866443199078196,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.974427361154691,
+            "recall": 0.9764188020751454,
+            "f1": 0.9754220651747154,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9962393448102959,
+            "recall": 0.995989639903083,
+            "f1": 0.9961144767077502,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9927151894689756,
+            "recall": 0.9876660944751733,
+            "f1": 0.9901842054942954,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9963125797759184,
+            "recall": 0.9964067892771027,
+            "f1": 0.9963596822995461,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.992862150277229,
+            "recall": 0.9897712833545108,
+            "f1": 0.9913143075307818,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9350463954318344,
+            "recall": 0.9479015918958031,
+            "f1": 0.9414301113905856,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9557090613571719,
+            "recall": 0.9694971145919209,
+            "f1": 0.9625537139349295,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9852887090842222,
+            "recall": 0.9780941949616648,
+            "f1": 0.9816782704287285,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9702881152460985,
+            "recall": 0.9676743489973062,
+            "f1": 0.9689794695039712,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9891287466997981,
+            "recall": 0.9869827986982799,
+            "f1": 0.9880546075085324,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9536897211315816,
+            "recall": 0.9503410914927769,
+            "f1": 0.9520124616853424,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9785693599768317,
+            "recall": 0.9854184893554973,
+            "f1": 0.981981981981982,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9955011491629855,
+            "recall": 0.9968172618659006,
+            "f1": 0.996158770806658,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8036395773912345,
+          "recall": 0.9735503808063849,
+          "f1": 0.8804726956636555,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9971192109567637,
+          "recall": 0.9972214626142667,
+          "f1": 0.9971703341642476,
+          "samples": 1285288
+        }
+      },
+      "seconds": 400.09400000000005
+    },
+    {
+      "epoch": 15,
+      "loss": 0.06030117738308436,
+      "validation_score": 0.9600628883824073,
+      "validation": {
+        "accuracy": 0.9805456276434692,
+        "macro_f1": 0.9654695462313984,
+        "mean_iou": 0.9354237629542925,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9762102351313969,
+            "recall": 0.9846540178571429,
+            "f1": 0.9804139463814419,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9907030796048809,
+            "recall": 0.9852643744582491,
+            "f1": 0.9879762422135304,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9870820668693009,
+            "recall": 0.9892432175154688,
+            "f1": 0.9881614605619741,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9729455283963153,
+            "recall": 0.9799108773467747,
+            "f1": 0.9764157810452758,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9941824424204855,
+            "recall": 0.9929513740058103,
+            "f1": 0.993566526877621,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.943029490616622,
+            "recall": 0.9232283464566929,
+            "f1": 0.9330238726790451,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.866954851104707,
+            "recall": 0.8640497845859263,
+            "f1": 0.8654998801246704,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9488721804511279,
+            "recall": 0.961890243902439,
+            "f1": 0.955336866010598,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8937462052216151,
+            "recall": 0.8586845559282485,
+            "f1": 0.8758646336928226,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9649925410243659,
+            "recall": 0.9669157947184853,
+            "f1": 0.9659532105525137,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8995983935742972,
+            "recall": 0.9070185962807439,
+            "f1": 0.9032932566649242,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9857785213845027,
+            "recall": 0.9873271889400922,
+            "f1": 0.9865522473967872,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9762466572282523,
+            "recall": 0.9756327621443169,
+            "f1": 0.9759396131467212,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9961560959304755,
+            "recall": 0.995989639903083,
+            "f1": 0.9960728609625669,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9924648786717752,
+            "recall": 0.9881111323033887,
+            "f1": 0.9902832202363885,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9965952617392538,
+            "recall": 0.9964067892771027,
+            "f1": 0.9965010165965293,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9919226610697705,
+            "recall": 0.990851334180432,
+            "f1": 0.9913867081969296,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.939142960028808,
+            "recall": 0.9435600578871202,
+            "f1": 0.9413463273777297,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9599018003273322,
+            "recall": 0.9670239076669415,
+            "f1": 0.9634496919917864,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9860036832412523,
+            "recall": 0.977364001460387,
+            "f1": 0.9816648331499817,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9667114494700701,
+            "recall": 0.9691709069140976,
+            "f1": 0.9679396158732531,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9892890406705992,
+            "recall": 0.9876026654269332,
+            "f1": 0.9884451337727801,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9461279461279462,
+            "recall": 0.9584670947030498,
+            "f1": 0.9522575500847205,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.980568445475638,
+            "recall": 0.9860017497812773,
+            "f1": 0.983277591973244,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9958240897820697,
+            "recall": 0.9964092185153751,
+            "f1": 0.9961165682211273,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8016696028187059,
+          "recall": 0.9744020244786724,
+          "f1": 0.8796362398269064,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9971778446154447,
+          "recall": 0.9972947105242597,
+          "f1": 0.9972362741459794,
+          "samples": 1285288
+        }
+      },
+      "seconds": 417.40700000000004
+    },
+    {
+      "epoch": 16,
+      "loss": 0.06018269376470408,
+      "validation_score": 0.9596895189250163,
+      "validation": {
+        "accuracy": 0.9804636898537605,
+        "macro_f1": 0.9649921740374297,
+        "mean_iou": 0.9345969017010171,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9762102351313969,
+            "recall": 0.9846540178571429,
+            "f1": 0.9804139463814419,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9901134050596103,
+            "recall": 0.9838197052874892,
+            "f1": 0.9869565217391304,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9874488922696586,
+            "recall": 0.98857686815802,
+            "f1": 0.9880125582722863,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9741241459514465,
+            "recall": 0.9790342610855431,
+            "f1": 0.9765730316610195,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9936657617754917,
+            "recall": 0.9936657617754917,
+            "f1": 0.9936657617754917,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9429147078576225,
+            "recall": 0.9212598425196851,
+            "f1": 0.9319615001659476,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8464749536178108,
+            "recall": 0.8736237434179033,
+            "f1": 0.8598351001177856,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9433681073025335,
+            "recall": 0.9649390243902439,
+            "f1": 0.9540316503391109,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8859230539815091,
+            "recall": 0.8664138836225754,
+            "f1": 0.8760598687605986,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9668695738948209,
+            "recall": 0.965520677628301,
+            "f1": 0.966194654966095,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9064195298372514,
+            "recall": 0.9020695860827834,
+            "f1": 0.9042393265183405,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9861780104712042,
+            "recall": 0.9863845831587768,
+            "f1": 0.9862812859985338,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9733667554441485,
+            "recall": 0.9767332180474768,
+            "f1": 0.9750470809792844,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964891749561147,
+            "recall": 0.995989639903083,
+            "f1": 0.9962393448102957,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9928407057018666,
+            "recall": 0.9874753639773667,
+            "f1": 0.9901507665827305,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9963127540890612,
+            "recall": 0.9964540683655619,
+            "f1": 0.9963834062167592,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.992988718210211,
+            "recall": 0.9897712833545108,
+            "f1": 0.991377390308314,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9426080639302579,
+            "recall": 0.9388567293777135,
+            "f1": 0.9407286568787384,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9541953790028375,
+            "recall": 0.9703215169002474,
+            "f1": 0.9621908849376661,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9838591342626559,
+            "recall": 0.9791894852135816,
+            "f1": 0.9815187557182068,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9649776453055141,
+            "recall": 0.9690212511224184,
+            "f1": 0.9669952210274789,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9891287466997981,
+            "recall": 0.9869827986982799,
+            "f1": 0.9880546075085324,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9527203372816704,
+            "recall": 0.9521468699839486,
+            "f1": 0.9524335173105871,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9797277729510571,
+            "recall": 0.9865850102070575,
+            "f1": 0.9831444347573379,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.99529269961234,
+            "recall": 0.9973395573545734,
+            "f1": 0.9963150772040241,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8019066311509884,
+          "recall": 0.9742803610969171,
+          "f1": 0.8797293140572132,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9973380743287795,
+          "recall": 0.9971189155402765,
+          "f1": 0.9972284828935127,
+          "samples": 1285288
+        }
+      },
+      "seconds": 434.922
+    },
+    {
+      "epoch": 17,
+      "loss": 0.06009238718265514,
+      "validation_score": 0.9597881341925021,
+      "validation": {
+        "accuracy": 0.980315421472383,
+        "macro_f1": 0.9651262074702298,
+        "mean_iou": 0.934817586895404,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9761970661500139,
+            "recall": 0.9840959821428571,
+            "f1": 0.980130609976379,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.990689554844341,
+            "recall": 0.9838197052874892,
+            "f1": 0.9872426790374021,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9880827533606635,
+            "recall": 0.9865778200856735,
+            "f1": 0.9873297132514051,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9744148858845763,
+            "recall": 0.9793264665059537,
+            "f1": 0.976864502495719,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9930542340627974,
+            "recall": 0.9941420202886126,
+            "f1": 0.9935978294499844,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9427994616419919,
+            "recall": 0.9192913385826772,
+            "f1": 0.9308970099667775,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8777013752455796,
+            "recall": 0.855433221637147,
+            "f1": 0.8664242424242424,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9420505200594353,
+            "recall": 0.9664634146341463,
+            "f1": 0.9541008276899924,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8720524017467249,
+            "recall": 0.8737057022021292,
+            "f1": 0.8728782691046842,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9652390438247012,
+            "recall": 0.9657199800697559,
+            "f1": 0.9654794520547945,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9023143973549744,
+            "recall": 0.9004199160167966,
+            "f1": 0.9013661612370515,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9842511472674176,
+            "recall": 0.9883745286971093,
+            "f1": 0.9863085284280937,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9779075272210825,
+            "recall": 0.9742178902688257,
+            "f1": 0.9760592219247126,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9955737431100719,
+            "recall": 0.995989639903083,
+            "f1": 0.9957816480808588,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9910896130346232,
+            "recall": 0.9900184372814547,
+            "f1": 0.990553735568207,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9959368799017292,
+            "recall": 0.9966431847193986,
+            "f1": 0.9962899071295225,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9912263971008964,
+            "recall": 0.9905336721728081,
+            "f1": 0.9908799135657314,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9508076358296622,
+            "recall": 0.9370477568740955,
+            "f1": 0.9438775510204082,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9624432521667354,
+            "recall": 0.9612530915086562,
+            "f1": 0.9618478036708599,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9856353591160221,
+            "recall": 0.976998904709748,
+            "f1": 0.9812981298129813,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9682682233198623,
+            "recall": 0.9681233163723436,
+            "f1": 0.9681957644241562,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9894475481067659,
+            "recall": 0.9880675654734232,
+            "f1": 0.9887570752888268,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9515272909364046,
+            "recall": 0.9531500802568218,
+            "f1": 0.9523379942865735,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9805797101449275,
+            "recall": 0.9865850102070575,
+            "f1": 0.9835731937781653,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9959208980550842,
+            "recall": 0.9962460011751648,
+            "f1": 0.9960834230882208,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8019474664903529,
+          "recall": 0.9739397036280021,
+          "f1": 0.8796149789029536,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9968722858174508,
+          "recall": 0.9976414172982264,
+          "f1": 0.9972567032602275,
+          "samples": 1285288
+        }
+      },
+      "seconds": 452.313
+    },
+    {
+      "epoch": 18,
+      "loss": 0.060048553776508626,
+      "validation_score": 0.9600420468948034,
+      "validation": {
+        "accuracy": 0.9805105114478797,
+        "macro_f1": 0.9652815485396333,
+        "mean_iou": 0.9350544952031277,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9786170508192169,
+            "recall": 0.9832589285714286,
+            "f1": 0.9809324982602644,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9895500725689405,
+            "recall": 0.984975440624097,
+            "f1": 0.9872574572835215,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9884707003334922,
+            "recall": 0.9875297477391718,
+            "f1": 0.9880000000000001,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9733062527201509,
+            "recall": 0.9802030827671854,
+            "f1": 0.9767424931756142,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.993570816268216,
+            "recall": 0.9936181359241797,
+            "f1": 0.9935944755328016,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9428379287155346,
+            "recall": 0.9199475065616798,
+            "f1": 0.9312520757223514,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8680422264875239,
+            "recall": 0.8659645763523217,
+            "f1": 0.8670021567217829,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9405646359583952,
+            "recall": 0.9649390243902439,
+            "f1": 0.9525959367945823,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8916226415094339,
+            "recall": 0.861455446988479,
+            "f1": 0.8762794837561193,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9662775616083009,
+            "recall": 0.9651220727453911,
+            "f1": 0.9656994715325555,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8977356815154655,
+            "recall": 0.9097180563887223,
+            "f1": 0.9036871508379888,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9863760217983651,
+            "recall": 0.9857561793045664,
+            "f1": 0.9860660031430069,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9730745147150908,
+            "recall": 0.9772048420059739,
+            "f1": 0.9751353047297826,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9966546792673747,
+            "recall": 0.9956554432283399,
+            "f1": 0.9961548106662207,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9921501053034655,
+            "recall": 0.9883654396337974,
+            "f1": 0.9902541563156889,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9965006856764553,
+            "recall": 0.9963122311001844,
+            "f1": 0.9964064494775167,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9929285850799516,
+            "recall": 0.9902160101651842,
+            "f1": 0.9915704424722461,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9420079739035883,
+            "recall": 0.9403039073806078,
+            "f1": 0.9411551692920515,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.957942017149857,
+            "recall": 0.9670239076669415,
+            "f1": 0.9624615384615385,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9842143906020558,
+            "recall": 0.9788243884629427,
+            "f1": 0.981511989749222,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9692745803357314,
+            "recall": 0.9678240047889853,
+            "f1": 0.9685487494383705,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9889768669461264,
+            "recall": 0.9871377653804432,
+            "f1": 0.988056460369164,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9465754782436316,
+            "recall": 0.9580658105939005,
+            "f1": 0.9522859849429127,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9800115874855156,
+            "recall": 0.9865850102070575,
+            "f1": 0.9832873128905681,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.995581425683167,
+            "recall": 0.9966214010576484,
+            "f1": 0.9961011419249592,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8053500514040357,
+          "recall": 0.9721147529016717,
+          "f1": 0.8809093314517552,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9970178101648258,
+          "recall": 0.99749980467224,
+          "f1": 0.9972587491792114,
+          "samples": 1285288
+        }
+      },
+      "seconds": 470.96900000000005
+    },
+    {
+      "epoch": 19,
+      "loss": 0.05998273531333843,
+      "validation_score": 0.9595700928998775,
+      "validation": {
+        "accuracy": 0.9803622430665023,
+        "macro_f1": 0.9648057110692065,
+        "mean_iou": 0.9342976801555268,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9772916089725838,
+            "recall": 0.9846540178571429,
+            "f1": 0.980958999305073,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9901134050596103,
+            "recall": 0.9838197052874892,
+            "f1": 0.9869565217391304,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9879036098676064,
+            "recall": 0.9873393622084722,
+            "f1": 0.9876214054465816,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9755119889220902,
+            "recall": 0.9777923880487983,
+            "f1": 0.9766508573513316,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9945600305401794,
+            "recall": 0.9926179930466257,
+            "f1": 0.993588062832217,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.930601454064772,
+            "recall": 0.9238845144356955,
+            "f1": 0.9272308198880475,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8408256880733945,
+            "recall": 0.8774533269506941,
+            "f1": 0.8587491215741392,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9434523809523809,
+            "recall": 0.9664634146341463,
+            "f1": 0.9548192771084337,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8901429646350639,
+            "recall": 0.8626221379612076,
+            "f1": 0.8761664938527626,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9651602627911606,
+            "recall": 0.9662182361733931,
+            "f1": 0.9656889597131617,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8951244660480189,
+            "recall": 0.9113677264547091,
+            "f1": 0.9031730697778109,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9854693706878528,
+            "recall": 0.9873271889400922,
+            "f1": 0.9863974050434237,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9752001255689845,
+            "recall": 0.9767332180474768,
+            "f1": 0.975966069745523,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9967380394780864,
+            "recall": 0.9956554432283399,
+            "f1": 0.99619644723093,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9928402480342645,
+            "recall": 0.9874117871447644,
+            "f1": 0.9901185770750989,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9962663641949052,
+            "recall": 0.9966431847193986,
+            "f1": 0.9964547388324273,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9933732636676437,
+            "recall": 0.9904701397712834,
+            "f1": 0.991919577527518,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.941923774954628,
+            "recall": 0.9388567293777135,
+            "f1": 0.94038775140424,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9561154002438034,
+            "recall": 0.9699093157460841,
+            "f1": 0.962962962962963,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9838591342626559,
+            "recall": 0.9791894852135816,
+            "f1": 0.9815187557182068,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.964721643346234,
+            "recall": 0.9699191858724933,
+            "f1": 0.9673134328358208,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9883738955200744,
+            "recall": 0.9880675654734232,
+            "f1": 0.9882207067575945,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9509362170822069,
+            "recall": 0.9527487961476726,
+            "f1": 0.9518416436983212,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9822416302765647,
+            "recall": 0.9839603382910469,
+            "f1": 0.983100233100233,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9958890030832477,
+            "recall": 0.996392896781354,
+            "f1": 0.9961408862091754,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8023845306081555,
+          "recall": 0.9743533591259703,
+          "f1": 0.880046592382585,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9974254378465521,
+          "recall": 0.9969919524962888,
+          "f1": 0.9972086480625381,
+          "samples": 1285288
+        }
+      },
+      "seconds": 489.0
+    },
+    {
+      "epoch": 20,
+      "loss": 0.05995138609833127,
+      "validation_score": 0.9596946998728989,
+      "validation": {
+        "accuracy": 0.9803466358684625,
+        "macro_f1": 0.9651019678429738,
+        "mean_iou": 0.9347713645095886,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9770146773746885,
+            "recall": 0.984375,
+            "f1": 0.9806810284920084,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9906868451688009,
+            "recall": 0.9835307714533372,
+            "f1": 0.9870958387704799,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.987355010458262,
+            "recall": 0.98857686815802,
+            "f1": 0.9879655615278505,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.97356188262638,
+            "recall": 0.9791803637957485,
+            "f1": 0.9763630403904286,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9945615876347677,
+            "recall": 0.9929037481544982,
+            "f1": 0.9937319764532042,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9459093982420554,
+            "recall": 0.9179790026246719,
+            "f1": 0.9317349317349317,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8679883945841392,
+            "recall": 0.8592628051699378,
+            "f1": 0.8636035602598027,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9487179487179487,
+            "recall": 0.9588414634146342,
+            "f1": 0.9537528430629265,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8804363850803479,
+            "recall": 0.8709348111418987,
+            "f1": 0.8756598240469208,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9591715976331361,
+            "recall": 0.9692077727952167,
+            "f1": 0.9641635687732341,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9040024074631358,
+            "recall": 0.9010197960407919,
+            "f1": 0.9025086375244104,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9846587351283657,
+            "recall": 0.9881650607457059,
+            "f1": 0.986408782017773,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9776060558271567,
+            "recall": 0.974532306241157,
+            "f1": 0.976066761139978,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.995989639903083,
+            "recall": 0.995989639903083,
+            "f1": 0.995989639903083,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9918336097996683,
+            "recall": 0.9883654396337974,
+            "f1": 0.9900964875967265,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9962194603279618,
+            "recall": 0.9966904638078578,
+            "f1": 0.9964549064095293,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9921064358011331,
+            "recall": 0.9901524777636594,
+            "f1": 0.9911284937517886,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9449908925318762,
+            "recall": 0.9384949348769899,
+            "f1": 0.9417317117444183,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9644628099173553,
+            "recall": 0.9620774938169827,
+            "f1": 0.963268675196038,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9852832965415746,
+            "recall": 0.9777290982110259,
+            "f1": 0.981491662085395,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9674140508221226,
+            "recall": 0.968572283747381,
+            "f1": 0.9679928208196231,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.988525352767871,
+            "recall": 0.9879125987912599,
+            "f1": 0.9882188807936755,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9503198720511795,
+            "recall": 0.9537520064205457,
+            "f1": 0.9520328459843781,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9789017341040462,
+            "recall": 0.9877515310586177,
+            "f1": 0.983306720859341,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9958724876011485,
+            "recall": 0.9963276098452699,
+            "f1": 0.9960999967363989,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.7991951870592454,
+          "recall": 0.9761783098523007,
+          "f1": 0.8788652171531848,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9970372611993479,
+          "recall": 0.9974949214782405,
+          "f1": 0.9972660388320127,
+          "samples": 1285288
+        }
+      },
+      "seconds": 507.0780000000001
+    },
+    {
+      "epoch": 21,
+      "loss": 0.05970817308770407,
+      "validation_score": 0.959720894254966,
+      "validation": {
+        "accuracy": 0.9803622430665023,
+        "macro_f1": 0.9650290952792698,
+        "mean_iou": 0.9346722110746206,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9772916089725838,
+            "recall": 0.9846540178571429,
+            "f1": 0.980958999305073,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9909752547307132,
+            "recall": 0.9835307714533372,
+            "f1": 0.9872389791183296,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9866185821391288,
+            "recall": 0.9896239885768682,
+            "f1": 0.988119000095048,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9710899103787222,
+            "recall": 0.9815180071590328,
+            "f1": 0.9762761126248863,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9939004050512271,
+            "recall": 0.993332380816307,
+            "f1": 0.9936163117526559,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9441453566621804,
+            "recall": 0.9206036745406824,
+            "f1": 0.9322259136212625,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8599333015721772,
+            "recall": 0.8640497845859263,
+            "f1": 0.8619866284622731,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9418777943368107,
+            "recall": 0.9634146341463414,
+            "f1": 0.9525244913338357,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.884053651266766,
+            "recall": 0.8651013562782558,
+            "f1": 0.8744748286282893,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.968584292146073,
+            "recall": 0.9647234678624813,
+            "f1": 0.966650024962556,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8972724577527423,
+            "recall": 0.9077684463107378,
+            "f1": 0.9024899358878784,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9865898376113148,
+            "recall": 0.986279849183075,
+            "f1": 0.9864348190436285,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.973222674600689,
+            "recall": 0.9770476340198082,
+            "f1": 0.9751314034674825,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964058843196255,
+            "recall": 0.995989639903083,
+            "f1": 0.9961977186311787,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.991960696739616,
+            "recall": 0.9884290164663997,
+            "f1": 0.9901917075345519,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9963600264725347,
+            "recall": 0.9965013474540211,
+            "f1": 0.9964306819524879,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9917959806664971,
+            "recall": 0.9907878017789072,
+            "f1": 0.9912916348843122,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9479472140762464,
+            "recall": 0.9356005788712012,
+            "f1": 0.9417334304442827,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9633140972794724,
+            "recall": 0.9633140972794724,
+            "f1": 0.9633140972794724,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9849209268113277,
+            "recall": 0.9777290982110259,
+            "f1": 0.9813118358373031,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9681185451279749,
+            "recall": 0.9679736605806645,
+            "f1": 0.9680460974332111,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9892840503183724,
+            "recall": 0.9871377653804432,
+            "f1": 0.9882097424759541,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9508016032064128,
+            "recall": 0.951946227929374,
+            "f1": 0.951373571285342,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9797395079594791,
+            "recall": 0.9871682706328375,
+            "f1": 0.983439860546194,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9957427373709364,
+            "recall": 0.996376575047333,
+            "f1": 0.9960595553742606,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8021969211032713,
+          "recall": 0.9737937075698956,
+          "f1": 0.8797054459526296,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9971100805467416,
+          "recall": 0.9974314399562466,
+          "f1": 0.9972707343628703,
+          "samples": 1285288
+        }
+      },
+      "seconds": 524.61
+    },
+    {
+      "epoch": 22,
+      "loss": 0.05966336750040908,
+      "validation_score": 0.9600067221825705,
+      "validation": {
+        "accuracy": 0.9804636898537605,
+        "macro_f1": 0.9654169387117848,
+        "mean_iou": 0.9353171177869222,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9772978959025471,
+            "recall": 0.9849330357142857,
+            "f1": 0.981100611450806,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9909726266744322,
+            "recall": 0.9832418376191852,
+            "f1": 0.9870920957215374,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9867160072113104,
+            "recall": 0.9899095668729176,
+            "f1": 0.9883102071849458,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.97074122236671,
+            "recall": 0.9815910585141354,
+            "f1": 0.9761359921542988,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.993993993993994,
+            "recall": 0.9931418774110587,
+            "f1": 0.9935677530017152,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.947403910991234,
+            "recall": 0.9219160104986877,
+            "f1": 0.934486198869305,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8682432432432432,
+            "recall": 0.8611775969363332,
+            "f1": 0.8646959865416968,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9487951807228916,
+            "recall": 0.9603658536585366,
+            "f1": 0.9545454545454547,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8898572501878287,
+            "recall": 0.863642992562345,
+            "f1": 0.8765541740674957,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9648721265797592,
+            "recall": 0.9662182361733931,
+            "f1": 0.9655447122087234,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8993748139327181,
+            "recall": 0.906118776244751,
+            "f1": 0.9027341999103541,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9866848395890123,
+            "recall": 0.9856514453288647,
+            "f1": 0.986167871738447,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9723351047202251,
+            "recall": 0.9779908819368024,
+            "f1": 0.9751547926953523,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.996322607605516,
+            "recall": 0.995989639903083,
+            "f1": 0.9961560959304755,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9907707975303928,
+            "recall": 0.9896369762858415,
+            "f1": 0.990203562340967,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9965951007282701,
+            "recall": 0.9963595101886435,
+            "f1": 0.9964772915336785,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9923581481245621,
+            "recall": 0.9900254129606099,
+            "f1": 0.9911904080399452,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9517139697751567,
+            "recall": 0.9341534008683068,
+            "f1": 0.9428519262369911,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9640940982253405,
+            "recall": 0.9629018961253092,
+            "f1": 0.963497628376985,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9867207672445591,
+            "recall": 0.9766338079591091,
+            "f1": 0.981651376146789,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9674140508221226,
+            "recall": 0.968572283747381,
+            "f1": 0.9679928208196231,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9885271317829457,
+            "recall": 0.9880675654734232,
+            "f1": 0.9882972952026661,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9497653051033657,
+            "recall": 0.9540529695024077,
+            "f1": 0.951904309093639,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9780600461893765,
+            "recall": 0.9880431612715077,
+            "f1": 0.9830262585231394,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.995662100456621,
+            "recall": 0.9965071489195012,
+            "f1": 0.9960844454595883,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8017023833366713,
+          "recall": 0.9740127016570552,
+          "f1": 0.8794972920122601,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9969642987871837,
+          "recall": 0.9975046878662396,
+          "f1": 0.9972344201191665,
+          "samples": 1285288
+        }
+      },
+      "seconds": 541.922
+    },
+    {
+      "epoch": 23,
+      "loss": 0.059683145861218284,
+      "validation_score": 0.9594757796662009,
+      "validation": {
+        "accuracy": 0.9802998142743433,
+        "macro_f1": 0.9647776359900466,
+        "mean_iou": 0.9342424436754433,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9794330183435241,
+            "recall": 0.9832589285714286,
+            "f1": 0.9813422445001393,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9906949694678686,
+            "recall": 0.9843975729557931,
+            "f1": 0.987536231884058,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9877213021130783,
+            "recall": 0.9878153260352214,
+            "f1": 0.987768311836657,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9746872272330521,
+            "recall": 0.9788881583753378,
+            "f1": 0.9767831760032073,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9935250428489811,
+            "recall": 0.9938562651807401,
+            "f1": 0.9936906264136568,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9343501326259946,
+            "recall": 0.9245406824146981,
+            "f1": 0.9294195250659629,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8422988505747127,
+            "recall": 0.8769746290090953,
+            "f1": 0.8592870544090055,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9446107784431138,
+            "recall": 0.961890243902439,
+            "f1": 0.9531722054380665,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.889039445950015,
+            "recall": 0.8611637742452968,
+            "f1": 0.8748796207126454,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9645771144278606,
+            "recall": 0.9660189337319383,
+            "f1": 0.9652974856858352,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8973029045643154,
+            "recall": 0.9080683863227355,
+            "f1": 0.9026535480023852,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9854632921982849,
+            "recall": 0.9869082530372852,
+            "f1": 0.9861852433281004,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9754794089908834,
+            "recall": 0.9756327621443169,
+            "f1": 0.9755560795409887,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964882943143812,
+            "recall": 0.9957389923970257,
+            "f1": 0.9961135024447324,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9927147239263804,
+            "recall": 0.987602517642571,
+            "f1": 0.9901520221818529,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9961243973910577,
+            "recall": 0.9964540683655619,
+            "f1": 0.9962892056063722,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.992548719908292,
+            "recall": 0.9901524777636594,
+            "f1": 0.9913491508173781,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9404547094911584,
+            "recall": 0.942836468885673,
+            "f1": 0.9416440831074978,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9564686737184703,
+            "recall": 0.9690849134377576,
+            "f1": 0.9627354627354627,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9838532110091743,
+            "recall": 0.9788243884629427,
+            "f1": 0.9813323572474377,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9631445980086194,
+            "recall": 0.9699191858724933,
+            "f1": 0.9665200208783834,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9882188807936754,
+            "recall": 0.9879125987912599,
+            "f1": 0.9880657160570365,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9552751135790005,
+            "recall": 0.9492375601926164,
+            "f1": 0.9522467669702612,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9814061592097618,
+            "recall": 0.9851268591426072,
+            "f1": 0.9832629893756368,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9956304110348426,
+            "recall": 0.9966866879937325,
+            "f1": 0.9961582695084054,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8000438850212443,
+          "recall": 0.9759106504124389,
+          "f1": 0.8792695225150173,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9966203365032918,
+          "recall": 0.9979148761622002,
+          "f1": 0.9972671862266186,
+          "samples": 1285288
+        }
+      },
+      "seconds": 569.61
+    },
+    {
+      "epoch": 24,
+      "loss": 0.059558471408459025,
+      "validation_score": 0.959811567870218,
+      "validation": {
+        "accuracy": 0.9804207700591513,
+        "macro_f1": 0.9652016582001477,
+        "mean_iou": 0.9349890513916422,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9778331947908008,
+            "recall": 0.9846540178571429,
+            "f1": 0.9812317530932853,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9904153354632588,
+            "recall": 0.9852643744582491,
+            "f1": 0.9878331402085747,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9865223993925588,
+            "recall": 0.9894336030461685,
+            "f1": 0.987975856660805,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9737166920787047,
+            "recall": 0.9796917232814669,
+            "f1": 0.9766950695506518,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9938530448870676,
+            "recall": 0.993332380816307,
+            "f1": 0.9935926446418789,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9442204301075269,
+            "recall": 0.9219160104986877,
+            "f1": 0.9329349269588313,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8515917602996255,
+            "recall": 0.8707515557683102,
+            "f1": 0.8610650887573963,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.951734539969834,
+            "recall": 0.961890243902439,
+            "f1": 0.9567854435178165,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8923868624186468,
+            "recall": 0.8598512469009771,
+            "f1": 0.8758169934640523,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9651533253683792,
+            "recall": 0.9660189337319383,
+            "f1": 0.9655859355545596,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8983630952380952,
+            "recall": 0.9053689262147571,
+            "f1": 0.9018524051389304,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9845559845559846,
+            "recall": 0.9881650607457059,
+            "f1": 0.9863572212639172,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9763630633469902,
+            "recall": 0.97406068228266,
+            "f1": 0.9752105138899818,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9962393448102959,
+            "recall": 0.995989639903083,
+            "f1": 0.9961144767077502,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9917724344664838,
+            "recall": 0.9886197469642063,
+            "f1": 0.9901935812531838,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9965008511443163,
+            "recall": 0.9963595101886435,
+            "f1": 0.9964301756542708,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9923630115191243,
+            "recall": 0.9906607369758577,
+            "f1": 0.9915111436111023,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9472527472527472,
+            "recall": 0.9356005788712012,
+            "f1": 0.9413906079359301,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9605749486652977,
+            "recall": 0.9641384995877988,
+            "f1": 0.9623534252211479,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9841911764705882,
+            "recall": 0.977364001460387,
+            "f1": 0.9807657080051292,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9672841350463102,
+            "recall": 0.9690212511224184,
+            "f1": 0.9681519138755982,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9892857142857143,
+            "recall": 0.9872927320626066,
+            "f1": 0.9882882184130924,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9472848208081008,
+            "recall": 0.9572632423756019,
+            "f1": 0.9522478918217653,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9805797101449275,
+            "recall": 0.9865850102070575,
+            "f1": 0.9835731937781653,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9957429456858587,
+            "recall": 0.9964255402493961,
+            "f1": 0.9960841260258774,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.800175617154603,
+          "recall": 0.9756429909725771,
+          "f1": 0.8792404008508212,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9967220471595953,
+          "recall": 0.997802562700211,
+          "f1": 0.997262012250177,
+          "samples": 1285288
+        }
+      },
+      "seconds": 600.063
+    },
+    {
+      "epoch": 25,
+      "loss": 0.05950687759889102,
+      "validation_score": 0.9597273932238093,
+      "validation": {
+        "accuracy": 0.9803232250714029,
+        "macro_f1": 0.9650211875167979,
+        "mean_iou": 0.9346612770181574,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9786229872293171,
+            "recall": 0.9835379464285714,
+            "f1": 0.9810743111605901,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9898314933178385,
+            "recall": 0.9843975729557931,
+            "f1": 0.987107054903665,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9877271429930549,
+            "recall": 0.9882912898619705,
+            "f1": 0.9880091358964598,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9724737413980442,
+            "recall": 0.9807144422529038,
+            "f1": 0.9765767076453045,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9937592301462531,
+            "recall": 0.9934752583702434,
+            "f1": 0.993617223968753,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9459824442943957,
+            "recall": 0.9192913385826772,
+            "f1": 0.9324459234608986,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8523206751054853,
+            "recall": 0.8702728578267114,
+            "f1": 0.8612032212221696,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9406528189910979,
+            "recall": 0.9664634146341463,
+            "f1": 0.9533834586466164,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8834547346514048,
+            "recall": 0.8667055563657576,
+            "f1": 0.8749999999999999,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9648651338708072,
+            "recall": 0.9660189337319383,
+            "f1": 0.9654416890747933,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8947835082015664,
+            "recall": 0.9080683863227355,
+            "f1": 0.9013770003721623,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9848579782790309,
+            "recall": 0.987746124842899,
+            "f1": 0.9862999372516209,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.976074295608374,
+            "recall": 0.9748467222134884,
+            "f1": 0.9754601226993865,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9957400601403275,
+            "recall": 0.995989639903083,
+            "f1": 0.9958648343845287,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9912727736017327,
+            "recall": 0.9893190921228304,
+            "f1": 0.9902949692939192,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9965479737078545,
+            "recall": 0.9963595101886435,
+            "f1": 0.9964537330370229,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9920473342664461,
+            "recall": 0.9906607369758577,
+            "f1": 0.9913535507661008,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9471188913202042,
+            "recall": 0.9395803183791607,
+            "f1": 0.9433345441336725,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9617126389460683,
+            "recall": 0.9629018961253092,
+            "f1": 0.9623069001029866,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9863619609288611,
+            "recall": 0.976998904709748,
+            "f1": 0.9816581071166545,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9701156329779246,
+            "recall": 0.9667764142472314,
+            "f1": 0.9684431451915148,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9888250814837809,
+            "recall": 0.9872927320626066,
+            "f1": 0.9880583126550869,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.955045964238812,
+            "recall": 0.9484349919743178,
+            "f1": 0.9517289978356067,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.980836236933798,
+            "recall": 0.9851268591426072,
+            "f1": 0.9829768659973811,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9956457215544937,
+            "recall": 0.9964745054514592,
+            "f1": 0.9960599411030533,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8022123361789106,
+          "recall": 0.9740856996861085,
+          "f1": 0.8798338443279596,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9971634737438241,
+          "recall": 0.9973777248222517,
+          "f1": 0.9972705877757487,
+          "samples": 1285288
+        }
+      },
+      "seconds": 630.797
+    },
+    {
+      "epoch": 26,
+      "loss": 0.05946143074046581,
+      "validation_score": 0.9594656470686089,
+      "validation": {
+        "accuracy": 0.980319323271893,
+        "macro_f1": 0.9647286171349367,
+        "mean_iou": 0.934167919654519,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9794387329813837,
+            "recall": 0.9835379464285714,
+            "f1": 0.9814840595851314,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.990689554844341,
+            "recall": 0.9838197052874892,
+            "f1": 0.9872426790374021,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9883709846535126,
+            "recall": 0.9870537839124227,
+            "f1": 0.9877119451324062,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.973777874627733,
+            "recall": 0.9793264665059537,
+            "f1": 0.976544289044289,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9931490556163471,
+            "recall": 0.9941896461399248,
+            "f1": 0.9936690784463061,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9295125164690382,
+            "recall": 0.9258530183727034,
+            "f1": 0.9276791584483893,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8463324048282266,
+            "recall": 0.8726663475347056,
+            "f1": 0.8592976667452275,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9404761904761905,
+            "recall": 0.9634146341463414,
+            "f1": 0.9518072289156626,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8895761049932116,
+            "recall": 0.8599970832725682,
+            "f1": 0.8745365564288893,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9663639085737099,
+            "recall": 0.9648231190832087,
+            "f1": 0.965592899172235,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.8953659976387249,
+            "recall": 0.9098680263947211,
+            "f1": 0.902558762273133,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9862870302522768,
+            "recall": 0.9868035190615836,
+            "f1": 0.9865452070572222,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.973688332028191,
+            "recall": 0.9773620499921396,
+            "f1": 0.9755217323081751,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964049828609648,
+            "recall": 0.9957389923970257,
+            "f1": 0.9960718763058923,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9929046279723855,
+            "recall": 0.9875389408099688,
+            "f1": 0.9902145156663373,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9962183880879225,
+            "recall": 0.9964067892771027,
+            "f1": 0.9963125797759183,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9931179506786465,
+            "recall": 0.9901524777636594,
+            "f1": 0.9916329971685808,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9414104882459313,
+            "recall": 0.9417510853835022,
+            "f1": 0.9415807560137456,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9583843329253366,
+            "recall": 0.9682605111294311,
+            "f1": 0.9632971088784088,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.983492296404989,
+            "recall": 0.9788243884629427,
+            "f1": 0.981152790484904,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9671347475351061,
+            "recall": 0.9688715953307393,
+            "f1": 0.9680023923444976,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9895881895881896,
+            "recall": 0.9868278320161166,
+            "f1": 0.9882060831781503,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9519703198636318,
+            "recall": 0.9524478330658106,
+            "f1": 0.952209016598967,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9797336421540244,
+            "recall": 0.9868766404199475,
+            "f1": 0.9832921691123057,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9956133198525815,
+            "recall": 0.9964908271854802,
+            "f1": 0.996051880251244,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8009431323182672,
+          "recall": 0.9753509988563642,
+          "f1": 0.8795848282369464,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9966250158507204,
+          "recall": 0.9978611610282053,
+          "f1": 0.9972427053696483,
+          "samples": 1285288
+        }
+      },
+      "seconds": 659.313
+    },
+    {
+      "epoch": 27,
+      "loss": 0.05943441293586831,
+      "validation_score": 0.9594621541563678,
+      "validation": {
+        "accuracy": 0.9803310286704228,
+        "macro_f1": 0.964683130023263,
+        "mean_iou": 0.9341085561336717,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9767570558937465,
+            "recall": 0.9849330357142857,
+            "f1": 0.9808280077799388,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9909778812572759,
+            "recall": 0.9838197052874892,
+            "f1": 0.9873858199217052,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9872611464968153,
+            "recall": 0.98857686815802,
+            "f1": 0.9879185692541858,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9717076700434153,
+            "recall": 0.9810066476733144,
+            "f1": 0.9763350176305936,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9943236023659607,
+            "recall": 0.992760870600562,
+            "f1": 0.9935416219823169,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9366666666666666,
+            "recall": 0.9219160104986877,
+            "f1": 0.9292328042328043,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8337874659400545,
+            "recall": 0.8788894207754907,
+            "f1": 0.8557445816825915,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9433681073025335,
+            "recall": 0.9649390243902439,
+            "f1": 0.9540316503391109,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8970048899755502,
+            "recall": 0.8560595012396092,
+            "f1": 0.8760540258189687,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.959163543105149,
+            "recall": 0.9690084703537618,
+            "f1": 0.9640608734447033,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9072164948453608,
+            "recall": 0.8974205158968206,
+            "f1": 0.902291917973462,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9845608178593782,
+            "recall": 0.988479262672811,
+            "f1": 0.9865161492630918,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9775989903770311,
+            "recall": 0.9742178902688257,
+            "f1": 0.9759055118110237,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9965719063545151,
+            "recall": 0.9958225415657114,
+            "f1": 0.9961970830373188,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9922762670751947,
+            "recall": 0.9883018628011953,
+            "f1": 0.990285077241599,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9961716608375083,
+            "recall": 0.9965013474540211,
+            "f1": 0.996336476872533,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9922993699484504,
+            "recall": 0.9905972045743329,
+            "f1": 0.9914475566718596,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9420499818906194,
+            "recall": 0.941027496382055,
+            "f1": 0.9415384615384615,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9593262119967132,
+            "recall": 0.9624896949711459,
+            "f1": 0.9609053497942386,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9838591342626559,
+            "recall": 0.9791894852135816,
+            "f1": 0.9815187557182068,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9675635276532137,
+            "recall": 0.9687219395390602,
+            "f1": 0.9681423870774752,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9906643846273534,
+            "recall": 0.9866728653339532,
+            "f1": 0.988664596273292,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9490833001195695,
+            "recall": 0.9555577849117175,
+            "f1": 0.9523095380923815,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9811430229184799,
+            "recall": 0.9862933799941674,
+            "f1": 0.9837114601512507,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9955497595566061,
+            "recall": 0.9968009401318796,
+            "f1": 0.9961749569784607,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8023733638021929,
+          "recall": 0.9739883689807042,
+          "f1": 0.8798909698408511,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9972217068192694,
+          "recall": 0.9973093601062583,
+          "f1": 0.9972655315367225,
+          "samples": 1285288
+        }
+      },
+      "seconds": 680.047
+    },
+    {
+      "epoch": 28,
+      "loss": 0.05938368977619967,
+      "validation_score": 0.9598466985690587,
+      "validation": {
+        "accuracy": 0.9804519844552307,
+        "macro_f1": 0.9651605656673682,
+        "mean_iou": 0.9348959081139789,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9799610353465071,
+            "recall": 0.982421875,
+            "f1": 0.9811899122195904,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9898344467034563,
+            "recall": 0.9846865067899451,
+            "f1": 0.9872537659327926,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9864326375711575,
+            "recall": 0.989719181342218,
+            "f1": 0.988073176526491,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9733004425741856,
+            "recall": 0.9799839287018774,
+            "f1": 0.9766307513104252,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9938062794797274,
+            "recall": 0.9934276325189313,
+            "f1": 0.9936169199256896,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9473328831870358,
+            "recall": 0.9206036745406824,
+            "f1": 0.9337770382695507,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.850187265917603,
+            "recall": 0.8693154619435136,
+            "f1": 0.8596449704142011,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9419642857142857,
+            "recall": 0.9649390243902439,
+            "f1": 0.9533132530120482,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8930408472012102,
+            "recall": 0.8608721015021146,
+            "f1": 0.8766614687755253,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9625334522747547,
+            "recall": 0.967713004484305,
+            "f1": 0.9651162790697675,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9047475961538461,
+            "recall": 0.903119376124775,
+            "f1": 0.9039327529270489,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9858668341708543,
+            "recall": 0.986279849183075,
+            "f1": 0.9860732984293193,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9735109717868339,
+            "recall": 0.9764188020751454,
+            "f1": 0.9749627187818852,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9962384017386943,
+            "recall": 0.9957389923970257,
+            "f1": 0.9959886344643155,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9919005102040817,
+            "recall": 0.9888104774620129,
+            "f1": 0.9903530835110956,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9961251299499102,
+            "recall": 0.9966431847193986,
+            "f1": 0.9963840899959824,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9916703757868633,
+            "recall": 0.990851334180432,
+            "f1": 0.99126068579782,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9494320263832906,
+            "recall": 0.9374095513748191,
+            "f1": 0.9433824868013835,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9609695973705834,
+            "recall": 0.9641384995877988,
+            "f1": 0.9625514403292181,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9838354151359294,
+            "recall": 0.9777290982110259,
+            "f1": 0.980772752243179,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9672743574417214,
+            "recall": 0.9687219395390602,
+            "f1": 0.9679976072977419,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9897419956481194,
+            "recall": 0.9868278320161166,
+            "f1": 0.9882827655777141,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9466322785437953,
+            "recall": 0.9573635634028892,
+            "f1": 0.9519676791859943,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9817020040662213,
+            "recall": 0.9857101195683873,
+            "f1": 0.9837019790454016,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9958565113130291,
+            "recall": 0.996392896781354,
+            "f1": 0.9961246318400248,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.802489926023937,
+          "recall": 0.9740127016570552,
+          "f1": 0.8799709819956473,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9972894037665078,
+          "recall": 0.9971335651222751,
+          "f1": 0.9972114783559931,
+          "samples": 1285288
+        }
+      },
+      "seconds": 700.407
+    },
+    {
+      "epoch": 29,
+      "loss": 0.059367296055232714,
+      "validation_score": 0.9598744485030969,
+      "validation": {
+        "accuracy": 0.9804988060493499,
+        "macro_f1": 0.965140335500278,
+        "mean_iou": 0.9348247187402806,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9780859916782247,
+            "recall": 0.9838169642857143,
+            "f1": 0.980943107525386,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.990395809080326,
+            "recall": 0.9832418376191852,
+            "f1": 0.9868058576192548,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9880952380952381,
+            "recall": 0.9876249405045217,
+            "f1": 0.9878600333253987,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9739901191514094,
+            "recall": 0.9793264665059537,
+            "f1": 0.9766510035333114,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9931497074354217,
+            "recall": 0.9942848978425489,
+            "f1": 0.9937169784378123,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9380413057961359,
+            "recall": 0.9238845144356955,
+            "f1": 0.9309090909090909,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8500931098696461,
+            "recall": 0.8741024413595021,
+            "f1": 0.8619306112815671,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9408284023668639,
+            "recall": 0.9695121951219512,
+            "f1": 0.954954954954955,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.9011056511056511,
+            "recall": 0.855767828496427,
+            "f1": 0.877851746577904,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9625880718467797,
+            "recall": 0.966616841056303,
+            "f1": 0.9645982498011136,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9026905829596412,
+            "recall": 0.9056688662267547,
+            "f1": 0.9041772720467136,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9848579782790309,
+            "recall": 0.987746124842899,
+            "f1": 0.9862999372516209,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9757709251101322,
+            "recall": 0.9750039301996541,
+            "f1": 0.9753872768734764,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9962380872763752,
+            "recall": 0.9956554432283399,
+            "f1": 0.9959466800384439,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9929640527056416,
+            "recall": 0.986966749316549,
+            "f1": 0.9899563179542773,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.996783196934576,
+            "recall": 0.996217672923266,
+            "f1": 0.996500354693781,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9919221473095026,
+            "recall": 0.9907878017789072,
+            "f1": 0.9913546500540333,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9414316702819957,
+            "recall": 0.9421128798842258,
+            "f1": 0.9417721518987341,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.9535165723524657,
+            "recall": 0.9723825226710635,
+            "f1": 0.9628571428571429,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9817184643510055,
+            "recall": 0.9802847754654983,
+            "f1": 0.9810010960906101,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.963855421686747,
+            "recall": 0.9697695300808141,
+            "f1": 0.9668034315553897,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.989594657555521,
+            "recall": 0.9874476987447699,
+            "f1": 0.9885200124107973,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9502845163222522,
+            "recall": 0.9549558587479936,
+            "f1": 0.9526144608456342,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9816700610997964,
+            "recall": 0.9839603382910469,
+            "f1": 0.9828138654238275,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9953569450327457,
+            "recall": 0.9972089834824052,
+            "f1": 0.9962821035466776,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8032879022059857,
+          "recall": 0.9737693748935445,
+          "f1": 0.8803510933169079,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9971197875477188,
+          "recall": 0.9974216735682475,
+          "f1": 0.9972707077118376,
+          "samples": 1285288
+        }
+      },
+      "seconds": 720.875
+    },
+    {
+      "epoch": 30,
+      "loss": 0.05922512681898447,
+      "validation_score": 0.9597451037892343,
+      "validation": {
+        "accuracy": 0.9803349304699327,
+        "macro_f1": 0.9650691750416861,
+        "mean_iou": 0.9346911846877454,
+        "parts": 9424,
+        "faces": 256292,
+        "per_class": {
+          "chamfer": {
+            "precision": 0.9778147531891292,
+            "recall": 0.9838169642857143,
+            "f1": 0.9808066759388038,
+            "faces": 3584
+          },
+          "through_hole": {
+            "precision": 0.9904041872637395,
+            "recall": 0.9841086391216411,
+            "f1": 0.9872463768115942,
+            "faces": 3461
+          },
+          "triangular_passage": {
+            "precision": 0.9879036098676064,
+            "recall": 0.9873393622084722,
+            "f1": 0.9876214054465816,
+            "faces": 10505
+          },
+          "rectangular_passage": {
+            "precision": 0.9726086956521739,
+            "recall": 0.9804952881875959,
+            "f1": 0.9765360689730438,
+            "faces": 13689
+          },
+          "6sides_passage": {
+            "precision": 0.9931467732724157,
+            "recall": 0.9938562651807401,
+            "f1": 0.9935013925587374,
+            "faces": 20997
+          },
+          "triangular_through_slot": {
+            "precision": 0.9398395721925134,
+            "recall": 0.9225721784776902,
+            "f1": 0.9311258278145695,
+            "faces": 1524
+          },
+          "rectangular_through_slot": {
+            "precision": 0.8613485280151947,
+            "recall": 0.868358066060316,
+            "f1": 0.8648390941597138,
+            "faces": 2089
+          },
+          "circular_through_slot": {
+            "precision": 0.9420505200594353,
+            "recall": 0.9664634146341463,
+            "f1": 0.9541008276899924,
+            "faces": 656
+          },
+          "rectangular_through_step": {
+            "precision": 0.8842840166369578,
+            "recall": 0.8681639200816683,
+            "f1": 0.8761498270660092,
+            "faces": 6857
+          },
+          "2sides_through_step": {
+            "precision": 0.9602806046833317,
+            "recall": 0.9685102142501245,
+            "f1": 0.9643778527485611,
+            "faces": 10035
+          },
+          "slanted_through_step": {
+            "precision": 0.9023220973782772,
+            "recall": 0.9032693461307738,
+            "f1": 0.9027954732818706,
+            "faces": 6668
+          },
+          "Oring": {
+            "precision": 0.9867910682461474,
+            "recall": 0.9858609132802681,
+            "f1": 0.986325771467491,
+            "faces": 9548
+          },
+          "blind_hole": {
+            "precision": 0.9735275689223057,
+            "recall": 0.9770476340198082,
+            "f1": 0.9752844252648096,
+            "faces": 6361
+          },
+          "triangular_pocket": {
+            "precision": 0.9964052833974252,
+            "recall": 0.9958225415657114,
+            "f1": 0.9961138272533534,
+            "faces": 11969
+          },
+          "rectangular_pocket": {
+            "precision": 0.9922099482791648,
+            "recall": 0.987920401805582,
+            "f1": 0.9900605288308377,
+            "faces": 15729
+          },
+          "6sides_pocket": {
+            "precision": 0.9963124054462935,
+            "recall": 0.9963595101886435,
+            "f1": 0.9963359572607144,
+            "faces": 21151
+          },
+          "circular_end_pocket": {
+            "precision": 0.9917318577879539,
+            "recall": 0.9906607369758577,
+            "f1": 0.9911960080094079,
+            "faces": 15740
+          },
+          "rectangular_blind_slot": {
+            "precision": 0.9449106165632981,
+            "recall": 0.9370477568740955,
+            "f1": 0.940962761126249,
+            "faces": 2764
+          },
+          "v_circular_end_blind_slot": {
+            "precision": 0.959049959049959,
+            "recall": 0.9653751030502885,
+            "f1": 0.9622021364009861,
+            "faces": 2426
+          },
+          "h_circular_end_blind_slot": {
+            "precision": 0.9856406480117821,
+            "recall": 0.977364001460387,
+            "f1": 0.9814848762603118,
+            "faces": 2739
+          },
+          "triangular_blind_step": {
+            "precision": 0.9692883895131086,
+            "recall": 0.9682729721640227,
+            "f1": 0.9687804147637942,
+            "faces": 6682
+          },
+          "circular_blind_step": {
+            "precision": 0.9880694143167028,
+            "recall": 0.9882225321555865,
+            "f1": 0.9881459673045634,
+            "faces": 6453
+          },
+          "rectangular_blind_step": {
+            "precision": 0.9547291835084882,
+            "recall": 0.9478330658105939,
+            "f1": 0.9512686266612967,
+            "faces": 9968
+          },
+          "round": {
+            "precision": 0.9811265969802555,
+            "recall": 0.9854184893554973,
+            "f1": 0.9832678597410156,
+            "faces": 3429
+          },
+          "stock": {
+            "precision": 0.9955822900365154,
+            "recall": 0.9968172618659006,
+            "f1": 0.9961993932078426,
+            "faces": 61268
+          }
+        },
+        "bottom": {
+          "precision": 0.8011915710344276,
+          "recall": 0.9751076720928535,
+          "f1": 0.8796356253086759,
+          "samples": 256292
+        },
+        "edge": {
+          "precision": 0.9967220471595953,
+          "recall": 0.997802562700211,
+          "f1": 0.997262012250177,
+          "samples": 1285288
+        }
+      },
+      "seconds": 744.4530000000001
+    }
+  ],
+  "seconds": 794.8910000000001,
+  "split": "Same feature-multiset hash family holdouts as previous corpus; no random view leakage",
+  "targets": "External feature semantic, instance membership and bottom labels; construction stock negatives separate",
+  "global_precision_gate": false,
+  "initialization": "..\\study\\ai-full-corpus-2026-09-30\\feature-geometric\\initial-state.pt",
+  "actual_mfcad_aux_geometry": true,
+  "learning_rate": 0.00025
+}

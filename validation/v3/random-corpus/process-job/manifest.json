@@ -1,0 +1,27 @@
+{
+  "python312": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python312_executable": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_sha256": {
+    "amdfm\\processes.py": "49974870ff83ca05b01d09ca6b55b8593a38ce4c55ab7ca8017083a5fc38180f",
+    "tests_v3\\test_processes.py": "cc6f11363daa1cf592f6029335c4729020dab9ef95adde2f08de0c2c99857337"
+  },
+  "tests": {
+    "python312": {
+      "passed": 18,
+      "seconds": 13.72
+    },
+    "python313": {
+      "passed": 18,
+      "seconds": 14.04
+    },
+    "integration312": {
+      "passed": 44,
+      "seconds": 43.03
+    }
+  },
+  "before_probe": "../final-code-review-02/results.json",
+  "after_probe": "../final-code-review-03/results.json",
+  "python313": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "python313_executable": "C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\study\\random-shape-audit\\process-job-validation-01\\venv313\\Scripts\\python.exe"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="15" skipped="0" tests="44" time="161.181" timestamp="2026-09-29T13:42:22.439928+09:00" hostname="DESKTOP-TNRADE4"><testcase classname="tests_v3.test_compact_am" name="test_optional_external_helper_is_closed_and_local_wall_card_is_actionable" time="15.459"><failure message="KeyError: 'highlight_finding'">tests_v3\test_compact_am.py:81: in test_optional_external_helper_is_closed_and_local_wall_card_is_actionable
+    assert app.selectbox(key='highlight_finding').value == 'wall'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'highlight_finding'</failure></testcase><testcase classname="tests_v3.test_compact_am" name="test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis" time="7.386"><failure message="KeyError: 'learned_review'">tests_v3\test_compact_am.py:104: in test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis
+    assert item(before, 'wall')['state'] == 'confirmed'
+           ^^^^^^^^^^^^^^^^^^^^
+tests_v3\test_compact_am.py:44: in item
+    return next(x for x in report['learned_review']['items'] if x['finding_id'] == finding_id)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'learned_review'</failure></testcase><testcase classname="tests_v3.test_compact_am" name="test_worker_timeout_stays_unknown_and_refreshes_export_without_returning_to_actions" time="12.031" /><testcase classname="tests_v3.test_compact_am" name="test_input_defect_is_visible_before_learned_missing_condition_cards" time="0.353"><failure message="KeyError: 'highlight_finding'">tests_v3\test_compact_am.py:189: in test_input_defect_is_visible_before_learned_missing_condition_cards
+    assert app.selectbox(key='highlight_finding').value == 'input'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'highlight_finding'</failure></testcase><testcase classname="tests_v3.test_app" name="test_initial_wall_is_bounded_and_manual_retry_gets_full_budget" time="0.410"><failure message="KeyError: 'machine_MEX'">tests_v3\test_app.py:22: in test_initial_wall_is_bounded_and_manual_retry_gets_full_budget
+    app.text_input(key='machine_MEX').set_value('initial-wall-budget-test').run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'machine_MEX'</failure></testcase><testcase classname="tests_v3.test_app" name="test_complete_design_workflow_and_stale_results" time="5.175"><failure message="AssertionError: assert ElementList()&#10; +  where ElementList() = AppTest(\n    _script_path='C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\app.py',\n    default_timeout=45,\n    ...       }\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).metric">tests_v3\test_app.py:42: in test_complete_design_workflow_and_stale_results
+    assert app.metric
+E   AssertionError: assert ElementList()
+E    +  where ElementList() = AppTest(\n    _script_path='C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\app.py',\n    default_timeout=45,\n    ...       }\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).metric</failure></testcase><testcase classname="tests_v3.test_app" name="test_wall_review_stays_attached_and_exportable" time="2.887" /><testcase classname="tests_v3.test_app" name="test_design_comparison_and_cura_example_workflow" time="11.636" /><testcase classname="tests_v3.test_app" name="test_custom_direction_comparison_application_and_stale_exports" time="17.344" /><testcase classname="tests_v3.test_app" name="test_non_fdm_sections_work_and_exports_preserve_measurements[VPP]" time="6.064" /><testcase classname="tests_v3.test_app" name="test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_POLYMER]" time="6.271" /><testcase classname="tests_v3.test_app" name="test_non_fdm_sections_work_and_exports_preserve_measurements[PBF_METAL]" time="5.942" /><testcase classname="tests_v3.test_app" name="test_event_section_default_and_switch_keep_result_method_visible" time="5.142" /><testcase classname="tests_v3.test_app" name="test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile" time="5.705"><failure message="assert False&#10; +  where False = any(&lt;generator object test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000183AEFCB9F0&gt;)">tests_v3\test_app.py:182: in test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile
+    ???
+E   assert False
+E    +  where False = any(&lt;generator object test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000183AEFCB9F0&gt;)</failure></testcase><testcase classname="tests_v3.test_app" name="test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart" time="6.423"><failure message="KeyError: 'am_learned_wall'">tests_v3\test_app.py:212: in test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart
+    assert fresh['sections']['profile']==app.session_state['report']['profile']
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'am_learned_wall'</failure></testcase><testcase classname="tests_v3.test_process_ui" name="test_process_calibrations_are_independent_and_survive_round_trips" time="0.247"><failure message="KeyError: 'machine_MEX'">tests_v3\test_process_ui.py:47: in test_process_calibrations_are_independent_and_survive_round_trips
+    def test_process_calibrations_are_independent_and_survive_round_trips():
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'machine_MEX'</failure></testcase><testcase classname="tests_v3.test_process_ui" name="test_non_mex_review_does_not_offer_filament_gcode_analysis[VPP]" time="3.399" /><testcase classname="tests_v3.test_process_ui" name="test_non_mex_review_does_not_offer_filament_gcode_analysis[PBF_POLYMER]" time="3.886" /><testcase classname="tests_v3.test_process_ui" name="test_non_mex_review_does_not_offer_filament_gcode_analysis[PBF_METAL]" time="4.399" /><testcase classname="tests_v3.test_review_inputs" name="test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result" time="6.191"><failure message="KeyError: 'highlight_finding'">tests_v3\test_review_inputs.py:43: in test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result
+    assert app.session_state['highlight_finding'] == 'wall'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'highlight_finding'</failure></testcase><testcase classname="tests_v3.test_review_inputs" name="test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result" time="7.167"><failure message="StopIteration">tests_v3\test_review_inputs.py:74: in test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result
+    app.button(key='cnc_start_from_model').click().run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   StopIteration</failure></testcase><testcase classname="tests_v3.test_decision_workflow" name="test_single_click_populates_details_and_keeps_wall_and_layers_on_first_screen" time="6.299"><failure message="KeyError: 'highlight_finding'">tests_v3\test_decision_workflow.py:27: in test_single_click_populates_details_and_keeps_wall_and_layers_on_first_screen
+    assert app.toggle(key='am_location_details').value is False
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'highlight_finding'</failure></testcase><testcase classname="tests_v3.test_decision_workflow" name="test_thin_feature_is_selected_and_actionable_without_second_run" time="2.874"><failure message="KeyError: 'highlight_finding'">tests_v3\test_decision_workflow.py:45: in test_thin_feature_is_selected_and_actionable_without_second_run
+    assert not app.exception
+           ^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'highlight_finding'</failure></testcase><testcase classname="tests_v3.test_decision_workflow" name="test_app_recommendation_apply_is_stable_and_rebuilds_detail_context" time="0.903"><failure message="KeyError: 'overview_apply_recommendation'">tests_v3\test_decision_workflow.py:61: in test_app_recommendation_apply_is_stable_and_rebuilds_detail_context
+    app.checkbox(key='initial_wall').uncheck()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'overview_apply_recommendation'</failure></testcase><testcase classname="tests_v3.test_decision_workflow" name="test_calculation_failure_is_not_counted_as_geometric_candidate_and_html_matches" time="2.005"><failure message="assert ('종합 방향 제안' in '&lt;!doctype html&gt;&lt;html lang=&quot;ko&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=...quot;: &amp;quot;1.63.0&amp;quot;,\n    &amp;quot;cadquery-ocp-novtk&amp;quot;: &amp;quot;7.9.3.1.1&amp;quot;\n  }\n}&lt;/pre&gt;&lt;/details&gt;\n&lt;/html&gt;')">tests_v3\test_decision_workflow.py:90: in test_calculation_failure_is_not_counted_as_geometric_candidate_and_html_matches
+    plan=action_plan(report)
+E   assert ('종합 방향 제안' in '&lt;!doctype html&gt;&lt;html lang="ko"&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="viewport" content="width=device-width,initial-scale=...quot;: &amp;quot;1.63.0&amp;quot;,\n    &amp;quot;cadquery-ocp-novtk&amp;quot;: &amp;quot;7.9.3.1.1&amp;quot;\n  }\n}&lt;/pre&gt;&lt;/details&gt;\n&lt;/html&gt;')</failure></testcase><testcase classname="tests_v3.test_navigation_ux" name="test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis" time="3.673"><failure message="KeyError: 'next_review_action'">tests_v3\test_navigation_ux.py:32: in test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis
+    ???
+.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:310: in __call__
+    raise KeyError(key)
+E   KeyError: 'next_review_action'</failure></testcase><testcase classname="tests_v3.test_navigation_ux" name="test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting" time="8.595" /><testcase classname="tests_v3.test_workflow_ux" name="test_zero_quick_candidates_retains_wall_and_layer_pending_actions" time="0.035" /><testcase classname="tests_v3.test_workflow_ux" name="test_intentional_unlimited_build_space_is_not_an_unfinished_or_failed_check" time="0.037" /><testcase classname="tests_v3.test_workflow_ux" name="test_non_mex_does_not_require_a_mex_layer_check[VPP]" time="0.042" /><testcase classname="tests_v3.test_workflow_ux" name="test_non_mex_does_not_require_a_mex_layer_check[PBF_POLYMER]" time="0.040" /><testcase classname="tests_v3.test_workflow_ux" name="test_non_mex_does_not_require_a_mex_layer_check[PBF_METAL]" time="0.041" /><testcase classname="tests_v3.test_workflow_ux" name="test_completed_optional_sections_are_not_required_for_a_blanket_pass" time="0.041" /><testcase classname="tests_v3.test_workflow_ux" name="test_angle_boundary_does_not_lose_its_next_action_when_strict_candidates_are_empty" time="0.039" /><testcase classname="tests_v3.test_workflow_ux" name="test_recorded_wall_measured_without_criterion_is_still_actionable" time="0.035" /><testcase classname="tests_v3.test_workflow_ux" name="test_partial_wall_never_inherits_observed_finding_as_a_pass" time="0.032" /><testcase classname="tests_v3.test_workflow_ux" name="test_wall_criterion_clear_is_scoped_and_still_leaves_unrun_layers" time="0.038" /><testcase classname="tests_v3.test_workflow_ux" name="test_enabled_build_mismatch_is_prioritized_ahead_of_unrun_details" time="0.037" /><testcase classname="tests_v3.test_workflow_ux" name="test_absent_analytic_holes_does_not_demand_a_meaningless_hole_limit" time="0.042" /><testcase classname="tests_v3.test_workflow_ux" name="test_summary_does_not_mutate_audit_report" time="0.037" /><testcase classname="tests_v3.test_workflow_ux" name="test_direction_goal_ranking_respects_enabled_space_before_metric[\ub192\uc774\ub97c \ub0ae\ucd94\uae30-height_mm-values0-expected0]" time="0.001" /><testcase classname="tests_v3.test_workflow_ux" name="test_direction_goal_ranking_respects_enabled_space_before_metric[\ud558\ud5a5\uba74 \ud6c4\ubcf4 \uc904\uc774\uae30-overhang_projected_area_sum_mm2-values1-expected1]" time="0.001" /><testcase classname="tests_v3.test_workflow_ux" name="test_direction_goal_ranking_respects_enabled_space_before_metric[\ud3c9\ud3c9\ud55c \ubc14\ub2e5 \ub113\ud788\uae30-contact_triangle_area_mm2-values2-expected2]" time="0.001" /><testcase classname="tests_v3.test_workflow_ux" name="test_unmeasured_direction_metric_is_not_ranked_as_zero" time="0.001" /></testsuite></testsuites>

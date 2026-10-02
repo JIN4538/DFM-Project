@@ -1,0 +1,438 @@
+{
+  "accepted": [
+    {
+      "file": "cadquarry_bracket_bracket_462c.step",
+      "title": "브래킷 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "bracket_462c9e66_0690",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "59cdb4f3e826163fe5bfbeb14147bc01cd33b338be659fcfd844df93a75af2cc",
+      "family": "bracket",
+      "dimensions_mm": [
+        27.41,
+        31.02,
+        25.0
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"base_len\": {\"type\": \"float\", \"default\": 27.41, \"min\": 25.0, \"max\": 90.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Base leg length (mm)\"}, \"vert_len\": {\"type\": \"float\", \"default\": 25.0, \"min\": 25.0, \"max\": 90.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Vertical leg length (mm)\"}, \"bracket_w\": {\"type\": \"float\", \"default\": 31.02, \"min\": 15.0, \"max\": 60.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Width (mm)\"}, \"bracket_t\": {\"type\": \"float\", \"default\": 8.0, \"min\": 3.0, \"max\": 8.0, \"step\": 0.5, \"group\": \"Body\", \"label\": \"Thickness (mm)\"}, \"hole_d\": {\"type\": \"float\", \"default\": 4.3, \"min\": 3.0, \"max\": 10.0, \"step\": 0.1, \"group\": \"Holes\", \"label\": \"Hole diameter (mm)\"}, \"n_holes\": {\"type\": \"int\", \"default\": 1, \"min\": 1, \"max\": 3, \"step\": 1, \"group\": \"Holes\", \"label\": \"Holes per leg\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 10900.0,
+        "surface_area": 4040.0,
+        "principal_moments": [
+          1180000.0,
+          1230000.0,
+          1820000.0
+        ],
+        "n_faces": 9,
+        "n_edges": 21,
+        "n_vertices": 14
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_block_block_462c9d.step",
+      "title": "구멍·포켓 블록 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "block_462c9dd0_0540",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "d8f8a98c69384fa7c48e3cfe7a42058f43362080cc647a98fd0ced6337446939",
+      "family": "block",
+      "dimensions_mm": [
+        50.44,
+        25.9,
+        26.4
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"block_w\": {\"type\": \"float\", \"default\": 50.44, \"min\": 15.0, \"max\": 100.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Block width (mm)\"}, \"block_d\": {\"type\": \"float\", \"default\": 25.9, \"min\": 6.0, \"max\": 100.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Block depth (mm)\"}, \"block_h\": {\"type\": \"float\", \"default\": 26.4, \"min\": 4.5, \"max\": 200.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Block height (mm)\"}, \"hole_d\": {\"type\": \"float\", \"default\": 4.3, \"min\": 2.0, \"max\": 5.8, \"step\": 0.1, \"group\": \"Holes\", \"label\": \"Hole diameter (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 33000.0,
+        "surface_area": 7950.0,
+        "principal_moments": [
+          3710000.0,
+          8630000.0,
+          8750000.0
+        ],
+        "n_faces": 10,
+        "n_edges": 24,
+        "n_vertices": 16
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_plate_plate_462c9d.step",
+      "title": "구멍 패턴 판 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "plate_462c9d85_0465",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "b4a97a52a1185137451bcbce98f09847253c5a9bc8f9b5db723a5fce35f3b765",
+      "family": "plate",
+      "dimensions_mm": [
+        60.0,
+        46.6,
+        6.0
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"plate_w\": {\"type\": \"float\", \"default\": 60, \"min\": 20.0, \"max\": 120.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Plate width (mm)\"}, \"plate_d\": {\"type\": \"float\", \"default\": 46.6, \"min\": 8.0, \"max\": 120.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Plate depth (mm)\"}, \"thickness\": {\"type\": \"float\", \"default\": 6.0, \"min\": 2.0, \"max\": 12.0, \"step\": 0.5, \"group\": \"Body\", \"label\": \"Thickness (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 16800.0,
+        "surface_area": 6870.0,
+        "principal_moments": [
+          3090000.0,
+          5080000.0,
+          8070000.0
+        ],
+        "n_faces": 6,
+        "n_edges": 12,
+        "n_vertices": 8
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_enclosure_enclosure_46.step",
+      "title": "얇은 벽 케이스 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "enclosure_462c9d4d_0409",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "4b3c730817423bac6042983c08effc41e200e4691b836fed52a9982ccfe28fde",
+      "family": "enclosure",
+      "dimensions_mm": [
+        85.0,
+        69.8,
+        73.6
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"enc_w\": {\"type\": \"float\", \"default\": 85, \"min\": 30.0, \"max\": 120.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Enclosure width (mm)\"}, \"enc_d\": {\"type\": \"float\", \"default\": 69.8, \"min\": 12.0, \"max\": 120.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Enclosure depth (mm)\"}, \"enc_h\": {\"type\": \"float\", \"default\": 73.6, \"min\": 29.4, \"max\": 147.2, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Enclosure height (mm)\"}, \"wall_t\": {\"type\": \"float\", \"default\": 5.4, \"min\": 2.0, \"max\": 6.0, \"step\": 0.5, \"group\": \"Body\", \"label\": \"Wall thickness (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 138000.0,
+        "surface_area": 52800.0,
+        "principal_moments": [
+          165000000.0,
+          200000000.0,
+          217000000.0
+        ],
+        "n_faces": 11,
+        "n_edges": 24,
+        "n_vertices": 16
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_ribbed_ribbed_462c9.step",
+      "title": "리브 보강 판 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "ribbed_462c9ccd_0281",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "e85b059a14c5dddb143dbdb9aa46e8fb5f630632358845565ac5e616955af429",
+      "family": "ribbed",
+      "dimensions_mm": [
+        40.0,
+        36.2,
+        19.8
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"base_w\": {\"type\": \"float\", \"default\": 40, \"min\": 20.0, \"max\": 120.0, \"step\": 1.0, \"group\": \"Base\", \"label\": \"Base width (mm)\"}, \"base_d\": {\"type\": \"float\", \"default\": 36.2, \"min\": 15.0, \"max\": 120.0, \"step\": 1.0, \"group\": \"Base\", \"label\": \"Base depth (mm)\"}, \"base_t\": {\"type\": \"float\", \"default\": 4.0, \"min\": 2.0, \"max\": 15.0, \"step\": 0.5, \"group\": \"Base\", \"label\": \"Base thickness (mm)\"}, \"rib_count\": {\"type\": \"int\", \"default\": 2, \"min\": 2, \"max\": 8, \"step\": 1, \"group\": \"Ribs\", \"label\": \"Rib count\"}, \"rib_h\": {\"type\": \"float\", \"default\": 15.8, \"min\": 6.3, \"max\": 31.6, \"step\": 1.0, \"group\": \"Ribs\", \"label\": \"Rib height (mm)\"}, \"rib_t\": {\"type\": \"float\", \"default\": 5.0, \"min\": 1.0, \"max\": 12.5, \"step\": 0.5, \"group\": \"Ribs\", \"label\": \"Rib thickness (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 10800.0,
+        "surface_area": 5840.0,
+        "principal_moments": [
+          1440000.0,
+          2450000.0,
+          3140000.0
+        ],
+        "n_faces": 16,
+        "n_edges": 36,
+        "n_vertices": 24
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_flanged_flanged_462c.step",
+      "title": "플랜지 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "flanged_462c9ca5_0241",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "3ef2a5d51bcab5105af84a985dfa71cb790485ae42ea65bba817a10b2db2ecbd",
+      "family": "flanged",
+      "dimensions_mm": [
+        92.0,
+        92.0,
+        55.8
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"outer_d\": {\"type\": \"float\", \"default\": 38.77, \"min\": 20.0, \"max\": 100.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Outer diameter (mm)\"}, \"length\": {\"type\": \"float\", \"default\": 55.8, \"min\": 16.7, \"max\": 139.5, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Length (mm)\"}, \"inner_d\": {\"type\": \"float\", \"default\": 16.2, \"min\": 2.0, \"max\": 27.1, \"step\": 0.5, \"group\": \"Body\", \"label\": \"Bore diameter (mm)\"}, \"flange_d\": {\"type\": \"float\", \"default\": 92.0, \"min\": 50.4, \"max\": 116.3, \"step\": 1.0, \"group\": \"Flange\", \"label\": \"Flange diameter (mm)\"}, \"flange_h\": {\"type\": \"float\", \"default\": 6.9, \"min\": 2.1, \"max\": 22.3, \"step\": 0.5, \"group\": \"Flange\", \"label\": \"Flange height (mm)\"}, \"bolt_d\": {\"type\": \"float\", \"default\": 4.3, \"min\": 3.0, \"max\": 13.0, \"step\": 0.1, \"group\": \"Holes\", \"label\": \"Bolt hole diameter (mm)\"}, \"bolt_r\": {\"type\": \"float\", \"default\": 27.6, \"min\": 18.4, \"max\": 41.4, \"step\": 1.0, \"group\": \"Holes\", \"label\": \"Bolt circle radius (mm)\"}, \"n_bolts\": {\"type\": \"int\", \"default\": 6, \"min\": 3, \"max\": 12, \"step\": 1, \"group\": \"Holes\", \"label\": \"Number of bolts\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 91500.0,
+        "surface_area": 24100.0,
+        "principal_moments": [
+          56699999.99999999,
+          56699999.99999999,
+          58499999.99999999
+        ],
+        "n_faces": 12,
+        "n_edges": 27,
+        "n_vertices": 18
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_gear_gear_462c9c8.step",
+      "title": "기어 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "gear_462c9c8e_0218",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "9172be4f72d89c2bd6eeb7bacf8e1d502e434df6e51833708bec7437e83d3928",
+      "family": "gear",
+      "dimensions_mm": [
+        59.99911126050181,
+        57.902670178785996,
+        34.00000000000001
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"module\": {\"type\": \"float\", \"default\": 5.0, \"min\": 1.0, \"max\": 6.0, \"step\": 0.25, \"group\": \"Gear\", \"label\": \"Module (mm)\"}, \"teeth\": {\"type\": \"int\", \"default\": 10, \"min\": 10, \"max\": 40, \"step\": 1, \"group\": \"Gear\", \"label\": \"Number of teeth\"}, \"gear_w\": {\"type\": \"float\", \"default\": 34.0, \"min\": 13.6, \"max\": 85.0, \"step\": 1.0, \"group\": \"Gear\", \"label\": \"Face width (mm)\"}, \"bore_d\": {\"type\": \"float\", \"default\": 6.0, \"min\": 2.0, \"max\": 22.5, \"step\": 0.5, \"group\": \"Bore\", \"label\": \"Bore diameter (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 62700.0,
+        "surface_area": 14900.0,
+        "principal_moments": [
+          16900000.0,
+          16900000.0,
+          21700000.0
+        ],
+        "n_faces": 63,
+        "n_edges": 183,
+        "n_vertices": 122
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_revolved_revolved_462.step",
+      "title": "회전 형상 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "revolved_462c9f0f_0859",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "6470e0f34def398d17e83521b81d1a3fffb222c3a4e9a48bdc8213d664b5274b",
+      "family": "revolved",
+      "dimensions_mm": [
+        70.0,
+        70.0,
+        45.1
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"outer_d\": {\"type\": \"float\", \"default\": 70, \"min\": 6.0, \"max\": 80.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Outer diameter (mm)\"}, \"length\": {\"type\": \"float\", \"default\": 45.1, \"min\": 13.5, \"max\": 135.3, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Length (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 116000.0,
+        "surface_area": 20000.0,
+        "principal_moments": [
+          56499999.99999999,
+          56499999.99999999,
+          85000000.0
+        ],
+        "n_faces": 3,
+        "n_edges": 4,
+        "n_vertices": 3
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_swept_swept_462c9f.step",
+      "title": "곡선 경로 형상 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "swept_462c9f8b_0983",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "5c686e4916c7465bcb87f0349dfebe145a2b76ea1b82e9cd33a70f72a8c15a87",
+      "family": "swept",
+      "dimensions_mm": [
+        17.848059326473052,
+        14.399996275080476,
+        75.90113774825592
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"path_w\": {\"type\": \"float\", \"default\": 38.0, \"min\": 19.0, \"max\": 68.4, \"step\": 1.0, \"group\": \"Path\", \"label\": \"Path width (mm)\"}, \"path_h\": {\"type\": \"float\", \"default\": 75, \"min\": 37.5, \"max\": 135.0, \"step\": 1.0, \"group\": \"Path\", \"label\": \"Path length (mm)\"}, \"sweep_d\": {\"type\": \"float\", \"default\": 14.4, \"min\": 7.2, \"max\": 25.9, \"step\": 1.0, \"group\": \"Section\", \"label\": \"Section diameter (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 12000.0,
+        "surface_area": 3710.0,
+        "principal_moments": [
+          313000.0,
+          5840000.0,
+          5840000.0
+        ],
+        "n_faces": 3,
+        "n_edges": 3,
+        "n_vertices": 2
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_sketched_sketched_462.step",
+      "title": "스케치 돌출 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "sketched_462c9e88_0724",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "400607acfe49ed84f3601e493daf1fae3aa51720807824555bae65d0c8f4473e",
+      "family": "sketched",
+      "dimensions_mm": [
+        29.511,
+        29.511,
+        42.8
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"sk_r\": {\"type\": \"float\", \"default\": 15, \"min\": 7.5, \"max\": 27.0, \"step\": 1.0, \"group\": \"Sketch\", \"label\": \"Max radius (mm)\"}, \"sk_h\": {\"type\": \"float\", \"default\": 42.8, \"min\": 21.4, \"max\": 77.0, \"step\": 1.0, \"group\": \"Sketch\", \"label\": \"Height (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 5590.0,
+        "surface_area": 2810.0,
+        "principal_moments": [
+          230000.0,
+          1490000.0,
+          1490000.0
+        ],
+        "n_faces": 7,
+        "n_edges": 11,
+        "n_vertices": 6
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_compound_compound_462.step",
+      "title": "복합 형상 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "compound_462c9dfe_0586",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "f8634d8bc61648f689c40bef08663b8254eff4a3b416b6e5891755193b2ce43c",
+      "family": "compound",
+      "dimensions_mm": [
+        42.28,
+        42.28,
+        95.5
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"shaft_d\": {\"type\": \"float\", \"default\": 42.28, \"min\": 21.1, \"max\": 76.1, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Shaft diameter (mm)\"}, \"shaft_len\": {\"type\": \"float\", \"default\": 57.2, \"min\": 22.9, \"max\": 114.4, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Shaft length (mm)\"}, \"step_d\": {\"type\": \"float\", \"default\": 29.4, \"min\": 14.7, \"max\": 38.1, \"step\": 1.0, \"group\": \"Step\", \"label\": \"Step diameter (mm)\"}, \"step_len\": {\"type\": \"float\", \"default\": 38.3, \"min\": 11.5, \"max\": 95.8, \"step\": 1.0, \"group\": \"Step\", \"label\": \"Step length (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 106000.0,
+        "surface_area": 13900.0,
+        "principal_moments": [
+          20800000.0,
+          80200000.0,
+          80200000.0
+        ],
+        "n_faces": 5,
+        "n_edges": 6,
+        "n_vertices": 4
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_profiled_profiled_462.step",
+      "title": "프로파일 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "profiled_462c9dd2_0542",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "cd552a7187b472fe0464cbd9076363f36a9416a72aed166ff47b4a459d9f54a4",
+      "family": "profiled",
+      "dimensions_mm": [
+        14.34,
+        14.34,
+        121.4
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"outer_d\": {\"type\": \"float\", \"default\": 14.34, \"min\": 7.2, \"max\": 28.7, \"step\": 1.0, \"group\": \"Profile\", \"label\": \"Outer diameter (mm)\"}, \"length\": {\"type\": \"float\", \"default\": 121.4, \"min\": 36.4, \"max\": 364.2, \"step\": 5.0, \"group\": \"Body\", \"label\": \"Length (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 13100.0,
+        "surface_area": 8370.0,
+        "principal_moments": [
+          403000.0,
+          11599999.999999998,
+          11599999.999999998
+        ],
+        "n_faces": 3,
+        "n_edges": 4,
+        "n_vertices": 3
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "cadquarry_lofted_lofted_462c9.step",
+      "title": "로프트 형상 · CadQuarry",
+      "dataset": "CadQuarry",
+      "source_id": "lofted_462c9f2d_0889",
+      "source_url": "https://huggingface.co/datasets/jacobjennings/cadquarry",
+      "license": "CC0-1.0",
+      "sha256": "1f11406034478d56fe2aa5914fb951241f67ba638c0bbe918bc5b39ea54dffb9",
+      "family": "lofted",
+      "dimensions_mm": [
+        43.12491620228581,
+        43.10983240457162,
+        47.7
+      ],
+      "cad_volume_mm3": null,
+      "params": "{\"loft_base\": {\"type\": \"float\", \"default\": 43.14, \"min\": 21.6, \"max\": 69.0, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Base size (mm)\"}, \"loft_top\": {\"type\": \"float\", \"default\": 19.2, \"min\": 7.7, \"max\": 51.8, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Top size (mm)\"}, \"loft_h\": {\"type\": \"float\", \"default\": 47.7, \"min\": 19.1, \"max\": 95.4, \"step\": 1.0, \"group\": \"Body\", \"label\": \"Height (mm)\"}, \"loft_bore_d\": {\"type\": \"float\", \"default\": 8.9, \"min\": 2.0, \"max\": 15.4, \"step\": 0.5, \"group\": \"Holes\", \"label\": \"Bore diameter (mm)\"}}",
+      "source_signature": {
+        "version": 2,
+        "volume": 38000.0,
+        "surface_area": 8140.0,
+        "principal_moments": [
+          6360000.0,
+          9460000.0,
+          9460000.0
+        ],
+        "n_faces": 8,
+        "n_edges": 18,
+        "n_vertices": 12
+      },
+      "split": "test",
+      "purpose": "독립 공개 CAD 시연; 학습 제외 형상"
+    },
+    {
+      "file": "nist_am_test_artifact_1.step",
+      "title": "NIST 적층제조 시험 형상",
+      "dataset": "NIST",
+      "source_url": "https://www.nist.gov/system/files/documents/2017/10/19/nist_test_artifact_ver3b.zip",
+      "source_page": "https://www.nist.gov/el/intelligent-systems-division-73500/production-systems-group/nist-additive-manufacturing-test",
+      "original_filename": "NIST Test Artifact_ver3b.step",
+      "license": "U.S. Government public domain; acknowledge NIST",
+      "sha256": "74e88ac8e49031a8708bf201447b9a2f68223afae807d38614b9938cc967f97e",
+      "archive_sha256": "ee18b7ff5051614d58eca15fa1aafccbdde493648b52bb3e22cca39d7cf77c37",
+      "dimensions_mm": [
+        141.4213562373095,
+        141.42135623730954,
+        17.0
+      ],
+      "purpose": "공개 시험 형상 시연"
+    }
+  ],
+  "rejected": []
+}

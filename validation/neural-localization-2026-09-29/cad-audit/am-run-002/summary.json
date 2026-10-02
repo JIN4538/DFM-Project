@@ -1,0 +1,50 @@
+{
+  "schema": "neural-cad-integration/1",
+  "mode": "am",
+  "started_utc": "2026-09-29T06:36:52.695820+00:00",
+  "python": "3.12.14",
+  "source_hashes": {
+    "scripts/audit_neural_cad.py": "393d3101e14e953bb1025b1ea14ca0d46ad8411b25ca64bced9e47af8fd64953",
+    "amdfm/analysis.py": "be11350875703db1e160f9d1e822defac402b66bf1906de6774a7af910ee6740",
+    "amdfm/orientation.py": "fb15a853da4326395b792c95923862561bd5c9714cc6b26ecb1043a374110fae",
+    "amdfm/recommendation.py": "29db01ce58ae2dfd6b4939196a7cf274e64057edc084ae0ac86b67d65abcb5d1",
+    "amdfm/profiles.py": "1edf267ce9a12977080bf66e1cd36ab25ed85735fa2158530a8ee98f4985272b",
+    "amdfm/models.py": "bf2f4af6b68c18ead77550a0e1923ed62d116b143d255b6e9be4654f9aad0c99",
+    "amdfm/io.py": "2b673fa45cc914020ed35f67847526f3dae2f5b3b7ec7393cc3d697d4ca72c84",
+    "dfm/plan_learning.py": "39cc9cf68655bf95864fbdc290d685db128e9dbdf219e2f4762e5cdd35914b8e",
+    "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+    "data/models/plan_ranker_v1.json": "1410bf301e9228873aa1bbac6e2a1ea3f54b9807b2d37471a890636bff9c15d2",
+    "data/models/plan_ranker_v1.manifest.json": "973138d781e48ade688e28c31eccec2aa6617a7f52167114922070e84c2b3b0e",
+    "amdfm/neural_orientation.py": "1919e374ae85153797db68440a0b00b2669dc364392cd9d12c9091b16de61c96",
+    "amdfm/ai_search.py": "ec4cbf2c4b371d3d1912f75d3e0bbd3e2fd2309e71951e9334343aef33c56485",
+    "data/models/neural_orientation_v1.json": "38b1a7c479f5f33d7375310ab1f2a722289ddd884593af15de37a72d78c61e34",
+    "data/models/neural_orientation_v1.manifest.json": "86828872bce4374d3127269f7973d3d8a8a878463077fc5e92306e57eeaf20bd"
+  },
+  "script_sha256": "393d3101e14e953bb1025b1ea14ca0d46ad8411b25ca64bced9e47af8fd64953",
+  "model_count": 47,
+  "personal_preferences": "disabled; isolated nonexistent audit path",
+  "requested_ids": null,
+  "cnc_approaches": "positive Z",
+  "geometry_scope": "STEP files imported through production loader; no training or modification",
+  "exact_scope": "Separate geometry recomputation; not independent validation of all geometry formulas",
+  "build_volume": "unlimited",
+  "cnc_visibility": "not run; unknown coverage must remain unresolved",
+  "elapsed_seconds": 311.2145873999998,
+  "cases": 188,
+  "states": {
+    "passed": 188
+  },
+  "source_unchanged": true,
+  "final_selection_comparison": {
+    "equal": 105,
+    "better": 19,
+    "unavailable": 64
+  },
+  "search_status": {
+    "complete": 155,
+    "unavailable": 33
+  },
+  "proposal_checks": 1860,
+  "failures": [],
+  "status": "passed"
+}

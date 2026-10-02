@@ -1,0 +1,47 @@
+{
+  "seed": 2026093049,
+  "episodes": 12000,
+  "test_count": 70,
+  "source_files": {
+    "scripts/train_rl_planner.py": "2e0a348a1008cc59e16f68cdd38b46061184d5f4eff17f1dffa94e0d9fc2fe79",
+    "dfm/rl_planner.py": "8b270337e0910d4ac64b8c524b4fdf0526395df7ef40ec2c293c426d63350661",
+    "dfm/machining.py": "2c5d84a39e83dad445ed6f1c1208eeb3c39781bdbd96e483caf38c8668ab5bdf",
+    "dfm/plan_learning.py": "39cc9cf68655bf95864fbdc290d685db128e9dbdf219e2f4762e5cdd35914b8e"
+  },
+  "source_sha256": "b4e958c872d4537d0a659dc92f65e4d8e258d150f92f017c9180c0495793694c",
+  "initialization": {
+    "model_sha256": "5b9329de329b9d12fc40db75ec2f8803a269810c9e622ff7cd835bb168c3b761",
+    "path": "validation/neural-localization-2026-09-29/rl/run-002/rl_planner_v1.json",
+    "previous_training": {
+      "method": "Double DQN",
+      "hidden_layers": [
+        64,
+        32
+      ],
+      "seed": 2026092987,
+      "episodes": 24000,
+      "transitions": 104944,
+      "gradient_updates": 26205,
+      "experience_replay_capacity": 20000,
+      "batch_size": 96,
+      "target_sync_updates": 100,
+      "gamma": 1.0,
+      "best_validation_episode": 23500,
+      "training_scenarios": 600,
+      "validation_scenarios": 80,
+      "heldout_families": [
+        5,
+        6
+      ],
+      "reward": "2*(conflicts_before-conflicts_after) - (policy_cost_after-policy_cost_before); finite-horizon undiscounted return",
+      "action_labels": false,
+      "elapsed_seconds": 478.92953910000006
+    },
+    "note": "continued network weights; fresh Adam, replay and scenario groups"
+  },
+  "selection": "validation mean conflicts then mean cost; no test checkpoint selection",
+  "heldout_families": [
+    5,
+    6
+  ]
+}

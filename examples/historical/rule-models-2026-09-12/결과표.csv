@@ -1,0 +1,19 @@
+﻿파일,목적,치수,목표 결과,설정,평가 상태,동반 점수 경고
+00_control.stl,정상 대조 큐브,10×10×10mm 정육면체,기본 활성 점수 규칙 모두 pass,기본값,eligible,
+01_wall_recommended.stl,권장 벽두께 미달,"두께 0.6mm, 폭 20mm, 높이 12mm",warn: 0.6 mm / 기준 1.0,기본값,eligible,종횡비 (Aspect Ratio)
+02_overhang.stl,오버행 면적 비율,40×40×1mm 지붕 아래 중앙 3×3mm 기둥; 지붕 아래 높이 8mm,warn: 46.04 % / 기준 30.0,기본값,eligible,지지구조물 부피 비율 (Support Volume Ratio)
+03_support_volume.stl,지지구조 추정 부피 비율,20×20×2mm 지붕 아래 3×3×40mm 기둥,warn: 3.086 ratio / 기준 0.5,기본값,eligible,
+04_aspect_ratio.stl,높은 종횡비,2×2×30mm 기둥; 높이/폭=15,warn: 15.0 ratio / 기준 10.0,기본값,eligible,
+05_build_margin.stl,장비 여유 부족,220×10×3mm; 250mm 장비 축 점유율 88%,warn: 88.0 % / 기준 80.0,기본값,eligible,
+06_min_feature.stl,작은 특징,10×8×1mm 베이스 위 두께 0.5mm의 빗살 6개,warn: 55.843 % / 기준 1.0,최소 특징 켜기,eligible,최소 벽두께 (Min Wall Thickness)
+07_staircase.stl,계단 효과,30×20×2mm 판을 Y축 기준 15° 기울인 형상; 최저점 Z=0,warn: 0.8427 ratio / 기준 0.5,기본값,eligible,오버행 면적 비율 (Overhang Area Ratio)
+08_thickness_gradient.stl,급격한 두께 변화,판 두께가 X=10mm에서 1mm→10mm로 변화,warn: 10.0 ratio / 기준 3.0,두께 변화 켜기,eligible,
+09_feature_gap.stl,좁은 형상 간격,높이 13mm의 두 벽 사이 간격 0.25mm; 베이스 연결,warn: 0.25 mm / 기준 0.5,기본값,eligible,
+10_horizontal_hole_NA.stl,수평 구멍—미구현 설명용,Y축 방향 지름 4mm 관통 구멍. 현재 규칙은 N/A이며 위반 판정 불가,N/A — 구멍은 있지만 자동 인식·위반 판정 미구현,기본값,eligible,
+11_wall_hard_gate.stl,최소 벽두께 게이트,"두께 0.3mm, 폭 20mm, 높이 12mm",최소 벽두께 fail; blocked,기본값,blocked,"최소 벽두께 (Min Wall Thickness), 종횡비 (Aspect Ratio)"
+12_build_size_gate.stl,장비 크기 초과,260×10×3mm; 250×250×250mm 장비 초과,빌드 볼륨 fail; blocked,기본값,blocked,빌드 볼륨 여유 (Build Volume Margin)
+13_trapped_cavity.stl,밀폐 내부 공동,20mm 정육면체 내부의 밀폐된 10mm 정육면체 공동. FDM 경고 정책,"FDM: 공동 검출, 게이트 pass(경고 정책); SLA 별도 실행: 공동 게이트 fail",기본값,eligible,
+14_mesh_integrity_FAIL.stl,메시 무결성 실패,10mm 큐브의 삼각형 하나를 삭제한 의도적 손상 파일,메시 무결성 fail; invalid_input,기본값,invalid_input,
+15_layer_thin.stl,단면 얇은 특징,베이스 위 0.3mm 벽; 선폭 0.4mm에서 검토,risk: 45개 층 / 총 55개 층,기본값,blocked,최소 벽두께 (Min Wall Thickness)
+16_layer_bridge.stl,단면 지지·브리지,15mm의 열린 간격을 건너는 두께 2mm 브리지; 아래 면 Z=10mm,risk: 1개 층 / 총 60개 층,기본값,eligible,
+17_single_layer.stl,한 층에만 나타나는 영역,기둥 측면에 Z=5.00~5.16mm 두께 0.16mm 돌출판; 0.2mm 중간 평면 중 Z=5.1만 통과,risk: 1개 층 / 총 50개 층,기본값,blocked,최소 벽두께 (Min Wall Thickness)
