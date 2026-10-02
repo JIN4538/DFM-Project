@@ -47,7 +47,7 @@ def submit(app, label, report_key):
 
 def test_am_priority_change_refocuses_cached_geometry_but_keeps_manual_selection():
     app = open_app()
-    app.selectbox(key="cad_example").select("브래킷 · 두께 4 mm").run()
+    app.selectbox(key="demo_example").select("브래킷 · 두께 4 mm").run()
     app.selectbox(key="build_direction").select("-Z").run()
     app.number_input(key="wall_limit_MEX").set_value(5.)
     before = submit(app, "설계 검토", "report")
@@ -84,10 +84,10 @@ def test_am_priority_change_refocuses_cached_geometry_but_keeps_manual_selection
 def test_cnc_priority_change_refocuses_cached_geometry_but_keeps_manual_selection():
     app = open_app()
     app.selectbox(key="manufacturing_family").select("절삭가공").run()
-    app.selectbox(key="source").select("절삭 검증 형상").run()
+    app.selectbox(key="source").select("절삭 시연용 형상").run()
     cases = json.loads((ROOT / "examples/machining/manifest.json").read_text(encoding="utf-8"))
     title = next(row["title"] for row in cases if row["id"] == "05_side_hole")
-    app.selectbox(key="cnc_example").select(title).run()
+    app.selectbox(key="demo_example").select(title).run()
     app.number_input(key="cnc_diameter").set_value(4.)
     app.number_input(key="cnc_flute").set_value(8.)
     app.number_input(key="cnc_reach").set_value(10.)
@@ -106,7 +106,7 @@ def test_cnc_priority_change_refocuses_cached_geometry_but_keeps_manual_selectio
     app.selectbox(key="cnc_finding").select("cnc_holes").run()
 
     app.selectbox(key="advisor_priority_CNC").select("tool_access").run()
-    assert not app.get("download_button")
+    assert not [b for b in app.get("download_button") if b.key != "demo_download"]
     after = submit(app, "절삭 설계 검토", "cnc_report")
     assert after["model_fingerprint"] == before["model_fingerprint"]
     assert after["profile"] == before["profile"]

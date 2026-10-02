@@ -67,7 +67,7 @@ def test_optional_external_helper_is_closed_and_local_wall_card_is_actionable():
     assert app.button(key='advisor_interpret').disabled
     assert 'AI 미연결' not in '\n'.join(visible_text(app.main))
 
-    app.selectbox(key='cad_example').select('얇은 판 · 두께 0.3 mm').run()
+    app.selectbox(key='demo_example').select('얇은 판 · 두께 0.3 mm').run()
     app.number_input(key='wall_limit_MEX').set_value(1.)
     report = run_review(app)
     wall = item(report, 'wall')
@@ -103,7 +103,7 @@ def test_optional_external_helper_is_closed_and_local_wall_card_is_actionable():
 
 def test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis():
     app = open_app()
-    app.selectbox(key='cad_example').select('브래킷 · 두께 4 mm').run()
+    app.selectbox(key='demo_example').select('브래킷 · 두께 4 mm').run()
     app.selectbox(key='build_direction').select('-Z').run()
     app.number_input(key='wall_limit_MEX').set_value(5.)
     before = deepcopy(run_review(app))
@@ -135,7 +135,7 @@ def test_changed_priority_refocuses_local_conclusion_and_exports_same_analysis()
 
 def test_worker_timeout_stays_unknown_and_refreshes_export_without_returning_to_actions(monkeypatch):
     app = open_app()
-    app.selectbox(key='cad_example').select('얇은 판 · 두께 0.3 mm').run()
+    app.selectbox(key='demo_example').select('얇은 판 · 두께 0.3 mm').run()
     app.number_input(key='wall_limit_MEX').set_value(1.)
     before = deepcopy(run_review(app))
     assert item(before, 'wall')['state'] == 'confirmed'

@@ -41,7 +41,7 @@ def test_partial_manual_tool_is_preserved_and_auto_switch_invalidates_report():
     assert "tool_diameter_mm" not in report["tool_recommendation"]["automatic_fields"]
     assert {x.label: x.value for x in app.metric}["엔드밀 지름 · 입력"] == "2 mm"
     app.toggle(key="cnc_auto_tool").set_value(False).run()
-    assert not app.get("download_button")
+    assert not [b for b in app.get("download_button") if b.key != "demo_download"]
     report = _submit(app, diameter=2., flute=None, reach=None)
     assert report["profile"]["flute_length_mm"] is None
     assert report["profile"]["reach_mm"] is None
@@ -79,7 +79,7 @@ def test_automatic_policy_change_recomputes_without_replacing_manual_value():
     app = _open()
     _submit(app, diameter=None, flute=None, reach=None)
     app.number_input(key="cnc_auto_diameter_percent").set_value(50.).run()
-    assert not app.get("download_button")
+    assert not [b for b in app.get("download_button") if b.key != "demo_download"]
     report = _submit(app, diameter=None, flute=None, reach=None)
     assert report["profile"]["tool_diameter_mm"] == pytest.approx(1.5)
     report = _submit(app, diameter=2., flute=None, reach=None)

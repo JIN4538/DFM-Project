@@ -76,7 +76,7 @@ def test_changed_conditions_clear_old_result_and_restart_at_conclusion():
     assert app.get("plotly_chart")
     app.number_input(key="cnc_diameter").set_value(2.).run()
     assert not app.exception
-    assert not app.get("download_button")
+    assert not [b for b in app.get("download_button") if b.key != "demo_download"]
     report = _submit(app, diameter=2.)
     assert report["profile"]["tool_diameter_mm"] == 2.
     assert app.session_state["cnc_location_details"] is False

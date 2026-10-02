@@ -39,7 +39,7 @@ def test_optional_settings_explain_thresholds_and_hide_unused_build_dimensions()
 
 def test_conclusion_reaches_another_issue_in_one_click_and_keeps_ready_measurements():
     app = AppTest.from_file(str(ROOT/'app.py'), default_timeout=90).run()
-    app.selectbox(key='cad_example').select('수직 관통홀 · 지름 4 mm').run()
+    app.selectbox(key='demo_example').select('수직 관통홀 · 지름 4 mm').run()
     app.number_input(key='wall_limit_MEX').set_value(30.)
     app.number_input(key='hole_limit_MEX').set_value(5.)
     app.checkbox(key='neural_direction_search').uncheck()

@@ -28,6 +28,7 @@ from dfm.advisor_view import render_advisor, render_applied_context
 from dfm.learned_review import analyze_report
 from dfm.defaults import wall_default_value, wall_default_basis, wall_default_context
 from dfm.location_navigation import request_problem_location
+from dfm.demo_catalog import family_changed
 
 ROOT=Path(__file__).resolve().parent
 ENGINE_REVISION=code_digest()
@@ -158,77 +159,10 @@ def render_overview(overview, report):
 
 
 with st.sidebar:
-    family=st.selectbox("제조 공정",["적층제조","절삭가공"],key="manufacturing_family",persist_state="session")
+    family=st.selectbox("제조 공정",["적층제조","절삭가공"],key="manufacturing_family",persist_state="session",on_change=family_changed)
     st.subheader("검토할 형상")
-    local_test=Path.home()/"Desktop"/"무작위 형상 테스트"
-    if not local_test.is_dir():
-        local_test=ROOT/'examples/corpus'
-    inputs=["CAD 기준형상","내 파일","외부 STL 사례"]
-    if (ROOT/'examples/public_demo/manifest.json').exists():inputs.insert(1,'공개 STEP 시연')
-    if (ROOT/"examples/machining/manifest.json").exists():inputs.append("절삭 검증 형상")
-    if local_test.is_dir():inputs.append("검증용 예제")
-    if st.session_state.get('source')=='무작위 형상 테스트':st.session_state['source']='검증용 예제'
-    source=st.selectbox("입력",inputs,key="source")
-    data=None
-    if source=="CAD 기준형상":
-        manifest=json.loads((ROOT/"examples/cad/manifest.json").read_text(encoding="utf-8"))
-        choices={x["title"]:x for x in manifest}
-        title=st.selectbox("형상 선택",list(choices),index=6,key="cad_example")
-        item=choices[title]
-        path=ROOT/"examples/cad"/item["file"]
-        data,name=path.read_bytes(),path.name
-        st.caption("치수가 알려진 CAD 예제 · STEP 다운로드 가능")
-    elif source=='공개 STEP 시연':
-        manifest=json.loads((ROOT/'examples/public_demo/manifest.json').read_text(encoding='utf8'))
-        choices={x['title']:x for x in manifest}
-        title=st.selectbox('시연할 형상',list(choices),key='public_demo')
-        item=choices[title];path=ROOT/'examples/public_demo'/item['file']
-        data,name=path.read_bytes(),path.name
-        st.download_button('STEP 다운로드',data,file_name=name,mime='application/step',key='public_step_download')
-        with st.expander('형상 출처'):
-            st.markdown(f"[{item['dataset']}]({item['source_url']}) · {item['license']}")
-    elif source=="절삭 검증 형상":
-        manifest=json.loads((ROOT/"examples/machining/manifest.json").read_text(encoding="utf-8"))
-        for item in manifest:
-            item['path']=ROOT/'examples/machining'/item['file']
-        edit_folder=ROOT/'examples/learning_validation/corner_edits'
-        if (edit_folder/'manifest.json').exists():
-            labels={'triangular_pocket':'삼각 포켓','rectangular_pocket':'직사각 포켓','6sides_pocket':'육각 포켓'}
-            for item in json.loads((edit_folder/'manifest.json').read_text(encoding='utf8')):
-                manifest.append(dict(title=labels[item['feature']]+(' · 수정 전' if item['phase']=='before' else ' · 코너 R 1 mm 수정 후'),
-                    file=item['file'],path=edit_folder/item['file']))
-        compound_folder=ROOT/'examples/learning_validation/compound_edits'
-        for filename,label in (('three_pockets_before.step','3개 포켓 · 수정 전'),('three_pockets_after.step','3개 포켓 · 부위별 코너 수정 후')):
-            if (compound_folder/filename).exists():
-                manifest.append(dict(title=label,file=filename,path=compound_folder/filename))
-        hole_folder=ROOT/'examples/learning_validation/hole_review'
-        if (hole_folder/'manifest.json').exists():
-            for item in json.loads((hole_folder/'manifest.json').read_text(encoding='utf8')):
-                manifest.append(dict(title=item['title'],file=item['file'],path=hole_folder/item['file']))
-        choices={x["title"]:x for x in manifest}
-        title=st.selectbox("절삭 형상 선택",list(choices),key="cnc_example")
-        path=choices[title]['path']
-        data,name=path.read_bytes(),path.name
-        st.caption("치수가 알려진 절삭 CAD 예제")
-    elif source=="내 파일":
-        upload=st.file_uploader("STEP · STL · 3MF",type=["step","stp","stl","3mf"],key="model_upload")
-        if upload is not None:
-            data,name=upload.getvalue(),upload.name
-    elif source=="검증용 예제":
-        files=sorted(p for p in local_test.rglob("*") if p.suffix.lower() in (".step",".stp",".stl",".3mf"))
-        if files:
-            path=st.selectbox("형상 선택",files,format_func=lambda p:str(p.relative_to(local_test)),key="random_example")
-            data,name=path.read_bytes(),path.name
-            corpus_location='저장소에 포함된' if local_test==ROOT/'examples/corpus' else '바탕화면의'
-            st.caption(f"{corpus_location} {len(files)}개 형상")
-    else:
-        files=sorted((ROOT/"examples/external").glob("*.stl"))
-        if files:
-            path=st.selectbox("사례 선택",files,format_func=lambda p:p.name,key="external_example")
-            data,name=path.read_bytes(),path.name
-            st.caption("원래 치수 미확정 · 단위와 배율을 확인하세요.")
-        else:
-            st.info("내 파일에서 외부 STL을 업로드하세요.")
+    from dfm.demo_catalog import render_input
+    data,name=render_input(ROOT)
     unit,confirmed,target,deflection="mm",False,None,.05
     is_stl=data is not None and name.lower().endswith(".stl")
     if is_stl:

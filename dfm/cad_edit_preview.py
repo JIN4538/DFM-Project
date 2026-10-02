@@ -68,11 +68,26 @@ def render_preview(report, model, data, filename, revision):
     help_text = (f"날카로운 안쪽 코너를 반경 {edits[0]['radius']:g} mm로 둥글게 만든 STEP을 생성합니다."
                  if len(edits) == 1 else f"포켓 {len(edits)}개의 안쪽 코너를 각각 추천한 반경으로 수정합니다.")
     if not st.session_state.get('cnc_edit_preview_result') and launch.button(
-            '개선 형상 보기 · 코너 수정', key='cnc_create_edit_preview',
+            '추천 수정 적용·재검토', key='cnc_create_edit_preview',
             help=help_text):
         with st.spinner('추천 반경으로 CAD를 수정하고 검산하는 중…'):
             try:
                 modified, audit = cached_preview(data, request, revision)
+                from .edit_reinspection import compare_plan
+                audit['dimensional_reinspection'] = compare_plan(report, audit)
+                try:
+                    from .edit_learning import descriptor, features, predict, load_model
+                    recognition = report.get('external_feature_recognition', {})
+                    candidates = recognition.get('candidates', [])+recognition.get('geometry_candidates', [])
+                    measured = [m for c in candidates for m in c.get('measured_faces', [])]
+                    inputs = [features(descriptor(r['pocket'], measured), r['radius']) for r in edits]
+                    learner = load_model(); prediction = predict(inputs, learner)
+                    audit['learned_edit_assessment'] = dict(model_sha256=learner['sha256'],
+                        predicted_geometry_validity=prediction['validity'].tolist(),
+                        predicted_material_log_fraction=prediction['material'].tolist(),
+                        measured_values_used_for_acceptance=True)
+                except (OSError, ValueError, KeyError, StopIteration) as error:
+                    audit['learned_edit_assessment'] = dict(status='unavailable', reason=str(error))
                 st.session_state['cnc_edit_preview_result'] = (modified, audit)
                 launch.empty()
             except (OSError, ValueError) as error:
@@ -90,12 +105,24 @@ def render_preview(report, model, data, filename, revision):
                 st.write(str(error))
             return
         with st.container(border=True):
+            checked = audit['dimensional_reinspection']
+            st.success(f"수정 STEP 재검토 완료 · 치수 문제 {checked['before_conflicts']} → {checked['after_conflicts']}개")
+            st.caption('코너 반경·홈 깊이 재측정 · 원래 구멍과 바깥 크기 유지')
+            if checked['remaining']:
+                with st.expander('남아 있는 항목'):
+                    for item in checked['remaining']:
+                        st.write(item)
             focus = audit
             if audit.get('edited_pocket_count', 1) > 1:
                 selected = st.selectbox('살펴볼 수정 위치', range(len(audit['edits'])),
                     format_func=lambda i: f"포켓 {i+1} · 코너 반경 {audit['edits'][i]['after_corner_radius_mm']:g} mm",
                     key='cnc_edit_focus')
                 focus = audit['edits'][selected]
+            remeasured = next(r for r in audit['remeasurement']['pockets'] if r['floor_face_id_before'] == focus['source_floor_face_id'])
+            metrics = st.columns(3)
+            metrics[0].metric('안쪽 코너 반경', f"{remeasured['radius_before_mm']:g} → {remeasured['radius_after_mm']:g} mm")
+            metrics[1].metric('홈 깊이', f"{remeasured['depth_after_mm']:g} mm", '유지', delta_color='off')
+            metrics[2].metric('재료 부피 변화', f"+{audit['remeasurement']['material_change_percent']:.3g}%")
             left, right = st.columns(2)
             with left:
                 st.markdown('**수정 전 · 날카로운 코너**')
@@ -107,10 +134,12 @@ def render_preview(report, model, data, filename, revision):
             if audit.get('edited_pocket_count', 1) > 1:
                 st.caption(f"다운로드 STEP에는 포켓 {audit['edited_pocket_count']}개의 수정이 모두 반영됩니다.")
             st.download_button('코너를 수정한 STEP 다운로드', modified,
-                file_name=Path(filename).stem+'_corner_improved.step', mime='application/step', key='cnc_download_edit')
+                file_name=Path(filename).stem+'_코너개선.step', mime='application/step', key='cnc_download_edit')
             with st.expander('수정 검산'):
                 st.write(f"코너 {audit['modified_corner_edges']}곳 수정 · 바깥 크기 유지")
                 st.write(f"재료 부피 변화 {audit['measured_material_addition_mm3']:.4g} mm³ · 별도 기하 공식과 대조 완료")
+                st.json(dict(geometry=audit['remeasurement'], comparison=checked,
+                             learning=audit.get('learned_edit_assessment')), expanded=False)
 
 
 # Lazy decorated wrappers keep native/worker code usable without Streamlit.

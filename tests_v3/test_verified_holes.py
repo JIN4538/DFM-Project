@@ -162,8 +162,8 @@ def test_neural_memory_error_does_not_destroy_independent_native_dimensions(nati
 def test_packaged_hole_demo_is_reachable_from_the_normal_app():
     root=Path(__file__).resolve().parents[1]
     app=AppTest.from_file(str(root/'app.py'),default_timeout=90).run()
-    app.selectbox(key='source').select('절삭 검증 형상').run()
-    app.selectbox(key='cnc_example').select('분할된 구멍 3개 · 기울어진 형상').run()
+    app.selectbox(key='source').select('절삭 시연용 형상').run()
+    app.selectbox(key='demo_example').select('분할된 구멍 3개 · 기울어진 형상').run()
     app.selectbox(key='manufacturing_family').select('절삭가공').run()
     assert not app.exception and not app.error
     app.checkbox(key='cnc_visibility').uncheck().run()

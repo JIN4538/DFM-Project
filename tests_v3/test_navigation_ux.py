@@ -9,7 +9,7 @@ APP = Path(__file__).resolve().parents[1] / 'app.py'
 
 def test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis():
     app = AppTest.from_file(str(APP), default_timeout=60).run()
-    app.selectbox(key='cad_example').select('수직 관통홀 · 지름 4 mm').run()
+    app.selectbox(key='demo_example').select('수직 관통홀 · 지름 4 mm').run()
     # This focused navigation test deliberately uses the optional quick mode.
     # The automatic one-click flow has separate real-worker coverage.
     app.checkbox(key='initial_wall').uncheck()
@@ -48,7 +48,7 @@ def test_next_action_selects_the_requested_finding_after_detail_tab_reanalysis()
 
 def test_all_directions_exceeding_space_are_explained_and_clear_after_unlimiting():
     app = AppTest.from_file(str(APP), default_timeout=60).run()
-    app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+    app.selectbox(key='demo_example').select('직육면체 · 10×20×30 mm').run()
     app.checkbox(key='use_build_MEX').set_value(True).run()
     for axis in 'XYZ':
         app.number_input(key=f'build_{axis}_MEX').set_value(1.)

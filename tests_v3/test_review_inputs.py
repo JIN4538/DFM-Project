@@ -28,7 +28,7 @@ def open_app():
 
 def test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result():
     app = open_app()
-    app.selectbox(key='cad_example').select('얇은 판 · 두께 0.3 mm').run()
+    app.selectbox(key='demo_example').select('얇은 판 · 두께 0.3 mm').run()
     widget = app.number_input(key='wall_limit_MEX')
     assert widget.proto.form_id == ''
     widget.set_value(1.).run()
@@ -48,7 +48,7 @@ def test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result():
     app.number_input(key='wall_limit_MEX').set_value(.2).run()
     assert not app.exception
     assert not app.segmented_control  # A previous 1 mm result must disappear.
-    assert not app.get('download_button')
+    assert not [b for b in app.get('download_button') if b.key != 'demo_download']
     app.button(key='start_from_model').click().run()
     assert not app.exception
     current = app.session_state['report']
@@ -62,10 +62,10 @@ def test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result():
 def test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result():
     app = open_app()
     app.selectbox(key='manufacturing_family').select('절삭가공').run()
-    app.selectbox(key='source').select('절삭 검증 형상').run()
+    app.selectbox(key='source').select('절삭 시연용 형상').run()
     cases = json.loads((ROOT / 'examples/machining/manifest.json').read_text(encoding='utf-8'))
     title = next(x['title'] for x in cases if x['id'] == '02_narrow_deep_pocket')
-    app.selectbox(key='cnc_example').select(title).run()
+    app.selectbox(key='demo_example').select(title).run()
     for key, value in (('cnc_diameter', 4.), ('cnc_flute', 8.), ('cnc_reach', 10.)):
         widget = app.number_input(key=key)
         assert widget.proto.form_id == ''
@@ -84,7 +84,7 @@ def test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result():
 
     app.number_input(key='cnc_diameter').set_value(2.).run()
     assert not app.exception
-    assert not app.get('download_button')
+    assert not [b for b in app.get('download_button') if b.key != 'demo_download']
     assert not any(widget.key == 'cnc_finding' for widget in app.selectbox)
     app.button(key='cnc_start_from_model').click().run()
     assert not app.exception

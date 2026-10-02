@@ -183,10 +183,10 @@ def _open_rounded():
     root = Path(__file__).resolve().parents[1]
     app = AppTest.from_file(str(root / "app.py"), default_timeout=75).run()
     app.selectbox(key="manufacturing_family").select("절삭가공").run()
-    app.selectbox(key="source").select("절삭 검증 형상").run()
+    app.selectbox(key="source").select("절삭 시연용 형상").run()
     cases = json.loads((root / "examples/machining/manifest.json").read_text(encoding="utf-8"))
     title = next(row["title"] for row in cases if row["id"] == "03_rounded_pocket")
-    app.selectbox(key="cnc_example").select(title).run()
+    app.selectbox(key="demo_example").select(title).run()
     assert not app.exception
     return app
 

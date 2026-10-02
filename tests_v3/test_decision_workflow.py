@@ -16,9 +16,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_single_click_populates_details_and_reveals_wall_and_layers_on_request():
     app = AppTest.from_file(str(ROOT/'app.py'), default_timeout=90).run()
-    app.selectbox(key='cad_example').set_value('직육면체 · 10×20×30 mm').run()
+    app.selectbox(key='demo_example').set_value('직육면체 · 10×20×30 mm').run()
     app.button(key='start_from_model').click().run()
     assert not app.exception
+    assert not app.error, [item.value for item in app.error]
     report = app.session_state['report']
     assert report['details']['wall']['status']=='measured'
     assert report['details']['layers']['status']=='complete'
@@ -39,7 +40,7 @@ def test_single_click_populates_details_and_reveals_wall_and_layers_on_request()
 
 def test_thin_feature_is_selected_and_actionable_without_second_run():
     app = AppTest.from_file(str(ROOT/'app.py'), default_timeout=90).run()
-    app.selectbox(key='cad_example').set_value('얇은 판 · 두께 0.3 mm').run()
+    app.selectbox(key='demo_example').set_value('얇은 판 · 두께 0.3 mm').run()
     app.number_input(key='wall_limit_MEX').set_value(1.)
     app.button(key='start_from_model').click().run()
     assert not app.exception
@@ -57,7 +58,7 @@ def test_thin_feature_is_selected_and_actionable_without_second_run():
 
 def test_app_recommendation_apply_is_stable_and_rebuilds_detail_context():
     app = AppTest.from_file(str(ROOT/'app.py'), default_timeout=90).run()
-    app.selectbox(key='cad_example').set_value('직육면체 · 10×20×30 mm').run()
+    app.selectbox(key='demo_example').set_value('직육면체 · 10×20×30 mm').run()
     app.checkbox(key='initial_wall').uncheck()
     app.button(key='start_from_model').click().run()
     before = app.session_state['report']

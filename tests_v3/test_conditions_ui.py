@@ -149,7 +149,7 @@ def test_stale_database_blocks_review_until_reapply_or_clear(library, monkeypatc
 def test_cnc_application_keeps_mount_reach_unknown_and_changes_feature_comparison(library):
     app = AppTest.from_file(str(APP), default_timeout=90).run()
     app.selectbox(key="manufacturing_family").select("절삭가공").run()
-    app.selectbox(key="source").select("절삭 검증 형상").run()
+    app.selectbox(key="source").select("절삭 시연용 형상").run()
     app.number_input(key="cnc_reach").set_value(100.)
     _apply(app, "cnc-tool", "CNC")
     assert app.number_input(key="cnc_diameter").value == 16.

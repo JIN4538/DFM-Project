@@ -43,6 +43,8 @@ def main(folder):
             raise ValueError('Rounded CAD faces cannot be mapped for preview')
         if len(set(result['rounded_face_ids'])) != len(result['rounded_face_ids']):
             raise ValueError('Rounded face mapping overlaps between pocket edits')
+        from .edit_reinspection import inspect_export
+        result['remeasurement'] = inspect_export(shape, exported, request.get('pockets', [request]), result)
         result['before_sha256'] = hashlib.sha256((folder/'before.step').read_bytes()).hexdigest()
         (folder/'result.json').write_text(json.dumps(result, indent=2), encoding='utf8')
         return 0

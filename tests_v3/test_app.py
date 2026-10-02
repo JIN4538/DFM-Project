@@ -55,10 +55,10 @@ def test_complete_design_workflow_and_stale_results():
     assert app.session_state["report"]["current_orientation"]["direction"]==[0.,1.,0.]
     app.segmented_control(key="result_tab").set_value("근거·내보내기").run()
     assert not app.exception
-    assert len(app.get("download_button"))==4
+    assert len([b for b in app.get("download_button") if b.key != "demo_download"])==4
     app.selectbox(key="process").select("VPP").run()
     assert not app.exception
-    assert len(app.get("download_button"))==0
+    assert len([b for b in app.get("download_button") if b.key != "demo_download"])==0
 
 
 def test_wall_review_stays_attached_and_exportable():
@@ -69,18 +69,18 @@ def test_wall_review_stays_attached_and_exportable():
     assert not app.exception
     assert "wall" in app.session_state["report"]["details"]
     app.segmented_control(key="result_tab").set_value("근거·내보내기").run()
-    assert len(app.get("download_button"))==4
+    assert len([b for b in app.get("download_button") if b.key != "demo_download"])==4
 
 
 def test_design_comparison_and_cura_example_workflow():
     manifest=json.loads((APP.parent/"examples/cad/manifest.json").read_text(encoding="utf-8"))
     names={c["id"]:c["title"] for c in manifest}
     app=AppTest.from_file(str(APP),default_timeout=60).run()
-    app.selectbox(key="cad_example").select(names["02_thin_plate"]).run()
+    app.selectbox(key="demo_example").select(names["02_thin_plate"]).run()
     next(b for b in app.button if b.label == "설계 검토").click().run()
     app.segmented_control(key="result_tab").set_value("수정 전후").run()
     app.button(key="save_baseline").click().run()
-    app.selectbox(key="cad_example").select(names["14_thin_plate_improved"]).run()
+    app.selectbox(key="demo_example").select(names["14_thin_plate_improved"]).run()
     next(b for b in app.button if b.label == "설계 검토").click().run()
     app.segmented_control(key="result_tab").set_value("수정 전후").run()
     assert not app.exception
@@ -93,7 +93,7 @@ def test_design_comparison_and_cura_example_workflow():
     app.selectbox(key="gcode_example").select(path).run()
     assert not app.exception and not app.error
     assert app.select_slider(key="gcode_z").value==.2
-    assert len(app.get("download_button"))==2  # G-code JSON and optional calibration record template
+    assert len([b for b in app.get("download_button") if b.key != "demo_download"])==2  # G-code JSON and optional calibration record template
 
 
 def test_custom_direction_comparison_application_and_stale_exports():
@@ -117,9 +117,9 @@ def test_custom_direction_comparison_application_and_stale_exports():
     assert app.session_state["report"]["current_orientation"]["direction"]==pytest.approx(expected,abs=1e-14)
     assert app.number_input(key="build_tilt").value==pytest.approx(30.)
     app.segmented_control(key="result_tab").set_value("근거·내보내기").run()
-    assert len(app.get("download_button"))==4
+    assert len([b for b in app.get("download_button") if b.key != "demo_download"])==4
     app.number_input(key="build_tilt").set_value(35.).run()
-    assert not app.exception and len(app.get("download_button"))==0
+    assert not app.exception and len([b for b in app.get("download_button") if b.key != "demo_download"])==0
     next(b for b in app.button if b.label == "설계 검토").click().run()
     assert app.session_state["report"]["current_orientation"]["tilt_deg"]==pytest.approx(35.)
     app.segmented_control(key="result_tab").set_value("방향 비교").run()
@@ -156,7 +156,7 @@ def test_non_fdm_sections_work_and_exports_preserve_measurements(process):
     assert report["details"]["sections"]["complete_samples"]==8
     assert next(f for f in report["findings"] if f["id"]=="sections")["status"]=="observed"
     app.segmented_control(key="result_tab").set_value("근거·내보내기").run()
-    assert not app.exception and len(app.get("download_button"))==4
+    assert not app.exception and len([b for b in app.get("download_button") if b.key != "demo_download"])==4
 
 
 def test_event_section_default_and_switch_keep_result_method_visible():
@@ -219,7 +219,7 @@ def test_inline_wall_criterion_recomputes_and_does_not_reuse_old_profile():
 
 def test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart():
     app=AppTest.from_file(str(APP),default_timeout=90).run()
-    app.selectbox(key='cad_example').select('직육면체 · 10×20×30 mm').run()
+    app.selectbox(key='demo_example').select('직육면체 · 10×20×30 mm').run()
     next(b for b in app.button if b.label == "설계 검토").click().run()
     # This block meets the default wall criterion; its measurements remain
     # available even though it has no problem-location action in the summary.
@@ -235,4 +235,4 @@ def test_next_action_reaches_wall_and_zero_layers_have_no_flat_chart():
     assert len(app.get('plotly_chart'))==0
     assert next(x.value for x in app.dataframe if '층' in x.value.columns)['층'].iloc[0]==1
     app.segmented_control(key='result_tab').set_value('근거·내보내기').run()
-    assert len(app.get('download_button'))==4
+    assert len([b for b in app.get('download_button') if b.key != 'demo_download'])==4

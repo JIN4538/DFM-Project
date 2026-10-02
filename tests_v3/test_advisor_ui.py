@@ -93,7 +93,7 @@ def test_no_key_disables_ai_and_ordinary_reruns_never_make_requests(fake_ai):
 
 def test_ai_draft_requires_acceptance_and_changes_context_without_inventing_limits(fake_ai):
     app = open_app()
-    app.selectbox(key="cad_example").select("직육면체 · 10×20×30 mm").run()
+    app.selectbox(key="demo_example").select("직육면체 · 10×20×30 mm").run()
     before = deepcopy(am_review(app))
     interpret(app)
     assert len(fake_ai["calls"]) == 1
@@ -160,10 +160,10 @@ def test_failed_ai_removes_old_draft_without_echoing_provider_body_or_key(fake_a
 
 def test_priority_change_invalidates_result_and_recommendation_apply_preserves_it(fake_ai):
     app = open_app()
-    app.selectbox(key="cad_example").select("직육면체 · 10×20×30 mm").run()
+    app.selectbox(key="demo_example").select("직육면체 · 10×20×30 mm").run()
     before = deepcopy(am_review(app))
     app.selectbox(key="advisor_priority_MEX").select("height").run()
-    assert not app.segmented_control and not app.get("download_button")
+    assert not app.segmented_control and not [b for b in app.get("download_button") if b.key != "demo_download"]
     report = am_review(app)
     assert report["review_context"]["priority"] == "height"
     recommendation = report["orientation_recommendation"]
@@ -195,10 +195,10 @@ def test_ai_can_select_cnc_context_while_tool_dimensions_remain_user_inputs(fake
     assert app.number_input(key="cnc_diameter").value is None
     assert app.number_input(key="cnc_flute").value is None
     assert app.number_input(key="cnc_reach").value is None
-    app.selectbox(key="source").select("절삭 검증 형상").run()
+    app.selectbox(key="source").select("절삭 시연용 형상").run()
     cases = json.loads((ROOT / "examples/machining/manifest.json").read_text(encoding="utf-8"))
     title = next(row["title"] for row in cases if row["id"] == "02_narrow_deep_pocket")
-    app.selectbox(key="cnc_example").select(title).run()
+    app.selectbox(key="demo_example").select(title).run()
     app.number_input(key="cnc_diameter").set_value(4.)
     app.number_input(key="cnc_flute").set_value(8.)
     app.number_input(key="cnc_reach").set_value(10.)
@@ -254,7 +254,7 @@ def test_am_name_change_clears_old_source_limits_but_priority_only_keeps_them(fa
     assert app.number_input(key="wall_limit_MEX").value == 1.2
     assert app.number_input(key="hole_limit_MEX").value is None
     assert not app.checkbox(key="use_build_MEX").value
-    assert not app.segmented_control and not app.get("download_button")
+    assert not app.segmented_control and not [b for b in app.get("download_button") if b.key != "demo_download"]
     report = am_review(app)
     assert report["profile"]["machine"] == "다른 프린터"
     assert report["profile"]["build_volume_mm"] is None

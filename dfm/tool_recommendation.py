@@ -314,7 +314,9 @@ def review_with_tool_recommendation(model, profile, direction=(0, 0, 1), *, visi
     initial = review_machining(model, profile, direction, visibility=visibility)
     from .external_features_review import attach_external_features
     from .verified_holes import attach_verified_holes
+    from .verified_pockets import attach_verified_pockets
     attach_external_features(initial,model)
+    attach_verified_pockets(initial,model)
     attach_verified_holes(initial,model)
     recommendation = recommend_tool_dimensions(initial, model=model, diameter_fraction=diameter_fraction,
                                                 length_allowance_mm=length_allowance_mm)
@@ -327,6 +329,7 @@ def review_with_tool_recommendation(model, profile, direction=(0, 0, 1), *, visi
         result = initial
     if result is not initial:
         attach_external_features(result,model)
+        attach_verified_pockets(result,model)
         attach_verified_holes(result,model)
     recommendation["recomputed"] = True
     result["tool_recommendation"] = recommendation
