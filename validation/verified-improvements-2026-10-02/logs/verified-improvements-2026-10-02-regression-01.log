@@ -1,0 +1,118 @@
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 13%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 26%]
+........................................................................ [ 30%]
+................................F....................................... [ 34%]
+........................................................................ [ 39%]
+........................................................................ [ 43%]
+........................................................................ [ 47%]
+........................................................................ [ 52%]
+........................................................................ [ 56%]
+........................................................................ [ 60%]
+........................................................................ [ 65%]
+........................................................................ [ 69%]
+........................................................................ [ 73%]
+......................................................FF................ [ 78%]
+........................................................................ [ 82%]
+........................................................................ [ 86%]
+........................................................................ [ 91%]
+........................................................................ [ 95%]
+........................................................................ [100%]
+================================== FAILURES ===================================
+_ test_single_click_populates_details_and_reveals_wall_and_layers_on_request __
+
+    def test_single_click_populates_details_and_reveals_wall_and_layers_on_request():
+        app = AppTest.from_file(str(ROOT/'app.py'), default_timeout=90).run()
+        app.selectbox(key='demo_example').set_value('직육면체 · 10×20×30 mm').run()
+        app.button(key='start_from_model').click().run()
+        assert not app.exception
+        report = app.session_state['report']
+>       assert report['details']['wall']['status']=='measured'
+               ^^^^^^^^^^^^^^^^^
+E       KeyError: 'details'
+
+tests_v3\test_decision_workflow.py:23: KeyError
+---------------------------- Captured stderr call -----------------------------
+2026-10-02 13:54:27.438 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+____ test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result _____
+
+    def test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result():
+        app = open_app()
+        app.selectbox(key='demo_example').select('얇은 판 · 두께 0.3 mm').run()
+        widget = app.number_input(key='wall_limit_MEX')
+        assert widget.proto.form_id == ''
+        widget.set_value(1.).run()
+        assert not app.segmented_control
+        app.button(key='start_from_model').click().run()
+        assert not app.exception
+        report = app.session_state['report']
+        assert report['profile']['minimum_wall_mm'] == 1.
+        assert report['details']['wall']['profile'] == report['profile']
+        assert report['details']['wall']['measurements']['minimum_mm'] == pytest.approx(.3)
+        assert report['details']['wall']['measurements']['below_limit_face_indices']
+        assert app.session_state['highlight_finding'] == 'wall'
+        assert app.toggle(key='am_location_details').value is False
+        app.button(key='am_conclusion_location').click().run()
+        assert app.selectbox(key='highlight_finding').value == 'wall'
+    
+        app.number_input(key='wall_limit_MEX').set_value(.2).run()
+        assert not app.exception
+        assert not app.segmented_control  # A previous 1 mm result must disappear.
+>       assert not app.get('download_button')
+E       AssertionError: assert not [DownloadButton(key='demo_download', label='형상 다운로드')]
+E        +  where [DownloadButton(key='demo_download', label='형상 다운로드')] = get('download_button')
+E        +    where get = AppTest(\n    _script_path='C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\app.py',\n    default_timeout=90,\n    ...향 탐색 설정'\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).get
+
+tests_v3\test_review_inputs.py:51: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-10-02 14:00:43.927 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__ test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result ___
+
+    def test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result():
+        app = open_app()
+        app.selectbox(key='manufacturing_family').select('절삭가공').run()
+        app.selectbox(key='source').select('절삭 시연용 형상').run()
+        cases = json.loads((ROOT / 'examples/machining/manifest.json').read_text(encoding='utf-8'))
+        title = next(x['title'] for x in cases if x['id'] == '02_narrow_deep_pocket')
+        app.selectbox(key='demo_example').select(title).run()
+        for key, value in (('cnc_diameter', 4.), ('cnc_flute', 8.), ('cnc_reach', 10.)):
+            widget = app.number_input(key=key)
+            assert widget.proto.form_id == ''
+            widget.set_value(value).run()
+            assert not app.exception
+        app.button(key='cnc_start_from_model').click().run()
+        assert not app.exception
+        report = app.session_state['cnc_report']
+        assert next(x for x in app.expander if x.label == '검토 조건').proto.expanded is False
+        assert report['profile']['tool_diameter_mm'] == 4.
+        assert report['profile']['flute_length_mm'] == 8.
+        assert report['profile']['reach_mm'] == 10.
+        pocket = next(x for x in report['findings'] if x['id'] == 'cnc_rectangular_pockets')['measurements']['pockets'][0]
+        assert pocket['width_mm'] == pytest.approx(3.)
+        assert pocket['width_too_small'] is True
+    
+        app.number_input(key='cnc_diameter').set_value(2.).run()
+        assert not app.exception
+>       assert not app.get('download_button')
+E       AssertionError: assert not [DownloadButton(key='demo_download', label='형상 다운로드')]
+E        +  where [DownloadButton(key='demo_download', label='형상 다운로드')] = get('download_button')
+E        +    where get = AppTest(\n    _script_path='C:\\Users\\JIN\\Documents\\ChatGPT\\DFM\\DFM-Project\\app.py',\n    default_timeout=90,\n    ...       }\n                )\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).get
+
+tests_v3\test_review_inputs.py:87: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2026-10-02 14:00:53.048 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+============================== warnings summary ===============================
+tests/test_review.py::ReviewRegression::test_aabb_overlap_is_not_solid_overlap
+  C:\Users\JIN\Documents\ChatGPT\DFM\DFM-Project\.venv\Lib\site-packages\trimesh\triangles.py:302: RuntimeWarning: invalid value encountered in divide
+    center_mass = integrated[1:4] / volume
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\JIN\Documents\ChatGPT\DFM\study\verified-improvements-2026-10-02-regression-01.xml -
+=========================== short test summary info ===========================
+FAILED tests_v3/test_decision_workflow.py::test_single_click_populates_details_and_reveals_wall_and_layers_on_request
+FAILED tests_v3/test_review_inputs.py::test_am_sidebar_edit_applies_from_main_button_and_hides_stale_result
+FAILED tests_v3/test_review_inputs.py::test_cnc_sidebar_tool_edits_apply_from_main_button_and_hide_stale_result
+3 failed, 1653 passed, 1 warning in 1073.63s (0:17:53)
