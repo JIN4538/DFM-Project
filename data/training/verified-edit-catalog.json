@@ -1,0 +1,21 @@
+{
+  "schema": "dfm-independent-edit-training/1",
+  "dataset": "generated closed convex pockets and protected holes",
+  "external_raw_added": 0,
+  "original_CAD": 240,
+  "shape_families": 48,
+  "training_CAD": 120,
+  "validation_CAD": 60,
+  "test_CAD": 60,
+  "training_requests": 600,
+  "training_material_regression_valid_requests": 480,
+  "attempted_requests": 1200,
+  "actual_STEP_exports": 960,
+  "rejections_before_fillet": 240,
+  "expert_labels": 0,
+  "model": "data/models/cad_edit_surrogate_v1.json",
+  "model_sha256": "4b3100fdb24c7fc96044dcf204d746d6da2163013f54cb6f77855ef5578ae431",
+  "manifest": "validation/verified-improvements-2026-10-02/cad/manifest.json",
+  "labels": "validation/verified-improvements-2026-10-02/cad/labels.json",
+  "final_ranking_adopted": false
+}

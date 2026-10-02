@@ -1,0 +1,4215 @@
+{
+  "model_sha256": "4b3100fdb24c7fc96044dcf204d746d6da2163013f54cb6f77855ef5578ae431",
+  "test_CAD": 60,
+  "test_records": 300,
+  "surrogate_metrics": {
+    "validity_accuracy": 0.94,
+    "false_valid": 0,
+    "false_rejected": 18,
+    "material_log_fraction_mae": 0.19257182935556566
+  },
+  "methods": {
+    "rules_1": {
+      "cases": 60,
+      "valid": 60,
+      "optimal": 60,
+      "queries": 60,
+      "mean_seconds": 0.31030621666577646,
+      "failure_or_abstention": 0
+    },
+    "learned_verified_1": {
+      "cases": 60,
+      "valid": 60,
+      "optimal": 43,
+      "queries": 60,
+      "mean_seconds": 0.3081374283360977,
+      "failure_or_abstention": 0
+    },
+    "rules_2": {
+      "cases": 60,
+      "valid": 60,
+      "optimal": 60,
+      "queries": 90,
+      "mean_seconds": 0.46791541499987943,
+      "failure_or_abstention": 0
+    },
+    "learned_verified_2": {
+      "cases": 60,
+      "valid": 60,
+      "optimal": 60,
+      "queries": 90,
+      "mean_seconds": 0.46820578833576293,
+      "failure_or_abstention": 0
+    },
+    "rules_3": {
+      "cases": 60,
+      "valid": 60,
+      "optimal": 60,
+      "queries": 90,
+      "mean_seconds": 0.46791541499987943,
+      "failure_or_abstention": 0
+    },
+    "learned_verified_3": {
+      "cases": 60,
+      "valid": 60,
+      "optimal": 60,
+      "queries": 90,
+      "mean_seconds": 0.46820578833576293,
+      "failure_or_abstention": 0
+    },
+    "learned_only": {
+      "cases": 60,
+      "valid": 60,
+      "optimal": 43,
+      "queries": 0,
+      "mean_seconds": 0.000290373335883487,
+      "failure_or_abstention": 0
+    }
+  },
+  "results": [
+    {
+      "case_id": "polygon3-holes0-aspect2.6-0",
+      "family": "polygon3-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.20063209999352694
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.20104000001447275
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.20063209999352694
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.20104000001447275
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.20063209999352694
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.20104000001447275
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00040790002094581723
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes0-aspect2.6-1",
+      "family": "polygon3-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.22681559997727163
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2270680999790784
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.22681559997727163
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2270680999790784
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.22681559997727163
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2270680999790784
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002525000018067658
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes0-aspect2.6-2",
+      "family": "polygon3-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21036440000170842
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21060200000647455
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21036440000170842
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21060200000647455
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21036440000170842
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21060200000647455
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002376000047661364
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes0-aspect2.6-3",
+      "family": "polygon3-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21094439999433234
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21115969997481443
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21094439999433234
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21115969997481443
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21094439999433234
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.21115969997481443
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00021529998048208654
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes0-aspect2.6-4",
+      "family": "polygon3-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.19800870001199655
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.198239100020146
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.19800870001199655
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.198239100020146
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.19800870001199655
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.198239100020146
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00023040000814944506
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes1-aspect2.6-0",
+      "family": "polygon3-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.19904249999672174
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.19934829999692738
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3889768999943044
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.38928269999451004
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3889768999943044
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.38928269999451004
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.000305800000205636
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes1-aspect2.6-1",
+      "family": "polygon3-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2513357999850996
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2516324000025634
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4924998999631498
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4927964999806136
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4924998999631498
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4927964999806136
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002966000174637884
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes1-aspect2.6-2",
+      "family": "polygon3-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.1723264000029303
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.1726154000207316
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3486648000252899
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3489538000430912
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3486648000252899
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3489538000430912
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002890000178012997
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes1-aspect2.6-3",
+      "family": "polygon3-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26247900002636015
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26276000004145317
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5291057000285946
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5293867000436876
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5291057000285946
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5293867000436876
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00028100001509301364
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes1-aspect2.6-4",
+      "family": "polygon3-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2479522000066936
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24823440000182018
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.47722719999728724
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4775093999924138
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.47722719999728724
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4775093999924138
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00028219999512657523
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes2-aspect2.6-0",
+      "family": "polygon3-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.22822129999985918
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2284464999975171
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.22822129999985918
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2284464999975171
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.22822129999985918
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2284464999975171
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00022519999765791
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes2-aspect2.6-1",
+      "family": "polygon3-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24079309997614473
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24101069997414015
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24079309997614473
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24101069997414015
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24079309997614473
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24101069997414015
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002175999979954213
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes2-aspect2.6-2",
+      "family": "polygon3-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.23138620000099763
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.23160460000508465
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.23138620000099763
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.23160460000508465
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.23138620000099763
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.23160460000508465
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00021840000408701599
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes2-aspect2.6-3",
+      "family": "polygon3-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2678842000022996
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26809190001222305
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2678842000022996
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26809190001222305
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2678842000022996
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26809190001222305
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002077000099234283
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes2-aspect2.6-4",
+      "family": "polygon3-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27130530000431463
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27152490001753904
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27130530000431463
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27152490001753904
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27130530000431463
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27152490001753904
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00021960001322440803
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes3-aspect2.6-0",
+      "family": "polygon3-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2526221000007354
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25290900000254624
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4708016999938991
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.47108859999570996
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4708016999938991
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.47108859999570996
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002869000018108636
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes3-aspect2.6-1",
+      "family": "polygon3-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2931436000217218
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2934228000231087
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5811156000127085
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5813948000140954
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5811156000127085
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5813948000140954
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002792000013869256
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes3-aspect2.6-2",
+      "family": "polygon3-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25991170000634156
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2601911000092514
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4939843000029214
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4942637000058312
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4939843000029214
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4942637000058312
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00027940000290982425
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes3-aspect2.6-3",
+      "family": "polygon3-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28854280000086874
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28885490001994185
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.568151300016325
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5684634000353981
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.568151300016325
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5684634000353981
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0003121000190731138
+        }
+      }
+    },
+    {
+      "case_id": "polygon3-holes3-aspect2.6-4",
+      "family": "polygon3-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27289310001651756
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.27318089999607764
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5484926000062842
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5487803999858443
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5484926000062842
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5487803999858443
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002877999795600772
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes0-aspect2.6-0",
+      "family": "polygon4-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.1765640999947209
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.17681390000507236
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.1765640999947209
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.17681390000507236
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.1765640999947209
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.17681390000507236
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00024980001035146415
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes0-aspect2.6-1",
+      "family": "polygon4-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2850404999917373
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28527029999531806
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2850404999917373
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28527029999531806
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2850404999917373
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28527029999531806
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00022980000358074903
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes0-aspect2.6-2",
+      "family": "polygon4-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.30386580000049435
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3041107000026386
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.30386580000049435
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3041107000026386
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.30386580000049435
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3041107000026386
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002449000021442771
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes0-aspect2.6-3",
+      "family": "polygon4-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31446009999490343
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31469420000212267
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31446009999490343
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31469420000212267
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31446009999490343
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31469420000212267
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00023410000721924007
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes0-aspect2.6-4",
+      "family": "polygon4-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28323489998001605
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2834551999985706
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28323489998001605
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2834551999985706
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28323489998001605
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2834551999985706
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002203000185545534
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes1-aspect2.6-0",
+      "family": "polygon4-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.23770209998474456
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 155.58412705185583,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.24894360001781024
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.48631149998982437
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4866457000025548
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.48631149998982437
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4866457000025548
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 155.58412705185583,
+          "seconds": 0.00033420001273043454
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes1-aspect2.6-1",
+      "family": "polygon4-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.32524850001209415
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 1482.1887157360907,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.320304600027157
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6452465000329539
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6455531000392511
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6452465000329539
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6455531000392511
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 1482.1887157360907,
+          "seconds": 0.0003066000062972307
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes1-aspect2.6-2",
+      "family": "polygon4-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3129064999811817
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 1655.0595728687767,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.30918070004554465
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6217938000045251
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6220872000267264
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6217938000045251
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6220872000267264
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 1655.0595728687767,
+          "seconds": 0.00029340002220124006
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes1-aspect2.6-3",
+      "family": "polygon4-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3950057000038214
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 101.18197601336033,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3337455000146292
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7284328000096139
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7287512000184506
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7284328000096139
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7287512000184506
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 101.18197601336033,
+          "seconds": 0.0003184000088367611
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes1-aspect2.6-4",
+      "family": "polygon4-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.312659800023539
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3129868000105489
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6185584000195377
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6188854000065476
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6185584000195377
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6188854000065476
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00032699998700991273
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes2-aspect2.6-0",
+      "family": "polygon4-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25084540000534616
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25108709998312406
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25084540000534616
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25108709998312406
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25084540000534616
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.25108709998312406
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002416999777778983
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes2-aspect2.6-1",
+      "family": "polygon4-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3556088999903295
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.35591199999907985
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3556088999903295
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.35591199999907985
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3556088999903295
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.35591199999907985
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0003031000087503344
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes2-aspect2.6-2",
+      "family": "polygon4-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36755880000418983
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.367828999995254
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36755880000418983
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.367828999995254
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36755880000418983
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.367828999995254
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00027019999106414616
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes2-aspect2.6-3",
+      "family": "polygon4-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.379958399978932
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.38019459997303784
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.379958399978932
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.38019459997303784
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.379958399978932
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.38019459997303784
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002361999941058457
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes2-aspect2.6-4",
+      "family": "polygon4-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2830209999810904
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28324809996411204
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2830209999810904
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28324809996411204
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2830209999810904
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28324809996411204
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00022709998302161694
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes3-aspect2.6-0",
+      "family": "polygon4-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26548890001140535
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 1839.0787262176746,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2739821999857668
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5391587000049185
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5394710999971721
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5391587000049185
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5394710999971721
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 1839.0787262176746,
+          "seconds": 0.00031239999225363135
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes3-aspect2.6-1",
+      "family": "polygon4-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.37967769999522716
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 158.58584688921837,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.40767699998104945
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7870382999826688
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7873546999762766
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7870382999826688
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7873546999762766
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 158.58584688921837,
+          "seconds": 0.0003163999936077744
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes3-aspect2.6-2",
+      "family": "polygon4-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4115248000016436
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 1565.8057398093515,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3824311000353191
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7936429000110365
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7939559000369627
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7936429000110365
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7939559000369627
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 1565.8057398093515,
+          "seconds": 0.00031300002592615783
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes3-aspect2.6-3",
+      "family": "polygon4-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3993944999820087
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3997333999723196
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7867263999942224
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7870652999845333
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7867263999942224
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7870652999845333
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00033889999031089246
+        }
+      }
+    },
+    {
+      "case_id": "polygon4-holes3-aspect2.6-4",
+      "family": "polygon4-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.30630870000459254
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.30663079998339526
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6140598000201862
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.614381899998989
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6140598000201862
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.614381899998989
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00032209997880272567
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes0-aspect2.6-0",
+      "family": "polygon6-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26132019999204203
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2615856999764219
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26132019999204203
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2615856999764219
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.26132019999204203
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2615856999764219
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002654999843798578
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes0-aspect2.6-1",
+      "family": "polygon6-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.33296010000049137
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.33323050002218224
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.33296010000049137
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.33323050002218224
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.33296010000049137
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.33323050002218224
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002704000216908753
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes0-aspect2.6-2",
+      "family": "polygon6-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3676489000208676
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36791480000829324
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3676489000208676
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36791480000829324
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3676489000208676
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36791480000829324
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002658999874256551
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes0-aspect2.6-3",
+      "family": "polygon6-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3739007000112906
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3741662000247743
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3739007000112906
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3741662000247743
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3739007000112906
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3741662000247743
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00026550001348368824
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes0-aspect2.6-4",
+      "family": "polygon6-holes0-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.362058500002604
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36232139999629
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.362058500002604
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36232139999629
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.362058500002604
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36232139999629
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002628999936860055
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes1-aspect2.6-0",
+      "family": "polygon6-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.2887088000134099
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 21.516982978517262,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.28505870001390576
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5733668000029866
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5737675000273157
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5733668000029866
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.5737675000273157
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 21.516982978517262,
+          "seconds": 0.0004007000243291259
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes1-aspect2.6-1",
+      "family": "polygon6-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3289312999986578
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 82.34590921897325,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3300362999725621
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6586036999942735
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6589675999712199
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6586036999942735
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.6589675999712199
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 82.34590921897325,
+          "seconds": 0.0003638999769464135
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes1-aspect2.6-2",
+      "family": "polygon6-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.40167220000876114
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 864.8060061014548,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.38260450001689605
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7839274000143632
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7842767000256572
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7839274000143632
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7842767000256572
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 864.8060061014548,
+          "seconds": 0.0003493000112939626
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes1-aspect2.6-3",
+      "family": "polygon6-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.387976099998923
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 103.76342792899595,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3940073999983724
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7815839000104461
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7819834999972954
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7815839000104461
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7819834999972954
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 103.76342792899595,
+          "seconds": 0.0003995999868493527
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes1-aspect2.6-4",
+      "family": "polygon6-holes1-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.40471779997460544
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 181.1862180411481,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.38918999998713844
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7935220999643207
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7939077999617439
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7935220999643207
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7939077999617439
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 181.1862180411481,
+          "seconds": 0.0003856999974232167
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes2-aspect2.6-0",
+      "family": "polygon6-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31321170000592247
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3134680000075605
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31321170000592247
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3134680000075605
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.31321170000592247
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3134680000075605
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00025630000163801014
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes2-aspect2.6-1",
+      "family": "polygon6-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3517447999911383
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.35200779998558573
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3517447999911383
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.35200779998558573
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3517447999911383
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.35200779998558573
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002629999944474548
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes2-aspect2.6-2",
+      "family": "polygon6-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36717149999458343
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36743189999833703
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36717149999458343
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36743189999833703
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36717149999458343
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36743189999833703
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002604000037536025
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes2-aspect2.6-3",
+      "family": "polygon6-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4681388000026345
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4683967000164557
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4681388000026345
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4683967000164557
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4681388000026345
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4683967000164557
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.00025790001382119954
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes2-aspect2.6-4",
+      "family": "polygon6-holes2-aspect2.6",
+      "feasible_candidates": 1,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.410743199987337
+        },
+        "learned_verified_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.411012299999129
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.410743199987337
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.411012299999129
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.410743199987337
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.411012299999129
+        },
+        "learned_only": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 0.0,
+          "seconds": 0.0002691000117920339
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes3-aspect2.6-0",
+      "family": "polygon6-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.34378880000440404
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 109.22245027459576,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.36495219997595996
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7083563999913167
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.708740999980364
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7083563999913167
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.708740999980364
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 109.22245027459576,
+          "seconds": 0.000384599989047274
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes3-aspect2.6-1",
+      "family": "polygon6-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.37991849999525584
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 532.2894776234461,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4003024999983609
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.779838699992979
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7802209999936167
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.779838699992979
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.7802209999936167
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 532.2894776234461,
+          "seconds": 0.0003823000006377697
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes3-aspect2.6-2",
+      "family": "polygon6-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.48977680000825785
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 310.0328124057269,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.43519290001131594
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.9246098000148777
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.9249697000195738
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.9246098000148777
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.9249697000195738
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 310.0328124057269,
+          "seconds": 0.00035990000469610095
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes3-aspect2.6-3",
+      "family": "polygon6-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4237055999983568
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 9.235957317120665,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4255808000161778
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8488751999975648
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8492864000145346
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8488751999975648
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8492864000145346
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 9.235957317120665,
+          "seconds": 0.0004112000169698149
+        }
+      }
+    },
+    {
+      "case_id": "polygon6-holes3-aspect2.6-4",
+      "family": "polygon6-holes3-aspect2.6",
+      "feasible_candidates": 2,
+      "oracle": 1,
+      "methods": {
+        "rules_1": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.4275990999885835
+        },
+        "learned_verified_1": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 1,
+          "regret_mm3": 34.228175910231585,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.3796176000323612
+        },
+        "rules_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8068402000062633
+        },
+        "learned_verified_2": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8072167000209447
+        },
+        "rules_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8068402000062633
+        },
+        "learned_verified_3": {
+          "chosen": 1,
+          "valid": true,
+          "queries": 2,
+          "regret_mm3": 0.0,
+          "new_supported_conflicts": 0,
+          "protected_violations": 0,
+          "seconds": 0.8072167000209447
+        },
+        "learned_only": {
+          "chosen": 2,
+          "valid": true,
+          "queries": 0,
+          "regret_mm3": 34.228175910231585,
+          "seconds": 0.00037650001468136907
+        }
+      }
+    }
+  ],
+  "oracle_scope": "fixed reconstructed radius candidates; not continuous global optimum",
+  "timing": "actual recorded single-operation wall times plus measured inference; query-cache replay, not whole app timings",
+  "equal_budget": "same frozen candidates, constraints and 1/2/3 expensive CAD operations; invalid operations count",
+  "label_scope": "geometric outcomes only; no expert preferred-action labels"
+}

@@ -12,8 +12,8 @@ ROOT=Path(__file__).resolve().parents[1]
 def test_all_shipped_geometry_matches_published_inventory():
     result=verify(ROOT)
     assert result['verified'],result['errors']
-    assert result['geometry_files']==454
-    assert result['unique_sha256']==448
+    assert result['geometry_files']==2934
+    assert result['unique_sha256']==1728
 
 
 def test_archived_research_cad_has_original_source_and_exact_hash():
@@ -60,8 +60,8 @@ def test_corpus_including_supplier_metadata_matches_original_audit():
 def test_random_corpus_picker_works_without_a_desktop_folder(monkeypatch,tmp_path):
     monkeypatch.setattr(Path,'home',classmethod(lambda cls:tmp_path))
     app=AppTest.from_file(str(ROOT/'app.py'),default_timeout=90).run()
-    assert '검증용 예제' in app.selectbox(key='source').options
-    app.selectbox(key='source').select('검증용 예제').run()
+    assert app.selectbox(key='source').options == ['적층 시연용 형상', '절삭 시연용 형상', '업로드']
+    app.selectbox(key='demo_example').select('장착 브래킷 · STP').run()
     assert not app.exception
-    assert len(app.selectbox(key='random_example').options)==26
-    assert any('저장소에 포함된 26개 형상' in c.value for c in app.caption)
+    assert len(app.selectbox(key='demo_example').options) >= 26
+    assert app.selectbox(key='demo_example').value == '장착 브래킷 · STP'

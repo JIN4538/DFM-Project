@@ -1,0 +1,95 @@
+{
+  "before_corner_radius_mm": 0.0,
+  "after_corner_radius_mm": 2.9260220850888126,
+  "modified_corner_edges": 3,
+  "before_volume_mm3": 11043.161938267918,
+  "after_volume_mm3": 11181.774481852879,
+  "measured_material_addition_mm3": 138.6125435849608,
+  "analytic_material_addition_mm3": 138.61254358466206,
+  "source_floor_face_id": 10,
+  "unchanged_outer_bounds": true,
+  "corner_axes_mm": [
+    [
+      [
+        11.884840431541,
+        6.565624335541,
+        -7.14918554425
+      ],
+      [
+        16.399063439337603,
+        6.565624335541,
+        -3.262826590376203
+      ]
+    ],
+    [
+      [
+        22.084257771462,
+        11.579843776841,
+        -18.99637850003
+      ],
+      [
+        26.5984807792586,
+        11.579843776841,
+        -15.110019546156204
+      ]
+    ],
+    [
+      [
+        11.884840431541,
+        16.59406321814,
+        -7.14918554425
+      ],
+      [
+        16.399063439337603,
+        16.59406321814,
+        -3.262826590376203
+      ]
+    ]
+  ],
+  "edit_bounds_mm": [
+    [
+      11.884840431541,
+      6.565624335541,
+      -18.99637850003
+    ],
+    [
+      26.5984807792586,
+      16.59406321814,
+      -3.262826590376203
+    ]
+  ],
+  "verification": "Valid single B-rep solid; exact pocket remeasurement; unchanged outer AABB; positive internal material addition",
+  "direction": [
+    0.757842562895277,
+    0.0,
+    0.6524374681640519
+  ],
+  "after_sha256": "1aa3c5a5e2a583eb0ae6a9735890f4baa51e3680aa775b1c779cd2723ee3273d",
+  "rounded_face_ids": [
+    3,
+    4,
+    7
+  ],
+  "remeasurement": {
+    "status": "verified",
+    "method": "exported STEP reimport; floor area, corner radius, wall height and original cylinders",
+    "pockets": [
+      {
+        "floor_face_id_before": 10,
+        "floor_face_id_after": 12,
+        "radius_before_mm": 0.0,
+        "radius_after_mm": 2.926022085089,
+        "depth_before_mm": 5.956676529951515,
+        "depth_after_mm": 5.9566765299480355,
+        "floor_area_before_mm2": 78.38623502066415,
+        "floor_area_after_mm2": 55.116120739917
+      }
+    ],
+    "protected_cylinder_faces": 0,
+    "protected_outer_bounds_unchanged": true,
+    "before_volume_mm3": 11043.161938267924,
+    "after_volume_mm3": 11181.77448185318,
+    "material_change_percent": 1.2551889065840893
+  },
+  "before_sha256": "6e2ce2fb12576450371d53bf2f90dc743931582d9bbeb386d792feebd03c9328"
+}

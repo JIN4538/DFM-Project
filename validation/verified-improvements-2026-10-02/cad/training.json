@@ -1,0 +1,31 @@
+{
+  "model_sha256": "4b3100fdb24c7fc96044dcf204d746d6da2163013f54cb6f77855ef5578ae431",
+  "labels_sha256": "881cc2e01c03ef775d98ce7dadf5ab23fdba390003502bab9dd73aafe26a029b",
+  "cad_manifest_sha256": "220e797ad75523967c2b6a45efabfc3c8f0d20044b8518bf857796f55e8ee04f",
+  "training_records": 600,
+  "training_CAD": 120,
+  "validation_records": 300,
+  "test_used_for_fitting": false,
+  "selected_seed": 73,
+  "history": [
+    {
+      "seed": 12,
+      "validation_balanced_accuracy": 1.0,
+      "validation_material_log_mae": 0.1000632844790012
+    },
+    {
+      "seed": 41,
+      "validation_balanced_accuracy": 1.0,
+      "validation_material_log_mae": 0.27383165226062367
+    },
+    {
+      "seed": 73,
+      "validation_balanced_accuracy": 1.0,
+      "validation_material_log_mae": 0.08339312977091971
+    }
+  ],
+  "input_source_sha256": "689738718325eb88ebd84ea80b20c531675479e3ad16c09b8288239651df1deb",
+  "supervision": "actual OCCT operation success/rejection; exported and reimported material delta; independent prism volume and protected-hole checks",
+  "target": "edit geometry feasibility and normalized material change, not expert optimality",
+  "runtime_adoption": "ordering of optional CAD edit candidates only; no prediction certifies a CAD edit"
+}
